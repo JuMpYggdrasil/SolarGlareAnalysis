@@ -1,0 +1,1063 @@
+Clifford K. Ho
+e-mail: ckho@sandia.gov
+Cheryl M. Ghanbari
+Richard B. Diver
+Concentrating Solar Technologies Department,
+Sandia National Laboratories,
+P.O. Box 5800,
+Albuquerque, NM 87185-1127
+Methodology to Assess Potential
+Glint and Glare Hazards From
+Concentrating Solar Power
+Plants: Analytical Models and
+Experimental Validation
+With a growing number of concentrating solar power systems being designed and devel-
+oped, the potential impact of glint and glare from concentrating solar collectors and
+receivers is receiving increased attention as a potential hazard or as a distraction for
+motorists, pilots, and pedestrians. This paper provides analytical methods to evaluate the
+irradiance originating from specularly and diffusely reﬂecting sources as a function of
+distance and characteristics of the source. Sample problems are provided for both specu-
+lar and diffuse sources, and validation of the models is performed via testing. In addition,
+a summary of safety metrics is compiled from the literature to evaluate the potential haz-
+ards of calculated irradiances from glint and glare for short-term exposures. Previous
+safety metrics have focused on prevention of permanent eye damage (e.g., retinal burn).
+New metrics used in this paper account for temporary after-image, which can occur at
+irradiance values several orders of magnitude lower than the irradiance values required
+for irreversible eye damage. [DOI: 10.1115/1.4004349]
+1
+Introduction
+Assessment of the potential hazards of glint and glare from con-
+centrating solar power plants is an important requirement to
+ensure public safety [1–3]. Glint is deﬁned as a momentary ﬂash
+of light, while glare is deﬁned as a more continuous source of ex-
+cessive brightness relative to the ambient lighting. Hazards from
+glint and glare from concentrating solar power plants include the
+potential for permanent eye injury (e.g., retinal burn) and tempo-
+rary disability or distractions (e.g., after-image), which may
+impact people working nearby, pilots ﬂying overhead, or moto-
+rists driving alongside the site.
+Applications and certiﬁcations for solar thermal power plants
+require an assessment of “visual resources” at the site (e.g., Refs.
+[4–8]), but rigorous and uniform treatment of glint and glare are
+lacking. Several previous studies [1–3] investigated the impact of
+specular reﬂections using permanent eye damage as a metric. The
+purpose of this paper is to provide a general assessment method
+that can be used to evaluate potential hazards of glint and glare
+for all of the primary concentrating solar power technologies: (1)
+power-tower systems, (2) linear concentrator systems (e.g., para-
+bolic troughs, linear Fresnel), and (3) dish/engine systems. In par-
+ticular, this paper provides analytical solutions to evaluate the
+irradiance originating from both specularly and diffusely reﬂect-
+ing sources as a function of distance and characteristics of the
+source. In addition, tests were conducted at the National Solar
+Thermal Test Facility (NSTTF) at Sandia National Laboratories
+to validate the models. Modeling results (analytical and ray-trac-
+ing) were compared to the data, which showed an excellent agree-
+ment.
+The
+measured
+and/or
+calculated
+irradiances
+can
+be
+compared against the compiled safety metrics to determine safe
+perimeter zones or regions where personal protective equipment
+may be needed for short-duration exposures.
+2
+Review of Ocular Safety Metrics
+This section summarizes the ocular safety metrics introduced
+by Ho et al. [9] for short-term exposures of bright light. Two vari-
+ables are required for the ocular impact assessment: the retinal
+irradiance and the subtended angle (size) of the glare source. The
+retinal irradiance can be calculated from the total power entering
+the pupil and the retinal image area. The diameter, dr, of the
+image projected onto the retina (assuming circular images) can be
+determined from the subtended source angle (x), which can be
+calculated from the source size (ds), radial distance (r) between
+the eye and the source, and the focal length of the eye (f % 0.017
+m [3]), as follows (see Fig. 1):
+dr ¼ fx
+where x ¼ ds=r
+(1)
+If the irradiance at a plane in front of the cornea, Ec (W/m2), is
+known, the power entering the pupil can be calculated as the prod-
+uct of the corneal irradiance and the pupil area (the daylight
+adjusted pupil diameter, dp, is 2 mm). The power is then divided
+by the retinal image area and multiplied by a transmission coefﬁ-
+cient, s(0.5) [10], for the ocular media (to account for absorption
+of radiation within the eye before it reaches the retina) to yield the
+following expression for the retinal irradiance:
+Er ¼ Ec
+d2
+p
+d2
+r
+ 
+!
+s
+(2)
+It should be noted that Brumleve [1] includes an additional coefﬁ-
+cient () to account for the fraction of solar irradiance between
+400 and 1400 nm, but this has been included in the transmission
+coefﬁcient, s, above. As an example, the retinal irradiance caused
+by viewing the sun directly can be calculated using Eqs. (1) and
+(2) with Ec ¼ 0.1 W/cm2, dp ¼ 0.002 m, f ¼ 0.017 m, x ¼ 0.0094
+rad, and s ¼ 0.5, which yields a retinal irradiance, Er, of 8 W/cm2.
+The ocular parameters are taken from Refs. [1] and [3]. Note that
+Contributed by the Solar Energy Division of ASME for publication in the JOUR-
+NAL OF SOLAR ENERGY ENGINEERING. Manuscript received November 3, 2010; ﬁnal
+manuscript received May 25, 2011; published online August 5, 2011. Assoc. Editor:
+Manuel Romero Alvarez.
+The United States Government retains, and by accepting the article for
+publication, the publisher acknowledges that the United States Government retains, a
+non-exclusive, paid-up, irrevocable, worldwide license to publish or reproduce the
+published form of this work, or allow others to do so, for United States Government
+purposes.
+Journal of Solar Energy Engineering
+AUGUST 2011, Vol. 133 / 031021-1
+Copyright V
+C 2011 by ASME
+Downloaded from http://asmedigitalcollection.asme.org/solarenergyengineering/article-pdf/133/3/031021/5596439/031021_1.pdf by Sandia National Labs user on 10 March 2025
+
+the retinal irradiance is signiﬁcantly higher than the irradiance at
+the entrance of the eye. The calculated irradiances and thresholds
+used to determine ocular impacts assume a standard solar spectral
+distribution (ASTM G173-03), where the majority of the energy
+and short-duration exposure impacts are due to radiation within
+the visible spectrum ( 380 to 800 nm). Longer-term exposures
+(e.g., for worker safety) may be additionally concerned with radia-
+tion in the ultraviolet and infrared spectra.
+Figure 2 summarizes the potential impact of different retinal
+irradiances as a function of subtended source angle for short-term
+exposures. Three regions are shown: (1) potential for permanent
+eye damage (retinal burn), (2) potential for temporary after-image
+(ﬂash blindness), and (3) low potential for temporary after-image.
+If the retinal irradiance is sufﬁciently large for a given subtended
+source angle, permanent eye damage from retinal burn may occur
+[3,10,11]. Note that as the subtended source angle increases, the
+safe retinal irradiance threshold decreases. For a given retinal irra-
+diance, a larger subtended source angle yields a larger retinal
+image area and delivers a greater power to the retina that cannot
+be as easily dissipated from the perimeter of the “hot” retinal
+image as with a smaller image area. Brumleve provides a lower
+threshold for the retinal irradiance corresponding to permanent
+eye damage using data from Ref. [3]
+Er;burn ¼ 0:118=x
+for x< 0:118 rad
+(3)
+Er;burn ¼ 1
+for x  0:118 rad
+(4)
+where Er,burn is the retinal burn threshold (W/cm2) and x is the sub-
+tended angle (rad). Below the retinal burn threshold, a region exists
+where a sufﬁciently high retinal irradiance may cause temporary af-
+ter-image or ﬂash blindness, which is caused by bleaching (oversa-
+turation) of the retinal visual pigments [3]. When this occurs, a
+temporary after-image appears in the visual ﬁeld (e.g., the effect af-
+ter viewing a camera ﬂash in a dim room). The size and impact of
+the after-image in the ﬁeld of view depend on the size of the sub-
+tended source angle. For a given retinal irradiance, smaller source
+angles yield smaller after-images, and the potential impact is less. In
+Fig. 2, data from Refs. [12–14] were used to ﬁt a lower threshold for
+potential after-image effects. In Refs. [12–14], people were sub-
+jected to different source luminances, and their recovery time was
+recorded. The minimal retinal irradiance based on the illuminance1
+and subtended source angle that yielded at least 1 s of after-image is
+shown in Fig. 2. Error bars represent uncertainty in the pupil diame-
+ter (2–8 mm) [13,14] and variability in subject response [12]. A ﬁt
+corresponding to these data that yielded the minimal retinal irradian-
+ces that caused an after-image is as follows:
+Er;flash ¼ 3:59  105
+x1:77
+(5)
+where Er,ﬂash is the threshold for potential after-image (W/cm2)
+and x is the subtended source angle (rad). Values of retinal irradi-
+ance below Er,ﬂash have a low potential for after-image impact.
+Note that, as plotted in Fig. 2, a brief direct viewing of the sun
+(0.15 s) has a high potential for producing after-image effects.
+3
+Modeling Approach
+This section presents analytical methods for calculating irradi-
+ance caused by specular and diffuse reﬂections of sunlight as a
+function of distance and other characteristics of the source. Specu-
+lar reﬂections occur from polished mirror-like surfaces so that the
+reﬂected angle is equal to the incident angle relative to the surface
+normal. Diffuse reﬂections occur from uneven or rough surfaces
+that scatter the incident radiation such that the radiance is approxi-
+mately uniform in all directions (see Fig. 3). The following sec-
+tions provide methods to calculate the irradiance from specular
+and diffuse reﬂections. Once the irradiance is determined, the
+equations in the previous section can be used to calculate the reti-
+nal irradiance for comparison against the safe retinal irradiance
+metrics presented in Fig. 2.
+3.1
+Analytical Model of Specular Reflections. Direct spec-
+ular solar reﬂection from mirrors can cause glint and glare hazards
+when heliostats are in standby positions (reﬂecting the sun at loca-
+tions other than the receiver). Specular solar reﬂections from
+dishes and parabolic troughs can cause glint and glare hazards
+when the collectors are in off-axis positions (e.g., when moving
+from a stowed position to a tracking position). For parabolic
+troughs, glint and glare from specular reﬂections can also occur
+when the sun is low in the horizon and aligned with the axis of the
+trough, causing reﬂected rays to spill from the end of the trough.
+3.1.1
+Point-Focus
+Collectors. An
+analytical
+model
+of
+beam irradiance resulting from specular solar reﬂections from a
+Fig. 2
+Potential impacts of retinal irradiance as a function of
+subtended source angle. Data for irreversible eye damage are
+from Refs. [1,10,11] for 0.15 s exposure (typical blink response
+time). Data for temporary after-image are from Refs. [12–14].
+Fig. 1
+Image projected onto the retina of the eye
+Fig. 3
+Illustration of specular versus diffuse reﬂections
+1The ratio of spectrally weighted solar illuminance to solar irradiance at the
+earth’s surface yields a conversion factor of 100 lumens/W.
+031021-2 / Vol. 133, AUGUST 2011
+Transactions of the ASME
+Downloaded from http://asmedigitalcollection.asme.org/solarenergyengineering/article-pdf/133/3/031021/5596439/031021_1.pdf by Sandia National Labs user on 10 March 2025
+
+point-focus mirror has been derived [1] with the following
+assumptions (see Fig. 4):
+• uniform sun radiant intensity (no limb darkening)
+• round, focused, continuous surface mirrors
+• no
+cosine
+losses,
+off-axis
+aberrations,
+or
+atmospheric
+attenuation
+• uniform irradiance in beam cross section.
+The assumptions above will generally produce the largest beam
+irradiance, but the assumption of uniform sun radiant intensity
+averages the irradiance over the entire beam. Using a nonuniform
+solar intensity creates larger peak irradiances toward the center of
+the beam. Comparisons with a ray-tracing model (ASAPV
+R) show
+that the difference in peak irradiance is about 25–30% at the focal
+length, but the difference can be greater at other distances.
+The beam irradiance, Ebeam (W/cm2), is then calculated as the
+product of the direct normal irradiance, EDNI (W/cm2), the mirror
+reﬂectivity, q, and the area concentration ratio, C
+Ebeam ¼ qEDNIC
+(6)
+The direct normal irradiance, EDNI, at the earth’s surface is
+approximately 0.1 W/cm2. The area concentration ratio, C, can be
+calculated as follows assuming a circular mirror area, Ah, with ra-
+dius, Rh, and a circular beam area, Ax, with radius, Rx, at a dis-
+tance, x, from the mirror,
+C ¼ Ah
+Ax
+¼
+Rh
+Rx
+
+2
+(7)
+The radius, Rx, of the beam is comprised of two components,
+Rx ¼ R1 þ R2
+(8)
+where R1 is caused by beam spreading due to the subtended angle
+of the sun and mirror contour inaccuracies (slope error), and R2
+represents the focusing and defocusing characteristics of the beam
+at a distance that is less than or greater than the focal length. The
+beam divergence, R1, at a distance, x, from the mirror is deﬁned
+by the sun half-angle ( 4.7 mrad) and any additional slope errors
+caused by mirror inaccuracies,
+R1  x tan b
+2
+ 
+(9)
+where b/2 is the half-angle (rad) of the total beam divergence.
+According to Ref. [1], this approximation has an error that is less
+than 0.3% for b/Rh > 18. R2 can be deﬁned using similar triangles
+as shown in Fig. 4, where b is the focal length,
+R2
+x  b
+j
+j ¼ Rh
+b ) R2 ¼ x
+b  1
+
+Rh
+(10)
+Using Eqs. (7)–(10) in Eq. (6), and the approximation that
+tan(b/2) ¼ b/2 when b/2 is small, yields the following expression
+for the beam irradiance (W/cm2):
+Ebeam ¼ qEDNI
+xb
+Dh
+þ x
+b  1
+
+
+
+2
+ðpoint-focus collectorsÞ
+(11)
+where Dh ¼ 2 Rh. The beam irradiance can also be presented in
+units of “suns” by dividing Eq. (11) by EDNI ( 0.1 W/cm2). The
+maximum beam irradiance occurs at the focal length, x ¼ b. In
+addition, the beam irradiance from a ﬂat mirror can be calculated
+by setting b ¼ 1 in Eq. (11). The specular beam irradiance for
+several focal lengths is plotted in Fig. 5 as a function of distance,
+x, from the mirror. The reﬂectivity, q, is assumed to be 0.92, and
+the total beam divergence angle, b, is assumed to be equal to 9.4
+mrad. The effective diameter of the mirror, Dh, is calculated from
+the total reﬂective surface (37 m2) of each heliostat used at the
+National Solar Thermal Test Facility at Sandia National Laborato-
+ries in Albuquerque, NM,
+Dh ¼
+4Ah
+p
+
+0:5
+(12)
+In addition to the beam irradiance, we also need to determine the
+size of the reﬂected sun image observed in the mirror to determine
+the subtended source angle and the retinal irradiance to assess
+potential ocular hazards in Fig. 2. It should be noted that the size
+of the reﬂected sun image in the mirror as viewed by an observer
+is different than the projected beam size calculated in Eqs. (8)–
+(10). An observer located within the projected beam and away
+from the focal point of a mirror may see a reﬂected image of the
+sun that occupies only a very small portion of the mirror. At the
+focal point, an observer would see a reﬂected image of the sun
+that ﬁlls the mirror.
+As deﬁned in Eq. (6), the beam irradiance is proportional to the
+concentration ratio, which is equal to the area ratio of the mirror
+and the beam size. It follows that the relative spot size of the
+reﬂected image of the sun in the mirror observed at a given dis-
+tance, x, is proportional to the measured irradiance at that loca-
+tion. Then, once the beam irradiance, Ebeam, is determined for the
+focused mirror using Eq. (11), the spot size of the reﬂected image
+of the sun observed in the focused mirror can be estimated relative
+to the equivalent spot size observed on an inﬁnitely large ﬂat mir-
+ror (b!1, Dh!1) at the same location,
+Fig. 4
+Geometry of specular solar reﬂections from a focused
+mirror where b is the focal length, Rh is the radius of the mirror,
+b is the beam divergence angle, and Rx is the radius of the
+beam cross section at distance, x, from the mirror (adapted
+from Ref. [1])
+Fig. 5
+Specular irradiance at the cornea as a function of dis-
+tance from point-focus and line-focus mirrors with different
+focal lengths, b, for a solar irradiance of 0.1 W/cm2
+Journal of Solar Energy Engineering
+AUGUST 2011, Vol. 133 / 031021-3
+Downloaded from http://asmedigitalcollection.asme.org/solarenergyengineering/article-pdf/133/3/031021/5596439/031021_1.pdf by Sandia National Labs user on 10 March 2025
+
+Aspot
+Aspot;flat
+¼
+dspot
+dspot;flat
+
+2
+¼
+xxspot
+xb
+
+2
+¼ C ¼ Ebeam
+qEDNI
+) xspot ¼ b
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+Ebeam
+qEDNI
+s
+(13)
+where Aspot is the area of the reﬂected spot image on a mirror as
+viewed by an observer a distance, x, away from the mirror, the
+subscript “ﬂat” denotes a ﬂat mirror that is sufﬁciently large so
+that the entire reﬂected image of the sun can be seen by the ob-
+server, dspot is the diameter of the reﬂected image on the mirror,
+xspot is the subtended angle of the reﬂected sun image on the mir-
+ror as observed from a prescribed distance, and b is the beam
+divergence angle caused by the sun angle and slope error. For an
+inﬁnitely large ﬂat mirror, the diameter of the reﬂected sun image
+observed a distance, x, away from the ﬂat mirror is approximately
+xb, and, according to Eq. (11), the beam irradiance is qEDNI as
+b!1 and Dh!1. Thus, if the measured irradiance, Ebeam, is
+greater (or less) than qEDNI, the observed size and subtended
+angle, xspot, of the reﬂected spot image of the sun on the focused
+mirror will be greater (or less) than the size and subtended angle,
+b, of the reﬂected sun image on a large ﬂat mirror at the same
+location. Equation (13) can be intuitively checked at two distan-
+ces, x  0 and x ¼ b. At x  0 (observer located immediately next
+to the mirror), Eq. (11) yields a beam irradiance, Ebeam, equal to
+qEDNI, and Eq. (13) yields a subtended spot angle equal to b,
+which is expected at x  0 (the mirror essentially appears ﬂat to
+the observer, and the subtended angle of the reﬂected sun image is
+the same as looking at a reﬂection in a ﬂat mirror). At x ¼ b, Eqs.
+(11) and (13) yield a subtended angle, xspot, of the reﬂected sun
+image equal to Dh/b, which indicates that the reﬂected sun image
+will ﬁll the entire collector when the observer is at the focal point,
+as expected.
+Using Eq. (13) in Eqs. (1) and (2) yields the following expres-
+sion for the retinal irradiance, where the corneal irradiance, Ec, is
+set equal to the beam irradiance, Ebeam, used in Eqs. (11) and (13),
+Er ¼
+qEDNId2
+ps
+f 2b2
+(14)
+Note that the retinal irradiance in Eq. (14) does not depend on dis-
+tance from the source (neglecting atmospheric attenuation). As
+distance increases, both the power entering the pupil and the reti-
+nal image area (which is proportional to the square of the sub-
+tended source angle) decrease at the same rate. Therefore, the
+retinal irradiance, which is equal to the power entering the pupil
+divided by the retinal image area, is independent of distance. The
+corneal irradiance, however, changes as a function of distance as
+given by Eq. (11).
+The plots in Fig. 5 represent corneal irradiance values (at front
+of the eye) that could be experienced at different distances and for
+mirrors of different focal lengths but with prescribed reﬂectivity,
+beam divergence angle, and effective mirror size. Equations (11)
+and (12) can be used to determine the beam irradiance [Ebeam,
+which is equivalent to Ec in Eq. (2)] for other mirror characteris-
+tics, and then Eqs. (1) and (2) can be used to determine the equiv-
+alent retinal irradiance for comparison against the safe retinal
+irradiance metrics in Fig. 2. For example, at a distance of 200 m,
+the irradiance from a mirror with a focal length of 100 m and with
+the prescribed optical characteristics is approximately 0.057 W/
+cm2 according to Fig. 5 and Eq. (11). To convert this “corneal
+irradiance” to a retinal irradiance, Eqs. (1) and (2) are used where
+the subtended angle, x, is taken from the subtended angle, xspot,
+calculated in Eq. (13) to be 7.4 mrad for q ¼ 0.92, EDNI ¼ 0.1 W/
+cm2, and b ¼ 9.4 mrad. The retinal irradiance is then found to be
+7.2 W/cm2 with dp ¼ 0.002 m, f ¼ 0.017 m, and s ¼ 0.5 [Eq. (14)
+yields the same value]. According to Fig. 2, at a subtended source
+angle of 7.4 mrad, the calculated retinal irradiance of 7.2 W/cm2
+will not produce permanent eye damage. However, the calculated
+irradiance is sufﬁcient to potentially cause a temporary after-
+image if one has to view directly at the source. The minimum dis-
+tance to yield a low potential for after-image in this example is
+calculated to be  910 m using Eqs. (5), (11), and (13).
+3.1.2
+Line-Focus Collectors. The equations derived in Sec.
+3.1.1 for determining the specular beam irradiance from point-
+focus collectors can be readily extended to line-focus (parabolic
+trough, linear Fresnel) collectors. The primary difference is that
+the concentration ratio in Eq. (7) is changed since the conver-
+gence/divergence of rays caused by the shape of the line-focus
+mirror is primarily in one dimension (rather than two),
+C ¼ Ah
+Ax
+¼ Rh
+Rx
+(15)
+The resulting irradiance from specular reﬂections from a line-
+focus collector then becomes
+Ebeam ¼ qEDNI
+xb
+Dh
+þ x
+b  1
+
+
+
+1
+ðline-focus collectorsÞ
+(16)
+Equation (16) is similar in form to Eq. (11) for point-focus collec-
+tors. However, the irradiance from line-focus collectors decreases
+less rapidly with the distance past the focal point. Figure 5 shows
+the specular irradiance from a line-focus collector as a function of
+distance with an assumed focal length of 2 m, an aperture of 6.86
+m, and characteristics as shown in the plot.
+The equation that was used to calculate the spot size of the
+reﬂected image for point-focus mirrors [Eq. (13)] can be used to
+describe an effective spot size of the reﬂected sun image in the
+line-focus mirror.2 Then, using Eqs. (13) and (16) in Eqs. (1) and
+(2) yields the same expression for the retinal irradiance as Eq.
+(14) for point-focus collectors. The retinal irradiance is independ-
+ent of distance (assuming no atmospheric attenuation) because the
+retinal image area decreases at the same rate as the irradiance
+(albeit at a slower rate for line-focus mirrors than for point-focus
+mirrors); therefore, the retinal irradiance (power entering the eye
+divided by the retinal image area) is constant.
+For the characteristics of a line-focus (trough) collector shown
+in Fig. 5, the specular irradiance at a distance of 100 m is
+1.87  103 W/cm2 [Eq. (16)]. The corresponding subtended
+source angle is 1.34 mrad [Eq. (13)] and the retinal irradiance is
+7.2 W/cm2 [Eq. (14)]. According to Fig. 2 and Eq. (5), this retinal
+irradiance and subtended source angle will not yield permanent
+eye damage, but there is a potential for after-image effects if one
+were to view the specular reﬂection directly. For this example, the
+minimum distance to yield a low potential for after-image effects
+is 170 m using Eqs. (5), (13), and (16).
+3.2
+Analytical Model of Diffuse Reflections. In many cases,
+reﬂections from receivers, which are used to absorb the concen-
+trated solar irradiance from heliostat, dish, and trough collector
+systems, can be modeled as diffuse rather than specular. Calcula-
+tion of the irradiance at a location resulting from diffuse reﬂec-
+tions depends on the total irradiance received by the reﬂecting
+source, reﬂectivity of the source, geometry, orientation, and dis-
+tance to the source. For a diffuse source, we assume that the
+reﬂected diffuse radiance, Ld (W/m2-sr), is uniform in all direc-
+tions. The diffuse irradiance, Ed (W/m2), received by an observer
+at a radial distance, r (m), from the source can be written as a
+function of the diffuse radiance as follows:
+2The effective spot size assumes that the reﬂected sun image is circular. In reality,
+the shape of the reﬂected sun image as viewed by an observer will become elongated
+along the linear (long) axis of the collector with increasing distance.
+031021-4 / Vol. 133, AUGUST 2011
+Transactions of the ASME
+Downloaded from http://asmedigitalcollection.asme.org/solarenergyengineering/article-pdf/133/3/031021/5596439/031021_1.pdf by Sandia National Labs user on 10 March 2025
+
+Ed ¼ LdX As cosðhÞ
+Ap
+(17)
+where Ap is the pupil area (m2), X is the solid angle (sr) subtended
+by the pupil of the eye as viewed from the source, As is the area of
+the source visible to the observer (m2), and h is the angle between
+the surface normal of the source and the line of sight between the
+source and the observer. The product of Ascos(h) is the visible
+area projected toward the viewer (see Fig. 6) and is the area upon
+which the radiance, Ld, is based. Note that as h increases to 90
+deg, the visible source area and, hence, the diffuse irradiance goes
+to zero. Also, it should be noted that the visible source area, As, is
+not necessarily the same as the total area of the diffuse source, Ad.
+If the radiating source is planar then Ad ¼ As. The potential for dif-
+ferent areas of the diffuse source arise when a nonplanar source
+exists, such as a cylindrical external receiver. In this case, the dif-
+fuse source area, Ad, is equal to p*D*H, while the visible area, As,
+is approximately equal to D*H, where D is the diameter of the
+cylinder and H is the height. The projected area perpendicular to
+the line of sight is equal to Ascos(h). See Fig. 6 for a graphical rep-
+resentation of these parameters.
+In Eq. (17), the solid angle, X, subtended by the pupil area, Ap,
+as viewed from the diffuse source, can be expressed as follows:
+X ¼ Ap
+r2
+(18)
+An expression for the radiance, Ld, in Eq. (17) can be derived by
+expressing the total reﬂected radiative ﬂux, Es (W/m2), emitted
+into a hemisphere from an element of the diffuse source as a func-
+tion of the radiance [15],
+Es ¼
+ð2p
+0
+ðp=2
+0
+Ld cos h sin hdhd/ ¼ pLd
+(19)
+where h and / are the polar and azimuthal angles within a hemi-
+sphere over the emitting element. Assuming the reﬂection is uni-
+form over all elements comprising the diffuse source, the total
+hemispherical radiative ﬂux from a single element is also equal to
+the total reﬂected power emitted from the diffuse source, Pd (W),
+divided by the total surface area of the diffuse source, Ad (m2),
+Es ¼ Pd
+Ad
+(20)
+Combining Eqs. (17)–(20) yields the following expression for the
+diffuse irradiance received at a distance, r, from the diffusely
+reﬂecting source,
+Ed ¼ Pd
+pAd
+As cosðhÞ
+r2
+(21)
+where the total power emitted from the diffuse source, Pd, can be
+expressed as the product of the direct normal irradiance, diffuse
+source area, reﬂectivity of the diffuse source, and concentration
+ratio of the heliostat ﬁeld to the diffuse source area,
+Pd ¼ EDNIAdqdC
+(22)
+Combining Eq. (21) with Eqs. (1) and (2) yields the following
+expressions for the subtended angle, x (rad), and diffuse retinal
+irradiance, Er,d (W/m2), where the corneal irradiance, Ec, is set
+equal to the diffuse irradiance, Ed, and the source size, ds, is deter-
+mined using Eq. (12) with Ah ¼ Ascos(h),
+x ¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+4As cos h
+ð Þ=p
+p
+r
+(23)
+Er;d ¼
+Pdd2
+ps
+4Adf 2
+(24)
+As an example, the irradiance from a diffusely reﬂecting power-
+tower external cylindrical receiver is calculated using the follow-
+ing parameters:
+• irradiance on power-tower receiver ¼ 1  106 W/m2 (1000
+suns at a DNI ¼ 1000 W/m2)
+• radius of receiver ¼ 10 m
+• height of receiver ¼ 20 m
+• height of tower ¼ 100 m
+• receiver surface area ¼ 1257 m2 (calculated from receiver ra-
+dius and height)
+• reﬂectivity of receiver ¼ 0.1 – 0.5.
+Figure 7 shows a plot of the calculated corneal irradiance (at
+the front of the eye) as a function of distance from the receiver for
+reﬂectivity values of 0.1 and 0.5, assuming a diffuse radiance [Eq.
+(21)]. The irradiance decreases rapidly with increasing distance
+because the area over which the radiative power is distributed
+grows as a function of distance squared. Near the base of the
+tower at a radial distance close to 100 m (looking up at the re-
+ceiver), the irradiance drops off to zero because the visible source
+area [modiﬁed by cos(h) in Eq. (21)] goes to zero.
+The calculated irradiance can then be used to calculate the reti-
+nal irradiance using Eqs. (1) and (2) for comparison against the
+safety metrics in Fig. 2. For example, at a radial distance of 300 m
+(horizontal distance of 283 m), the irradiance from Eq. (21) is
+0.067 W/cm2 at a reﬂectivity of 0.5. The visible area, As, of the re-
+ceiver is 20 m  20 m ¼ 400 m2, and cos(h) ¼ 283/300 ¼ 0.94. So,
+the
+projected
+area
+perpendicular
+to
+the
+line
+of
+sight
+is
+400  0.94 ¼ 376 m2, and the effective diameter of an equivalent
+circular area is given by Eq. (12) as 21.9 m. The subtended angle
+of the receiver is then calculated as 21.9 m/300 m ¼ 0.073 rad,
+and the retinal image size is 1.24  103 m using f ¼ 0.017 m.
+Fig. 6
+Illustration of parameters used for diffuse-reﬂection cal-
+culations (e.g., viewing an external cylindrical receiver on top
+of a tower)
+Fig. 7
+Irradiance at the cornea as a function of distance from a
+diffuse source with different reﬂectivities
+Journal of Solar Energy Engineering
+AUGUST 2011, Vol. 133 / 031021-5
+Downloaded from http://asmedigitalcollection.asme.org/solarenergyengineering/article-pdf/133/3/031021/5596439/031021_1.pdf by Sandia National Labs user on 10 March 2025
+
+Equation (2) then yields a retinal irradiance of 0.087 W/cm2 using
+dp ¼ 0.002 m [Eq. (24) yields the same value]. According to Fig. 2
+(retinal irradiance ¼ 0.087 W/cm2 and subtended angle ¼ 73
+mrad), this irradiance will not cause irreversible eye damage, but
+it is sufﬁcient to produce a temporary after-image if one looks
+directly at the source. The minimal safe distance to prevent a tem-
+porary after-image effect can be calculated by using Eqs. (5) and
+(23) to determine at what distance, r, the retinal irradiance (0.087
+W/cm2) is less than the after-image threshold given in Eq. (5).
+This distance is calculated to be approximately 1840 m, assuming
+no atmospheric attenuation. This large distance is a result of the
+large receiver size and the large amount of incident power on the
+receiver (1000 suns).
+4
+Testing and Model Validation
+The specular and diffuse reﬂection models were evaluated via
+testing at the NSTTF at Sandia National Laboratories. Irradiances
+from specular reﬂections were evaluated by aiming a parabolic
+dish collector off-axis from the sun. Irradiances from diffuse
+reﬂections were evaluated from heliostat-generated beam images
+on the front wall of the central receiver tower at the NSTTF. A
+Nikon D70 digital single-lens reﬂex camera was used to capture
+the reﬂected images from the sun off both the parabolic dish and
+the tower wall at varying distances from the reﬂected image using
+f/32 and a shutter speed of 1/8000th second. Distances were
+recorded using a Bushnell Scout 1000 Rangeﬁnder. Tiffen neutral
+density (ND) ﬁlters that are intended to reduce the intensity of all
+wavelengths of light equally, were applied to the camera lens to
+prevent the sunlight from saturating the image. The transmittance,
+T, of the ND ﬁlters is calculated as follows:
+T ¼ 10OD
+(25)
+where OD is the optical density of the ﬁlter. For example, an
+ND0.3 ﬁlter has an optical density of 0.3 and transmits 50% of the
+incoming light, while an ND0.9 ﬁlter has an optical density of 0.9
+and transmits only 13% of the incoming light. Direct images of
+the sun, which were used as a reference for the reﬂected images,
+required several ﬁlters (three ND0.9 and an ND0.3), while images
+of the reﬂections required fewer ﬁlters.
+MATLABV
+R was used to process the raw image ﬁles by summing
+the pixel intensity values over the region of the reﬂected sun
+image in each photo. Each pixel value was multiplied by the ﬁlter
+value(s) used in each image. For example, if a single ND0.3 ﬁlter
+was used, the pixel value would be multiplied by 2. The sum of
+the pixel values for each reﬂected image was divided by the sum
+of the pixel values for the direct sun image to yield the normalized
+irradiance measured in suns. These values were then compared to
+the predicted irradiances from the models for the specular and dif-
+fuse reﬂection tests.
+Errors associated with the predicted and measured reﬂected
+irradiance include the following: (1) uncertainty in the measured
+reﬂectivity of the glare source, (2) uncertainty in the measured
+distance, (3) uncertainties associated with the camera detector and
+ND ﬁlters, and (4) uncertainty in the area (number of pixels) asso-
+ciated with the reﬂected image (glare source). The uncertainty of
+the measured reﬂectivity can be 62–3% for the specular surface
+of the dish facets, depending on the location of the measurements
+on the mirror versus the location of the actual reﬂected sun image.
+The uncertainty in the measured reﬂectivity for the diffuse tower
+surface was larger and is discussed later. Because the reﬂectivity
+is not used in the photographic measurements, uncertainties in the
+reﬂectivity only affect the predicted irradiance values.
+The uncertainty associated with the measured distance to the
+reﬂected image is 61 m. At distances between the observer and
+the glare source on the order of 10 m and 100 m, the error in the
+predicted irradiance is approximately 20% and 1%, respectively.
+The distance is not used in the photographic measurements of the
+irradiance.
+Errors associated with camera response are expected to be
+small. Ulmer et al. [16] provide error estimates for camera linear-
+ity, noise (dark current, readout), and spectral inﬂuences, which
+can be caused by a nonconstant ﬁlter transmission as a function of
+radiation wavelength. Each of these factors was estimated to cause
+an error of approximately 60.5% for a single pixel value. Dark
+current values (pixel value when no irradiance exists on the CCD)
+were measured to be  0.1% of the maximum pixel value for the
+camera used in this study. Errors in the transmittance values asso-
+ciated with the ND ﬁlters can cause errors in the calculated pixel
+values and, hence, irradiance values. Ideally, the same ND ﬁlters
+should be used to record images of both the reﬂected and actual
+sun images so that any errors in the ND ﬁlter transmittance values
+will cancel.
+The errors associated with the image processing increase with
+distance from the reﬂected image because the area representing
+the reﬂected image (i.e., number of pixels selected to represent the
+glare source) becomes relatively more uncertain as the image size
+is reduced. This can add to the uncertainty of the relative irradi-
+ance determined from the image processing algorithm. We esti-
+mate that the uncertainty in the irradiance associated with image
+size is less than 2–3% since the pixel values corresponding to
+regions outside the reﬂected image will be small relative to the
+pixel values corresponding to regions within the reﬂected image.
+To reduce these errors, one can zoom in to ﬁll the camera screen
+as much as possible with the reﬂected or actual sun images. When
+determining the corneal irradiance, the zoom (camera focal
+length) can be different between photos of the reﬂected and actual
+sun images since the cumulative power represented by all pixels
+comprising the reﬂected and actual sun images is used (as opposed
+to the power received by an individual pixel). However, if the sub-
+tended angle of the glare source is desired, the zoom should be
+held constant so that the subtended angle of the sun can be used to
+determine the subtended angle of the reﬂected image (assuming
+the camera focal length is constant). The camera settings that con-
+trol how much light enters the iris (f-stop and shutter speed)
+should also be kept constant when comparing images between the
+reﬂected and actual sun images.
+4.1
+Specular Reflection Tests. The specular reﬂection tests
+were conducted on July 1, 2009, at approximately 9:30 AM
+(mountain daylight time (MDT)) with a direct normal irradiance
+of approximately 850 W/m2. The Mod 2-2 10 kW parabolic dish
+used in the tests had a focal length of 5.448 m, a diameter of 8.8
+m, a measured reﬂectivity of 0.93, and an estimated rms slope
+error of 1 mrad [17]. An rms slope error of 1 mrad results in a total
+beam divergence angle, b, of 11.4 mrad [9.4 mrad (from sub-
+tended sun angle) þ 0.001 mrad*2 (pointing error)]. The dish was
+positioned so that the reﬂected image of the sun was visible on
+mirror facets of the dish as the observer moved in a southerly
+direction away from the dish. Photos of the reﬂected image on the
+dish were taken at varying distances, and the images were proc-
+essed in MATLABV
+R. Results are shown in Fig. 8, along with the ana-
+lytical predictions using Eq. (11) (where Ebeam is divided by EDNI
+to get the normalized irradiance).
+A commercial ray-tracing code, ASAPV
+R, was also used to
+model this system using the parameters described above, and the
+results are shown in Fig. 8. In the ray-tracing simulations, up to
+20  106 rays were used to simulate the average irradiance on a
+small target located at different distances from the collector, rep-
+resentative of the observer (camera) locations in the test. The dish
+was modeled as an ideal paraboloidal collector with the dimen-
+sions and optical characteristics described above. A mirror ran-
+dom-roughness model corresponding to an rms slope error of 1
+mrad [17] was used in the ray-tracing model. Apodization of the
+source rays was also included to account for sun shape and limb
+darkening [18].
+The results show that the measured and predicted normalized
+irradiance from the specularly reﬂected image of the sun on the
+031021-6 / Vol. 133, AUGUST 2011
+Transactions of the ASME
+Downloaded from http://asmedigitalcollection.asme.org/solarenergyengineering/article-pdf/133/3/031021/5596439/031021_1.pdf by Sandia National Labs user on 10 March 2025
+
+dish facets match very well over the range of distances tested. At
+small distances (within two focal lengths), the normalized irradi-
+ance can exceed 1 sun. At greater distances, the normalized irradi-
+ances decrease rapidly due to the diverging beam. It is interesting
+to note that the analytical solution, which assumes a uniform sun
+intensity and neglects off-axis aberrations, matches extremely
+well with the ray-tracing solution, which rigorously includes these
+effects. This demonstrates that the analytical solution can be used
+to give good estimates of the average irradiance as a function of
+distance
+from
+the
+specular
+reﬂection,
+even
+with
+off-axis
+conditions.
+The average irradiance, which represents the irradiance at the
+cornea at a particular distance, can then be used to determine the
+retinal irradiance for comparison against the safety metrics. For
+example, at a distance of 40 m, the normalized irradiance is
+approximately 0.02 suns. From Eq. (13), the subtended angle
+formed by the reﬂected image of the sun on the dish is calculated
+as 1.7 mrad, where Ebeam/EDNI is the normalized irradiance of
+0.02 suns, q ¼ 0.93 and b ¼ 11.4 mrad. Assuming a direct normal
+irradiance of 0.1 W/cm2 (equal to one sun), the retinal irradiance
+is then calculated to be  5 W/cm2 using Eqs. (1) and (2) with
+dp ¼ 0.002 m, f ¼ 0.017 m, and s ¼ 0.5. According to Fig. 2, a reti-
+nal irradiance of 5 W/cm2 with a subtended angle of 1.7 mrad is
+less than the safe retinal irradiance metrics to prevent permanent
+eye damage. However, the calculated irradiance is sufﬁcient to
+potentially cause a temporary after-image if one were to view
+directly at the reﬂected image. Equations (5), (11), and (13) yield
+a minimal distance of 55 m for this system to yield a low potential
+for after-image effects.
+4.2
+Diffuse Reflection Tests. The diffuse reﬂection tests
+were conducted on July 2, 2009, at approximately 10:00 AM
+(MDT) with a direct normal irradiance of approximately 880 W/
+m2. A 147 m2 ATS heliostat with a reﬂectivity of  0.9 was used
+to concentrate a beam of sunlight onto the front of the NSTTF
+central receiver tower that was painted white. The reﬂection of the
+sunlight from the front of the painted tower was approximately
+diffuse based on reﬂectivity measurements taken later with a Sur-
+face Optics, Inc. 410 Solar reﬂectometer. Reﬂectivity measure-
+ments ranged from  0.4 (in pitted and soiled regions) to  0.8. In
+all measurements, the diffuse component of the reﬂectivity was
+>99% of the total reﬂectivity. Photos of the beam on the tower
+were taken at varying distances from the tower, and the images
+were processed in MATLABV
+R to determine the normalized irradiance
+values. Analytical predictions of the irradiance as a function of
+distance were made using Eq. (21), where the diffuse power ema-
+nating from the tower is calculated as the total incident power on
+the tower times the reﬂectivity of the tower. The total incident
+power is calculated as the product of the DNI (880 W/m2), the sur-
+face area of the heliostat (147 m2), the reﬂectivity of the heliostat
+(0.9), and the cosine loss (0.78) due to the off-axis position of the
+heliostat (calculated at the date and time of the test), which yields
+91 kW. The total diffusely reﬂected power, Pd, emitted from the
+front of the tower is equal to the incident power times the reﬂec-
+tivity of the white paint on the tower.
+Figure 9 shows the results of the measured and predicted
+irradiances normalized to the DNI, assuming an average reﬂec-
+tivity of 0.7 for the white paint in the predicted values. Reﬂec-
+tivity measurements ranged from  0.4 to  0.8, with most of
+the measurements closer to 0.8. An average reﬂectivity value
+of 0.7 was used because it gave the best ﬁt to the data. Results
+show that the measured and predicted irradiances match very
+closely and follow the same trend as a function of distance
+from the source. At close distances, both the predicted and
+measured irradiances show a slight decrease in the slope of the
+irradiance, which is caused by the reduced visible area of the
+reﬂected sun image at large viewing angles [cosine loss in Eq.
+(21)]. This demonstrates that the analytical solution can be
+used to estimate the irradiance as a function of distance from
+diffuse reﬂections.
+5
+Summary and Conclusions
+This paper has presented methods to evaluate potential glint
+and glare hazards from specularly and diffusely reﬂected sunlight
+from concentrating solar collectors. First, a review of metrics was
+presented to determine safe retinal irradiances as a function of
+subtended source angle (or retinal image size). Metrics for both
+permanent eye damage and temporary after-image effects were
+included. Analytical models were then derived to calculate irradi-
+ances from both specular and diffuse sources. These models were
+validated using data collected from specular and diffuse reﬂection
+tests.
+The methods and equations presented in this paper can be used
+to calculate irradiances from various concentrating solar collector
+systems (e.g., heliostats, dishes, troughs, receivers). The calcu-
+lated retinal irradiance can be compared against the safe retinal
+irradiance metrics to evaluate potential glint and glare hazards. It
+should be noted, however, that the quantiﬁed metrics and esti-
+mates for retinal irradiance do not account for all factors. For
+example, atmospheric attenuation and the impact of wearing sun-
+glasses are not considered in the models. In addition, human
+Fig. 8
+Predicted and measured normalized irradiance as a
+function of distance caused by specular reﬂections from the
+Mod 2-2 10 kW parabolic dish
+Fig. 9
+Predicted and measured normalized irradiance as a
+function of distance caused by diffuse reﬂections from the
+NSTTF central receiver tower
+Journal of Solar Energy Engineering
+AUGUST 2011, Vol. 133 / 031021-7
+Downloaded from http://asmedigitalcollection.asme.org/solarenergyengineering/article-pdf/133/3/031021/5596439/031021_1.pdf by Sandia National Labs user on 10 March 2025
+
+factors and behaviors are not assessed in this paper, which may
+affect the impact of different glint and glare scenarios.
+The impact of multiple coincident beams (i.e., from adjacent
+collectors or receivers) was not considered in this study. Brum-
+leve (pp. 27–32) [1] provides a discussion of the impact of multi-
+ple sources that can be used together with the results of this
+study. In general, multiple sources can increase the retinal image
+size. In addition, the retinal irradiance may or may not increase
+depending on whether the projected retinal images overlap,
+which depends on the positions of the sources relative to the ob-
+server. For example, if two beams enter the eye but do not over-
+lap, the affected retinal image area is increased, but the
+irradiance (W/cm2) is the same as that from a single beam. If the
+two beams are nearly coincident and form a coalesced image on
+the retina, the retinal image size is about the same but the irradi-
+ance increases.
+Based on the conﬁgurations and operation of the various con-
+centrating solar technologies, potential glint and glare scenarios
+that should be considered include the following:
+• Power-towers
+• Specular reﬂections from heliostats when they are moving
+to or from stowed position, in standby mode, or not aimed
+at the receiver.
+• Diffuse reﬂections from the receiver.
+• Linear collectors
+• Specular reﬂections from the mirrors when they are mov-
+ing to or from stowed position and from specular reﬂec-
+tions off the ends of the trough or mirrors when the sun is
+low and aligned with the mirrors (e.g., reﬂections from the
+north end of a north–south ﬁeld when the sun is low in the
+southern horizon).
+• Diffuse and specular reﬂections from receiver tubes and
+bellows shields.
+• Dish/engine systems
+• Specular reﬂections from mirror facets when the dish is
+off-axis (offset position) or moving to or from a stowed
+position.
+• Diffuse reﬂections from the receiver aperture.
+Acknowledgment
+The authors would like to thank Brian Myer, John Quintana,
+Kirill Trapeznikov, and Chuck Andraka for their assistance with
+the dish testing and MATLAB image processing. The authors also
+thank Siri Khalsa for his assistance compiling and interpreting the
+safety metrics.
+Sandia National Laboratories is a multiprogram laboratory
+managed and operated by Sandia Corporation, a wholly owned
+subsidiary of Lockheed Martin Corporation, for the U.S. Depart-
+ment of Energy’s National Nuclear Security Administration under
+Contract No. DE-AC04-94AL85000.
+Nomenclature
+A ¼ area (m2)
+Ad ¼ total area of diffuse source (m2)
+As ¼ visible surface area (m2)
+b ¼ focal length (m)
+C ¼ concentration ratio
+d, D ¼ diameter (m)
+E ¼ irradiance (W/m2 or W/cm2)
+Es ¼ reﬂected radiative ﬂux emitted from diffuse source
+(W/m2)
+f ¼ eye focal length (0.017 m)
+L ¼ radiance (W/m2-sr)
+ND ¼ neutral density
+OD ¼ optical density of ﬁlter
+P ¼ power (W)
+r ¼ distance (m)
+Rx ¼ beam radius at distance x from the mirror (m)
+R1 ¼ portion of beam radius caused by spreading due to sub-
+tended angle of the sun and mirror contour inaccuracies
+(slope error) (m)
+R2 ¼ portion of beam radius caused by focusing and defocus-
+ing characteristics of the mirror (m)
+rms ¼ root mean square
+T ¼ transmittance
+x ¼ distance (m)
+Subscripts
+beam ¼ specular beam of sunlight
+burn ¼ retinal burn threshold
+c ¼ cornea
+d ¼ diffuse
+DNI ¼ direct normal irradiance
+ﬂash ¼ after-image or ﬂash blindness threshold
+ﬂat ¼ ﬂat mirror
+h ¼ heliostat
+p ¼ pupil
+r ¼ retinal
+s ¼ source
+spot ¼ reﬂected sun image on mirror
+x ¼ distance (m)
+Greek Symbols
+b ¼ beam divergence angle (rad)
+u ¼ azimuthal angle in hemisphere (rad)
+q ¼ reﬂectivity
+h ¼ angle between surface normal of the source and line of
+sight between the source and the observer; also the polar
+angle in a hemisphere (rad)
+s ¼ ocular transmission coefﬁcient (0.5)
+x ¼ subtended angle (rad)
+X ¼ Subtended solid angle (sr)
+References
+[1] Brumleve, T. D., 1977, “Eye Hazard and Glint Evaluation for the 5-MWt Solar
+Thermal Test Facility,” Sandia National Laboratories, Report No. SAND76-
+8022.
+[2] Brumleve, T. D., 1984, “10 MWe Solar Thermal Central Receiver Pilot Plant:
+Beam Safety Tests and Analyses,” Sandia National Laboratories, Report No.
+SAND83-8035.
+[3] Sliney, D. H., and Freasier, B. C., 1973, “Evaluation of Optical Radiation Haz-
+ards,” Appl. Opt., 12(1), pp. 1–24.
+[4] Carrier, J., 2008, “Beam Safety Design Parameters,” Data Response Attach-
+ment DR89-1, Appendix A, Data Response Set 1A. Dated on Jan. 14, 2008,
+CH2MHILL, Ivanpah Solar Electric Generating System, Application for Certi-
+ﬁcation (07-AFC-5), Submitted to California Energy Commission, http://
+www.energy.ca.gov/sitingcases/ivanpah/documents/applicant/DR_1a/2008-01-
+14_ISEGS_DR_SET_1A.PDF
+[5] Carrizo Energy, LLC, 2008, “Responses to CEC Data Requests (#1–78),”
+Application for Certiﬁcation (07-AFC-8), Carrizo Energy Solar Farm, Submit-
+ted to California Energy Commission, http://www.energy.ca.gov/sitingcases/
+carrizo/documents/applicant/2008-02-27_DATA_RESPONSES_1-78.PDF
+[6] City of Victorville, 2008, “Victorville 2 Hybrid Power Project,” Application for
+Certiﬁcation (07-AFC-1), submitted to California Energy Commission, www.e-
+nergy.ca.gov/sitingcases/victorville2/documents/
+[7] San Joaquin Solar 1, 2 – Application for Certiﬁcation Volume 2, Appendix L,
+“Glint and Glare Study,” http://www.energy.ca.gov/sitingcases/sjsolar/docu-
+ments/applicant/afc/AFC_volume_02/
+[8] SES Solar Two, LLC (2008), “SES Solar Two Project,” Application for Certiﬁ-
+cation (08-AFC-5), submitted to California Energy Commission.
+[9] Ho, C. K., Ghanbari, C. M., and Diver, R. B., 2009, “Hazard Analyses of Glint
+and Glare From Concentrating Solar Power Plants,” in Proceedings of SolarPA-
+CES 2009, Berlin, Germany, Sept. 15–18, Report No. SAND2009-4131C.
+[10] Sliney, D. H., 1980, “An Evaluation of the Potential Hazards of the Point Fo-
+cusing Solar Concentrators at the JPL-Edwards Test Site,” Report submitted to
+the Jet Propulsion Laboratory (JPL Consulting Agreement No. JF 714696), Cal-
+ifornia Institute of Technology.
+[11] Delori, F. C., Webb, R. H., and Sliney, D. H., 2007, “Maximum Permissible
+Exposures for Ocular Safety (ANSI 2000), With Emphasis on Ophthalmic
+Devices,” J. Opt. Soc. Am. A, 24(5), pp. 1250–1265.
+031021-8 / Vol. 133, AUGUST 2011
+Transactions of the ASME
+Downloaded from http://asmedigitalcollection.asme.org/solarenergyengineering/article-pdf/133/3/031021/5596439/031021_1.pdf by Sandia National Labs user on 10 March 2025
+
+[12] Metcalf, R. D., and Horn, R. E., 1958, “Visual Recovery Times From High-In-
+tensity Flashes of Light,” Air Force Aerospace Medical Research Lab, Wright
+Air Development Center, Technical Report No. 58232.
+[13] Severin, S. L., Newton, N. L., and Culver, J. F., 1962, “An Experimental
+Approach to Flash Blindness,” Aerosp. Med., 33(10), pp. 1199–1205.
+[14] Saur, R. L., and Dobrash, S. M., 1969, “Duration of Afterimage Disability After
+Viewing Simulated Sun Reﬂections,” Appl. Opt., 8(9), pp. 1799–1801.
+[15] Incropera, F. P., and DeWitt, D. P., 1985, Introduction to Heat Transfer, Wiley,
+New York, pp. 514–515.
+[16] Ulmer, S., Reinalter, W., Heller, P., Lupfert, E., and Martinez, D., 2002, “Beam
+Characterization and Improvement With a Flux Mapping System for Dish Con-
+centrators,” ASME J. Sol. Energy Eng., 124, pp. 182–188.
+[17] Diver, R. B., Andraka, C. E., Rawlinson, K. S., Moss, T. A., Goldberg, V., and
+Thomas, G., 2003, “Status of the Advanced Dish Development System Proj-
+ect,” Proceedings of ISEC 2003, 2003 ASME International Solar Energy Con-
+ference, Hawaii, Mar. 15–18.
+[18] Rabl, A., and Bendt, P., 1982, “Effect of Circumsolar Radiation on Performance
+of Focusing Collectors, ASME J. Sol. Energy Eng., 104, pp. 237–250.
+Journal of Solar Energy Engineering
+AUGUST 2011, Vol. 133 / 031021-9
+Downloaded from http://asmedigitalcollection.asme.org/solarenergyengineering/article-pdf/133/3/031021/5596439/031021_1.pdf by Sandia National Labs user on 10 March 2025

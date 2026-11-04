@@ -1,0 +1,9 @@
+======================================================================
+PER-PAPER VALIDATION SUMMARY
+======================================================================
+  ho2011           RESULT: 8 passed, 0 failed
+  sghat_v6         RESULT: 9 passed, 0 failed
+  sghat_v2g        RESULT: 3 passed, 0 failed
+  rogers2015       RESULT: 4 passed, 0 failed
+  yellowhair15     RESULT: 3 passed, 0 failed
+  sreenath2021     RESULT: 2 passed, 0 failed

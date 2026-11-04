@@ -1,0 +1,14 @@
+======================================================================
+CASE  sghat_v6
+REF   Sandia SGHAT Technical Reference Manual v6 (SAND2014-18360)
+======================================================================
+  [OK ] beam spread Smooth Glass w/o ARC (Table 2): got 0.0879, paper 0.0879  -- err=0.000e+00, tol=1.0e-03
+  [OK ] beam spread Smooth Glass w/ ARC (Table 2): got 0.11046, paper 0.11  -- err=4.600e-04, tol=1.0e-03
+  [OK ] beam spread Light Textured w/o ARC (Table 2): got 0.1257, paper 0.126  -- err=3.000e-04, tol=1.0e-03
+  [OK ] beam spread Light Textured w/ ARC (Table 2): got 0.11922, paper 0.119  -- err=2.200e-04, tol=1.0e-03
+  [OK ] beam spread Deeply Textured Glass (Table 2): got 1.0005, paper 1  -- err=5.000e-04, tol=1.0e-03
+  [OK ] smooth glass reflectance @ 0 deg incidence (Table 1): got 0.0441, paper 0.0441  -- err=0.000e+00, tol=1.0e-04
+  [OK ] Sec.5.5 array-limiting angle worked value (A=2000 m2, d=3260 m, cos=1): got 0.0154793, paper 0.0154793  -- err=0.000e+00, tol=1.0e-12
+  [OK ] Sec.5.5 large array -> x = min(beta, theta) = beta: got 0.0093, paper 0.0093  -- err=0.000e+00, tol=1.0e-12
+  [OK ] Sec.5.5 small/off-axis array -> x = min(beta, theta) = theta: got 0.00071365, paper 0.00071365  -- err=0.000e+00, tol=1.0e-12
+  RESULT: 9 passed, 0 failed

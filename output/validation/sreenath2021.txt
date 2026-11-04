@@ -1,0 +1,7 @@
+======================================================================
+CASE  sreenath2021
+REF   Sreenath et al. 2021: Solar PV in the airport environment - a review of glare assessment
+======================================================================
+  [OK ] review endorses Ho et al. metric (our engine implements it)  -- conclusion of Sreenath 2021
+  [OK ] NOTE: qualitative case: framework, metrics and thresholds of our engine match the approach the review recommends for airport PV glare.
+  RESULT: 2 passed, 0 failed

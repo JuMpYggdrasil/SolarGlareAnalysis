@@ -1,0 +1,904 @@
+Evaluation of Glare as a 
+Hazard for General Aviation 
+Pilots on Final Approach
+Jason A. Rogers1
+Clifford K. Ho2
+Andrew Mead,3 Angel Millan3
+Melissa Beben,3 Gena Drechsler3
+1Greensboro College 
+Greensboro, NC 27401
+2Sandia National Laboratories
+Albuquerque, NM 87185
+3Civil Aerospace Medical Institute
+Federal Aviation Administration
+Oklahoma City, OK 73125
+July 2015
+Final Report
+DOT/FAA/AM-15/12
+Office of Aerospace Medicine
+Washington, DC 20591
+
+NOTICE
+This document is disseminated under the sponsorship 
+of the U.S. Department of Transportation in the interest 
+of information exchange. The United States Government 
+assumes no liability for the contents thereof.
+___________
+This publication and all Office of Aerospace Medicine 
+technical reports are available in full-text from the 
+Federal Aviation Administration website.
+
+i
+Technical Report Documentation Page 
+ 
+1.  Report No. 
+2.  Government Accession No. 
+3.  Recipient's Catalog No. 
+DOT/FAA/AM-15/12 
+ 
+ 
+4.  Title and Subtitle 
+5.  Report Date 
+Evaluation of Glare as a Hazard for General Aviation Pilots  
+on Final Approach 
+July 2015 
+6.  Performing Organization Code 
+ 
+7.  Author(s) 
+8.  Performing Organization Report No. 
+Rogers JA,1 Ho CK,2 Mead A,3 Millian A,3 Beben M,3 Drechsler G3 
+ 
+ 
+9.  Performing Organization Name and Address 
+10.  Work Unit No. (TRAIS) 
+1Greensboro College 
+815 West Market St., Greensboro, NC 27401 
+2Sandia National Laboratories 
+P.O. Box 5800, Albuquerque, NM 87185 
+3Federal Aviation Administration, Civil Aerospace Medical Institute  
+P.O. Box 25082, Oklahoma City, OK 73125 
+ 
+11.  Contract or Grant No. 
+ 
+12.  Sponsoring Agency name and Address 
+13.  Type of Report and Period Covered 
+Office of Aerospace Medicine  
+Federal Aviation Administration 
+800 Independence Ave, S.W. 
+Washington, DC 20591 
+ 
+ 
+ 
+14.  Sponsoring Agency Code 
+ 
+15.  Supplemental Notes 
+Work was accomplished under approved task AM-HRR-521 
+16.  Abstract 
+Solar power is a growing source of energy for airports and for their communities. While solar power 
+panels provide a useful means to generate revenue and to provide energy locally, it does pose a potential 
+hazard in the form of glare. In the current study, pilots were exposed to glare during a series of flights in a 
+flight simulator, and their perceived impairment was recorded.  
+During the approach phase of each flight, we simulated glare from one of four possible angles (0, 25, 50, 
+and 90 deg left of straight ahead) and for glare durations of either 0 (no glare control), 1, and 5 s. The glare 
+was simulated using halogen lamps that, under the lighting conditions of our lab, approximated the visual 
+effect of solar glare. Subjective measures of impairment were recorded for each condition. There was a 
+significant main effect of glare duration and a significant main effect of glare angle.  
+Impairment was perceived as being worse for glare sources that are straight ahead of the pilot and of 
+longer duration, with a gradual decline in impairment as the glare source moves toward the side of the pilot. 
+However, there was no significant interaction between glare duration and of glare angle. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+17.  Key Words 
+18.  Distribution Statement 
+Human Factors, Aircraft Simulation, Solar Panel Glare, 
+Airport, Pilot Hazard 
+Document is available to the public  
+through the Internet: 
+www.faa.gov/go/oamtechreports 
+19.  Security Classif. (of this report) 
+20.  Security Classif. (of this page) 
+21.  No. of Pages 
+22.  Price 
+Unclassified 
+Unclassified 
+15 
+ 
+Form DOT F 1700.7   (8-72) 
+Reproduction of completed page authorized 
+
+
+iii
+ACKNOWLEDGMENTS
+Sandia National Laboratories is a multi-program laboratory managed and operated by Sandia Corporation, 
+a wholly owned subsidiary of Lockheed Martin Corporation, for the U.S. Department of Energy’s National 
+Nuclear Security Administration under contract DE-AC04-94AL85000.
+
+
+v
+Contents
+Evaluation of Glare as a Hazard for General Aviation Pilots on Final Approach
+Introduction. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+Methods. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+	
+Participants. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+	
+Design . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+	
+Stimuli and Apparatus . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+	
+Glare Experience Questionnaire. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+	
+Pilot Demographics. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+	
+Questions Related to Solar Glare. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+	
+AGARS Flight Simulator. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+	
+AGARS Flight Simulator Host System. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+	
+AGARS Out-the-Window Display System. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+	
+Navigation Map Display. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+	
+Glare Simulation Devices. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+	
+Post-Trial Questionnaire. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+Procedure . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+	
+Pilot Preparation. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+	
+Familiarization Flight. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+	
+Flight Route. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+Results. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+	
+Glare Experience Questionnaire . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+	
+Pilot Demographics. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+	
+AGARS Flight Simulator Data. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+	
+Post-Trial Questionnaire. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+Discussion. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+	
+AGARS Flight Simulator Data. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+	
+Post-Trial Questionnaire . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+Conclusions. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+References. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+
+
+1
+Evaluation of Glare as a Hazard for 
+General Aviation Pilots on Final Approach
+INTRODUCTION
+Solar power is a growing source of energy for airports and for 
+their communities. For example, in 2012 Manchester-Boston 
+International Airport completed installation of 42,000 photo­
+voltaic panels (Manchester-Boston Regional Airport, 2012). 
+In 2011, private development of a 75-acre solar farm on land 
+owned by the Indianapolis International Airport began with 
+an expected capacity to generate 15 gigawatts of electricity. The 
+airport was collecting approximately $315,000 a year in rent 
+for the land on which the solar farm was built (Indianaplois 
+Airport Authority, 2011; Swiatek, 2013). The Denver Interna­
+tional Airport currently has three separate solar arrays, and in 
+June 2014, announced that a fourth solar installation will be 
+built and altogether spread over 55 acres (Montgomery, 2012). 
+In the same month, General Mitchell International Airport in 
+Milwaukee, WI, completed acceptance of requests for propos­
+als (RFP) to “evaluate the feasibility of siting a large-scale solar 
+photovoltaic system at General Mitchell International Airport” 
+(U.S. Department of Transportation, 2014). It is worth not­
+ing that there is no clear indication in the RFP as to how large 
+this solar installation will be, but if some of the installations at 
+other airports are an indication, it is likely to cover many acres 
+in solar panels.
+While solar power panels provide a useful means to generate 
+revenue and to provide energy locally, they do pose a potential 
+hazard to pilots, in the form of glare. For example at the Man­
+chester-Boston Regional Airport, air traffic controllers (ATCs) 
+reported significant problems seeing due to glare reflecting from 
+the solar panels toward the tower. Aside from the Manchester-
+Boston Regional ATCs suffering from solar glare, reports from 
+pilots flying near the Ivanpah Solar Electric Generating System 
+have included complaints about the glare from the facility (Motley, 
+2014). Pilots have described the glare as “blinding,” and at least 
+one individual reported in the Aviation Safety Reporting System 
+(ASRS) database that the glare was “like looking into the sun” 
+and that they thought the glare was a hazard because they could 
+not see if there was air traffic nearby (ASRS Database, 2013). 
+The effect of transient glare from a solar panel can produce 
+a sudden increase, or flash of light. Sudden changes in the ap­
+pearance or the presentation of new stimuli at a point within 
+the visual field are known to capture attention (Yantis, 1993a; 
+Yantis & Hillstrom, 1994), including interrupting attention 
+allocated to another task (Yantis, 1993b). A particularly salient 
+cue for the capture of visual attention is a sudden change in 
+brightness within a point of the visual field (Theeuwes, 1991; 
+Wright & Richard, 2003). The pulling of attention away from a 
+primary task (such as flying) produces some level of distraction 
+and introduces a secondary task (noting a source of glare) (Lavie, 
+2005; Wickens, Sandry, & Vidulich, 1983). Visual distractors, 
+both internal and external to a vehicle, have been known to 
+influence control (Engstrom, Johansson, & Östlund, 2005; 
+Ranney, Garrott, & Goodman, 2000). Flooding the cockpit of 
+an aircraft with glare will likely decrease visibility for the pilot 
+thereby making it more difficult to control the aircraft. The 
+increased difficulty will likely be reflected by increased cognitive 
+load as the pilot will now have to work a bit harder to maintain 
+visual contact with the runway, instruments, and the manage­
+ment of their aircraft. 
+In the current study, pilots were exposed to glare during a 
+series of flights in a flight simulator, and their perceived impair­
+ment was recorded. During the approach phase of each flight, 
+we simulated glare from one of four possible angles (0, 25, 50, 
+and 90 degrees left of straight ahead), and for glare durations of 
+either 0 (no glare control), 1, and 5 s. The glare was simulated 
+using halogen lamps that, under the lighting conditions of our 
+lab, approximated the visual effect of solar glare. During the 
+flight, the pilots wore an EEG cap to record any changes in 
+neural activity that would indicate increased cognitive and visual 
+load as a function of glare exposure. An eye tracker was used 
+to monitor eye movements to ascertain if they looked toward 
+the glare and what compensatory eye movements were made 
+in response to glare exposure. The results of the EEG and eye 
+tracking will be reported in separate reports. Finally, we asked 
+pilots to provide subjective ratings of their own perceptions of 
+how the glare affected their ability to fly and to read their instru­
+ments. Additionally, we asked them to rate the similarity of the 
+simulated glare to glare they have experienced in the real world.
+METHODS
+This study was completed using the AGARS Simulator (de­
+scribed in detail later) at the Federal Aviation Administration’s 
+Aerospace Human Factors Research Lab (AHFRL) at the Civil 
+Aerospace Medical Institute (CAMI), which is located at the 
+FAA Mike Monroney Aeronautical Center (MMAC) in Okla­
+homa City, OK.
+Participants
+All participants in this experiment were federal employees 
+recruited via distribution of emails internal to the MMAC facility. 
+The experiment was completed as part of the each employee’s 
+work activities, which required that the participants negotiate 
+the time with their individual managers. Because this study was 
+completed as part of the employee’s normal work activities, no 
+additional compensation was given. The minimum require­
+ments for this study included having been a certified private 
+pilot (though not necessarily current) and normal or corrected-
+to-normal visual acuity. A total of 20 participants coordinated 
+
+2
+their time for participation. One was excluded from analysis 
+due to early termination of his experiment session, leaving 19 
+participants, all male. All participants were required to provide 
+their informed consent via two consent forms, one for CAMI 
+and one for Sandia National Laboratories, approved by each 
+institutions’ Institutional Review Board.
+Design
+We combined four angles of glare exposure (0, 25, 50, and 
+90 deg) and two levels of exposure duration (1 and 5 s) to cre­
+ate eight possible experimental conditions. The durations were 
+selected as they represent a range of transit times across solar 
+installations at a variety of speeds. Additionally we had the pi­
+lots fly a single trial in which no glare was present as a control 
+condition, thereby producing a total of nine conditions. Each 
+pilot flew one trial of each of the nine conditions. The order 
+of trials was randomized for each participant, so the pilot did 
+not know if a glare event would occur during any given trial, 
+or from what angle. 
+Stimuli and Apparatus
+Glare Experience Questionnaire
+The glare experience questionnaire asked questions about the 
+pilot’s experience with solar glare while flying, as well as some 
+general demographic questions.
+Pilot Demographics
+The pilots were asked to indicate their current age, gender, 
+how long they have been flying, if they wear corrective lenses 
+(and if so what kind), and if they have had vision corrective 
+surgery (and if so to indicate how long ago).
+Questions Related to Solar Glare
+Pilots were asked to provide ratings of their experience re­
+lated to direct sunlight, glare from solar panels, and glare from 
+other objects. For each, they were asked to indicate what stage 
+of flight they had their encounter (departure, take-off, cruising, 
+approach, touch-down), impairment of ability to fly the plane 
+and the impairment to the ability to read their instruments (each 
+on a 5-point scale: no impairment, slight impairment, moderate 
+impairment, significant impairment, severe impairment), typical 
+duration of exposure (less than 1 s, 1-5 s, 5-10 s, greater than 
+10 s), and to indicate what compensatory strategies they have 
+used (use sun shade, use sunglasses, avert eyes, other). With 
+regard to glare from other objects, we asked them to indicate 
+the source of the glare. 
+AGARS Flight Simulator
+The flight simulator used in this study was the Advanced 
+General Aviation Research Simulator (AGARS). The AGARS 
+is a simulation of a Piper PA-46 Malibu single-engine aircraft. 
+Unique features of this simulator include the replacement of 
+the hardware-based instrumentation with a touchscreen rep­
+resentation of flight instruments. This was done to mediate 
+configurability of the cockpit for use across multiple research 
+projects. For this study, we maintained use of the traditional 
+round dial configuration.
+AGARS Flight Simulator Host System
+The AGARS simulation host computer is a custom-built 
+system that uses a AMD Opteron 2218 processor with 1Gb of 
+RAM. The operating system is Fedora Linux 12 and the simula­
+tion software was written by ZedaSoft, Inc.
+AGARS Out-the-Window Display System
+The AGARS out-the-window (OTW) display system used 
+five Sharp Aqous 60-inch LC-60LE835U flat panel televisions 
+mounted on stands in front and to the sides of the cockpit, thereby 
+creating a segmented display system spanning 180 degrees and 
+creating a reasonably realistic OTW scene.
+Each of the OTW displays is driven by a custom-built com­
+puter. These computers have Intel, Inc. i7 CPUs, 12Gb DDR3 
+RAM, and two Sli-connected NVidia GTX 470 video cards with 
+128 Mb of memory. The computers are running the 64-bit edi­
+tion of Microsoft Windows 7 Professional. The image generator 
+(IG) software, which is responsible for the OTW scene, is VRSG 
+5.7.2 from MetaVR, Inc.
+Navigation Map Display
+A JeppView FlightDeck 3.5.6 GPS navigation map display was 
+positioned above the glare shield and centered in the cockpit near 
+the forward windscreen. The JeppView software was running on 
+a Dell Optiplex 780 computer with an Intel Core 2 Duo 2.93 
+Ghz processor with 4 Gb RAM. The operating system of this 
+computer was the 32-bit edition Windows 7 Professional. The 
+display was a Faytech 9.5 inch touchscreen (model: FT10TMB).
+Glare Simulation Devices
+To simulate glare being reflected from solar panels, we used 
+a series of four SoLux halogen bulbs (12 V, 50 W, MR16, black 
+back) with a 10-d beam spread and a color temperature of 4700 
+K to reproduce the full solar spectrum. Each of the lamps was 
+mounted atop a Leica Tri 100 tripod. Each light was controlled 
+by its own control box, built by Sandia National Laboratories. 
+Each control box featured a trigger switch, which, when thrown, 
+activated a PTC-1A digital timer manufactured by Omega En­
+gineering, Inc., which determined how long the attached lamp 
+would stay on (1 or 5 s). The lamps, tripods, and control boxes 
+are collectively referred to as the glare simulation devices (GSDs). 
+
+3
+The four GSDs were placed straight ahead of the pilot (0 
+degrees), and at 25, 50, and 90 deg away from straight ahead 
+on the left side of the simulator cockpit, between the cockpit 
+and the simulator OTW view. The distance between the lamp 
+and the pilot’s eyes was approximately 0.8 m. Depending on the 
+location of the lamp, the measured luminance at the eye was 
+between ~1,000 – 2,000 Lux (measured using a digital Lux meter 
+LX1330B), which corresponds to a corneal irradiance of ~10 – 20 
+W/cm2 (1 W yields approximately 100 lumens of visible light 
+in the solar spectrum). The subtended angle of the glare based 
+on the bulb aperture of ~0.05 m and a distance of ~0.8 m was 
+approximately 0.06 rad. The retinal irradiance was calculated 
+from the measured corneal irradiance, subtended glare angle, 
+and measured pupil diameter (~5 mm) to be ~0.024 – 0.048 
+W/cm2. Together with the subtended glare angle of 0.06 rad (60 
+mrad), the retinal irradiance was sufficient to cause a temporary 
+after-image, similar to solar glare reflected from flat solar panels 
+(Ho, Ghanbari, & Diver, 2011; Ho, 2013).
+Figure 1. Placement of two of the Glare Simulation 
+Devices are at 5 deg and 50 deg.
+Figure 2. Interior view of the AGARS cockpit, with the 0-deg GLD triggered.
+
+4
+Post-Trial Questionnaire
+Following trials with simulated glare, we asked pilots to rate 
+their experience. The three questions and possible responses (on 
+a 5-point rating scale) were as follows:
+1.	 Rate the degree of impairment from the simulated glare 
+on your ability to fly the plane.
+□	
+1 = No impairment: Can easily perform functions 
+necessary to fly the plane with no noticeable im­
+pact of glare
+□	
+2 = Slight to no impairment: Can still perform 
+functions necessary to fly the plane, but glare is 
+noticeable
+□	
+3 = Moderate impairment: Can perform functions 
+necessary to fly the plane, but glare required 
+some action (e.g., physically blocking glare, avert­
+ing eyes)
+□	
+4 = Significant impairment: Difficulty performing 
+functions necessary to fly the plane, even after 
+performing actions in response to glare
+□	
+5 = Severe impairment: Unable to perform func­
+tions necessary to fly the plane
+2.	 Rate the degree of impairment from the simulated glare 
+on your ability to read your instruments.
+□	
+1 = No impairment: Can easily read instruments 
+and values (e.g., altitude, speed) with no notice­
+able impact of glare
+□	
+2 = Slight to no impairment: Can still read instru­
+ments and values, but glare is noticeable
+□	
+3 = Moderate impairment: Can read instruments 
+and values, but glare required shifting of eyes, 
+blinking, or refocusing in order to read values
+□ 	
+4 = Significant impairment: Difficulty reading in­
+struments and values, even after shifting of eyes, 
+blinking, or refocusing
+□ 	
+5 = Severe impairment: Unable to read instru­
+ments and values
+□	
+N/A (did not view instruments during or after glare 
+event)
+3.	 How similar was the simulated glare to actual glare you 
+have observed while flying, if applicable?
+□	
+1 = No similarity
+□	
+2 = Slight similarity
+□	
+3 = Moderate similarity
+□ 	
+4 = Very similar
+□	
+5 = Extremely similar
+□	
+Not applicable
+For all trials, we asked the subjects the open-ended question 
+“[are there] any additional comments or questions regarding this 
+test or your experience that you would like to provide?”
+Procedure
+Pilot Preparation
+Pilots were required to provide their informed consent prior 
+to participation. Upon consent, we measured the pilot’s head 
+size in order to select the appropriate EEG cap. We then asked 
+the pilot to enter the cockpit so that initial eye tracking camera 
+calibration and seat position adjustments could be made. The 
+pilots completed the glare experience questionnaire. The EEG 
+cap was placed upon the pilot’s head and the position and chin 
+strap adjusted to ensure proper fit and comfort. Once all EEG 
+electrodes indicated good signal, the pilot was reminded not to 
+make any sudden head movements and then was escorted to 
+and seated in the AGARS cockpit. We asked the pilot to verify 
+the correct alignment of the GSDs, and made any minor adjust­
+ments that were required to optimize the glare simulation. Final 
+eye tracking calibration was then performed.
+Familiarization Flight
+Each pilot was informed about the performance characteristics 
+of the Piper Malibu simulated by the AGARS and was given a few 
+minutes to become familar with the location and characteristics 
+of the instrumentation. Once the pilot felt ready, we began one 
+to three familiarization flights, depending on how quickly they 
+became comfortable flying the AGARS. While familiarization 
+took place, one of the researchers familiar with flying the AGARS 
+remained available to the pilot to answer any questions and to 
+guide them along the experimental route .
+Flight Route
+For all flights, the pilots flew from Max Westheimer Airport 
+(KOUN) in Norman, OK, to the GALLY navigation fix, located 
+in Newcastle, OK, at an altitude of 2,500 feet MSL (see Figure 
+3). From there, they headed north to Will Rogers International 
+Airport (KOKC) to land on runway 35R. The pilots were able 
+to use the GPS navigation display to maintain spatial awareness 
+of their current location in relation to the GALLY navigation fix 
+and KOKC 35R. Each flight lasted about 5 min.
+Figure 3. Map of flight route depicting the 
+route flown by pilots in our study. Take off 
+was from KOUN. Pilots then flew to the 
+GALLY waypoint (Stacks on sectional charts) 
+and then turned north to KOKC.
+
+5
+The radios for AGARS were set to the frequencies for KOKC 
+35R automatically. This enabled localizer, glideslope, and dis­
+tance measuring equipment (DME) instrumentation to work 
+appropriately without intervention from the pilot. This was done 
+to minimize their workload, particularly because the AGARS 
+touchscreens can make manipulation of the radio dials extremely 
+difficult, which would dramatically increase pilot workload.
+We controlled glare with the GSDs. When a trial called for 
+using glare, the appropriate GSD was selected and the exposure 
+duration was programmed into the digital timer for that GSD. 
+One of the researchers observed a display that replicated the 
+DME display from the AGARS cockpit. The trigger for the 
+GSD was activated when the DME was 2.6, which places the 
+aircraft at 1 mile from the runway threshold, on final approach 
+to landing at Will Rogers.
+RESULTS
+Glare Experience Questionnaire 
+Pilot Demographics
+Pilots’ mean age was 47.6 years (SEM = 1. 88). The mean 
+flight years was 21.7 (SEM = 2. 32). Two pilots had stopped 
+flying several years prior to participating in this experiment 
+(one had ceased five years ago, while the other had not flown 
+in 20 years). Both of these pilots demonstrated that their 
+flying skills were sufficient for participation. Eleven pilots 
+(58%) wore corrective lenses while flying. Of those who wore 
+corrective lenses, nine (81%) wore glasses, one wore contacts, 
+and one declined to respond. Three pilots had received vi­
+sion corrective surgery, with a mean of 3.25 years since their 
+surgery (SEM = 1.01).
+As can be seen in Figure 4, the majority of participants had 
+some real world experience with direct sunlight or with solar 
+glare reflecting from other objects. From the Figure, it is also 
+clear that the majority of encounters with sunlight and glare 
+from other objects took place while the pilot was in cruise or 
+on approach. Less than a third of pilots had encountered direct 
+sunlight during departure or take-off. These results suggest 
+that this study design is well-positioned to generalize outside 
+the lab, since the experimental design exposed pilots to glare 
+during approach, rather than another stage of flight such as 
+take off. Of key interest was the low number of respondents 
+(two) who had encountered glare from solar installations. This 
+was likely due the lack of solar installations in the Oklahoma 
+City area, where our subjects were recruited and may have 
+spent the majority of their time flying. 
+Figure 4. Real-world sources of solar glare that pilots have encountered.
+
+6
+Figure 5 shows that the majority of our pilots had encoun­
+tered glare with durations between 1 and 10 s with longer 
+durations being encountered for objects other than direct 
+sunlight or solar panels. Figure 6 shows that, for most, glare 
+emanated primarily from bodies of water. 
+AGARS Flight Simulator Data
+The lateral deviation from the runway centerline of the ini­
+tial touch down point was submitted to an analysis of variance 
+(ANOVA) for within-subjects designs (a.k.a. repeated measures). 
+In this instance, there were two factors (Independent Variables, 
+or IVs): 1) duration with two levels (1 s and 5 s) and 2) angle of 
+the simulated glare exposure (0, 25, 50, and 90 deg to the left of 
+straight ahead). The outcome measure, or Dependent Variable 
+(DV), was the lateral deviation of the initial touch-down point 
+from centerline. 
+Neither duration, F(1,18) = .406, MSe = 5.282, p < .532, ή2 
+= .022, nor the angle of simulated glare exposure was significant, 
+F(3,54) = 1.407, MSe = 3.228, p < .251, ή2 = .073. Likewise, no 
+significant interaction was found between these two variables, 
+F(3,54) = .451, MSe = 4.046, p < .717, ή2 = .024. 
+It should be noted, however, that there were two runway 
+impacts (crashes) during the course of the experiment. The first 
+took place during a control condition during which no glare was 
+present. This pilot, we suspect, may have been testing the limits of 
+the simulator, because the pilot appeared to be showing signs of 
+boredom, such as making delayed approaches requiring a steeper 
+approach angle. Following this impact, the pilot appeared to fly 
+much more conservatively. Since this pilot had no difficulty with 
+any other landing, it seems more than coincidental that the one 
+time he had a problem was also the one time he did not have a 
+glare event during the main trials.
+The second runway impact took place when the glare was 
+presented straight ahead of the pilot for a duration of 5 s. This 
+pilot bounced the aircraft twice while landing. The third con­
+tact was ultimately registered as an impact (crash). While the 
+previously mentioned lack of significant groupwise interaction 
+between glare angle and glare duration does not directly support 
+causation of this particular impact, that notion is suggestive for 
+this one case.
+Post-Trial Questionnaire
+Pilot ratings of perceived impairment of glare on the ability 
+to fly the airplane and to read their instruments, for both the 1-s 
+and the 5-s durations, are presented in Figures 5 and 6. 
+ Figure 5. Duration of glare from real-world objects encountered 
+by pilots.
+Figure 6. Frequency of glare from sources other than direct 
+sunlight or solar panels.
+
+7
+The average results for the 1- and 5-s durations are presented 
+in Figure 7. It is obvious by looking at the Figures 7 and 8 that 
+impairment is worse for glare sources that are straight ahead of 
+the pilot, with a gradual decline in impairment as the glare source 
+moves toward the side of the pilot. If we look at the ratings of 
+impairment on the ability to fly, we can see that the mean rating, 
+for both 1 s (M = 3.16, SEM = 0.23) and 5 s (M = 3.53, SEM 
+= 0.16) glare durations at 0 deg is above 3, a rating of moderate 
+impairment. At an angle of 25 deg, the mean impairment rating 
+for an exposure duration of 5 s (M = 2.89, SEM = 0.20) is just 
+below the rating of 3, and the error bar rises above the rating of 
+3. This indicates that this particular condition results in moder­
+ate impairment of the ability to fly. Also, at the angle of 25 deg, 
+the mean impairment rating for a glare duration of 1 s is M = 
+2.47, SEM = 0.25, indicating slight to moderate impairment. 
+For the control (no glare) condition, all pilots rated the im­
+pairment for both the ability to fly and impairment for reading 
+their instruments as a 1 (no impairment). This indicated that 
+they were able to fly the aircraft and see their instruments with 
+no difficulty when glare was not present in a flight. However, 
+since the absence of glare uniformly produced a rating of 1 (a 
+clear floor effect) we excluded those data from further analysis 
+because leaving them in would have automatically led to higher 
+statistical significance when glare was present. We instead opted 
+to leave those data out and focus solely on conditions in which 
+glare was present to determine how those conditions differed 
+from each other.
+Figure 7. Mean ratings of impairment to ability to fly based upon the angle and duration of 
+simulated glare exposure. Error bars represent the standard error of the mean.
+Figure 8. Mean ratings of impairment to read instrumentation based upon the angle and 
+duration of simulated glare exposure. Error bars represent the standard error of the mean.
+
+8
+To isolate the sources of variation in our study, a doubly 
+multivariate analysis was conducted. The doubly multivariate 
+analysis is an extension of ANOVA for within-subjects designs 
+that allows for the measurement of changes in multiple DVs as 
+a function of different IVs. This analysis measured three DVs: 
+the pilot rating of a) impairment of flying ability, b) impairment 
+to read their instruments, and c) how similar the simulated glare 
+was to what had been experienced in the real world. Two IVs 
+were used in this analysis. The first was the duration of the glare 
+exposure with two levels (1 s and 5 s). The second was the angle 
+of glare exposure, with four levels (0, 25, 50, and 90 deg to the 
+left from straight ahead). Wilks’ λ was used in the multivariate 
+testing. Wilks’ λ, also called the maximum likelihood criterion, 
+is a multivariate statistic that measures the proportion of variance 
+in the DVs that is unaccounted for by the IV(s). Because it is 
+measuring the variance that is unaccounted for, a small Wilks’ 
+λ is associated with a statistically significant result and therefore 
+rejection of the null hypothesis. 
+There was a significant main effect of glare duration, Wilks’ ή 
+= .508, F(9,10) = 9.325, p < .011, ή2 = .492. This indicates that 
+there is a difference among the DVs based upon the duration 
+of glare exposure. There was also a significant main effect of the 
+angle of glare exposure, Wilks’ ή= .106, F(9,10) = 9.325, p < 
+.001, ή2 = .894. This indicates that there was a difference among 
+the DVs based upon the angle of glare exposure. However, there 
+was not a significant interaction between duration of glare ex­
+posure and the angle of glare exposure, Wilks’ ή= .711, F(9,10) 
+= .452, p < .877, ή2 = .289. 
+Given the significant multivariate tests, univariate tests 
+were carried out to further parse the relation supported by the 
+multivariate main effects. These univariate tests are two-factor 
+ANOVAs for within-subjects designs. Each of these univariate 
+tests measured the effect that the two IVs had on a single DV 
+(the pilot’s rating of impairment on flying ability, the pilot’s 
+rating of impairment to read the instruments, and the pilot’s 
+rating of how similar the simulated glare was to what they had 
+experienced in the real world). 
+The first univariate test assessed how glare angle and duration 
+affected pilots’ rated impairment of glare on flying ability. This 
+test showed a significant main effect of simulated glare duration 
+on impairment of flying ratings, F(1,18) = 11.272, MSe = .675, 
+p < .004, ή2 = .385, with the 5-s duration having a higher overall 
+mean (M = 2.645, SEM = .136) than the 1 s duration (M = 
+2.197, SEM = .128). There was also a significant main effect of 
+the simulated glare exposure angle on the pilot ratings of how 
+it affected their ability to fly, F(1,18) = 32.898, MSe = .675, p 
+< .000, ή2 = .646, with an orderly rating of straight ahead as the 
+most impairing (M = 3.342, SEM = .171), 25 deg left of straight 
+ahead as second most impairing (M = 2.684, SEM = .172), 50 
+deg left of straight ahead as less impairing (M = 2.026, SEM = 
+.130), and 90 degr to left of straight ahead as the least impairing 
+(M = 1.632, SEM = .166). 
+To determine if there were significant differences between the 
+ratings of how piloting ability was affected for each of the vari­
+ous angles, pairwise comparisons were performed. A ­Bonferroni 
+correction was used to control for familywise error rate inflation. 
+The pairwise comparisons of angle of exposure revealed that 
+straight ahead was rated as significantly higher than 25 deg to 
+the left of straight ahead (p < .038). Likewise, straight ahead 
+was found to be significantly higher than 50 deg to the left of 
+center (p < .000), and 90 deg left of center (p < .000). Further, 
+25 deg left of center was found to result in a higher rating than 
+50 deg left of center (p < .001), and 90 deg left of center (p < 
+.000). Finally, with regard to the rating impact to piloting ability, 
+there was no significant difference found between 50 deg and 
+90 deg left of the center (p < .236). 
+The second univariate test we conducted assessed how glare 
+angle and duration affected pilot ratings of their ability to read 
+instruments. We found a significant main effect of glare dura­
+tion on rated ability to read instrumentation, F(1,18) = 11.046, 
+MSe = .572, p < .004,ή2 = .385, with the 5-s duration having 
+a higher overall mean (M = 2.132, SEM = .151) than the 1-s 
+duration (M = 1.724, SEM = .154). 
+Mauchly’s test for Sphericity determines whether the variances 
+across the different conditions are equal. When the variances across 
+levels are equal, the sphericity assumption of an ANOVA has 
+been met and Mauchy’s test for Sphericity will not be significant. 
+When Mauchly’s test for Sphericity is significant, it means that 
+the sphericity assumption has been violated, which results in a 
+greater risk of a Type II error (failure to reject the null hypothesis). 
+To compensate for this, the degrees of freedom for the ANOVA 
+have to be adjusted; typically by using a Greenhouse-Geisser 
+correction. When analyzed for the effect of glare angle on pilot 
+ratings of their ability to read their instruments, we found that 
+Mauchly’s test for Sphericity was significant, ή2(5) = 12.362, p < 
+0.030. The corrected ANOVA showed a significant main effect 
+of simulated glare exposure angle on ratings of how it affected 
+their ability to read the instruments, F(2.281,46.319) = 13.611, 
+MSe = .948, p < .000, ή2 = .646,with an orderly rating of straight 
+ahead as the most impairing (M = 2.474, SEM = .189), 25 deg 
+left of straight ahead as second most impairing (M = 2.184, 
+SEM = .214), 50 deg left of straight ahead as less impairing (M 
+= 1.737, SEM = .168), and 90 deg to left of straight ahead as 
+the least impairing (M = 1.316, SEM = .159).
+To determine if there were significant differences between 
+the ratings of how the ability to read instrumentation was im­
+pacted for each the various angles of simulated glare, pairwise 
+comparisons were performed using a Bonferroni correction. The 
+pairwise comparisons of angle of exposure revealed that straight 
+ahead is not rated as significantly higher than 25 deg to the left 
+of straight ahead (p < 1.000). However, straight ahead was found 
+to be significantly higher than 50 deg to the left of center (p < 
+.014) and 90 deg left of center (p < .000). Further, 25 deg left 
+of center was significantly higher than 50 deg left of center (p < 
+.014) and 90 deg left of center (p < .006). Finally, with regard 
+to the rating impact to the ability to read instrumentation, it 
+was found that there was not a significant difference between 
+50 deg and 90 deg left of the center (p < .098). 
+The last univariate test assessed how glare angle and duration 
+affected pilot ratings of the simulated glare verse glare they had 
+
+9
+experienced while flying in the real world. We found no main 
+effect of duration on ratings of the similarity of represented glare 
+to real-world glare (F(1,18) = .471, MSe = .893, p < .501, ή2 = 
+.026). We analyzed the effect of the angle of glare exposure on 
+pilot’s ratings of the similarity of the simulated glare to real-world 
+glare, Mauchly’s test was again significant( ή2(5) = 11.218, p < 
+0.048). Subsequent Greenhouse-Geisser-corrected ANOVA 
+was not significant (F(2.117,38.102) = .626, MSe = 1.370, p < 
+.549, ή2 = .034). This means that regardless of the duration or 
+the angle of the glare, the ratings of how realistic they perceived 
+the simulated glare to be remained about the same.
+DISCUSSION
+AGARS Flight Simulator Data
+Results of the landing data showed no significant, systematic 
+lateral deviation from runway centerline, regardless of the dura­
+tion or angle of simulated glare presented to the participant. 
+The one case that we considered to be of any potential concern 
+was when a pilot crashed during landing with the glare presented 
+straight ahead for a duration of 5 s. However, we would sug­
+gest tempering any concern by pointing out that if there was a 
+problem with that particular angle and duration, we would have 
+likely seen more individuals who had crashed. 
+Post-Trial Questionnaire 
+Data from the post-trial questionnaire demonstrate that, 
+for the most part, higher glare durations result in greater self-
+perceived impairment in the pilots’ ability to safely fly an aircraft 
+and to read aircraft instrumentation relative to shorter durations. 
+Further, as expected, the more forward-facing the glare was, the 
+more impairment the pilots reported experiencing. More pre­
+cisely, we found that when glare was present, the ability to read 
+aircraft instrumentation was not statistically different between 
+glare that was presented straight ahead and when it was 25 deg 
+to the left of straight ahead. Likewise, no statistical difference 
+was found between 50 deg and 90 deg of straight ahead. Taken 
+together, this suggests that as far as reading instrumentation is 
+concerned, two groupings of angles resulted in similar impair­
+ment among the member angles: The first grouping included the 
+member angles of 0 and 25, and the second grouping included 
+the member angles of 50 and 90. While there was a significant 
+increase in these ratings, it is still considered to be less than a 
+moderate impairment on the ability to read instrumentation. 
+Though the rating was, ultimately, below our threshold of “moder­
+ate impairment,” one could speculate that longer durations may 
+result in higher impairment ratings for reading instrumentation, 
+particularly for angles of 0 and 25 deg of straight ahead.
+In terms of how glare impacted the ability to fly, we found 
+a similar effect of glare duration as described above: A longer 
+duration resulted in greater self-reported impairment to the 
+ability to land on a runway center. We found that glare from 
+the angles of 50 and 90 deg was not statistically different from 
+each other with regard to the relative impairment to the ability 
+to fly. Interestingly, there is a statistically significant increase in 
+the ratings of impairment when glare comes from an angle of 
+25 deg, and a still larger increase in the ratings of impairment 
+for glare that is straight ahead. Again, the closer the glare was 
+to straight ahead, the more likely it became problematic for 
+the pilot, and glare toward the side is unlikely to be a problem.
+Figure 9 shows that ratings of the impairment to the ability 
+to fly for glare from straight ahead were above a rating of 3. Ad­
+ditionally glare from 25 deg for a 5 s duration yielded a rating that 
+was, statistically, indistinguishable from a rating of 3. Therefore, 
+it is reasonable to say that glare from straight ahead or from 25 
+deg (if it is long enough) will result in moderate impairment.
+To summarize, the safe course of action would appear to be 
+to locate sources of glare such that they do not produce glare 
+from angles less than 50 deg from the pilots’ view straight ahead 
+on approach to landing.
+Figure 9. Mean ratings of impaired flying ability, impaired ability to read instrumentation, 
+and the similarity of simulated glare to real glare, as a  function of glare exposure angle. 
+Error bars represent one standard error of the mean.
+
+10
+CONCLUSIONS
+The presence of glare was associated with the most impair­
+ment in the pilot’s ability to see their instruments and to fly their 
+airplane when the glare was straight ahead, as well as slightly to 
+the side. The more forward the glare is and the longer the glare 
+duration, the greater the impairment to the pilots’ ability to 
+see their instruments and to fly the aircraft. These results taken 
+together suggest that any sources of glare at an airport may be 
+potentially mitigated if the angle of the glare is greater than 25 
+deg from the direction that the pilot is looking in. We therefore 
+recommend that the design of any solar installation at an airport 
+consider the approach of pilots and ensure that any solar instal­
+lation that is developed is placed such that they will not have 
+to face glare that is straight ahead of them or within 25 deg of 
+straight ahead during final approach. 
+REFERENCES
+ASRS Database. (2013, 08). ACN: 1109473.
+U.S. Department of Transportation. (2014, June). RFP- 
+General Mitchell International Airport solar energy 
+feasibility assessment. Retrieved from: http://county.
+milwaukee.gov/ImageLibrary/Groups/cntyArchEng/
+dturzai/09172013forward/GMIASolarEnergyRFP5-14.
+pdf
+Engstrom, J., Johansson, E., & Östlund, J. (2005). Effects of 
+visual and cognitive load in real and simulated motorway 
+driving. Transportation Research Part F, 8, 97–120.
+Ho, C.K., Relieving a Glaring Problem (2013, April). Solar 
+Today Magazine, American Solar Energy Society: 
+Boulder, CO. p. 28 - 31. Retrieved from: http://www.
+omagdigital.com/publication/?i=152579&p=28 
+Ho, C.K., C.M. Ghanbari, and R.B. Diver (2011). 
+Methodology to assess potential glint and glare hazards 
+from concentrating solar power plants: Analytical models 
+and experimental validation, Journal of Solar Energy 
+Engineering, 133(3), pp. 031021-1 - 031022-9.
+Indianaplois Airport Authority. (2011, September 20). 
+Construction to begin on Indianapolis International Airport 
+Solar Farm. Indianapolis, IA. Published by Indianapolis 
+Airport Authority. Retrieved from http://www.
+indianapolisairport.com/admin/
+uploads/614/9.20.11%20solar%20farm%20
+development.pdf
+Lavie, N. (2005). Distracted and confused? Selective attention 
+under load. Trends on Cognitive Sciences, 9(2), 75-82.
+Manchester-Boston Regional Airport. (2012). Solar project. 
+Manchester, NH, USA. Published by the Manchester-
+Boston Regional Airport. Retrieved from http://www.
+flymanchester.com/newsletters/holiday-2012/solar-
+project
+Montgomery, H. (2012, June 18). Fourth Solar Array Opens 
+at Denver International Airport. Denver, CO, USA. 
+Retrieved from http://business.flydenver.com/pr/
+DIAPR_140618_8g.pdf
+Motley, T. R. (2014). Pilot complaints of visual impacts from 
+Ivanpah solar electric generating system. Las Vegas, NV. 
+Docketed by the California Energy Commission, Docket 
+No. 09-AFC-07C, TN#202694. Retrieved from: http://
+docketpublic.energy.ca.gov/PublicDocuments/09-AFC-
+07C/TN202694_20140714T114742_Letter_Re_Pilot_
+Complaints_of_Visual_Impacts_from_Ivanpah_Solar.pdf
+Ranney, T. A., Garrott, W. R., & Goodman, M. J. (2000). 
+NHTSA driver distraction research: Past, present, and 
+future. Washington, DC: NHTSA. Paper No. 233. 
+Retrieved from: http://www-nrd.nhtsa.dot.gov/pdf/esv/
+esv17/proceed/00177.pdf
+Swiatek, J. (2013, October 19). Indianapolis airport solar 
+farm is largest of its kind. The Indianapolis Star. 
+Indianpolis, Indiana, USA. Retrieved from http://www.
+indystar.com/story/money/2013/10/18/solar-farm-at-
+indianapolis-international-airport-is-soaking-up-the-
+sun/3008427/
+Theeuwes, J. (1991). Exogenous and endogenous control of 
+attention: The effect of visual onsets and offsets. 
+Perception & Psychophysics, 49(1), 83-90.
+Wickens, C. D., Sandry, D. L., & Vidulich, M. (1983). 
+Compatibility and resource competition between 
+modalities of input central processing, and output. 
+Human Factors, 25(2), 227-248.
+Wright, R. D., & Richard, C. M. (2003). Sensory mediation 
+of stimulus-driven attentional capture in multiple-cue 
+displays. Perception & Psychophysics, 65(6), 925-938.
+Yantis, S. (1993a). Stimulus-driven attentional capture. 
+Current Directions in Psychological Science, 2(5), 156-161.
+Yantis, S. (1993b). Stimulus-driven attentional capture and 
+attentional control settings. Journal of Experimental 
+Psychology: Human Perception and Performance, 19(3), 
+676-681.
+Yantis, S., & Hillstrom, A. P. (1994). Stimulus-driven 
+attentional capture: Evidence from equiluminant visual 
+objects. The Journal of Experimental Psychology: Human 
+Perception and Performance, 20(1), 95-107.

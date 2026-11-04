@@ -1,0 +1,108 @@
+=== ASTM E903-20 METHOD NOTES (reference summary, NOT the standard text) ===
+
+Status: 2026-09-21, reviewed from public ASTM abstract/preview + the free
+        equivalent SolarPACES Reflectance Guideline V3.1 (38 pp, in this
+        folder as `_SolarPACES_Reflectance_Guideline_V3.1.txt` / source PDF
+        `Document-1_SolarPACES_Reflectance-Guideline_V3.1.pdf`).
+License: E903-20 full text is paywalled (ASTM ~$80; ICC Digital Codes
+        Premium) -> NO verbatim standard text is stored here. This file is
+        our own method mapping used to justify the code implementation
+        `reflectivity_mode: "solar_weighted"` in src/solar_glare/hazard.py.
+
+=== 1. Standard identity (public abstract, ASTME903-20) ===
+- "Standard Test Method for Solar Absorptance, Reflectance, and Transmittance
+  of Materials Using Integrating Spheres."
+- Scope highlights:
+  1.1  Covers spectral absorptance/reflectance/transmittance measurable with
+       spectrophotometers equipped with integrating spheres.
+  1.2  Includes methods of computing solar-weighted properties from the
+       measured spectra.
+  1.3  Applicable to materials with both specular and diffuse optical
+       properties.
+  1.7  Solar-weighted results shall be calculated with the standard solar
+       spectral distributions referenced by the standard; results with other
+       spectra may be reported if the spectrum is stated.
+- Significance (Sec 5): designed for solar energy system material
+  characterisation; reproducibility is a goal; practical for smooth
+  materials with specular and diffuse reflection; the relevant spectral
+  range is much wider than the photopic (visual) response.
+- Solar absorptance from the measured data: alpha_solar = 1 - rho_solar - tau
+  (conservation of energy at each wavelength), so rho_solar is simply the
+  solar-weighted reflectance term used in the glare pipeline.
+
+=== 2. Solar weighting procedure (per SolarPACES V3.1 Sec 4.4 / Sec 7.2) ===
+Weighting uses the currently valid standard solar spectrum for direct
+irradiance, ASTM G173 (AM 1.5 for mid-latitudes). Equations follow
+weighted-ordinate / integration form:
+
+    rho_solar([La,Lb], theta) = int(rho_lam(lam,theta) * S(lam) dlam, La..Lb)
+                                / int(S(lam) dlam, La..Lb)
+
+where S(lam) is the reference solar irradiance (W/(m^2*nm)) and La..Lb the
+wavelength window the weighting is computed over.
+- G173 publishes solar irr from 280-4000 nm.
+- The far-NIR contribution 2500-4000 nm is only ~0.0018 of the total and the
+  UV tail below 320 nm ~0.0018 -> SolarPACES recommends computing solar
+  weighting over [320, 2500] nm (convenient symmetric ~0.36% cut).
+- Recommended spectral step <= 10 nm (5 nm nominal).
+- rho_lam must be the SPECTRAL reflectance measured at the same incidence
+  angle theta (near-specular / hemispherical; see 3).
+
+=== 3. Hemispherical vs specular reflectance (SolarPACES V3.1 Sec 4) ===
+- rho_lam,h(lam,theta): hemispherical reflectance = TOTAL reflected into the
+  upper hemisphere (specular + diffuse), measured with an integrating sphere.
+- rho_lam,phi(lam,theta,phi): near-specular reflectance within a half-accept-
+  ance cone phi (CSP/glare relevant). For a perfectly smooth surface the
+  distribution peaks in the specular direction; the glare hazard uses the
+  specular beam, not the diffuse scatter.
+- Practical consequence for glare: for SMOOTH glass (float/low-iron) the
+  diffuse component is negligible, so hemispherical ~= specular; for
+  textured glass the hemispherical number OVERestimates the glare beam. The
+  code's E903-style mode therefore models the specular front-surface
+  component (Fresnel) and reports the hemispherical/specular caveat.
+
+=== 4. Mapping to the code implementation (hazard.py::solar_weighted_reflectivity) ===
+- Panel ρ(lam,theta) has no published measured spectrum -> E903-20-style
+  procedure is implemented with a physical spectral model:
+  * unpolarised Fresnel reflectance of the front air|glass interface at AOI
+    theta using a representative PV-glass refractive index n(lam) (dispersion,
+    ~1.52 in the visible -> ~1.46 at 2500 nm);
+  * a single front surface is justified because the solar cell absorbs the
+    transmitted light, so the module's external reflectance ~ first-surface.
+  * optional quarter-wave ARC stack (air|ARC|glass) via `n_arc` to emulate
+    anti-reflection coated glass (SGHAT "smooth_arc" counterpart).
+- Solar weighting uses the ASTM G173 direct-normal spectrum already present
+  in the repo (pvlib.spectrum.spectrl2 -> iec62471.py::_spectrum()), the
+  direct-normal (beam) component being the correct weight for glare.
+- Integration window: [320, 2500] nm per SolarPACES recommendation (the
+  pvlib G173 output covers [280,4000]; the code clips to 320-2500).
+- Result R_solar(theta) is the "solar-weighted reflectance" of E903-20's
+  philosophy, applied per glare minute at that minute's AOI, replacing the
+  broadband SGHAT v6 Table 1 fit.
+
+=== 5. Expected differences vs SGHAT v6 Table 1 (to document in report) ===
+- Origin:  SGHAT fits = empirical AOI fits measured on real PV glass samples
+           (Yellowhair & Ho 2015); E903-style mode = physical Fresnel model
+           of bare/ARC glass, solar-weighted spectrally.
+- Normal:  SGHAT smooth 4.41% / smooth_arc 3.24%; Fresnel n~1.52 ~4.0%
+           (bare) / ~3.2% with practical ARC -> comparable.
+- Mid-AOI: SGHAT polynomial minimum ~40 deg; Fresnel Brewster dip ~atan(n)
+           ~56-57 deg -> curves diverge in 40-65 deg band.
+- Grazing: SGHAT exponential + clip R=0.08 past 89 deg; Fresnel rises to
+           ~0.7 at 89 deg (saturated, no 0.08 clip) -> E903-style mode gives
+           HIGHER reflectance at the glare AOIs (78-82 deg) by ~1.5-1.8x,
+           i.e. proportionally higher retinal irradiance (classification
+           unchanged, hit detection unchanged).
+- ARC:     real ARC also suppresses glancing reflectance; bare-Fresnel is the
+           conservative (higher-R) bound for coated modules.
+
+=== References (downloadable, legitimate) ===
+- SolarPACES Guideline V3.1 (in this folder).
+- ASTM G173-03(2020) standard solar spectrum (free reference data; already
+  reproduced in-code via pvlib).
+- Yellowhair & Ho 2015 (ASME) - origin of the SGHAT Table 1 fits
+  (`_Yellowhair_Ho_2015_PV_Texturing_Glint.txt` in this folder).
+- SGHAT Technical Reference v6 Sec 5.3 / Table 1
+  (`_sghat_ref_extracted.txt` in this folder).
+- Ho 2011 JSEE 133:011011 - glare method using G173-weighted irradiance
+  (`_Ho_2011_JSEE_glare_method.txt`).

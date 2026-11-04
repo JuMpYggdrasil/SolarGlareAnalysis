@@ -1,0 +1,685 @@
+1 | P a g e
+Solar Glare Hazard Analysis Tool (SGHAT)
+User’s Manual v. 2.0
+Clifford K. Ho and Cianan A. Sims
+Sandia National Laboratories
+(505) 844-2384, ckho@sandia.gov
+SAND2013-XXXXP
+11/30/12, 1/25/13, 2/27/13, 8/23/13
+Contents
+1.
+Requirements.......................................................................................................................2
+2.
+Introduction .........................................................................................................................2
+3.
+Changes from Version 1.......................................................................................................3
+4.
+Assumptions and Limitations...............................................................................................4
+5.
+User Interface ......................................................................................................................5
+5.1
+Analysis Menu Bar......................................................................................................5
+5.2
+Google Map Section and Controls ...............................................................................7
+5.3
+Component Data Sections ...........................................................................................9
+5.4
+Results Section..........................................................................................................11
+6.
+Case Study and Example....................................................................................................15
+6.1
+ATCT analysis ..........................................................................................................15
+6.2
+Energy optimization..................................................................................................21
+6.3
+Flight path analysis ...................................................................................................23
+7.
+Appendix A – Analysis Parameters....................................................................................27
+8.
+Appendix B – PV Array Parameters...................................................................................27
+9.
+Appendix C –Flight Path Parameters..................................................................................28
+10. Appendix D – Observation Point Parameters......................................................................29
+11. Acknowledgments .............................................................................................................29
+12. References .........................................................................................................................29
+SAND2013-7063P
+
+2 | P a g e
+1. Requirements
+
+Use of this software requires the latest version of one of the following free web browsers: 
+Mozilla Firefox or Google Chrome.  
+
+The Solar Glare Hazard Analysis Tool (SGHAT) can be accessed by registering at 
+www.sandia.gov/glare.
+2. Introduction
+With growing numbers of solar energy installations throughout the United States, glare from 
+photovoltaic (PV) arrays and concentrating solar systems has received increased attention as a 
+real hazard for pilots, air-traffic control personnel, motorists, and others. Sandia has developed a 
+web-based interactive tool that provides a quantified assessment of (1) when and where glare 
+will occur throughout the year for a prescribed solar installation, and (2) potential effects on the 
+human eye at locations where glare occurs. 
+The Solar Glare Hazard Analysis Tool (SGHAT) employs an interactive Google map where the 
+user can quickly locate a site, draw an outline of the proposed PV array, and specify observer 
+locations or paths. Latitude, longitude, and elevation are automatically recorded through the 
+Google interface (see Figure 1), providing necessary information for sun position and vector 
+calculations.  Additional information regarding the orientation and tilt of the PV panels, 
+reflectance, environment, and ocular factors are entered by the user.  
+If glare is found, the tool calculates the retinal irradiance and subtended angle (size/distance) of 
+the glare source to predict potential ocular hazards ranging from temporary after-image to retinal 
+burn. The results are presented in a simple, easy-to-interpret plot that specifies when glare will 
+occur throughout the year, with color codes indicating the potential ocular hazard. The tool can 
+also predict relative energy production while evaluating alternative designs, layouts, and 
+locations to identify configurations that maximize energy production while mitigating the 
+impacts of glare.
+
+3 | P a g e
+Figure 1.  Screen image of SGHAT page with Google Map interface.
+3. Changes from Version 1
+SGHAT version 2 includes several significant updates from Version 1. These changes are 
+summarized below. Detailed explanations of each update can be found in later sections.
+
+Flight Path Tool. Flight paths can now be drawn on the map using the flight path tool. A 
+flight path consists of nine observation points: a threshold point, which should be located 
+at the runway threshold, and eight observation points extending from the threshold at 
+quarter-mile intervals. The threshold crossing height and flight path direction can be 
+modified by the user.
+
+Updated User Interface. The UI has been overhauled to provide for more streamlined 
+usage. No more tabbing between results and map – each section is now shown side-by-
+side and can be expanded or collapsed depending on the focus.
+
+Analysis Persistence. Analysis parameters and components are now saved automatically. 
+Analyses can be closed and re-loaded without loss of information.
+
+Manual Entry of Coordinates.  The user can now manually adjust the latitude and 
+longitude coordinates of the PV array vertices or observation points (except flight paths).
+
+4 | P a g e
+4. Assumptions and Limitations
+Below is a list of assumptions and limitations of the models and methods used in SGHAT:
+
+The software currently only applies to flat reflective surfaces.  For curved surfaces (e.g., 
+focused mirrors such as parabolic troughs or dishes used in concentrating solar power 
+systems), methods and models derived by Ho et al. (2011) [1] can be used and are 
+currently being evaluated for implementation into future versions SGHAT.
+
+SGHAT does not currently apply to tracking systems.  The majority of PV installations 
+are currently fixed tilt (do not track), but we are planning on implementing single-axis 
+tracking to the tool in the future.  Two-axis tracking, when operating properly, will not 
+yield significant stray light reflections since the module will be pointing toward the sun.
+
+SGHAT does not rigorously represent the detailed geometry of a system; detailed 
+features such as gaps between modules, variable height of the PV array, and support 
+structures may impact actual glare results.  However, we have validated our models 
+against several systems, including a PV array causing glare to the air-traffic control tower 
+at Manchester-Boston Regional Airport and several sites in Albuquerque, and the tool 
+accurately predicted the occurrence and intensity of glare at different times and days of 
+the year.
+
+SGHAT assumes that the PV array is aligned with a plane defined by the total heights of 
+the coordinates outlined in the Google map.  For more accuracy, the user should perform 
+runs using minimum and maximum values for the vertex heights to bound the height of 
+the plane containing the solar array.  Doing so will expand the range of observed solar 
+glare when compared to results using a single height value.  
+
+SGHAT does not consider obstacles (either man-made or natural) between the 
+observation points and the prescribed solar installation that may obstruct observed glare, 
+such as trees, hills, buildings, etc.
+
+The tool currently uses a constant reflectance for the solar modules as prescribed by the 
+user.  In actuality, the reflectance increases with increasing incidence angle. We are 
+currently collecting data on the solar reflectance as a function of incidence angle for 
+different modules and glass types.  We plan on implementing this new feature in a future 
+version so that the user can choose a module and/or glass type to specify a more accurate 
+representation of the solar reflectance as a function of incidence angle.
+
+The variable direct normal irradiance (DNI) feature (if selected) scales the user-
+prescribed peak DNI using a typical clear-day irradiance profile.  This profile has a lower 
+DNI in the mornings and evenings and a maximum at solar noon.  The scaling uses a 
+clear-day irradiance profile based on a normalized time relative to sunrise, solar noon, 
+and sunset, which are prescribed by a sun-position algorithm [2] and the latitude and 
+longitude obtained from Google maps.  The actual DNI on any given day can be affected 
+by cloud cover, atmospheric attenuation, and other environmental factors.
+
+The ocular hazard predicted by the tool depends on a number of environmental, optical, 
+and human factors, which can be uncertain.  We provide input fields and typical ranges of 
+values for these factors so that the user can vary these parameters to see if they have an 
+
+5 | P a g e
+impact on the results.  The speed of SGHAT allows expedited sensitivity and parametric 
+analyses.
+5. User Interface
+The SGHAT user interface has been rebuilt to accommodate the 2.0 features. The four primary 
+UI sections are labeled below.
+Figure 2. Updated SGHAT user interface with labeled sections: 1) analysis menu bar, 2) mapping interface, 
+3) component data sections, 4) results section.
+5.1 Analysis Menu Bar
+The menu bar contains buttons for working with analyses and expanding/collapsing various 
+sections. The left portion of the menu bar deals with analyses and their parameters:
+
+6 | P a g e
+Figure 3. Left side of analysis menu bar.
+1. New Analysis
+Brings up the New Analysis screen where the user can enter a name and select a timezone to 
+create a new analysis. The previous analysis will be saved.
+2. Clone Analysis
+Create a new analysis and populate it with the components (PV array, observation points, flight 
+paths) of the current analysis. This is similar to the common “Save As…” functionality.
+3. Load Analysis
+Display a list of previously-saved analyses. Select an analysis to load it, or click “delete” to 
+permanently delete it.
+4. Save
+Save the current analysis and components. Note that analyses and components are auto-saved 
+when changed.
+5. Analysis name
+Modify the name of the current analysis. The name must be unique.
+6. Analysis description
+An optional description can be entered. The description does not have to be unique.
+7. Analysis configuration
+Display the analysis configuration screen. Use this to change parameters such as the time 
+interval, height units, etc. See Appendix A for detailed descriptions of each parameter.
+The right portion of the menu bar has the following buttons:
+Figure 4. Right side of analysis menu bar.
+1. Expand Map and Component sections
+Expand the left sections (mapping and components). The Results section on the right is 
+minimized.
+
+7 | P a g e
+2. Expand Results section
+Expand the Results section to fill the screen. The mapping and component sections are 
+minimized.
+3. Restore Both
+All sections are restored to their original sizes and take up 50% of the screen.
+4. Analyze
+Submit the current analysis for processing. A glare analysis will be performed based on the 
+analysis parameters and drawn components (PV array, observation point(s) and/or flight path(s)).
+5. View Help
+Display the Help screen which provides a quick-start guide and links to relevant resources.
+5.2 Google Map Section and Controls
+The mapping sections contains buttons for adding map components, running glare animations 
+and setting the analysis time zone. In brief, components are added by clicking on the respective 
+button and then clicking on the map to set the location of the component.
+Observation points and the PV array can be removed by right-clicking them on the map when in 
+Select mode, or by clicking the “Remove” button in their data section. Flight paths can be 
+removed by clicking the “Remove” button or by clicking on the threshold point and selecting 
+“Remove”.
+Figure 5. Map and drawing controls for adding analysis components.
+1. Select time zone
+Select the standard time zone offset of the location being analyzed. Options are UTC-12 through 
+UTC+14.
+2. Map search
+Enter a location to center the Google Map. This functions exactly like the actual Google Map 
+search. Note that analysis components are not affected when the map location changes.
+
+8 | P a g e
+3. Select Tool
+Activate the Map Select Mode to manually pan the map or move the position of PV array 
+vertices and observation points. Note that flight path observation points can only be adjusted by 
+changing the flight path direction.
+4. PV Array Tool
+Activate the PV array drawing mode to draw an array on the map. The default mode uses click-
+and-drag to draw a rectangular PV array. Use the drop-down menu to select Polygonal mode in 
+order to click and set each array vertex manually.
+5. Observation Point Tool
+Activate the Observation Point drawing mode. Click on the map to add a new observation point. 
+SGHAT automatically queries Google for the ground elevation of the point. Using the dropdown 
+menu, select the ATCT Point mode to automatically set the observation point label to ‘ATCT’.
+6. Flight Path Tool
+Activate the flight path drawing mode. Click once on the map to set the runway threshold point. 
+Click again to specify the flight path direction. Eight observation points will be added in this 
+direction, spaced at quarter-mile intervals on the map.
+7. Animation Menu
+Click to open the Animation Menu:
+Figure 6. Animation controls.
+In the menu, select a date and observation point and click the Play button to view the location of 
+glare along the PV array surface for the given day, as it changes over time. The Backwards and 
+Forwards buttons can be used to manually step through the times of glare.
+
+9 | P a g e
+8. Submit Analysis
+Submit the analysis parameters and components for glare analysis. The results will appear in the 
+Results section once the analysis is complete.
+5.3 Component Data Sections
+There are three component types: PV array, flight path and observation point. When drawn on 
+the map, the properties of each component are displayed in a respective component section for 
+convenient editing.
+PV Array Section
+The PV array sections displays the configurable parameters of the PV array and its vertices 
+(corners).
+Figure 7. Sample data section of PV array, including table of vertex (corner) coordinates.
+
+10 | P a g e
+See Appendix B for detailed descriptions of each parameter.
+Note that the array vertex parameters are all editable – entering a new latitude or longitude will 
+automatically adjust the corresponding vertex on the map. Values for vertex heights above 
+ground must be entered before a glare analysis can be performed.
+Flight Path Section
+The flight path section contains entries for each flight path added on the map. Each entry 
+displays the configurable parameters of the flight path as well as non-editable observation points.
+Figure 8. Sample data section of flight path, including table of observation point coordinates.
+
+11 | P a g e
+Note that the glide slope is set to 3 degrees and observation point parameters cannot be altered –
+this is to conform to the Federal Aviation Administration guidelines for analyzing flight paths.
+Observation Point Section
+Non-flight-path observation points are displayed in a tabular format in their data section:
+Figure 9. Observation point data section with two sample observation points.
+Observation points are fully editable. Changes to the name, latitude or longitude of an 
+observation point will be reflected on the map.
+5.4 Results Section
+Glare analysis results are displayed in the Results section on the right side of the SGHAT page.
+Figure 10. Results section summary tab, with overview table of glare found.
+
+12 | P a g e
+A table summarizes the resulting glare for each flight path and observation point. Links on the 
+top of the results section can be used to navigate to specific results.
+Observation Point Results
+Observation points that experience glare will show results similar to the following figure:
+Figure 11. Results tab for observation point, with glare occurrence plot.
+The Observation Point (“OP”) result shows the glare occurrence plot and links for the plot and 
+for downloading the glare data in comma-separated format. Finally, a Printable Report can be 
+accessed which allows for printing the results in a summary fashion.
+Flight Path Results
+Flight path results contain data for any glare found at each observation point. A tabular summary 
+of glare results appears at the top of the section, similar to the Results Summary table. A link to a 
+printable Full Report can be used to print a summary of the entire flight path analysis. Below the 
+table, results for each observation point are provided.
+
+13 | P a g e
+Figure 12. Results tab for flight path, with summary table of glare found and results for threshold point.
+(Results for remaining observation points not shown in image).
+
+14 | P a g e
+Sample Glare Occurrence Plot
+The Glare Occurrence Plot shows when glare can occur (as viewed from the prescribed 
+observation point) throughout the year.  The color of the dots indicates the potential ocular 
+hazard [1] as shown in Figure 13.  In the example shown in Figure 13, glare is predicted to be 
+visible from the prescribed observation point during the morning from January to November for 
+~30 – 40 minutes.  The color of the plotted points indicates the potential ocular hazard.  In Figure 
+13, the yellow dots indicate that the glare in this particular example has the potential to cause a 
+temporary after-image.
+Figure 13.  Glare occurrence plot showing when glare can occur (time and date) and the potential for ocular 
+impact (represented by the color of the dots).  Times are shown in Standard Time (during Daylight Savings 
+Time, add one hour).
+
+15 | P a g e
+6. Case Study and Example
+We include a sample analysis of the Manchester-Boston Regional Airport (MHT), which has 
+experienced glare from PV panels that were installed on the roof of a parking garage near the air 
+traffic control tower.  The blue highlighted area in Figure 14 is drawn by the user to denote the 
+location of the PV array.  The red marker indicates the location of the observer in the air traffic 
+control tower.
+Figure 14.  Screen image of glare analysis of the Manchester Boston Regional Airport.  PV array (blue 
+outline) and observation point (red marker) are entered using drawing tools integrated with Google Maps.
+6.1 ATCT analysis
+Figure 15 through Figure 17 show other input parameters entered by the user, including 
+orientation and tilt of the PV array, elevations, rated power (for energy production calculations), 
+optical and ocular parameters.  The latitude, longitude, and elevation coordinates of the user-
+drawn PV array and observation points are automatically calculated in Google Maps and used to 
+determine sun position and vector calculations for the glare and energy production analyses.
+
+16 | P a g e
+Figure 15.  PV array input parameters used in SGHAT for glare analysis at MHT.
+Figure 16. ATCT observation point input parameters.
+
+17 | P a g e
+Figure 17. Analysis configuration parameters for MHT analysis.
+Figure 18 and Figure 19 show the results of the glare analysis assuming different values for the 
+optical slope error of the PV modules, which impacts the scatter and beam spread.  The dots in 
+the plot represent occurrences of glare as viewed from the user-specified observation point 
+relative to the specified PV array as a function of the time of day and day of the year.  The color 
+of the dots indicates the potential ocular hazard, which is impacted by the direct normal 
+irradiance, optical parameters (reflectance, slope error/scatter), and ocular parameters (pupil 
+diameter, transmission coefficient, ocular focal length).  In Figure 18 and Figure 19, there is a 
+potential for glare that can cause temporary after-image (a lingering image of the glare in the 
+field of view) during the early morning for most months of the year  Assuming an optical slope 
+error of 10 mrad, which yields a total beam spread of the reflected glare image of 0.13 rad (~7 
+degrees), predicts that glare will be visible for more days throughout the year and for a slightly 
+longer period each day when compared to the results using a slope error of 0 mrad, which has 
+less scatter and beam spreading (0.0093 rad or ~0.5 degrees).  
+At MHT, the general spatial and temporal pattern of glare is shown in Figure 20.
+
+18 | P a g e
+Figure 18.  Results section and plot showing when glare can occur (time and date) and the potential for ocular 
+impact (represented by the color of the dots) in the ATCT assuming an elevation of 45 m above ground level 
+with an optical slope error of 10 mrad (total beam spread of 0.1293 rad).  Times are Eastern Standard Time 
+(during Daylight Savings Time, add one hour).
+
+19 | P a g e
+Figure 19. Glare occurrence plot for MHT ATCT with slope error of 0, yielding total beam spread of 9.3 
+mrad (the subtended angle of the sun).
+Figure 20.  Approximate predicted locations and movement of glare on PV array at various times of the year.
+Photos and videos of glare from the installed PV array at MHT were taken from the Air Traffic 
+Control Tower in late April and early May.  Glare was observed during hours that were 
+consistent with those predicted by the glare tool (see Figure 21 and Figure  22; note that the 
+hours shown in the ocular hazard plot in Figure 18 and Figure 19 are Eastern Standard Time, but 
+the times shown in the photos in Figure 21 and Figure  22 are Eastern Daylight Time).  Because 
+of the glare, tarp was placed over the offending PV modules.
+~June
+~March, September
+~December
+
+20 | P a g e
+Features such as gaps between modules, uncertainty in the relative height of the PV modules and 
+observation points, obstructions/land features between the PV array and the observation point, 
+uncertainty in the optical properties of the modules, and atmospheric attenuation may impact the 
+actual perception and time of observed glare.  
+Figure 21.  Glare viewed from Air Traffic Control Tower at Manchester/Boston Regional Airport
+(8:15 AM EDT, 4/27/12).
+
+21 | P a g e
+Figure  22.  Glare viewed from Air Traffic Control Tower at Manchester/Boston Regional Airport (~8:17 AM 
+EDT, 5/10/12). Note that tarp has been placed over some of the modules.
+6.2 Energy optimization
+The Solar Glare Hazard Analysis Tool can also be used to predict the relative energy production 
+from alternative configurations (orientation, tilt, etc.) so that designs can be identified that not 
+only mitigate glare but also maximize energy production.  Table 1 shows alternative 
+configurations using the same footprint of the PV array shown in Figure 14 that are predicted to 
+produce no glare.  The relative annual energy production is also shown for each configuration.  
+In addition, the current PV configuration (200° azimuthal angle, 20.6° elevation angle) and a 
+maximum energy production configuration (180° azimuthal angle, 43° elevation angle) are 
+shown in Table 1.  The optimal configuration using the same footprint that is predicted to 
+produce no glare to the ATCT while maximizing energy production employs an azimuthal angle 
+of 120° and an elevation angle of 40°.
+
+22 | P a g e
+Table 1.  Alternative PV array configurations that are predicted to produce no glare to the ATCT (unless 
+otherwise noted).  Azimuthal angle is measured clockwise from due north (0°); elevation angle is measured 
+from 0° (facing up) to 90° (facing horizontal).  Note: these analyses assumed an ATCT cabin elevation of 51.2 
+m.  We were informed later that the cabin elevation was lower (~45 m), so other configurations with no glare 
+to the ATCT are possible (e.g., Az=110°, El=20.6°).
+Azimuthal Angle 
+(degrees)
+Elevation Angle 
+(degrees)
+Relative Annual 
+Energy Production
+180
+43
+100.0%*
+200
+20.6
+93.9%**
+120
+40
+88.9%
+120
+50
+87.2%
+110
+30
+85.0%
+110
+40
+84.7%
+120
+60
+83.7%
+110
+50
+82.8%
+130
+70
+81.5%
+100
+30
+80.9%
+100
+20
+80.8%
+100
+40
+79.9%
+110
+60
+79.3%
+120
+70
+78.3%
+100
+50
+77.6%
+90
+20
+77.5%
+210
+80
+76.9%
+90
+30
+76.4%
+220
+80
+75.8%
+90
+40
+74.5%
+110
+70
+74.2%
+100
+60
+74.1%
+130
+80
+74.0%
+90
+50
+71.8%
+120
+80
+71.3%
+100
+70
+69.2%
+90
+60
+68.1%
+110
+80
+67.7%
+90
+70
+63.4%
+100
+80
+63.2%
+90
+80
+57.8%
+*Maximum energy production; produces glare to ATCT
+**Current configuration; produces glare to ATCT
+Based on a review of the glare analyses, an alternative configuration of the PV modules was 
+recommended where the assemblies are rotated 90° counter-clockwise so that they are facing 
+
+23 | P a g e
+toward the east-southeast (110° from due north).  The tilt of the modules remains the same 
+(however, since the downward tilt of the roof is 1.2° from east to west, the actual tilt of the 
+modules is 20.7° - 1.2° = 19.5°.
+Figure 23 shows a screen image of the SGHAT analysis with the PV array outlined in blue and 
+the location of the ATCT indicated by the red marker.  The input parameters used in the model 
+are shown in Error! Reference source not found.Error! Reference source not found..
+Figure 23.  Location of alternative PV array configuration (outlined in blue) rotated 90° counter-clockwise so 
+that they are facing toward the east-southeast (110° from due north).
+6.3 Flight path analysis
+In addition to the ATCT, observation points along straight approaches to runways 35, 6, 17, 24 
+were also evaluated assuming a glide slope of 3 degrees.  The distance legend on the Google map 
+is used (along with a ruler) to specify observation points and desired distances from the 
+touchdown point on the landing strip.  See Table 2 and Figure 24 – Figure 27 for locations and 
+elevations of observation points along the approach to these runways.
+For this new configuration (PV assemblies rotated 90° counter-clockwise as shown in Figure 
+23), no glare was predicted to be observed in the ATCT or at the observation points along the 
+approaches to runways 35, 6, and 17.  It should be noted that the elevation of the ATCT 
+observation point was varied between 40 – 51 m and no glare was predicted.  Based on drawings 
+of the ATCT tower, the elevation of the ATCT cabin is ~45 m.
+The annual energy produced from this new configuration was predicted to be within ~1% of the 
+existing configuration. The existing configuration consists of 2210 modules with a rated power 
+
+24 | P a g e
+capacity of ~530 kW (~240 W/module).  The new configuration has 247 additional modules for 
+a rated power capacity of ~589 kW.  Using these values, SGHAT predicts that the maximum 
+annual energy production for the existing and new designs are 1.04 GWh and 1.16 GWh, 
+respectively, assuming clear-sky conditions.  Actual annual energy production will be less due to 
+variable (lower) DNI when the sky is cloudy.
+Table 2.  Observation points for approaches to runways 35, 6, 17, and 24 assuming a 3 degree glide slope.
+Observation 
+Point
+Height above ground
+(ft)
+Threshold
+52
+¼ mile
+121
+½ mi.
+190
+¾ mi.
+259
+1 mi.
+328
+1 ¼ mi.
+397
+1 ½ mi.
+467
+1 ¾ mi.
+536
+2 mi.
+605
+Figure 24.  Observation points approaching Runway 35 from the southeast.
+
+25 | P a g e
+Figure 25.  Observation points approaching Runway 6 from the southwest.
+Figure 26.  Observation points approaching Runway 17 from the northwest.
+
+26 | P a g e
+Figure 27.  Observation points approaching Runway 24 from the northeast.
+
+27 | P a g e
+7. Appendix A – Analysis Parameters
+
+Height Units:  Select the units of distance for the height of solar panels and the height 
+above ground of each observation point in feet or meters.
+
+Subtended angle of the sun:  The average subtended angle of the sun as viewed from 
+earth is ~9.3 mrad or 0.5°.
+
+Peak DNI: The maximum Direct Normal Irradiance (W/m2) at the given location at solar 
+noon. This value may be scaled at each time step to account for the changing position of 
+the sun and reduced DNI in the mornings and evenings if the “variable” option is selected 
+in the next field. On a clear sunny day at solar noon, a typical peak DNI is ~1,000 W/m2.
+
+DNI variability: “Variable” scales the peak DNI at each time step based on the changing 
+position of the sun. “Fixed” uses the peak DNI value for every time step throughout the 
+analysis, with no scaling.
+
+Ocular transmission coefficient:  The ocular transmission coefficient accounts for 
+radiation that is absorbed in the eye before reaching the retina.  A value of 0.5 is typical 
+[1, 3].
+
+Pupil diameter:  Diameter of the pupil (m).  The size impacts the amount of light 
+entering the eye and reaching the retina.  Typical values range from 0.002 m for daylight-
+adjusted eyes to 0.008 m for nighttime vision [1, 3].
+
+Eye focal length:  Distance between the nodal point (where rays intersect in the eye) and
+the retina.  This value is used to determine the projected image size on the retina for a 
+given subtended angle of the glare source.  Typical value is 0.017 m [1, 3].
+
+Time interval:  Specify the time step for the glare analysis. The sun position will be 
+determined at each time step throughout the year.  A time step of 1 minute yields 
+excellent resolution.
+8. Appendix B – PV Array Parameters
+
+Orientation of array:  Specify the orientation of the array in degrees, measured 
+clockwise from true north.  Modules facing east would have an orientation of 90°, and 
+modules facing south would have an orientation of 180°. The “Calculate declination” link 
+can be used to determine the orientation if an angle based on magnetic north is known.
+
+Tilt of solar panels:  Specify the tilt (elevation angle) of the modules in degrees, where 
+0° is facing up and 90° is facing horizontally.
+
+Height of solar panels:  Specify height of modules above ground level in feet or meters.
+
+Rated power:  Specify the rated power (kW) of the PV system.  This is used to calculate 
+the maximum annual energy produced (kWh) from the system in the prescribed 
+configuration (assuming clear sunny days).  This is useful for comparing alternative 
+configurations to determine which one has the maximum energy production.
+
+28 | P a g e
+
+Reflectivity of PV module:  Specify the solar reflectance of the PV module.  Although 
+near-normal specular reflectance of PV glass (e.g., with antireflective coating) can be as 
+low as ~1-2%, the reflectance can increase as the incidence angle of the sunlight 
+increases (glancing angles).  Based on evaluation of several different PV modules, an 
+average reflectance of 10% is entered as a default value.
+
+Slope error:  This parameter specifies the amount of scatter that occurs from the PV 
+module.  Mirror-like surfaces that produce specular reflections will have a slope error 
+closer to zero, while rough surfaces that produce more scattered (diffuse) reflections have 
+higher slope errors.  Based on observed glare from different PV modules, an RMS slope 
+error of ~10 mrad (which produces a total reflected beam spread of 0.13 rad or 7°) 
+appears to be a reasonable value.
+The following list comprises the array vertex parameters:
+
+Latitude: geographic coordinate, in degrees, representing north-south position of the 
+point. 0 at the equator and positive above it. 
+
+Longitude: geographic coordinate, in degrees, representing east-west position of the 
+point. The value must be between -180 and 180, with 0 at the Prime Meridian and 
+negative to the west of it.
+
+Ground Elevation: the height above sea level of the ground at the position of the point.
+
+Height above ground: The absolute height of the observation point above the ground 
+elevation.
+
+Total elevation: the sum of the ground elevation and height above ground. Changes to 
+this value are automatically reflected in the “height above ground” input. Use this if, for 
+example, the PV array sits on a roof and the height of a building is known. Enter the 
+height in the “total elevation” field and the heights above ground for each array vertex 
+will be automatically determined. 
+9. Appendix C –Flight Path Parameters
+
+direction: angle, in degrees, from threshold along which to specify observations. 0 is true 
+north, 90 is due east of true north. Note that the direction value may deviate from the 
+specified runway angle.
+
+threshold height above ground: height of aircraft as it crosses threshold point.
+
+glide slope: angle, in degrees, of ascent/descent of aircraft along path.
+For flight path observation point parameters, see Appendix D.
+
+29 | P a g e
+10.
+Appendix D – Observation Point Parameters
+
+Latitude: geographic coordinate, in degrees, representing north-south position of the 
+point. 0 at the equator and positive above it. 
+
+Longitude: geographic coordinate, in degrees, representing east-west position of the 
+point. The value must be between -180 and 180, with 0 at the Prime Meridian and 
+negative to the west of it.
+
+Ground Elevation: the height above sea level of the ground at the position of the point.
+
+Height above ground: The absolute height of the observation point above the ground 
+elevation.
+11.
+Acknowledgments
+Sandia National Laboratories is a multi-program laboratory managed and operated by Sandia 
+Corporation, a wholly owned subsidiary of Lockheed Martin Corporation, for the U.S. 
+Department of Energy’s National Nuclear Security Administration under contract DE-AC04-
+94AL85000.
+12.
+References
+[1]
+Ho, C.K., C.M. Ghanbari, and R.B. Diver, 2011, Methodology to Assess Potential Glint 
+and Glare Hazards From Concentrating Solar Power Plants: Analytical Models and 
+Experimental Validation, Journal of Solar Energy Engineering-Transactions of the Asme, 
+133(3).
+[2]
+Duffie, J.A. and W.A. Beckman, 1991, Solar engineering of thermal processes, 2nd ed., 
+Wiley, New York, xxiii, 919 p.
+[3]
+Sliney, D.H. and B.C. Freasier, 1973, Evaluation of Optical Radiation Hazards, Applied 
+Optics, 12(1), p. 1-24.
+Additional references can be found at www.sandia.gov/glare. 

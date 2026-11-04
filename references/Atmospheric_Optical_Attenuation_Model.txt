@@ -1,0 +1,107 @@
+ATMOSPHERIC OPTICAL ATTENUATION MODEL (Revised)
+Kruse–Kim Hybrid Formulation
+
+------------------------------------------------------------
+1. EQUATIONS
+------------------------------------------------------------
+1.1 Target irradiance (general form)
+    E(d) = [ I0 * cos(theta) / d^2 ] * tau_atm(d)
+
+1.2 Target irradiance (explicit form)
+    E(d) = [ I0 * cos(theta) / d^2 ] * exp( -sigma * d )
+
+1.3 Atmospheric transmittance (Beer–Lambert)
+    tau_atm(d) = exp( -sigma * d )
+
+1.4 Extinction coefficient (Kruse–Kim)
+    sigma(lambda) = ( 3.91 / V ) * ( lambda / 550 )^(-q)
+
+------------------------------------------------------------
+2. VARIABLES AND UNITS
+------------------------------------------------------------
+E(d)      Target irradiance at distance d          [W/m^2]
+I0        Radiant intensity of the source          [W/sr]
+theta     Incidence angle                          [rad]  (convert from deg before use)
+d         Path length / distance                   [km]   (see Note 3.1)
+d_sq      Distance used in inverse-square term     [m]    (see Note 3.1)
+tau_atm   Atmospheric transmittance                [dimensionless, 0–1]
+sigma     Atmospheric extinction coefficient       [km^-1]
+V         Meteorological visibility range          [km]
+lambda    Wavelength of light                      [nm]
+q         Wavelength-dependence exponent           [dimensionless]
+
+------------------------------------------------------------
+3. UNIT-CONSISTENCY NOTES
+------------------------------------------------------------
+3.1 The inverse-square term and the exponential term use different
+    length units and must not share one variable.
+      - Inverse-square term  : d in metres   -> 1/d^2  [m^-2]
+      - Exponential term     : d in km       -> sigma*d  dimensionless
+    Conversion: d[km] = d[m] / 1000
+    Combined:  E(d) = [ I0*cos(theta) / d[m]^2 ] * exp( -sigma[km^-1] * d[m]/1000 )
+    Mixing the two units produces an error of ~10^3 in the exponent.
+
+3.2 sigma from 3.91/V is always in km^-1 because V is defined in km.
+    To express sigma in m^-1, divide by 1000.
+
+3.3 lambda and the 550 reference must both be in nm; the ratio is
+    dimensionless, so consistent units (nm or um) are acceptable.
+
+------------------------------------------------------------
+4. VALUES OF q (Kruse–Kim hybrid)
+------------------------------------------------------------
+V > 50 km            : q = 1.6              Exceptionally clear
+6 km < V <= 50 km    : q = 1.3              Standard clear atmosphere
+1.2 km < V <= 6 km   : q = 0.585 * V^(1/3)  Average haze          [Kruse, 1962]
+V <= 1.2 km          : q = 0                Fog / heavy haze      [Kim et al., 2001]
+
+Note: the last branch is NOT from the original Kruse formulation, which
+applies q = 0.585*V^(1/3) throughout V < 6 km. The q = 0 condition at low
+visibility originates from the Kim model. The model is therefore labelled
+a Kruse–Kim hybrid.
+
+------------------------------------------------------------
+5. CONSTANTS
+------------------------------------------------------------
+550 nm    Visible-band reference wavelength
+3.91      Koschmieder constant = -ln(0.02), derived from a 2% contrast
+          threshold for the human eye.              [Koschmieder, 1924]
+
+------------------------------------------------------------
+6. VALIDITY LIMITS
+------------------------------------------------------------
+6.1 sigma is assumed homogeneous along the path. For d greater than
+    roughly 5 km, replace exp(-sigma*d) with exp( -INTEGRAL sigma(s) ds )
+    over the path.
+6.2 The model covers scattering only. Molecular absorption bands
+    (H2O, CO2, O3) and rain/snow attenuation are not included.
+6.3 Turbulence-induced scintillation is not modelled.
+6.4 Earth curvature and atmospheric refraction are neglected; beam drop
+    is about 7.8 m at 10 km and must be accounted for separately.
+
+------------------------------------------------------------
+7. REFERENCES
+------------------------------------------------------------
+[1] Kruse, P. W., McGlauchlin, L. D., & McQuistan, R. B. (1962).
+    Elements of Infrared Technology: Generation, Transmission, and
+    Detection. John Wiley & Sons, New York.
+    -> Cited for: Eq. 1.4 and the q values for V > 1.2 km (Sec. 4).
+
+[2] Kim, I. I., McArthur, B., & Korevaar, E. (2001). Comparison of laser
+    beam propagation at 785 nm and 1550 nm in fog and haze for optical
+    wireless communications. Proc. SPIE 4214, pp. 26–37.
+    -> Cited for: the q = 0 condition at low visibility (Sec. 4).
+
+[3] Koschmieder, H. (1924). Theorie der horizontalen Sichtweite.
+    Beitrage zur Physik der freien Atmosphare, 12, 33–53.
+    -> Cited for: the constant 3.91 and the 2% contrast threshold (Sec. 5).
+
+[4] McCartney, E. J. (1976). Optics of the Atmosphere: Scattering by
+    Particles and Gases. John Wiley & Sons, New York.
+    -> Cited for: Beer–Lambert transmittance (Eq. 1.3) and general
+       scattering theory.
+
+[5] CIE 127:2007. Measurement of LEDs. International Commission on
+    Illumination, Vienna.
+    -> Cited for: definition and measurement of source radiant intensity
+       I0 only (Sec. 2). Not applicable to the attenuation model.

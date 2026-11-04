@@ -1,0 +1,2525 @@
+=== PAGE 1 ===
+Photobiological safety of lamps
+and lamp systems —
+Part 2: Guidance on manufacturing requirements 
+relating to non-laser optical radiation safety
+PD IEC/TR 62471-2:2009
+BSI Standards Publication
+
+=== PAGE 2 ===
+National foreword
+This Published Document is the UK implementation of IEC/TR 62471-2:2009.
+The UK participation in its preparation was entrusted to Technical Committee
+EPL/76, Optical radiation safety and laser equipment.
+A list of organizations represented on this committee can be obtained on
+request to its secretary.
+This publication does not purport to include all the necessary provisions of a
+contract. Users are responsible for its correct application.
+© BSI 2009
+ISBN 978 0 580 66894 4
+ICS 29.140.01
+Compliance with a British Standard cannot confer immunity from
+legal obligations.
+This Published Document was published under the authority of the
+Standards Policy and Strategy Committee on 31 October 2009
+Amendments issued since publication
+Amd. No.                  Date                     Text affected
+BRITISH STANDARD
+PD IEC/TR 62471-2:2009
+
+=== PAGE 3 ===
+ 
+ 
+IEC/TR 62471-2
+Edition 1.0 2009-08
+TECHNICAL 
+REPORT 
+ 
+Photobiological safety of lamps and lamp systems –  
+Part 2: Guidance on manufacturing requirements relating to non-laser optical 
+radiation safety 
+ 
+ 
+INTERNATIONAL 
+ELECTROTECHNICAL 
+COMMISSION 
+X
+ICS 29.140 
+PRICE CODE
+ISBN 2-8318-1057-6
+® Registered trademark of the International Electrotechnical Commission 
+® 
+ 
+colour
+inside
+PD IEC/TR 62471-2:2009
+
+=== PAGE 4 ===
+ 
+– 2 – 
+62471-2/TR © IEC:2009(E) 
+CONTENTS 
+ 
+FOREWORD...........................................................................................................................4 
+INTRODUCTION.....................................................................................................................6 
+1 
+Scope...............................................................................................................................7 
+2 
+Normative references .......................................................................................................7 
+3 
+Terms and definitions .......................................................................................................7 
+4 
+Risk groups applied for optical radiation safety assessments..........................................10 
+4.1 
+Basis for optical radiation safety classification.......................................................10 
+4.2 
+Assessment criteria ...............................................................................................10 
+4.3 
+Application-related issues .....................................................................................10 
+4.3.1 
+Near-infrared sources ................................................................................10 
+4.3.2 
+“Point sources” ..........................................................................................11 
+4.3.3 
+Application-related vertical standards ........................................................11 
+5 
+Guidelines for lamp and lamp system manufacturers on how to apply IEC 62471 ...........11 
+5.1 
+Limit values ...........................................................................................................11 
+5.1.1 
+General .....................................................................................................11 
+5.1.2 
+Limits provided in irradiance/radiant exposure ...........................................12 
+5.1.3 
+Limits provided in (time integrated) radiance .............................................12 
+5.2 
+Guidelines for lamp/LED manufacturers ................................................................12 
+5.2.1 
+General .....................................................................................................12 
+5.2.2 
+Measurement conditions............................................................................12 
+5.2.3 
+User information ........................................................................................13 
+5.3 
+Guidelines for lamp system/luminaire manufacturers .............................................13 
+5.3.1 
+General .....................................................................................................13 
+5.3.2 
+Sources for general lighting service (GLS).................................................13 
+5.3.3 
+Multi-purpose lamps ..................................................................................14 
+5.3.4 
+Determination of the hazard distance.........................................................14 
+5.4 
+Labelling ...............................................................................................................15 
+5.5 
+Other information provisions..................................................................................16 
+6 
+Allocation of safety measures .........................................................................................17 
+6.1 
+General .................................................................................................................17 
+6.2 
+Maximum acceptable viewer-related risk ...............................................................18 
+Annex A (informative)  Radiance and ocular hazards from extended sources........................20 
+Annex B (informative)  Determination of hazard distances ....................................................26 
+Annex C (informative)  Sources for general lighting service (GLS) ........................................36 
+Annex D (informative)  Lamps and lamp systems with integrated, attached beam-
+shaping  or projection optics...........................................................................................41 
+Bibliography..........................................................................................................................45 
+ 
+Figure 1 – Example of graphic presentation of distant dependent emission hazard 
+values...................................................................................................................................15 
+Figure 2 – Example of warning label for a lamp with multiple hazard spectral regions ...........17 
+Figure A.1 – Invariance of radiance with distance from an extended source..........................21 
+Figure A.2 – Usual measurement conditions for the determination of radiance  and time 
+integrated radiance ...............................................................................................................22 
+PD IEC/TR 62471-2:2009
+
+=== PAGE 5 ===
+62471-2/TR © IEC:2009(E) 
+– 3 – 
+ 
+Figure A.3a – Source size larger than the FOV (overfilled)....................................................23 
+Figure A.3b – Source size smaller than the FOV (under-filled) ..............................................23 
+Figure A.3 – Source sizes .....................................................................................................23 
+Figure A.4 – B(λ)-weighted radiance distribution of a state-of-the-art “pc-white” LED 
+component............................................................................................................................24 
+Figure B.1 – Normalized correlation between radiance L and corresponding irradiance 
+E for varying values of source diameter and distance ...........................................................27 
+Figure B.2 – Direct intra-beam viewing of an arc searchlight showing a magnification of 
+the actual arc........................................................................................................................29 
+Figure B.3 – Calculated flash distance of LEDs depending on the individual half 
+intensity angle θ of the spatial emission ................................................................................30 
+Figure B.4 – Actinic UV-related safe use conditions for the example radiator ........................32 
+Figure B.5 – Distance-dependant (spectrally weighted) Exempt Risk Group limits for 
+the spatially averaged radiance of a halogen lamp of 7 mm source size................................34 
+Figure C.1 – Measured spatially averaged radiance..............................................................37 
+Figure C.2 – Relationships between illuminance of 500 lux and source luminance 
+[cd/m^2] (indicated) for several source sizes and distances of some typical luminances..........38 
+Figure D.1 – Ultraviolet and infrared filtering by projection optics..........................................41 
+Figure D.2 – Magnified apparent source size of the filament in an incandescent 
+projection lamp .....................................................................................................................42 
+Figure D.3 – Examples of projection optics ...........................................................................42 
+Figure D.4 –  Formation of a virtual LED chip image by the integrated lens...........................43 
+Figure D.5 – Imaging of the apparent source and measurement condition for the 
+assessment of sources with built-in or attached projection optics..........................................43 
+ 
+Table 1 – Hazard-related risk group labelling of lamp systems..............................................16 
+Table 2 – Explanation of labelling information and guidance on control measures.................17 
+Table 3 – Maximum acceptable risk group of products assessed for viewer-related risk 
+under application specific conditions.....................................................................................19 
+Table B.1 – Spatially averaged radiance ...............................................................................35 
+Table C.1 – Risk group-related inverse square law and hazard distances .............................37 
+Table C.2 – Risk group-related hazard distances (in m) for halogen lamp of 7 mm 
+source diameter and with luminance of 3 * 10^7 cd/m^2 .........................................................39 
+PD IEC/TR 62471-2:2009
+
+=== PAGE 6 ===
+ 
+– 4 – 
+62471-2/TR © IEC:2009(E) 
+INTERNATIONAL ELECTROTECHNICAL COMMISSION 
+____________ 
+ 
+PHOTOBIOLOGICAL SAFETY OF LAMPS AND LAMP SYSTEMS –  
+ 
+Part 2: Guidance on manufacturing requirements  
+relating to non-laser optical radiation safety 
+ 
+ 
+FOREWORD 
+1) The International Electrotechnical Commission (IEC) is a worldwide organization for standardization comprising 
+all national electrotechnical committees (IEC National Committees). The object of IEC is to promote 
+international co-operation on all questions concerning standardization in the electrical and electronic fields. To 
+this end and in addition to other activities, IEC publishes International Standards, Technical Specifications, 
+Technical Reports, Publicly Available Specifications (PAS) and Guides (hereafter referred to as “IEC 
+Publication(s)”). Their preparation is entrusted to technical committees; any IEC National Committee interested 
+in the subject dealt with may participate in this preparatory work. International, governmental and non-
+governmental organizations liaising with the IEC also participate in this preparation. IEC collaborates closely 
+with the International Organization for Standardization (ISO) in accordance with conditions determined by 
+agreement between the two organizations. 
+2) The formal decisions or agreements of IEC on technical matters express, as nearly as possible, an international 
+consensus of opinion on the relevant subjects since each technical committee has representation from all 
+interested IEC National Committees.  
+3) IEC Publications have the form of recommendations for international use and are accepted by IEC National 
+Committees in that sense. While all reasonable efforts are made to ensure that the technical content of IEC 
+Publications is accurate, IEC cannot be held responsible for the way in which they are used or for any 
+misinterpretation by any end user. 
+4) In order to promote international uniformity, IEC National Committees undertake to apply IEC Publications 
+transparently to the maximum extent possible in their national and regional publications. Any divergence 
+between any IEC Publication and the corresponding national or regional publication shall be clearly indicated in 
+the latter. 
+5) IEC provides no marking procedure to indicate its approval and cannot be rendered responsible for any 
+equipment declared to be in conformity with an IEC Publication. 
+6) All users should ensure that they have the latest edition of this publication. 
+7) No liability shall attach to IEC or its directors, employees, servants or agents including individual experts and 
+members of its technical committees and IEC National Committees for any personal injury, property damage or 
+other damage of any nature whatsoever, whether direct or indirect, or for costs (including legal fees) and 
+expenses arising out of the publication, use of, or reliance upon, this IEC Publication or any other IEC 
+Publications.  
+8) Attention is drawn to the Normative references cited in this publication. Use of the referenced publications is 
+indispensable for the correct application of this publication. 
+9) Attention is drawn to the possibility that some of the elements of this IEC Publication may be the subject of 
+patent rights. IEC shall not be held responsible for identifying any or all such patent rights. 
+The main task of IEC technical committees is to prepare International Standards. However, a 
+technical committee may propose the publication of a technical report when it has collected 
+data of a different kind from that which is normally published as an International Standard, for 
+example "state of the art". 
+IEC 62471-2, which is a technical report, has been prepared by Technical Committee 76: 
+Optical radiation safety and laser equipment  
+The text of this technical report is based on the following documents: 
+Enquiry draft 
+Report on voting 
+76/396/DTR 
+76/410/RVC 
+ 
+Full information on the voting for the approval of this technical report can be found in the 
+report on voting indicated in the above table. 
+PD IEC/TR 62471-2:2009
+
+=== PAGE 7 ===
+62471-2/TR © IEC:2009(E) 
+– 5 – 
+ 
+This publication has been drafted in accordance with the ISO/IEC Directives, Part 2. 
+A list of all parts of the IEC 62471 series, published under the general title Photobiological 
+safety of lamps and lamp systems, can be found on the IEC website. 
+The committee has decided that the contents of this publication will remain unchanged until 
+the maintenance result date indicated on the IEC web site under "http://webstore.iec.ch" in 
+the data related to the specific publication. At this date, the publication will be  
+• 
+reconfirmed, 
+• 
+withdrawn, 
+• 
+replaced by a revised edition, or 
+• 
+amended. 
+ 
+IMPORTANT – The “colour inside” logo on the cover page of this publication indicates 
+that it contains colours which are considered to be useful for the correct understanding 
+of its contents. Users should therefore print this publication using a colour printer. 
+ 
+PD IEC/TR 62471-2:2009
+
+=== PAGE 8 ===
+ 
+– 6 – 
+62471-2/TR © IEC:2009(E) 
+INTRODUCTION 
+Optical radiation hazards from all types of lamps or other broadband light sources are 
+assessed by the application of IEC 62471:2006 (Edition 1), Photobiological safety of lamps 
+and lamp systems. IEC 62471 covers LEDs as well as incandescent, low and high pressure 
+gas-discharge, arc and other lamps. It also covers electrically-powered optical radiation 
+sources that are not lamps. The standard provides a risk group classification system for all 
+lamps and lamp systems, and the measurement conditions are well developed. IEC 62471 
+does not include manufacturing or user safety requirements that may be required as a result 
+of a lamp or lamp system being assigned to a particular risk group. The safety requirements 
+for lamp systems necessarily vary and are best dealt with in vertical standards. This Part 2 
+provides the basis for safety requirements dependent upon risk group classification and 
+examples thereof. The assigned risk group of a product may be used to assist with risk 
+assessments, e.g. for occupational exposure in workplaces. National requirements may exist 
+for the assessment of products or occupational exposure. 
+NOTE 1 There are some instances where the IEC 60825 laser product standards may be useful for a nearly 
+“point” source, as in an LED fibre source or a superluminescent diode (see 3.16). 
+NOTE 2 IEC 62471 is currently being revised and will be published as IEC 62471-1. 
+PD IEC/TR 62471-2:2009
+
+=== PAGE 9 ===
+62471-2/TR © IEC:2009(E) 
+– 7 – 
+ 
+PHOTOBIOLOGICAL SAFETY OF LAMPS AND LAMP SYSTEMS –  
+ 
+Part 2: Guidance on manufacturing requirements  
+relating to non-laser optical radiation safety 
+ 
+1 
+Scope  
+This technical report provides the basis for optical radiation safety requirements of non-laser 
+products, serving as a guide for development of safety requirements in vertical product 
+standards and assisting lamp system manufacturers in the interpretation of safety information 
+provided by the lamp manufacturers. 
+This report provides guidance on: 
+• 
+requirements for optical radiation safety assessment; 
+• 
+allocation of safety measures; 
+• 
+labelling of products. 
+This technical report does not address safety requirements of intentional exposure to optical 
+radiation from sun tanning equipment, ophthalmic instruments or other medical/cosmetic 
+devices whose specific safety issues are addressed through appropriate standards. 
+2 
+Normative references 
+The following referenced documents are indispensable for the application of this document. 
+For dated references, only the edition cited applies. For undated references, the latest edition 
+of the referenced document (including any amendments) applies. 
+IEC 62471, Photobiological safety of lamps and lamp systems 
+IEC 60825 (all parts), Safety of laser products 
+IEC 60050-845, International Electrotechnical Vocabulary – Chapter 845: Lighting 
+IEC 60417, Graphical symbols for use on equipment 
+3 
+Terms and definitions 
+For the purposes of this document, the terms and definitions of IEC 62471 and the following 
+additional terms and definitions apply. 
+3.1  
+controlled access location 
+location where an engineering and/or administrative control measure is established to restrict 
+access except to authorised personnel with appropriate safety training 
+3.2  
+exposure hazard value  
+EHV 
+value defined as follows: 
+EHV = Exposure level (distance, exposure time) / Exposure limit value (distance, exposure time)
+ 
+PD IEC/TR 62471-2:2009
+
+=== PAGE 10 ===
+ 
+– 8 – 
+62471-2/TR © IEC:2009(E) 
+The EHV is greater than 1 when the exposure level (3.3) exceeds the exposure limit value 
+(3.4) 
+3.3  
+exposure level  
+EL 
+level of exposure from a source at a location in space for a stated duration 
+3.4  
+exposure limit value  
+ELV 
+maximum level of exposure of optical radiation to the eye or skin that is not expected to result 
+in adverse biological effects. These ELVs are used to determine hazard distances in respect 
+to foreseeable photobiological effects 
+3.5  
+hazard distance  
+HD 
+distance from the source at which the EL equals the appropriate exposure limit value (ELV)  
+3.6  
+intended viewing 
+deliberate act of an individual to either look at a source of optical radiation or at a virtual 
+source, such as a reflection 
+3.7  
+intended use  
+usage of a product, process or service in accordance with specifications, instructions and 
+information provided by the manufacturer or supplier  
+3.8  
+lamp 
+electrically powered device emitting optical radiation in the wavelength range between 200 nm 
+and 3 000 nm, with the exception of laser radiation 
+3.9  
+lamp system 
+electrically operated product incorporating a lamp or lamps, including fixtures and 
+incorporated electrical or electronic components, generally as intended by the manufacturer to 
+be used (for illumination purposes - luminaire)  
+NOTE 1  Lamp systems may include diffusers, enclosures and/or beam modifying optics. 
+NOTE 2  For the purpose of this technical report, a lamp system may incorporate a lamp that does not serve as the 
+primary function of the product, e.g. an indicator lamp or an illumination lamp inside a refrigerator.   
+3.10  
+modifying optics 
+optical components, such as filters, lenses and reflectors, which change the characteristics of 
+the optical radiation from a lamp when incorporated into a lamp system 
+3.11   
+non-laser optical radiation 
+incoherent optical radiation generated by a process other than stimulated emission 
+PD IEC/TR 62471-2:2009
+
+=== PAGE 11 ===
+62471-2/TR © IEC:2009(E) 
+– 9 – 
+ 
+3.12  
+restricted access location 
+location which is normally inaccessible by the general public, including workers, visitors and 
+residents in the immediate vicinity, by means of engineering or administrative control 
+measures but is accessible to authorised personnel that may not have specific safety training 
+3.13  
+small source 
+source or apparent source with an angular subtense smaller than the angle of acceptance γ 
+that should be applied according to a risk assessment or classification.  
+NOTE This may result in the spatially averaged radiance (3.15) of a source or apparent source being averaged 
+over a larger area than would be applied for the source radiance (3.14). 
+3.14  
+source radiance  
+radiance of the emitting element of the source (see IEV 845-01-34). However, the applicable 
+acceptance angle should not be smaller than 1.7 mrad  
+Symbol: L 
+NOTE It is defined to differentiate from spatially averaged radiance (3.15). 
+3.15  
+spatially averaged radiance  
+radiance spatially averaged over a given angle of acceptance to account for physiological 
+factors such as eye-movements (sometimes referred to as “physiological radiance”). The 
+spatially average radiance may be lower than the source radiance (see 3.14) 
+Symbol: Lsa 
+3.16  
+superluminescent diode 
+edge-emitting semiconductor light source based on superluminescence. It combines the high 
+power and brightness of laser diodes with the low coherence of conventional light-emitting 
+diodes. Its emission band is 20 nm to 100 nm wide   
+3.17  
+unintentional viewing 
+condition when eye exposure to optical radiation is not intended  
+3.18  
+unintentional skin exposure 
+condition when skin exposure to optical radiation is not intended 
+3.19  
+viewer-related risk 
+risk for intended or unintended viewers of a source under application-specific realistic 
+conditions 
+NOTE In order to be independent of the use condition, the risk group classification of lamps and lamp systems is 
+based on worst case assumptions of exposure duration, pupil size and viewing distance. However, the emission of 
+lamps is often divergent and when a lamp is integrated into a product, depending on product design and its 
+application, these assessment conditions may become inappropriate. In this case, the product may be assessed at 
+the minimum distance and maximum exposure duration representative for the application-specific conditions of 
+foreseeable access. 
+ 
+PD IEC/TR 62471-2:2009
+
+=== PAGE 12 ===
+ 
+– 10 – 
+62471-2/TR © IEC:2009(E) 
+4 
+Risk groups applied for optical radiation safety assessments 
+4.1 
+Basis for optical radiation safety classification 
+IEC 62471 provides the method to determine the risk group of any lamp or any product 
+incorporating a lamp. The risk groups in IEC 62471 indicate the degree of risk from potential 
+optical radiation hazards and minimise the need for further measurements. The risk groups 
+were developed based upon decades of lamp use experience and the analysis of accidental 
+injuries related to optical radiation emission (where injuries were, generally, quite rare except 
+from ultraviolet-emitting lamps or arc lamps). There are four basic risk groups:  
+• 
+Exempt Group (RG 0), where no optical hazard is considered reasonably foreseeable, 
+even for continuous, unrestricted use. Typical examples are most frosted incandescent 
+lamps and fluorescent lamps used in domestic applications; 
+• 
+Risk Group 1 (RG 1) products are safe for most use applications, except for very 
+prolonged exposures where direct ocular exposures may be expected. An example of a 
+Risk Group 1 product is a domestic battery operated torch (flashlight); 
+• 
+Risk Group 2 (RG 2) products generally do not pose a realistic optical hazard if aversion 
+responses limit the exposure duration or where lengthy exposures are unrealistic; 
+• 
+Risk Group 3 (RG 3) products pose a potential hazard even for momentary exposures, and 
+system safety requirements are generally essential. 
+IEC 62471 does not provide manufacturing requirements and control measures. These issues 
+should be addressed in application-specific vertical standards (see 4.3.3). However, in order 
+to provide a consistent approach across products, the (non-normative) labelling requirements 
+are outlined in this technical report (see 5.4). 
+4.2 
+Assessment criteria 
+The standard measurement conditions consider the emission spectrum and, depending on the 
+type of hazard, either irradiance or spatially averaged radiance to determine risk to the eye 
+and/or the skin. The measurement conditions are related to potentially hazardous viewing 
+conditions and take into consideration physiological factors of the eye, such as 
+accommodation, pupil size, the aversion responses and eye movements (saccades). 
+IEC 62471 distinguishes between lamps intended for general lighting service (GLS) and lamps 
+intended for use in other applications such as for germicidal use, heating, signalling, data 
+transfer or others. Assessment and measurement conditions are different for these two 
+groups: 
+• 
+GLS - the hazard values should be quoted as irradiance or spatially averaged radiance 
+values at a distance which produces an illuminance of 500 lux; 
+• 
+other applications – the hazard values should be determined at a distance of 200 mm from 
+the source. 
+Different application groups define a range of operational, maintenance and servicing 
+conditions. If the assessment applied to different application groups in a vertical standard 
+justifies it, the measurement conditions in IEC 62471 can be modified for specific application 
+groups. 
+4.3 
+Application-related issues 
+4.3.1 
+Near-infrared sources  
+The limits set for the infrared (IR) spectral region were originally intended for applications of 
+large IR-radiators with a significant amount of IR-A and IR-B radiation. The limits protect the 
+cornea or lens of the eye against long-term thermal effects (e.g. cataract). Thus, the limits 
+should be applied where the application is likely to result in chronic and lengthy exposures of 
+PD IEC/TR 62471-2:2009
+
+=== PAGE 13 ===
+62471-2/TR © IEC:2009(E) 
+– 11 – 
+ 
+the eye for periods greater than 1 000 s and the daily averaged irradiance is expected to be at 
+least 100 W/m^2. The primary objective is to minimise heating of the lens and cornea. 
+4.3.2 
+“Point sources” 
+There may be a small number of applications where an incoherent optical radiation source 
+appears as a nearly monochromatic “point” source and should be considered within a laser 
+safety standard framework. Generally, this will only apply to: superluminescent diodes (SLDs) 
+(see 3.16), which resemble “point sources”; and LEDs which are employed in optical fibre 
+communications, where the fibre source also resembles a very small, or “point” source. The 
+user is referred to IEC 60825-1 for SLDs and to IEC 60825-2 for optical fibre communication 
+systems. 
+4.3.3 
+Application-related vertical standards 
+The requirements in vertical standards may:  
+– 
+limit the source risk group that can be used in a given application;  
+– 
+require specific performance features based upon the risk group specifications; or  
+– 
+specify application-specific control measures.  
+Basic guidance, based on the likelihood of direct source viewing, is provided in Clause 6. 
+Vertical standards should be guided by the principle that it is not necessary to reduce optical 
+radiation exposure to as low as reasonably achievable. However, as a general guideline, 
+needless emissions that would produce unnecessary human exposure should be minimised. 
+The hierarchy of applicable safety measures should follow the internationally accepted priority 
+ranking of manufacturer safety measures. That is, engineering controls (e.g., filters, shielding, 
+etc) are the highest priority, followed by administrative measures (such as warnings and 
+labels, see 5.4) and then personal protective equipment as the last resort. Details should be 
+provided in application-specific vertical standards. 
+5 
+Guidelines for lamp and lamp system manufacturers on how to apply IEC 
+62471  
+5.1 
+Limit values 
+5.1.1 
+General 
+It should be noted that the risk group classification system of IEC 62471 is primarily applied to 
+lamps. However, in terms of product safety, the lamp system manufacturer has responsibility 
+for assessing the final lamp system product. Because of different technical tasks and needs, 
+manufacturers of lamp systems or luminaires might have limited capabilities for tests and 
+measurements and they commonly rely on the lamp/LED data provided by the lamp/LED 
+manufacturer. Therefore, guidance is provided on how and when lamp system manufacturers 
+may rely on data provided by the lamp manufacturer.  
+There are many types of lamps for which the intended applications are known. For instance, 
+for conventional light sources, the modifications of the safety-related optical features of the 
+incorporated lamp by the lamp system manufacturer are generally not significant. In most 
+cases there is a single conventional lamp type (light bulb) used for a luminaire and the lamp 
+system manufacturer only adds a fixture and a power supply. In these cases, the lamp data 
+are usually directly transferable to the lamp system. The assessment and risk group 
+classification of the lamp can be used by the lamp system manufacturer for classification of 
+the lamp system. However, other types of lamps may need detailed consideration. 
+The limit values of the safety standard are provided in two different quantities, which require 
+separate consideration. 
+PD IEC/TR 62471-2:2009
+
+=== PAGE 14 ===
+ 
+– 12 – 
+62471-2/TR © IEC:2009(E) 
+5.1.2 
+Limits provided in irradiance/radiant exposure 
+In the spectral ranges 200 nm to 400 nm and 1 400 nm to 3 000 nm where the emission limits 
+in IEC 62471 are provided in irradiance or radiant exposure, the measurements of a single 
+lamp can not simply be transferred directly to a lamp system but require an analysis of the 
+optical additivity to determine the system risk group. 
+When a lamp is employed with additional integrated or attached modifying or projection 
+optics, this lamp system should be considered as a different product and the lamp system 
+manufacturer should provide the new risk group safety classification. 
+NOTE Additional optics primarily modify the irradiance of a source (i.e. may have a significant impact where the 
+classification is based on irradiance or radiant exposure-criteria), whereas the radiance may remain unchanged 
+(i.e. less impact where the classification is based on radiance-criteria). 
+5.1.3 
+Limits provided in (time integrated) radiance 
+In cases where the emission limits in IEC 62471 are provided in terms of spatially averaged 
+radiance or time-integrated spatially averaged radiance, the principle of conservation of 
+radiance may be used with caution. That is, if a lamp or single LED emits below the radiance 
+level specified (per risk group), the final lamp system or LED-array also can not exceed the 
+accessible emission limits. IEC 62471 requires measurements of spatially averaged radiance 
+(3.15) values with the consequence that the relationship between the field of view and the 
+source area, as it was used for the characterisation of a single component, may be changed 
+by the integration of the single lamp or LED into luminaries (arrays) or with the attachment of 
+beam-shaping optics. 
+Under specific conditions (see 5.2.2), the assessment of a single lamp/LED is directly 
+transferable to the lamp system or luminaire. The risk group will remain the same, or may be 
+reduced (e.g., by filters, etc.). 
+NOTE Since additional optics primarily modify (increase) the irradiance of a source rather than the radiance, an 
+evaluation should verify that the most restrictive classification criterion of the lamp system has not been changed 
+(from radiance to irradiance criterion). 
+5.2 
+Guidelines for lamp/LED manufacturers 
+5.2.1 
+General 
+The primary purpose of lamp risk-group classification by the lamp or LED manufacturer is to 
+inform the user or final-product manufacturer of potential hazards that may need to be 
+addressed in the safety design of the final product. Therefore, when a lamp is placed in Risk 
+Groups  1, 2 or 3, it is important for the user to be informed of which potential hazards may 
+require controls. If the manufacturer provides the EHV or HD for the lamp (see 5.3.4), the 
+determination of appropriate controls can be simplified. 
+5.2.2 
+Measurement conditions 
+In the range 200 nm to 400 nm or 1 400 nm to 3 000 nm where the limits in IEC 62471 are 
+provided in irradiance or radiant exposure, the measurements should be performed according 
+to IEC 62471. 
+In cases where the limits in IEC 62471 are provided in spatially averaged radiance or time-
+integrated radiance, the source radiance (according to 3.14) data should be determined 
+(LEDs: operating under maximum operating conditions, such as maximum current) according 
+to IEC 62471. The angle of acceptance should be 1.7 mrad in any case. 
+NOTE These values should be compared with the risk group-specific limit values (rather than apply different 
+angles of acceptance). Under these conditions it can be assured that the risk group allocation of the component in 
+any case is directly transferable and useful to the characterisation of the final lamp system. 
+PD IEC/TR 62471-2:2009
+
+=== PAGE 15 ===
+62471-2/TR © IEC:2009(E) 
+– 13 – 
+ 
+If the use of the product is known and unambiguous, the application-specific requirements 
+(i.e. vertical standards) should be applied, where these exist, or subclauses 4.2 and 4.3 
+should be applied. 
+In case of multi-purpose lamps or if application-specific requirements (i.e. vertical standards) 
+do not exist, the measurement of single lamps and components should be performed at a 
+distance of 200 mm and the risk group and values should appear in the user information. 
+The assessment and risk group classification should be based on these values. 
+5.2.3 
+User information 
+The user information should include the risk group classification of the lamp that can be used 
+for risk group classification of a lamp system. 
+Information on risk group classification should be given for the intended use. Information 
+should be provided if application-specific conditions or requirements (as pointed out in 4.2 
+and 4.3 or as required by vertical standards) were applied. It should be noted that re-
+classification may be necessary if the lamp is used in other applications. 
+In the range 200 nm to 400 nm or 1 400 nm to 3 000 nm where the classification is based on 
+irradiance or radiant exposure, it should be noted that the assessment of a single lamp can 
+not be automatically transferred to the final lamp system. However, if the integration of the 
+lamp into a lamp system does not change the accessible emission characteristics of the lamp, 
+the risk group classification of the lamp system remains the same as the risk group of the 
+lamp.  
+5.3 
+Guidelines for lamp system/luminaire manufacturers 
+5.3.1 
+General 
+The lamp risk group classification indicates necessary safety measures to reduce the risk 
+group required for the application as specified in vertical standards. If the risk group of the 
+lamp is below the maximum appropriate for the application (see Table 3), the manufacturer 
+should assure that the risk group is directly transferable to the lamp system. 
+Lamp manufacturers produce some lamp types solely intended for specific applications (4.2 
+and 4.3, or as required by vertical standards) and these products should be classified by the 
+lamp manufacturer only under the application-specific conditions, if they exist. If these 
+sources are modified or marketed for use for other purposes, the lamp system manufacturer 
+should perform the re-assessment and assign the appropriate risk group. 
+5.3.2 
+Sources for general lighting service (GLS) 
+IEC 62471 states that for lamps and lamp systems used for GLS the hazard values should be 
+reported as irradiance or spatially averaged radiance values at a distance which produces an 
+illuminance of 500 lux. Only lamps and lamp systems which are classified as Exempt Group 
+with respect to the skin hazard when assessed at the location of the 500 lux illuminance level, 
+should normally be used for GLS applications. In addition, if the application requires skin 
+access to the optical radiation from the source where the illuminance is likely to exceed 
+500 lux for periods of exposure longer than 1 h, the user should be warned that an exposure 
+assessment may be required. 
+NOTE The above is intended to ensure that applications are considered where, for example, the UV emission 
+limits may be exceeded. This may be of concern for some lamps where the emission limits are not exceeded at 500 
+lux, but may be exceeded at a higher illuminance level where the hands, for example, may be located during fine 
+detail task illumination, or where the head is closer to the source than the surface illuminated at 500 lux.   
+The required illuminance measurement of the GLS lamp systems takes into account 
+contributions from all the elements of the lamp system. In contrast to the radiance 
+PD IEC/TR 62471-2:2009
+
+=== PAGE 16 ===
+ 
+– 14 – 
+62471-2/TR © IEC:2009(E) 
+measurement for risk group determination, the acceptance angle for the illuminance 
+measurement of GLS sources is not limited. When multiple lamps or modifying optics are 
+applied to a GLS product, the ultraviolet and infrared emission of the product in many cases 
+may be reduced; thus, the corresponding risk is reduced. Furthermore, if lenses or arrays 
+increase the 500 lux distance, the angular subtense of the component sources decrease (and 
+the spatially averaged radiance decreases), so that the risk remains essentially the same. 
+In cases where the classification by the lamp manufacturer is based on radiance or time-
+integrated radiance and where irradiance-dependant hazards can be neglected (LEDs or by 
+the use of appropriate filters), the GLS-classification of the lamp can directly be transferred to 
+the lamp system/luminaire. 
+5.3.3 
+Multi-purpose lamps 
+The following general approach should be followed in the course of risk group determination 
+of lamp systems. In cases where the risk classification of the lamp is based on the most 
+restrictive radiance or time-integrated radiance criteria, these values remain unchanged or are 
+decreased by integration of the lamp into a system or by adding optical elements. Such 
+measures or elements, in contrast, may change the irradiance or radiant exposure produced 
+by a source and should be considered in cases where the risk grouping of the incorporated 
+lamp is based on those criteria. However, the possible variation of the most restrictive 
+classification criterion, i.e. from radiance to irradiance, should be considered in case of 
+radiance-based classification of the incorporated lamp. 
+5.3.4 
+Determination of the hazard distance  
+In order to be independent of the use condition, the risk group classification of lamps and 
+lamp systems is based on worst case assumptions of exposure duration, pupil size and 
+viewing distance. However, the emission of lamps is often divergent and the viewer-related 
+risk at a reasonable distance may not be adequately reflected by the risk classification of the 
+equipment, i.e. the real risk is lower. 
+The exposure hazard values (EHV), i.e. the excess over the applicable exposure limits, have 
+significant practical relevance (see 3.2). This concept can be helpful when considering 
+appropriate control measures: to limit either the exposure duration or the accessibility of a 
+source as applicable. 
+The EHV may be graphically presented as distance-dependent values: with increasing 
+distance from a lamp or lamp system the applicable hazard values decrease - see Figure 1. At 
+the distance X1, EHV = 1, i.e. the EHV equals the applicable emission limit value. Distance X1 
+is the hazard distance (HD) for this lamp system. At distance X2, the optical radiation hazard 
+value exceeds the applicable emission limit value by a factor of A. At this distance, excessive 
+exposure to optical radiation may be reduced either by restricting exposure time by a factor of 
+A (if the emission limit values are expressed in terms of radiant exposure or time integrated 
+radiance), or by using engineering controls (such as filters) which attenuate the accessible 
+emission and/or personal protective means (such as eyewear, clothing) which would limit the 
+potential exposure to the emitted energy. 
+PD IEC/TR 62471-2:2009
+
+=== PAGE 17 ===
+62471-2/TR © IEC:2009(E) 
+– 15 – 
+ 
+ 
+0.1 
+1 
+10 
+100 
+Distance
+EHV 
+Distance X1: EHV = 1
+Distance X2: EHV = A 
+A 
+Optical hazard value exceeds applicable ELV by 
+factor of A: reduce exposure duration by factor of 
+A or attenuate emission by factor of A
+X2 
+X1
+Optical hazard value = ELV 
+IEC   1578/09  
+ Figure 1 – Example of graphic presentation of distant dependent 
+emission hazard values 
+Similar to the risk group allocation of the lamp or lamp system, these hazard distance values 
+can also be categorized in order to determine the effective viewer-related risk (3.19) under 
+realistic use conditions. For instance, with increasing distance from a Risk Group 3 lamp 
+system (as categorised at a measurement distance of 200 mm) the risk for the viewer 
+stepwise decreases from Risk Group 2 (e.g. at X2 in Figure 1) to Risk Group 1 and to Exempt 
+(e.g. at X1 in Figure 1), at the distances where the irradiance, or from where the measured 
+radiance, falls below the applicable risk-group-specific emission limit. 
+Therefore, in addition to assigning a lamp system to a risk group, the lamp system 
+manufacturer should also provide such data. Where the lamp system is assigned to a risk 
+group above Exempt, the manufacturer should, at least, provide the hazard distance (HD) for 
+all risk groups below the assigned one. These risk group-related hazard distances can be 
+used for the determination of applicable safety measures, see Table 3. 
+NOTE The above example and Figure 1 apply to one limit (“hazard”) and to a specific exposure duration. Similar 
+data are needed for all relevant limits (“hazards”) as well as for different exposure durations. 
+5.4 
+Labelling  
+Usually, primary engineering control measures need to be used by the manufacturer to make 
+the product “safe by design”. Specific details depend upon the application and should be 
+specified in application-specific vertical standards. To provide a common approach across 
+applications, this technical report specifies the labelling requirements as a main part of the 
+secondary (administrative) control measures. Lamp systems should be marked by the 
+manufacturer in accordance with the requirements of Table 1. 
+The following guidance is given for products not covered by existing application-specific 
+vertical standards. Except for an Exempt Risk Group and a Risk Group 1 lamp system 
+emitting only in the wavelength range 400 nm to 780 nm, the risk group should be marked on 
+the product. If the size or design of the product makes labelling impractical, the label should 
+be included in the packaging and included in the user manual. Warning symbols should be in 
+accordance with IEC 60417-1. 
+Labels on the housing should be permanently fixed, legible, and clearly visible during 
+maintenance and service. They should be positioned so that they can be read without the 
+necessity for human exposure to optical radiation in excess of the applicable ELVs. Text and 
+borders should be black on a yellow background. The label size should be adapted to the size 
+of the product. Reproductions of all required labels should be included in the user manual. 
+PD IEC/TR 62471-2:2009
+
+=== PAGE 18 ===
+ 
+– 16 – 
+62471-2/TR © IEC:2009(E) 
+Table 1 – Hazard-related risk group labelling of lamp systems 
+Hazard 
+Exempt Risk 
+Group 
+Risk Group 1 
+Risk Group 2 
+Risk Group 3 
+Ultraviolet hazard 
+200 nm to 400 nm 
+Not required  
+NOTICE 
+UV emitted from 
+this product 
+CAUTION 
+UV emitted from 
+this product. 
+WARNING 
+UV emitted from this 
+product. 
+Retinal blue light 
+hazard 
+300 nm to 400 nm 
+Not required  
+Not required 
+CAUTION 
+Possibly 
+hazardous optical 
+radiation emitted 
+from this product 
+WARNING 
+Possibly hazardous 
+optical radiation 
+emitted from this 
+product 
+Retinal blue light or 
+thermal hazard 
+400 nm to 780 nm 
+Not required 
+Not required 
+CAUTION 
+Possibly 
+hazardous optical 
+radiation emitted 
+from this product 
+WARNING 
+Possibly hazardous 
+optical radiation 
+emitted from this 
+product 
+Cornea/lens infrared 
+hazard 
+780 nm to 3 000 nm 
+Not required 
+NOTICE 
+IR emitted from 
+this product 
+CAUTION  
+IR emitted from 
+this product 
+WARNING 
+IR emitted from this 
+product. 
+Retinal thermal 
+hazard, weak visual 
+stimulus 
+780 nm to 1 400 nm 
+Not required 
+WARNING  
+IR emitted from 
+this product 
+WARNING 
+IR emitted from 
+this product. 
+WARNING 
+IR emitted from this 
+product. 
+ 
+5.5 
+Other information provisions 
+For lamps and lamp systems in excess of the Exempt Risk Group the following information 
+should be provided in the user information: 
+a) a clear statement that the lamp or lamp system is in excess of the Exempt Group and that 
+the viewer-related risk is dependent upon how the users install and use the product; 
+b) the most restrictive optical radiation hazard and other optical radiation hazards in excess 
+of Exempt Group (see Table 1); 
+c) exposure hazard values (EHVs) and the hazard distances with optional graphical 
+presentation of distant-dependent EHV; 
+d) Hazard distances (HD) for all relevant viewer-related risk groups below the assigned one 
+(for relevance see Tables 1 and 2); 
+e) adequate instructions for proper assembly, installation, maintenance and safe use, 
+including clear warnings concerning precautions to avoid possible exposure to hazardous 
+optical radiation; 
+f) advice on safe operating procedures and warnings concerning reasonably foreseeable 
+malpractices, malfunctions and hazardous failure modes. Where maintenance procedures 
+are detailed, they should, wherever possible, include explicit instructions on safe 
+procedures to be followed; 
+g) reproduction of the labelling required in 5.4 and an explanation of its meaning shown in 
+Table 2; and 
+h) information on what type of user controls may be considered. 
+NOTE The information required may be subject to national legislation. 
+PD IEC/TR 62471-2:2009
+
+=== PAGE 19 ===
+62471-2/TR © IEC:2009(E) 
+– 17 – 
+ 
+Table 2 – Explanation of labelling information and guidance on control measures 
+Hazard 
+Exempt Risk 
+Group 
+Risk Group 1 
+Risk Group 2 
+Risk Group 3 
+Ultraviolet hazard 
+200 nm to 400 nm 
+Not required 
+ 
+Minimise exposure 
+to eyes or skin. 
+Use appropriate 
+shielding. 
+Eye or skin irritation 
+may result from 
+exposure. Use 
+appropriate shielding. 
+Avoid eye and skin 
+exposure to 
+unshielded product. 
+Retinal blue light 
+hazard 
+300 nm to 400 nm 
+Not required  
+Not required 
+Do not stare at 
+operating lamp. May 
+be harmful to the 
+eyes. 
+Do not look at 
+operating lamp. Eye 
+injury may result. 
+Retinal blue light or 
+thermal hazard 
+400 nm to 780 nm 
+Not required 
+Not required 
+Do not stare at 
+operating lamp. May 
+be harmful to the 
+eyes.  
+Do not look at 
+operating lamp. Eye 
+injury may result. 
+Cornea/lens 
+infrared hazard 
+780 nm to 3 000 nm 
+Not required 
+Use appropriate 
+shielding or eye 
+protection. 
+Avoid eye exposure. 
+Use appropriate 
+shielding or eye 
+protection. 
+Avoid eye exposure. 
+Use appropriate 
+shielding or eye 
+protection. 
+Retinal thermal 
+hazard, weak visual 
+stimulus 
+780 nm to 1400 nm 
+Not required 
+Do not stare at 
+operating lamp. 
+Do not stare at 
+operating lamp. 
+Do not look at 
+operating lamp. 
+ 
+When a lamp or lamp system emits optical radiation in more than one hazard spectral region, 
+the lamp or lamp system should be classified for the most restrictive case. If the optical 
+radiation in any spectral region exceeds the limits for the Exempt Risk Group, appropriate 
+warnings should be included on the product label. For example, for a lamp assigned to Risk 
+Group 3 on the basis of a retinal IR hazard and emitting UV to the level of Risk Group 2, the 
+legend of the label should indicate Risk Group 3, with the appropriate ‘Warning’ text; and 
+show the ‘Caution’ text for Risk Group 2 for the UV, but should not mention Risk Group 2 
+explicitly, as illustrated in Figure 2. 
+ 
+RISK GROUP 3 
+WARNING IR emitted from this product. Do not look at operating lamp 
+CAUTION UV emitted from this product. Eye or skin irritation may result from 
+exposure. Use appropriate shielding. 
+ 
+Figure 2 – Example of warning label for a lamp with multiple hazard spectral regions 
+6 
+Allocation of safety measures 
+6.1 
+General 
+The manufacturer of the lamp or lamp system should perform a risk analysis to determine 
+necessary safety measures and residual risks for the user, necessary warnings and proposed 
+user safety precautions. The risk group classification assists the manufacturer in the design of 
+engineering controls to achieve an acceptable level of safety of the lamps and lamp systems. 
+The type of product and its intended use determines an acceptable level of emission, 
+foreseeable exposure duration and foreseeable accessible distances.  
+Exposure to optical radiation should be reduced by controlling unwanted radiation at the 
+source, e.g. by spectral filtering or by enclosures. Undesired hazardous UV and IR radiation 
+should be avoided where possible, or attenuated by appropriate filters.  
+IEC   1579/09
+PD IEC/TR 62471-2:2009
+
+=== PAGE 20 ===
+ 
+– 18 – 
+62471-2/TR © IEC:2009(E) 
+NOTE Selective control of unintentional spectral components in the visible spectral range could be more 
+challenging because spectral filtering may cause change to essential colour or intensity of the lamp system.  
+The manufacturer should provide the user with safety information and should describe the 
+types of user controls that can be considered. Depending on product application, the required 
+control measures may include restricted and controlled access areas.  
+Examples of interior restricted access areas are:  
+• 
+equipment cabinets in locked/dedicated rooms,  
+• 
+locations occupied by service/maintenance personnel, and  
+• 
+areas requiring equipment such as specialist access towers (e.g., street lighting, stadium 
+lighting, etc.).  
+Allocation of restricted access areas is product-specific and should be addressed by product 
+vertical standards. 
+Examples of controlled access areas include locked rooms with strictly-controlled access, 
+fenced/secure areas, and interior areas of equipment requiring specialised tools or keys for 
+access. Specification of controlled access areas is product-specific and should be addressed 
+by product vertical standards. 
+In general, the requirements for training, restricting access to a hazard zone, and requiring 
+personal protective equipment can only be considered for professional use products used 
+under work place conditions and if other controls are inadequate or impractical. The safety of 
+specific product types should be addressed in corresponding vertical standards. 
+6.2 
+Maximum acceptable viewer-related risk 
+Allocation of a lamp into a particular risk group is based on the assessment of lamp emission 
+at a distance of 200 mm and the applicable risk group exposure duration. However, when a 
+lamp is integrated into a product, depending on product design and its application, these 
+assessment conditions may become non-representative. In this case, the product may be 
+assessed at the minimum distance and maximum exposure duration representative for the 
+application-specific conditions of foreseeable access (viewer-related risk). 
+The applications can be divided into three groups, according to the likelihood of intra-beam 
+viewing of the source: 
+• 
+Unintentional short term (automotive, spot, flash, projection); 
+• 
+Intermittent, occasional (or possible) short-term (many toys, where the normal attention 
+span of a child is short, laboratory equipment, home, signalling); 
+• 
+Intentional (or likely) long-term (displays). 
+When a product is assessed under application-specific conditions, this viewer-related risk 
+group classification may differ from the risk group of the lamp incorporated into the product. 
+Table 3 provides guidance on the maximum permissible risk group of products accessible 
+under application-specific conditions. 
+Thus, if a Risk Group 3 lamp is incorporated into a display (intentional long-term exposure), it 
+is only acceptable if the viewer-related risk group of the display is Exempt. 
+If a Risk Group 3 lamp is incorporated into signalling equipment (intentional short-term 
+exposure), it is only acceptable if the viewer-related Risk Group of the signalling equipment is 
+maximum Risk Group 1 – foreseeable exposure is controlled by access distance and/or 
+maximum exposure time. 
+PD IEC/TR 62471-2:2009
+
+=== PAGE 21 ===
+62471-2/TR © IEC:2009(E) 
+– 19 – 
+ 
+If a Risk Group 3 lamp is incorporated into car headlights (unintentional short-term exposure), 
+it is only acceptable if the viewer-related risk group of the headlights is a maximum of Risk 
+Group 2 – foreseeable exposure is controlled by minimum access distance. 
+Table 3 – Maximum acceptable risk group of products assessed for viewer-related risk 
+under application specific conditions 
+Risk group assessed under application specific conditions – viewer-related risk 
+Risk group of the lamp 
+system 
+Unintentional short term 
+Intentional short-term 
+Intentional (or likely) 
+long-term 
+Exempt Group 
+Exempt Risk Group 
+Exempt Risk Group 
+Exempt Risk Group 
+Risk Group 1 
+Risk Group 1 
+Risk Group 1 
+Exempt Risk Group – 
+exposure limited by 
+access distance or by 
+controlled access 
+Risk Group 2 
+Risk Group 2 
+Risk Group 1 – exposure limited by 
+access distance or/and exposure 
+duration or product used in 
+restricted location 
+Exempt Risk Group – 
+exposure limited by 
+access distance or by 
+controlled access 
+Risk Group 3 
+Risk Group 2 – exposure 
+limited by access 
+distance or product used 
+in restricted location 
+Risk Group 1 – exposure limited by 
+access distance or/and exposure 
+duration or product used in 
+restricted location 
+Exempt Risk Group – 
+exposure limited by 
+access distance or by 
+controlled access 
+ 
+Table 3 is for guidance. Application-related vertical standards may provide more details of the 
+required assessment and specify safety control measures which may need to be considered. 
+Classification under application specific conditions is applicable only for the intended use of 
+the product. The safety measures for servicing and maintenance personnel should be based 
+on the risk group of the incorporated lamp and should not depend on the application of the 
+lamp system. 
+PD IEC/TR 62471-2:2009
+
+=== PAGE 22 ===
+ 
+– 20 – 
+62471-2/TR © IEC:2009(E) 
+Annex A  
+(informative) 
+ 
+Radiance and ocular hazards from extended sources 
+A.1 
+General 
+For extended sources which emit optical radiation in the retinal hazard region of the spectrum 
+(400 nm to 1 400 nm), the concept of radiance is useful for describing sources and for 
+managing the radiometric calculations involved in demonstrating the presence – or absence – 
+of a retinal hazard.   
+Before discussing the usefulness of radiance, it is worth identifying source types and 
+exposure situations for which radiance is unlikely to be helpful. Point sources have an 
+undefined radiance, thus intrabeam viewing of lasers and any viewing of sources subtending 
+a visual angle of 1.7 mrad or less is better served by the measurement and discussion of 
+other radiometric quantities such as irradiance at a defined distance. If the source in question 
+could be observed by magnifying optics, the possibility that the source subtense may increase 
+above 1.7 mrad and, thus, become an extended source should be considered. However, in 
+such cases a holistic treatment of the hazard from the source may still be better served by 
+continuing with irradiance-type units to cover both point- and extended-source treatment of 
+the same source. 
+Sources whose spectral output represents a hazard outside the retinal hazard region are 
+poorly served by radiance characterization. Irradiance or radiant exposure is usually of more 
+use with such sources. Conversion between measurement geometries is cumbersome and 
+carries the potential for the introduction of errors. Thus, as a general rule, radiance is of use 
+only in assessment of visible and near infrared sources.  Luminance is the photometric 
+analogue of radiance for visible light sources, and therefore IEC 62471 includes an upper 
+luminance value as a guide to identifying lamp sources in the Exempt Risk Group. 
+A.2 
+Geometry of radiance 
+An assumed ‘geometry’ relating source to observer is used with radiance and its photometric 
+analogue, luminance. This turns out to have very useful properties, both for hazard analysis 
+and in photometry. Luminance is frequently used to describe the ‘brightness’ of emitting 
+surfaces such as displays; for the same reasons, radiance can be used to define the hazard 
+from emitting surfaces. Radiance is expressed in terms of power divided by area per solid 
+angle (W/(m^2*sr)). One of the main consequences of radiance geometry, e.g. that of 
+invariance with distance from an extended source, is shown in Figure A.1. As the observer or 
+detector moves further away from the extended source, inverse square losses are 
+compensated by an increase in the source area sampled. 
+PD IEC/TR 62471-2:2009
+
+=== PAGE 23 ===
+62471-2/TR © IEC:2009(E) 
+– 21 – 
+ 
+ 
+1 W/(m^2*sr) 
+at this point 
+1 W/(m^2*sr) 
+at this point 
+Surface luminous excitance = π W/m^2 
+IEC   1580/09  
+Figure A.1 – Invariance of radiance with distance from an extended source 
+Similar arguments can be used to show that radiance is conserved (subject to losses due to 
+absorption), when refractive or reflective magnifying or minifying optics are interposed 
+between an extended source and an observer. In other words, although the magnifying or 
+minifying optics may change the apparent visual angle of the source, they also change the 
+apparent light power per unit area to compensate, thus radiance is only affected by absorption 
+in the optics and exit pupil coupling issues. 
+A.3 
+Relationship between retinal thresholds and source parameters 
+In experimental threshold determinations, retinal damage thresholds are usually measured in 
+terms of irradiance at the retina, i.e. in W/m^2. Comparing the properties of sources to retinal 
+damage thresholds would involve complicated irradiance transformations and, in the case of 
+extended sources, lead to distance-dependent considerations. Re-expressing retinal 
+thresholds in units of radiance means that treatment of the optics of the eye, plus any 
+intervening optics, in hazard evaluation is greatly simplified. 
+A.4 
+Limitations to the use of radiance in hazard evaluation 
+Some limitations on the use of radiance to characterise light sources have already been 
+mentioned in Clause A.1 above. 
+Additionally, and of relevance to the lamp and lighting industry, measurement of radiance in 
+order to characterise a source can be difficult for certain encapsulated or enclosed sources. 
+The problem usually arises in defining the area of the source; the "m^-2" component of the 
+units of radiance W/(m^2*sr). Whilst measurement of radiant flux is usually straightforward and 
+definition of source solid angle presents only moderate challenges; measurement of source 
+area, or the area sampled by measuring instruments, can be extremely difficult. One possible 
+solution is to define both solid angle and area at a real or virtual image of the source in an 
+optical system, if one exists. Provided both solid angle and area are measured in the same 
+plane, the validity of this follows from the “conservation of radiance” principle.  However, 
+those making the measurements must avoid falling into the trap of defining source area in one 
+plane and solid angle in another.  
+PD IEC/TR 62471-2:2009
+
+=== PAGE 24 ===
+ 
+– 22 – 
+62471-2/TR © IEC:2009(E) 
+A.5 
+Non-uniform sources 
+Measurements of the radiance of sources where the local radiant emission varies (i.e. non-
+uniform sources) should be integrated over the solid angles specified in IEC 62471. This 
+ensures that the measured radiance is compared correctly with experimental retinal damage 
+thresholds, taking into account eye movements and ocular aberrations. 
+A.6 
+Relationship between source radiance and spatially averaged radiance 
+The exposure limit values provided in radiance or time-integrated radiance respectively may 
+lead to the assumption that by the principle of conservation of radiance, if a lamp emits below 
+the radiance level specified (for a given risk group), the final luminaire can also not exceed 
+the accessible emission limits. Therefore, in order to avoid repeated measurements, lamp 
+manufacturers are requested to characterize the safety features of their devices (single 
+lamps) and to provide related risk group allocations.  
+Usually, the radiance L (W/(m^2*sr)) is determined (see, for example, Figure A.2) by 
+measuring the radiant power P (W) passing through a defined measurement aperture stop at 
+a defined measurement distance r. The diameter d of the aperture defines the solid collection 
+angle Ω (sr) and the measurement area AFOV (herein defined as the area under the “field of 
+view”, FOV (m^2)) corresponds to the acceptance angle γ predetermined by the circular field 
+stop in front of the detector. Usually, the source extends beyond the FOV, as shown in Figure 
+A.2 (i.e. α > γ). The radiance of the source is calculated from the radiant power P passing 
+through the measurement aperture, the measurement area FOV, and the solid angle Ω:  
+L (W/(m^2*sr)) = P [W] / (Ω (sr) * AFOV (m^2)) 
+The time integrated radiance is measured in the same way. However, the measurement of the 
+optical power P is replaced by a measurement of the radiant energy Q.  
+NOTE 1 Radiance L is by definition a differentially defined term:  
+L_e = dΦ_e / (dA * cosθ * dΩ). 
+Therefore, it should be noted that the term FOV used above and the solid angle are already integrated magnitudes 
+and that the above given formula for the power is already an integrated value (see IEV 845-01-34). 
+ 
+Circular 
+field stop 
+Apparent 
+source 
+Lens
+aperture stop
+Image distance 
+Active area 
+of the detector 
+d
+Angle of 
+acceptance  
+Angular subtense 
+of the apparent source 
+Measuring distance r
+γ 
+α 
+Circular
+IEC   1581/09  
+Figure A.2 – Usual measurement conditions for the determination of radiance  
+and time integrated radiance 
+ 
+PD IEC/TR 62471-2:2009
+
+=== PAGE 25 ===
+62471-2/TR © IEC:2009(E) 
+– 23 – 
+ 
+IEC 62471 requires the measurement of a spatially averaged radiance that takes into account 
+physical movements and imaging properties of the eye. Measurements carried out in this way 
+give a different result to conventional measurements of radiance, but the result is more 
+representative of the ocular hazard from the source. Measurement of spatially averaged 
+radiance requires a specified angle of acceptance γ which depends strongly on the exposure 
+duration. Thus, the corresponding FOV of the measurement setup may be smaller than the 
+source (overfilled, see Figure A.3a), or larger than the source (under-filled, Figure A.3b), 
+depending on the individual source size and the applied exposure duration determined by the 
+risk group. This is very different from conventional radiance measurements, where the source 
+must always extend beyond the measurement area. Regardless of the real source size, the 
+radiance limits are related to the FOV-defined area. 
+ 
+   FOV 
+ 
+Source 
+IEC   1582/09 
+IEC   1583/09  
+Figure A.3a – Source size larger than
+the FOV (overfilled) 
+Figure A.3b – Source size smaller than 
+the FOV (under-filled) 
+Figure A.3 – Source sizes 
+Conservation of radiance can be applied if the extent of the single source with angular 
+subtense α is larger than the applicable angle of acceptance (and the “true” source radiance, 
+see Figure A.3a). If the source extent is smaller than the FOV, a safety statement based on 
+the conservation of radiance is valid only as long as the relationship between the field of view 
+and the source area remains unchanged. This relationship is likely to be changed by the 
+integration of the single lamp or LED into luminaries (arrays) or with magnifying optics (see 
+Annex D).  
+NOTE 2 Conservation of radiance for sources subtending an angle larger than the FOV assumes that the source 
+is uniform, i.e. the source radiance is constant across the source. If the source is non-uniform then the FOV should 
+be scanned around the source to determine the worst case. 
+Specifically, in the case of devices assigned to the Exempt Risk Group and for the most 
+restrictive blue light hazards, the angle of acceptance is maximum at 100 mrad. From the 
+worst case assessment distance of 200 mm, the corresponding diameter of the averaging 
+FOV of 100 mrad amounts to 20 mm. The dimensions of LED-chips, single LEDs or common 
+lamp-filaments are usually smaller. Complying with the Exempt Risk Group limit value using 
+the spatially-averaged radiance, it means that the “true” radiance of the small component can 
+theoretically be higher by the factor: (γ/α)2. Therefore, this Exempt Risk Group limit value can 
+be exceeded, if a number of such components are combined in a lamp system, e.g. in high-
+density LED-arrays.  
+Another case is the attachment of beam-shaping optics to the component. In this case, a 
+small apparent source is usually magnified or expanded (see Annex D) and may overfill the 
+FOV; whereas, the “true” source radiance remains, to a first approximation, unchanged and 
+high. 
+In general, an Exempt Risk Group source that is safe for 10 000 s exposure duration should 
+also be safe at shorter exposures or viewing durations, i.e. it should satisfy the Risk Group 1 
+and Risk Group 2 criteria. Thus, at least for components, it is not appropriate to adhere rigidly 
+to the classification requirements of the lamp safety standard.  
+PD IEC/TR 62471-2:2009
+
+=== PAGE 26 ===
+ 
+– 24 – 
+62471-2/TR © IEC:2009(E) 
+NOTE 3 The FOV is dependent on the risk group, which could mean that a component meets the requirements for 
+the Exempt Risk Group, but not the requirements for Risk Groups 1 and 2. In these situations, allocation to the 
+Exempt Risk Group may be justified. 
+The lamp or LED manufacturer should determine the “true” source radiance for comparison 
+with the limit values and classification, where a minimum angle of acceptance of 1.7 mrad 
+should be applied. 
+In cases of large sources, where the FOVs are always over-filled (Figure A.3a), the resulting 
+radiance values should be independent of the FOV. 
+In the case of small sources (Figure A.3b), the worst case scenario for a component is 
+transferable and useful for the classification of the final lamp system. However, this 
+assessment might be over-restrictive for the final product/lamp system/luminaire and in such 
+cases the manufacturer should consider assessing the product with different FOVs. 
+Figure A.4 shows an example of a “pc-white” LED component, where the B(λ)-weighted 
+radiance was measured with an imaging radiance-meter. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+γFOV:           100     and        11 mrad  
+        1.7   and   11 mrad 
+ 
+Measurement with three applicable FOVs from a distance of 200 mm (i.e. future application unknown). 
+Source: W. Halbritter e.a. Proc. CIE Expert Symposium 2008 on Advances in Photometry and Colorimetry 
+Figure A.4 – B(λ)-weighted radiance distribution of a state-of-the-art “pc-white” LED 
+component  
+γFOV 
+[mrad] 
+Measured 
+[W/(m^2*sr)]
+Limit 
+[W/(m^2*sr)] 
+100 
+(Exempt 
+Risk 
+Group) 
+250 
+100 
+11 (Risk 
+Group 1) 
+7.5 * 10^3 
+1 * 10^4 
+1.7 (Risk 
+Group 2) 
+1.1 * 10^4 
+4 * 10^6 
+White high-power LED 
+0.00 
+0.25 
+0.50 
+0.75 
+1.00 
+300 
+400 
+500
+600 
+700
+800
+Wavelength   (nm) 
+Relative 
+Blue light hazard
+IEC   1584/09
+PD IEC/TR 62471-2:2009
+
+=== PAGE 27 ===
+62471-2/TR © IEC:2009(E) 
+– 25 – 
+ 
+According to the risk group specifications, three angles of acceptance were applied to one 
+and the same device. The table in Figure A.4 shows the measured radiance values for each 
+γFOV,  as well as the applicable limits. 
+As discussed above, if the device was assessed as a component for future integration into 
+complex systems and the angle of acceptance of 1.7 mrad was applied, it should be allocated 
+to Risk Group 2 since the limit for Risk Group 1 (1 * 10^4 W/(m^2*sr)) is exceeded under this 
+condition. This presents a worst case classification on the very conservative side and the 
+lamp system manufacturer cannot increase this class in any case. 
+However, if this device was considered as the final product and if the risk group allocation 
+was too restrictive (since the final product possibly already incorporates some safety 
+measures), a full analysis according to IEC 62471 should be performed. In this case, the final 
+product would be allocated to Risk Group 1, since when measured with the appropriate FOVs, 
+the B(λ)-weighted radiance exceeds the Exempt Risk Group limits only. 
+PD IEC/TR 62471-2:2009
+
+=== PAGE 28 ===
+ 
+– 26 – 
+62471-2/TR © IEC:2009(E) 
+Annex B  
+(informative) 
+ 
+Determination of hazard distances 
+B.1 
+General 
+Generally, in order to be independent of the use condition, the classification of optical sources 
+into risk groups is usually based on some worst case assumptions, e.g. for exposure duration, 
+pupil size and viewing distance. Thus, the required measurement distance in the lamp safety 
+standard is usually 200 mm, which corresponds to a reasonable minimum viewing distance for 
+humans. However, the spatial emission of lamps is often divergent and the real hazard for the 
+intended or accidental viewer at a reasonable distance might not be appropriately reflected by 
+the worst case classification of the lamp. Therefore, the value of a minimum safe viewing 
+distance (HD) of a lamp system becomes important. In this context, the HD is defined as the 
+distance from the source at which the measured value of the source emission equals the 
+appropriate accessible exposure limit value (ELV). As the ELVs are provided for different risk 
+groups, the corresponding hazard distances can be determined for each risk group as well  in 
+order to determine the risk for intended/accidental viewers. The rough guidance for the 
+development of vertical application-related standards in Clause 6 is essentially based on this 
+concept. Thus, it depends on the application (e.g. the likelihood of direct source viewing), 
+which viewer-related risk (respective HD) is acceptable in particular cases (see Table 3 of the 
+technical report). The corresponding HD can be used for the allocation of appropriate safety 
+measures, for example, by prevention of access to shorter distances to the source. 
+The limit values of IEC 62471 are provided in two different terms which require separate 
+consideration. For the limits provided as irradiances (outside the retinal hazard region) an 
+inverse square relationship between the measured value and the source distance can be 
+assumed for first approximations. This is not generally applicable to the retina limits that are 
+provided as time integrated source radiance because the resulting radiance values should not 
+vary when measured from different distances. 
+B.2 
+Limits provided in irradiance 
+B.2.1 
+General relationships 
+Outside the retinal hazard wavelength range (400 nm to 1 400 nm) the ELV of the lamp safety 
+standard are provided as irradiance (in W/m^2). For these irradiance limits, the fundamental  
+inverse square law of radiometry may be used to determine a safe viewing distance. However, 
+it can only be applied to divergent source in the far-field, where the size of the source is small 
+compared to the assessment distance. As a "rule of thumb", the distance to the source should 
+be greater than five times the dimension of the source. The general relationships between a 
+given source radiance and the corresponding irradiance by the source at several distances 
+and for different source dimensions are shown in Figure B.1 
+PD IEC/TR 62471-2:2009
+
+=== PAGE 29 ===
+62471-2/TR © IEC:2009(E) 
+– 27 – 
+ 
+ 
+0.01 
+"Inverse square law"
+Distance/source diameter
+Irradiance normalized 
+1 * 10^3 
+100 
+10 
+1 
+0.1 
+0.01 
+1 * 10^-3 
+1 * 10^-4 
+1 * 10^-5 
+1 * 10^-6 
+1 * 10^-7 
+0.1 
+1
+10
+100
+1 * 10^3 
+IEC   1585/09  
+Key 
+x-axis:  
+relation between distances and source diameter i.e. ~1/α.  
+Blue:  
+general relationship between L and E (for a wide range of source sizes and distances – 
+hence the large number of “blue lines”).  
+Red:  
+“radiance conservation” (E is proportional to L).  
+Black:  
+inverse square law (E is proportional to L/r^2).  
+Magenta: corresponding range of angular subtense under consideration. 
+ 
+Figure B.1 – Normalized correlation between radiance L and corresponding irradiance E 
+for varying values of source diameter and distance 
+As indicated in Figure B.1 (arrow), the deviation between the rigorous relationship between L 
+and E (blue line) and the (simple) inverse square relation (black) is less than 1% if the 
+relationship between source distance and source diameter (x-axis) is greater than 5. The 
+magenta line, which indicates the corresponding range of angular subtenses under 
+consideration (between α_min and α_max) shows that for hazard assessments according to 
+IEC 62471, far-field-conditions generally apply. Thus, the fundamental inverse square law of 
+radiometry and photometry may be used to determine the hazard distance (HD). 
+In such cases, between the irradiance E1 at a source distance r1 and the irradiance E2 at 
+source distance r2, the following relationship holds: 
+ 
+E1 * r1^2 = E2 * r2^2 
+It means that if the spectrally weighted irradiance-ELV is exceeded by a value E1 at the 
+measurement distance r1, the corresponding HD r2 can be calculated as: 
+PD IEC/TR 62471-2:2009
+
+=== PAGE 30 ===
+ 
+– 28 – 
+62471-2/TR © IEC:2009(E) 
+HD = E1 * r1^2 / ELV
+ 
+Therefore, if r1 = 200 mm:  
+HD = 0.04 * E1 / ELV, in m 
+The irradiance-ELV in the above equation can be calculated for each risk group. 
+B.2.2 
+Impact of beam-shaping optics 
+B.2.2.1 
+Lamps with projection systems 
+Generally, care should be taken when considering sources with beam-shaping optics, see 
+Annex D. Although the general relationships in Figure B.1 remain valid, in such cases the 
+source may be magnified, see Figure B.2 (whereas, the irradiance increases). That means 
+that the linear relationship between radiance L and irradiance E (red line) extends to the 
+greater source distances and the far-field condition, where the inverse square law applies, 
+starting from a greater source distance (sometimes called the “flash distance”). 
+This flash distance rf of projection systems can be estimated if the focal length of the reflector 
+or lens f, the diameter of the source D and the reflector (or lens) aperture diameter a are 
+known:  
+ 
+ 
+rf ≈  a * f / D 
+In practice, the value of the aperture is normally 50 to 70% of the full reflector diameter. 
+PD IEC/TR 62471-2:2009
+
+=== PAGE 31 ===
+62471-2/TR © IEC:2009(E) 
+– 29 – 
+ 
+ 
+ 
+At relatively close viewing distances the triangular shape of the arc is visible, but at longer distances 
+the reflector optic is fully “flashed” (filled) and the beam irradiance drops in proportion to the inverse 
+square of the distance.  (Source:  Sliney and Wolbarsht, Safety with Lasers and Other Optical Sources, 
+New York, Plenum, 1980). 
+Figure B.2 – Direct intra-beam viewing of an arc searchlight showing a magnification of 
+the actual arc   
+B.2.2.2 
+Plastic encapsulated LEDs with integrated optics 
+For the more or less directional radiation of LEDs the flash distance may amount to up to 60 
+times the diameter of the source depending on the half intensity angle (θ) of the spatial 
+emission distribution. 
+For ideal Lambertian cosine-distributed LED chips the "rule of thumb" also holds: the distance 
+to the source should be greater than five times the dimension of the source. However, the 
+factor f on the source dimension increases if the emission of the encapsulated LED is directed 
+by means of reflectors or lenses depending on the half intensity angle (available from data 
+sheets). This can be calculated and Figure B.3 shows the range of factors on source 
+diameter, D, depending on the half intensity angle of LEDs. 
+IEC   1586/09
+PD IEC/TR 62471-2:2009
+
+=== PAGE 32 ===
+ 
+– 30 – 
+62471-2/TR © IEC:2009(E) 
+ 
+0 
+20
+40
+60 
+1 
+10 
+100 
+Flash distance of LED: factor on source diameter
+Half intensity angle   (°)  
+Factor on D 
+fθ 
+θ 
+1 * 10^3 
+IEC   1587/09  
+y-axis: factors on the source diameter D. 
+Figure B.3 – Calculated flash distance of LEDs depending on the individual half 
+intensity angle θ of the spatial emission  
+As shown in Figure B.3, for an ideal Lambertian source with θ = 60° the factor f amounts to 5, 
+as for the above mentioned “rule of thumb”. 
+Example: For θ = 5°, f ≥ 34; thus, for a source of diameter D = 10 mm the minimum distance rf 
+from where the inverse square law applies amounts to 340 mm, which is larger than the 
+standard measurement distance of 200  mm.  
+If the flash distance is larger than the measurement distance, the hazard distance HD can be 
+calculated using the above equation by replacing r1 with rf of the applicable “flash distance”. 
+B.2.3 
+Example:  Graphical representation of the maximum allowable exposure 
+duration versus the minimum safety distance for the derivation of safety 
+measures  
+ 
+Following IEC 62471, the exposure limit value (ELV) for the actinic UV hazard is 30 J/m^2 , or 
+in irradiance, ELV(t) = 30/t W/m^2, where t is the exposure duration in seconds. 
+This leads to the risk group-related irradiance limits (ELV in W/m^2): 
+  
+Exempt Risk Group (t = 30 000 s):  
+ 
+ELVEx = 0.001 W/m^2 
+Risk Group 1 (t = 10 000 s):   
+ 
+ELVRG1 = 0.003 W/m^2 
+Risk Group 2 (t = 1 000 s):  
+ 
+ 
+ELVRG2 = 0.03 W/m^2 
+For UV hazard, spectral weighting with the S(λ)- function is required. This weighting is usually 
+applied after a spectrally-resolved measurement. Inversely, it is also possible to calculate 
+PD IEC/TR 62471-2:2009
+
+=== PAGE 33 ===
+62471-2/TR © IEC:2009(E) 
+– 31 – 
+ 
+related source spectra-specific limit values by weighting the spectra with the action functions. 
+These values correspond to integrating, i.e. spectrally unresolved, measurements. 
+Consider an example source of a Planckian radiator with a colour-temperature of 5 800 K. 
+After weighting with the action function S(λ), the source-specific applicable limit values for the 
+actinic UV-hazard changes from 30 J/m^2 (effective) to 250 J/m^2 (unweighted). Therefore, for 
+this example:  
+Exempt Risk Group (t = 30 000 s):  
+ 
+ELVEx = 0.008 W/m^2 
+Risk Group 1 (t = 10 000 s):   
+ 
+ELVRG1 = 0.025 W/m^2 
+Risk Group 2 (t = 1 000 s):  
+ 
+ 
+ELVRG2 = 0.25 W/m^2 
+For this example, the irradiance measurement within the corresponding wavelength range 
+200 nm to 400 nm at a distance r1 = 200 mm resulted in ES = 10 W/m^2 (Risk Group 3). 
+The minimum safe viewing distance (HD) for this irradiance can be calculated:  
+ELV
+E
+HD
+0.04
+1 *
+=
+ 
+which leads to the following distances for each Risk Group: 
+Exempt Risk Group:   
+ 
+HDEx = 7 m 
+Risk Group 1:   
+ 
+ 
+HDRG1 = 4 m  
+Risk Group 2:   
+ 
+ 
+HDRG2 = 1.3 m 
+A similar calculation can be performed more generally with the time-dependent ELV: 
+HD(t) = 0.04 * E1(t) / ELV(t). 
+With this calculation, a simple graphical presentation of the maximum allowable exposure 
+duration versus the HD is possible (Figure B.4): 
+PD IEC/TR 62471-2:2009
+
+=== PAGE 34 ===
+ 
+– 32 – 
+62471-2/TR © IEC:2009(E) 
+0.1
+1
+10
+10
+100
+1E+03
+1E+04
+1E+05
+Example-source: duration versus distance
+minimum safe distance [m]
+maximum exposure duration [s]
+ 
+Example-source: duration versus distance 
+Minimum safe distance   (m) 
+1 
+10 
+0.1 
+10 
+10 * 10^5 
+100 
+10 * 10^3 
+10 * 10^4 
+Exempt 
+Low 
+Moderate 
+Maximum exposure duration   (s) 
+IEC   1588/09  
+These represent safe use conditions as long as the parameter-combinations for the exposure duration 
+and the HD are below the red line. As indicated in the figure, the appropriate safety parameter set 
+might also be chosen risk group-specific. 
+Figure B.4 – Actinic UV-related safe use conditions for the example radiator  
+The applicable HD depends on the viewer-related risk group, which depends on the 
+application of the lamp system (the likelihood for direct source viewing). If, for example, the 
+lamp system is used for signalling (occasional viewing), then the maximum risk group for the 
+intended viewer is Risk Group 1 (see Table 3). However, this classification depends upon how 
+the users install and use the product. In any case, the conditions for the appropriate risk 
+group have to be assured by control measures (e.g. appropriate installation location) to 
+prevent the access for the intended viewers closer than the Risk Group 1 hazard of 4 m.  
+In some cases, as indicated in Figure B.4, there would be another possibility.  
+In the example of actinic UV-hazard, the time base for Risk Group 1 is 10 000 s. If it is likely 
+that the duration of exposure or direct viewing in practice is shorter (e.g. due to a limited 
+switch-on time of an information board), the HD can be reduced accordingly. Generally, long-
+term direct viewing of a signal or information board is not realistic and the duration is limited 
+to the time necessary for taking the information. For such an approach, graphical presentation 
+of the HD versus the exposure duration is helpful. If, for instance, the likely maximum viewing 
+duration in this example would be limited to 100 s, the corresponding HD would amount to 
+40 cm. However, possibilities depend on the dominating (most restrictive) hazard and the 
+related time bases. Greater details may be provided in application-related vertical standards. 
+B.3 
+Limits provided in time integrated radiance 
+B.3.1 
+General relationships 
+Within the wavelength range 380 nm to 1 400 nm, the exposure limit values are provided in 
+terms of radiance (in W/(m^2*sr)). Thus, the retinal exposure depends linearly on the source 
+radiance. 
+As mentioned above, unlike the irradiance, the measured radiance values should, in first 
+order, not vary when measured from different source distances.  
+PD IEC/TR 62471-2:2009
+
+=== PAGE 35 ===
+62471-2/TR © IEC:2009(E) 
+– 33 – 
+ 
+However, the main and distinguishing feature of IEC 62471, compared with usual optical 
+classification methods, is that IEC 62471 considers spatially averaged radiances instead of 
+the “true” source radiance (see Annex A of this technical report). Independent from the actual 
+angular subtense of a source, the measurement is averaged over a specific defined 
+acceptance angle γ and the limit applies to the correspondingly determined area in the 
+source-plane. Thus, while the assessment distance increases up to the location of the HD 
+position, the acceptance angle has to remain constant (independent of the source distance), 
+whereas the angular subtense α of the source decreases. In other words, whereas the source 
+area itself remains unchanged the corresponding FOV in the plane of the source increases: 
+i.e. the relationship between source dimension and the averaging FOV changes with the 
+distance. This has no real consequences, as long as the source area remains larger than the 
+applicable FOV.  
+However, especially for the blue light hazard of the Exempt Risk Group, the maximum 
+applicable acceptance angle is 100 mrad: at 200 mm distance a FOV equivalent to 20 mm 
+source diameter. This is larger than most filaments or single LEDs. From a certain distance, 
+the angular subtense becomes smaller than the angle of acceptance with increasing source 
+distance. At this source specific distance, rIS an inverse square relationship between source 
+and spatially averaged radiance starts. This issue is important for the determination of hazard 
+distances in general, and in the case of GLS sources it is assumed that this may happen for 
+the 500 lux distance (see Annex C). Under such arrangements, for an unchanged source 
+radiance the measured value of the spatially averaged radiance decreases with increasing 
+measurement distance following the relationship (γ/α)2. Since the spatially averaged radiance 
+limit is related to the area of the under-filled (see Annex A) FOV which is averaged over an 
+extended and increasing area; whereas the real source dimension remains unchanged.  
+From a certain distance, the angular subtense becomes smaller than the angle of acceptance 
+with increasing source distance. HD values can also be determined in cases where the retinal 
+hazard limits in terms of radiance are most restrictive. The smaller the source size, the 
+shorter the HD. The measured spatially averaged radiance decreases with increasing 
+distance and at the point where it equals the applicable risk group-specific limit values, the 
+corresponding HD can be determined. It should be noted that each limit value is combined 
+with a specific acceptance angle. The decrease of the measured spatially averaged radiance 
+with increasing distance may be more significant, if the increasing γ with the applicable limit 
+values are taken into account. 
+If required, the source-specific distance rIS, where the linear relationship between source and 
+spatially averaged radiance breaks down and inverse square relationship starts, can be 
+calculated. Hence, similar to the equation for the irradiance limits, the HD for limiting radiance 
+values can be calculated as: 
+ELV
+r
+L
+HD
+2
+IS
+S *
+=
+ 
+Where LS is source radiance, ELV is applicable exposure limit value of the spatially averaged 
+radiance for a given risk group and hazard.  
+The above relationship is valid as long as the calculated HD is larger than rIS. Hazard 
+distance can be calculated for each risk group. Since γ depends on the risk group, the 
+corresponding value should be applied for the determination of rIS. 
+B.3.2 
+Example 
+Example of blue light hazard radiances and limit values for a pc-white light-emitting LED is 
+shown in Annex C. In cases of sources with more extended spectral emission, other hazards, 
+as well as their possible overlapping or crossing with increasing distances, should be 
+considered when determining hazard distance. It can be challenging, as indicated in a 
+PD IEC/TR 62471-2:2009
+
+=== PAGE 36 ===
+ 
+– 34 – 
+62471-2/TR © IEC:2009(E) 
+theoretical consideration in Figure B.5. This Figure shows all applicable Exempt Risk Group 
+limit values for a halogen lamp of 7 mm source diameter. In order to make limits comparable 
+in one figure, the irradiance limits (see Clause B.2) were transferred into corresponding 
+radiance limits, which include a dependency on the source size and the distance (see 
+Figure B.1). The radiance limits for retinal thermal hazards became distance dependant due 
+to the decrease of angular subtense with increasing distance, until the angular subtense 
+equals α_min, see Figure B.5: the kinks in the brown and black solid lines. For the sake of 
+completeness, the theoretical modelling of the different spatially averaged radiances with the 
+distance as they would be measured according to the Exempt Risk Group requirements are 
+also shown, assuming a source luminance of 3 * 10^7 cd/m^2. 
+1 * 10^8 
+1 * 10^7 
+1 * 10^6 
+1 * 10^5 
+1 * 10^4 
+1 * 10^3 
+     100   
+100 
+1 * 10^3 
+r 
+1 * 10^4 
+ 
+Source distance   (mm) 
+Radiance exempt limits 
+Radiance   (W/(m^2*sr)) 
+IEC   1589/09  
+Key 
+Blue:  
+blue light hazard 
+Red:  
+actinic UV hazard 
+Magenta:  UV eye hazard 
+Brown:  
+retinal thermal hazard at low visual stimulus 
+Black:  
+retinal thermal hazard  
+Brown  
+dash-dotted: cornea/lens hazard 
+Based on a “true” source radiance of 1 * 10^6 W/(m^2*sr), the values of the physiological radiance as 
+they would be measured at increasing distances are also shown: 
+• 
+blue circles: blue light hazard (measured with γ = 100 mrad); 
+• 
+black circles: retinal thermal hazard (measured with γ = 11 mrad); 
+• 
+red circles: (unchanged) corresponding radiance for comparison with the limit values that are 
+originally provided in irradiance. 
+Figure B.5 – Distance-dependant (spectrally weighted) Exempt Risk Group limits for the 
+spatially averaged radiance of a halogen lamp of 7 mm source size  
+  
+The figure is more complex if the other risk group limits and the different distances (due to the 
+different or not applicable acceptance angles) of the spatially averaged radiances are 
+considered.  
+PD IEC/TR 62471-2:2009
+
+=== PAGE 37 ===
+62471-2/TR © IEC:2009(E) 
+– 35 – 
+ 
+A reasonable luminance of a halogen lamp is 3 * 10^7 cd/m^2. Under consideration of the 
+applicable photometric-radiometric conversion factor, this value has been used for the 
+calculation of the corresponding spatially averaged radiance in Figure B.5. The following 
+hazard distances can be calculated, in m: 
+Table B.1 – Spatially averaged radiance 
+ 
+Actinic UV 
+UV eye 
+Blue light 
+Retinal 
+thermal 
+Retinal thermal 
+low visual 
+Cornea 
+lens 
+Risk Group 2  
+0.69 
+0.27 
+0.20 
+0.20 
+0.20 
+0.20 
+Risk Group 1  
+2.2 
+0.47 
+0.78 
+0.20 
+0.20 
+0.20 
+Exempt Risk 
+Group (see 
+Figure B.5) 
+3.8 
+0.85 
+0.86 
+0.20 
+0.20 
+0.27 
+In this example the actinic UV-hazard provides the most restrictive criterion, since for each 
+risk group the hazard distance is greater than 200 mm. It should be noted, however, that the 
+hazard that provides the most restrictive classification criterion does not necessarily also 
+provide the greatest hazard distance.  
+The classification of this halogen lamp would result in Risk Group 3 with the actinic UV as the 
+most restrictive hazard. If the UV emission is filtered out, the remaining most limiting criterion 
+would be the blue light hazard. Based on the hazard distances, the classification in this case 
+results in Risk Group 2. As discussed in Clause 6.2, such halogen lamps are mainly used 
+under conditions of unintentional short term exposure (automotive, spot, flash, projection). As 
+indicated in Table 3, in such cases the maximum acceptable viewer-related risk group should 
+be Risk Group 2 where protection is based on aversion responses. Thus, the example lamp 
+can be used in this application without any additional safety requirements, provided that the 
+UV emission is filtered out. However, as also indicated in Clause 6.2, if the example lamp is 
+used in applications that may require intentional short term exposure (laboratory, home, 
+signalling), the maximum acceptable viewer-related risk group is Risk Group 1. Thus, a 
+minimum accessible viewing distance of 0.78 m should be assured by appropriate control 
+measures. No further restrictions are necessary, if the accessible viewing distance is greater 
+than 0.86 m. 
+The “Blue light”-based Risk Group allocation will even change to RG 0 (exempt) if this 
+halogen lamp is used exclusively for general lighting purposes (GLS) and the evaluation is 
+performed at a distance that corresponds to an illumination level of 500 lux, see Annex C. 
+PD IEC/TR 62471-2:2009
+
+=== PAGE 38 ===
+ 
+– 36 – 
+62471-2/TR © IEC:2009(E) 
+Annex C  
+(informative) 
+ 
+Sources for general lighting service (GLS) 
+Although IEC 62471 is primarily a horizontal standard, it provides application-related 
+requirements. Specifically, sources that are exclusively used for general lighting service 
+(GLS) should not be assessed by application of the worst case measurement distance of 
+200 mm, as is to be applied to all other sources. In these cases, "…the hazard values shall be 
+reported as either irradiance or radiance values at a distance which produces an illuminance 
+of 500 lux…For all other light sources or lamp systems, including pulsed lamp sources, the 
+hazard values shall be reported at a distance of 200 mm…“  (500 lux is a typical minimum 
+visual task lighting level in offices or at workshop benches).  
+However, in many cases a lamp manufacturer may not know whether a specific lamp will be 
+used for general lighting purposes and the categorisation of single lamps or LEDs should be 
+performed at a distance of 200 mm. The 500 lux requirement is mainly related to the final 
+luminaire. Additionally, the application of this requirement to single lamp is usually not 
+meaningful, since lamps will be combined with other lamps (e.g. in an array) or attached to 
+beam-shaping optics, etc. Thus, the required illuminance measurement of the final GLS-
+source takes into account contributions of the whole luminaire. Unlike the measurements for 
+risk group classification, the acceptance angle for the illuminance measurement of GLS-
+sources should not be limited. 
+Compared with an assessment distance of 200 mm, the most important implication of the 
+extended 500 lux distance is on the irradiance by the source, i.e. there appears to be an 
+advantage in cases where the categorisation is based on irradiance limits. Following the 
+ANSI/IESNA RP-27 Recommended Practice for Photobiological Safety for Lamps & Lamp 
+Systems, the background for the introduction of this criterion was related to the irradiance-
+expressed UV limits. The irradiance usually decreases with increasing distance, following the 
+inverse square law, whereas the radiance virtually remains unchanged. Therefore, there is no 
+or little advantage of the increased assessment distance if the classification of the 
+incorporated lamp is based on the most restrictive radiance limitations. 
+IEC 62471 considers spatially averaged radiance instead of the physical radiance (see Annex 
+A). Independent of the angular subtense of a source, for comparison with the exposure limit 
+values, the exposure level is averaged over a specific defined acceptance angle γ and the 
+limit applies to the correspondingly determined field of view (FOV). Thus, while the 
+assessment distance increases until the 500 lux position, this acceptance angle has to remain 
+constant (independent of the source distance), whereas the angular subtense α of the source 
+decreases. From a certain distance, the angular subtense becomes smaller than the angle of 
+acceptance with increasing source distance. At this source-specific distance rIS the inverse 
+square relationship between the source and the spatially averaged radiance starts. This issue 
+is important for the determination of hazard distances (see Annex B) and in case of GLS 
+sources may also happen for the 500 lux distance.  
+The 500 lux criterion may provide relaxation also in cases where the retinal hazards with 
+radiance limits are most restrictive: the smaller the source size, the greater the relaxation. 
+Another example is shown in Figure C.1: a white-light-emitting LED with two different source 
+sizes, for a single element and for an array. Due to the absence of UV emission, the blue light 
+hazard dominates. The spectrally B(λ)-weighted source radiance at a distance of 200 mm 
+amounts to 3.4 * 10^4 W/(m^2*sr). 
+Figure C.1 shows the spatially averaged radiances at greater distances from the source. Two 
+different source sizes are considered in this example: 2 mm (single LED: red lines) and 
+50 mm (LED-array: blue lines), in order to highlight the dependency of the measured radiance 
+on the source size. The exposure limit values of IEC 62471 are indicated by the black lines: 
+solid for the Exempt Risk Group and dotted for Risk Group 1. 
+PD IEC/TR 62471-2:2009
+
+=== PAGE 39 ===
+62471-2/TR © IEC:2009(E) 
+– 37 – 
+ 
+ 
+1 * 10^5 
+Source distance   (mm) 
+Measured spatially averaged radiance 
+Radiance   (W/(m^2*sr)) 
+1 * 10^4 
+1 * 10^3 
+100 
+10 
+ 0 
+1 * 10^4 
+r 
+5 * 10^3 
+1.5 * 10^4 
+2 * 10^4 
+IEC   1590/09  
+For a given “true” radiance (with classification into Risk Group 2): development of the expected 
+measured averaged (over acceptance angles of 11 mrad: dotted, and 100 mrad: solid lines) values of 
+the spatially averaged radiance with increasing distance from the source of size: 2 mm (red line) and 50 
+mm (blue). 
+Figure C.1 – Measured spatially averaged radiance 
+It should be noted that in this figure two fixed acceptance angles were used  applicable to the 
+risk groups and in order to determine the risk group-specific hazard distances (see Annex B). 
+Risk group-related hazard distances are in each case the distances where the dotted or the 
+solid lines cross each other. Since the applicable blue light hazard limits are 100 W/(m^2*sr) 
+for the Exempt Risk Group and 1 * 10^4 W/(m^2*sr) for Risk Group 1, white LED sources are 
+allocated into Risk Group 2 if assessed from the standard measurement distance of 200 mm. 
+The hazard distance calculation leads to the following distances, also shown in Figure C.1: 
+Table C.1 – Risk group-related inverse square law and hazard distances 
+2 mm 
+50 mm 
+Source diameter 
+rIS 
+HD 
+rIS 
+HD 
+Risk Group 1 
+0.02 
+0.34 
+4.5 
+8.4 
+Exempt Risk 
+Group 
+0.18 
+0.37 
+0.5 
+9.2 
+The table shows Risk Group-related inverse square law and hazard distances (in m) for the two white 
+LEDs (of equal radiance but different source size) in Figure C.1. 
+ 
+The hazard distances of the extended LED (array) are large due to the relationship between 
+source area and the FOV-defined area. In this case, the risk classification does not change 
+from Risk Group 1 to the Exempt Risk Group until a distance of more than 8 m from the 
+source. However, the next hazard distance for the Exempt Risk Group is shorter due to the 
+increased FOV (see also Figure C.1). In order to check the implications of the GLS-
+requirement, the 500-lux distances of these sources can also be calculated. Limited to one 
+single source the general relationship between the illuminance E at a certain source distance 
+r and luminance L (of a circular source) is: 
+PD IEC/TR 62471-2:2009
+
+=== PAGE 40 ===
+ 
+– 38 – 
+62471-2/TR © IEC:2009(E) 
+E = π * L * D^2 / (4 * r^2 + D^2)
+ 
+where D is source dimension and r is distance between source of integral luminance L and 
+the plane of irradiance E.  
+After rearrangement, and for E equals to 500 lux, the corresponding 500 lux distances can be 
+calculated with the source size D and the luminance L, as shown in Figure C.2. 
+For a single source of size D, the distance of 500 lux solely depends on the luminance of the 
+source: 
+ 
+1 * 10^5 
+Source size   (mm) 
+500 lux distances 
+Distance of 500 lux   (mm) 
+1 * 10^4 
+1 * 10^3 
+     100 
+    0.1 
+1 
+10 
+100 
+D 
+1 * 10^5 cd/m^2 
+1 * 10^6 cd/m^2 
+1 * 10^7 cd/m^2 
+1 * 10^8 cd/m^2 
+IEC   1591/09  
+Figure C.2 – Relationships between illuminance of 500 lux and 
+source luminance [cd/m^2] (indicated) for several source sizes 
+and distances of some typical luminances 
+The above general relationships are independent of the source type. Also, the radiance limit 
+values in IEC 62471 are independent of the source type, but are provided in radiometric units. 
+If the radiance limits are applied to the calculation of the 500 lux distances, the source-
+specific radiometric/photometric conversion factors would have to be applied. The different 
+impact of the GLS criterion on several source types is mainly due to the different 
+radiometric/photometric conversion factors (in lm.W-1) and the spectral  effectiveness of the 
+B(λ)-weighting. 
+With 
+Figure 
+C.2 
+and 
+the 
+respective 
+formula, 
+and 
+by 
+using 
+an 
+appropriate 
+radiometric/photometric conversion factor for the white LED, the 500 lux distance can be 
+determined for the two sources under consideration: 
+– 
+2 mm-source: 
+0.42 m ; 
+– 
+50 mm-source: 10.05 m. 
+A comparison of both values for each source with the data in Table C.1 shows that the 
+500 lux distances in both cases are larger than the inverse square law distances and, more 
+importantly, the hazard distances for both lower risk groups. Therefore, the original risk group 
+allocation changes from Risk Group 1 to the Exempt Risk Group by the application of the GLS 
+requirement. 
+PD IEC/TR 62471-2:2009
+
+=== PAGE 41 ===
+62471-2/TR © IEC:2009(E) 
+– 39 – 
+ 
+Calculated 500 lux distances are valid if the irradiance solely originates from the single source 
+in each case; usually, irradiance also comprises contributions from other source elements or 
+sources, since for this measurement the FOV is not limited. These distances represent the 
+worst case of the closest 500 lux distances. Since, the larger these distances are, the more 
+favourable is the relationship between the measured spatially averaged and the “true” 
+radiance: see Figure C.1. 
+It should be noted that the above considerations are limited to the photochemical hazard, and 
+care should be taken in cases where also thermal retinal hazards need to be considered. 
+Especially for the Exempt Risk Group, the applicable acceptance angle for the measurement 
+of the spatially averaged radiance according to IEC 62471 is different from the angle which 
+should be applied for photochemical hazards.  
+It is possible that at the 500 lux distance the corresponding source radiance for thermal 
+hazards should be additionally measured, whereas in relation to the blue light hazard the 
+above (γ/α)2-relaxation applies. Additionally, although the measured radiance in relation to 
+retinal thermal hazards would be constant under these conditions, the applicable exposure 
+limit value in this case increases because it depends inversely on the angular subtense. This 
+may compensate for some of the disadvantage compared with the blue light criterion and may 
+lead to a crossover of the most restrictive hazards with the distance in the case of the 500 lux 
+criterion for GLS and for the determination of safe viewing distances. This issue is even more 
+complex if additionally exposure limit values in irradiance (as for UV-hazards) should be 
+considered. These issues were discussed in conjunction with general distance-depending 
+parameters in Annex B. Table C.2 repeats the results of the hazard distance calculations in 
+Annex B for an example halogen lamp of 7 mm source diameter and with a reasonable 
+measured luminance of 3 * 10^7 cd/m^2. 
+Table C.2 – Risk group-related hazard distances for halogen lamp of 7 mm source 
+diameter and with luminance of 3 * 10^7 cd/m^2 
+Dimensions in metres 
+ 
+Act. UV 
+UV eye 
+Blue light 
+Retinal 
+thermal 
+Retinal 
+thermal low 
+visual 
+Cornea 
+lens 
+Risk Group 
+2 
+0.69 
+0.27 
+0.20 
+0.20 
+0.20 
+0.20 
+Risk Group 
+1 
+2.2 
+0.47 
+0.78 
+0.20 
+0.20 
+0.20 
+Exempt 
+Risk Group 
+3.8 
+0.85 
+0.86 
+0.20 
+0.20 
+0.27 
+ 
+Due to the broad spectral distribution, more optical radiation hazards have to be considered 
+compared with the LED example (Table C.1). The classification for this halogen lamp results 
+in Risk Group 3 with the actinic UV as the most restrictive hazard. If the UV emission is 
+filtered out, the most limiting criterion is the blue light hazard. Based on the hazard distances 
+in Table C.2, the classification in this case will be Risk Group 2. However, this allocation is 
+based on the standard assessment distance of 200 mm. This source should be exclusively 
+used for GLS and the risk group assessment should be performed at the greater distance 
+where the illuminance equals 500 lux. 
+If this illuminance is achieved by this single source only, the corresponding closest 500 lux 
+distance for this halogen lamp in the worst case is 1.5 m (Figure C.2). For the actinic UV 
+hazards in Table C.2, this distance is shorter than the hazard distances for RG 1 and 0. Thus, 
+the risk grouping would change from RG 3 to RG 2. In this respect, there is little advantage of 
+the GLS assessment requirement. The situation improves for the remaining blue light hazard 
+if the UV emission is filtered out.  
+PD IEC/TR 62471-2:2009
+
+=== PAGE 42 ===
+ 
+– 40 – 
+62471-2/TR © IEC:2009(E) 
+The 500 lux distance is greater than all hazard distances which leads to allocation to the 
+Exempt Risk Group.  
+This is a calculation-based worst case analysis. In practice, the 500 lux measurement also 
+includes contributions from other source elements or from the environment and the 500 lux is 
+likely be measured at even greater distances.  
+To summarise, there are cases with radiance-based dominating hazards where the GLS-
+criterion may provide a strong relaxation but there are other cases where it does not. This 
+seems to depend on the source-specific radiometric/photometric conversion as well as on the 
+effectiveness of the B(λ)-weighting. The 500 lux criterion does not assure in any case Exempt 
+Risk Group conditions, as sometimes claimed. However, it should be noted that pc-white 
+LEDs for GLS consistently have to be considered as Exempt Risk Group products. 
+PD IEC/TR 62471-2:2009
+
+=== PAGE 43 ===
+62471-2/TR © IEC:2009(E) 
+– 41 – 
+ 
+Annex D  
+(informative) 
+ 
+Lamps and lamp systems with integrated, attached beam-shaping  
+or projection optics 
+D.1 
+Background  
+The default condition for the ICNIRP guideline for incoherent broadband sources1  and for the 
+derived lamp safety standard is the "bare lamp”. However, many lamps are employed in 
+projection systems, e.g. for audio-visual applications, in searchlights, surgical and theatre 
+lighting. The ultraviolet and infrared radiation may be typically filtered by the projection optics 
+(Figure D.1) for some applications but should be reassessed by the lamp system 
+manufacturer.  In addition, many LEDs have built-in projection (beam-shaping) optics that 
+increase the radiant or luminous intensity over that of a diffuse Lambertian surface-emitting 
+LED chip.  
+IEC   1592/09 
+ 
+The radiance is conserved but the retinal image size increased with most projection optics. 
+Figure D.1 – Ultraviolet and infrared filtering by projection optics  
+The common problem in these cases is that such optics may distort the size and position of 
+the source and form a virtual source image for a direct viewer. Size and location of this 
+apparent source should be assessed in terms of possible retinal hazards. At least in the case 
+of dominating thermal hazards, the angular subtense α of the apparent source itself should be 
+known for the determination of the applicable limits. And the applicable measurement 
+distance (200 mm or the 500 lux distance) in case of retinal hazards refers also to the position 
+of the apparent source. 
+NOTE This is not applicable for the assessment of hazards for the lens/cornea in the infrared. For the example of 
+a concave mirror, as in Figure D.2, the apparent source may be at a distance of 200 mm but the filament is in 
+direct contact with the cornea! 
+————————— 
+1)  Guidelines on Limits of Exposure to Broad-Band Incoherent Optical Radiation (0.38 to 3µm). Health Physics, 73 
+(3): 539-554; 1997. 
+PD IEC/TR 62471-2:2009
+
+=== PAGE 44 ===
+ 
+– 42 – 
+62471-2/TR © IEC:2009(E) 
+ 
+Image 
+of 
+filament 
+G
+H 
+g 
+h 
+  Lamp filament 
+eye 
+Concave mirror 
+IEC   1593/09 
+ 
+The radiance is conserved but the retinal image size is increased.  (Source: Sliney and Wolbarsht, 
+Safety with Lasers and Other Optical Sources, New York, Plenum, 1980). 
+Figure D.2 – Magnified apparent source size of the filament in an incandescent 
+projection lamp   
+Examples of projection optics are shown in Figure D.3. 
+Projection optics 
+  Convex lens 
+S 
+S 
+ Source 
+ Parabolic concave mirror 
+ Parabolic mirror 
+Secondary mirror 
+Spherical mirror and convex lens 
+S 
+IEC   1594/09  
+Different projection optics increase the apparent source size for the eye, but in each case, the radiance 
+is limited to the radiance of the lamp source emitting element. 
+Figure D.3 – Examples of projection optics 
+D.2 
+LEDs 
+A common example for a lamp with built-in projection optics is the plastic encapsulated LED. 
+For such LEDs, the virtual emitting area is determined not only by the chip size but also by 
+the housing due to built-in lenses, reflectors and scattering materials. Plastic encapsulated 
+LEDs form an apparent source which should be assessed in terms of possible retinal hazards. 
+The measurement or assessment distance as required by IEC 62471 is related to the 
+apparent source position, i.e. as well as the size d, also their relative location l, (see Figure 
+D.4) should be known. As the beam concentration of such an LED may be modified by the 
+PD IEC/TR 62471-2:2009
+
+=== PAGE 45 ===
+62471-2/TR © IEC:2009(E) 
+– 43 – 
+ 
+distance from the chip to the lens and the radius of the hemisphere, the size and location of 
+the apparent source is changing accordingly. With narrower beams the location of the 
+apparent source shifted to longer distances (Figure D.4). In some cases, of dominating 
+thermal retinal hazard, the angle α subtended by the apparent source has to be determined 
+based on the dimension d in Figure D.4 of the 50% emission points and the applicable 
+assessment distance. This commonly requires some kind of imaging and intensity profiling. 
+The relative location (l) should be determined in any case. An example measurement 
+arrangement is shown in the Figure D.5: 
+          
+ 
+Apparent 
+source 
+Chip 
+l 
+d 
+IEC   1595/09  
+Figure D.4 –  Formation of a virtual LED chip image by the integrated lens 
+ 
+Circular 
+field stop  
+Apparent 
+source 
+Circular 
+aperture stop 
+Image distance 
+Active area 
+of the detector  
+d 
+Angle of  
+acceptance  
+Angular subtense  
+of the apparent source 
+Measuring distance r 
+FOV  
+Lens 
+α 
+γ 
+IEC   1596/09  
+In this example, the applicable FOV (which depends on the risk group) for the measurement  
+of the spatially averaged radiance is under-filled. 
+Figure D.5 – Imaging of the apparent source and measurement condition for the 
+assessment of sources with built-in or attached projection optics 
+D.3 
+Consequences 
+D.3.1 
+Risk Group allocation 
+In most cases, the beam-shaping optics concentrates the Lambertian emission pattern of a 
+filament or LED-chip into a beam in order to produce more directional emission. The true 
+radiance is a property of the source and cannot be increased (made brighter) by the use of 
+optical elements. Besides a modified luminous or radiant intensity in a selected direction, 
+these optical systems also form a magnified projected source size in a viewer’s eye (Figure 
+D.4). Taking the LED in Figure D.4 as an example, it follows from the Law of the Conservation 
+Area of chip: AChip 
+Area of apparent source: ALED 
+PD IEC/TR 62471-2:2009
+
+=== PAGE 46 ===
+ 
+– 44 – 
+62471-2/TR © IEC:2009(E) 
+of the Radiance that the relationship between the real chip area AChip and the projected area 
+ALED source areas and the related luminous intensities of the original IChip and the modified 
+ILED, can be used as a first approximation for corrections or the determination of the apparent 
+source size, respectively: 
+A_Chip / A_LED = I_Chip / I_LED
+ 
+NOTE In many cases, the optics of the projection system limits part of the angular distribution of the source in an 
+imaging system, reducing the radiance by these losses. 
+More concentrated/collimated radiation means that the power density within the beam is 
+increased, and therefore increasing the corresponding resulting irradiance. Compared with 
+the characteristics of a bare source or lamp, this may have consequences for hazard 
+assessments of lamps and lamp systems with integrated, attached beam-shaping or 
+projecting optics according to IEC 62471:  
+In cases of dominating non-retinal hazards  (especially outside the wavelength range 380 nm  
+to 780 nm and for skin hazards in general) where the limits are provided in irradiances, these 
+limits should be compared with increased irradiances due to the additional optics. 
+Additionally, the apparent or projected source may be recessed (up to infinity) by the optics 
+and the measurement distance should be adapted accordingly, i.e. the measurement aperture 
+varies in most cases to a closer distance in relation to the “physical” source. It should be 
+recognised that it can go to zero-distance or even be negative.  
+Provided that the lamps are assessed using the guidance in this technical report 
+(determination of the source radiance rather than the spatially averaged one), in the case of 
+dominating blue light hazard, the hazard classification is, in first order, not affected by 
+additional optics because the source radiance remains unchanged. The risk group remains 
+the same, or may be reduced by filtering, etc. 
+In the case of dominating retinal thermal hazard, the limits are expressed in radiance. In this 
+case they depend on the angular subtense of the source, i.e. they decrease with increasing 
+source size due to the magnification, whereas the source radiance remains unchanged. In this 
+case the classification might be affected by additional optics. 
+Additional optics may modify the irradiance of a source and have a significant impact where 
+the classification is based on irradiance or radiant exposure-criteria, whereas, the radiance is 
+unchanged and has less impact where the classification is based on radiance-criteria. 
+However, in the latter case it should be verified if the most restrictive classification criterion 
+for the lamp system has not been changed (from radiance to irradiance criterion) due to the 
+increased irradiance. 
+D.3.2 
+Determination of hazard distances 
+The above is valid if the risk group classification of sources before and after attachment of 
+additional optics is considered, that is, the transferability of the data for the bare lamp to the 
+lamp system. In most practical cases, the next step would be the determination of the hazard 
+distances. The principal impact of beam-shaping optics on the radiance-related hazard 
+distances is shown in Figure C.1. Two example LED sources of equal radiance could be 
+considered as the original (2 mm diameter) and the magnified one (50 mm diameter). Due to 
+the modified relationship between the angular subtense and the acceptance angle in the case 
+of source magnification, the hazard distance shifts to much longer distances.  
+Similarly, in the case of dominating irradiance limits, due to the increased power density, the 
+hazard distance shifts to longer distances. Before using an inverse square relationship for HD 
+determination, a possible “flash distance” should be considered (see Annex B, Clause B.1.2). 
+PD IEC/TR 62471-2:2009
+
+=== PAGE 47 ===
+62471-2/TR © IEC:2009(E) 
+– 45 – 
+ 
+Bibliography 
+IEC 60432-1, Incandescent lamps – Safety specifications – Part 1: Tungsten filament lamps 
+for domestic and similar general lighting purposes 
+IEC 60432-2, Incandescent lamps – Safety specifications – Part 2: Tungsten-halogen lamps 
+for domestic and similar general lighting purposes 
+IEC 60432-3, Incandescent lamps – Safety specifications – Part 3: Tungsten-halogen lamps 
+(non-vehicle) 
+IEC 61199, Single-capped fluorescent lamps – Safety specifications 
+IEC 61195, Double-capped fluorescent lamps – Safety specifications 
+IEC 62031:2008, LED modules for general lighting – Safety specifications 
+IEC 62035:1999, Discharge lamps (excluding fluorescent lamps) – Safety specifications 
+Amendment 1 (2003)2 
+ISO 15004-2:2007, Ophthalmic instruments – Fundamental requirements and test methods –
+Part 2:  Light hazard protection 
+ANSI/IESNA RP-27.1-05, Photobiological Safety for Lamps and Lamp Systems-General 
+Requirements 
+ANSI/IESNA RP-27.2-00, Photobiological Safety for Lamps and Lamp Systems – 
+Measurement Systems 
+ANSI/IESNA RP-27.3-07, Recommended Practice for Photobiological Safety for Lamps – Risk 
+Group Classification and Labeling 
+ICNIRP, Guidelines on Limits of Exposure to Ultraviolet Radiation of Wavelengths Between 
+180 nm and 400 nm (Incoherent Optical Radiation). Health Physics, 87 (2): 171-186; 2004. 
+ICNIRP, Guidelines on Limits of Exposure to Broad-Band Incoherent Optical Radiation (0.38 
+to 3 µm). Health Physics, 73 (3): 539-554; 1997. 
+ 
+____________ 
+ 
+ 
+————————— 
+2) A consolidated edition 2.1 (2003) exists, including IEC 62035:1999 and its Amendment 1. 
+PD IEC/TR 62471-2:2009
+
+=== PAGE 48 ===
+This page deliberately left blank
+
+=== PAGE 49 ===
+This page deliberately left blank
+
+=== PAGE 50 ===
+BSI is the national body responsible for preparing British Standards and other 
+standards-related publications, information and services.
+BSI is incorporated by Royal Charter. British Standards and other standardization 
+products are published by BSI Standards Limited.
+British Standards Institution (BSI)
+About us
+We bring together business, industry, government, consumers, innovators 
+and others to shape their combined experience and expertise into standards 
+-based solutions.
+The knowledge embodied in our standards has been carefully assembled in 
+a dependable format and refined through our open consultation process. 
+Organizations of all sizes and across all sectors choose standards to help 
+them achieve their goals.
+Information on standards
+We can provide you with the knowledge that your organization needs 
+to succeed. Find out more about British Standards by visiting our website at 
+bsigroup.com/standards or contacting our Customer Services team or 
+Knowledge Centre.
+Buying standards
+You can buy and download PDF versions of BSI publications, including British 
+and adopted European and international standards, through our website at 
+bsigroup.com/shop, where hard copies can also be purchased. 
+If you need international and foreign standards from other Standards Development 
+Organizations, hard copies can be ordered from our Customer Services team.
+Copyright in BSI publications
+All the content in BSI publications, including British Standards, is the property 
+of and copyrighted by BSI or some person or entity that owns copyright in the 
+information used (such as the international standardization bodies) and has 
+formally licensed such information to BSI for commercial publication and use.
+Save for the provisions below, you may not transfer, share or disseminate any 
+portion of the standard to any other person. You may not adapt, distribute, 
+commercially exploit, or publicly display the standard or any portion thereof in any 
+manner whatsoever without BSI’s prior written consent.
+Storing and using standards
+Standards purchased in soft copy format:
+•  A British Standard purchased in soft copy format is licensed to a sole named 
+user for personal or internal company use only.
+•  The standard may be stored on more than 1 device provided that it is accessible 
+by the sole named user only and that only 1 copy is accessed at any one time.
+•  A single paper copy may be printed for personal or internal company use only.
+Standards purchased in hard copy format:
+•  A British Standard purchased in hard copy format is for personal or internal 
+company use only.
+•  It may not be further reproduced – in any format – to create an additional copy. 
+This includes scanning of the document.
+If you need more than 1 copy of the document, or if you wish to share the 
+document on an internal network, you can save money by choosing a subscription 
+product (see ‘Subscriptions’).
+Reproducing extracts
+For permission to reproduce content from BSI publications contact the BSI 
+Copyright & Licensing team.
+Subscriptions
+Our range of subscription services are designed to make using standards 
+easier for you. For further information on our subscription products go to 
+bsigroup.com/subscriptions.
+With British Standards Online (BSOL) you’ll have instant access to over 55.000 
+British and adopted European and international standards from your desktop. 
+It’s available 24/7 and is refreshed daily so you’ll always be up to date. 
+You can keep in touch with standards developments and receive substantial 
+discounts on the purchase price of standards, both in single copy and subscription 
+format, by becoming a BSI Subscribing Member. 
+PLUS is an updating service exclusive to BSI Subscribing Members. You will 
+automatically receive the latest hard copy of your standards when they’re 
+revised or replaced. 
+To find out more about becoming a BSI Subscribing Member and the benefits 
+of membership, please visit bsigroup.com/shop.
+With a Multi-User Network Licence (MUNL) you are able to host standards 
+publications on your intranet. Licences can cover as few or as many users as you 
+wish. With updates supplied as soon as they’re available, you can be sure your 
+documentation is current. For further information, email subscriptions@bsigroup.com.
+Revisions
+Our British Standards and other publications are updated by amendment or revision. 
+We continually improve the quality of our products and services to benefit your 
+business. If you find an inaccuracy or ambiguity within a British Standard or other 
+BSI publication please inform the Knowledge Centre.
+Useful Contacts
+Customer Services
+Tel: +44 345 086 9001
+Email (orders): orders@bsigroup.com
+Email (enquiries): cservices@bsigroup.com
+Subscriptions
+Tel: +44 345 086 9001
+Email: subscriptions@bsigroup.com
+Knowledge Centre
+Tel: +44 20 8996 7004
+Email: knowledgecentre@bsigroup.com
+Copyright & Licensing
+Tel: +44 20 8996 7070
+Email: copyright@bsigroup.com
+NO COPYING WITHOUT BSI PERMISSION EXCEPT AS PERMITTED BY COPYRIGHT LAW
+BSI Group Headquarters
+389 Chiswick High Road London W4 4AL UK

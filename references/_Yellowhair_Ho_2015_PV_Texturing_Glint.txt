@@ -1,0 +1,864 @@
+ 
+1 
+Copyright © 2014 by ASME 
+Proceedings of the ASME 2015 Power and Energy Conversion Conference 
+PowerEnergy2015 
+June 28-July 2, 2015, San Diego, California 
+PowerEnergy2015-49481 
+ASSESSMENT OF PHOTOVOLTAIC SURFACE TEXTURING ON  
+TRANSMITTANCE EFFECTS AND GLINT/GLARE IMPACTS 
+ 
+ 
+Julius Yellowhair and Clifford K. Ho  
+ 
+Sandia National Laboratories, Albuquerque, New Mexico, 87185-1127, USA, (505) 844-2384, jeyello@sandia.gov  
+ 
+ 
+ 
+ 
+ABSTRACT 
+Standard glass and polymer covers on photovoltaic modules 
+can partially reflect the sunlight causing glint and glare. Glint 
+and glare from large photovoltaic installations can be 
+significant and have the potential to create hazards for 
+motorists, air-traffic controllers and pilots flying near 
+installations. In this work, the reflectance, surface roughness 
+and reflected solar beam spread were measured from various 
+photovoltaic 
+modules 
+acquired 
+from 
+seven 
+different 
+manufacturers. The surface texturing of the PV modules varied 
+from smooth to roughly textured. Correlations between the 
+measured surface texturing (roughness parameters) and beam 
+spread (subtended angle) were determined. These correlations 
+were then used to assess surface texturing effects on 
+transmittance and ocular impacts of glare from photovoltaic 
+module covers. The results can be used to drive the designs for 
+photovoltaic surface texturing to improve transmittance and 
+minimize glint/glare. 
+NOMENCLATURE 
+E – Irradiance (W/m2) 
+DNI – Direct normal irradiance (1,000 W/m2 is typical) 
+i – Source angle of incidence (e.g. from the sun) (deg) 
+ – Reflectance of the PV module 
+Sa – 2D average surface roughness (m) 
+Sq – 2D RMS surface roughness (m RMS) 
+Sz – 2D surface roughness peak-to-valley surface height (m) 
+ – Surface spatial period (mm) 
+,  – Reflected beam spread or source subtended angle (mrad) 
+dp – Eye pupil diameter (~0.2 cm) 
+ – Eye transmittance (~0.5) 
+f – Eye focal length (~1.7 cm) 
+1. 
+INTRODUCTION 
+As the cost of photovoltaic (PV) modules continues to 
+drop, large-scale deployments of PV are on the rise [1]. A 
+typical construction of a PV module includes a robust panel 
+structure enclosing the solar cells and wiring, and a transparent 
+front cover, typically glass or polymer, which protects and 
+transmits sunlight to the solar cells. The nature of the 
+glass/polymer cover exposed to air will partially reflect some of 
+the incident sunlight, by Fresnel reflections, creating glint and 
+glare. PV modules on fixed tilt racks will produce glint/glare in 
+certain regions around the PV field depending on the sun 
+position and tilt angles of the PV modules. The magnitude of 
+the reflectance from the glass/polymer cover depends on the 
+reflectance () as a function of incidence angle (i), the 
+smoothness (or roughness) of the surface, and the sun 
+irradiance and position. These parameters will dictate the 
+glint/glare intensity. Recently, there have been reports on 
+glint/glare hazards near PV fields [2]-[4]. Depending on the 
+glare intensity, a momentary glare exposure can cause 
+temporary after-image or disability glare, which can be a hazard 
+for pilots and drivers. 
+Smooth, bare glass (e.g., car windshield) is known to 
+reflect sunlight specularly. Bare glass reflects about 4% of the 
+incident light at normal incidence angle. However, the 
+reflectance increases rapidly at higher incidence angles [5]. In 
+addition to the magnitude of the reflectance from the surface of 
+PV glass modules, the amount of glare from the glass surfaces 
+can be affected by the surface texturing. Surface texturing, in 
+general, causes the reflected beam to spread out due to 
+additional scattering from diffuse reflections [6]. A more 
+diffuse reflection can reduce the glare intensity for a constant 
+source irradiance. In this study, the surface roughness of the PV 
+glass covers was measured and a correlation between surface 
+texturing (quantified as the surface roughness and the 
+
+ 
+2 
+Copyright © 2014 by ASME 
+periodicity of the texture) and glare (angular spread of the 
+reflected beam) was determined. 
+The first section of this paper describes methods for 
+measuring parameters (e.g., surface roughness and solar 
+reflected beam spread) and discusses ocular hazards from 
+glint/glare. The results are provided in the next section. 
+Discussion of the approach and results is then provided. Finally, 
+concluding comments and future work plans are provided. 
+Some representative measured surface data are provided in the 
+Appendix. 
+2. 
+APPROACH 
+2.1. 
+Surface Roughness Measurements 
+The surface roughness of the PV module samples were 
+measured with a Taylor-Hobson Talysurf optical profilometer. A 
+total of 26 PV module samples, from seven different 
+companies, with varying surface types were measured. The PV 
+modules were too large to fit under the optical profilometer. 
+Therefore, small areas (~40-50 mm diameter) of the PV module 
+surfaces were replicated, and then the surface replicas were 
+measured with the optical profilometer.  
+A two-part rubber, putty compound (Flexbar ReproRubber) 
+was used to replicate the PV module surfaces. The PV modules 
+were cleaned using water, mild soap, and lint-free cloth. Equal 
+parts of the base and catalyst putty were mixed by kneading. 
+The mixture was spread over the surface to be replicated and 
+light pressure was applied. The rubber compound hardened 
+after about five minutes, after which it was carefully removed 
+from the surface. 
+The replicated samples (replicas) were measured with the 
+optical profilometer for surface roughness. Data was collected 
+using the native Talysurf software. The replicas had low 
+reflectance in addition to the relatively rough surfaces. 
+Therefore, the “peak intensity correlation” option was used to 
+measure surface heights over 1.7 mm  1.7 mm areas, instead 
+of the standard “phase shifting” approach, which requires 
+smooth surfaces and reflectivities of >40%. To increase the 
+measurement area, four measurements (2  2 array) were 
+acquired with some overlap of the measurements. The data 
+stitching algorithm in Talysurf was then used to combine the 
+four measurements to synthesize a larger measurement area 
+(about 3 mm  3 mm). Further data analysis was performed 
+using Mountain Digital Surf and Matlab® software packages. 
+The Digital Surf software was used to remove tilt and low-
+order form errors from the data and then calculate the two-
+dimensional (2D) surface roughness parameters (Sa, Sq, Sz) [7]. 
+Matlab was used to remove higher order form errors and 
+perform a Fourier analysis to determine surface spatial period 
+variations on the samples; the spatial period (mm) is the inverse 
+of the spatial frequency (1/mm). Figure 1 shows a flow diagram 
+of the overall measurement process starting with the PV 
+preparation for the surface replications. 
+ 
+ 
+Figure 1. Flow diagram for quantifying the PV modules 
+surface texturing. 1) PV module surfaces were cleaned and 
+replicated, 2) replicas were measured with an optical 
+profilometer, and 3) the surface data were analyzed. 
+One of the developmental PV samples, which was a single-
+cell module, was small enough to fit on the optical profilometer 
+sample holder. This sample was used to verify the accuracy of 
+our surface replication process; the actual PV module surface 
+was measured directly and compared to the measurements on 
+the replica to get an indication of the replication accuracy. The 
+RMS surface roughness agreed to within 7% between the 
+replica and the actual surface (after two measurements on 
+both). The replicas generally had higher RMS surface 
+roughness values. This could be due to form errors that 
+remained in the surface measurements. Although the rubber-
+like replicas were thick (3-4 mm), they could bend and flex 
+slightly. In addition, the replicas surface data were more 
+“grainy” as seen in Figure 8 in the Appendix. 
+2.2. 
+Solar Reflected Beam Spread Measurements 
+The beam spread (glare) from the PV modules was 
+measured outdoors by observing the sun (during clear sky days) 
+in reflection through the PV modules. Figure 2 shows examples 
+of the reflected sun image on different PV module samples. 
+Twenty-one of the 26 PV modules were measured for glare. 
+Using a digital camera (Nikon D90), raw (or unscaled) photos 
+of the reflected sunlight were collected. By knowing the 
+distance between the camera and PV module, the angular beam 
+spread after reflection (i.e., angle subtended by the visible glare 
+spot due to specular reflection) was calculated through image 
+processing of the photos in Matlab. 
+ 
+
+ 
+3 
+Copyright © 2014 by ASME 
+ 
+Figure 2. Examples of solar glare and beam spread 
+resulting from different PV glass samples, with varying 
+surface texture, captured with a digital camera (Permission 
+from [3]). Left: smooth glass. Middle: Lightly textured glass 
+with anti-reflective coating. Right: Deeply textured glass. 
+Samples courtesy of Canadian Solar, Inc. 
+2.3. 
+Ocular Hazards Chart 
+Impacts of glint and glare on eyesight can include 
+discomfort, disability, veiling effects, after-image and retinal 
+burn [2]. Prolonged exposure to “discomfort glare” may lead to 
+headaches and other physiological impacts, whereas “disability 
+glare” immediately reduces visual performance. Disability glare 
+can include after-image effects, flash blindness and veiling, 
+such as that caused by solar glare on a windshield that might 
+mask pedestrians, vehicles, or aircraft. Retinal burn can occur 
+with exposure to lasers or concentrated sunlight. 
+Ho, et al. [4] developed irradiance models and summarized 
+the potential impacts to eyesight as a function of retinal 
+irradiance (the solar flux entering the eye and reaching the 
+retina) and subtended source angle (size of glare source divided 
+by distance). Figure 3 shows the resulting “Ocular Hazard Plot” 
+with three regions: (1) potential for permanent eye damage 
+(retinal burn), (2) potential for temporary after-image, and (3) 
+low potential for temporary after-image. If the retinal irradiance 
+or subtended angle is sufficiently large, permanent eye damage 
+from retinal burn may occur (e.g., from concentrating mirrors). 
+Below the retinal burn threshold, a region exists where a 
+sufficiently high retinal irradiance may cause a temporary after-
+image, which is caused by bleaching (over-saturation) of the 
+retinal visual pigments. The size and impact of the after-image 
+in the field of view depends on the size of the subtended source 
+angle. For a given retinal irradiance, smaller source angles yield 
+smaller after-images, and the potential impact is less. 
+Sufficiently low retinal irradiances and/or subtended angles of 
+the glare source have a low potential for after-image and ocular 
+impacts. 
+A number of factors can affect both intensity and perceived 
+impact of glare: direct normal irradiance (DNI), reflectance, 
+distance, size of the reflecting surfaces, and human factors. 
+DNI is the amount of solar irradiance striking a surface 
+perpendicular to the sun’s rays. A typical clear sunny day may 
+yield a DNI of ~1,000 watts per square meter at solar noon, 
+with lower values in the mornings and evenings. DNI provides 
+the starting “strength” of the solar glare source, which can then 
+be reduced by the reflectance of the mirror or receiver. The 
+reflected light can be characterized as a combination of 
+specular (mirror-like) and diffuse (scattered) reflections. 
+Smooth surfaces such as mirrors and smooth glass produce 
+more specular reflections with greater intensity and tighter 
+beams, while rough surfaces produce more diffuse reflections 
+with lower solar intensities but greater subtended angles. In 
+general, specular reflections pose a greater risk for ocular 
+hazards. 
+The distance between the observer and the glare source can 
+impact both the retinal irradiance and subtended source angle. 
+Atmospheric attenuation caused by particulates or humidity in 
+the air will reduce the retinal irradiance with increasing 
+distance. In addition, for a fixed size of the glare source, larger 
+distances will typically yield smaller subtended angles of the 
+glare source. 
+Finally, human factors such as ocular properties (pupil size, 
+eye focal length, ocular transmittance) and light sensitivity will 
+affect retinal irradiance, subtended angle and perceived impact 
+of glare. Typical ocular properties for daylight adjusted eyes are 
+provided in Ho, et al. [4] and are repeated in the Nomenclature 
+section. 
+Without atmospheric attenuation, the retinal irradiance 
+[W/m2] is independent of distance since the power entering the 
+eye (numerator in Eqn. 1) and exposed retinal area 
+(denominator in Eqn. 1) decrease at the same rate with 
+increasing distance. For reflections off a target surface and a 
+given source strength (e.g., sun), the retinal irradiance is given 
+by  
+ 
+𝐸𝑟= (
+𝜌𝐸𝐷𝑁𝐼
+𝛽2 ) (
+𝑑𝑝2𝜏
+𝑓2 ) ,  
+ 
+ 
+(1) 
+ 
+where the first group of parameters depends on the source (i.e. 
+target reflectance, source irradiance and source subtended 
+angle), and the second group are the ocular parameters (i.e. 
+pupil diameter, ocular transmittance and focal length). For the 
+analyses provided in this paper, the ocular parameters and DNI 
+are kept constant; values are provided in the Nomenclature. 
+From Ho, et. al., the maximum retinal irradiance that yields an 
+after-image is given by 
+ 
+𝐸𝑟,𝑓𝑙𝑎𝑠ℎ=
+3.59×10−5
+𝜔1.77
+,  
+ 
+ 
+(2) 
+ 
+which is shown by the green linear curve in Figure 3. The area 
+below this curve (indicated by the light green color) is the 
+preferred zone if in the presence of glare. If the reflections (i.e. 
+glare) from PV modules can be driven below this curve, glare 
+hazards can be minimized. 
+ 
+
+ 
+4 
+Copyright © 2014 by ASME 
+ 
+Figure 3. Potential ocular impacts of retinal irradiance as a 
+function of subtended source angle (permission from [[3]]). 
+Note that 1 Watt yields approximately 100 lumens of visible 
+light in the solar spectrum [2]. 
+2.4. 
+Ocular Impacts of PV Surface Texturing 
+Using Eqns. 1 and 2, a safe retinal irradiance can be 
+determined. That is, for a particular source subtended angle, a 
+retinal irradiance value can be determined that will yield a low 
+potential for an after-image. From Eqns. 1 and 2 a safe retinal 
+irradiance can be satisfied by  
+ 
+𝐸𝑟< 𝐸𝑟,𝑓𝑙𝑎𝑠ℎ . 
+ 
+ 
+ 
+(3) 
+ 
+Inserting all the parameters and solving for the beam spread, , 
+yields 
+ 
+𝛽> (
+𝜌𝐸𝐷𝑁𝐼𝑑𝑝2𝜏
+𝑓2∙3.59×10−5)
+1
+0.23 , 
+ 
+ 
+(4) 
+ 
+which is a function of the reflected source strength (reflectance, 
+, and EDNI). This function is plotted against the surface 
+reflectance as a blue curve in Figure 5, which divides regions of 
+“low-potential” and “potential” for an after-image from glare. A 
+source irradiance of 1,000 W/m2 is assumed. 
+3. 
+RESULTS 
+3.1. 
+Surface Roughness & Reflected Beam Spread 
+Table 1 provides the measured surface statistics and 
+reflected beam spread from a representative selection of PV 
+module samples. The panels were categorized by surface 
+texturing using the measured RMS surface roughness values: 
+smooth (<1.5 m RMS), lightly textured (1.5-4 m RMS), 
+moderately textured (4-10 m RMS), and deeply textured (>10 
+m RMS). The limits of the RMS surface roughness for the 
+categorization were established somewhat arbitrarily; currently 
+there is no known standard for this categorization. 
+Most of the PV modules exhibited random surface 
+texturing (see contour plots in Figure 7 in the Appendix). That 
+is, the texturing did not show repeating patterns. When 
+performing the Fourier analysis on the surface data, multiple 
+frequency peaks emerged. The first 2-3 peaks typically showed 
+relatively high strengths compared to the subsequent frequency 
+peaks. Therefore, for each PV module the surface spatial period 
+() was averaged by weighting the first 2-3 period peaks on 
+their relative strength. The deeply textured sample (contour plot 
+shown in Figure 6a in the Appendix) showed periodic surface 
+structure. In this case, a single frequency showed high strength; 
+a weighted-average was not performed in this case. 
+Table 1. Measured parameters of several representative PV 
+modules (min and max of the Sq values of the PV modules 
+that were measured for the surface texturing categories 
+specified). 
+Panel Type 
+Sq (m RMS) 
+ (mm) 
+ (mrad) 
+Smooth Surface 1 
+(float glass) 
+0.10 
+1.28 
+20 
+Smooth surface 2 
+1.49 
+1.02 
+137 
+Lightly textured 1 
+1.51 
+0.97 
+92 
+Lightly textured 2 
+2.74 
+1.09 
+173 
+Moderately textured 1 
+3.80 
+1.08 
+175 
+Moderately textured 2 
+3.99 
+1.07 
+184 
+Deeply Textured 
+20.03 
+0.77 
+~1,000* 
+* Roughly estimated since it was not measurable with our instruments 
+(see Figure 2, right image). 
+3.2. 
+Beam Spread & Surface Roughness Correlation 
+In Figure 4 a graph of the measured reflected beam spread 
+against the RMS surface roughness scaled by the surface period 
+variations (Sq/) is provided. A power law function of the form 
+y = Axm is fitted to the data. Of the PV module samples that we 
+acquired, most of them had light surface texturing. To balance 
+the distribution of the different surface textured samples, more 
+weight was given to samples that were not lightly textured 
+during the data fitting calculation. Otherwise, the fit would be 
+skewed by the lightly textured samples. Due to the increased 
+weighting of some of the data points, the correlation 
+coefficient, R2, increased. 
+The data shows a general trend of increasing reflected 
+beam spread (scattering of the reflected glare) with increasing 
+surface roughness-period ratio (Sq/). 
+ 
+ 
+
+ 
+5 
+Copyright © 2014 by ASME 
+ 
+Figure 4. Correlation between the measured solar reflected 
+beam spread and the measured surface roughness. The 
+curve fit follows the power law. 
+3.3. 
+PV modules with Low Glare Hazard Potential 
+Figure 5 shows a plot of the reflected beam spread (i.e. 
+subtended source angle) versus PV module reflectance. Eqn. 4, 
+plotted as blue curve, provides a boundary for glare after-image 
+from “low potential” to “strong potential”, assuming a sun 
+irradiance of 1,000 W/m2 and using typical values for the 
+ocular parameters. The left side of the curve provides a low 
+potential for glare after-image. The plot shows that as the 
+reflected beam spread (scattering) increases, the reflectance 
+threshold value that yields an after-image increases as well. 
+Therefore, low-reflectance surfaces that yield large scattering 
+are best for reducing the impacts of glare. 
+Also plotted in Figure 5 are the measured reflected beam 
+spreads versus the measured reflectances (minimum to 
+maximum values over incidence angles they are measured) for 
+representative PV modules. The reflectances were measured 
+over 20-80° angles of incidence in increments of 20° [8]. The  
+vs.  plot for float glass extends over the blue boundary curve 
+suggesting at near normal incidence viewing ( ~ 4%) glare 
+impacts are minimal. However, at higher incidence angles, the 
+glare impact potential increases because the reflectance 
+increases with increasing incidence angles. 
+The data for the lightly textured glass shows mostly low 
+potential for glare impacts until it crosses the boundary for 
+reflectances at high incidence angles, for example when the sun 
+is near the horizon. Similarly, the plots for the moderately 
+textured samples cross the boundary at high solar incidence 
+angles. 
+The beam spread from the deeply textured samples was 
+roughly estimated since the reflected beam image did not 
+exhibit a clear reflected beam pattern (see PV module sample in 
+Figure 2). The data for the deeply textured sample shows it has 
+very low potential for glare impacts over all incident angles. 
+ 
+ 
+Figure 5. Reflected beam spread versus reflectance to 
+determine 
+potentials 
+for 
+retinal 
+after-image 
+for 
+a 
+representative PV module samples. 
+4. 
+DISCUSSION 
+Minimizing glare impacts with smooth float glass at all 
+incidence angles would be difficult. Therefore, the surface 
+should be textured to simultaneously increase diffuse 
+reflections (thus the beam spread) and reduce the reflectance 
+magnitude (see Figure 5) over all solar incidence angles. A 
+deeply textured surface immediately addresses both aspects. A 
+low reflectance at all incidence angles also suggests higher 
+transmittance of the sunlight to the solar cells, assuming no or 
+minimal absorptance by the protective cover material. By 
+conservation of energy, minimizing the reflectance can 
+maximize the transmittance for increased energy production 
+from the solar cells. However, an important aspect of the PV 
+performance is the cleanliness of the PV module surfaces. 
+Soiling of the panels can reduce the performance rapidly. It is 
+not known if deeply textured surfaces would be susceptible to 
+higher soiling rates. This can be addressed in future studies. 
+Of the PV samples studied, only a few were labeled to 
+have anti-reflection (AR) coatings. These samples exhibited 
+low reflectances at near normal incidence angles, but the 
+coatings did not seem to reduce the reflectance at higher 
+incidence angles – in some cases they showed similar 
+reflectances as the modules without the coatings [8]. 
+4.1. 
+PV surface texturing design considerations 
+Using a combination of Figures 4 and 5, a design on the 
+surface texturing that minimizes glare impacts may be 
+determined. An upper bound of the module reflectance 
+(corresponding to a large incidence angle) can be first 
+identified, and from Figure 5, the minimum reflected beam 
+spread can be determined that will provide a low potential for 
+after-image for the specified reflectance. For example, a 
+maximum module reflectance of 0.15 would require that the 
+minimum reflected beam spread be greater than ~150 mrad 
+(from Figure 5). The beam spread value can then be used in 
+
+ 
+6 
+Copyright © 2014 by ASME 
+Figure 4 to find the necessary surface texturing ratio (Sq/) to 
+achieve the minimum reflected beam spread. In this example, a 
+minimum surface texturing ratio (Sq/) of 2.8 would be 
+required to yield a beam spread of >150 mrad.  Although there 
+is a general trend observed in Figure 4, there is variability in the 
+data. Therefore, there is no deterministic beam spread to 
+surface roughness relation. In addition, once a surface texturing 
+ratio is determined, many possible combinations of Sq and  
+exists to achieve the same ratio value. Starting with reasonable 
+values (i.e. values close to those measured in this study) is 
+suggested. A desired surface texturing would be one that results 
+in reflected beam spread and reflectance values to the left of the 
+blue curve in Figure 5. 
+5. 
+CONCLUSIONS & FUTURE WORK 
+Twenty-six PV module samples were evaluated for 
+reflectance at various incidence angles, surface roughness, and 
+beam spread upon reflection of the sun (i.e. glare). The results 
+of the reflectance measurements were reported in Yellowhair, et 
+al. [8]; parts of the data were used in this paper. In this study, 
+finding correlations between the measured glare from the PV 
+modules and the measured surface roughness ratio (Sq/) were 
+attempted. A plot of the data followed a power law distribution. 
+From previous studies on solar glare impacts, the retinal 
+irradiance required for low potential for a glare after-image 
+were determined. By re-arranging the parameters, we 
+determined a relation between the beam spread and the PV 
+module reflectance that defines the boundary for glare after-
+image potential. The measured data were plotted on the same 
+chart (Figure 5) and showed that at high reflectance values 
+(e.g., high incidence angles), there is risk for glare after-image 
+for most of the PV samples tested. However, the deeply 
+textured sample had low reflectance values at all incidence 
+angles and produced a significant amount of scattering and 
+beam spread; therefore, the potential for after-image from this 
+PV module sample was low.  The low reflectance of the deeply 
+textured glass also suggests that it yields a high transmittance at 
+all incidence angles, thus allowing more energy production 
+from the solar cells. Its susceptibility to soiling, however, is not 
+known. 
+For future work, absorptance measurements of PV covers 
+can be performed to get a better assessment of the transmittance 
+magnitude. In addition, soiling studies of glass/polymer 
+samples with different surface roughness will enable a better 
+assessment of surface textures that both mitigate glare while 
+maximizing transmittance to the solar cells. 
+ 
+ 
+ACKNOWLEDGEMENTS 
+The authors thank Evan Bush, a former student intern from 
+the University of Louisville, for assisting in the collection and 
+analysis of the PV glare data. Sandia National Laboratories is a 
+multi-program laboratory managed and operated by Sandia 
+Corporation, a wholly owned subsidiary of Lockheed Martin 
+Corporation, for the U.S. Department of Energy’s National 
+Nuclear Security Administration under contract DE-AC04-
+94AL85000.  The United States Government retains and the 
+publisher, 
+by 
+accepting 
+the 
+article 
+for 
+publication, 
+acknowledges that the United States Government retains a non-
+exclusive, paid-up, irrevocable, world-wide license to publish 
+or reproduce the published form of this manuscript, or allow 
+others to do so, for United States Government purposes. 
+REFERENCES 
+[1] Feldman, D., et al., 2012, “PV Pricing Trends: Historical, 
+Recent, 
+and 
+Near-Term 
+Projections,” 
+NREL/LBNL 
+Technical Report DOE/GO-102012-3839. 
+[2] Jakubiec, J.A. and Reinhart, C.F., 2014, “Assessing 
+Disability Glare Potential Due to Reflections from new 
+Constructions: A Case Study Analysis and Recommenda-
+tions for the Future,” in 2014 Transportation Research 
+Board 93rd Annual Meeting, Washington, D.C., January 
+12-16, 2014. 
+[3] Ho, C.K., “Relieving a Glaring Problem,” in Solar Today 
+2013, American Solar Energy Society: Boulder, CO. pp. 
+28-31. 
+[4] Ho, C. K., Ghanbari, C.M., and Diver, R. B., 2011, 
+“Methodology to Assess Potential Glint and Glare Hazards 
+from Concentrating Solar Power Plants: Analytical Models 
+and Experimental Validation,” J. Sol. Engr., 133(3), pp. 1-
+8. 
+[5] Fowles, G. R., 1975, Introduction to Modern Optics, 2nd 
+Ed., Dover Publications, Inc., New York, Chap. 2. 
+[6] Bennett, H. E., and Porteus, J. O., 1961, “Relation between 
+Surface Roughness and Specular Reflectance at Normal 
+Incidence,” J. Opt. Soc. Am., 51(2), pp. 123-129. 
+[7] Vorburger, T. V., and Raja, J., 1990, “Surface Finish 
+Metrology Tutorial,” US Dept. Commerce, National 
+Institute of Standards and Technology Report No. NISTIR 
+89-4088. 
+[8] Yellowhair, J., and Ho, C. K., 2014, “Reflectance 
+Measurements of Different Glass Surfaces for Photovoltaic 
+Modules,” to be submitted for publication. 
+ 
+
+ 
+7 
+Copyright © 2014 by ASME 
+APPENDIX
+6. 
+COMPARISON OF PV MODULE SURFACES 
+In this section, a few measured PV module surfaces with 
+the optical profilometer are provided for comparison. The 
+measurement area for each sample is about 3 mm  3 mm.  
+6.1. 
+Smooth vs. roughly textured surface 
+Figure 6 shows contour plots of float glass, which has a 
+smooth surface, and the deeply textured surface. The deeply 
+textured surface was deliberately designed by the manufacturer 
+to have a periodic structure in this case. Float glass, as 
+manufactured, typically has a smooth surface finish. Note that 
+the colorbar scale for Figure 6a is one order of magnitude less 
+than 6b since float glass is much smoother than the deeply 
+textured surface. 
+The float glass is fairly flat and smooth. The reported 
+surface period () variation of 1.26 mm is mostly noise since 
+the Fourier analysis showed a low signal strength for the period 
+peak. 
+  
+Float Glass (Smooth) 
+ 
+Sa = 0.06 m,  Sq = 0.10 m 
+Sz = 2.71 m,   = 1.26 mm,   
+(a) 
+Deeply Textured Surface 
+ 
+Sa = 16.61 m,  Sq = 20.03 m 
+Sz = 95.56 m,   = 0.77 mm 
+(b) 
+Figure 6. Contour plots of (a) float glass (smooth surface) 
+and (b) a deeply textured surface. The colorbar scale is in 
+microns. Red indicates the highs and blue indicates the 
+valleys in the surface.  
+6.2. 
+Lightly textured surfaces with varying surface 
+periods 
+Most of the PV modules studied appeared to have random 
+surface structures as seen in the contour plots in Figure 7, 
+where two lightly textured surfaces are compared. They exhibit 
+similar RMS surface roughness values, but very different 
+surface period variations – the surface period in Figure 7a is 
+about double that of Figure 7b. The effects of the surface period 
+variations on glare were not studied, but could be evaluated in 
+the future. 
+ 
+ 
+Lightly Textured Surface 1 
+ 
+Sa = 1.44 m,  Sq = 1.88 m 
+Sz = 15.25 m,   = 0.69 mm 
+(a) 
+Lightly Textured Surface 2 
+ 
+Sa = 1.25 m,  Sq = 1.58 m, 
+Sz = 11.88 m,   = 1.36 mm 
+(b) 
+Figure 7. Contour plots of two lightly textured surfaces, but 
+with different surface period variations. The surface in (a) 
+exhibits high period variations, and (b) shows low surface 
+frequencies. 
+7. 
+PV SURFACE REPLICATION ACCURACY 
+The 
+surface 
+replication 
+accuracy 
+verification 
+was 
+performed using one of the developmental PV module samples 
+(i.e. a single-cell PV module). This PV module was small 
+enough to fit on the profilometer sample holder. Both the actual 
+PV module (master) and its replica were measured with the 
+optical profilometer at two different locations on the surface 
+and the measurements were averaged. Note that the same points 
+on the master and replica were not measured; finding the 
+identical points (over a 3×3 mm2 area) on the master and 
+replica would be have difficult and time consuming. Figure 8 
+shows one of the measurements on the master and its replica. 
+Table 2 summarizes the measured surface statistics. 
+Table 2. Measured surface roughness of the master sample 
+and its replica to assess the replication accuracy. 
+ 
+Master Avg. 
+Measurement 
+Replica Avg. 
+Measurement 
+% 
+Error 
+AVG Surface 
+Roughness, Sa (m) 
+1.85  0.18 
+2.00  0.05 
+7.7 
+RMS Surface 
+Roughness, Sq (m 
+RMS) 
+2.45  0.24 
+2.61  0.13 
+6.6 
+ 
+The RMS surface roughness agreed to within 7% between 
+the replica and the actual surface. The replicas generally had 
+higher RMS surface roughness values. This could be due to 
+form errors that remained in the surface measurements. 
+Although the rubber-like replicas were thick (3-4 mm), they 
+were still able to bend and flex slightly. In addition, the 
+x (mm)
+y (mm)
+ 
+ 
+0
+0.5
+1
+1.5
+2
+2.5
+0
+0.5
+1
+1.5
+2
+2.5
+-60
+-40
+-20
+0
+20
+40
+60
+x (mm)
+y (mm)
+ 
+ 
+0
+0.5
+1
+1.5
+2
+2.5
+0
+0.5
+1
+1.5
+2
+2.5
+-6
+-4
+-2
+0
+2
+4
+6
+x (mm)
+y (mm)
+ 
+ 
+0
+0.5
+1
+1.5
+2
+2.5
+0
+0.5
+1
+1.5
+2
+2.5
+-6
+-4
+-2
+0
+2
+4
+6
+
+ 
+8 
+Copyright © 2014 by ASME 
+measured replica surfaces were more “grainy” as seen in the 
+contour plots in Figure 8. 
+ 
+Master Surface 
+ 
+ (a) 
+Replica of the Master 
+ 
+ (b) 
+Figure 8. Contour plots of a (a) master surface and (b) 
+replicated surface of the master. Note that these are not the 
+same points on the master and replica; locating the same 
+points (over 3×3 mm2 area) would have been difficult and 
+time consuming. 
+ 
+x (mm)
+y (mm)
+ 
+ 
+0
+0.5
+1
+1.5
+2
+2.5
+0
+0.5
+1
+1.5
+2
+2.5
+-10
+-8
+-6
+-4
+-2
+0
+2
+4
+6
+8
+10
+x (mm)
+y (mm)
+ 
+ 
+0
+0.5
+1
+1.5
+2
+2.5
+0
+0.5
+1
+1.5
+2
+2.5
+-10
+-8
+-6
+-4
+-2
+0
+2
+4
+6
+8
+10

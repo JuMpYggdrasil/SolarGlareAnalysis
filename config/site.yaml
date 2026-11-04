@@ -1,0 +1,463 @@
+﻿site:
+  name: "Map Ta Phut Cargo Port (real receptor data)"
+  reference: { lat: 12.678403451559017, lon: 101.11677752330773, height_m: 10.0 }
+  timezone: "Asia/Bangkok"
+  year: 2025
+  time_freq: "min"  # pandas freq: "h" = 8,760 steps/yr, "min" = 525,600 steps/yr
+  linke_turbidity: 3.5
+  # Run one full analysis per case. Each case OVERRIDES azimuth_deg and/or
+  # tilt_deg of every configured array (design sweep); all results land in
+  # output/<label>/{figures,results}. To add another case, append one line
+  # here - no code change needed. When blank/absent the single run goes
+  # straight to output/ using each array's own azimuth_deg/tilt_deg.
+  # Optional per-case `env:` dict overrides environment.* settings (e.g.
+  # reflectivity_mode) for method-comparison runs; absent = unchanged.
+  # Run a single case with `run_analysis.py --case <label>` (else all run).
+  cases:
+    # Tilt design sweep: physical-bound analysis = ASTM E903-20-style
+    # solar-weighted reflectance (reflectivity_mode default, glass smooth_arc)
+    # x Beer-Lambert air-path extinction (atmospheric_attenuation, V=20km).
+    # The folder label carries the tilt (_t<deg>) instead of _atm20 - the
+    # Beer-Lambert attenuation is now the sole committed mode and tilt is the
+    # design variable. tilt 10 = the former az*_e903_atm20 reference, renamed.
+    # - { label: "az098_e903_t10", azimuth_deg: 98.0,  tilt_deg: 10.0, env: { reflectivity_mode: "solar_weighted", atmospheric_attenuation: "beer_lambert" } }
+    # - { label: "az098_e903_t15", azimuth_deg: 98.0,  tilt_deg: 15.0, env: { reflectivity_mode: "solar_weighted", atmospheric_attenuation: "beer_lambert" } }
+    # - { label: "az098_e903_t20", azimuth_deg: 98.0,  tilt_deg: 20.0, env: { reflectivity_mode: "solar_weighted", atmospheric_attenuation: "beer_lambert" } }
+    # - { label: "az278_e903_t10", azimuth_deg: 278.0, tilt_deg: 10.0, env: { reflectivity_mode: "solar_weighted", atmospheric_attenuation: "beer_lambert" } }
+    # - { label: "az278_e903_t12", azimuth_deg: 278.0, tilt_deg: 12.5, env: { reflectivity_mode: "solar_weighted", atmospheric_attenuation: "beer_lambert" } }
+    - { label: "az278_e903_t15", azimuth_deg: 278.0, tilt_deg: 15.0, env: { reflectivity_mode: "solar_weighted", atmospheric_attenuation: "beer_lambert" } }
+    # - { label: "az278_e903_t20", azimuth_deg: 278.0, tilt_deg: 20.0, env: { reflectivity_mode: "solar_weighted", atmospheric_attenuation: "beer_lambert" } }
+
+environment:
+  # Optional scattering of the reflected beam. 0.0 = mirror-perfect specular.
+  slope_error_rad: 0.0
+  # Minimum DNI for a glare minute to count (W/m2). Guards the degenerate
+  # low-sun case where the refraction-corrected DNI model reports ~0.3 W/m2
+  # (sun on the horizon, tilt ~0). SGHAT itself has no such cutoff.
+  min_dni_wm2: 10.0
+  # DNI model used for the ocular hazard. "ineichen" (default) = pvlib clear-sky
+  # (physically based, varies with sun elevation); "constant" = fixed
+  # dni_constant_wm2 (default 1000, the SGHAT/ForgeSolar rule of thumb) - use
+  # ONLY to benchmark against published SGHAT results. Detection is unaffected.
+  dni_mode: "ineichen"   # "ineichen" | "constant"
+  dni_constant_wm2: 1000.0
+  # Reflectivity mode for the ocular hazard.
+  #   "solar_weighted" (default): ASTM E903-20-style solar-weighted reflectance
+  #     (hazard.py::solar_weighted_reflectivity) - a physical Fresnel spectral
+  #     model of the cover glass weighted by the IEC 60904-3:2019 Table 1
+  #     direct-normal spectrum over [320,2500] nm. `glass_type` selects "smooth"
+  #     (bare) or "smooth_arc" (quarter-wave ARC, n via solar_weighted_arc_n,
+  #     design wl via solar_weighted_arc_design_wl_nm). This is a MODEL of the
+  #     E903-20 solar-weighting procedure (E903 being a measurement standard),
+  #     not a measured spectrum - see references/_ASTM_E903-20_method_notes.txt.
+  #   "constant": use the per-array `specular_reflectivity` value (e.g. 0.08
+  #     smooth glass w/ ARC, worst-case) at all angles.
+  #   (The SGHAT v6 Table 1 angle-of-incidence fits - aoi_reflectivity in
+  #   hazard.py - are kept ONLY as a reference comparison for
+  #   scripts/validate_e903.py; they are not a selectable pipeline mode.)
+  reflectivity_mode: "solar_weighted"   # "solar_weighted" | "constant"
+  # PV glass cover type for the E903-20-style spectral model (only physical
+  # types are supported):
+  #   smooth (default) | smooth_arc
+  # "smooth" = smooth glass WITHOUT anti-reflection coating.
+  # "smooth_arc" = smooth glass WITH quarter-wave anti-reflection coating
+  # (n via solar_weighted_arc_n, design wl via solar_weighted_arc_design_wl_nm).
+  glass_type: "smooth_arc"
+  # ASTM E903-20-style model knobs (only read when reflectivity_mode =
+  # "solar_weighted"). arc_n = ARC refractive index (default 1.30) for
+  # glass="smooth_arc"; arc_design_wl_nm = quarter-wave design wavelength.
+  solar_weighted_arc_n: 1.30
+  solar_weighted_arc_design_wl_nm: 600.0
+  # Threads for the per-group sub-panel loop (analyze_pair). 0 = auto
+  # (min(cpu_count, groups)), 1 = serial, N = fixed thread count. Only active
+  # when an array has groups > 1; the result is bit-identical to serial.
+  n_workers: 16
+  # Glare-hit detection geometry:
+  #   "circular" (default, SGHAT v6 classic): area-equivalent-circle
+  #     array-limiting angle, theta/2 + beta/2 half-angle. Fast; matches
+  #     published SGHAT numbers, but distorts elongated rows.
+  #   "polygon": true-rectangle polyhedral emanation - project the 4 panel
+  #     corners onto the receiver's sphere, reflect into sun-space, test
+  #     point-in-spherical-polygon dilated by beta/2. No aspect distortion;
+  #     retinal hazard x stays min(beta,theta) either way.
+  hit_test_mode: "polygon"   # "circular" | "polygon"
+  # Secondary IEC 62471 photobiological assessment (BS EN 62471:2008) on top of
+  # the SGHAT classification. When true, the per-pair glare_hours_*.csv carry
+  # iec_* columns (radiance, risk groups, allowed-exposure durations) and the
+  # summary exposes iec_worst_risk / iec_min_tmax_* / iec_peak_lr. Requires the
+  # E_c/E_r of every hit minute (no extra sun/reflection pass). Figures 10
+  # (risk zones) and 11 (t_max) are emitted by run_analysis.py automatically.
+  iec62471_enabled: true
+  # Interactive map tile provider for 01_site_map.html; committed value and code
+  # default (_MAP_TILES_DEFAULT in viz.py) is "esri_street" (free, no API key,
+  # avoids the OSM Tile Usage Policy 403 and the CARTO free-tier key prompt).
+  map_tiles: "esri_street"   # "esri_street" | "esri" | "carto" | "osm"
+  # Atmospheric attenuation of the reflected beam over the air path.
+  #   "none" (default): SGHAT/FAA convention - a flat panel keeps a collimated
+  #     beam, so E_c = rho*DNI at any distance (no air-path extinction).
+  #   "beer_lambert": multiply E_c (and so E_r, G/Y/R, IEC) by tau = exp(-sigma*d)
+  #     using the Kruse-Kim hybrid visibility model sigma = (3.91/V)*(lambda/550)^(-q)
+  #     (hazard.py::atmospheric_transmittance). Each receptor uses its real
+  #     slant distance. Only the Beer-Lambert term is applied - the inverse
+  #     square law does NOT apply to the collimated reflected beam. Detection
+  #     (sun/geometry) is unchanged; only hazard irradiance scales. Note: sigma
+  #     is homogeneous along the path - beyond ~5 km a real atmosphere would
+  #     need a path-integrated sigma (Atmospheric_Optical_Attenuation_Model_ver2.txt 6.1).
+  atmospheric_attenuation: "beer_lambert"   # "none" | "beer_lambert"
+  # Kruse-Kim model knobs (only read when atmospheric_attenuation = "beer_lambert").
+  visibility_km: 20.0               # meteorological range; 20km -> q=1.3 (clear)
+  attenuation_wavelength_nm: 550.0  # reference wavelength (nm) in the (lambda/550) term
+
+arrays:
+  # NOTE: these are HYPOTHETICAL orientations for methodology demonstration.
+  # Replace with the real PV layout when site data becomes available.
+  - name: "PV-A"
+    lat: 12.656101840129276
+    lon: 101.11372740258612
+    height_agl_m: 12.5
+    width_m: 2.0
+    height_m: 4890.0  # เดิม 4883.0 (ความยาว land–end)
+    tilt_deg: 10.0 # 10 deg tilt (user setting; >= 10 deg minimum for water drain + insurance; steeper than 5 -> reflection tilts up, AOI shifts)
+    # Default orientation used when site.cases is absent. With site.cases set,
+    # run_analysis overrides azimuth_deg and tilt_deg per case (98.0/278.0 az,
+    # 10/15/20 deg tilt) - edit cases, not here.
+    azimuth_deg: 0.0
+    # azimuth_deg->0.0 mean north, 180.0 mean south direction
+    # 19 = sub-division follows the real module layout of the row: the 4,890 m
+    # axial length is cut into 19 equal sub-panels of 257.4 m each. Detection
+    # footprint resolution only - the ocular HAZARD always uses the full
+    # contiguous sheet, so severity is group-independent by construction. The
+    # one place groups do reach the numbers is the Beer-Lambert transmittance,
+    # which is evaluated at the centre of the sub-panel that WINS each minute
+    # (analysis.py::analyze_pair -> _analyze_single), so re-partitioning the row
+    # moves the annual peak E_r by <0.2% while the hit minutes are unchanged.
+    groups: 19  # split height_m into sub-panels for near-field detection detail
+    # The ocular HAZARD (x = min(beta, array-limiting)) always uses the FULL
+    # contiguous sheet (hazard_area in analysis.py), so severity is
+    # group-independent by construction.
+    specular_reflectivity: 0.08 # worst case
+  # - name: "PV-B (port area, future)"
+  #   lat: 12.650447233303662
+  #   lon: 101.11267547580309
+  #   height_agl_m: 15.0
+  #   width_m: 2.0
+  #   height_m: 200.0
+  #   tilt_deg: 10.0  # >= 10 deg minimum for water drain + insurance
+  #   azimuth_deg: 0.0
+  #   groups: 2
+  #   specular_reflectivity: 0.08
+
+receptors:
+  # เส้นทางเดินเรือ (15 pts: 1-15) แอ่งกลับเรือ -> ทอดสมอ
+  - name: "east1_route_1_turningBasin"
+    lat: 12.626242202206173
+    lon: 101.103348244674336
+    height_agl_m: 40.0
+  - name: "east1_route_2"
+    lat: 12.624349758679664
+    lon: 101.103246174210952
+    height_agl_m: 40.0
+  - name: "east1_route_3"
+    lat: 12.622457315153151
+    lon: 101.103144103747525
+    height_agl_m: 40.0
+  - name: "east1_route_4"
+    lat: 12.615584521674625
+    lon: 101.103246174210952
+    height_agl_m: 40.0
+  - name: "east1_route_5"
+    lat: 12.608711728196100
+    lon: 101.103348244674336
+    height_agl_m: 40.0
+  - name: "east1_route_6"
+    lat: 12.600742810238140
+    lon: 101.108962120161507
+    height_agl_m: 40.0
+  - name: "east1_route_7"
+    lat: 12.592773892280182
+    lon: 101.114575995648678
+    height_agl_m: 40.0
+  - name: "east1_route_8"
+    lat: 12.589586186385498
+    lon: 101.123047844111142
+    height_agl_m: 40.0
+  - name: "east1_route_9"
+    lat: 12.586398480490812
+    lon: 101.131519692573605
+    height_agl_m: 40.0
+  - name: "east1_route_10"
+    lat: 12.586398480490812
+    lon: 101.145503346059840
+    height_agl_m: 40.0
+  - name: "east1_route_11"
+    lat: 12.586398480490812
+    lon: 101.159486999546090
+    height_agl_m: 40.0
+  - name: "east1_route_12"
+    lat: 12.586398480490812
+    lon: 101.173470653032297
+    height_agl_m: 40.0
+  - name: "east1_route_13"
+    lat: 12.586398480490812
+    lon: 101.187454306518546
+    height_agl_m: 40.0
+  - name: "east1_route_14"
+    lat: 12.586398480490812
+    lon: 101.201437960004768
+    height_agl_m: 40.0
+  - name: "east1_route_15_anchor"
+    lat: 12.586398480490812
+    lon: 101.215421613491003
+    height_agl_m: 40.0
+  # จุดสังเกต ตำแหน่งเดียว
+  - name: "obs_asia"
+    lat: 12.63026854533972
+    lon: 101.11516395167186
+    height_agl_m: 40.0
+  - name: "obs_ptt"
+    lat: 12.636414042014284
+    lon: 101.12612835679393
+    height_agl_m: 40.0
+  # จุดท่าเทียบเรือ (terminal) ปลายทั้งสองของแนว PV
+  - name: "terminal_1"
+    lat: 12.631213230387248
+    lon: 101.10754710917638
+    height_agl_m: 40.0
+  - name: "terminal_2"
+    lat: 12.627887629137106
+    lon: 101.10801488242438
+    height_agl_m: 40.0
+  # จุดสังเกตเพิ่ม: 100 เมตรจากปลายทั้งสองของแนว PV
+  - name: "terminal_1_west"
+    lat: 12.631213230387248
+    lon: 101.10662548214896
+    height_agl_m: 40.0
+  - name: "terminal_2_east"
+    lat: 12.627887629137106
+    lon: 101.10893649746566
+    height_agl_m: 40.0
+  # จุดรถผ่าน 3 จุด ตามแนวยาวของแผง ณ ตำแหน่ง 1/4, 2/4, 3/4 ของความยาวรวม (4890 ม.)
+  # เลื่อนไปทางทิศตะวันตก 10 ม. (แกนยาวเดียวกันทั้ง az 98/278, tilt 10 องศา)
+  # [2026-09-22] comment ออกตามคำสั่ง — vehicle เป็นจุดสมมุติของถนนฝั่งตะวันตก ไม่ใช่ receptor หน้างาน
+  # - name: "vehicle_1"
+  #   lat: 12.666973466932722
+  #   lon: 101.115201315855003
+  #   height_agl_m: 12.5
+  # - name: "vehicle_2"
+  #   lat: 12.656101840129276
+  #   lon: 101.113635222838212
+  #   height_agl_m: 12.5
+  # - name: "vehicle_3"
+  #   lat: 12.645230213325828
+  #   lon: 101.112069129821421
+  #   height_agl_m: 12.5
+  # เส้นทางเดินเรือฝั่งตะวันตก west 1-4 (11 จุด/เส้น, ~2 km) สูง 40 ม. AGL (เทียบเท่าความสูงบนเรือ)
+  - name: "west1_route_1"
+    lat: 12.596536214411405
+    lon: 100.97571038773137
+    height_agl_m: 40.0
+  - name: "west1_route_2"
+    lat: 12.59800093665929
+    lon: 100.99473314021189
+    height_agl_m: 40.0
+  - name: "west1_route_3"
+    lat: 12.599465658907175
+    lon: 101.01375589269243
+    height_agl_m: 40.0
+  - name: "west1_route_4"
+    lat: 12.60093038115506
+    lon: 101.03277864517295
+    height_agl_m: 40.0
+  - name: "west1_route_5"
+    lat: 12.602395103402946
+    lon: 101.05180139765349
+    height_agl_m: 40.0
+  - name: "west1_route_6"
+    lat: 12.603859825650831
+    lon: 101.07082415013402
+    height_agl_m: 40.0
+  - name: "west1_route_7"
+    lat: 12.605324547898716
+    lon: 101.08984690261455
+    height_agl_m: 40.0
+  - name: "west1_route_8"
+    lat: 12.606789270146601
+    lon: 101.10886965509508
+    height_agl_m: 40.0
+  - name: "west1_route_9"
+    lat: 12.610127385807706
+    lon: 101.13208090353461
+    height_agl_m: 40.0
+  - name: "west1_route_10"
+    lat: 12.619426192845273
+    lon: 101.14625198152929
+    height_agl_m: 40.0
+  - name: "west1_route_11"
+    lat: 12.632539320817925
+    lon: 101.15529215197417
+    height_agl_m: 40.0
+  - name: "west2_route_1"
+    lat: 12.57030560186526
+    lon: 100.98670518962378
+    height_agl_m: 40.0
+  - name: "west2_route_2"
+    lat: 12.573087733440442
+    lon: 101.00511130242145
+    height_agl_m: 40.0
+  - name: "west2_route_3"
+    lat: 12.575869865015626
+    lon: 101.02351741521913
+    height_agl_m: 40.0
+  - name: "west2_route_4"
+    lat: 12.578651996590809
+    lon: 101.04192352801681
+    height_agl_m: 40.0
+  - name: "west2_route_5"
+    lat: 12.582288477874068
+    lon: 101.05878222425184
+    height_agl_m: 40.0
+  - name: "west2_route_6"
+    lat: 12.585924959157326
+    lon: 101.07564092048689
+    height_agl_m: 40.0
+  - name: "west2_route_7"
+    lat: 12.589561440440585
+    lon: 101.09249961672194
+    height_agl_m: 40.0
+  - name: "west2_route_8"
+    lat: 12.593197921723844
+    lon: 101.10935831295697
+    height_agl_m: 40.0
+  - name: "west2_route_9"
+    lat: 12.600510107055717
+    lon: 101.1232850620207
+    height_agl_m: 40.0
+  - name: "west2_route_10"
+    lat: 12.607822292387592
+    lon: 101.13721181108441
+    height_agl_m: 40.0
+  - name: "west2_route_11"
+    lat: 12.615134477719465
+    lon: 101.15113856014814
+    height_agl_m: 40.0
+  - name: "west3_route_1"
+    lat: 12.544549304118844
+    lon: 100.98768250534755
+    height_agl_m: 40.0
+  - name: "west3_route_2"
+    lat: 12.550224886563585
+    lon: 101.00476109762045
+    height_agl_m: 40.0
+  - name: "west3_route_3"
+    lat: 12.555900469008325
+    lon: 101.02183968989333
+    height_agl_m: 40.0
+  - name: "west3_route_4"
+    lat: 12.561576051453066
+    lon: 101.03891828216622
+    height_agl_m: 40.0
+  - name: "west3_route_5"
+    lat: 12.567251633897808
+    lon: 101.0559968744391
+    height_agl_m: 40.0
+  - name: "west3_route_6"
+    lat: 12.57292721634255
+    lon: 101.073075466712
+    height_agl_m: 40.0
+  - name: "west3_route_7"
+    lat: 12.578602798787289
+    lon: 101.0901540589849
+    height_agl_m: 40.0
+  - name: "west3_route_8"
+    lat: 12.58427838123203
+    lon: 101.10723265125777
+    height_agl_m: 40.0
+  - name: "west3_route_9"
+    lat: 12.589953963676772
+    lon: 101.12431124353067
+    height_agl_m: 40.0
+  - name: "west3_route_10"
+    lat: 12.595629546121511
+    lon: 101.14138983580355
+    height_agl_m: 40.0
+  - name: "west3_route_11"
+    lat: 12.601305128566253
+    lon: 101.15846842807645
+    height_agl_m: 40.0
+  - name: "west4_route_1"
+    lat: 12.510680622126982
+    lon: 100.99330207075924
+    height_agl_m: 40.0
+  - name: "west4_route_2"
+    lat: 12.51974307277091
+    lon: 101.00981870649096
+    height_agl_m: 40.0
+  - name: "west4_route_3"
+    lat: 12.528805523414835
+    lon: 101.02633534222268
+    height_agl_m: 40.0
+  - name: "west4_route_4"
+    lat: 12.537867974058763
+    lon: 101.0428519779544
+    height_agl_m: 40.0
+  - name: "west4_route_5"
+    lat: 12.54693042470269
+    lon: 101.05936861368612
+    height_agl_m: 40.0
+  - name: "west4_route_6"
+    lat: 12.555992875346618
+    lon: 101.07588524941784
+    height_agl_m: 40.0
+  - name: "west4_route_7"
+    lat: 12.565055325990544
+    lon: 101.09240188514957
+    height_agl_m: 40.0
+  - name: "west4_route_8"
+    lat: 12.574117776634472
+    lon: 101.10891852088129
+    height_agl_m: 40.0
+  - name: "west4_route_9"
+    lat: 12.5831802272784
+    lon: 101.12543515661301
+    height_agl_m: 40.0
+  - name: "west4_route_10"
+    lat: 12.592242677922325
+    lon: 101.14195179234473
+    height_agl_m: 40.0
+  - name: "west4_route_11"
+    lat: 12.601305128566253
+    lon: 101.15846842807645
+    height_agl_m: 40.0
+  # # ตารางจุดสังเกตรอบแผง รัศมี 2500 ม. (ทุก 45 องศา)
+  # - name: "R2500_N"
+  #   lat: 12.678584880277244
+  #   lon: 101.113727402586122
+  #   height_agl_m: 40.0
+  # - name: "R2500_NE"
+  #   lat: 12.671999750279594
+  #   lon: 101.130021208276773
+  #   height_agl_m: 40.0
+  # - name: "R2500_E"
+  #   lat: 12.656101840129276
+  #   lon: 101.136770323576528
+  #   height_agl_m: 40.0
+  # - name: "R2500_SE"
+  #   lat: 12.640203929978957
+  #   lon: 101.130021208276773
+  #   height_agl_m: 40.0
+  # - name: "R2500_S"
+  #   lat: 12.633618799981308
+  #   lon: 101.113727402586122
+  #   height_agl_m: 40.0
+  # - name: "R2500_SW"
+  #   lat: 12.640203929978957
+  #   lon: 101.097433596895470
+  #   height_agl_m: 40.0
+  # - name: "R2500_W"
+  #   lat: 12.656101840129276
+  #   lon: 101.090684481595730
+  #   height_agl_m: 40.0
+  # - name: "R2500_NW"
+  #   lat: 12.671999750279594
+  #   lon: 101.097433596895470
+  #   height_agl_m: 40.0

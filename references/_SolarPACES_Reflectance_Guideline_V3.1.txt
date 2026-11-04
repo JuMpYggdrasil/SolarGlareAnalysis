@@ -1,0 +1,2689 @@
+=== PAGE 1 ===
+ 
+ 
+ 
+ 
+Guidelines 
+ 
+PARAMETERS AND METHOD TO EVALUATE THE REFLECTANCE 
+PROPERTIES OF REFLECTOR MATERIALS FOR CONCENTRATING 
+SOLAR POWER TECHNOLOGY UNDER LABORATORY CONDITIONS 
+ 
+ 
+ 
+Official Reflectance Guideline Version 3.1  
+April 2020 
+ 
+Authors of current version (3.0): Aránzazu Fernández-García (CIEMAT), Florian Sutter (DLR), 
+Marco Montecchi (ENEA), Fabienne Sallaberry (CENER), Anna Heimsath (Fraunhofer ISE), Carlos 
+Heras (Universidad de Zaragoza), Estelle Le Baron (CEA), Audrey Soum-Glaude (PROMES-CNRS) 
+Authors of the previous version (2.5): S. Meyen (DLR), M. Montecchi (ENEA), C. Kennedy (NREL), G. Zhu (NREL), M. 
+Gray (NREL), J. Crawford (Abengoa Solar), S. Hiemer (Flabeg), W. Platzer (Fraunhofer ISE), A. Heimsath (Fraunhofer 
+ISE), M. O`Neill (3M), S. Ziegler (Alanod), S. Brändle (Alanod), A. Fernandez (CIEMAT) 
+
+=== PAGE 2 ===
+ 
+© Copyright SolarPACES 2020 - All rights reserved 
+ii 
+ 
+Contents 
+Page 
+1 
+Scope ....................................................................................................................................................... 1 
+2 
+Terms and definitions ............................................................................................................................ 3 
+2.1 
+Basic definitions for reflectance ........................................................................................................... 3 
+2.2 
+Basic definitions for solar irradiance ................................................................................................... 7 
+3 
+Symbols (and abbreviated terms) ........................................................................................................ 7 
+4 
+Required set of reflectance parameters ............................................................................................... 8 
+4.1. 
+General ................................................................................................................................................... 8 
+4.2. 
+Hemispherical reflectance ..................................................................................................................... 8 
+4.3. 
+Specular reflectance .............................................................................................................................. 9 
+4.4. 
+Solar-weighted reflectance .................................................................................................................... 9 
+4.5. 
+UV-weighted reflectance ..................................................................................................................... 10 
+5 
+Requirements for instrumentation ..................................................................................................... 10 
+5.1. 
+Ideal instrument properties ................................................................................................................ 10 
+5.2. 
+Minimum required instrument properties ........................................................................................ 11 
+5.2.1. Instrument properties for hemispherical reflectance ....................................................................... 12 
+5.2.2. Instrument properties for specular reflectance ................................................................................ 12 
+5.2.3. Recommendations ................................................................................................................................ 13 
+6 
+Preparation of measurement .............................................................................................................. 14 
+6.1. 
+General ................................................................................................................................................. 14 
+6.2. 
+Cleaning ................................................................................................................................................ 14 
+6.3. 
+Reference mirrors ................................................................................................................................ 15 
+7 
+Weighting with standard solar spectrum .......................................................................................... 15 
+7.1. 
+General ................................................................................................................................................. 15 
+7.2. 
+Solar-weighted and UV-weighted reflectance ................................................................................... 16 
+8 
+Measurement of aged and/or soiled mirror samples ........................................................................ 16 
+9 
+Reporting and accuracy ...................................................................................................................... 18 
+9.1. 
+Reporting .............................................................................................................................................. 18 
+9.2. 
+Sources of error ................................................................................................................................... 18 
+Annex A Practical application (informative) ................................................................................................. 20 
+A.1. 
+General ................................................................................................................................................. 20 
+A.2. 
+Hemispherical reflectance ................................................................................................................... 20 
+A.3. 
+Specular reflectance ............................................................................................................................ 20 
+A.4. 
+Simplified procedure for reflectors with high specularity ............................................................... 21 
+Annex B Table for solar weighting of reflectance .......................................................................................... 23 
+B.1. 
+General ................................................................................................................................................. 23 
+B.2. 
+Weighting table .................................................................................................................................... 23 
+Annex C Calculation of the uncertainty of solar reflectance ........................................................................ 27 
+C.1. 
+Short summary of ISO/IEC GUIDE 98-3 .......................................................................................... 27 
+C.2. 
+Uncertainty of solar reflectance ......................................................................................................... 28 
+
+=== PAGE 3 ===
+ 
+© Copyright SolarPACES 2020 - All rights reserved 
+iii 
+ 
+SolarPACES is an international cooperative network bringing together teams of national experts from around the world 
+to focus on the development and marketing of concentrating solar power (CSP) systems (also known as solar thermal 
+power systems). It is one of a number of collaborative programs, called Implementing Agreements, managed under the 
+umbrella of the International Energy Agency to help find solutions to worldwide energy problems. Within 
+SolarPACES several international Task-activities coordinate the work. 
+The objectives of Task III “Solar Technology and Advances Applications” deal with the advancement of technical and 
+economic viability of emerging solar thermal technologies and their validation with suitable tools by proper theoretical 
+analyses and simulation codes as well as by experiments in special arrangements and adapted facilities. For this 
+purpose, procedures and techniques are defined for the design, evaluation and use of the components and subsystems to 
+optimize concentration, reception, transfer, storage and application of solar thermal energy. In essence, the goals are to 
+investigate innovative multi-discipline advances needed for the further development of concentrating solar thermal 
+systems. This also concerns, among others, process heat applications, the utilization of solar concentration for the 
+development of improved materials, and the introduction of hybrid solar/fossil power plant concepts. 
+A group of experts in the field of optical mirror reflectance characterization has been working together as members of 
+Task III to create this document of a reflectance measurement guideline for laboratory measurements. This document 
+does not include guidelines for field measurements in solar plants. The solar community is called to work towards 
+consensus of procedures and to promote the guidelines to be transformed into international IEC standards through the 
+national organizations like UNE, IEC, DKE, ASME, ASTM, etc. 
+Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. 
+SolarPACES shall not be held responsible for identifying any or all such patent rights. 
+The guideline is open to amendments and updating as the state of the art of measurement instruments and procedures 
+advances. Please send comments, amendments, suggestions to arantxa.fernandez@psa.es (Ms. Aránzazu Fernández 
+García, CIEMAT-PSA).  
+ 
+ 
+ 
+
+=== PAGE 4 ===
+ 
+© Copyright SolarPACES 2020 - All rights reserved 
+iv 
+ 
+Introduction 
+This guideline for reflectance characterisation of solar reflectors is published under the framework of the SolarPACES 
+Task III: “Solar Technology and Advanced Applications”. Within the SolarPaces Task III standardization activities, the 
+project “Development of guidelines for standards for concentrating solar power (CSP) components” (2010-2011) was 
+created by a small working group of researchers from DLR (Deutsches Zentrum für Luft- und Raumfahrt, Germany, 
+acting as coordinator), CIEMAT (Centro de Investigaciones Energéticas, Medioambientales y Tecnológicas, Spain) 
+and NREL (National Renewable Energy Laboratory, USA) because of the urgent demand to standardize the 
+qualification procedures of solar mirrors and to provide reliable performance analysis tools, whose results are 
+comparable within the solar community. Therefore, the scope of this project was to collect and prepare 
+recommendations of procedures that can be presented to the standardization organizations (ISO, IEC, ASME, DIN, 
+UNE, etc) and that can be formulated into international standards with respect to the following topics: 
+1. Guidelines for reflectance characterisation. 
+2. Guidelines for mirror panel and modules characterisation. 
+3. Guidelines for receiver performance measurements. 
+ 
+The milestones of this project are listed below: 
+ Develop draft standard procedures and distribute them among the SolarPACES Task III working group for 
+discussion and iteration.   
+ Organize a round robin test campaign based on the procedures defined in the proposed standards and publish 
+the results in a conference paper.  
+ Disperse the standards within the solar community through the SolarPACES website. 
+Focused on the first topic, a round robin test was performed between the three laboratories above mentioned with 
+samples that represent all of the commercial solar mirrors currently available for CSP applications. The results 
+obtained were presented in SolarPACES Conference 2010 [1]. In spring of 2011, a first interim guideline version on a 
+specified measurement method to obtain solar weighted reflectance and monochromatic specular reflectance values 
+with commercially available instrumentation was created by this small working group and published at the 
+SolarPACES homepage [2]. 
+ 
+On the basis of that document, a broader board of experts was formed with the incorporation of researchers from 
+ENEA (Agenzia Nazionale per le Nuove Tecnologie, l’Energia e lo Sviluppo Economico Sotenibile, Italy), the 
+Fraunhofer Institute for Solar Energy Systems (ISE, Germany) and CTAER (Centro Tecnológico Avanzado de 
+Energías Renovables, Spain). These experts exchanged their knowledge and experience in comments and discussions 
+that were implemented in the second version of a reflectance measurement guideline [3]. Thanks to these 
+collaborations and also thanks to a strong involvement from the solar industry (Guardian Industries, Flabeg, AGC 
+glass, 3M, Alanod, Constellium, Evonik, Abengoa Solar, Skyfuel etc.) the process towards reaching international 
+consensus progressed very much. This second guideline was accepted as official SolarPACES reflectance guideline 
+and published on its website in June 2013, replacing the first one. 
+ 
+In order to speed up the discussion around the guidelines, a small working group was created in 2013, developing an 
+intense and fruitful cooperation since then. Within this group a second round robin test was launched with the 
+coordination of ENEA. Seven identical kits, each one consisting of ten specimens collected from eight cooperating 
+producers, were distributed to seven research institutes, acting as evaluators: ENEA, CEA (Commissariat à l'Energie 
+Atomique et aux Energies Alternatives, France), CENER (Centro Nacional de Energías Renovables, Spain), CIEMAT, 
+
+=== PAGE 5 ===
+ 
+© Copyright SolarPACES 2020 - All rights reserved 
+v 
+ 
+DLR, and Fraunhofer-ISE. The second round robin test, named SolarPACES Reflectance Round Robin (SRRR), had 
+two goals:  
+1. Verify the reliability of the procedure for evaluating the solar-weighted hemispherical reflectance as 
+suggested by the guidelines. 
+2. Stimulate each research institute to develop instrumentation and methods for evaluating off-normal near-
+specular solar reflectance. 
+According to the results obtained in the SRRR, which were published in SolarPACES Conference 2013 [4], the first 
+task was properly accomplished. Solar-weighted hemispherical reflectance values measured by the evaluators with 
+commercial instruments according to the protocol included in the SolarPACES Guideline V2.5 were in good agreement 
+because the differences among the achieved values are within the typical measurement uncertainty of 
+spectrophotometers. However, the second goal was not fulfilled because a lack of commercial instrumentation to 
+adequately characterize the spectral near-specular reflectance of reflector materials was noticed. Only in some cases, 
+like highly specular silvered-glass reflectors, simplifications and approximations to the procedure may be suitable. 
+Nevertheless, a consensus about how to verify the specularity of a reflector material and the validity of the proposed 
+simplified procedure was still needed.  
+ 
+The next step consisted on launching a new SolarPACES project titled “Reflectance Measurement Working Group 
+under SolarPACES Task III” (2014-2017) to fund two workshops, under the coordination of CIEMAT and with the 
+participation of the SRRR evaluators (ENEA, CEA, CENER, CIEMAT, DLR, and Fraunhofer-ISE), in addition to the 
+University of Zaragoza (Spain) and PROMES (France). The goals of the workshops were as follow: 
+1. To modify the version 2.5 of the SolarPACES guideline to include a simplified procedure for highly specular 
+mirrors. 
+2. Progress in the protocol to measure spectral near-specular reflectance of all kind of reflectors with the new 
+advanced instruments. 
+The first workshop, hosted by ISE Fraunhofer, took place in July 2015, while the second one, hosted by CIEMAT-
+PSA, was hold in May 2017. As a result of the first workshop, a simplified procedure for highly specular mirrors was 
+agreed and published in SolarPACES Conference 2015 [5]. During the second workshop, other aspects was addressed, 
+such as the nomenclature, wavelength range for the solar reflectance, UV-weighted reflectance, measurement of aged 
+or soiled mirrors, sample treatment and uncertainty calculation. All the agreements achieved during these two 
+workshops are included in the version 3.0. The current version of the SolarPACES Guideline (version 3.1) contains 
+some minor changes with respect to the previous version (version 3.0), including the modification of the title and 
+introduction to clearly specify that the guideline is focused on laboratory measurements, the update of the bibliography 
+and the correction of some typos. This version is available in the SolarPACEs website. 
+ 
+As the importance of measuring also the near-specular reflectance in a proper manner is now fully acknowledged by 
+the SolarPACES Reflectance Group, but its experimental measurement is a hard task even for highly specialized optics 
+laboratories, a new project SolarPACES project titled “Measuring and modelling near-specular solar reflectance at 
+different incidence angles” was initiated (2017-2018). This project is coordinated by DLR, with the participation of 
+ENEA, Fraunhofer ISE, CIEMAT and the University of Zaragoza. The project aims to take the current state of the art 
+of reflectance measurements one step further, meaning that all three relevant parameters influencing the reflectance of 
+a solar mirror will be considered: the entire solar wavelength range and the relevant incidence and acceptance angles 
+for the CSP technology. The development and update of three new laboratory prototypes are being supported: SMQ by 
+ENEA [6][7], S2R by DLR [8], and VLABS by Fraunhofer-ISE [9]-[11]. 
+Finally, it is important to highlight that, as this guideline only refers to laboratory measurements, the next step is to 
+develop a new guideline to properly measure reflectance in the solar field of concentrating solar thermal plants. This 
+topic has already been addressed by researchers by several approaches [12][13], and is the main focus of the new 
+SolarPACES project titled “Soiling measurements of solar reflectors” (2019-2021), which is coordinated by CIEMAT, 
+
+=== PAGE 6 ===
+ 
+© Copyright SolarPACES 2020 - All rights reserved 
+vi 
+ 
+with the participation of DRL, ENEA, Fraunhofer ISE, the University of Zaragoza, NREL, TSK, Rioglass and 
+Brightsource. 
+ 
+
+=== PAGE 7 ===
+ 
+1 
+ 
+1 
+Scope 
+The reflector quality in a CSP system directly influences the amount of solar radiation that can be converted into 
+power. The efficiency of a CSP collector can be characterized by the solar flux that reaches the receiver, is absorbed 
+and converted into heat, in relation to the solar incident flux at the aperture plane. The net solar flux intercepted by the 
+receiver is influenced by the sun shape, the contour accuracy of the concentrator, the tracking system accuracy, the 
+receiver position in relation to the ideal focal position, the incidence angle of the incoming sunlight relative to the 
+concentrator, and the quality of the reflector [14]-[16]. This document is focused only on the last of these influences. 
+The first characteristic demonstrating the quality of the reflector is its ability to reflect the majority of the incident 
+sunlight. This can be quantified by the solar-weighted hemispherical reflectance, dependent on the incidence angle. 
+Second, the reflected sunlight needs to be directed to the receiver with minimal loss; this is quantified through the 
+specularity of the reflector (as well as its shape which is not part of this guideline).   
+Several types of solar mirrors are commercially available, including silvered glass of different thicknesses, metalized 
+(primarily silver) polymer films, polished and anodized aluminum and other types that are expected to enter the 
+market. The reflectance of these various reflector types can vary significantly, as does the amount of beam spread or 
+wide angle scattering (i.e. the quality of specularity).  
+ 
+In solar applications, reflectance is best quantified in terms of solar-weighted reflectance, since not all parts of the solar 
+spectrum have equal amounts of energy. So weighting a reflector’s spectral reflectance according to the energy content 
+of the solar spectrum is proper. Spectral reflectance is generally measured using an instrument that measures the 
+hemispherical reflectance, that is, all reflected light is measured regardless its directionality. This is the solar-weighted 
+hemispherical reflectance. Since the performance of solar concentrators also depends on the amount of beam spread 
+and scattering that occurs at the reflector, specularity of the reflected light must also be characterized. The specularity 
+profile of some reflectors, like silvered glass mirrors is very tight and can be adequately described by a tight, circular 
+Gaussian distribution. Other reflectors provide a greater challenge for characterizing specularity because the reflected 
+beam distribution is more complex and sometimes even anisotropic. Research regarding these various reflector 
+behaviors was performed in the past [17][19] and has been taken up again recently [20][22]. The reflection properties 
+can change depending on the incidence angle of the incident radiation. In CSP collectors, not only near normal 
+incidence angles occur, but also greater angles up to 60° or even more (depending on system design). This has been 
+mainly ignored in hitherto reflectance evaluations, where near normal incidence measurements are common, but it 
+should be considered in a complete characterization [11] [23]-[24].  
+ 
+As observed in [4], the measurement of near-specular reflectance is difficult because the experimental reading is 
+affected by the divergence of the measuring light beam itself. Unless the beam divergence is negligible with respect to 
+the lower limit of the acceptance angle range one wants to investigate, the signal must be properly deconvoluted. In 
+order to reduce such effect, and to make the experimental set-up simple, SMQ, MIRA, and VLABS adopt single 
+wavelength or narrow band light sources, but that choice does not allow to continuously perform the measurement 
+along the whole solar spectrum. Therefore, solar-weighted values can be obtained by means of a proper data modelling, 
+as done in SMQ [7]. 
+ 
+Recently the SolarPACES expert group is investigating a new approach: the inescapable divergence of collimated light 
+beams obtained by not coherent sources makes the measurand a bit different from the canonical concept of reflectance, 
+being it based on impinging plane waves. On the other hand, as recently proposed [22], when one assume a standard 
+value for the divergence of solar radiation and set to that value the divergence of the impinging beam, the measurand, 
+even if it is not exactly the canonic reflectance, certainly it represents something which is perfectly suitable for CSP 
+applications: that is the “conic” reflectance. That is the preliminary theoretic assumption making the new instrument 
+S2R [24] ready to use, without need of cumbersome data processing. Data comparison and discussion are still going 
+on; as soon as possible the results will be reported in a next version of this document. 
+ 
+At the present, for the actual version of the guideline, we have to state that due to the lack of commercial available 
+instrumentation to adequately characterize all reflectance properties of a reflector material [25], a straight forward 
+
+=== PAGE 8 ===
+ 
+2 
+ 
+measurement procedure that obtains reliable results valid for all materials is not possible at the current state of the art. 
+Only in some cases, like highly specular glass reflectors, simplifications and approximations are suitable. In other cases 
+a more thorough characterization is necessary, which might only be possible at specially equipped laboratories or even 
+only with newly developed instrument prototypes. A general, step by step measurement procedure does not meet the 
+different needs of the production industry, the application industry and the research sector. Therefore, this guideline is 
+focused on defining the parameters and values, that are necessary for a reliable reflectance characterization of a solar 
+reflector material. This includes recommendations about instrument property requirements, proposals for 
+simplifications and recommendations where these are applicable. 
+ 
+The goal of this document is to serve as guidance on the relevant parameters and measurement possibilities to reliably 
+evaluate the reflectance quality of a solar reflector material, under laboratory conditions. It is a tool on how to obtain 
+and provide the necessary data on reflectance properties, so that the material in question can be adequately evaluated 
+for its destined application or be compared with other materials. It does not serve as guidance on how to use these data 
+in simulations, ray-tracing, evaluation of efficiency in different collector systems etc. Commercial instruments or 
+validated laboratory prototypes may be employed to measure the here defined parameters, as long as they fulfil the here 
+mentioned requirements. This guideline describes on one hand the parameters and values that should ideally be 
+measured for a complete and adequate reflector characterization. Since the technology to fulfil the ideal case is not yet 
+available, the guideline defines on the other hand the minimum required parameters that are necessary for a useful 
+evaluation and that can be acquired today. 
+ 
+One set of parameters shall serve to qualify all types of solar reflector materials. This set of parameters is described in 
+chapter 4. Afterwards, the requirements for measurement instrumentation and the measurement procedure are 
+discussed in chapters 5, 6 and 7. A first approximation of the methodology to monitor aged and/or soiled mirrors 
+samples (which will be improved in further versions of this guideline) is included in chapter 8. The values to be 
+reported and the accuracy that should be approached are described in chapter 9 and Annex B gives an evaluation 
+example and a more detailed explanation of how to obtain solar weighting factors.  
+ 
+
+=== PAGE 9 ===
+ 
+3 
+ 
+2 
+Terms and definitions 
+For the purposes of this document, the following terms and definitions apply, in part based on [26]-[29]. 
+2.1 Basic definitions for reflectance 
+Reflectance 
+Light interacts with the matter it intercepts. The light can be absorbed, transmitted, or reflected according to the three 
+corresponding ratios, depending on the wavelength of the light and the material properties. The material properties 
+associated with these behaviours are absorptance, , transmittance, , and reflectance, . Usually a combination of 
+these parameters takes place and they are subject to the law of conservation of energy, which states that ++ = 1. 
+The transmittance is considered to be zero for opaque objects. Reflectance is defined as the ratio of the radiant flux r 
+reflected from a surface to that of the incident flux i, and thus  
+𝜌= 𝛷𝑟
+𝛷𝑖
+ 
+(1) 
+If two reflective surfaces are illuminated with the same incidence flux i, the ratio of their reflectance is proportional 
+to the flux ratio: 
+𝜌1
+𝜌2
+= 𝛷𝑟1
+𝛷𝑖
+*𝛷𝑖
+𝛷𝑟2
+= 𝛷𝑟1
+𝛷𝑟2
+ 
+(2) 
+Reflectance is dependent on the wavelength, λ, the angle of incidence, θi, between the incoming light and the normal to 
+the mirror surface, and light polarization. The amount of reflected radiance, , is a material property and its angular 
+distribution is a property of the microscopic surface flatness. Therefore, reflectance is distinguished into diffuse or 
+specular reflectance as described below. Polarization can be neglected only at near normal incidence, i.e. θi < 15°. 
+Because sunlight is not polarised, for CSP applications one has to consider the unpolarized reflectance, given by the 
+average value of s and p polarized reflectances. In the following, polarization will be omitted, and with “reflectance” it 
+is referred to “unpolarized reflectance”. The reflectance at oblique incidence angles must be considered for s and p 
+polarization separately and then the results averaged. 
+Law of reflection 
+The first law of reflection states that the incident ray, the reflected ray and the normal to the reflective surface at the 
+point of incidence lie in the same plane. The second law of reflection states that the angle of incidence, θi, of a wave or 
+stream of particles reflecting from a boundary, measured from the surface normal, is equal to the angle of reflection, θr, 
+measured from the same surface normal. 
+ 
+Figure 1: Law of reflection 
+
+=== PAGE 10 ===
+ 
+4 
+ 
+Hemispherical reflectance 
+The spectral hemispherical reflectance, λ,h(,θi,h), describes the total amount of specular and diffuse radiation 
+reflected into the hemisphere above the reflective surface of a material. It is a function of the wavelength, , and the 
+incident angle, θi, of the incident light. It integrates the reflected intensity over the entire hemisphere of possible 
+reflection.  
+Diffuse reflectance 
+Scattering theory requires the wave optics approach, which is beyond the purposes of this document. Here the 
+phenomenon is illustrated with simplified geometric optics. If a parallel, extended bundle of light rays impinges on an 
+object with a rough or microscopically structured surface of a size equal or greater than the wavelength, each individual 
+ray encounters a different surface slope and therefore the law of reflection takes effect for a different angle θi to the 
+surface normal at this point. As a result the bundle of light is diffusely scattered in all directions in the plane of 
+incidence (Figure 2). The amount of diffuse scattering is dependent on the level of roughness or microscopic surface 
+structuring. It is possible for oriented surfaces that the scattering will be anisotropic. The ideal diffuse reflector is a 
+Lambert surface, where an equal amount of light is scattered in each direction of the hemisphere. The surface structure 
+of certain materials (i.e. common in CSP application) leads to directional scattering, where the majority of the 
+individual light rays are still oriented in the general specular direction related to the incidence angle of the light bundle, 
+and only a small amount is scattered in a wide range of angle offsets from the specular direction. This leads to a 
+reflectance distribution peaked in the specular direction and decreasing away from it [30]. 
+ 
+Figure 2: Diffuse reflection 
+Near-specular (or specular) reflectance and specularity 
+In CSP applications the hemispherical reflectance alone is not enough descriptive: mirrors are used to redirect solar 
+radiation towards a receiver, and only the part reflected in the acceptance-angle 2φ of the receiver is intercepted, being 
+ the polar angle defined by the direction of the ideal specular reflected beam and the direction of the admissible 
+maximum dispersion of reflection on the surface. Typically φ ≤ 20 mrad, therefore the reflectance concerning CSP can 
+be referred to as near-specular. Its value is generally less than the hemispherical one, and greater than the genuine 
+specular reflectance, which strictly speaking refers to φ = 0. For the purpose of simplicity and usefulness, near-specular 
+reflectance in this document is referred to as specular reflectance, always specified with the acceptance angle. 
+ 
+Its accurate measurement and evaluation is a challenging issue. As shown in Figure 3a, perfectly specular reflectance 
+describes the case of reflection on a perfectly planar surface (i.e. with roughness much less than the radiation 
+wavelength), where a parallel bundle of incident rays is reflected as a parallel bundle of rays according to the law of 
+reflection. This is the ideal case where all light incident at θi is reflected at θr measured at any distance from the 
+boundary. For real surfaces, the specular reflection is always mixed with a certain amount of scattering [14] [15][17], 
+[18], [31], [32].  
+The measured spectral specular reflectance for solar applications is written as λ,φ(,θi,) where λ,φ is dependent on the 
+wavelength, , and is function of the incidence angle, θi, as well as the (half) acceptance angle, , associated with the 
+
+=== PAGE 11 ===
+ 
+5 
+ 
+detector aperture (Figure 3b). Alternately, the specular reflectance is the hemispherical reflectance minus the light 
+scattered outside a specified .  
+ 
+ 
+ 
+Figure 3a: Perfect specular reflection 
+Figure 3b: Specular reflection with offset 
+In practical application, the specular reflectance of a material is often inferred by the intensity measurement of the 
+reflected beam collected through an aperture (Figure 3b) or measured within the field of view of the detector. The 
+observed signal is given by: 
+𝜌detected = 𝑁∫∫
+∫
+𝑑𝛺𝑖dsbeamdsdetector𝐼(𝐴, 𝑖⃗)𝑅(
+AB⃗⃗⃗⃗⃗⃗×𝑟⃗
+|AB⃗⃗⃗⃗⃗⃗| )
+𝑆detector
+𝑆beam
+𝛺
+ 
+(3) 
+where N is a normalization factor, 𝐼(𝐴, 𝑖⃗)𝑑𝛺𝑖 is the beam intensity travelling in direction 𝑖⃗, inside the solid angle 𝑑𝛺𝑖 
+and hitting the point A on the mirror, B is the point on the detector surface capturing the light scattered along AB⃗⃗⃗⃗⃗⃗, which 
+intensity is given by the scattering distribution function R. The unit vector, 𝑟⃗, indicates the direction of the specular 
+reflection given by 𝑖⃗and the normal to the mirror surface. The integral is performed over 𝛺𝑖 representing the divergence 
+of the collimated light beam, the spot area on the mirror, Sbeam, and the detector area, Sdetector. Equation 3 represents the 
+intensity profile of the light beam impinging on the mirror that is then convoluted with the function R, according to 
+which the light is reflected and scattered by the mirror. A second convolution takes place with the function 
+representing the detector aperture, that then captures the reflected light. Therefore, generally the measured signal itself 
+is not a characteristic of the material, but the scattering distribution function R is. As discussed in [17] for example, the 
+latter can be inferred only by the proper devolution of the experimental data. Additionally, R is also dependent on 
+wavelength and incidence angle. 
+Once the reflectance distribution function R is known, the specular reflectance related to the acceptance angle, , is 
+given by: 
+𝜌𝜆,𝜙(𝜆, 𝜃𝑖, 𝜙) = 𝜌𝜆,ℎ(𝜆, 𝜃𝑖, ℎ) ∫
+∫𝑑𝛽𝑑𝜙
+𝜙
+0
+2𝜋
+0
+sin(𝜙)𝑅(𝜆, 𝜃𝑖, 𝜙) 
+(4) 
+Where R is normalized to the integral over the acceptance angle /2.  
+
+=== PAGE 12 ===
+ 
+6 
+ 
+In some special cases it is appropriate to approximate R by a Gaussian distribution, as has been observed by [17][21]. 
+This changes equation 4 to: 
+𝜌𝜆,𝜙(𝜆, 𝜃𝑖, 𝜙) = 𝜌𝜆,ℎ(𝜆, 𝜃𝑖, ℎ) *[1 −∑
+𝐾𝑗exp [
+−𝜙2
+2𝜎𝑗
+2(𝜆,𝜃)]
+𝑀
+𝑗=1
+] 
+(5) 
+Where ∑
+𝐾𝑗< 1
+𝑀
+𝑖=1
+ if the scattering does not completely destroy the specular component.  
+In other cases, R might be approximated more adequately by adding an exponential term [9] or even by another 
+different approach. Especially for materials with anisotropic scattering functions, the appropriate mathematical 
+approximation of the same is being passionately discussed and has not been defined yet. A general approach that is 
+valid for all materials does not exist. 
+Under certain circumstances it is possible to relate equation 4 directly to the intensity measurement for a circular 
+acceptance aperture/detector aperture that is positioned in the exact specular direction. This applies when a highly 
+collimated incidence beam is used and thus𝐼(𝐴, 𝑖⃗) = 𝐼0𝛿(𝑖⃗). Or when the illuminated area on the mirror is much 
+smaller than the detector aperture, so that it can be considered punctual. The convolution problem might also be 
+avoided by relating the intensity measurement of a sample with unknown R to the intensity measurement of a reference 
+mirror, of which it is known that all the reflected light enters the measurement aperture (thus it has perfect specular 
+quality). Both intensity measurements imply the convolution of the same components, except for different R. This way, 
+the specular reflectance value at this specific  can also be estimated without knowing R of the sample. 
+Equations 4 and 5 relate the specular reflectance to specularity, which describes the beam spread caused by scattering 
+according to R. A mirror with perfect specularity has no scattering or beam widening. In that case the beam spread is 
+zero and 𝜌𝜆,𝜙(𝜆, 𝜃𝑖, 𝜙) = 𝜌ℎ,𝜆(𝜆, 𝜃𝑖, ℎ) regardless of . In other terms, the ratio of the two parameters is equal to 1. A 
+differing ratio indicates not perfect specularity. This ratio must only be treated as an indicator, not for absolute values, 
+because it tends to over-estimate the performance losses expected from a lower specularity reflector. In CSP 
+applications, the actual impacts of reduced specularity must always be evaluated considering the other optical errors in 
+the system. Consequently, this estimation should only be used to demonstrate reflectors with high specularity 
+(scattering distribution with σ < 0.5mrad), as discussed in Appendix A.4. On reflectors with lower specularity, the only 
+appropriate way to represent specularity is through scattering distribution functions, as discussed above.  
+Cleanliness factor (or soiling factor or soling ratio) 
+The cleanliness factor, ζ(λ,θi,φ) is the ratio of the actual reflectance of the mirror to its reflectance in the clean state. It 
+depends on the wavelength, λ, the incidence angle, θi, and the acceptance angle, φ. 
+, ,
+,
+,
+( ,
+, )
+( ,
+, )
+( ,
+, )
+soil
+i
+i
+i
+
+
+
+
+
+
+
+
+
+
+ 
+(6) 
+ 
+Soiling rate 
+The soiling rate, 𝜉´(𝜆, 𝜃𝑖, 𝜑, 𝛥𝑡), is the variation of the cleanliness factor over time, where Δt is the time interval 
+between subsequent measured cleanliness factors. 
+.
+,
+, ( , , )
+t
+
+
+
+
+
+
+
+
+ 
+(7) 
+Collector: Element consisting of concentrator and receiver. 
+Concentrator: Shaped reflector that focuses sunlight onto receiver. 
+
+=== PAGE 13 ===
+ 
+7 
+ 
+Reflector: Mirror that makes up the concentrator. 
+Receiver: Element that absorbs the sunlight focused onto it to generate heat. 
+ 
+2.2 Basic definitions for solar irradiance 
+Air Mass (AM) 
+Air mass, AM, is the optical path sunlight travels through the Earth’s atmosphere. As sunlight passes through the 
+atmosphere, it is attenuated by scattering and absorption; the thicker the atmosphere through which it passes, the 
+greater the attenuation. The attenuation of solar radiation by the atmosphere is not the same for all wavelengths; 
+consequently, passage through the atmosphere not only reduces intensity but also alters the spectral irradiance. The 
+term “air mass” normally indicates the relative air mass, the path length relative to that at the zenith at sea level. Or the 
+ratio of the mass of atmosphere in the observer-sun path relative to the mass that would exist if the observer were at sea 
+level and the sun were directly overhead, at standard barometric pressure. By definition the sea-level air mass at zenith 
+is 1. The value of the air mass is appended to the acronym AM, so an AM1 indicates an air mass of 1, AM1.5 indicates 
+an air mass of 1.5, and AM2 indicates an air mass of 2. The region above the earth’s atmosphere, where there is no 
+atmospheric attenuation of sunlight is considered to have “air mass zero” (AM0).  
+3 
+Symbols (and abbreviated terms) 
+𝜉´ 
+ 
+ soiling rate 
+ 
+Absorptance 
+Gb 
+solar irradiance (W/m^2) 
+ 
+Reflectance 
+ 
+Statistical standard deviation 
+ 
+Transmittance 
+ζ 
+cleanliness factor 
+θi 
+Incidence angle 
+ 
+Radiance flux 
+ 
+Acceptance angle 
+ 
+Wavelength 
+ λ,φ (,θi,) 
+Specular reflectance 
+s,h([λa,λb],θi,h) 
+Solar-weighted hemispherical reflectance in the range between λa and λb 
+λ,h(,θi,h) 
+Spectral hemispherical reflectance 
+s,φ([λa,λb],θi,) 
+Solar-weighted specular reflectance in the range between λa and λb 
+
+=== PAGE 14 ===
+ 
+8 
+ 
+CEA 
+ 
+Commissariat à l'Energie Atomique et aux Energies Alternatives (Commission of Atomic 
+Energy and Alternative Energies), France 
+CENER  
+ 
+Centro Nacional de Energías Renovables (National Center of Renewable Energies, Spain) 
+CIEMAT  
+ 
+ Centro de Investigaciones Energéticas, Medioambientales y Tecnológicas (Research Center 
+of Energy, Environment and Technology), Spain 
+CSP 
+Concentrating solar power 
+CTAER  
+ 
+Centro Tecnológico Avanzado de Energías Renovables (Advanced Technological Center of 
+Renewable Energies), Spain 
+DLR  
+ 
+Deutsches Zentrum für Luft- und Raumfahrt (German Aerospace Center), Germany 
+ENEA  
+ 
+Agenzia Nazionale per le Nuove Tecnologie, l’Energia e lo Sviluppo Economico Sotenibile 
+(Italian National Agency for New Technologies, Energy and Sustainable Economic 
+Development), Italy 
+ISE  
+ 
+Fraunhofer Institute for Solar Energy Systems, Germany 
+4 
+Required set of reflectance parameters 
+In the Task III Reflectance group, it was decided that one set of parameters shall serve for the evaluation of all types of 
+solar reflector materials. The parameters mentioned in the following sections define both, the parameters and values 
+that should ideally be obtained for a complete and adequate reflector characterization and the minimum required 
+parameters, that are necessary for a useful evaluation and that can be acquired today. 
+4.1. General 
+Most of the basic required parameters can be measured at the current state of the art with a combination of 
+commercially available instruments, of which a deep revision can be found in [25]. Others can only be measured in 
+specialized laboratories and still need improvement of measurement technology. A thorough characterization is 
+necessary especially for the evaluation of mirror materials with complex surface and reflectance characteristics. On 
+nearly perfectly specular reflector materials with stable surface characteristics, the minimum required parameters are 
+sufficient for a reliable evaluation or even simplifications can be applied (see A.4).   
+ 
+4.2. Hemispherical reflectance  
+Various commercial laboratory instruments are available to measure spectral hemispherical reflectance, λ,h(,θi,h), 
+usually by utilizing an integrating sphere, with good accuracy and spectrally resolved over the whole relevant solar 
+spectrum of  = [320, 2500] nm [33] (see section 4.4 for further explanations about the wavelength range). The 
+hemispherical reflectance spectrum of a reflector material over this wavelength range is a first and very important 
+measure for evaluating its ability to exploit the maximum amount of solar irradiation. Typically, λ,h(,θi,h) is 
+measured at near normal angles of incidence (θi <= 15°), because experimental difficulties and errors increase 
+dramatically at oblique angles. The incidence angle as well as the measurement wavelength or wavelength range must 
+be indicated in the results. Measurements or theoretical models that have been experimentally validated may be applied 
+to obtain λ,h(,θi,h)at greater incidence angles. For CSP applications, incidence angles up to 50° or even more are 
+relevant and should be part of the optical analysis.  
+ 
+The spectrum of λ,h(,θi,h) for at least near normal incidence and in the solar wavelength range must be 
+analyzed on a solar reflector material.  
+
+=== PAGE 15 ===
+ 
+9 
+ 
+ 
+Ideally this parameter is also obtained by measurement or by an experimentally validated theoretical model, as 
+a function of θi or at least for several, greater angles of incidence as well (example of a model approach see 
+[34]).  
+4.3. Specular reflectance 
+Due to the geometry of CSP concentrators, only the reflected radiation near the specular direction enters in the energy 
+conversion chain, which is the measure of the specular reflectance, λ,φ(,θi,). The range of relevant  depends on the 
+collector design. Typically it is 0-20 mrad. Beam spread and scattering is wavelength and incidence angle dependent 
+and therefore the specularity or the approximated relationship 𝜌𝜆,𝜑(𝜆, 𝜃𝑖, 𝜑)/𝜌𝜆,ℎ(𝜆, 𝜃𝑖, ℎ) can change over the 
+spectrum and with angle of incidence. The specular reflectance spectrum should ideally be measured over the solar 
+wavelength range or at least at several wavelengths, whose line-width is similar to that of the hemispherical spectrum 
+measurement. The experimental apparatus must ensure that  is kept constant over the spectral range of the 
+measurement. 
+ 
+The parameter λ,φ(,θi,) must be measured at least at three wavelength bands or in the solar wavelength 
+spectrum, at least at near normal incidence (θi <= 15°) and at least at three  in the range of  >=  0 to  <= 20 
+mrad, except if the reflector material fulfills the criteria of high specularity described in Annex A.4. In that 
+case the simplified procedure of A.4 may be applied. 
+ 
+Ideally, the parameter λ,φ(,θi,) is analyzed by measurement or by an experimentally validated theoretical 
+model, as a function of , as a function of θi and as a function of  (example of a model approach see [35]).  
+ 
+The divergence of the beam of the equipment used to measure the specular reflectance should be equal or 
+smaller than the mean solar disc angle (around ±4.7 mrad). 
+4.4. Solar-weighted reflectance 
+Solar weighting of the reflectance parameters is calculated with the currently valid standard solar spectrum ASTM 
+G173 [33] for direct irradiance and the appropriate Air Mass (i.e. for Europe and USA it is AM 1.5). Solar weighting is 
+performed according to the equations provided in chapter 7 and Annex B [36][37]. The solar irradiation is provided in 
+[33] in the wavelength range  = [280, 4000] nm. In the far NIR the irradiated power is so scarce that the overall 
+weight of the region 2500-4000 nm is only 0.0018 of the total. Because in the most common commercial 
+spectrophotometers: i)  is selected by gratings, ii) the measurable  range is limited to 3300 nm, and iii) the 
+acquisition time depends on the width of the wavelength range, the reduction of the upper limit of the  range for solar 
+weighting to 2500 nm is quite convenient. A symmetrical cut (0.0018 of the total) of the UV tail allows increasing the 
+minimum wavelength to 320 nm, with the great economical advantage of make unnecessary the usage of the costly 
+deuterium lamp and more relaxed the requirements on the suitable spectrophotometer. For the above explained 
+practical reasons, the solar-weighting will be computed in the range  = [320, 2500] nm.  
+The wavelength interval step of the measurement recommended is 5 nm (see Appendix B). If other wavelength interval 
+step is selected for the measurements, the data have to be adapted to use the factors in Appendix B. In any case, the 
+wavelength interval step must be lower or equal than 10 nm. 
+The solar-weighted specular reflectance, s,φ([λa,λb],θi,), is the relevant parameter to evaluate the CSP reflector 
+material for both, the portion of solar irradiation reflected and the ability to redirect it towards the receiver. Actually, it 
+is not possible to measure the specular reflectance spectrum at specified  and then perform a solar weighting of the 
+results. Therefore the solar-weighted hemispherical reflectance, s,h([λa,λb],θi,h), is the relevant parameter to evaluate 
+the portion of solar irradiance that is reflected by the reflector material. Still, it must be evaluated taking into account 
+possible loss due to scattering, which can be revealed by comparing hemispherical reflectance to specular reflectance 
+measured at the same wavelengths. 
+
+=== PAGE 16 ===
+ 
+10 
+ 
+ 
+As a minimum requirement, the parameter s,h([λa,λb],θi,h), weighted according to the actually valid standard 
+solar spectrum (currently [33]) for direct irradiance and the appropriate Air Mass (i.e. for Europe and USA it is 
+AM 1.5) at least at θi <= 15°, must be acquired for a reliable analysis of the portion of the solar irradiance 
+reflected by the reflector material. 
+ 
+Ideally, the parameter s,φ([λa,λb],θi,), weighted according to the actually valid standard solar spectrum 
+(currently [33]) for direct irradiance and the appropriate Air Mass (i.e. for Europe and USA it is AM 1.5) is 
+acquired as a function of θi and , or at least at three θi and at three  in the range of  >=  0 mrad to  <= 20 
+mrad. 
+The equations to be used in the calculation of the solar-weighted reflectance with the standard solar spectrum are 
+explained in section 7.2. 
+4.5. UV-weighted reflectance 
+The UV region of the solar spectrum (that is,  = [280, 320] nm) is very aggressive because it might cause human 
+biological damage (DNA modification, skin cancer, etc.), materials degradation (polymers degradation, fused silica and 
+glass solarization, etc.), bacterial inactivation by solar disinfection [38] and solar photocatalysis of organic compounds 
+and microorganisms [39]. Therefore, it is greatly important to properly evaluate the UV reflectance of solar mirrors for 
+some specific applications. However, as UV is just a small part of the terrestrial solar radiation (0.09%), the solar 
+weighted formula including the whole solar wavelength range cannot be used to evaluate the UV reflectance to 
+compare different commercial products for such applications. Table 1 shows the range and weight of the different UV 
+classes. 
+Table 1. Range and weight of the different UV classes. 
+Class Range (nm) Absolute weight (%) 
+Relative UV weight (%) 
+UV 
+100-400 
+3.46 
+100.00 
+UVA 
+315-400 
+3.42 
+98.87 
+UVB 
+280-315 
+0.04 
+1.25 
+UVC 
+100-280 
+0.00 
+0.00 
+ 
+Depending on the range or class of interest, the proper  range must be used to calculate the UV-weighted 
+hemispherical reflectance, h,φ([λa,λb],θi,h), or the UV-weighted specular reflectance, UV,φ([λa,λb],θi,), according to 
+the equations explained in section 7.2.  
+5 
+Requirements for instrumentation 
+The optimum instrument needed for precise measurements of the appropriate parameters to sufficiently evaluate all 
+solar reflector materials does not exist currently. The properties that this ideal instrument should have are described in 
+Section 5.1. This section is meant to guide the development of measurement technology towards satisfactory 
+improvement, matched to the needs of CSP reflector material analysis. Section 5.2 discusses minimum requirements 
+for selecting existing and future instruments, in order to best characterize the minimum relevant reflector parameters. 
+5.1. Ideal instrument properties 
+As mentioned before, it would be ideal to characterize a solar mirror material by accurately measuring specular 
+reflectance over an appropriate range of , i and  to allow solar-weighted reflectance of a reflector and its specularity 
+
+=== PAGE 17 ===
+ 
+11 
+ 
+to be calculated. The instrument needed to perform this measurement should have the best combination of the 
+following properties: 
+ 
+Measurement wavelength range of 280 – 2500 nm at wavelength intervals which allow accurate solar weighted 
+calculation (recommended wavelength interval of 5 nm, maximum 10 nm). 
+ 
+Precise, selectable acceptance apertures or an innovative approach that covers a range of acceptance angles 
+appropriate to measure the specular reflectance as a function of . It must be ensured that  remains constant 
+along the whole wavelength range of measurement. 
+ 
+Measurement at various incidence angles ranging from near normal to at least 50° or an innovative approach to 
+obtain the specular reflectance as a function of i. 
+ 
+Adjustment options to account for different mirror thicknesses and surface curvature. 
+ 
+Absolute measurements, no reference mirror necessary. 
+ 
+Measurement spot size as large as possible, with the option of reducing size in case of interest.  
+ 
+All measurements included in the process of obtaining the desired result should be done at the same spot on the 
+sample and with the same instrument (i.e. same light source, detector etc.). 
+ 
+Non-contact measurement to avoid damaging the surface. 
+ 
+Portable for field measurements, which implies high battery autonomy, battery status display, light-weight, 
+small compact size, easy to handle, robust, and digital data storage. 
+ 
+A coordinate system that is incorporated in the instrument to identify the position of defect points on a mirror 
+and study their evolution over time would be a useful addition for monitoring quality. 
+ 
+Stable concerning associated type-B1 uncertainties. These type-B uncertainties should be kept to a minimum 
+[40].  
+ 
+No influence by external stray light. 
+ 
+No risk to human health or environmental hazard involved. 
+5.2. Minimum required instrument properties 
+While research and development continues to improve the available instrumentation to fulfil most of the above 
+mentioned qualities, the need for measurement results today requires the employment of existing technology, even if 
+none exists that fully accomplishes the desired ideal measurement results. For the measurement of minimum required 
+parameters as defined in chapter 4, not every available instrument is equally appropriate. To maintain a high accuracy 
+and comparability of results, the following requirements should be fulfilled by the instrument that is to be employed. 
+                                                     
+1 
+ 
+ As explained in [40], type B uncertainties refer to instrument specific, systematic uncertainties (i.e. repeatability, calibration accuracy, 
+ambient temperature dependency, stability of light source etc.) which, once determined, represent a constant value of measurement uncertainty. 
+This value is added by means of sum of squares to the type A uncertainty, which represents the statistical variance between several measurements 
+taken for each sample analysis.  
+
+=== PAGE 18 ===
+ 
+12 
+ 
+5.2.1. Instrument properties for hemispherical reflectance 
+The measurement of hemispherical reflectance is a widely applied field and the available instrumentation is 
+sophisticated to usually acquire results with high accuracy. For most reliable results, top class laboratory instruments 
+like double beam spectrophotometers are recommended. For the instrument selection, the following should be 
+considered: 
+ 
+Measurement wavelength range of  = [320, 2500] nm at wavelength intervals which allow accurate solar 
+weighted calculation (maximum wavelength interval of 5 nm); in the case of interest in UV, the wavelength 
+range to 280-2500 nm shall be used. 
+ 
+Measurement at least at near normal incidence (θi <= 15°). 
+ 
+Preferably absolute measurements, or measurement with a stable, calibrated reference mirror of the same 
+material of the sample mirror studied (no diffuse reference coupon). 
+ 
+If measurements at θi > 15° are possible, the calibration of the reference mirror must be available for the same 
+incidence angles. 
+ 
+If integrating sphere is part of the setup: sphere size needs to be adequate to minimize errors. A diameter not 
+smaller than 150 mm is recommended [41]. Also, the port fraction must be between 2 and 4% of the surface of 
+the sphere [42]. 
+ 
+Stable concerning associated type-B2 uncertainties. These type-B uncertainties should be kept to a minimum 
+[40].  
+ 
+No influence by external stray light. 
+ 
+No risk to human health or environmental hazard involved. 
+5.2.2. Instrument properties for specular reflectance 
+The variation of solar mirror material types and their complex properties makes specular reflectance measurements 
+more challenging. The result is very susceptible to differences in setup, beam alignment and acceptance aperture. 
+Therefore the following requirements should be considered when selecting or developing a reflectometer: 
+ 
+Measurement at several (at least three) narrow wavelengths (line width similar to that of hemispherical 
+measurements) appropriately spaced along the solar spectrum or at a specified wavelength range that accounts 
+for differing wavelength dependent scattering properties. If the reflector material is known to be of high 
+specularity, the simplified procedure in Annex A.4 may be applied. 
+ 
+Several precise and selectable acceptance apertures or an innovative approach that covers at least a range of 
+acceptance angles from  >= 0 mrad to  <= 20 mrad. If the reflector material is known to be of high 
+specularity, the simplified procedure in Annex A.4 may be applied. 
+ 
+Measurement at least at near normal incidence (θi <= 15°), and preferably at two more angles of incidence.  
+ 
+Preferably absolute measurements, or measurement with a stable, calibrated reference mirror (no diffuse 
+reference coupon or coupon calibrated for gloss measurements). 
+ 
+If measurements at θi > 15° are possible, the calibration of the reference mirror must be available for the same 
+incidence angles. 
+
+=== PAGE 19 ===
+ 
+13 
+ 
+ 
+Adjustment options for correcting beam alignment, to account for different mirror thicknesses and surface 
+curvature. 
+ 
+If portable: high battery autonomy, battery status indicator, light-weight, small compact size, easy to handle, 
+robust. 
+ 
+Stable concerning associated type-B2 uncertainties. These type-B uncertainties should be kept to a minimum 
+[40].  
+ 
+No influence by external stray light. 
+ 
+No risk to human health or environmental hazard involved. 
+5.2.3. Recommendations 
+The most common commercial instruments for measuring spectral reflectance are the dispersive spectrophotometers. In 
+that case, among the settable parameters, scan speed 
+ (nm /sec) and detector integration time 
+(sec) are quite 
+important because they determine the maximum detectable spectral slope of the measurement M: 
+ 
+(8) 
+Too high values of speed and integration time can bring to artificial spectra, like with peak-valley smoothing and λ-
+retarded behavior. Unfortunately it is not possible to indicate a setting having general validity, because the maximum 
+slope strictly depends on the specific features of the spectra one has to measure: the more jagged the spectrum is, the 
+slower speed with shorter integration times are required. As a rule of thumb, users should compare dynamical to 
+stationary measurements at the wavelength where the spectrum shows the steeper slope; if the difference is larger than 
+the experimental error, speed and integration time must be reduced. 
+ 
+ 
+                                                     
+2 
+ 
+ As explained in [40], type B uncertainties refer to instrument specific, systematic uncertainties (i.e. repeatability, calibration accuracy, 
+ambient temperature dependency, stability of light source etc.) which, once determined, represent a constant value of measurement uncertainty. 
+This value is added by means of sum of squares to the type A uncertainty, which represents the statistical variance between several measurements 
+taken for each sample analysis. 
+
+=== PAGE 20 ===
+ 
+14 
+ 
+6 
+Preparation of measurement 
+The preparation of samples is an essential part of the measurement process. The important points to be considered for 
+acquiring reliable measurement results are explained in the following. 
+6.1. General 
+ 
+For laboratory measurements, the samples should be cut to a size that allows measurement on different points 
+on the surface, but also fits into the instrument’s sample holder. The sample must not be smaller than the 
+sample port (opening hole). The reflector sample must be able to lie flat against the sample port of the 
+instrument. 
+ 
+To evaluate a commercial reflector product, samples should be taken out of the production line to be measured 
+rather than prototype samples specifically made for the analysis. At least three replicate samples of one product 
+batch should be analyzed, so that anomalies can be identified. 
+ 
+Flexible samples should be applied to a stable, flat substrate before measurement. The substrate should have 
+smooth surface properties, to avoid that roughness of the substrate influences the measured specularity of the 
+sample.  
+ 
+Regular recalibration and maintenance of instruments and reference standards at least every year are essential 
+for a performance with constant high accuracy. 
+ 
+At least 3 measurements on different local spots and different orientations (i.e. turns of 90°) should be 
+performed per sample that are averaged for the result. To average anisotropic behaviour, it is especially 
+advised to rotate the sample orientation on the sample support.  
+ 
+Mirrors should be stored in a dry, dark local and protected to avoid the risk of scratches and degradation. 
+6.2. Cleaning 
+The mirror’s front surface should be cleaned very carefully prior to measurement according to the manufacturer’s 
+recommendation or with compressed air (free of particles and oil). In case of remaining dust or soil after a visual 
+inspection, a soft lens tissue and demineralized water will be employed. Abrasive or solvent agents that may change the 
+properties of the sample shall never be employed. In addition, special care must be taken to avoid any contamination 
+after the cleaning due to a negligent manipulation. The reflector surface may only be touched with gloves. 
+If the mirrors cannot be cleaned sufficiently with the normal cleaning procedure because of heavy soiling or because 
+air-blown dirt has bonded and baked onto the mirror surface for samples exposed outdoors, slightly more aggressive 
+methods may need to be used. Depending on the type of solar reflector, contact washing with a cotton swap and an 
+extremely dilute solution of a mild detergent and demineralized water (1/100) followed by a copious rinse with 
+demineralized water can be used. Careful utilization of ethyl alcohol can be used for glass, protected aluminium, and 
+some front surface mirrors. Isopropanol is not advised because it leaves a residual coating which smears on the mirror. 
+Many alcohols (e.g., toluene, acetone benzene) are not advised for use with silvered polymers because the alcohol can 
+soften and damage the polymer surface. Commercial glass cleaner and chlorine- and ammonia-based cleaners are not 
+recommended with sensitive metals like silver. If a smear is left on the mirror, it should be carefully removed with 
+demineralized water.  
+The samples should be allowed sufficient time to dry (i.e., overnight), particularly if the mirror’s surface can absorb 
+water (i.e., silvered polymers) during cleaning. Any remaining dust should be removed with pressurized air. The 
+sample should be free of grease and particles and perfectly dry before measurement. 
+
+=== PAGE 21 ===
+ 
+15 
+ 
+6.3. Reference mirrors  
+If the measurement setup requires the use of a reference coupon, a mirror must be used for measurement of mirror 
+material samples. Diffuse white coupons or black glass coupons used in glossmeters are not recommended [43]. If the 
+results that are to be reported are acquired with different instruments, the same reference mirror should be used in all 
+measurements. It is recommended to select a mirror of high specularity and reflectance that is stable to degradation as 
+reference and have its calibration traceable to a certified calibration institute. The calibration of the reference mirror 
+must be valid for the incidence angles in which the measurements are to be performed.  
+A set of at least two calibrated identical reference mirrors should be maintained. One of these mirrors should be kept in 
+a protected clean place as a master standard. The second mirror can be used for daily measurements as a working 
+standard. It is recommended to have more than one working standard and use them alternately to guarantee longer 
+lifetimes. A mirror manufacturer may even use highly stable mirrors of the own production to be calibrated for use as 
+working standards.  
+The working standards should be checked and recalibrated regularly (at least every year). The recalibration interval 
+depends on the amount of daily usage. For recalibration, the master standard is used as reference mirror and the 
+working standard is measured as a sample. Regular recalibration of both, working standards and, after a greater 
+interval, also the master standard is necessary to maintain good accuracy. The reference mirrors should be replaced 
+when they display visible degradation. Special care must be taken in managing the working standard if front surface 
+mirrors are used. 
+The reference mirrors must be cleaned and without defects for measurements. 
+7 
+Weighting with standard solar spectrum 
+For evaluation of the quality of a mirror for application in concentrating solar power technology, the reflectance 
+spectrum needs to be weighted with a standardized solar irradiance spectrum. This allows an averaged evaluation of the 
+solar radiation that is reflected by the mirror material. The procedure is explained in the following. 
+7.1. General 
+The solar irradiance spectrum is taken from international standard tables which represent an average irradiance 
+spectrum for the elevation of the concerned country, i.e. in the northern hemisphere at an elevation level typical for the 
+United States or Europe the spectrum is calculated with Air Mass 1.5 (AM1.5) at normal incidence. Solar weighting of 
+the reflectance results with different available solar norm spectra leads to a difference in the solar weighted values 
+ranging from 0.3 up to 1.5 percentage points depending on the spectral properties of the material. 
+It is recommended to take the standardized solar irradiance spectrum from the most current accepted solar standard, 
+which is actually ASTM G173 [33]. It should be avoided to apply tables for global solar irradiance. The relevant table, 
+i.e. reported in Annex B represents direct + circumsolar solar irradiance.  
+ 
+
+=== PAGE 22 ===
+ 
+16 
+ 
+7.2. Solar-weighted and UV-weighted reflectance 
+The calculation of solar weighting is explained extensively in the withdrawn standard ISO 9845 [36] and in the 
+standard ISO 9050 [37], which only contains global irradiance tables. The solar-weighted reflectance, s, and the UV-
+weighted reflectance of a mirror represents the convolution of the spectral reflectance function, λ(), with the solar 
+irradiance function, Gb(), in the proper λ range. Since these functions are generally only known with discrete values, 
+the integration is performed as a summation. Therefore, the solar-weighted or UV-weighted hemispherical reflectance, 
+s,h([λa,λb],i,h) or UV,h([λa,λb],i,h), and the solar-weighted or UV-weighted specular reflectance, s,φ([λa,λb],i,) or 
+UV,φ([λa,λb],i,), of a solar mirror is calculated using the values of the measured reflectance spectrum, λ,h(,,h), or 
+λ,φ(,i,), and the direct solar irradiance spectrum, Gb(λ), at wavelength intervals of  with equations 9.a and 9.b. 
+𝜌Ss,ℎ([𝜆𝑎, 𝜆𝑏], 𝜃𝑖, ℎ) =
+∑
+𝜌𝜆,ℎ(𝜆, 𝜃𝑖, ℎ) *𝐺𝑏(𝜆) ∙𝛥𝜆
+𝜆max
+𝜆min
+∑
+𝐺𝑏(𝜆) ∙𝛥𝜆
+𝜆max
+𝜆min
+for𝜆= {𝜆min, 𝜆min + 5,...𝜆max} 
+(9.a) 
+𝜌Ss,𝜑([𝜆𝑎, 𝜆𝑏], 𝜃𝑖, 𝜑) =
+∑
+𝜌𝜆,𝜑(𝜆, 𝜃𝑖, 𝜑) *𝐺𝑏(𝜆) ∙𝛥𝜆
+𝜆max
+𝜆min
+∑
+𝐺𝑏(𝜆) ∙𝛥𝜆
+𝜆max
+𝜆min
+for𝜆= {𝜆min, 𝜆min + 5,...𝜆max} 
+(9.b) 
+where the λmin and λmax must be taken from Table 2, according to the type of desired average, and the subscript Ss 
+properly set.  
+Table 2. Wavelength range, depending on the type of the desired average. 
+Class 
+Ss 
+λmin (nm) 
+λmax (nm) 
+solar 
+s 
+320 
+2500 
+UV 
+UV 
+280 
+400 
+UVA 
+UVA 
+315 
+400 
+UVB 
+UVB 
+280 
+315 
+ 
+Noteworthy, if 
+ is constant, it can be suppressed in Equations 9.a and 9.b. 
+8 
+Measurement of aged and/or soiled mirror samples 
+This section presents a very preliminary draft of the methodology to monitor aged and/or soiled mirrors samples and 
+will be improved in further versions of this guideline. 
+If mirrors are to be characterized which have been in-service outdoors or tested in accelerated aging or durability tests, 
+several measurements need to be taken on the sample to ensure that the measured value is statistically meaningful. This 
+is especially important when local degradation effect occur on the mirror surface. 
+If the time behavior of the reflectance during outdoor exposure is monitored, or if the reflectance decay during 
+accelerated aging is to be measured, the samples shall be measured in the exact same positions for each analysis. A 
+mask or stoppers may be used to easily find the same measurement position again after exposure. 
+
+=== PAGE 23 ===
+ 
+17 
+ 
+To monitor the aging, it is sufficient to measure the specular reflectance at one defined wavelength in the range λ=[400, 
+700] nm, θi ≤ 15º and a  in the range of  >=  0 to  <= 20 mrad. The reflectance loss is computed by subtracting the 
+initial value from the reflectance after exposure. The following parameters shall be reported after aging tests: 
+ 
+Solar weighted hemispherical reflectance loss Δρs,h([320.2500],θi,h) 
+ 
+Monochromatic hemispherical reflectance loss  Δρλ,h(λ,θi,h) 
+ 
+Monochromatic specular reflectance loss Δρλ,φ(λ,θi,φ) (at the same wavelength as for  Δρλ,h(λ,θi,h)) 
+For materials that may suffer from glass corrosion, it is recommended to test at least one additional sample with a 
+protective tape on the glass surface, so that the reflectance measurement of the reflective layer is not influenced by 
+glass corrosion. The sample should be placed with the protective paint side facing upwards in the chamber. Reflectance 
+values of protected and unprotected samples shall be compared after the durability test. 
+As a minimum, 5 monochromatic specular measurements and 3 spectral hemispherical measurements shall be taken on 
+a sample of around 100x100 mm². The 5 monochromatic measurements obtained with a reflectometer shall be taken in 
+the center of the sample and close to the 4 corners of the sample. The measurement shall not be taken closer than 10 
+mm to the sample edge or areas that have not been exposed to the testing conditions (e.g. due to the sample holder). 
+The spectral hemispherical measurements obtained with a spectrophotometer shall be taken in the center of the sample. 
+The sample shall be rotated after each measurement by 90° (to obtain measurements at 0°, 90° and 180°on the same 
+position on the sample). 
+Figure 4 shows an example of the measurements taken on a 120x120 mm² sample. The herein used reflectometer and 
+spectrophotometer have a measurement spot of 10 mm diameter and 9 x 17 mm², respectively. 
+ 
+Figure 4: Exemplary measurements taken on a 120x120 mm² sample with localized corrosion spots.  
+ 
+ 
+
+=== PAGE 24 ===
+ 
+18 
+ 
+9 
+Reporting and accuracy 
+The reported parameters and information need to be uniform and represent the measured reflectance parameters in a 
+way, that the evaluator can distinguish the parameter characteristics. This ensures that reflectance data of products are 
+comparable within the solar community and can be employed further in simulations and system analysis. The values 
+that are to be reported are defined in the next Section. Sources of errors are discussed in Section 9.2. 
+9.1. Reporting 
+Reported values should always be exactly specified for hemispherical or specular reflectance including measurement 
+wavelength spectrum, incidence angle and acceptance angle. For solar weighted values, the solar standard and its 
+version that has been applied must be stated.  
+As a minimum requirement, the following results are to be reported:  
+ 
+s,h([λa,λb],i,h) solar weighted hemispherical reflectance at near normal incidence.  
+ 
+Hemispherical reflectance spectrum as a graph. 
+ 
+λ,φ(,θi,) specular reflectance at near normal incidence (optionally other angle of incidence), at least three  
+and at least three   in the range  = 0-20 mrad (see chapter 4.3). If the reflector material is known to be of 
+high specularity, the simplified procedure in Annex A.4 may be applied.  
+ 
+λ,h(,θi,h) hemispherical reflectance values at the same wavelengths or range as λ,φ(,θi,). 
+ 
+Statistical standard deviation of measurements for all above listed values, (). 
+ 
+Combined uncertainty including type A and type B uncertainties of measurement setup. 
+Furthermore, the typology and main characteristics of the used instruments should be reported. Also, the type of 
+reference mirror with its calibration status and calibration uncertainty, as well as measurement spot size and the 
+number and positions of measurements that have been averaged. Sample properties should also be reported, including 
+material type, thickness, surface quality (clean, scratched, etc.), edge protection, possible curvature and other 
+observations.  
+Reflectance values should be reported in dimensionless scientific format, i.e. s,h([320.2500]nm,8º,h) = 0.942.  
+If the measurement setup allows the determination of any of the above results as a function of θi and/or as a function of 
+, then these functions should be reported additionally as graphs in a representative format.  
+9.2. Sources of error 
+Optical measurements are highly sensitive to error. Especially specular reflectance measurements are very susceptible 
+to measurement errors and false handling of the instrument. To ensure reproducible and accurate measurements, the 
+following points of importance need to be considered. 
+ 
+For specular measurements, beam alignment is a highly important issue. If, due to displacement caused by 
+mirror thickness or a bent/curved surface, the reflected beam does not enter the acceptance aperture or 
+impinges onto the detector not correctly then the measurement result is affected. 
+ 
+When specular measurements are performed at various acceptance angles and the setup requires a reference 
+mirror, then the reference measurement with the reference mirror must be performed for each selected .   
+
+=== PAGE 25 ===
+ 
+19 
+ 
+ 
+When measurements are performed at various incidence angles using a calibrated reference mirror, the result 
+might be afflicted with an error if the calibration of the reference mirror has not been performed at the same 
+incidence angles. 
+ 
+If the reference mirror is not clean, a lower flux intensity is associated with the reference reflectance value and 
+therefore all sample measurements will be overestimated. The same is the case when the beam alignment with 
+the reference mirror in place prevents the reflected beam to enter the acceptance aperture correctly or when the 
+reference mirror has degraded. 
+The criteria and the procedures for calculating the uncertainty of solar reflectance are reported in Annex C.  
+ 
+ 
+
+=== PAGE 26 ===
+ 
+20 
+ 
+Annex A 
+Practical application (informative) 
+A.1. 
+General 
+This section is meant to provide a practical example for the procedure that can be applied to acquire the values that 
+need to be reported according to section 9.1. The example assumes the measurement with common instruments but 
+does not imply that the procedure is the only one applicable. It is possible to use simplified procedures for certain kinds 
+of highly specular solar reflector materials. A suggestion on how the results can be evaluated and on how the procedure 
+could be simplified, is part of this section.  
+A.2. 
+Hemispherical reflectance 
+Spectral hemispherical reflectance might be obtained with a suitable, top class commercial spectrometer or 
+spectrophotometer equipped with an integrating sphere of no less than 150 mm diameter. Typically, the incidence 
+angle of such an instrument is near normal. As a reference mirror, a stable, 2nd surface silvered or aluminized glass 
+mirror with a calibration traceable to a certified calibration institute, can be used. A dark current measurement 
+(Zeroline) should always be subtracted from each measurement.  
+The sample measurement, Measurementsample, is converted into a reflectance spectrum, λ,h(,θi,h), using the reference 
+measurement, Measurementreference, and the known reflectance spectrum of the reference mirror, λ,h,reference(,i,h), as 
+follows: 
+𝜌𝜆,ℎ,sample(𝜆, 𝜃𝑖, ℎ) =
+Measurementsample −Zeroline
+Measurementreference −Zeroline *𝜌𝜆,ℎ,reference(𝜆, 𝜃𝑖, ℎ) 
+(10) 
+Several measurements on different surface areas are averaged. Then the solar weighting is performed as explained in 
+chapter 7. The resulting parameters that can be reported are: 
+ 
+s,h([λa,λb],i,h) solar weighted hemispherical reflectance at near normal incidence angle.  
+ 
+Hemispherical reflectance spectrum as a graph. 
+ 
+For non-specular reflectors, λ,h(,θi,h) at the relevant wavelength  that is used in the specular measurement 
+(following section), so that the two can be compared. 
+ 
+The standard deviation of these measurements on different spots on the sample indicates its homogeneity and 
+thus the confidence in the final result. 
+A.3. 
+Specular reflectance 
+Any reflectometer that is adaptable to mirror thickness and surface curvature and is equipped with acceptance angle 
+apertures in the correct range might be employed. Existing commercial instruments are either limited to only 
+monochromatic, respectively only a few wavelengths for illumination, or otherwise do not have the possibility of 
+selecting a defined acceptance angle in the relevant range. If the reflector material is known to be of high specularity, 
+the simplified procedure explained in Annex A.4 may be applied. 
+One imagines for example measurement taken at near-normal incidence and  = {3.3, 6.4, 9.6, 13.6, 16.4, 19.4} mrad 
+or  ={3, 7.5, 12.5, 23, 30} mrad and  = {451.5, 532.5, 661} nm or  = {455, 533, 660} nm.  
+
+=== PAGE 27 ===
+ 
+21 
+ 
+It should be taken care that hemispherical and specular measurements are performed on the same surface spot of the 
+sample and using the same measurement spot size. Several measurements on different surface areas are averaged. The 
+standard deviation of the measurements on different spots on the sample indicates its homogeneity and thus the 
+confidence in the final result 
+The resulting parameters that can be reported are a set of values for λ,φ(,θi,) at near normal θi, that can conveniently 
+be plotted as discrete data points per λ and φ with  being the x-axis (Figure 5 left) or with φ being the x-axis (Figure 5 
+right). 
+ 
+Figure 5: Example of plot for measured reflectance values representing a mirror with lower specularity in comparison 
+to plotted values of a highly specular mirror. All values belong to real measurements. Left: λ in the x-axis. Right: φ in 
+the x-axis. 
+A.4. 
+Simplified procedure for reflectors with high specularity 
+The solar diffuse reflectance, ρs,d([λa,λb],θi,φd), is defined as the radiation scattered in the range of angle offsets from the 
+specular direction [2]. Therefore, ρs,φ(([λa,λb],θi,φ) can be written as in equation (11).  
+ 
+𝜌𝑠,𝜑([𝜆𝑎, 𝜆𝑏], 𝜃𝑖, 𝜑) = 𝜌𝑠,ℎ([𝜆𝑎, 𝜆𝑏], 𝜃𝑖, ℎ) −𝜌𝑠,𝑑([𝜆𝑎, 𝜆𝑏], 𝜃𝑖, 𝜑𝑑) 
+(11) 
+ 
+The simplified approach is based on the following assumption: “when the ρs,d([λa,λb],,θi,φd) beyond =7.5 mrad is less 
+than the experimental error of the reflectance measurement, it is negligible and the ρs,φ([λa,λb],θi,φ) of a solar mirror can 
+be approximated by ρs,h([λa,λb],θi,h), as indicated in equation (12)”. 
+ 
+𝜌𝑠,𝜑([𝜆𝑎, 𝜆𝑏], 𝜃𝑖, 𝜑) ≈𝜌𝑠,ℎ([𝜆𝑎, 𝜆𝑏], 𝜃𝑖, ℎ) 
+(12) 
+ 
+Solar mirrors fulfilling the above condition are named “highly specular solar mirrors”, or equivalently “solar mirrors 
+with high specularity”. Compared to the previous method included in the version 2.5 of this guideline, the new one 
+
+=== PAGE 28 ===
+ 
+22 
+ 
+eliminates the measurement of the specular reflectance at one λ and one  per θi and involves the solely measurement 
+of the ρs,h([λa,λb],θi,h).  
+Concerning the way to check if a certain solar mirror can be treated as highly specular, it is considered that the former 
+method (included in the version 2.5 of this guideline) is not appropriate because it is based on the comparison of two 
+parameters measured with two different commercial instruments (ρλ,φ(λ,θi,φ)) measured with a specular reflectometer 
+and ρλ,h(λ,θi,h) measured with a spectrophotometer). These two measurement instruments have different θi (usually, 
+θi = 8° for spectrophotometer and θi = 15° for reflectometer) and different spot sizes (typically, 12.0 x 4.5 mm^2 for 
+spectrophotometer and 10 mm diameter for reflectometers) and might not be measured at exactly the same spot on the 
+reflector.  
+A solar mirror can be considered as highly specular and, consequently, can be treated with this simplified procedure, 
+only if the following experimental criterion, composed of two conditions, is passed: 
+ 
+The difference between the experimental values of near-specular reflectance, ρλ,φ(λ,θi,φ), at a λ in the range 
+λ=[400, 700] nm and θi ≤ 15º, measured for φ ≈ 7.5 mrad and φ ≈ 25.0 mrad must be less or equal than the 
+experimental error (typically ±0.003). The two measurements must be accomplished in the same conditions 
+(particularly with the same instrument and in the same point of the mirror surface), except for the φ angle. 
+This test must be repeated at least at three different points of the mirror surface. 
+ 
+The solar-weighted diffuse reflectance at θi ≤ 15º and φ > 50 mrad, ρs,d([λa,λb],θi≤15º,φ>50mrad), measured 
+with a high quality spectrophotometer equipped with an integrating sphere with diameter not less than 
+150 mm and configured to leave the specular beam escaping with a light-trap accessory, must be less or 
+equal than the experimental error (typically ±0.003).  
+ 
+
+=== PAGE 29 ===
+ 
+23 
+ 
+Annex B 
+Table for solar weighting of reflectance 
+B.1. 
+General 
+The following table can be used to calculate the solar-weighted hemispherical or solar-weighted specular reflectance as 
+explained in chapter 7. Column 1 represents the wavelength in regular intervals of  = 5 nm and column 2 gives the 
+solar irradiance (direct + circumsolar) in Wm-2nm-1 extracted from the last column of ASTM G173-2003 [33]. 
+B.2. 
+Weighting table 
+If other wavelength interval step is selected for the measurements, the data have to be adapted to use these factors. In 
+any case, the wavelength interval step must be lower or equal than 10 nm. The tabulated data differ from the original 
+ones of ASTMG173 for the wavelength step which is made uniform in the guidelines for simplicity. 
+Table 3. Direct solar irradiance and weighting factors for solar-weighted reflectance, as a function of the wavelength. 
+Wavelength  
+Direct + 
+Circumsolar 
+Wavelength  
+Direct + 
+Circumsolar 
+Wavelength  
+Direct + 
+Circumsolar 
+ [nm] 
+Gb [W m-2nm-1] 
+ [nm] 
+Gb [W m-2nm-1] 
+ [nm] 
+Gb [W m-2nm-1] 
+280 
+2.54E-26 
+440 
+1.10E+00 
+600 
+1.33E+00 
+285 
+9.00E-17 
+445 
+1.20E+00 
+605 
+1.34E+00 
+290 
+5.15E-10 
+450 
+1.29E+00 
+610 
+1.32E+00 
+295 
+3.22E-06 
+455 
+1.27E+00 
+615 
+1.33E+00 
+300 
+4.56E-04 
+460 
+1.28E+00 
+620 
+1.33E+00 
+305 
+8.93E-03 
+465 
+1.29E+00 
+625 
+1.27E+00 
+310 
+2.78E-02 
+470 
+1.27E+00 
+630 
+1.26E+00 
+315 
+7.37E-02 
+475 
+1.38E+00 
+635 
+1.31E+00 
+320 
+1.13E-01 
+480 
+1.38E+00 
+640 
+1.30E+00 
+325 
+1.55E-01 
+485 
+1.35E+00 
+645 
+1.32E+00 
+330 
+2.62E-01 
+490 
+1.40E+00 
+650 
+1.23E+00 
+335 
+2.65E-01 
+495 
+1.42E+00 
+655 
+1.22E+00 
+340 
+2.97E-01 
+500 
+1.34E+00 
+660 
+1.27E+00 
+345 
+2.79E-01 
+505 
+1.36E+00 
+665 
+1.29E+00 
+350 
+3.29E-01 
+510 
+1.35E+00 
+670 
+1.29E+00 
+355 
+3.91E-01 
+515 
+1.34E+00 
+675 
+1.26E+00 
+360 
+3.92E-01 
+520 
+1.33E+00 
+680 
+1.27E+00 
+365 
+4.18E-01 
+525 
+1.39E+00 
+685 
+1.25E+00 
+370 
+5.17E-01 
+530 
+1.36E+00 
+690 
+1.07E+00 
+375 
+4.11E-01 
+535 
+1.37E+00 
+695 
+1.15E+00 
+380 
+4.98E-01 
+540 
+1.31E+00 
+700 
+1.16E+00 
+385 
+4.86E-01 
+545 
+1.37E+00 
+705 
+1.20E+00 
+390 
+5.85E-01 
+550 
+1.36E+00 
+710 
+1.20E+00 
+395 
+6.01E-01 
+555 
+1.39E+00 
+715 
+1.14E+00 
+400 
+8.40E-01 
+560 
+1.31E+00 
+720 
+8.99E-01 
+405 
+8.78E-01 
+565 
+1.36E+00 
+725 
+9.47E-01 
+410 
+8.09E-01 
+570 
+1.32E+00 
+730 
+1.03E+00 
+415 
+9.56E-01 
+575 
+1.32E+00 
+735 
+1.11E+00 
+420 
+8.85E-01 
+580 
+1.35E+00 
+740 
+1.11E+00 
+425 
+9.93E-01 
+585 
+1.37E+00 
+745 
+1.14E+00 
+430 
+7.01E-01 
+590 
+1.23E+00 
+750 
+1.13E+00 
+435 
+1.01E+00 
+595 
+1.29E+00 
+755 
+1.13E+00 
+
+=== PAGE 30 ===
+ 
+24 
+ 
+Wavelength  
+Direct + 
+Circumsolar 
+Wavelength  
+Direct + 
+Circumsolar 
+Wavelength  
+Direct + 
+Circumsolar 
+ [nm] 
+Gb [W m-2nm-1] 
+ [nm] 
+Gb [W m-2nm-1] 
+ [nm] 
+Gb [W m-2nm-1] 
+760 
+2.47E-01 
+1005 
+6.41E-01 
+1255 
+4.31E-01 
+765 
+6.34E-01 
+1010 
+6.77E-01 
+1260 
+4.12E-01 
+770 
+1.06E+00 
+1015 
+6.67E-01 
+1265 
+3.79E-01 
+775 
+1.08E+00 
+1020 
+6.58E-01 
+1270 
+3.71E-01 
+780 
+1.07E+00 
+1025 
+6.57E-01 
+1275 
+3.95E-01 
+785 
+1.06E+00 
+1030 
+6.51E-01 
+1280 
+4.04E-01 
+790 
+1.00E+00 
+1035 
+6.43E-01 
+1285 
+4.06E-01 
+795 
+1.01E+00 
+1040 
+6.34E-01 
+1290 
+3.95E-01 
+800 
+9.89E-01 
+1050 
+6.18E-01 
+1300 
+3.39E-01 
+805 
+9.73E-01 
+1055 
+6.12E-01 
+1305 
+3.68E-01 
+810 
+9.75E-01 
+1060 
+6.01E-01 
+1310 
+2.89E-01 
+815 
+8.29E-01 
+1065 
+5.95E-01 
+1315 
+2.74E-01 
+820 
+7.99E-01 
+1070 
+5.72E-01 
+1320 
+2.49E-01 
+825 
+8.98E-01 
+1075 
+5.61E-01 
+1325 
+3.09E-01 
+830 
+8.49E-01 
+1080 
+5.65E-01 
+1330 
+2.21E-01 
+835 
+9.29E-01 
+1085 
+5.62E-01 
+1335 
+2.22E-01 
+840 
+9.41E-01 
+1090 
+5.27E-01 
+1340 
+1.62E-01 
+845 
+9.42E-01 
+1095 
+4.94E-01 
+1345 
+1.05E-01 
+850 
+8.29E-01 
+1100 
+4.61E-01 
+1350 
+1.55E-02 
+855 
+8.47E-01 
+1105 
+4.81E-01 
+1355 
+3.48E-06 
+860 
+9.18E-01 
+1110 
+4.55E-01 
+1360 
+2.07E-06 
+865 
+8.95E-01 
+1115 
+2.38E-01 
+1365 
+8.78E-12 
+870 
+8.99E-01 
+1120 
+1.36E-01 
+1370 
+2.83E-07 
+875 
+8.62E-01 
+1125 
+1.38E-01 
+1375 
+3.13E-04 
+880 
+8.74E-01 
+1130 
+6.76E-02 
+1380 
+7.90E-05 
+885 
+8.79E-01 
+1135 
+1.48E-02 
+1385 
+2.03E-06 
+890 
+8.61E-01 
+1140 
+2.44E-01 
+1390 
+4.78E-04 
+895 
+7.60E-01 
+1145 
+1.40E-01 
+1395 
+6.51E-07 
+900 
+6.94E-01 
+1150 
+1.16E-01 
+1400 
+3.15E-09 
+905 
+7.63E-01 
+1155 
+2.99E-01 
+1405 
+3.54E-07 
+910 
+5.86E-01 
+1160 
+2.74E-01 
+1410 
+4.53E-04 
+915 
+6.36E-01 
+1165 
+3.71E-01 
+1415 
+1.79E-04 
+920 
+6.97E-01 
+1170 
+4.37E-01 
+1420 
+8.04E-03 
+925 
+6.66E-01 
+1175 
+4.31E-01 
+1425 
+2.51E-02 
+930 
+4.07E-01 
+1180 
+4.21E-01 
+1430 
+5.99E-02 
+935 
+2.37E-01 
+1185 
+3.89E-01 
+1435 
+2.08E-02 
+940 
+4.44E-01 
+1190 
+4.41E-01 
+1440 
+3.85E-02 
+945 
+3.47E-01 
+1195 
+4.27E-01 
+1445 
+4.84E-02 
+950 
+1.39E-01 
+1200 
+4.28E-01 
+1450 
+2.67E-02 
+955 
+3.22E-01 
+1205 
+4.17E-01 
+1455 
+6.44E-02 
+960 
+3.97E-01 
+1210 
+4.33E-01 
+1460 
+8.32E-02 
+965 
+4.75E-01 
+1215 
+4.09E-01 
+1465 
+9.09E-02 
+970 
+5.97E-01 
+1220 
+4.37E-01 
+1470 
+4.84E-02 
+975 
+5.55E-01 
+1225 
+4.41E-01 
+1475 
+1.80E-01 
+980 
+5.69E-01 
+1230 
+4.39E-01 
+1480 
+5.91E-02 
+985 
+6.47E-01 
+1235 
+4.44E-01 
+1485 
+1.22E-01 
+990 
+6.88E-01 
+1240 
+4.40E-01 
+1490 
+1.70E-01 
+995 
+7.07E-01 
+1245 
+4.36E-01 
+1495 
+1.77E-01 
+1000 
+6.92E-01 
+1250 
+4.37E-01 
+1500 
+2.43E-01 
+
+=== PAGE 31 ===
+ 
+25 
+ 
+Wavelength  
+Direct + 
+Circumsolar 
+Wavelength  
+Direct + 
+Circumsolar 
+Wavelength  
+Direct + 
+Circumsolar 
+ [nm] 
+Gb [W m-2nm-1] 
+ [nm] 
+Gb [W m-2nm-1] 
+ [nm] 
+Gb [W m-2nm-1] 
+1505 
+1.79E-01 
+1755 
+1.49E-01 
+2005 
+1.47E-02 
+1510 
+2.63E-01 
+1760 
+1.56E-01 
+2010 
+3.91E-02 
+1515 
+2.58E-01 
+1765 
+1.30E-01 
+2015 
+2.62E-02 
+1520 
+2.57E-01 
+1770 
+1.38E-01 
+2020 
+4.42E-02 
+1525 
+2.51E-01 
+1775 
+1.12E-01 
+2025 
+7.28E-02 
+1530 
+2.48E-01 
+1780 
+9.81E-02 
+2030 
+8.35E-02 
+1535 
+2.59E-01 
+1785 
+7.52E-02 
+2035 
+9.48E-02 
+1540 
+2.57E-01 
+1790 
+8.68E-02 
+2040 
+8.83E-02 
+1550 
+2.62E-01 
+1800 
+3.11E-02 
+2050 
+6.69E-02 
+1555 
+2.60E-01 
+1805 
+1.45E-02 
+2055 
+5.41E-02 
+1560 
+2.58E-01 
+1810 
+9.48E-03 
+2060 
+6.82E-02 
+1565 
+2.60E-01 
+1815 
+3.21E-03 
+2065 
+6.10E-02 
+1570 
+2.35E-01 
+1820 
+9.66E-04 
+2070 
+6.47E-02 
+1575 
+2.33E-01 
+1825 
+1.25E-03 
+2075 
+7.63E-02 
+1580 
+2.38E-01 
+1830 
+5.09E-06 
+2080 
+8.55E-02 
+1585 
+2.51E-01 
+1835 
+6.28E-06 
+2085 
+8.38E-02 
+1590 
+2.35E-01 
+1840 
+6.13E-08 
+2090 
+8.78E-02 
+1595 
+2.51E-01 
+1845 
+6.13E-06 
+2095 
+8.84E-02 
+1600 
+2.31E-01 
+1850 
+2.93E-06 
+2100 
+8.49E-02 
+1605 
+2.30E-01 
+1855 
+2.78E-07 
+2105 
+9.18E-02 
+1610 
+2.11E-01 
+1860 
+1.09E-05 
+2110 
+8.83E-02 
+1615 
+2.34E-01 
+1865 
+1.66E-05 
+2115 
+9.03E-02 
+1620 
+2.28E-01 
+1870 
+2.61E-10 
+2120 
+8.63E-02 
+1625 
+2.31E-01 
+1875 
+4.43E-10 
+2125 
+8.73E-02 
+1630 
+2.30E-01 
+1880 
+7.61E-05 
+2130 
+8.84E-02 
+1635 
+2.27E-01 
+1885 
+4.31E-05 
+2135 
+8.87E-02 
+1640 
+2.09E-01 
+1890 
+2.20E-04 
+2140 
+8.94E-02 
+1645 
+2.12E-01 
+1895 
+1.27E-04 
+2145 
+8.81E-02 
+1650 
+2.19E-01 
+1900 
+8.49E-07 
+2150 
+8.34E-02 
+1655 
+2.16E-01 
+1905 
+5.58E-07 
+2155 
+8.36E-02 
+1660 
+2.17E-01 
+1910 
+2.27E-05 
+2160 
+8.29E-02 
+1665 
+2.06E-01 
+1915 
+1.97E-05 
+2165 
+7.52E-02 
+1670 
+2.16E-01 
+1920 
+4.45E-04 
+2170 
+8.08E-02 
+1675 
+2.08E-01 
+1925 
+9.23E-04 
+2175 
+7.93E-02 
+1680 
+2.00E-01 
+1930 
+5.45E-04 
+2180 
+8.06E-02 
+1685 
+2.08E-01 
+1935 
+3.54E-03 
+2185 
+7.35E-02 
+1690 
+2.00E-01 
+1940 
+3.24E-03 
+2190 
+7.79E-02 
+1695 
+2.04E-01 
+1945 
+1.07E-02 
+2195 
+7.78E-02 
+1700 
+1.95E-01 
+1950 
+1.65E-02 
+2200 
+7.02E-02 
+1705 
+1.93E-01 
+1955 
+9.89E-03 
+2205 
+7.29E-02 
+1710 
+1.83E-01 
+1960 
+2.16E-02 
+2210 
+7.82E-02 
+1715 
+1.85E-01 
+1965 
+2.81E-02 
+2215 
+7.52E-02 
+1720 
+1.82E-01 
+1970 
+4.81E-02 
+2220 
+7.66E-02 
+1725 
+1.74E-01 
+1975 
+6.67E-02 
+2225 
+7.44E-02 
+1730 
+1.70E-01 
+1980 
+7.42E-02 
+2230 
+7.47E-02 
+1735 
+1.58E-01 
+1985 
+8.16E-02 
+2235 
+7.33E-02 
+1740 
+1.64E-01 
+1990 
+8.41E-02 
+2240 
+7.21E-02 
+1745 
+1.51E-01 
+1995 
+7.98E-02 
+2245 
+6.99E-02 
+1750 
+1.62E-01 
+2000 
+3.75E-02 
+2250 
+7.10E-02 
+
+=== PAGE 32 ===
+ 
+26 
+ 
+ 
+Wavelength  
+ 
+Direct + 
+Circumsolar 
+ 
+Wavelength  
+ 
+Direct + 
+Circumsolar 
+ 
+ 
+ [nm] 
+Gb [W m-2nm-1] 
+ [nm] 
+Gb [W m-2nm-1] 
+ 
+ 
+2255 
+6.69E-02 
+2470 
+1.66E-02 
+ 
+ 
+2260 
+6.61E-02 
+2475 
+1.64E-02 
+ 
+ 
+2265 
+6.74E-02 
+2480 
+8.00E-03 
+ 
+ 
+2270 
+6.41E-02 
+2485 
+5.58E-03 
+ 
+ 
+2275 
+6.33E-02 
+2490 
+3.50E-03 
+ 
+ 
+2280 
+6.56E-02 
+2495 
+2.86E-03 
+ 
+ 
+2285 
+6.24E-02 
+2500 
+7.03E-03 
+ 
+ 
+2290 
+6.25E-02 
+ 
+ 
+ 
+ 
+2300 
+5.82E-02 
+ 
+ 
+ 
+ 
+2305 
+5.85E-02 
+ 
+ 
+ 
+ 
+2310 
+6.32E-02 
+ 
+ 
+ 
+ 
+2315 
+5.75E-02 
+ 
+ 
+ 
+ 
+2320 
+5.15E-02 
+ 
+ 
+ 
+ 
+2325 
+5.56E-02 
+ 
+ 
+ 
+ 
+2330 
+5.62E-02 
+ 
+ 
+ 
+ 
+2335 
+5.74E-02 
+ 
+ 
+ 
+ 
+2340 
+4.54E-02 
+ 
+ 
+ 
+ 
+2345 
+5.09E-02 
+ 
+ 
+ 
+ 
+2350 
+4.11E-02 
+ 
+ 
+ 
+ 
+2355 
+4.70E-02 
+ 
+ 
+ 
+ 
+2360 
+4.97E-02 
+ 
+ 
+ 
+ 
+2365 
+4.89E-02 
+ 
+ 
+ 
+ 
+2370 
+3.05E-02 
+ 
+ 
+ 
+ 
+2375 
+4.37E-02 
+ 
+ 
+ 
+ 
+2380 
+4.21E-02 
+ 
+ 
+ 
+ 
+2385 
+3.05E-02 
+ 
+ 
+ 
+ 
+2390 
+3.67E-02 
+ 
+ 
+ 
+ 
+2395 
+4.02E-02 
+ 
+ 
+ 
+ 
+2400 
+4.37E-02 
+ 
+ 
+ 
+ 
+2405 
+3.33E-02 
+ 
+ 
+ 
+ 
+2410 
+3.35E-02 
+ 
+ 
+ 
+ 
+2415 
+2.71E-02 
+ 
+ 
+ 
+ 
+2420 
+2.64E-02 
+ 
+ 
+ 
+ 
+2425 
+3.28E-02 
+ 
+ 
+ 
+ 
+2430 
+4.47E-02 
+ 
+ 
+ 
+ 
+2435 
+1.48E-02 
+ 
+ 
+ 
+ 
+2440 
+4.29E-02 
+ 
+ 
+ 
+ 
+2445 
+2.07E-02 
+ 
+ 
+ 
+ 
+2450 
+1.35E-02 
+ 
+ 
+ 
+ 
+2455 
+2.47E-02 
+ 
+ 
+ 
+ 
+2460 
+3.32E-02 
+ 
+ 
+ 
+ 
+2465 
+2.40E-02 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+=== PAGE 33 ===
+ 
+27 
+ 
+Annex C 
+Calculation of the uncertainty of solar reflectance 
+This Annex defines the criteria and procedures for calculating the uncertainty in solar reflectance. 
+C.1. 
+Short summary of ISO/IEC GUIDE 98-3 
+The ISO/IEC GUIDE 98-3 Standard (Guide to the Expression of Uncertainty in Measurement or GUM) [40] explains 
+how to estimate the standard uncertainty of the measurand Y obtained by the measurement equation: 
+𝑌= 𝑓(𝑋1, 𝑋2, … 𝑋𝑁) 
+(13) 
+where Xi are the input quantities. Given the set of input estimates {xi}, the output estimate is 
+𝑦= 𝑓(𝑥1, 𝑥2, … 𝑥𝑁) 
+(14) 
+ 
+Reminding the reader to that document for the detailed exposition, here we just recall the evaluation of the standard 
+uncertainty of each input quantity Xi, belongings to one of the two cases: 
+o Type A: uncertainty is evaluated by the statistical analysis of series of observations - as an example if the 
+input quantity Xi is distributed like a Gaussian, its standard uncertainty is 
+𝑢(𝑋𝑖) = √∑
+(𝑋𝑖,𝑘−𝑋𝑖̅)
+2
+𝑁
+𝑘=1
+𝑛−1
+ 
+(15) 
+with  
+𝑋𝑖̅ = 1
+𝑛∑𝑋𝑖,𝑘
+𝑁
+𝑘=1
+ 
+(16) 
+o Type B: uncertainty is evaluated by means other than the statistical analysis of a series of observations 
+such as, manufacturers’ specifications, calibration, and/or previous experience /literature estimates – as 
+an example if one can assume the uniform distribution in the range 
+, the uncertainty is given by 
+𝑢𝑗= (𝑎+ −𝑎−)
+2√3
+ 
+(17) 
+Once the uncertainties of the input quantities are suitably evaluated, the combined standard uncertainty of the 
+measurement result  is given by 
+ 
+(18) 
+
+=== PAGE 34 ===
+ 
+28 
+ 
+ 
+where the partial derivatives 
+, referred as sensitivity coefficients, are evaluated at 
+. The last term is null when 
+the input quantities 
+ are uncorrelated. 
+ 
+In the general case uncertainty is computed so that the range 
+ has the confidence level of 68%, i.e. 1 standard 
+deviation. Higher levels of confidence can be obtained by the expanded uncertainty which is calculated by 
+multiplying the combined uncertainty (uc) by a coverage factor k. For infinite degrees of freedom, k=2 and k= 3 
+define an interval of confidence of approximately 95% and 99%, respectively. 
+ 
+Summarizing, the procedure reported in the ISO/IEC GUIDE 98-3 consists of the steps reported in the following sketch  
+ 
+Figure 6: Summary of the procedure to calculate the uncertainty 
+C.2. 
+Uncertainty of solar reflectance 
+In the most common case, reflectance is experimentally measured by means a relative device: at each wavelength two 
+signals have to be acquired, 
+ and 
+, respectively related to unknown and reference specimen; then reflectance is 
+given by the measurement equation 
+ 
+(19) 
+where 
+ is the reflectance of the reference. Here there are three input quantities which can be affected by a 
+number of error sources. According to the CIE Technical report “practical methods for measurement of reflectance and 
+transmittance” [44] they are: 
+ 
+Calibration of the equipment (external calibrated standard) 
+ 
+Repeatability 
+ 
+Accuracy 
+ 
+Wavelength deviation 
+
+=== PAGE 35 ===
+ 
+29 
+ 
+ 
+Mounting 
+ 
+Maintenance 
+ 
+Drift of the zero 
+ 
+Sensibility to magnetic field 
+ 
+Light source stability 
+ 
+Data logger 
+ 
+Temperature dependence 
+ 
+Detector Non-linearity  
+ 
+Aging 
+ 
+Incorrect wavelength calibration 
+ 
+Influence of slit-width on the wavelength calibration 
+ 
+Bandwidth too wide 
+ 
+Stray light impairing spectral purity 
+ 
+Non-uniformity irradiance on the irradiated sample area 
+Anyway, in the case of high quality commercial spectrophotometers many of those sources can be neglected because 
+leading to minor effects when the operator respects the recommendations reported in the user manual and the 
+instrument is periodically checked by qualified technicians. Also we assume that the operator had already gained a 
+good experience on the specific instrument so that the measurement parameters were optimized and the results are 
+trustworthy. As an example, for dispersive instruments scan speed and time constant shall be rightly balanced to have 
+good agreement between the signals acquired statically or dynamically, during the wavelength scan.  
+Usually the reference mirror is purchased from a certified vendor, thus the uncertainty of 
+ belongs to the type 
+B. The typical value is 
+. 
+Concerning M and B, although the spectrophotometer gives their mean values along the selected time constant, 
+commercial instruments does not return their standard deviation values. However, there is a much more important error 
+source: the baseline drift occurring between the measurements of sample and reference whose are dealt at different 
+time. Such a drift can be experimentally evaluated by repeating the acquisition of the reference spectrum several times 
+along the typical lapse of validity the baseline. The baseline drift is the deviation by the expected value 
+. 
+Except in the neighbourhood of the wavelengths where detector/grating/lamp are changed, the maximum typical value 
+over 6 hours is 
+. Greater values are symptomatic of malfunctioning, like misalignment of the light 
+beams or excessive variation of the environment conditions. Another important point is that along some hours the 
+behaviour of the baseline drift is not random, but quite regular, likewise a thermal effect. Because in such a case 
+standard deviation has not sense, we can use the maximum observed deviation as the conservative evaluation of the 
+maximum error on B, attributing to M the only reading error due to the analogical to digital converter, which typical 
+value is  
+. By assuming the uniform distribution, for both the uncertainty is  
+ of their maximum 
+error. 
+Under the above assumption, being the input quantities uncorrelated, the combined uncertainty of reflectance is 
+ 
+(20) 
+Finally the uncertainty of the solar reflectance is obtained by averaging 
+ similarly to .  
+
+=== PAGE 36 ===
+ 
+30 
+ 
+Bibliography 
+[1] S. Meyen, A. Fernández-García, C. Kennedy, E. Lüpfert, Standardization of Solar Mirror Reflectance 
+Measurements Round Robin Test. SolarPACES Conference 2010. 
+[2] S. Meyen, A. Fernández-García, C. Kennedy, Interim Guideline – Measurement of Solar Weighted Reflectance of 
+Mirror Materials for Concentrating Solar Power Technology with Commercial Available Instrumentation, 
+SolarPACES Guideline version 1.1, 2011.  
+[3] S. Meyen, M. Montecchi, C. Kennedy, G. Zhu, M. Gray, J. Crawford, S. Hiemer, W. Platzer, A. Heimsath, M. 
+O`Neill, S. Ziegler, S. Brändle, A. Fernández-García. Parameters and method to evaluate the solar reflectance 
+properties of reflector materials for concentrating solar power technology. SolarPACES Guideline version 2.5, 
+2013. 
+[4] M. Montecchi, C. Delord, O. Raccurt, A. Disdier, F. Sallaberry, A. García de Jalón, A. Fernández-García, S. 
+Meyen, C. Happich, A. Heimsath, W. Platzer, Hemispherical Reflectance Results of the SolarPACES Reflectance 
+Round Robin. Energy Procedia 69 (2015) 1904-1910. 
+[5] A. Fernández-García, F. Sutter, A. Heimsath, M. Montecchi, F. Sallaberry, A. Peña-Lapuente, C. Delord, L. 
+Martínez-Arcos, T.J. Reche-Navarro, T. Schmid, C. Heras, Simplified Analysis of Solar-Weighted Specular 
+Reflectance for Mirrors with High Specularity. SolarPACES 2015. In: AIP Conf. Proc. 1734, 130006-1:130006-8 
+(2016). 
+[6] M. Montecchi, Approximated method for modelling hemispherical reflectance and evaluating near-specular 
+reflectance of CSP mirrors, Sol. Energy 92 (2013) 280–288. 
+[7] M. Montecchi, Upgrading of ENEA Solar Mirror Qualification Set-up; Energy Procedia 49 (2014) 2154-2161. 
+[8] F. Sutter, S. Meyen, A. Fernández-García, P. Heller, Spectral characterization of specular reflectance of solar 
+mirrors, Sol. Energy Mater. Sol. Cells 145 (2016) 248–254. 
+[9] A. Heimsath, G. Kutscheidt, P. Nitz, Detailed optical characterization of reflector materials for CSP 
+applications. SolarPACES Conference 2010. 
+[10] A. Heimsath, T. Schmid, P. Nitz, Angle resolved specular reflectance measured with VLABS, Energy Procedia 
+69 (2015) 1895–1899. 
+[11] A. Heimsath, P. Lindner, E. Klimm, T. Schmid, K. Ordonez Moreno, Y. Elon, M. Am-Shallem, P. Nitz 
+Specular reflectance of soiled glass mirrors – Study on the impact of incidence angles. SolarPACES 2015. In: 
+AIP Conf. Proc 1734:130009 (2016). 
+[12] J. Fernández-Reche. Reflectance measurement in solar tower heliostats fields. Solar Energy 80(7) (2006) 779-
+786. 
+[13] G. Zhu, D. Kearney, M. Mehos. On characterization and measurement of average solar field mirror reflectance 
+in utility-scale concentrating solar power plants. Solar Energy 99 (2014) 185–202. 
+[14] P. Bendt, A. Rabl, H.W. Gaul, K.A. Reed; Optical Analysis and Optimization of Line Focus Solar Collectors;  
+Solar Energy Research Institute Report, SERI Task 3432.30, 1979 
+[15]  A. Rabl; Active Solar Collectors and their Applications; Oxford University Press, USA, 1985. 
+
+=== PAGE 37 ===
+ 
+31 
+ 
+[16]  R. Siegle, J. Howell; Thermal Radiation Heat Transfer; 4th edition, Taylor & Francis, London, 2002. 
+[17] Pettit, R. B; Characterization of the Reflected Beam Profile of Solar Mirror Materials; Solar Energy 19 (1977) 
+733. 
+[18] W.D. Short; Optical Goals for Polymeric Film Reflectors; National Renewable Energy Laboratory, 1988. 
+[19] I. Susemihl, P. Schissel; Specular Reflectance Properties of Silvered Polymer Materials, Solar Energy 
+Materials 16 (1987) 403-421. 
+[20] S. Meyen, E. Lüpfert, J. Pernpeintner, T. Fend; Optical Characterization of Reflector Material for 
+Concentrating Solar Power Technology; Solar Paces Conference 2009. 
+[21] R. Gee, R. Brost, G. Zhu, G. Jorgensen; An Improved Method for Characterizing Reflector Specularity for 
+Parabolic Trough Concentrators; Solar Paces Conference 2010. 
+[22] M. Montecchi; Proposal of a New Parameter for the Comprehensive Qualification of Solar Mirrors for CSP 
+Applications; In: AIP Conf. Proc 1734: 130014 (2016).  
+[23] M. Montecchi, Approximated Method for Modeling Hemispherical Reflectance and Evaluating Near Specular 
+Reflectance of CSP Mirrors; SolarPACES conference 2012. 
+[24] F. Sutter, M. Montecchi, H. Von Dahlen, A. Fernández-García, M. Röger, The effect of incidence angle on the 
+reflectance of solar mirrors; Solar Energy Materials and Solar Cells 176 (2018) 119-133. 
+[25] A. Fernández-García, F. Sutter, L. Martínez-Arcos, C. Sansom, F. Wolfertstetter, C. Delord, Equipment and 
+methods for measuring reflectance of concentrating solar reflector materials. Solar Energy Materials and Solar 
+Cells 167 (2017) 28-52. 
+[26] EN ISO 9488; Solar Energy – Vocabulary; ISO, 1999. 
+[27]  DIN 5036 Part 3; Radiometric and photometric properties of materials: Methods of measurement for 
+photometric and spectral radiometric characteristic factors; DIN. 
+[28] A. Beckmann et al; Technical Note: Units and Symbols in Solar Energy; Solar Energy 21 (1978) 65. 
+[29] UNE 206009. Solar Thermal Electric Plants – Terminology; UNE, 2013. 
+[30] Bennett, H.E. and Porteus, J.O., Relation Between Surface Roughness and Specular Reflectance at Normal 
+Incidence, J. Opt. Soc. of America, 51(2) (1961) 123-129. 
+[31] B.L. Butler, R.B. Pettit; Optical Evaluation Techniques for Reflecting Solar Concentrators; Optics Applied to 
+Solar Energy Conversion; Society of Photo-optical Instrumentation Engineers (SPIE) 114 (1977). 
+[32] F. Kreith; Principles of Solar Engineering; McGraw-Hill, New Work, 1981. 
+[33] ASTM G 173-03; Terrestrial Reference Spectra for Photovoltaic Performance Evaluation; ASTM, 2012. 
+[34] M. Montecchi, E. Nicholatti, P. Polato; Hybrid equivalent model algorithm or the prediction of glazing angular 
+properties; Solar Energy Materials & Solar Cells 71 (2002) 327-342. 
+[35] P. Beckmann, A. Spizzichino, The Scattering of Electromagnetic Waves from Rough Surfaces, Chap. 5, 
+Pergamon, New York, 1962/63,  
+
+=== PAGE 38 ===
+ 
+32 
+ 
+[36] ISO 9845-1; Solar energy - Reference solar spectral irradiance at the ground at different receiving conditions - 
+Part 1: Direct normal and hemispherical solar irradiance for air mass 1.5; ISO, 1992. 
+[37] ISO 9050; Glass in building, Determination of light transmittance, solar direct transmittance, total solar 
+energy transmittance, ultraviolet transmittance and related glazing factors; ISO; 2003. 
+[38] K.C. McGuigan, R.M. Conroy, H.J. Mosler, M. du Preez, E. Ubomba-Jaswa, P. Fernández-Ibáñez. Solar water 
+disinfection (SODIS): A review from bench-top to roof-top; J. Hazardous Materials 235-236 (2012) 29-46. 
+[39] S. Malato, P. Fernández-Ibáñez, M.I. Maldonado, J. Blanco, W. Gernjak. Decontamination and disinfection of 
+water by solar photocatalysis: Recent overview and trends; Catalysis Today 147 (2009) 1-59. 
+[40] ISO/IEC 98; Guide to the Expression of Uncertainty in Measurement; ISO/IEC, 1995. 
+[41] Labshere application note No. 03: The integrating sphere reflectance accessory. 
+[42] 
+K.F. Carr; A Guide to Integrating Sphere Theory and Applications. Labsphere Technical Guide, 1997. 
+[43] ASTM E 903-96; Standard Test Method for Solar Absorptance, Reflectance and Transmittance of Materials 
+Using Integrating Spheres  (withdrawn because not updated for eight years) 
+[44] CIE 130; Practical Methods for the Measurement of Reflectance and Transmittance; 1998. 
+ 

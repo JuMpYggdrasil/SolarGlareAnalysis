@@ -1,0 +1,9 @@
+======================================================================
+CASE  rogers2015
+REF   Rogers et al. 2015, FAA report: Evaluation of Glare as a Hazard for General Aviation Pilots on Final Approach
+======================================================================
+  [OK ] glare lamp subtended angle (0.05 m @ 0.8 m): got 0.0625, paper 0.06  -- err=2.500e-03, tol=1.0e-02
+  [OK ] reported retinal E_r=0.024 W/cm2 -> after-image (Yellow)  -- flash=0.0052, burn=1.97
+  [OK ] reported retinal E_r=0.048 W/cm2 -> after-image (Yellow)  -- flash=0.0052, burn=1.97
+  [OK ] NOTE: paper compares the lamp glare to flat-PV glare (consistent with our flat-panel model). Simulation-measured values reproduced as Yellow.
+  RESULT: 4 passed, 0 failed

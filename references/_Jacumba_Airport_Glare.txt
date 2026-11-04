@@ -1,0 +1,470 @@
+Appendix C 
+Glare Analysis 
+September 2023 
+
+HMMH 
+700 District Ave, Suite 800 
+Burlington, Massachusetts 01803 
+781.229.0707 
+www.hmmh.com 
+ 
+M E M O R A N D U M 
+To: 
+Eric Ruby, Ascent Environmental 
+From: 
+Philip DeVita, HMMH 
+Date: 
+September 15, 2023 
+Subject: 
+Jacumba Airport Glare Analysis 
+Reference: 
+HMMH Job No.23-0058A 
+Introduction 
+Harris Miller Miller & Hanson Inc. (HMMH) completed a glare analysis for the evaluation of the proposed 
+solar photovoltaic (PV) projects at Jacumba Airport in the county of San Diego, California. The analysis 
+included evaluation of glare from potential ground mount and roof mount PV locations at the airport for 
+aircraft on final approach and on drivers along nearby Old Highway  80. The purpose of the analysis is to 
+address the CEQA Guidelines Appendix G checklist question of;  if the Project will Create a new source of 
+substantial light or glare which would adversely affect day or nighttime views in the area. 
+To analyze the potential for glare from the project, modeling was performed using the latest version of 
+GlareGauge to analyze glare for pilots on final approach to Jacumba Airport, and vehicles traveling along 
+portions of nearby roadway Old Highway 80. Figure 1 shows the Project Aerial relative to the Jacumba Airport 
+and Figure 2 shows the Project Site Plan. 
+HMMH used the latest version of the ForgeSolar GlareGauge solar glare tool to analyze potential glare at the 
+Jacumba Airport. GlareGauge is used to assess glare impacts at airport observation locations from solar 
+photovoltaic (PV) projects and is the best tool available for analyzing solar glare impacts from PV projects. 
+GlareGauge also has the ability to simulate glare to observers along a continuous roadway.    
+
+ 
+Jacumba Airport Solar PV 
+September 15, 2023 
+Page 2 
+ 
+ 
+Source: Adapted by Ascent Environmental 
+Figure 1. PV Project Aerial relative to Jacumba Airport 
+• f' 
+I 
+• 
+• 
+I 
+•.·:,,,, . ' . 
+' • • • 
+,-. .. • 
+•~ 
+Erwiten.-,~·•t.ah n 2023 
+~re~ adapted by 
+
+ 
+Jacumba Airport Solar PV 
+September 15, 2023 
+Page 3 
+ 
+ 
+Figure 2. Project Site Plan 
+Source: Adapted by Ascent Environmental 
+ 
+Design Parameters  
+In deploying the model, we selected the area footprint of the solar project areas and input the project design 
+parameters provided by Acent Environmental as shown in Table 1.  
+Table 1. Jacumba Airport Proposed Project Design Parameters  
+Solar System 
+System 
+Orientation 
+Tilt Angle 
+Panel Centroid 
+Height (AGL)1 
+Ground Mount 
+Fixed 
+180° 
+15° 
+5 feet 
+Roof Mount at 
+Proposed Fire 
+Station 
+Fixed 
+180° 
+15°1 
+40 feet 
+Notes: 1. Panel centroid height are above ground level (agl) and assumes the height above ground for a 
+ground-mount system as the height measured to the PV panel centroid. Maximum panel height minus half of 
+the panel length can be used to find the centroid.  For the ground mount assumes a 5 feet agl panel centroid 
+and the Roof Mount system assumes a roof height of 40 agl. 
+The Project is proposing a fixed ground mount or roof mount system, or a combination of the two, at the new 
+fire station. The potential fixed ground mount PV project would be oriented towards the south at 180 
+degrees, and have a tilt angle of 15 degrees and panel centroid height of 5 feet above ground level. In 
+addition, the potential roof mount system would be oriented toward the south at a tilt angle of 15 degrees 
+and have a roof height of 40 above ground level.   
+FAA Jurisdiction and Standards for Measuring Ocular Impact 
+Interim Policy for Solar Projects at Airports as Published on October 23, 2013 
+
+ 
+Jacumba Airport Solar PV 
+September 15, 2023 
+Page 4 
+ 
+The FAA initially published an Interim Policy for Solar Projects at Airports on October 23, 2013.  The policy 
+clarified the FAA’s jurisdiction in reviewing solar projects and the standards it uses to determine if a project 
+will result in a negative glare impact to airspace safety.   
+Relative to its jurisdiction, the FAA affirmed that it has jurisdiction to regulate potential glare impacts as part 
+of its responsibilities under Federal Aviation Regulations (FAR) Part 77 to any solar project proposed on the 
+property of a Federally-obligated airport, which includes most airports in the U.S.   
+The FAA also clarified that it does not have jurisdiction to regulate potential glare from projects located on 
+non-airport land.  However, as stated in the Policy, “the FAA urges proponents of off-airport solar-
+installations to voluntarily implement the provisions in this policy.”  
+The Policy also describes the standards for measuring ocular impact:  
+To obtain FAA approval and a “no objection” to a Notice of Proposed Construction Form 7460-1, the airport 
+sponsor will be required to demonstrate that the proposed solar energy system meets the following 
+standards: (1) no potential for glint or glare in the existing or planned Air Traffic Control Tower cab, and (2) no 
+potential for glare or “low potential for after-image” (shown in green) along the final approach path. 
+Table 2 presents the airport sensitive receptors that must be evaluated, the potential results presented by 
+the model and whether the result complies with the FAA ocular hazard standard presented in the October 
+2013 Policy. 
+Table 2.  Levels of Glare and Compliance with FAA Policy 
+Airport Sensitive 
+Receptor 
+Level of Glare 
+Color Result 
+Compliance with 
+FAA Policy 
+Air Traffic Control 
+Tower (ATCT) Cab 
+No glare 
+None 
+Yes 
+ 
+Low Potential for After-Image 
+Green 
+No 
+ 
+Potential for After-Image 
+Yellow 
+No 
+ 
+Potential for Permanent Eye Damage 
+Red 
+No 
+Aircraft along final 
+approach path 
+No glare 
+None 
+Yes 
+ 
+Low Potential for After-Image 
+Green 
+Yes 
+ 
+Potential for After-Image 
+Yellow 
+No 
+ 
+Potential for Permanent Eye Damage 
+Red 
+No 
+ 
+As shown in Table 2, any glare recorded on the Air Traffic Control Tower (ATCT) is not compliant with FAA 
+policy and will not receive a “no objection” determination from the FAA.  Measurement of no or low potential 
+for after-image or “Green” is acceptable for aircraft on final approach but greater levels with the potential for 
+after image or permanent eye damage (indicated in yellow and red) are not allowed. 
+UPDATE: Review of Solar Energy System Projects on Federally Obligated Airports on May 11, 2021 
+ 
+More recently, the FAA updated this policy on May 11, 20211.  The new policy replaces the Interim Policy 
+published on October 23, 2013.  The updated policy is pared down compared to the 2013 policy and focuses 
+on solar glare impacts in the air traffic control tower.  Also, there is no longer a need to assess glare for pilots 
+ 
+1 Federal Register: Federal Aviation Administration Policy: Review of Solar Energy System Projects on Federally-
+Obligated Airports 
+
+ 
+Jacumba Airport Solar PV 
+September 15, 2023 
+Page 5 
+ 
+approaching the airport and no specific tool is required or recommended to analyze glare impacts from the 
+panels.  In summary, the new policy: 
+• 
+Only applies to solar projects on airports (same as before) 
+• 
+Only applies to airports with a control tower (no longer applies to non-towered airports) 
+• 
+Only applies to impacts at the tower and no longer need to evaluate pilots on final approach.  FAA 
+determined that glint and glare from solar energy systems to pilots on final approach is “similar to 
+glint and glare pilots routinely experience from water bodies, glass-façade buildings, parking lots, 
+and similar features”. 
+• 
+Sponsor does not have to submit any glare modeling results with the 7460 application.  It just has to 
+include a statement that glint/glare has been evaluated and determined that impacts will not occur. 
+• 
+FAA’s determination of no hazard will have a statement saying that its determination is based on 
+sponsor’s glint/glare analysis, and further stating that sponsor will be responsible for mitigating any 
+impacts observed after construction. 
+• 
+Sponsor is no longer required to use SGHAT or similar program for evaluating glare. Policy says there 
+are many options for evaluating potential glare impacts. Sponsor may not have to model for glare in 
+certain instances (i.e., building blocks view of solar array location). 
+• 
+Statement remains similar to previous policy in that proponents of off-airport projects are 
+encouraged to evaluate glare especially near towered airports and proponents should consult with 
+their local airport sponsor. 
+ 
+Since the most recent 2021 FAA policy applies to airports with an air traffic control tower and eliminates the 
+evaluation of glare for pilots on final approach, the new policy would not apply to Jacumba Airport since 
+there is no ATCT at the airport.  However, as part of the CEQA review for the project, the county is requesting 
+an analysis be performed for pilots on final approach as well as for vehicles traveling along nearby Old 
+Highway  80 to demonstrate the PV projects will not create adverse glare at either location.  
+Summary of Results for Jacumba Airport 
+HMMH analyzed the potential for the Proposed PV Project sites to produce glare on pilots on final approach 
+to Jacumba Airport and at nearby roadway observations.  Based on the design and layout, GlareGauge 
+modeling showed: 
+• 
+Runway 07/25: Green glare (low potential of temporary after image) at observation points along the 
+flight path for both PV sites; proposed designs meet the 2013 FAA Standard for aircraft on final 
+approach. 
+• 
+ATCT: no analysis conducted, no ATCT at the airport. 
+• 
+Old Highway  80: No glare detected along nearby roadway segment, therefore, no adverse glare is 
+predicted.  
+Results in Detail 
+To accurately model the proposed project, HMMH outlined the project array layouts on the model’s 
+interactive google map, and the GlareGauge tool analyzed the potential glare impact from the project site.  
+Figure 3 shows the layout of the project area as input into the model where PV Array 1 is the ground mount 
+location and PV Array 2 is the roof mount location.  The blue line segment north of the site is the nearby Old 
+Highway 80 roadway segment. 
+
+ 
+Jacumba Airport Solar PV 
+September 15, 2023 
+Page 6 
+ 
+ 
+Source: GlareGauge 
+Figure 3.  Project Arrays as Input into the GlareGauge Model Including  
+We input the specifications of the array as discussed above in Table 1 for each location.  We also assumed a 
+smooth panel surface without any anti-reflective coating to provide maximum flexibility in module selection.  
+Modeling was then undertaken for the applicable sensitive receptors required by FAA assuming the 2013 
+Glare Policy: the pilots in aircraft along final descent to each runway end.  [The FAA also requires an analysis 
+of the ATCT; however there is no ATCT at Jacumba Airport, and therefore no such analysis could be 
+conducted.]  All of the modeling result output sheets are provided as Attachment A. 
+ATCT 
+For the Air Traffic Control Tower (ATCT) analysis, no analysis was conducted as the airport does not have an 
+ATCT.   
+Arriving Aircraft  
+To analyze arriving aircraft, HMMH selected locational information associated with each runway individually 
+and generated associated results to evaluate the potential impacts of the proposed project on that runway.  
+Given there is one runway at Jacumba Airport; modeling was conducted separately for each runway end.   
+To model a runway approach, we selected a point at the centerline on the runway threshold which is located 
+near the runway end.  We then selected a second point away from the runway to represent the orientation of 
+the aircraft descent (or glide) path.  The model automatically plots the glide path out two miles from the 
+runway end and evaluates potential for glare along the entire glide path.  Given that Jacumba Airport has two 
+runway ends; the model assessed the potential for glare along each of the two aircraft final approach paths 
+landing at the airport.   The model automatically plots the location and height above ground of each 
+observation point along the glide path assuming a 3 degree glide slope for the approach.  In the model’s flight 
+path window, we checked the “consider pilot visibility from cockpit” box and kept the default azimuth-
+viewing angle of 50° so that the model would not register glare that the pilot would not see from behind the 
+aircraft.  We also kept the default downward viewing angle of 30° to eliminate false glare results from below 
+the aircraft.  Figure 4 shows the GlareGauge illustration of the 2-mile approach and Figure 5 shows the flight 
+path analyzed by the model for each runway. 
+ 
+
+ 
+Jacumba Airport Solar PV 
+September 15, 2023 
+Page 7 
+ 
+ 
+ 
+Source: GlareGauge 
+Figure 4.  GlareGauge 2-Mile Approach 
+ 
+ 
+ 
+Source: GlareGauge 
+Figure 5.  Flight Path Analyzed by GlareGauge 
+/1/ustratiofl of aircraft vrilizing 2-mile approach path toward airport 
+
+ 
+Jacumba Airport Solar PV 
+September 15, 2023 
+Page 8 
+ 
+The model shows component results in time for the aircraft along a continuous route.   Table 3 presents the 
+GlareGauge modeling results for each runway in terms of predicted minutes of green, yellow, or red glare.      
+As shown in Table 3, green glare or low potential for temporary after image was detected by the model for 
+both runway approaches from both PV locations.  A total of 2,352 minutes and 6,066 minutes of green glare 
+is predicted for approach to RWY 25 and RWY 7, respectively.  As shown in the model plots in Attachment A, 
+most of the glare along the path to RWY 25 occurs in the afternoon when the sun sets during March and April 
+and again in September and October.  Similarly for the RWY 7 approach path, glare occurs during the morning 
+hours from April thru September when the sun is rising.  The green glare result on aircraft on approach to 
+each runway complies with the FAA’s ocular impact standard as published in the Federal Register on October 
+23, 2013 and shown in above Table 2. 
+ 
+Table 3 – GlareGauge Results (in minutes per year) for the Proposed PV Solar Projects at Jacumba Airport 
+Site 
+Fixed/Tracker 
+System 
+(orientation/tilt) 
+ATCT 
+RWY 
+071 
+RWY 
+251 
+Comply with 
+2013 FAA 
+Thresholds 
+Ground 
+Mount 
+Fixed 
+180°/15° 
+N/A 
+3,384 
+1,055 
+Yes 
+Roof Mount 
+Fixed 
+180°/15° 
+N/A 
+2,682 
+1,297 
+Yes 
+1. 
+Model results represent a panel centroid height of 5 feet for the ground mount and 40 for the roof 
+mount. 
+Notes: 
+   G (Green) = Low Potential for Temporary After-Image 
+   Y (Yellow) = Potential for Temporary After-Image 
+   R (Red) = Potential for Permanent Eye-Damage 
+   N/A = Not applicable, no analysis conducted. 
+GlareGauge Modeling Nearby Roadway Observation Locations 
+In addition to the pilot approaches, HMMH analyzed the potential for the two proposed solar PV locations to 
+produce glare at nearby roadway observation locations using GlareGauge.  As discussed, the GlareGauge 
+model is currently the best tool available for analyzing solar glare impacts from PV projects and is able to 
+simulate glare from proposed solar PV projects to observers along a continuous roadway segment.    
+Methodology 
+For the analysis, the nearby Old Highway  80 roadway segment was analyzed as it traverses near the airport 
+property boundary to the north.    Figure 6 shows the Project array layouts and roadway segment locations 
+from the GlareGauge model selected for analysis.  The Old Highway 80 roadway segment (denoted as Old 
+Highway) as depicted in light green/blue (teal) in Figure 6.  
+ 
+Source: GlareGauge 
+Figure 6. Roadway Segment Analyzed in GlareGauge 
+ 
+
+ 
+Jacumba Airport Solar PV 
+September 15, 2023 
+Page 9 
+ 
+HMMH input the specifications of the project array design parameters as described above in Table 1.  A 
+smooth panel surface without any anti-reflective coating was assumed to provide maximum flexibility in 
+module selection.   
+The model was run for a full calendar year to calculate information for every sun position scenario over a 
+typical year and the model assessed potential for glare at one-minute intervals.  The roadway analysis 
+assumes a two-way viewing meaning the observers travel along the route in both directions as a conservative 
+approach.  A viewer default angle of 50° was chosen as the field of view where the observer can see 50 
+degrees to the left and right for a total field of view of 100°.    Figure 7 shows a depiction of the route field of 
+view in GlareGauge.  A total of one nearby roadway segment along Old Highway 80 traveling eastward in one 
+direction and westward in the other direction were input into GlareGauge assuming a viewing height of 6 feet 
+above ground level for roadway observers. 
+ 
+ 
+Source: GlareGauge 
+Figure 7. Route Receptor Field of View in GlareGauge 
+The modeling result output sheets for the roadway locations are provided as Attachment A and denoted as 
+“Old Highway 80” in the model output.   
+GlareGauge Results 
+A summary of the model output is presented in Table 4 for the nearby roadway observer segments.  As 
+shown in Table 4, no glare was detected by the model for any of the PV locations to the nearby roadway 
+observer locations. The GlareGauage results were also compared to the 2013 FAA Glare Standards for Pilots 
+on Final Approach to determine significant impacts. 
+As discussed above and shown if Figure 2, measurement of no or Low Potential for After-Image or Green is 
+acceptable for aircraft on final approach, but greater levels (indicated in yellow and red) are not allowed. 
+Route receptor field-of-view is defined by view angle (rheta) to left and right. Default rov is 100° (i.e. 2 * 50° 
+view angle). 
+
+ 
+Jacumba Airport Solar PV 
+September 15, 2023 
+Page 10 
+ 
+Any potential solar glare to the vehicles traveling along the nearby roadways is very similar or representative 
+to aircraft along final approach in the 2013 FAA standards.  Therefore in lieu of CEQA or county specific glare 
+standards, the standards of acceptable ocular impact as contained in the FAA policy for aircraft on final 
+approach were applied to the vehicles traveling along this section of Old Highway 80 to determine significant 
+impacts.  It should be noted that the GlareGauge model does not consider potential obstacles associated with 
+the landscape such as trees, buildings or hills which could block a direct view of the solar panels to the nearby 
+observer locations. 
+ 
+Table 4 – GlareGauge Results (in minutes per year) for the Proposed PV Solar Projects at Nearby Roadways 
+Observer Locations Compared to FAA Glare Standards for Pilots to Determine Significant Impacts 
+Site 
+Fixed/Tracker 
+System 
+(orientation/tilt) 
+Old 
+Highway 
+80 
+Comply 
+with FAA 
+Glare 
+Standards 
+ATCT/Pilot 
+1 
+Ground Mount 
+Fixed 
+180°/15° 
+0 
+Yes 
+Roof Mount 
+Fixed 
+180°/15° 
+0 
+Yes 
+Notes: 
+1. In lieu of CEQA or county specific glare standards, the standards of acceptable ocular impact as 
+contained in the FAA policy for aircraft on final approach were applied to the vehicles traveling along 
+this section of Old Highway 80 to determine significant impacts. 
+Based on the design array locations of the Proposed Project as modeled, the GlareGauge modeling showed 
+no glare detected at the nearby roadway segments.  Therefore, there is no evidence based upon our modeling 
+of the potential array locations that glare from the Project will cause an adverse impact for drivers along 
+analyzed segments or of the adjacent public properties and/or right of ways.    
+Conclusions 
+HMMH utilized the GlareGauge model developed by the Department of Energy’s Sandia National 
+Laboratories to evaluate potential glare from two proposed solar PV locations at Jacumba Airport. The 
+analysis evaluated potential glare from the proposed project for pilots on final approach to the airports two 
+runway ends and nearby roadway observer locations.    
+The most recent 2021 FAA policy applies to airports with an air traffic control tower and eliminates the 
+evaluation of glare for pilots on final approach, the new policy would not apply to Jacumba Airport since 
+there is no ATCT at the airport.  However at the request of the county under the CEQA process, HMMH 
+evaluated pilot glare on final approach with the 2013 FAA ocular hazard standards published in the FAA’s 
+Interim Policy. The model results provided in Attachment A show that minutes of green glare, or low 
+potential for temporary after image was detected at both the approach to Runway 07 and Runway 25 from 
+both proposed PV locations.  These results comply with 2013 FAA standards for pilots on final approach and 
+no adverse glare is predicted. 
+In addition, GlareGauge is currently the best tool available for analyzing solar glare impacts from PV projects 
+and has the ability to simulate glare to observers along a continuous roadway segment.  In lieu of CEQA or 
+county specific glare standards, the GlareGauge model results were compared to the FAA standards for pilots 
+on final approach as shown in Table 2.  Attachment A show the GlareGauge modeling results for the nearby 
+roadway segments.  The GlareGauge modeling showed no glare detected at the nearby Old Highway 80 
+roadway segment.,   
+
+ 
+Jacumba Airport Solar PV 
+September 15, 2023 
+Page 11 
+ 
+Therefore, there is no evidence based upon our modeling of the proposed array locations that glare from the 
+Project will cause an adverse impact for pilots on final approach at Jacumba Airport, and/or drivers along 
+analyzed roadway segments as modeled.  These results comply with the FAA standards described in the FAA 
+2013 and 2021 policy and should not create a new source of substantial light or glare which would adversely 
+affect day or nighttime views in the area.  It should be noted that this glare analysis is based on when the 
+sun’s position during the year and does not evaluate glare at nighttime as the sun is not shining at night.  
+
+ 
+Jacumba Airport Solar PV 
+September 15, 2023 
+Page 12 
+ 
+ 
+Attachment A 
+GlareGauge Modeling Results – Jacumba Airport Proposed Solar PV Sites 

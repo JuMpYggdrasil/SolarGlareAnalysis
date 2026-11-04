@@ -1,0 +1,13 @@
+Annex ZB (Informative) ของมาตรฐาน BS EN 62471:2008 
+คือส่วนที่รวบรวม "ค่าขีดจำกัดการรับสัมผัสรังสี (Exposure Limits: ELs)" สำหรับอันตรายทางชีวภาพเชิงแสง (Photobiological Hazards) ของดวงตาและผิวหนัง
+1. หลักการทั่วไปของค่าขีดจำกัด (General Principles)ถูกออกแบบมาเพื่อคุ้มครองประชากรทั่วไปเกือบทั้งหมด กำหนดขึ้นสำหรับแหล่งกำเนิดแสงแบบต่อเนื่อง (Continuous Sources) ตั้งแต่ช่วงเวลา 0.01 ms ถึงสูงสุดไม่เกิน 8 ชั่วโมง (30,000 วินาที) แหล่งกำเนิดแสงที่มีความสว่าง (Luminance) น้อยกว่า $10^4\text{ cd}\cdot\text{m}^{-2}$ มักจะปลอดภัยและไม่เกินค่าขีดจำกัด ELs
+2. ปัจจัยเฉพาะในการประเมินอันตรายต่อเรตินา (Retinal Exposure Factors)ช่วงความยาวคลื่น 380 nm ถึง 1400 nm
+รูม่านตาขนาด (Pupil Diameter) $3\text{ mm}$ ($7\text{ mm}^2$): ใช้คำนวณสำหรับแหล่งกำเนิดแสงสว่างสูง ($>10\text{ cd}\cdot\text{m}^{-2}$) และระยะเวลารับสัมผัส $>0.25\text{ s}$ (เช่น อันตรายจากแสงสีฟ้า หรืออันตรายเชิงความร้อน)
+มุมรองรับของแหล่งกำเนิดแสงและขอบเขตการมองเห็น ($\alpha$ และ $\alpha_{eff}$):$\alpha_{min} = 0.0017\text{ rad}$: เป็นขนาดภาพที่เล็กที่สุดบนเรตินา (Point source) ใช้สำหรับการประเมินอันตรายเชิงความร้อนที่เวลา $0.25\text{ s}$ (ระยะเวลากลอกตาตอบสนองหรือ Blink reflex)  $\alpha_{eff}$ (Effective angular subtense): เมื่อเวลารับสัมผัสเพิ่มขึ้น การกรอกตาฉับพลัน (Eye movements) จะกระจายพลังงานแสงไปบนพื้นที่เรตินาที่กว้างขึ้น:  ที่เวลา $10\text{ s}$: ค่า $\alpha_{eff}$ เท่ากับ $0.011\text{ rad}$  ที่เวลา $>10,000\text{ s}$ (สำหรับแสงสีฟ้า): ค่า $\alpha_{eff}$ จะขยายเป็น $\alpha_{max} = 0.1\text{ rad}$  
+3. รายละเอียดค่าขีดจำกัดอันตรายแต่ละประเภท (Hazard Exposure Limits)
+3.1 Retinal Blue Light Hazard (อันตรายจากแสงสีฟ้าต่อเรตินา: 300–700 nm)สูตร: $L_B = \sum L_\lambda \cdot B(\lambda) \cdot \Delta\lambda$  ขีดจำกัด:สำหรับ $t \le 10,000\text{ s}$: ปริมาณความสว่างรังสีถ่วงน้ำหนักสะสมไม่เกิน $10^6\text{ J}\cdot\text{m}^{-2}\cdot\text{sr}^{-1}$ (หรือ $L_B = 10^6/t\text{ W}\cdot\text{m}^{-2}\cdot\text{sr}^{-1}$)  สำหรับ $t > 10,000\text{ s}$: ค่า $L_B$ ต้องไม่เกิน $100\text{ W}\cdot\text{m}^{-2}\cdot\text{sr}^{-1}$  Small Source ($E_B$): แหล่งกำเนิดแสงขนาดเล็ก ($\alpha < 0.011\text{ rad}$) ให้วัดในรูปความเข้มรังสี $E_B$ โดยมีขีดจำกัด $E_B = 100/t\text{ W}\cdot\text{m}^{-2}$ ($t \le 100\text{ s}$) หรือ $1.0\text{ W}\cdot\text{m}^{-2}$ ($t > 100\text{ s}$)  
+3.2 Retinal Thermal Hazard (อันตรายเชิงความร้อนต่อเรตินา: 380–1,400 nm)สูตร: $L_R = \sum L_\lambda \cdot R(\lambda) \cdot \Delta\lambda$  ขีดจำกัด: ค่าความสว่างรังสี $L_R$ ต้องไม่เกิน $\frac{50,000}{\alpha \cdot t^{0.25}}\text{ W}\cdot\text{m}^{-2}\cdot\text{sr}^{-1}$ (สำหรับ $t < 10\text{ s}$)  
+Table 4.2 (Spectral Weighting Functions) — ตัวคูณถ่วงน้ำหนัก
+$B(\lambda)$: ค่าน้ำหนักสำหรับ Blue Light Hazard (ช่วง 300–700 nm)
+$R(\lambda)$: ค่าน้ำหนักสำหรับ Retinal Thermal Hazard (ช่วง 380–1400 nm)
+

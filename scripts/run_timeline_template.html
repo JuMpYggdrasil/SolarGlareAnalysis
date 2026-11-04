@@ -1,0 +1,2174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Run Timeline &mdash; Solar Glare Pipeline</title>
+<style>
+:root{
+  --bg:#12141a; --panel:#1b1e26; --panel2:#232733; --line:#2f3542;
+  --fg:#e6e9ef; --dim:#98a0b0; --accent:#4ea1ff; --sel:#ffd166;
+  --grid:#232833;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--bg); color:var(--fg); font:13px/1.45 "Segoe UI",system-ui,Tahoma,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+code,.mono{font-family:"Cascadia Mono",Consolas,monospace}
+h1{font-size:17px;margin:0;font-weight:600;letter-spacing:.2px}
+h1 small{color:var(--dim);font-weight:400;font-size:12px;margin-left:8px}
+
+/* ---------- top bar ---------- */
+header{
+  display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+  padding:10px 16px;background:var(--panel);border-bottom:1px solid var(--line);
+  position:sticky;top:0;z-index:20;
+}
+select,input[type=text],button{
+  background:var(--panel2);color:var(--fg);border:1px solid var(--line);
+  border-radius:5px;padding:5px 9px;font:inherit;font-size:12px;cursor:pointer;
+}
+select:hover,input[type=text]:hover,button:hover{border-color:#4a5266}
+input[type=text]{cursor:text}
+button.on{background:var(--accent);border-color:var(--accent);color:#07101d;font-weight:600}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:5px;overflow:hidden}
+.seg button{border:0;border-radius:0;padding:5px 11px}
+.seg button+button{border-left:1px solid var(--line)}
+.grp{display:flex;align-items:center;gap:7px}
+.grp>label{color:var(--dim);font-size:11px;text-transform:uppercase;letter-spacing:.6px}
+.spacer{flex:1}
+
+/* ---------- stat strip ---------- */
+.stats{display:flex;gap:0;background:var(--panel);border-bottom:1px solid var(--line);flex-wrap:wrap}
+.stat{padding:7px 16px;border-right:1px solid var(--line);min-width:104px}
+.stat b{display:block;font-size:15px;font-weight:600;letter-spacing:.2px}
+.stat span{color:var(--dim);font-size:10.5px;text-transform:uppercase;letter-spacing:.6px}
+
+/* ---------- legend ---------- */
+.legend{display:flex;gap:2px;align-items:center;padding:6px 16px;background:var(--panel2);border-bottom:1px solid var(--line);flex-wrap:wrap}
+.legend .li{
+  display:flex;align-items:center;gap:6px;padding:3px 9px;border-radius:4px;cursor:pointer;
+  font-size:11.5px;border:1px solid transparent;user-select:none;
+}
+.legend .li:hover{background:#2b3040}
+.legend .li.off{opacity:.34}
+.legend .li.hd{
+  cursor:default;color:var(--dim);font-size:10px;text-transform:uppercase;
+  letter-spacing:.7px;padding-left:0;
+}
+.legend .li.hd:hover{background:none}
+.legend .sw{width:11px;height:11px;border-radius:2px;flex:none}
+/* a branch swatch is its whole ramp, so it needs room to show the ramp */
+.legend .swg{width:34px;border-radius:2px}
+.legend .li .nm{font-family:Consolas,monospace;font-size:11px}
+.legend #errChip{cursor:default}
+.legend #errChip:hover{background:none}
+.legend #errChip.err .nm, .legend #errChip.err .ct{color:#e8434c}
+.legend .ct{color:var(--dim);font-size:10.5px}
+table.inv td:last-child{color:var(--dim);text-align:right;max-width:74px;overflow:hidden;text-overflow:ellipsis}
+
+/* ---------- layout ---------- */
+main{display:grid;grid-template-columns:minmax(0,1fr) 336px;gap:0;align-items:start}
+@media (max-width:1080px){main{grid-template-columns:1fr}}
+#chartWrap{position:relative;padding:10px 12px 4px 12px;min-width:0}
+ /* The pane is a real scroll container and the canvas inside it is sized to the
+  * VIRTUAL extent (wider than the pane whenever the x axis is zoomed in, taller
+  * than it whenever the rows overflow).  Using native `overflow:auto` rather than
+  * hand-drawn bars means the thumb drag, track click, arrow keys, momentum and
+  * the focus ring all come from the browser - the alternative was ~200 lines of
+  * hit-testing that would have needed their own tests. */
+ /* `overflow-y: scroll` rather than `auto` is deliberate and load-bearing.  A
+  * vertical scrollbar steals ~11 px from clientWidth, so a canvas sized to the
+  * clientWidth measured BEFORE the bar appeared would be 11 px too wide, which
+  * would then show a HORIZONTAL scrollbar at zoom 1 - and the chart would scroll
+  * sideways when nothing is zoomed.  Reserving the gutter unconditionally makes
+  * clientWidth independent of whether the pane happens to be scrolled, which
+  * breaks that feedback loop by construction.  (overflow-x stays auto: a
+  * horizontal bar costs height, not width, and resize() compensates for it.) */
+ #scroller{
+  overflow-y:scroll;overflow-x:auto;position:relative;max-height:70vh;min-height:320px;
+  border:1px solid var(--line);border-radius:6px;background:#0e1015;
+  scrollbar-color:#3a4252 #14171e;scrollbar-width:thin;
+ }
+ #scroller::-webkit-scrollbar{width:11px;height:11px}
+ #scroller::-webkit-scrollbar-track{background:#14171e;border-radius:6px}
+ #scroller::-webkit-scrollbar-thumb{background:#39414f;border-radius:6px;border:2px solid #14171e}
+ #scroller::-webkit-scrollbar-thumb:hover{background:#4a5464}
+ #scroller::-webkit-scrollbar-corner{background:#14171e}
+ /* touch-action:none keeps a touch drag from turning into a page scroll (which
+    would fire pointercancel and drop the zoom); user-select:none stops a mouse
+    drag from starting a text selection, which can swallow the release.
+    The canvas is now sized in px by resize(), so it must NOT be width:100%. */
+ canvas{display:block;cursor:crosshair;border-radius:6px;background:#0e1015;touch-action:none;user-select:none;-webkit-user-select:none}
+#tip{
+  position:absolute;pointer-events:none;z-index:30;display:none;max-width:340px;
+  background:rgba(12,14,19,.97);border:1px solid #3a4252;border-radius:6px;padding:7px 9px;
+  font-size:11.5px;box-shadow:0 6px 22px rgba(0,0,0,.55);
+}
+#tip .t{font-weight:600;font-size:12.5px;margin-bottom:3px;display:flex;align-items:center;gap:6px}
+#tip .t .sw{width:9px;height:9px;border-radius:2px}
+#tip .r{display:flex;justify-content:space-between;gap:14px;color:var(--dim)}
+#tip .r b{color:var(--fg);font-weight:500}
+#tip .hint{margin-top:4px;padding-top:4px;border-top:1px solid #2a3040;color:#7d8798;font-size:10.5px}
+
+/* ---------- side panel ---------- */
+aside{background:var(--panel);border-left:1px solid var(--line);position:sticky;top:44px;max-height:calc(100vh - 44px);display:flex;flex-direction:column}
+@media (max-width:1080px){aside{position:static;max-height:none;border-left:0;border-top:1px solid var(--line)}}
+aside h2{
+  font-size:11px;text-transform:uppercase;letter-spacing:.8px;color:var(--dim);
+  margin:0;padding:9px 12px 7px;border-bottom:1px solid var(--line);font-weight:600;
+  display:flex;justify-content:space-between;align-items:center;
+}
+aside h2 em{font-style:normal;color:#6f7889}
+.invWrap{overflow:auto;flex:1;min-height:0}
+table.inv{width:100%;border-collapse:collapse;font-size:11.5px}
+table.inv th{
+  position:sticky;top:0;background:var(--panel2);color:var(--dim);font-weight:500;
+  text-align:right;padding:5px 8px;border-bottom:1px solid var(--line);cursor:pointer;
+  font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;user-select:none;white-space:nowrap;
+}
+table.inv th:first-child{text-align:left}
+table.inv th:hover{color:var(--fg)}
+table.inv td{padding:4px 8px;border-bottom:1px solid #22262f;text-align:right;white-space:nowrap}
+table.inv td:first-child{text-align:left}
+table.inv tr{cursor:pointer}
+table.inv tr:hover td{background:#242938}
+table.inv tr.sel td{background:#3a3320;color:#ffe6a8}
+table.inv tr.dim td{opacity:.32}
+table.inv .sw{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:6px;vertical-align:middle}
+table.inv td.n{color:var(--dim)}
+
+/* ---------- call tree ---------- */
+footer{grid-column:1/-1;border-top:1px solid var(--line);background:var(--panel)}
+#treeBar{display:flex;gap:6px;align-items:center;padding:7px 12px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+#crumbs{display:flex;gap:3px;align-items:center;flex-wrap:wrap;font-size:11.5px;flex:1;min-width:0}
+#crumbs .cb{padding:2px 7px;border-radius:4px;background:var(--panel2);cursor:pointer;border:1px solid var(--line)}
+#crumbs .cb:hover{border-color:var(--accent)}
+#crumbs .cb.cur{background:#3a3320;border-color:var(--sel);color:#ffe6a8}
+#crumbs .arw{color:#4a5266}
+#treeBody{padding:8px 12px 12px;max-height:290px;overflow:auto}
+#treeBody .empty{color:var(--dim);padding:14px 2px;font-size:12px}
+.tnode{
+  display:flex;align-items:center;gap:8px;padding:3px 6px;border-radius:4px;cursor:pointer;
+  border-left:2px solid transparent;
+}
+.tnode:hover{background:#242938}
+.tnode.sel{background:#3a3320;border-left-color:var(--sel)}
+.tnode .nm{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tnode .bar{height:7px;border-radius:2px;background:var(--accent);min-width:2px;flex:none}
+.tnode .du{color:var(--dim);font-size:11px;min-width:66px;text-align:right}
+.tnode .kd{color:#6f7889;font-size:10.5px;min-width:74px;text-align:right}
+.foot{color:#5c6474;font-size:10.5px;padding:6px 12px 10px}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Run Timeline <small>solar glare pipeline &mdash; stage events over wall time</small></h1>
+  <div class="spacer"></div>
+  <div class="grp">
+    <label>Focus case</label>
+    <select id="caseSel"></select>
+    <button id="btnAll" hidden title="Back to the merged all-cases timeline (Esc)">&#9664; all cases</button>
+  </div>
+  <div class="grp">
+    <label>Lanes</label>
+    <div class="seg" id="laneSeg">
+      <button data-lane="thread" class="on">Thread</button>
+      <button data-lane="depth">Depth</button>
+    </div>
+  </div>
+  <div class="grp">
+    <label>Row height</label>
+    <input type="range" id="rowH" min="20" max="120" step="2" value="44" style="width:96px"
+           title="Height of one lane row. Taller rows draw taller bars; once the rows exceed the pane you scroll vertically.">
+    <span class="mono" id="rowHLbl" style="min-width:30px;color:var(--dim)">44 px</span>
+  </div>
+  <div class="grp">
+    <label>Min dur</label>
+    <input type="range" id="minDur" min="0" max="100" value="34" style="width:112px">
+    <span class="mono" id="minDurLbl" style="min-width:52px;color:var(--dim)">1.0 ms</span>
+  </div>
+  <div class="grp">
+    <input type="text" id="search" placeholder="filter function name&hellip;" size="22">
+  </div>
+  <button id="btnZoomSel" disabled title="The drag that made the range also zoomed into it. Press to zoom back out, then back in.">Zoom to selection</button>
+  <button id="btnReset" title="Reset zoom, filters and selection (Esc)">Reset</button>
+  <button id="btnCsv" title="Download the spans of the current case">Export CSV</button>
+</header>
+
+<div class="stats" id="stats"></div>
+<div class="legend" id="legend"></div>
+
+<main>
+  <div id="chartWrap">
+    <div id="scroller"><canvas id="cv"></canvas></div>
+    <div id="tip"></div>
+  </div>
+
+  <aside>
+    <h2><span>Inventory &mdash; per function</span><em id="invCount" style="font-style:normal;color:var(--dim)"></em></h2>
+    <div class="invWrap">
+      <table class="inv" id="inv">
+        <thead><tr>
+          <th data-k="stage">function</th>
+          <th data-k="calls">calls</th>
+          <th data-k="wall">wall s</th>
+          <th data-k="self">self s</th>
+          <th data-k="pct">% wall</th>
+          <th data-k="case">case</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </aside>
+
+  <footer>
+    <div id="treeBar">
+      <div id="crumbs"></div>
+      <span id="treeInfo" style="color:var(--dim);font-size:11px"></span>
+    </div>
+    <div id="treeBody"><div class="empty">Click any bar in the timeline (or a row in the inventory) to drill into its call tree.</div></div>
+  </footer>
+</main>
+
+<div class="foot" id="footNote"></div>
+
+<script id="payload" type="application/json">__PAYLOAD__</script>
+<script>
+"use strict";
+const DATA = JSON.parse(document.getElementById("payload").textContent);
+/* DATA.phase_colors is still in the payload - the builder ships it and fig 14
+ * uses the same palette - but nothing on THIS page colours by phase any more, so
+ * binding it here would only invite someone to reintroduce the flat palette. */
+const PHASES = DATA.phases;
+
+/* ------------------------------------------------------------------ state */
+const S = {
+  ci: 0,                 // focused case index
+  mode: "all",           // "all" = every case merged on one row each, "case" = focused
+  lane: "thread",
+  minDur: 1.0,           // ms
+  query: "",
+  sel: null,             // selected span id, in the CURRENT view's index space
+  treeRoot: -1,          // span whose subtree the tree panel shows
+  /* ZOOM IS A SCALE, NOT A WINDOW.  The whole axis is always mapped across the
+   * full content width and never clipped, so no part of the sweep can be made
+   * unreachable: zoom 4x means "the same 668 s drawn four times wider", and the
+   * pane then scrolls to whichever part you want.  The previous model stored a
+   * `{t0,t1}` time WINDOW and derived the scale from it, which meant anything
+   * outside the window was neither drawn nor reachable - dragging across case 2
+   * cut cases 3-6 off the axis entirely, which is exactly the complaint that
+   * prompted this change.  `zoom` is 1 at fit-to-pane (no horizontal scrollbar). */
+  zoom: 1,
+  /* A SELECTED TIME RANGE, in absolute sweep milliseconds: `{t0, t1}` or null.
+   * A left drag produces it AND magnifies it, in one gesture.  The range is still
+   * its own piece of state rather than being folded into `S.zoom` because the zoom
+   * is a scale over the whole axis and the range is a window in sweep time: the
+   * marker has to mean the same thing after the reader scrolls, switches case or
+   * zooms back out, which a zoom factor alone could not say.
+   *
+   * ABSOLUTE, not relative, and that is not incidental.  `pxToT()` already returns
+   * sweep time in both views (`caseSpan()` is `[t_off_ms, t_off_ms + dur_ms]`, and
+   * MERGED chains every case onto one clock), so the band needs no conversion at
+   * all - and storing it that way is what lets the range survive a mode switch, be
+   * compared against spans in any case, and cross a case boundary.
+   *
+   * The range NEVER filters.  `visible()`, the cull, `hitBoxes` and `drawn` do not
+   * mention it, so a selected range cannot hide, dim or un-count a single span:
+   * everything that was on the chart before the drag is still on it afterwards, and
+   * the drawn count is unchanged.  It is an annotation drawn on top, nothing more. */
+  range: null,
+  /* hidden top-level FUNCTIONS, by name (see the colour model below).  Names,
+   * not indices: a focused case and the merged view build their own branch
+   * tables, so slot numbers would mean different things in the two modes, while
+   * a stage name means the same thing in both. */
+  hiddenBranch: new Set(),
+  isoThread: null,       // isolate one lane
+  sortKey: "wall",
+  sortDir: -1,
+  /* Row height in CSS px, and the pane's scroll offset.  The y axis is
+   * CATEGORICAL (lane / depth / case), so "make the y axis bigger" can only mean
+   * taller rows - and taller bars, which is a separate cap (see innerH).  `rowH`
+   * is null until first use so each mode can pick its own default; `sx`/`sy`
+   * mirror the scroller for the sticky gutter and axis, which must know where
+   * the pane is looking without having to re-read the DOM during a draw. */
+  rowH: null,
+  sx: 0, sy: 0,
+};
+
+/* Row height defaults.  Thread mode went 26 -> 44 and depth 34 -> 40: the old
+ * numbers were sized to FIT ALL ROWS on the page rather than to be readable, and
+ * the y axis is where the reader spends their time (which lane, which depth), so
+ * legibility won and the pane scrolls instead.  Merged keeps 44 because its row
+ * label is three lines deep. */
+const ROWH_DEFAULT = { caseThread: 62, caseDepth: 62, all: 62 };
+function defaultRowH(){
+  if (S.mode === "all") return ROWH_DEFAULT.all;
+  return S.lane === "thread" ? ROWH_DEFAULT.caseThread : ROWH_DEFAULT.caseDepth;
+}
+const rowH = () => (S.rowH === null ? defaultRowH() : S.rowH);
+
+const C = () => DATA.cases[S.ci];
+
+/* ------------------------------------------------------------------ merge
+ * Six cases, one canvas.  The payload has to stay one entry per case: every
+ * case is a separate run_analysis invocation with its own StageTimer, so its
+ * own t0 origin and its own "total" - there is no shared clock to fold them
+ * into.  The merge therefore happens here, in the client, once, at load: the
+ * per-case arrays are concatenated and the stage / lane *names* are re-mapped
+ * into unions, so the renderer can keep treating the result as one case-shaped
+ * object.  caseStart / caseN give an O(1) global <-> local translation.
+ *
+ * Row rule for the merged view (measured, not guessed - see AGENTS.md): the
+ * profiler's parent links are thread-local, so a worker's _analyze_single is a
+ * depth-0 ROOT and the 65 main-lane analyze_pair blocks are depth 1 with the
+ * case root as parent - they are NOT each other's children even though the
+ * ticks fall inside the blocks' time ranges.  So the row draws
+ *   kind PAIR  main-lane depth<=1 "analyze_pair"     65 wide blocks
+ *   kind MAIN  main-lane depth<=1 anything else      25 wide blocks
+ *   kind SUB   depth-0 worker "_analyze_single"    1170 ticks (18 per block)
+ * and the work type - not the phase - drove the colour, because every one of
+ * them is phase "analysis".  Colour has since moved to the function model below
+ * (BRANCH_HUE), so this work type now only decides the SHAPE: which spans are
+ * drawn as a block, which as a tick. */
+const KIND = {PAIR: 0, SUB: 1, MAIN: 2, NONE: 3};
+const KIND_LABEL = ["analyze_pair (receptor block)", "_analyze_single (sub-panel task)",
+                    "other main stage", "not drawn"];
+
+const MERGED = (() => {
+  const cases = DATA.cases;
+  const nm = [], nmIx = new Map(), ln = [], lnIx = new Map();
+  const caseStart = [], caseN = [], mainIx = [];
+  let N = 0, totalMs = 0, maxDepth = 0, nLanes = 0, sumMs = 0, busiest = {name: "", ms: 0};
+  let longest = {label: "", ms: 0};
+  for (const c of cases){
+    caseStart.push(N); caseN.push(c.n); N += c.n;
+    if (c.total_ms > totalMs) totalMs = c.total_ms;
+    if (c.max_depth > maxDepth) maxDepth = c.max_depth;
+    nLanes = Math.max(nLanes, c.n_lanes);
+    sumMs += c.dur_ms;                      // elapsed time, NOT the clock end
+    if (c.dur_ms > longest.ms) longest = {label: c.label, ms: c.dur_ms};
+    if (c.busiest.ms > busiest.ms) busiest = c.busiest;
+    mainIx.push(c.lane_name.indexOf("main"));
+  }
+  const gCase = new Int16Array(N), gLocal = new Int32Array(N);
+  const gSt = new Int32Array(N), gPh = new Int8Array(N), gTh = new Int16Array(N);
+  const gDp = new Int8Array(N), gKind = new Uint8Array(N);
+  const gT0 = new Float64Array(N), gT1 = new Float64Array(N);
+  const gDur = new Float64Array(N), gSelf = new Float64Array(N);
+  const gPid = new Int32Array(N), gId = new Int32Array(N), gPg = new Int32Array(N);
+  const kindCount = [0, 0, 0, 0], phaseSpans = {};
+  for (let k = 0; k < cases.length; k++){
+    const c = cases[k], off = caseStart[k], mi = mainIx[k];
+    for (let i = 0; i < c.n; i++){
+      const g = off + i, onMain = (c.th[i] === mi);
+      let s = c.nm[c.st[i]], si = nmIx.get(s);
+      if (si === undefined){ si = nm.length; nmIx.set(s, si); nm.push(s); }
+      let l = c.lane_name[c.th[i]], li = lnIx.get(l);
+      if (li === undefined){ li = ln.length; lnIx.set(l, li); ln.push(l); }
+      gCase[g] = k; gLocal[g] = i; gSt[g] = si; gPh[g] = c.ph[i]; gTh[g] = li; gDp[g] = c.dp[i];
+      gT0[g] = c.t0[i]; gT1[g] = c.t1[i]; gDur[g] = c.dur[i]; gSelf[g] = c.self[i];
+      gPid[g] = c.pid[i]; gId[g] = c.id[i];
+      /* parent in the MERGED index space: the payload's parent_id is a
+       * per-case local row index, so walking it as a global index would link a
+       * span to an unrelated span of another case that happens to sit at the
+       * same offset - and could walk straight into a cycle */
+      gPg[g] = (c.pid[i] >= 0) ? off + c.pid[i] : -1;
+      gKind[g] = (s === "analyze_pair") ? KIND.PAIR
+               : (s === "_analyze_single" && c.dp[i] === 0 && !onMain) ? KIND.SUB
+               : (onMain && c.dp[i] <= 1) ? KIND.MAIN : KIND.NONE;
+      kindCount[gKind[g]]++;               // a full histogram, NONE included
+      const ph = PHASES[c.ph[i]];
+      phaseSpans[ph] = (phaseSpans[ph] || 0) + 1;
+    }
+  }
+  const view = {
+    n: N, id: gId, pid: gPid, pidg: gPg, st: gSt, ph: gPh, th: gTh, dp: gDp,
+    t0: gT0, t1: gT1, dur: gDur, self: gSelf,
+    nm: nm, lane_name: ln, label: "all cases",
+    /* phase names and the per-stage declared key outputs are case-invariant
+     * (PHASES comes from profiling.STAGE_SPECS, keys from the stage registry),
+     * so the first case carries them for the merged view */
+    phn: cases[0].phn, keys: cases[0].keys,
+    total_ms: totalMs, max_depth: maxDepth, n_lanes: nLanes,
+    /* the merged view is the whole sweep, so it owns the full clock */
+    t_off_ms: 0, dur_ms: totalMs,
+    phase_spans: phaseSpans, busiest: busiest,
+    par: peakPar(), sum_ms: sumMs, longest: longest, merged: true,
+  };
+  /* "peak 16" is a formatted string, so compare it only by presence - the
+   * worker count is the same for every case in a sweep */
+  function peakPar(){
+    for (const c of cases) if (c.par) return c.par;
+    return null;
+  }
+  return {
+    view: view, caseStart: caseStart, caseN: caseN, kind: gKind,
+    kindCount: kindCount, gCase: gCase, gLocal: gLocal,
+    label: i => cases[gCase[i]].label,
+    local: i => i - caseStart[gCase[i]],
+    n: N,
+  };
+})();
+
+/* what the renderer reads: the focused case, or the merged view */
+const V = () => S.mode === "all" ? MERGED.view : C();
+/* the case a span belongs to - a real label in both modes */
+const caseOf = i => S.mode === "all" ? MERGED.label(i) : C().label;
+/* the merged index -> that case's offset on the sweep clock */
+const caseOff = i => (DATA.cases[MERGED.gCase[i]] || {}).t_off_ms || 0;
+
+/* ------------------------------------------------ function colour model
+ * A bar's colour answers "WHICH FUNCTION was this", not "which pipeline phase".
+ * The phase palette collapsed 19 analysis stages - and all 13 helpers inside
+ * every one of the 6 000 _analyze_single calls - onto a single blue, so the
+ * chart could not show where the time actually went.  Three rules, in order:
+ *
+ *  1. BRANCH.  Walk the payload's parent links to the root of this span's tree
+ *     and take that root's stage name.  The profiler's parent links are
+ *     thread-local, so this is the REAL branch, not a guess from the stage
+ *     name: on a six-case sweep it yields five roots - run_analysis,
+ *     _analyze_single, compute_ephemeris, draw_figures, write_csvs.
+ *     Resolving per SPAN rather than per stage name is also what makes the four
+ *     dual-parent stages (reflect, sun_vector, beam_spread_angle, build_times)
+ *     come out right with no special case: they simply get the colour of
+ *     whichever parent they are actually under.
+ *  2. SHADE KEY.  The direct child of that root the span sits under.  Every
+ *     span in one child's subtree therefore shares one tone, which is the whole
+ *     point - the sub-functions of one function look alike, and the ramp between
+ *     sibling subtrees is what tells them apart.
+ *  3. RANK.  A branch's shade keys are ordered by total self time descending
+ *     (ties broken by name, so the order is deterministic) and the ramp runs
+ *     bright -> dim down that order, so the eye lands on the time mass first.
+ *     Measured: _analyze_single's top four children carry 99.8% of its time and
+ *     run_analysis's top two carry 89%, so on those two branches four and two
+ *     shades do nearly all the work.  draw_figures is the exception - its 15
+ *     plot_* children are spread evenly from 4.30 s to 0.68 s, so its ramp is
+ *     15 steps of one violet that the eye reads as a gradient and the tooltip
+ *     names exactly.
+ *
+ * RED IS RESERVED FOR ERRORS.  ERR_COLOR is the only red on this page and is
+ * used for spans that break an invariant build_run_timeline.py --check also
+ * enforces, never for a function.  Branch hues are therefore constrained to stay
+ * HUE_GUARD degrees clear of ERR_HUE, and validate_timeline_html.js asserts it,
+ * so a future branch cannot quietly take the one colour that means "error".
+ * (IEC 62471's RG3 is also red, in the report figures - that is a hazard risk
+ * group rather than an error, and it lives in viz.py, outside this page.)
+ */
+const ERR_COLOR = "#e8434c";
+const ERR_HUE = 2;                                 // degrees; see the note above
+const HUE_GUARD = 40;                              // keep branch hues this far away
+const BRANCH_HUE = {
+  run_analysis: 217,        // blue - the orchestrator, and the page's own accent
+  _analyze_single: 190,     // teal - the worker lanes
+  compute_ephemeris: 45,    // gold - the sun
+  draw_figures: 276,        // violet - figures (was red; red is for errors)
+  write_csvs: 146,          // green - IO
+  build_site: 156,          // green family, for the site phase if it ever roots
+  load_config: 220,         // config, if it ever reaches a case directory
+};
+const FALLBACK_HUE = 220, FALLBACK_SAT = 0.10;     // any branch not listed above
+/* ramp: hue fixed per branch, lightness stepping down by rank.  The bright end
+ * RISES for a wide branch, so that every step stays >= RAMP_MIN_STEP apart while
+ * the dim end never drops below RAMP_L_LO - which is where blue, the
+ * lowest-luminance family hue, still clears 3:1 against the canvas. */
+const RAMP_L_HI = 0.86, RAMP_L_MAX = 0.95, RAMP_MIN_STEP = 0.03, QUANT_SLACK = 0.05,
+      RAMP_SAT = 0.82;
+const CANVAS_BG = "#0e1015";
+/* The dim end of a ramp is DERIVED from a measured contrast floor, not picked by
+ * eye.  The first cut used a fixed RAMP_L_LO = 0.46 and the validator caught it
+ * immediately: the violet draw_figures family at that lightness measured 2.84:1
+ * on the canvas, because HSL lightness is not luminance and the violet primary
+ * is a poor-luminance hue at any L.  So the low end is searched downwards per hue
+ * until the ramp really clears CONTRAST_MIN, which is what the claim means. */
+const CONTRAST_MIN = 3.0;
+function minLForContrast(hue, sat, bg, ratio){
+  /* scan UP from the bottom and return the first L that clears the ratio: that
+   * is the dimmest end the hue can have here, which leaves the widest ramp.  The
+   * first cut scanned down from the cap instead and returned the BRIGHTEST match,
+   * so every ramp collapsed onto one lightness and the step fixup below then had
+   * nothing to separate - the validator caught it as a 0.984 bright end. */
+  for (let l = 0.20; l <= RAMP_L_MAX; l += 0.002){
+    if (contrastRatio(hsl2hex(hue, sat, l), bg) >= ratio) return l;
+  }
+  return RAMP_L_MAX;
+}
+/* the same tolerances the builder uses, so the page can never disagree with
+ * build_run_timeline.py --check: run_spans.csv is written with float_format
+ * "%.6f", i.e. 1 us, and the identity mixes three rounded quantities - the
+ * parent's dur (t1-t0, 1 us), the parent's self_s (0.5 us) and each child's
+ * dur (again t1-t0, 1 us) - so the bound is 1.5 us + 1 us per child. */
+const accTolMs = nkids => (1.5 + nkids) * 1e-3;
+const SLICE_TOL_MS = 1e-3;
+
+function hueGap(a, b){ const d = Math.abs(a - b) % 360; return d > 180 ? 360 - d : d; }
+function hsl2hex(h, s, l){
+  h = ((h % 360) + 360) % 360;
+  const c = (1 - Math.abs(2*l - 1)) * s,
+        x = c * (1 - Math.abs((h/60) % 2 - 1)), m = l - c/2;
+  let r, g, b;
+  if (h < 60)       { r = c; g = x; b = 0; }
+  else if (h < 120) { r = x; g = c; b = 0; }
+  else if (h < 180) { r = 0; g = c; b = x; }
+  else if (h < 240) { r = 0; g = x; b = c; }
+  else if (h < 300) { r = x; g = 0; b = c; }
+  else              { r = c; g = 0; b = x; }
+  const hx = v => ("0" + Math.round((v + m) * 255).toString(16)).slice(-2);
+  return "#" + hx(r) + hx(g) + hx(b);
+}
+/* relative luminance + WCAG contrast, so the "readable on the canvas" claim is
+ * a measurement the validator can re-derive rather than a comment */
+function relLum(hex){
+  const v = [1, 3, 5].map(k => parseInt(hex.substr(k, 2), 16) / 255)
+    .map(u => (u <= 0.03928 ? u / 12.92 : Math.pow((u + 0.055) / 1.055, 2.4)));
+  return 0.2126*v[0] + 0.7152*v[1] + 0.0722*v[2];
+}
+function contrastRatio(a, b){
+  const la = relLum(a), lb = relLum(b);
+  return (Math.max(la, lb) + 0.05) / (Math.min(la, lb) + 0.05);
+}
+/* HSL lightness of a hex colour, so "the ramp steps apart" is a measurement and
+ * not an eyeball claim.  The model builds its ramp in HSL, so this inverts it
+ * exactly; the rounding to 8-bit costs at most 0.002. */
+function hexL(hex){
+  const u = [1, 3, 5].map(k => parseInt(hex.substr(k, 2), 16) / 255);
+  const mx = Math.max.apply(null, u), mn = Math.min.apply(null, u);
+  return (mx + mn) / 2;
+}
+/* the largest lightness error a hex can hide, so a check on a quantised colour
+ * compares against the bound and not against an exact float */
+const QUANT_TOL = 2 / 255;
+function rampL(rank, n, lo){
+  if (n <= 1) return RAMP_L_HI;
+  /* A wide branch needs a taller ramp, so the bright end rises - but it needs
+   * SLACK, not just enough: n-1 exact RAMP_MIN_STEP steps span exactly the
+   * available range, and then 8-bit rounding eats the last one.  QUANT_SLACK buys
+   * a few thousandths so the fixup has somewhere to go; without it the 15-key
+   * violet draw_figures ramp measured a 0.0176 step, well under the 0.03 floor. */
+  const l0 = Math.min(RAMP_L_MAX, Math.max(RAMP_L_HI,
+                                           lo + RAMP_MIN_STEP * (n - 1) + QUANT_SLACK));
+  return l0 - (l0 - lo) * (rank / (n - 1));
+}
+/* Build a branch's ramp as SHIPPED hex colours, then fix up the 8-bit rounding.
+ * Choosing the L values first and quantising afterwards silently loses up to
+ * ~0.002 of lightness per step, which is enough to break RAMP_MIN_STEP outright
+ * (the validator measured 0.0294 against a 0.03 floor on 16 of 34 steps).  So the
+ * step is enforced on the final hex, walking away from the previous shade
+ * whenever rounding collapsed it - the guarantee then holds on the colour the
+ * reader actually sees, not on the float that produced it. */
+function buildRamp(hue, sat, n){
+  const lo = minLForContrast(hue, sat, CANVAS_BG, CONTRAST_MIN);
+  const out = [];
+  for (let k = 0; k < n; k++){
+    let hex = hsl2hex(hue, sat, rampL(k, n, lo)), moved = 0;
+    /* Near white the 8-bit channels are coarse, so a nudge in L can round away
+     * to nothing; the budget stops that from becoming a slow march to white.
+     * The lower clamp is the contrast floor itself: nudging DOWN past `lo` would
+     * buy a step by spending readability, and the readability is the promise. */
+    for (let g = 0; g < 24 && k > 0 && moved < 0.15; g++){
+      const d = hexL(hex) - hexL(out[k - 1]);
+      if (Math.abs(d) >= RAMP_MIN_STEP - 1e-9) break;
+      const push = (d >= 0 ? 1 : -1) * (RAMP_MIN_STEP - Math.abs(d) + 0.004);
+      const want = hexL(hex) + push;
+      hex = hsl2hex(hue, sat, Math.max(lo, Math.min(RAMP_L_MAX, want)));
+      moved += Math.abs(push);
+      if (want < lo) break;              /* the step is unreachable without
+                                           * going unreadable; stop rather than
+                                           * lie about it - the validator
+                                           * reports it if this ever bites */
+    }
+    out.push(hex);
+  }
+  return out;
+}
+
+/* Build - and cache on the view object - the colour model for one case-shaped
+ * object.  Set `c._cm = null` to force a rebuild; that is how the validator
+ * exercises the error path, by corrupting one span and asking for a redraw. */
+function colorModel(c){
+  if (c._cm) return c._cm;
+  const n = c.n, pa = c.merged ? c.pidg : c.pid, nmOf = i => c.nm[c.st[i]];
+
+  /* -- one parent walk per span: the root (branch) and the highest ancestor
+   *    below it (shade key), plus the direct-children accounting.  The hop cap
+   *    is a guard, not a hope: a cycle would hang the browser, which is the very
+   *    bug the call-tree walk once had. */
+  const rootOf = new Int32Array(n), keyOf = new Int32Array(n);
+  const kids = new Map(), nkids = new Int32Array(n);
+  for (let i = 0; i < n; i++){
+    let j = i, prev = -1, hops = 0;
+    while (pa[j] >= 0 && pa[j] < n && hops < 64){ prev = j; j = pa[j]; hops++; }
+    rootOf[i] = j;
+    keyOf[i] = prev >= 0 ? prev : j;          // a root keys itself
+    const p = pa[i];
+    if (p >= 0 && p < n){ kids.set(p, (kids.get(p) || 0) + c.dur[i]); nkids[p]++; }
+  }
+
+  /* -- branches: the roots, heaviest first */
+  const bName = [], bSelf = [], bIx = new Map(), branchSlot = new Int8Array(n);
+  for (let i = 0; i < n; i++){
+    const nm = nmOf(rootOf[i]);
+    let b = bIx.get(nm);
+    if (b === undefined){ b = bName.length; bIx.set(nm, b); bName.push(nm); bSelf.push(0); }
+    bSelf[b] += c.self[i];
+    branchSlot[i] = b;
+  }
+  const bOrder = bName.map((_, b) => b)
+    .sort((a, b) => (bSelf[b] - bSelf[a]) || bName[a].localeCompare(bName[b]));
+
+  /* -- shade keys, per branch.  The key id carries the branch, so the same
+   *    child name under two different branches is two distinct keys. */
+  const keyName = [], keySelf = [], keyBranch = [], keyIx = new Map(), keyOfSpan = new Int32Array(n);
+  for (let i = 0; i < n; i++){
+    const k = nmOf(keyOf[i]), id = k + " " + nmOf(rootOf[i]);
+    let s = keyIx.get(id);
+    if (s === undefined){
+      s = keyName.length; keyIx.set(id, s);
+      keyName.push(k); keySelf.push(0); keyBranch.push(bIx.get(nmOf(rootOf[i])));
+    }
+    keySelf[s] += c.self[i];
+    keyOfSpan[i] = s;
+  }
+  const keyN = new Int32Array(bName.length), keyRank = new Int32Array(keyName.length);
+  for (let s = 0; s < keyName.length; s++) keyN[keyBranch[s]]++;
+  const perBranch = new Map();
+  for (let s = 0; s < keyName.length; s++){
+    const b = keyBranch[s];
+    if (!perBranch.has(b)) perBranch.set(b, []);
+    perBranch.get(b).push(s);
+  }
+  for (const list of perBranch.values()){
+    list.sort((x, y) => (keySelf[y] - keySelf[x]) || keyName[x].localeCompare(keyName[y]));
+    list.forEach((s, rank) => { keyRank[s] = rank; });
+  }
+
+  /* -- the ramp itself, one per branch, then indexed by key */
+  const ramps = new Array(bName.length);
+  for (let b = 0; b < bName.length; b++){
+    const known = BRANCH_HUE[bName[b]] !== undefined;
+    ramps[b] = buildRamp(known ? BRANCH_HUE[bName[b]] : FALLBACK_HUE,
+                         known ? RAMP_SAT : FALLBACK_SAT, keyN[b]);
+  }
+  const keyCol = new Array(keyName.length);
+  for (let s = 0; s < keyName.length; s++) keyCol[s] = ramps[keyBranch[s]][keyRank[s]];
+
+  /* -- the error pass, using the builder's own arithmetic */
+  const bad = new Uint8Array(n), badWhy = new Array(n);
+  const off = c.t_off_ms || 0,
+        lo = off - SLICE_TOL_MS,
+        hi = off + (c.dur_ms !== undefined ? c.dur_ms : c.total_ms) + SLICE_TOL_MS;
+  for (let i = 0; i < n; i++){
+    const why = [];
+    if (c.t1[i] < c.t0[i]) why.push("t1 < t0");
+    if (c.t0[i] < lo) why.push("starts " + ((lo - c.t0[i])/1000).toFixed(3) +
+                               " s before its case's own slice of the sweep clock");
+    else if (c.t1[i] > hi) why.push("ends " + ((c.t1[i] - hi)/1000).toFixed(3) +
+                                    " s after its case's own slice of the sweep clock");
+    const got = (kids.get(i) || 0) + c.self[i] * 1000, tol = accTolMs(nkids[i]);
+    if (Math.abs(got - c.dur[i]) > tol)
+      why.push("self + children = " + got.toFixed(3) + " ms != wall " + c.dur[i].toFixed(3) +
+               " ms (tol " + tol.toFixed(3) + " ms over " + nkids[i] + " children)");
+    if (why.length){ bad[i] = 1; badWhy[i] = why.join("; "); }
+  }
+
+  const col = new Array(n);
+  let badCount = 0;
+  for (let i = 0; i < n; i++){
+    if (bad[i]){ col[i] = ERR_COLOR; badCount++; } else col[i] = keyCol[keyOfSpan[i]];
+  }
+
+  /* -- one colour per stage name for the inventory table: the colour of the
+   *    single heaviest span of that stage, which is the one the reader will
+   *    actually be looking at.  A stage can sit in two branches, so this is a
+   *    choice, and it is made by weight rather than by luck. */
+  const stageBest = new Map();
+  for (let i = 0; i < n; i++){
+    const nm = nmOf(i), cur = stageBest.get(nm);
+    if (!cur || c.self[i] > cur.self)
+      stageBest.set(nm, {self: c.self[i], col: col[i], branch: bName[branchSlot[i]]});
+  }
+
+  const branches = bOrder.map(b => {
+    const nm = bName[b], known = BRANCH_HUE[nm] !== undefined, list = perBranch.get(b) || [];
+    return {
+      name: nm, self: bSelf[b], spans: 0,
+      hue: known ? BRANCH_HUE[nm] : FALLBACK_HUE,
+      sat: known ? RAMP_SAT : FALLBACK_SAT,
+      known: known, nShades: list.length,
+      ramp: list.map(s => keyCol[s]),
+      keys: list.map(s => ({name: keyName[s], col: keyCol[s], self: keySelf[s]})),
+    };
+  });
+  const branchBySlot = new Array(bName.length);
+  bOrder.forEach((b, slot) => { branchBySlot[b] = branches[slot]; });
+  for (let i = 0; i < n; i++) branchBySlot[branchSlot[i]].spans++;
+
+  c._cm = {
+    col: col, bad: bad, badWhy: badWhy, badCount: badCount,
+    bNames: bName, branchSlot: branchSlot, keyName: keyName, keyCol: keyCol,
+    branches: branches, stageBest: stageBest,
+    nameOf: i => bName[branchSlot[i]],
+    whyOf: i => badWhy[i],
+    /* which direct child of the branch root this span hangs under - the identity
+     * the whole ramp is built on */
+    keyNameOf: i => keyName[keyOfSpan[i]],
+  };
+  return c._cm;
+}
+
+/* ------------------------------------------------------------- derivations */
+function spanCount(){ return V().n; }
+
+// lane assignment for a row, plus the row label
+function rows(){
+  if (S.mode === "all"){
+    /* the row also carries where the case sits on the sweep clock, so the label
+     * gutter can say so instead of the reader having to measure the bars */
+    return DATA.cases.map((c, k) => ({label: c.label, depth: 0, ci: k,
+                                     off: c.t_off_ms, dur: c.dur_ms}));
+  }
+  if (S.lane === "depth"){
+    const n = C().max_depth + 1;
+    const r = [];
+    for (let i = 0; i < n; i++) r.push({label:"depth " + i, depth:i});
+    return r;
+  }
+  return C().lane_name.map(l => ({label: l, depth: l === "main" ? -1 : 0}));
+}
+function rowOf(c, spanIdx){
+  if (S.mode === "all") return MERGED.gCase[spanIdx];
+  if (S.lane === "depth") return c.dp[spanIdx];
+  return c.th[spanIdx];
+}
+
+function visible(i){
+  const c = V(), cm = colorModel(c);
+  if (c.dur[i] < S.minDur) return false;
+  if (S.query && c.nm[c.st[i]].toLowerCase().indexOf(S.query) < 0) return false;
+  if (S.mode === "all"){
+    /* merged rows draw work types, not lanes, and the isolate toggle is a
+     * case-mode concept.  KIND.NONE is the 78k bookkeeping spans (phase roots,
+     * worker bookkeeping, config/IO helpers) that are not part of the work-type
+     * picture at all: they are excluded outright, or every mode switch would
+     * draw all 85,889 of them as one flat smear. */
+    if (MERGED.kind[i] === KIND.NONE) return false;
+  } else if (S.isoThread !== null && c.th[i] !== S.isoThread){
+    return false;
+  }
+  /* An error span is always drawn.  Red is reserved FOR errors, so hiding the
+   * family an error happens to sit in must not be able to hide the only warning
+   * on the page.  The min-duration and search filters still apply: those are the
+   * reader narrowing their own question, not a colour decision. */
+  if (cm.bad[i]) return true;
+  if (S.hiddenBranch.size && S.hiddenBranch.has(cm.bNames[cm.branchSlot[i]])) return false;
+  return true;
+}
+
+/* index of the spans sorted by t0: gives painter's order (wide first) */
+let order = null;
+function buildOrder(){
+  const c = V(), n = c.n;
+  const idx = new Int32Array(n);
+  for (let i = 0; i < n; i++) idx[i] = i;
+  const arr = Array.from(idx).sort((a,b) => c.t0[a] - c.t0[b] || c.dur[b] - c.dur[a]);
+  order = arr;
+}
+/* rebuild everything that depends on which spans are in scope */
+function renderAll(){ renderStats(); renderLegend(); renderInv(); draw(); renderTree(); }
+
+/* -------------------------------------------------------------- rendering */
+const cv = document.getElementById("cv"), ctx = cv.getContext("2d");
+const tip = document.getElementById("tip");
+let hitBoxes = [];      // {x0,x1,y0,y1,i} for the hover test
+let geom = null;
+
+/* The canvas is sized to the VIRTUAL extent and lives in an `overflow:auto` pane,
+ * so a native scrollbar can walk it.  At zoom 1 this reproduces the old geometry
+ * exactly - the virtual plot width is the pane's width - which is the point: the
+ * default view is unchanged and only a zoomed-in or overflowing chart grows. */
+const PAD = {mergedL: 132, caseL: 62, R: 12, T: 20, B: 20, axisH: 16};
+/* A native scrollbar's thickness.  One is reserved at all times (see the
+ * overflow-y:scroll comment), and the other is added to the pane height when it
+ * will really appear, so the bottom row is never hidden behind it. */
+const SB = 11;
+/* How the pane's own viewport is read back.  `clientHeight` is the VISIBLE height
+ * (the canvas is taller); `clientWidth` is the visible width (the canvas is wider
+ * once zoomed in).  Everything that culls or overlays uses these. */
+function paneH(){ return document.getElementById("scroller").clientHeight || 620; }
+function paneW(){ return Math.max(320, document.getElementById("scroller").clientWidth || 0); }
+/* Depth levels share one row in thread mode.  4 slots rather than the old 3.4
+ * divisor, so a bar is a clean slice with a gap between levels; BAR_FILL then
+ * says how much of that slice the bar actually paints. */
+const DEPTH_SLOTS = 4, BAR_FILL = 0.72;
+function padL(){ return S.mode === "all" ? PAD.mergedL : PAD.caseL; }
+function plotW0(){ return Math.max(80, paneW() - padL() - PAD.R); }
+function contentH(){ return PAD.T + rows().length * rowH() + PAD.B; }
+/* The canvas size in CSS pixels, captured once per resize(), so draw() and the
+ * browser agree on ONE number instead of two that have to be equal.  This is NOT
+ * a bug fix: `w` is already an integer, so the old `cv.width / dpr` reduced to
+ * exactly `w` at every devicePixelRatio (measured at 1, 1.25 and 1.5 - a
+ * regression check now pins that equality, because the first theory for the
+ * "scrollbar thumb cannot reach the end" report was that the drawn extent drifted
+ * past the scrollable one, and the measurement says it never did).  It stays
+ * because it removes an indirection rather than a defect, and because the
+ * equality would stop being automatic the moment `w` stopped being integral. */
+let CSS = {w: 0, h: 0};
+function virtualSize(){
+  return {w: Math.round(padL() + plotWPx() + PAD.R),
+          h: Math.round(contentH())};
+}
+function resize(){
+  const dpr = window.devicePixelRatio || 1;
+  const ch = contentH();
+  /* Measure the content width first, so the pane height can reserve room for the
+   * horizontal scrollbar it will need.  That is not circular: the width depends
+   * on the pane, and the pane's WIDTH is stable (the vertical gutter is always
+   * reserved), while its HEIGHT is what we are deciding. */
+  const w = Math.round(padL() + plotWPx() + PAD.R);
+  const needsH = w > paneW();
+  /* The pane never scrolls when the content fits, and takes at most 70vh when it
+   * does, so the chart is a pane rather than a page that grows without limit. */
+  const want = Math.min(Math.max(320, ch + (needsH ? SB : 0)),
+                        Math.round((window.innerHeight || 900) * 0.70));
+  document.getElementById("scroller").style.height = want + "px";
+  cv.style.width = w + "px";
+  cv.style.height = Math.round(ch) + "px";
+  CSS = {w: w, h: Math.round(ch)};
+  /* assigning width/height RESETS the 2D context, so the DPR transform has to be
+   * re-applied here and the caller has to redraw - which is why every path that
+   * changes the virtual size calls resize() and not just draw(). */
+  cv.width = Math.round(w * dpr);
+  cv.height = Math.round(ch * dpr);
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  clampScroll();
+}
+/* Content can SHRINK - zooming out, fewer rows, a mode switch - and the browser
+ * clamps the offsets asynchronously, so a stale offset would leave the pane
+ * showing blank margin.  Read the pane back rather than trusting S.sx/S.sy. */
+function clampScroll(){
+  const p = document.getElementById("scroller");
+  p.scrollLeft = p.scrollLeft;
+  p.scrollTop = p.scrollTop;
+  S.sx = p.scrollLeft; S.sy = p.scrollTop;
+}
+
+/* The merged view is one continuous sweep clock: the cases were run back to
+ * back, so case k's spans sit at [t_off_ms, t_off_ms + dur_ms] and the rows are
+ * directly comparable.  A FOCUSED case keeps its own slice as the full axis,
+ * because its lane view is about that case's internals - stretching 100 s of
+ * internals across a 668 s axis would squeeze them to a sixth of the width. */
+function caseSpan(c){
+  const o = c.t_off_ms || 0;
+  return {t0: o, t1: o + (c.dur_ms !== undefined ? c.dur_ms : c.total_ms)};
+}
+/* THE ONE time<->pixel conversion, in both directions.  It is used before AND
+ * after a resize() - setZoom() has to put the anchor back under the same pixel -
+ * and by three separate gestures, so it cannot live on `geom`, which is only
+ * assigned at the end of draw().  Every caller works in CONTENT pixels, which
+ * getBoundingClientRect() already delivers scroll-independently, so none of them
+ * has to know or care about the scroll offset.  Having one pair of functions is
+ * what keeps a zoom from ever being able to clip the axis: the mapping is
+ * full-span -> full-content by construction, so there is no window to narrow. */
+function axisSpan(){
+  const sp = caseSpan(V());
+  return {t0: sp.t0, t1: sp.t1, dur: Math.max(1e-9, sp.t1 - sp.t0)};
+}
+/* how much wider than the pane the content is, in px.  1 means "exactly fits" and
+ * therefore no horizontal scrollbar. */
+function plotWPx(){ return plotW0() * S.zoom; }
+function tToPx(t){
+  const a = axisSpan();
+  return padL() + (t - a.t0) / a.dur * plotWPx();
+}
+function pxToT(px){
+  const a = axisSpan();
+  return a.t0 + (px - padL()) / Math.max(1e-9, plotWPx()) * a.dur;
+}
+/* The slice of the axis the PANE is looking at, derived from the scroll offset.
+ * Only three things need it: culling bars, choosing the gridline step, and the
+ * sticky axis.  Pointer math does NOT - it goes through pxToT/tToPx above - so
+ * nothing that a user can drag depends on this being in step.  It is recomputed
+ * on every draw() from S.sx, which the scroll listener keeps current, so it can
+ * never be a stale copy of a view the reader is no longer looking at.
+ *
+ * The pane occupies CONTENT x [S.sx, S.sx + paneW()] - the axis mapping already
+ * has padL built into it, so the right edge is S.sx + paneW() and NOT
+ * S.sx + paneW() - padL().  Subtracting the gutter a second time shortened the
+ * window to 88% of the axis and quietly culled every span in the last 11%: the
+ * merged draw check reported 6911 of 7560 bars drawn and nothing else in the
+ * file noticed, because every other check asks whether the pane can move rather
+ * than whether everything inside it is still drawn. */
+function visSpan(){
+  const t0 = pxToT(S.sx);
+  return {t0: t0, t1: pxToT(S.sx + paneW())};
+}
+/* A browser refuses a canvas past 32767 px on a side, or past 268435456 px^2 in
+ * area, and it does so by NOT PAINTING - a zoom asking for more renders a blank
+ * chart with no error anywhere to find.  The area limit binds harder as the view
+ * gets taller, so the cap moves with the row height and the mode and cannot be a
+ * constant; it is reported in the stats panel so a clamped zoom looks clamped
+ * rather than looking broken. */
+const CANVAS_MAX_SIDE = 32767, CANVAS_MAX_AREA = 268435456;
+function maxZoom(){
+  const avail = Math.min(CANVAS_MAX_SIDE, CANVAS_MAX_AREA / Math.max(1, Math.round(contentH())));
+  return Math.max(1, (avail - padL() - PAD.R) / Math.max(1, plotW0()));
+}
+
+/* Row labels live in one function because they are drawn TWICE: once as ordinary
+ * content, and once pinned into the gutter by drawStickyGutter().  Duplicating
+ * the merged-mode "focus" affordance and the dimming rule would let the two
+ * copies drift, and the sticky copy is the one the reader relies on after a
+ * vertical scroll.  `dx`/`dy` shift into viewport space for the sticky pass;
+ * `sticky` also switches the row separator to the gutter-only variant. */
+function paintRowLabels(g, dx, dy, sticky){
+  const r = rows(), merged = (S.mode === "all");
+  ctx.textAlign = "right"; ctx.font = "11px 'Segoe UI',sans-serif";
+  for (let k = 0; k < r.length; k++){
+    const yc = dy + g.padT + g.rowH * (k + .5);
+    if (sticky && !rowInPane(g, k)) continue;
+    const iso = (!merged && S.lane === "thread" && S.isoThread === k);
+    ctx.fillStyle = (merged || S.lane === "depth" || S.isoThread === null || iso || k === 0)
+      ? "#c3cad6" : "#5b6270";
+    ctx.fillText(r[k].label, dx + g.padL - 9, yc + 4);
+    if (merged){          // "click the name to focus" affordance
+      ctx.fillStyle = "#5b6270";
+      ctx.fillText("focus \u203a", dx + g.padL - 9, yc + 16);
+      /* where this case sits on the sweep clock - the rows are laid out on the
+       * real elapsed time, so saying "100.0s -> 214.8s" is the row's identity */
+      if (r[k].off !== undefined){
+        ctx.fillStyle = "#4a5162";
+        ctx.font = "10px 'Segoe UI',sans-serif";
+        ctx.fillText(fmtT(r[k].off) + " \u203a " + fmtT(r[k].off + r[k].dur),
+                     dx + g.padL - 9, yc + 28);
+        ctx.font = "11px 'Segoe UI',sans-serif";
+      }
+    }
+    if (iso && !sticky){
+      ctx.strokeStyle = "rgba(255,209,102,.45)";
+      ctx.strokeRect(.5, g.padT + g.rowH*k + 1, g.W-1, g.rowH-2);
+    }
+    if (k){
+      ctx.strokeStyle = "#1b1f28";
+      ctx.beginPath();
+      ctx.moveTo(dx + g.padL, Math.round(dy + g.padT + g.rowH*k)+.5);
+      ctx.lineTo(dx + g.padL + g.plotW, Math.round(dy + g.padT + g.rowH*k)+.5);
+      ctx.stroke();
+    }
+  }
+}
+function rowInPane(g, k){
+  const y0 = g.padT + g.rowH*k, y1 = y0 + g.rowH;
+  return y1 >= S.sy && y0 <= S.sy + paneH();
+}
+
+/* The gutter and the time axis are the two overlays that make scrolling usable:
+ * without them, a vertical scroll hides the times and a horizontal one hides the
+ * lane names.  Both are painted last (over the band) in VIEWPORT coordinates,
+ * i.e. the content's own coordinates minus the pane's scroll offset, and both
+ * mask the content sliding underneath with an opaque fill plus a shadow. */
+function drawStickyGutter(){
+  if (S.sx <= 0) return;                 // nothing is passing under it
+  const g = geom; if (!g) return;
+  const w = g.padL;
+  ctx.save();
+  ctx.beginPath(); ctx.rect(0, 0, w, g.H); ctx.clip();
+  ctx.fillStyle = "#0e1015"; ctx.fillRect(0, 0, w, g.H);
+  paintRowLabels(g, -S.sx, -S.sy, true);
+  /* the shadow on the content's edge, so the pin reads as an overlay and not as
+   * a column of the chart */
+  const sh = ctx.createLinearGradient(w, 0, w + 10, 0);
+  sh.addColorStop(0, "rgba(0,0,0,.45)"); sh.addColorStop(1, "rgba(0,0,0,0)");
+  ctx.fillStyle = sh; ctx.fillRect(w, 0, 10, g.H);
+  ctx.strokeStyle = "#252a35";
+  ctx.beginPath(); ctx.moveTo(w - .5, 0); ctx.lineTo(w - .5, g.H); ctx.stroke();
+  ctx.restore();
+}
+
+function drawStickyAxis(step, fmtT){
+  /* `geom.v` and `geom.x`, NOT draw()'s locals: this is a module-level function,
+   * so draw()'s `const v` / `const x` are not in its lexical scope at all.  The
+   * first version read them directly and threw on every draw once the pane was
+   * scrolled - invisible in the un-scrolled default view, which is exactly the
+   * kind of bug a check that scrolls first is the only thing that catches. */
+  const g = geom;
+  if (!g || !(S.sy > 0 || S.sx > 0)) return;
+  const h = PAD.T;
+  const vx0 = S.sx, vx1 = S.sx + paneW();
+  const vy0 = S.sy, vy1 = S.sy + paneH();
+  ctx.save();
+  ctx.beginPath(); ctx.rect(vx0, vy0, Math.max(0, vx1 - vx0), Math.max(0, vy1 - vy0)); ctx.clip();
+  ctx.fillStyle = "#0e1015"; ctx.fillRect(vx0, vy0, vx1 - vx0, h);
+  ctx.strokeStyle = "#79818f"; ctx.fillStyle = "#79818f";
+  ctx.font = "10px Consolas,monospace"; ctx.textAlign = "center"; ctx.lineWidth = 1;
+  for (let t = Math.ceil(g.v.t0/step)*step; t <= g.v.t1; t += step){
+    const px = Math.round(g.x(t) - S.sx) + .5;      // viewport coordinates
+    ctx.beginPath(); ctx.moveTo(px, vy0 + h - 5); ctx.lineTo(px, vy0 + h); ctx.stroke();
+    ctx.fillText(fmtT(t), px, vy0 + h - 8);
+  }
+  const sh = ctx.createLinearGradient(0, h, 0, h + 8);
+  sh.addColorStop(0, "rgba(0,0,0,.45)"); sh.addColorStop(1, "rgba(0,0,0,0)");
+  ctx.fillStyle = sh; ctx.fillRect(vx0, h, vx1 - vx0, 8);
+  ctx.strokeStyle = "#252a35";
+  ctx.beginPath(); ctx.moveTo(vx0, h - .5); ctx.lineTo(vx1, h - .5); ctx.stroke();
+  ctx.restore();
+}
+
+function draw(){
+  const c = V(), r = rows(), merged = (S.mode === "all");
+  /* All of these are CONTENT coordinates, which is what the canvas is sized in:
+   * the pane clips it, the pointer math recovers content coordinates from
+   * getBoundingClientRect() for free, and the sticky overlays are the only things
+   * that need to know where the pane is actually looking. */
+  const W = CSS.w || cv.width / (window.devicePixelRatio || 1);
+  const H = CSS.h || cv.height / (window.devicePixelRatio || 1);
+  const padL = merged ? PAD.mergedL : PAD.caseL;
+  const padR = PAD.R, padT = PAD.T, padB = PAD.B;
+  const v = visSpan();
+  const plotW = plotWPx();
+  const plotH = H - padT - padB;
+  const rowH = r.length ? plotH / r.length : 0;
+  const inner = merged ? 30
+               : (S.lane === "thread" ? Math.max(5, Math.min(40, rowH - 10)) : Math.max(6, rowH - 7));
+  const x = tToPx;
+
+  ctx.clearRect(0, 0, W, H);
+  hitBoxes = [];
+
+  /* grid + time axis */
+  ctx.strokeStyle = "#20242e"; ctx.fillStyle = "#79818f";
+  ctx.font = "10px Consolas,monospace"; ctx.lineWidth = 1;
+  const span = v.t1 - v.t0;
+  const stepChoices = [10,20,50,100,200,500,1000,2000,5000,10000,20000,60000,120000];
+  let step = stepChoices[stepChoices.length-1];
+  for (const s of stepChoices){ if (span / s <= 14){ step = s; break; } }
+  ctx.textAlign = "center";
+  for (let t = Math.ceil(v.t0/step)*step; t <= v.t1; t += step){
+    const px = Math.round(x(t)) + .5;
+    ctx.beginPath(); ctx.moveTo(px, padT); ctx.lineTo(px, padT+plotH); ctx.stroke();
+    ctx.fillText(fmtT(t), px, padT + plotH + 13);
+  }
+  /* row separators + labels */
+  paintRowLabels({padL, padT, plotW, rowH, W}, 0, 0, false);
+
+  /* bars */
+  /* merged row: the wide block sits in the upper part of the row, its
+   * sub-panel ticks in a strip at the bottom of the same row - they fall
+   * inside the block's time range, so the strip reads as "inside" */
+  const barY = (i) => {
+    const yc = padT + rowH * (rowOf(c, i) + .5);
+    if (merged){
+      return MERGED.kind[i] === KIND.SUB
+        ? yc + rowH * .5 - 6
+        : yc - inner/2 - 2;
+    }
+    const d = c.dp[i];
+    return S.lane === "thread"
+      ? yc - inner/2 + Math.min(d, 3) * (inner / DEPTH_SLOTS)
+      : yc - inner/2;
+  };
+  /* Depth levels are stacked inside one row, so a thread-mode bar is a slice of
+   * `inner`, not `inner` itself.  BAR_FILL < 1 leaves a visible gap between the
+   * depth levels - at the old cap of 15 px a bar was inner/3.4-1 = 3.4 px, and
+   * the cap is what actually limited legibility, not the row height: a taller row
+   * alone changed nothing.  With the cap at 40 and a 0.72 fill a bar is ~7.2 px at
+   * the 44 px default, and ~10.8 px fully expanded. */
+  const barH = (i) => {
+    if (merged) return MERGED.kind[i] === KIND.SUB ? 4 : inner * .5;
+    return S.lane === "thread"
+      ? Math.max(2.5, inner / DEPTH_SLOTS * BAR_FILL)
+      : Math.max(3, inner - 2);
+  };
+  /* Bars are coloured by FUNCTION, in both views.  The merged view used to
+   * paint by work type, because every span on those rows is phase "analysis"
+   * and a phase legend would have been one flat colour - but that traded one
+   * flat palette for another.  A receptor block is now the run_analysis shade
+   * of analyze_pair and its sub-panel ticks are the _analyze_single family, so
+   * the work type stays readable from the shape and the tooltip while the colour
+   * says which function. */
+  const cm = colorModel(c);
+  const barColor = i => cm.col[i];
+
+  const x0 = x(v.t0), x1 = x(v.t1);
+  /* The pane may show only part of the content, so the bar loop culls on BOTH
+   * axes.  The y window is the slice of CONTENT the pane is looking at, which is
+   * [sy, sy + paneH) with NO padT term: `sy` is a scroll offset, not a content
+   * row, and padT is already part of the content (the axis band sits at its top).
+   * Adding padT here shifted the window down by 20 px and silently culled a row
+   * that was still visible under the top edge.  At zoom 1 with everything
+   * visible the window covers the whole plot, so the cull is free. */
+  const vy0 = S.sy, vy1 = S.sy + paneH();
+  let drawn = 0;
+  for (const i of order){
+    if (!visible(i)) continue;
+    const bx0 = x(c.t0[i]), bx1 = x(c.t1[i]);
+    if (bx1 < x0 || bx0 > x1) continue;            // outside the window
+    const row = rowOf(c, i);
+    const ry0 = padT + rowH * row, ry1 = ry0 + rowH;
+    if (ry1 < vy0 || ry0 > vy1) continue;          // outside the pane vertically
+    const yy = barY(i), hh = barH(i);
+    const isSel = (S.sel === i);
+    ctx.fillStyle = barColor(i);
+    const w = Math.max(1, bx1 - bx0);
+    ctx.fillRect(bx0, yy, w, hh);
+    if (isSel){
+      ctx.strokeStyle = "#ffd166"; ctx.lineWidth = 1.5;
+      ctx.strokeRect(bx0 - .5, yy - .5, w + 1, hh + 1);
+    }
+    /* label wide enough */
+    if (w > 46 && hh >= 9){
+      ctx.save();
+      ctx.beginPath(); ctx.rect(bx0, yy, w, hh); ctx.clip();
+      ctx.fillStyle = "rgba(6,8,12,.82)";
+      ctx.font = "10px Consolas,monospace"; ctx.textAlign = "left";
+      ctx.fillText(c.nm[c.st[i]], bx0 + 3, yy + hh - 2.5);
+      ctx.restore();
+    }
+    hitBoxes.push({x0:bx0, x1:bx1, y0:yy, y1:yy+hh, i});
+    drawn++;
+  }
+  /* Defensive only: the bar loop no longer touches alpha (a range magnifies, it
+   * does not dim), so this is a no-op today.  Kept because every other paint
+   * routine here treats it as a floor - the search dim and the band set their own
+   * alpha - and a leak from any of them would tint the axis and the labels. */
+  ctx.globalAlpha = 1;
+
+  /* selection / search dim overlay for non-matching lanes */
+  geom = {padL, padR, padT, padB, plotW, plotH, rowH, inner, W, H, v, drawn, x,
+          tAt: pxToT, zoom: S.zoom, zoomMax: maxZoom(),
+          sx: S.sx, sy: S.sy, paneH: paneH(), paneW: paneW()};
+  drawCaret();
+  /* the band is state, not pixels: redrawing the chart always repaints it, and
+   * a stale `drag` left over from a lost mouseup cannot survive a clearRect */
+  paintSelectionBand();
+  /* Sticky overlays come LAST, on top of the band, because without them the
+   * feature is not usable: scroll down and there is no way to read a time, scroll
+   * right and there is no way to tell which lane a bar belongs to.  Both are
+   * pinned to the pane's visible edges and drawn in viewport coordinates, so they
+   * mask the content passing under them. */
+  drawStickyGutter();
+  drawStickyAxis(step, fmtT);
+  document.getElementById("stats").querySelector("[data-k=drawn]")
+    .textContent = drawn.toLocaleString();
+}
+
+function drawCaret(){
+  const c = V();
+  if (S.sel === null) return;
+  const g = geom; if (!g) return;
+  const i = S.sel;
+  if (c.t1[i] < g.v.t0 || c.t0[i] > g.v.t1) return;
+  ctx.save();
+  ctx.strokeStyle = "rgba(255,209,102,.5)";
+  ctx.setLineDash([3,3]); ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.moveTo(g.x(c.t0[i]), g.padT); ctx.lineTo(g.x(c.t0[i]), g.padT + g.plotH);
+  ctx.moveTo(g.x(c.t1[i]), g.padT); ctx.lineTo(g.x(c.t1[i]), g.padT + g.plotH);
+  ctx.stroke();
+  ctx.restore();
+}
+
+function fmtT(ms){
+  const s = ms/1000;
+  if (s < 60) return s.toFixed(s < 10 ? 2 : 1) + "s";
+  const m = Math.floor(s/60);
+  return m + "m" + String(Math.floor(s%60)).padStart(2,"0") + "s";
+}
+function fmtMs(ms){
+  if (ms >= 1000) return (ms/1000).toFixed(2) + " s";
+  if (ms >= 1) return ms.toFixed(ms < 10 ? 2 : 1) + " ms";
+  return (ms*1000).toFixed(0) + " µs";
+}
+function fmtN(v){
+  if (v >= 1e6) return (v/1e6).toFixed(2)+"M";
+  if (v >= 1e3) return (v/1e3).toFixed(1)+"k";
+  return String(v);
+}
+
+/* ---------------------------------------------------------------- tooltip */
+function pick(mx, my){
+  let best = null, bestArea = Infinity;
+  for (const b of hitBoxes){
+    if (mx < b.x0 || mx > b.x1 || my < b.y0 || my > b.y1) continue;
+    const a = (b.x1-b.x0) * (b.y1-b.y0);
+    if (a < bestArea){ bestArea = a; best = b.i; }   // smallest = topmost
+  }
+  return best;
+}
+cv.addEventListener("mousemove", e => {
+  const r = cv.getBoundingClientRect();
+  const mx = e.clientX - r.left, my = e.clientY - r.top;
+  /* over the row-label gutter: highlight as a clickable lane / case */
+  if (geom && mx < geom.padL && my > geom.padT && my < geom.padT + geom.plotH){
+    const k = Math.floor((my - geom.padT) / geom.rowH);
+    const clickable = (S.mode === "all" || S.lane === "thread");
+    cv.style.cursor = clickable ? "pointer" : "default";
+    tip.style.display = "none";
+    cv.title = !clickable ? ""
+      : (rows()[k]
+         ? (S.mode === "all" ? rows()[k].label + " - click to focus this case"
+                             : rows()[k].label + " - click to isolate")
+         : "");
+    return;
+  }
+  cv.title = "";
+  const i = pick(mx, my);
+  if (i === null){ tip.style.display = "none"; cv.style.cursor = "crosshair"; return; }
+  showTip(i, mx, my);
+});
+cv.addEventListener("mouseleave", () => { tip.style.display = "none"; cv.title = ""; });
+
+function showTip(i, mx, my){
+  const c = V(), cm = colorModel(c);
+  const nm = c.nm[c.st[i]];
+  const kindTxt = (S.mode === "all") ? KIND_LABEL[MERGED.kind[i]] : null;
+  const rowsHtml = [
+    /* an error is the first thing the reader should see, and it is the only
+     * thing on this page allowed to be red */
+    cm.bad[i] ? ["ERROR", cm.whyOf(i)] : null,
+    ["function", cm.nameOf(i)],
+    ["case", caseOf(i)],
+    ["phase", c.phn[c.ph[i]]],
+    kindTxt ? ["work type", kindTxt] : ["lane", c.lane_name[c.th[i]]],
+    /* in the merged view the times are on the sweep clock, so the elapsed time
+     * inside the case itself is the number the reader is really asking for */
+    (S.mode === "all" ? ["start", fmtT(c.t0[i]) + "  (+" + fmtT(c.t0[i] - caseOff(i))
+                                                      + " into the case)"]
+                      : ["start", fmtT(c.t0[i])]),
+    ["end", fmtT(c.t1[i])],
+    ["duration", fmtMs(c.dur[i])],
+    ["self time", fmtMs(c.self[i] * 1000)],
+    ["depth", String(c.dp[i])],
+    ["span id", String(c.id[i]) + (c.pid[i] >= 0 ? "  (parent " + c.pid[i] + ")" : "")],
+  ].filter(r => r);
+  if (c.keys && c.keys[nm] !== undefined) rowsHtml.push(["outputs", c.keys[nm]]);
+  tip.innerHTML =
+    '<div class="t"><span class="sw" style="background:' + cm.col[i] + '"></span>' +
+    esc(nm) + '</div>' +
+    rowsHtml.map(r => '<div class="r"' + (r[0] === "ERROR" ? ' style="color:' + ERR_COLOR + '"' : "") +
+      '><span>' + r[0] + '</span><b>' + esc(String(r[1])) + "</b></div>").join("") +
+    '<div class="hint">click = drill into call tree</div>';
+  tip.style.display = "block";
+  const w = tip.offsetWidth, h = tip.offsetHeight;
+  let x = mx + 14, y = my + 14;
+  if (x + w > cv.clientWidth - 4) x = mx - w - 14;
+  if (y + h > cv.clientHeight - 4) y = my - h - 14;
+  tip.style.left = Math.max(2, x) + "px";
+  tip.style.top = Math.max(2, y) + "px";
+}
+function esc(s){
+  return String(s).replace(/[&<>"]/g, m => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
+}
+
+/* ------------------------------------------------------- zoom / selection
+ * The rubber band is drawn inside draw() as derived state, NOT painted
+ * imperatively onto the canvas.  Painting it from the move handler left it
+ * immune to the one thing that erases canvas content: if the release never
+ * reached the page, `drag` stayed non-null and every later move re-painted the
+ * band - a blue stripe nothing could remove, not even Reset.  Deriving the band
+ * from state means clearRect removes it for free. */
+let drag = null, pan = null, press = null, dragWatch = 0;
+/* Middle-button panning, alongside the left-button band.  It is a separate
+ * gesture object rather than a mode inside `drag` because the two differ in every
+ * way that matters: what a move does (scroll vs paint a band), which button bit
+ * proves the pointer is still down (4 vs 1), and what a release means (end of
+ * pan vs zoom).  Sharing one object would have meant every branch re-testing the
+ * button, which is how the old right-button bug happened. */
+const BTN_LEFT = 1, BTN_MIDDLE = 4;
+const gesture = () => drag || pan;
+const BTN_SLOT = {drag: BTN_LEFT, pan: BTN_MIDDLE};
+const DRAG_SLOP = 6;      // px of travel before a press becomes a drag
+const BAND_MIN = 3;       // px of width before the band is worth drawing
+/* A selection is a FOCUS, not a filter - and it is reached by magnifying, not by
+ * hiding.  Spans outside the range stay on screen, stay pickable and stay counted:
+ * the range changes the SCALE, so unselected data is off the axis rather than
+ * drawn faint, and the reader gets back to it by zooming out (Enter, the button,
+ * double-click) or by scrolling - it is never removed from the chart. */
+const DRAG_WATCH_MS = 500; // silence after which an off-window drag is assumed lost
+/* four independent nets, because "the release never arrived" has several causes:
+ *   1. setPointerCapture on pointerdown - the browser retargets pointerup to
+ *      this element even when the pointer left the canvas or the window
+ *   2. pointercancel - the browser took the device over (native drag, touch)
+ *   3. e.buttons === 0 on a move - the button is provably not down any more, so
+ *      the next mouse move heals it (this is what the stuck stripe was)
+ *   4. a watchdog for the case where NO event arrives at all.  It has to key off
+ *      something other than the button state, because the whole problem is that
+ *      the state stopped arriving: so it only arms while the pointer is outside
+ *      the window, where a release is genuinely undeliverable.  Inside the window
+ *      a quiet drag is a user reading the axis, and cancelling that would eat
+ *      their zoom. */
+function pointerOutsideWindow(){
+  const g = gesture();
+  if (!g || !geom) return false;
+  const r = cv.getBoundingClientRect();
+  /* the pointer's own position, in the same CSS-px convention the drag maths
+   * uses everywhere else (clientX - r.left vs geom.plotW).  Tracking the real y
+   * matters: guessing row 0's mid-line would read an in-window pointer on a
+   * lower row as off-screen, and arm the watchdog on a perfectly good drag. */
+  const px = g === pan ? g.cx : r.left + g.x1, py = g === pan ? g.cy : r.top + g.y1;
+  return px < 0 || py < 0
+      || (typeof innerWidth === "number" && px > innerWidth)
+      || (typeof innerHeight === "number" && py > innerHeight);
+}
+function armWatchdog(){
+  clearTimeout(dragWatch);
+  dragWatch = 0;
+  if (!pointerOutsideWindow()) return;
+  dragWatch = setTimeout(() => { dragWatch = 0; if (gesture()) cancelDrag(); }, DRAG_WATCH_MS);
+}
+function dropWatchdog(){ clearTimeout(dragWatch); dragWatch = 0; }
+/* Keep S.sx/S.sy in step with the pane.  Everything that scrolls - the wheel, the
+ * scrollbar, a middle drag, the arrow keys - routes through here, so the sticky
+ * gutter and axis can never be drawn for a scroll position the pane is not at. */
+function syncScroll(){
+  const p = document.getElementById("scroller");
+  S.sx = p.scrollLeft; S.sy = p.scrollTop;
+  return [S.sx, S.sy];
+}
+cv.addEventListener("pointerdown", e => {
+  const r = cv.getBoundingClientRect();
+  if (e.button === 1){                      // middle: pan both axes
+    /* preventDefault is load-bearing: the browser's own autoscroll would race
+     * this one, and on some platforms a middle click pastes the primary
+     * selection (auxclick, handled below). */
+    e.preventDefault();
+    if (gesture()) cancelDrag();
+    const p = document.getElementById("scroller");
+    pan = {cx: e.clientX, cy: e.clientY, sx: p.scrollLeft, sy: p.scrollTop,
+           id: e.pointerId};
+    try { cv.setPointerCapture(e.pointerId); } catch (err) { /* not fatal */ }
+    cv.style.cursor = "grabbing";
+    armWatchdog();
+    return;
+  }
+  if (e.button !== 0) return;                 // primary button only
+  const mx = e.clientX - r.left, my = e.clientY - r.top;
+  if (!geom || my < geom.padT || my > geom.padT + geom.plotH) return;
+  /* a stale drag from a lost release must not survive into a new press */
+  if (drag) cancelDrag();
+  /* the label gutter is a click target (isolate a lane / focus a case), not a
+   * place to start a drag - starting there painted a band over the labels.
+   * `press` is recorded for BOTH kinds of press: the click that lands on a
+   * label arrives here too, and pointerup has to be able to tell.  Routing it
+   * through `drag` alone meant a gutter press armed nothing, so the click that
+   * followed it fell through the release guard and vanished.  The test is on the
+   * VISIBLE left edge (content x minus the horizontal scroll), not the content x,
+   * because the gutter is pinned while the content scrolls under it. */
+  press = {mx: mx, my: my, gutter: mx - S.sx < geom.padL, id: e.pointerId};
+  if (press.gutter) return;
+  drag = {x0: mx, x1: mx, y0: my, y1: my, moved: false,
+          id: e.pointerId, buttons: e.buttons};
+  try { cv.setPointerCapture(e.pointerId); } catch (err) { /* not fatal */ }
+  cv.style.cursor = "col-resize";
+  armWatchdog();
+});
+/* a middle click pastes the primary selection on X11 unless the auxclick is
+ * cancelled; the drag is already prevented but the event still arrives */
+cv.addEventListener("auxclick", e => { if (e.button === 1) e.preventDefault(); });
+window.addEventListener("pointermove", e => {
+  const g = gesture();
+  if (!g) return;
+  /* the release was lost - heal it instead of re-striping the band (or, for a
+   * pan, scrolling forever against a button that is already up).  The bit that
+   * proves liveness is the gesture's own, not always the left one. */
+  if (e.pointerId === g.id && !(e.buttons & BTN_SLOT[g === pan ? "pan" : "drag"])){
+    cancelDrag(); return;
+  }
+  const r = cv.getBoundingClientRect();
+  if (g === pan){
+    const p = document.getElementById("scroller");
+    /* drag the CONTENT with the pointer: the content follows the cursor, so the
+     * offset moves the other way.  The browser clamps to the scrollable range.
+     * The redraw is deliberately NOT done here: assigning scrollTop/scrollLeft
+     * fires `scroll`, and that listener is the single place that repaints - doing
+     * it here as well would draw every frame twice. */
+    p.scrollLeft = g.sx - (e.clientX - g.cx);
+    p.scrollTop  = g.sy  - (e.clientY - g.cy);
+    /* The base has to WALK with the pane.  `g.sx` is the offset at pointerdown, so
+     * using it as a constant for every move computes `offset_at_down - last_step`
+     * and throws away every earlier step: a real drag fires dozens of moves, so
+     * the pane was dragged back toward its start on each one and appeared stuck at
+     * the boundary.  Every pan check fired exactly ONE move, where a constant base
+     * happens to be correct - the fourth "passes for the wrong reason" trap in this
+     * file.  Reading the offset back is what makes the edge behave: the value is
+     * clamped by the browser, so basing the next step on it means a drag that hit
+     * the end responds the instant the pointer comes back, with no dead zone. */
+    g.sx = p.scrollLeft; g.sy = p.scrollTop;
+    g.cx = e.clientX;  g.cy = e.clientY;
+    armWatchdog();
+    return;
+  }
+  const mx = e.clientX - r.left;
+  if (Math.abs(mx - drag.x0) >= DRAG_SLOP) drag.moved = true;
+  drag.x1 = mx;
+  drag.y1 = e.clientY - r.top;
+  drag.buttons = e.buttons;
+  armWatchdog();
+  paintSelectionBand();
+});
+window.addEventListener("pointercancel", cancelDrag);
+window.addEventListener("pointerup", e => {
+  /* A release ends the gesture it belongs to, and only that one.  The old guard
+   * rejected every non-primary release outright, which was right when the left
+   * button was the only thing that armed anything - but it is exactly wrong now
+   * that the middle button arms a pan: the middle release would have been
+   * dropped and the pan would have run on until some later event cancelled it.
+   * (This is the mirror image of the right-button bug: there a foreign release
+   * wrongly ended a drag, here the real one would have been ignored.) */
+  if (e.button !== undefined && e.button !== 2 && e.button !== 0 && e.button !== 1) return;
+  if (pan){
+    if (e.pointerId !== pan.id) return;
+    dropWatchdog();
+    const p2 = pan; pan = null;
+    cv.style.cursor = "crosshair";
+    try { cv.releasePointerCapture(p2.id); } catch (err) { /* already gone */ }
+    syncScroll();
+    if (e.button === 1) return;             // a middle release is not a click
+  }
+  if (e.button !== undefined && e.button !== 0) return;
+  if (drag && e.pointerId !== drag.id) return;   // a second finger, ignore
+  dropWatchdog();
+  cv.style.cursor = "crosshair";
+  const p = press; press = null;
+  const wasDrag = drag !== null && drag.moved, r = cv.getBoundingClientRect();
+  const mx = e.clientX - r.left, my = e.clientY - r.top;
+  const d = drag;
+  if (wasDrag){
+    /* A drag is a BRUSH that takes you there: it records the time range AND
+     * magnifies it, in one gesture.  The range is still stored, so the zoom is
+     * reversible (Enter, the button, or double-click all toggle back out) and the
+     * marker still means the same thing in every view - but the reader does not
+     * have to ask for the magnification separately, because a brush that marked a
+     * region and then left you squinting at the whole sweep was a second step to
+     * the one thing the drag was for.
+     *
+     * `zoomToRange()` MUST come after the BAND_MIN test: a press that drifts a
+     * couple of pixels on the way down is a click, not a brush, and magnifying on
+     * that would move the chart under a reader who only meant to click a bar.
+     *
+     * `pxToT` is used for the edges rather than storing pixels on purpose.  Pixels
+     * would be a different range in every view AND at every zoom, so a selection
+     * would silently change meaning when the reader scrolled or switched case.
+     * Times are the one thing both views agree on, and the range is stored
+     * normalised (t0 <= t1) so a right-to-left drag is the same selection.  It is
+     * read BEFORE the zoom, so the magnification cannot feed back into it.
+     *
+     * The result is CLAMPED to the axis.  A drag can leave the canvas - that is what
+     * happens when a reader selects a region and carries the mouse off the edge -
+     * and `pxToT()` extrapolates happily past the last span, so an unclamped range
+     * ended at 1157 s of a 670 s sweep.  Clamping makes "the whole axis" mean
+     * exactly that, and `zoomToRange`'s deadband then makes it a no-op. */
+    const a = Math.min(d.x0, mx), b = Math.max(d.x0, mx);
+    const sp = axisSpan();
+    S.range = (b - a) >= BAND_MIN
+      ? {t0: Math.max(sp.t0, pxToT(a)), t1: Math.min(sp.t1, pxToT(b))}
+      : null;
+    syncRangeUI(); renderStats();
+    if (S.range) zoomToRange();
+  } else if (p && p.gutter){
+    onGutterClick(p.my);                // lane isolate, or case focus
+  } else if (p){
+    const i = pick(mx, my);
+    /* A click on empty plot area clears the range; a click ON a bar selects that
+     * span for the call tree and KEEPS the range.  Making every click clear it
+     * would be unusable - the natural next move after brushing a region is to
+     * click a bar inside it to find out which stage it was, and having the
+     * selection evaporate on that click would be read as a bug. */
+    if (i === null){ S.range = null; syncRangeUI(); renderStats(); }
+    select(i);
+  }
+  drag = null;
+  try { if (d) cv.releasePointerCapture(d.id); } catch (err) { /* already gone */ }
+  draw();
+});
+function cancelDrag(){
+  if (!drag && !press && !pan) return;
+  const d = drag, q = pan;
+  drag = null; pan = null;
+  press = null;
+  dropWatchdog();
+  cv.style.cursor = "crosshair";
+  try { if (d) cv.releasePointerCapture(d.id); } catch (err) { /* already gone */ }
+  try { if (q) cv.releasePointerCapture(q.id); } catch (err) { /* already gone */ }
+  draw();
+}
+/* the band, in canvas pixels, or null when there is nothing to draw */
+function bandRange(){
+  if (!drag || !drag.moved || !geom) return null;
+  const a = Math.min(drag.x0, drag.x1), b = Math.max(drag.x0, drag.x1);
+  if (b - a < BAND_MIN) return null;
+  return {a: a, b: b};
+}
+/* a release the page never sees (drag off-screen, Alt+Tab mid-drag) used to
+ * leave `drag` armed forever; these are the safety nets */
+window.addEventListener("blur", cancelDrag);
+document.addEventListener("visibilitychange", () => { if (document.hidden) cancelDrag(); });
+/* a right-button release while a left drag is armed used to be read as the end
+ * of that drag, and the chart zoomed to wherever the right button came up */
+window.addEventListener("contextmenu", cancelDrag);
+/* gutter click: focus a case row in the merged view, isolate a lane in a
+ * focused one.  This is the only way mouseup is consumed, and a drag can never
+ * reach it - the movement threshold runs first. */
+function onGutterClick(my){
+  const k = Math.floor((my - geom.padT) / geom.rowH);
+  if (S.mode === "all"){
+    if (k >= 0 && k < rows().length) focusCase(k);
+  } else if (S.lane === "thread"){
+    S.isoThread = (S.isoThread === k) ? null : k;
+    if (S.isoThread === 0) S.isoThread = null;      // main is never isolated
+    draw();
+  }
+}
+function paintSelectionBand(){
+  const bd = bandRange();
+  if (bd){
+    ctx.save();
+    ctx.fillStyle = "rgba(78,161,255,.16)";
+    ctx.fillRect(bd.a, geom.padT, bd.b - bd.a, geom.plotH);
+    ctx.strokeStyle = "rgba(78,161,255,.6)";
+    ctx.strokeRect(bd.a + .5, geom.padT + .5, bd.b - bd.a - 1, geom.plotH - 1);
+    ctx.restore();
+  }
+  paintRange();
+}
+/* The committed range, drawn from `S.range` rather than from the gesture, for the
+ * same reason the live band is: a redraw has to reproduce it, and no clearRect can
+ * leave a stale stripe behind.
+ *
+ * It is an ANNOTATION and nothing else.  Nothing here touches visible(), the cull,
+ * hitBoxes or the drawn count, so a range cannot remove a span from the chart - the
+ * bars outside it are painted exactly as they were, at full strength, and a reader
+ * who scrolls away still sees the whole run.  That is the whole point of choosing
+ * "brush" over "filter": the question the reader is asking when they drag is "which
+ * part of this is interesting", and hiding everything else would answer it by
+ * destroying the context that makes the region readable.  The drag magnifies the
+ * range, but it magnifies by moving the SCALE - unselected data goes off the axis
+ * rather than off the chart, which is a very different thing from being removed.
+ *
+ * The clip is load-bearing rather than tidy.  `S.range` is absolute sweep time, so
+ * in a FOCUSED case the range is very often outside that case's slice - and
+ * without clipping, a range that starts 500 s to the left of the visible axis
+ * would draw two rules and a filled span at coordinates several thousand pixels
+ * outside the plot, straight over the toolbar and the page behind it. */
+function paintRange(){
+  const g = geom;
+  if (!g || !S.range) return;
+  const x0 = g.x(S.range.t0), x1 = g.x(S.range.t1);
+  if (x1 < g.padL || x0 > g.padL + g.plotW) return;        // wholly off the axis
+  ctx.save();
+  ctx.beginPath();
+  ctx.rect(g.padL, g.padT, g.plotW, g.plotH);
+  ctx.clip();
+  /* Deliberately NO wash and NO globalAlpha change over the selection.  The reader
+   * asked for a marker, not a mask: a tint across the plot IS a dim of the very
+   * bars the selection is meant to leave alone, and at .07 alpha it is invisible as
+   * a "highlight" while still being a real reduction in contrast.  Two rules, two
+   * inward end caps and the times are the entire annotation.
+   *
+   * Note the marker is at its least useful right after a drag, because the drag
+   * magnifies the range and the two rules then sit on the plot edges - that is the
+   * cost of making one gesture do both jobs, and it is why the rules are still
+   * drawn at all: they come back the moment the reader zooms out, and they are the
+   * only thing marking the range when it is outside a focused case's own slice. */
+  ctx.strokeStyle = "rgba(78,161,255,.85)";
+  ctx.lineWidth = 1.5;
+  ctx.beginPath();
+  ctx.moveTo(x0 + .5, g.padT); ctx.lineTo(x0 + .5, g.padT + g.plotH);
+  ctx.moveTo(x1 - .5, g.padT); ctx.lineTo(x1 - .5, g.padT + g.plotH);
+  ctx.stroke();
+  /* end caps on the top edge, pointing inward, plus the two times.  They are the
+   * reason this reads as a selection rather than as two unrelated gridlines. */
+  ctx.fillStyle = "rgba(78,161,255,.95)";
+  ctx.beginPath();
+  ctx.moveTo(x0, g.padT + 1); ctx.lineTo(x0 + 9, g.padT + 1); ctx.lineTo(x0, g.padT + 10);
+  ctx.closePath();
+  ctx.moveTo(x1, g.padT + 1); ctx.lineTo(x1 - 9, g.padT + 1); ctx.lineTo(x1, g.padT + 10);
+  ctx.closePath();
+  ctx.fill();
+  ctx.font = "10px Consolas,monospace";
+  ctx.textAlign = "left";
+  if (x1 - x0 > 96){
+    ctx.fillText(fmtT(S.range.t0) + " \u2013 " + fmtT(S.range.t1),
+                 x0 + 5, g.padT + 19);
+  } else {
+    ctx.textAlign = "right";
+    ctx.fillText(fmtT(S.range.t0), x0 - 4, g.padT + 19);
+  }
+  ctx.restore();
+}
+/* The one thing that READS the range for chrome is the zoom-to-selection button,
+ * and it is refreshed at every site that can change the range.  Routing it through
+ * renderStats() instead would have been tidier-looking and wrong: the stats row is
+ * rebuilt by renderAll(), which resetAll() calls, but a `<button disabled>` is a
+ * property of the element, not of the panel, so Reset left the button enabled with
+ * nothing to zoom to - the stale-affordance bug this indirection exists to avoid. */
+function syncRangeUI(){
+  const b = document.getElementById("btnZoomSel");
+  if (b) b.disabled = !S.range;
+}
+/* The one way the zoom changes.  Three things have to happen together, and the
+ * order is load-bearing:
+ *   1. clamp to [1, maxZoom()] - a browser silently refuses to paint a canvas
+ *      past its side/area limits, so an unbounded zoom renders a blank chart
+ *      with nothing to debug;
+ *   2. resize() FIRST, because the virtual canvas is wider than the pane exactly
+ *      when zoomed in, so the content size changes (and assigning cv.width resets
+ *      the 2D context, which is why this cannot be a bare draw());
+ *   3. put the anchor time back under the same VIEWPORT pixel, or the picture
+ *      jumps out from under the cursor on every wheel tick.  The scroll offset
+ *      has to be read AFTER resize() and before the reassignment, because
+ *      resize() -> clampScroll() can move it.  The browser clamps the result, so
+ *      an anchor near an edge simply lands as far as the content allows. */
+function setZoom(z, anchorT, viewX){
+  const p = document.getElementById("scroller");
+  S.zoom = Math.max(1, Math.min(maxZoom(), z));
+  resize();
+  if (anchorT !== undefined && anchorT !== null){
+    if (viewX === undefined || viewX === null) viewX = (paneW() - padL()) / 2;
+    p.scrollLeft = tToPx(anchorT) - viewX;
+    syncScroll();
+  }
+  renderStats();
+  draw();
+}
+cv.addEventListener("dblclick", () => setZoom(1, null, 0));
+/* Magnify (or un-magnify) the selected range.  A drag calls this on release, so it
+ * is the engine behind the gesture AND the thing behind Enter and the button - one
+ * implementation, so the drag cannot disagree with the key that means the same
+ * thing.
+ *
+ * It is written on top of setZoom() rather than next to it, and that is the point:
+ * the canvas clamp, the resize-before-reanchor order and the anchor restore are
+ * three things that are easy to get subtly wrong, and a second copy of them would
+ * be a second place to get them wrong.  A range can also be wider than the pane can
+ * usefully show, so the requested factor is handed to setZoom() and clamped there
+ * exactly like a wheel tick - the drag cannot out-run the canvas limit either.
+ *
+ * Pressing it again while the range already fills the pane zooms back out, so the
+ * control is its own inverse and the reader is never stranded at a deep zoom with
+ * no obvious way back - which matters more now that the drag gets you here without
+ * asking.  The 0.98 tolerance is there because a range that was selected by
+ * dragging can be a pixel or two narrower than the pane it filled. */
+function zoomToRange(){
+  if (!S.range || !geom) return false;
+  const a = Math.min(S.range.t0, S.range.t1), b = Math.max(S.range.t0, S.range.t1);
+  const vis = paneW() - padL();
+  /* The range is in MILLISECONDS and the zoom factor is pixels-per-millisecond, so
+   * the two have to be bridged through the content mapping - dividing the pane
+   * width straight by (b - a) mixes the two units and produces a factor of about
+   * 0.02, which setZoom() then honestly clamps to 1 and the control looks dead.
+   * tToPx is the only correct bridge, and it is already zoom-aware, so the same
+   * expression also answers "is this range already filling the pane?". */
+  const wPx = tToPx(b) - tToPx(a);
+  if (!(vis > 0) || !(wPx > 0)) return false;
+  const fitsNow = S.zoom > 1.01 && wPx >= vis * 0.98;
+  /* `want` is a RATIO - how much bigger the selection has to get - and S.zoom is a
+   * scale on the whole axis, so the two multiply.  Handing the ratio to setZoom as
+   * though it were the scale is only right while the scale is 1: that is why a first
+   * drag filled the pane and a second one, taken inside it, came back 280 px wide
+   * with the scale reading 10.6x.  A ratio, not an assignment. */
+  const z = S.zoom * (vis / wPx);
+  /* A brush that already covers the visible axis has nothing to magnify into, and
+   * acting on the difference anyway is worse than doing nothing: a 1.03x zoom
+   * reveals no new data and still conjures a horizontal scrollbar, so the reader
+   * who swept the whole chart gets a moved view for no reason.  5% is the
+   * deadband - comfortably tighter than the 0.98 the toggle uses, so a genuine
+   * sub-95% selection still magnifies. */
+  const flat = z < 1.05;
+  /* `viewX` is a VIEWPORT pixel, and the plot does not start at the pane's left
+   * edge - it starts at the gutter.  Anchoring at vis/2 measured from the pane
+   * therefore lands the range a gutter-width too far left, which is invisible at
+   * fit (vis is nearly the pane) and obvious the moment you zoom.
+   *
+   * No Math.min(z, maxZoom()) here: setZoom owns the canvas clamp, and it is the
+   * only place that does.  Clamping in both meant that removing either one changed
+   * nothing, which is the worst kind of defensive code - it read as two guards and
+   * was one. */
+  setZoom(fitsNow || flat ? 1 : z, (a + b)/2, padL() + vis / 2);
+  return true;
+}
+/* Wheel is split, and the split matters:
+ *   plain wheel  -> NOT handled.  The pane is a real `overflow:auto` box, so
+ *                   letting the event through gives native scrolling on both
+ *                   axes, trackpad momentum, and the browser's own scrollbar
+ *                   chaining.  Calling preventDefault() here (as this handler
+ *                   used to) is what stopped that.
+ *   ctrl/cmd+wheel -> zoom x about the cursor.  A modifier is required precisely
+ *                   because the plain gesture belongs to the scroller now. */
+cv.addEventListener("wheel", e => {
+  if (!geom) return;
+  if (!(e.ctrlKey || e.metaKey)) return;      // let the pane scroll
+  e.preventDefault();
+  /* The factor is a MULTIPLIER on a scale now, not on a window's offsets, so the
+   * sense is the opposite of what it used to be: wheel up magnifies (x1.25) and
+   * wheel down comes back (/1.25).  Left at the old below-1 factor, "zoom in"
+   * would have meant "zoom out" and the clamp at 1 would have made the gesture a
+   * no-op from the fit state - precisely where every reader starts. */
+  const f = e.deltaY > 0 ? 1/1.25 : 1.25;
+  const r = cv.getBoundingClientRect();
+  /* mx is a CONTENT pixel, so pxToT is the right way in regardless of how far
+   * the pane is scrolled; the anchor is then handed straight back to setZoom as
+   * the same viewport pixel, which is what holds the point under the cursor. */
+  const mx = e.clientX - r.left;
+  setZoom(S.zoom * f, pxToT(mx), mx);
+}, {passive:false});
+
+/* ------------------------------------------------------------- inventory */
+/* merged view: one row per stage, summed over every case, remembering which
+ * cases contributed - the per-case call counts and wall times are the same
+ * measurement repeated, so summing them is the only way the table can mean
+ * "what did the whole sweep spend" */
+function mergedInv(){
+  const agg = new Map();
+  for (const c of DATA.cases){
+    for (const r of c.inv){
+      let a = agg.get(r.stage);
+      if (!a){
+        a = {stage: r.stage, phase: r.phase, calls: 0, wall_ms: 0,
+             self_ms: 0, pct: 0, cases: []};
+        agg.set(r.stage, a);
+      }
+      a.calls += r.calls; a.wall_ms += r.wall_ms; a.self_ms += r.self_ms;
+      a.cases.push(c.label);
+    }
+  }
+  const out = Array.from(agg.values());
+  const tot = out.reduce((s, r) => s + r.wall_ms, 0) || 1;
+  for (const r of out) r.pct = r.wall_ms / tot * 100;
+  return out;
+}
+function renderInv(){
+  const c = V();
+  const merged = (S.mode === "all");
+  const cm = colorModel(c);
+  const tb = document.querySelector("#inv tbody");
+  const inv = merged ? mergedInv() : c.inv;
+  const rowsData = inv.slice();
+  const key = r => r[S.sortKey === "case" ? "caseKey" : S.sortKey];
+  rowsData.forEach(r => {
+    r.caseKey = merged ? r.cases.join(", ") : c.label;
+  });
+  rowsData.sort((a,b) => {
+    const ka = key(a), kb = key(b);
+    const d = (typeof ka === "string") ? ka.localeCompare(kb) : (ka - kb);
+    return d * S.sortDir || a.stage.localeCompare(b.stage);
+  });
+  let html = "";
+  const anyQuery = !!S.query;
+  const selStage = (S.sel !== null) ? c.nm[c.st[S.sel]] : null;
+  for (const r of rowsData){
+    const hit = anyQuery ? r.stage.toLowerCase().indexOf(S.query) >= 0 : true;
+    const cls = (hit ? "" : "dim") + (selStage === r.stage ? " sel" : "");
+    /* the swatch is the colour of the heaviest span of this stage - see
+     * colorModel's stageBest - so the table matches the chart.  It dims when
+     * that stage's branch is hidden, which is the same signal the legend gives. */
+    const sb = cm.stageBest.get(r.stage);
+    const sw = sb ? sb.col : "#888";
+    const hiddenB = !!sb && S.hiddenBranch.has(sb.branch);
+    /* which cases contributed, without blowing the sidebar width: a count, and
+     * the full list on hover */
+    const nCase = merged ? r.cases.length : 0;
+    const caseCell = merged
+      ? (nCase === DATA.cases.length ? "all " + nCase : String(nCase))
+      : r.caseKey;
+    html += '<tr class="' + cls + '" data-st="' + esc(r.stage) + '">' +
+      '<td><span class="sw" style="background:' + sw +
+        (hiddenB ? ";opacity:.3" : "") + '"></span>' + esc(r.stage) + "</td>" +
+      '<td class="n">' + r.calls + "</td>" +
+      "<td>" + r.wall_ms.toFixed(1) + "</td>" +
+      "<td>" + r.self_ms.toFixed(1) + "</td>" +
+      '<td class="n">' + r.pct.toFixed(1) + "%</td>" +
+      '<td title="' + esc(r.caseKey) + '">' + esc(caseCell) + "</td></tr>";
+  }
+  tb.innerHTML = html;
+  document.getElementById("invCount").textContent =
+    inv.length + " functions" + (merged ? " &middot; " + DATA.cases.length + " cases summed" : "");
+  for (const th of document.querySelectorAll("#inv th"))
+    th.style.color = th.dataset.k === S.sortKey ? "var(--fg)" : "";
+}
+document.querySelector("#inv").addEventListener("click", e => {
+  const th = e.target.closest("th");
+  if (th){
+    const k = th.dataset.k;
+    if (k === "stage"){ S.sortKey = "stage"; S.sortDir = 1; }
+    else { S.sortDir = (S.sortKey === k) ? -S.sortDir : -1; S.sortKey = k; }
+    renderInv(); return;
+  }
+  const tr = e.target.closest("tr");
+  if (!tr) return;
+  if (S.query === tr.dataset.st.toLowerCase() || S.query === ""){
+    // toggle: filter to this function, or clear
+    S.query = (S.query === tr.dataset.st.toLowerCase()) ? "" : tr.dataset.st.toLowerCase();
+  } else {
+    S.query = tr.dataset.st.toLowerCase();
+  }
+  document.getElementById("search").value = S.query;
+  draw(); renderInv(); renderTree();
+});
+
+/* -------------------------------------------------------------- call tree */
+/* the parent column to walk: the payload's is per-case local, the merged
+ * index needs the globalised one or the walk crosses case boundaries */
+function parentArray(){ const c = V(); return c.merged ? c.pidg : c.pid; }
+function childrenOf(i){
+  const c = V(), pa = parentArray(), out = [];
+  for (let k = 0; k < c.n; k++) if (pa[k] === i) out.push(k);
+  out.sort((a,b) => c.t0[a] - c.t0[b]);
+  return out;
+}
+function ancestry(i){
+  const c = V(), pa = parentArray(), out = [];
+  let p = pa[i];
+  while (p >= 0){ out.unshift(p); p = pa[p]; }
+  return out;
+}
+function select(i){
+  S.sel = (i === null || i === undefined) ? null : i;
+  S.treeRoot = S.sel === null ? -1 : S.sel;
+  draw(); renderInv(); renderTree();
+}
+function renderTree(){
+  const c = V(), cb = document.getElementById("crumbs"),
+        tb = document.getElementById("treeBody"), ti = document.getElementById("treeInfo");
+  if (S.sel === null){
+    cb.innerHTML = "";
+    ti.textContent = "";
+    tb.innerHTML = '<div class="empty">Click any bar in the timeline (or a row in the inventory) to drill into its call tree.</div>';
+    return;
+  }
+  const chain = ancestry(S.sel).concat([S.sel]);
+  let h = "";
+  chain.forEach((sp, k) => {
+    if (k) h += '<span class="arw">&rsaquo;</span>';
+    h += '<span class="cb' + (k === chain.length-1 ? " cur" : "") + '" data-i="' + sp + '">' +
+         esc(c.nm[c.st[sp]]) + "</span>";
+  });
+  cb.innerHTML = h;
+
+  const kids = childrenOf(S.treeRoot);
+  const dur = c.dur[S.sel] * 1000;
+  ti.textContent = "case " + caseOf(S.sel) + "  " + esc(c.nm[c.st[S.sel]]) + "  " + fmtMs(dur) +
+    (kids.length ? "  " + kids.length + " direct child call(s)" : "  leaf call");
+  if (!kids.length){
+    tb.innerHTML = '<div class="empty">Leaf stage &mdash; no nested instrumented calls.</div>';
+    return;
+  }
+  const maxD = Math.max.apply(null, kids.map(k => c.dur[k]));
+  const cm = colorModel(c);
+  let s = "";
+  for (const k of kids){
+    const w = Math.max(2, c.dur[k] / maxD * 190);
+    s += '<div class="tnode" data-i="' + k + '">' +
+      '<span class="sw" style="width:9px;height:9px;border-radius:2px;background:' +
+        cm.col[k] + '"></span>' +
+      '<span class="nm">' + esc(c.nm[c.st[k]]) + "</span>" +
+      '<span class="bar" style="width:' + w + 'px"></span>' +
+      '<span class="du">' + fmtMs(c.dur[k]*1000) + "</span>" +
+      '<span class="kd">d' + c.dp[k] + " &middot; " + c.lane_name[c.th[k]] + "</span></div>";
+  }
+  tb.innerHTML = s;
+}
+document.getElementById("treeBody").addEventListener("click", e => {
+  const n = e.target.closest(".tnode"); if (!n) return;
+  const i = +n.dataset.i; S.sel = i; S.treeRoot = i; draw(); renderInv(); renderTree();
+});
+document.getElementById("crumbs").addEventListener("click", e => {
+  const b = e.target.closest(".cb"); if (!b) return;
+  const i = +b.dataset.i; S.sel = i; S.treeRoot = i; draw(); renderInv(); renderTree();
+});
+
+/* ------------------------------------------------------------ header bits */
+function fmtWall(ms){
+  return ms >= 1000 ? (ms/1000).toFixed(1)+" s" : ms.toFixed(0)+" ms";
+}
+function renderStats(){
+  const c = V(), merged = (S.mode === "all");
+  const cm = colorModel(c);
+  const errRow = ["error spans", cm.badCount ? cm.badCount.toLocaleString() : "0",
+    cm.badCount ? "invariants violated - hover a red bar for which one"
+                : "none: self + children == wall, and every span is inside its case's own slice"];
+  let st;
+  if (merged){
+    /* the sweep: the cases were run back to back, so the x axis is the sweep's
+     * real elapsed time and each row occupies its own slice of it.  The axis
+     * extent and the sweep wall are then the same measurement, not two. */
+    st = [
+      ["cases", String(DATA.cases.length), DATA.cases.map(c => c.label).join(", ") +
+        " - run back to back, one continuous clock"],
+      ["sweep wall", fmtWall(c.sum_ms), "elapsed time of the whole run, first case to last"],
+      ["slowest case", fmtWall(c.longest.ms), c.longest.label],
+      ["spans", fmtN(c.n), DATA.cases.map(x => fmtN(x.n)).join(" + ") + " recorded"],
+      ["drawn", "0", "pass min-duration + filters"],
+      errRow,
+      ["receptor blocks", fmtN(MERGED.kindCount[KIND.PAIR]), "analyze_pair, one per (array, receptor)"],
+      ["sub-panel tasks", fmtN(MERGED.kindCount[KIND.SUB]), "_analyze_single, " +
+        (MERGED.kindCount[KIND.PAIR] ? (MERGED.kindCount[KIND.SUB]/MERGED.kindCount[KIND.PAIR]).toFixed(0) : "0") +
+        " per block"],
+      ["busiest", c.busiest.name, fmtWall(c.busiest.ms) + " in one case"],
+      ["parallel", c.par ? c.par : "n/a", "peak concurrency"],
+    ];
+  } else {
+    st = [
+      ["case", c.label, "focused view - click the row name in the merged view to go back"],
+      ["case wall", fmtWall(c.dur_ms), "its own stage spans, start to end"],
+      ["on the sweep clock", fmtT(c.t_off_ms) + " \u203a " + fmtT(c.t_off_ms + c.dur_ms),
+        "where it sits in the back-to-back run"],
+      ["spans", fmtN(c.n), "stage calls recorded"],
+      ["drawn", "0", "pass min-duration + filters"],
+      errRow,
+      ["lanes", String(c.n_lanes), "worker lanes + main"],
+      ["max depth", String(c.max_depth), "nesting"],
+      ["busiest", c.busiest.name, fmtWall(c.busiest.ms)],
+      ["parallel", c.par ? c.par : "n/a", "peak concurrency"],
+    ];
+  }
+  /* The zoom row answers the question the old window model made unanswerable:
+   * "is the rest of the run still there, or did I cut it off?"  The zoom is a
+   * scale on the WHOLE axis, so the answer in the merged view is always "still
+   * there, scroll to it" - and saying so explicitly matters, because a reader
+   * whose zoom is deep enough that no second case fits on screen has no other
+   * way to tell that from a window that clipped them away.  The focused case is
+   * the honest exception and says so: its axis is that case's own slice, so the
+   * other cases really are absent at any zoom, and the row points at Esc. */
+  const zMax = maxZoom(), atCap = (S.zoom > 1.002 && S.zoom >= zMax - 1e-6);
+  const ax = caseSpan(c);
+  st = st.concat([[
+    "zoom",
+    (S.zoom < 1.005 ? "fit"
+      : S.zoom.toFixed(S.zoom < 10 ? 2 : 1) + "x" + (atCap ? " (canvas limit " + zMax.toFixed(0) + "x)" : "")),
+    merged
+      ? "the whole " + fmtT(ax.t1 - ax.t0) + " sweep is always on the axis - scroll sideways to any case"
+      : "axis is this case's own " + fmtT(ax.t1 - ax.t0) + " slice only; the other cases are not on it at any zoom - Esc for the full sweep"
+  ]]);
+  /* The range row is deliberately a REPORT and not a filter: the drawn count above
+   * covers the whole chart whatever this says, and the note says so explicitly,
+   * because "a selection" in most tools means "hide the rest" and a reader who
+   * assumed that would be right to be surprised.  Times are absolute sweep time,
+   * so the row keeps its meaning after a case switch. */
+  const rg = S.range;
+  st = st.concat([[
+    "range",
+    rg ? fmtT(rg.t1 - rg.t0) + "  (" + fmtT(rg.t0) + " \u2013 " + fmtT(rg.t1) + ")" : "none",
+    rg
+      ? "the drag that made it also magnified it; Enter or the button zooms back out"
+      : "drag across the chart to select a range and zoom into it; click empty space to clear it"
+  ]]);
+  document.getElementById("stats").innerHTML = st.map(s =>
+    '<div class="stat"><b>' + esc(String(s[1])) + '</b><span>' + esc(String(s[0])) + " &middot; " +
+    esc(String(s[2])) + "</span></div>").join("");
+}
+/* ONE legend for both views, keyed on the top-level function.  It replaced two
+ * different legends - phase in the focused view, work type in the merged one -
+ * because a legend has to describe the colour the reader can actually see, and
+ * both of those had stopped doing that.  A branch swatch is its whole ramp, so
+ * "one tone, many shades" is visible in the key itself; the hover names every
+ * shade with its self time. */
+function renderLegend(){
+  const cm = colorModel(V());
+  let h = '<div class="li hd">function</div>';
+  for (const b of cm.branches){
+    const off = S.hiddenBranch.has(b.name) ? " off" : "";
+    const grad = b.ramp.length > 1
+      ? "linear-gradient(90deg," + b.ramp.join(",") + ")" : b.ramp[0];
+    const title = (b.known ? "" : "unlisted branch, neutral hue. ") +
+      b.keys.map(k => k.name + "  " + fmtWall(k.self * 1000)).join("\n");
+    h += '<div class="li' + off + '" data-b="' + esc(b.name) + '" title="' + esc(title) + '">' +
+      '<span class="sw swg" style="background:' + grad + '"></span>' +
+      '<span class="nm">' + esc(b.name) + "</span>" +
+      '<span class="ct">' + b.nShades + " shade" + (b.nShades === 1 ? "" : "s") + "</span></div>";
+  }
+  h += '<div class="li" id="clearPhases" style="margin-left:6px;color:var(--dim)">show all</div>';
+  h += '<div class="li' + (cm.badCount ? " err" : "") + '" id="errChip">' +
+    '<span class="sw" style="background:' + ERR_COLOR + '"></span>' +
+    '<span class="nm">error</span><span class="ct">' + cm.badCount + "</span></div>";
+  document.getElementById("legend").innerHTML = h;
+}
+document.getElementById("legend").addEventListener("click", e => {
+  if (e.target.closest("#errChip")) return;          // a status, not a filter
+  if (e.target.closest("#clearPhases")){ S.hiddenBranch.clear(); }
+  else {
+    const li = e.target.closest(".li"); if (!li || li.dataset.b === undefined) return;
+    const b = li.dataset.b;
+    if (S.hiddenBranch.has(b)) S.hiddenBranch.delete(b); else S.hiddenBranch.add(b);
+  }
+  renderLegend(); draw(); renderInv();
+});
+
+/* min-duration slider is logarithmic: 0.01 ms .. 1 s */
+const SLIDER_MAX = 100;
+function sliderToMs(v){
+  if (v <= 0) return 0;
+  return Math.pow(10, -2 + 2 * (v / SLIDER_MAX));
+}
+document.getElementById("minDur").addEventListener("input", e => {
+  S.minDur = sliderToMs(+e.target.value);
+  document.getElementById("minDurLbl").textContent =
+    S.minDur === 0 ? "off" : (S.minDur < 1 ? S.minDur.toFixed(2)+" ms" : S.minDur.toFixed(0)+" ms");
+  draw();
+});
+document.getElementById("search").addEventListener("input", e => {
+  S.query = e.target.value.trim().toLowerCase();
+  draw(); renderInv();
+});
+document.getElementById("laneSeg").addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  S.lane = b.dataset.lane;
+  for (const x of document.querySelectorAll("#laneSeg button")) x.classList.toggle("on", x === b);
+  S.isoThread = null;
+  syncRowHControl();
+  resize(); draw();
+});
+/* Keep the slider and its label in step with the effective row height.  The two
+ * differ on purpose: S.rowH is null until the reader touches the slider, so each
+ * mode/lane can carry its own default and switching between them re-picks it -
+ * but the control must show whatever is actually in force, or the number on
+ * screen would be a lie. */
+function syncRowHControl(){
+  document.getElementById("rowH").value = String(rowH());
+  document.getElementById("rowHLbl").textContent = rowH() + " px";
+}
+document.getElementById("caseSel").addEventListener("change", e => focusCase(+e.target.value));
+document.getElementById("btnAll").addEventListener("click", showAllCases);
+document.getElementById("btnZoomSel").addEventListener("click", zoomToRange);
+document.getElementById("btnReset").addEventListener("click", resetAll);
+/* focus one case: leave the merged view, keep the filters, drop the zoom and
+ * the selection (both are index-space bound - a merged index means nothing in
+ * the focused case) */
+function focusCase(k){
+  cancelDrag();                        // a half-finished drag must not follow us
+  S.ci = k; S.mode = "case";
+  S.sel = null; S.treeRoot = -1; S.zoom = 1; S.isoThread = null;
+  document.getElementById("caseSel").value = String(k);
+  document.getElementById("btnAll").hidden = false;
+  buildOrder(); syncRowHControl(); resetPane(); resize(); renderAll();
+}
+function showAllCases(){
+  cancelDrag();
+  S.mode = "all";
+  S.sel = null; S.treeRoot = -1; S.zoom = 1; S.isoThread = null;
+  document.getElementById("btnAll").hidden = true;
+  buildOrder(); syncRowHControl(); resetPane(); resize(); renderAll();
+}
+function resetAll(){
+  cancelDrag();
+  S.sel = null; S.treeRoot = -1; S.zoom = 1; S.hiddenBranch.clear();
+  S.range = null;
+  syncRangeUI();                            // the button is disabled by this, renderAll redraws the row
+  S.isoThread = null; S.query = ""; S.minDur = sliderToMs(+document.getElementById("minDur").value);
+  S.rowH = null;                       // back to the mode's own default
+  document.getElementById("search").value = "";
+  document.getElementById("rowH").value = String(defaultRowH());
+  document.getElementById("rowHLbl").textContent = rowH() + " px";
+  S.sortKey = "wall"; S.sortDir = -1;
+  buildOrder(); resetPane(); resize(); renderAll();
+}
+/* A mode switch or a reset changes the content size, and the browser clamps the
+ * scroll offsets asynchronously - so a stale offset would leave the pane showing
+ * blank margin.  Zeroing explicitly is clearer than relying on that clamp, and it
+ * keeps the sticky overlays and the scrollbar in agreement about where we are. */
+function resetPane(){
+  const p = document.getElementById("scroller");
+  p.scrollLeft = 0; p.scrollTop = 0;
+  S.sx = 0; S.sy = 0;
+}
+/* Row height: the y axis is categorical, so this is the only way to make it
+ * bigger.  It changes the virtual height, so the pane's scrollable range changes
+ * too - hence resize() (and its clampScroll) rather than a bare redraw. */
+document.getElementById("rowH").addEventListener("input", e => {
+  S.rowH = +e.target.value;
+  document.getElementById("rowHLbl").textContent = S.rowH + " px";
+  resize(); draw();
+});
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape"){
+    /* one step back at a time: focused case -> merged view -> full reset */
+    cancelDrag();
+    if (S.mode === "case") showAllCases();
+    else resetAll();
+  }
+  else if (e.key === "Enter"){
+    /* Enter magnifies the range, and only if there is one.  Since the drag now
+     * magnifies as well, this is mostly the way BACK OUT - the same
+     * toggle `zoomToRange()` is for the button - so a reader who has dived in can
+     * surface again without hunting for Reset, which is a much larger hammer. */
+    zoomToRange();
+  }
+  else if (e.key === "ArrowLeft" || e.key === "ArrowRight"){
+    if (!geom) return;
+    /* Arrows PAN the axis.  They used to shift the time WINDOW, which is exactly
+     * the "cut the edge" behaviour being removed: a key that moves a window can
+     * only move that window, whereas a scroll always addresses the whole content
+     * and the browser clamps it at both ends for free.  The scroll listener is
+     * what repaints, so this only has to move the offset. */
+    const p = document.getElementById("scroller");
+    const stepPx = Math.max(40, (paneW() - padL()) * 0.12);
+    p.scrollLeft += (e.key === "ArrowLeft" ? -stepPx : stepPx);
+    syncScroll();
+  }
+});
+/* the case label is the first column: the export is per-view, and in the
+ * merged view one file covers six cases, so a span id alone would be ambiguous */
+function buildCsv(){
+  const c = V(), cm = colorModel(c);
+  const lines = ["case,span_id,parent_id,stage,function,error,phase,lane,depth,t0_s,t1_s,self_s"];
+  for (const i of order){
+    if (!visible(i)) continue;
+    lines.push(['"' + caseOf(i) + '"', c.id[i], c.pid[i], '"' + c.nm[c.st[i]] + '"',
+      '"' + cm.nameOf(i) + '"', cm.bad[i] ? '"' + cm.whyOf(i) + '"' : "",
+      c.phn[c.ph[i]], c.lane_name[c.th[i]], c.dp[i],
+      (c.t0[i]/1000).toFixed(6), (c.t1[i]/1000).toFixed(6),
+      (c.self[i]).toFixed(6)].join(","));
+  }
+  return lines;
+}
+document.getElementById("btnCsv").addEventListener("click", () => {
+  const blob = new Blob([buildCsv().join("\n")], {type:"text/csv"});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = (S.mode === "all" ? "all_cases" : C().label) + "_timeline.csv";
+  a.click();
+});
+
+/* ------------------------------------------------------------------ boot */
+function init(){
+  const sel = document.getElementById("caseSel");
+  sel.innerHTML = DATA.cases.map((c,i) => '<option value="' + i + '">' + esc(c.label) + "</option>").join("");
+  document.getElementById("minDurLbl").textContent = "1.0 ms";
+  document.getElementById("footNote").innerHTML =
+    "Data: <code>output/&lt;case&gt;/results/run_spans.csv</code> written by <code>scripts/run_analysis.py</code>; " +
+    "aggregate inventory from <code>run_profile.csv</code>. Built by <code>scripts/build_run_timeline.py</code> " +
+    "on " + esc(DATA.built) + ". Lanes are concurrent worker slots &mdash; the pipeline builds one " +
+    "ThreadPoolExecutor per (array, receptor) pair, so " + DATA.cases[0].n_threads.toLocaleString() +
+    " thread objects map onto " + DATA.cases[0].n_lanes + " reusable lanes. " +
+    "Each case is a separate run with its own timer, and <code>run_analysis.py</code> runs them " +
+    "back to back, so the merged axis is the sweep's real elapsed time: case k starts exactly where " +
+    "case k&minus;1 ended and the rows are directly comparable. Focusing one case keeps that case's " +
+    "own slice as the full axis. Bars are coloured by top-level function &mdash; one hue per branch, " +
+    "a lightness ramp across the sub-functions inside it, brightest where the self time is &mdash; and " +
+    "red is reserved for a span that breaks a timing invariant, never for a function. " +
+    "In the merged view a wide block is one " +
+    "<code>analyze_pair</code> (one array &times; receptor) and the ticks in the same row are its " +
+    "&times; groups <code>_analyze_single</code> calls: they overlap the block in time but are not its " +
+    "children, because profiler parent links are thread-local. " +
+    "Self-contained: no network, no external JS.";
+  buildOrder();
+  /* the slider starts at the mode's default so the control and the state agree
+   * on the first paint; S.rowH stays null until the reader moves it, so each
+   * mode keeps its own default when they switch (see defaultRowH) */
+  document.getElementById("rowH").value = String(defaultRowH());
+  document.getElementById("rowHLbl").textContent = rowH() + " px";
+  resize();
+  renderAll();
+  /* the pane's own scrolling, whichever way it was produced - wheel, scrollbar
+   * drag, middle drag, arrow keys, scrollbar track click.  The sticky gutter and
+   * time axis are painted from S.sx/S.sy, so this listener is what keeps them
+   * honest; without it they would sit at the last offset the page set itself. */
+  document.getElementById("scroller").addEventListener("scroll", () => { syncScroll(); draw(); });
+  window.addEventListener("resize", () => { resize(); draw(); });
+}
+init();
+</script>
+</body>
+</html>

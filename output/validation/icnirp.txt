@@ -1,0 +1,662 @@
+
+======================================================================
+validate_icnirp.py: ICNIRP 2013 text vs iec62471.py
+======================================================================
+
+======================================================================
+[A] Reference identity (ICNIRP 2013)
+======================================================================
+  [OK ] A0  extracted file exists  -- C:\Users\Egat\Desktop\PRJ_solar_glare_hazard_analysis\references\_ICNIRP_2013.txt
+  [OK ] A1  title block  -- needle 'ICNIRPGUIDELINESONLIMITSOFEXPOSURETOINCOHERENTVISIBLEANDINFRAREDRADIATION' found
+  [OK ] A2  publisher/journal  -- needle 'InternationalCommissiononNon-IonizingRadiationProtection' found
+  [OK ] A3  published-in stamp (Health Physics 105(1):74-96; 2013)  -- needle 'PUBLISHEDIN:HEALTHPHYSICS105(1):74' found
+  [OK ] A3b journal citation line (extractor maps the dash to 'Y')  -- needle 'HealthPhys.105(1):74Y96;2013' found
+  [OK ] A4  errata page present (p2)  -- needle 'ErrataPleasenotethefollowingcorrections:' found
+  [OK ] A5  errata Eq 9 corrected to 6300/alpha (t >= 100 s)  -- needle 'Eq.9:L_WVS^EL=6300/αW/(m^2*sr)(fort≥100s)' found
+  [OK ] A6  errata Eq 10 integration 300-700 nm  -- needle 'Eq.10:L_B=Σ_λ(300to700)L_λ(λ)*B(λ)*Δλ' found
+  [OK ] A7  26 pages extracted  -- 26 markers
+  [OK ] A8  ICNIRP cites the lamp standard (CEI/IEC 2006)  -- needle 'CEI/IEC,Photobiologicalsafetyoflampsandlampsystems.IEC62471/CIES009/E&F;2006' found
+
+======================================================================
+[B] Limiting angles (Table 3 + Sec 4.2.2)
+======================================================================
+  [OK ] B1  point source = 1.5 mrad or less  -- needle 'Asourcethatsubtendsanangleof1.5mradorlessisreferredtoasa‘‘point’’source' found
+  [OK ] B2  alpha_min assigned 1.5*10^-3 rad  -- needle 'aminisassignedthevalue1.5*10^-3radians' found
+  [OK ] B3  Table 3 alpha_min cell = 1.5e-3 rad  -- needle '1.5*10^-3' found
+  [OK ] B4  Table 3 alpha_max (t<=625 us) = 0.005  -- needle 't≤625*10^-6|1.5*10^-3|0.005' found
+  [OK ] B5  Table 3 alpha_max (625us..0.25s) = 0.2*t^0.5  -- needle '625*10^-6≤t≤0.25|1.5*10^-3|0.2*t^0.5' found
+  [OK ] B6  Table 3 alpha_max (t>=0.25s) = 0.1  -- needle 't≥0.25|1.5*10^-3|0.1' found
+  [OK ] B7  arithmetic mean of the shortest and longest dimension  -- needle 'aisthearithmeticmeanoftheshortestandlongest' found
+  [OK ] B8  bounding BEFORE the mean  -- needle 'Beforecalculatingthearithmeticmean,theangularsubtenseineachdimensionshallbelimitedtoaminandamax' found
+  [OK ] B9  code alpha_min (IEC 0.0017) documented vs ICNIRP 0.0015  -- IEC 0.0017 vs ICNIRP 0.0015 rad
+  [OK ] B10 code alpha_max (IEC 0.1) == ICNIRP t>=0.25s alpha_max  -- 0.1
+  [OK ] B11 fov_gamma(50 s) == ICNIRP acceptance window  -- 0.011000 vs 0.011000
+  [OK ] B11 fov_gamma(100 s) == ICNIRP acceptance window  -- 0.011000 vs 0.011000
+  [OK ] B11 fov_gamma(400 s) == ICNIRP acceptance window  -- 0.022000 vs 0.022000
+  [OK ] B11 fov_gamma(10000 s) == ICNIRP acceptance window  -- 0.100000 vs 0.100000
+  [OK ] B11 fov_gamma(20000 s) == ICNIRP acceptance window  -- 0.100000 vs 0.100000
+  [INF] B12  ICNIRP Table 5 prints the last-cell bounding value as 0.110 rad (= 0.0011*t^0.5 at t = 10,000 s), while the BSD EN 62471:2008 implementation caps alpha_eff at 0.1 rad (ALPHA_MAX). The two agree to <10% and only set the FOV for the single-clause t at which glare is evaluated (aversion 0.25 s -> 0.011 rad), so the choice does not change any verdict here.
+
+======================================================================
+[C] Retinal thermal EL (Table 4 / Eqs 6, 7)
+======================================================================
+  [OK ] C1  Eq 6 basic radiance EL  -- needle 'L_R^EL=2.0*10^4*α^-1*t^-0.25W/(m^2*sr)' found
+  [OK ] C2  Eq 7 radiance dose EL  -- needle 'D_R^EL=2.0*10^4*α^-1*t^0.75J/(m^2*sr)' found
+  [OK ] C3  Table 4 basic row (1us..0.25s)  -- needle '1*10^-6≤t≤0.25|α_min≤α≤α_max|2.0*10^4*α^-1*t^-0.25|2.0*10^4*α^-1*t^0.75' found
+  [OK ] C4  Table 4 steady state (t>=0.25s): radiance 2.8e4/alpha  -- needle 't≥0.25|α_min≤α≤α_max|2.8*10^4*α^-1' found
+  [OK ] C5  Table 4 steady-state dose 0.71e4/alpha  -- needle '0.71*10^4*α^-1' found
+  [OK ] C6  note 2 alpha_min = 0.0015 rad, clamp alpha to it  -- needle 'α_min=0.0015rad.Ifα≤α_min,thenα=α_min' found
+  [OK ] C7  note 4 t clamped to 0.25 s for L_R^EL  -- needle 'Ift≥0.25s,thent=0.25sforcalculationoftheexposurelimit,L_R^EL' found
+  [OK ] C8  note 5 alpha_max ramps  -- needle 'thenα_max=0.2*t^0.5.Ift≥0.25s,thenα_max=0.1radian' found
+  [OK ] C9  ICNIRP steady L_R^EL(2.8e4/alpha) == code RG1 boundary  -- 28000.0
+  [OK ] C10 code thermal EL 5e4/(alpha t^0.25) at t=10 s == ICNIRP 2.8e4/alpha  -- 28117.0663 vs 28000
+  [OK ] C11 small-source radiance 1.3e7*t^-0.25  -- needle '1.3*10^7*t^-0.25' found
+  [OK ] C12 small-source steady 1.9e7  -- needle '1.9*10^7' found
+  [OK ] C13 large-source dose 4.0e6*t^0.75  -- needle '4.0*10^6*t^0.75' found
+  [OK ] C14 large-source radiance steady 28*10^4  -- needle '28*10^4' found
+
+======================================================================
+[D] Transient radiance constant: ICNIRP 2.0e4 vs IEC 5.0e4
+======================================================================
+  [INF] D1  ICNIRP 2013 basic retinal-thermal radiance EL constant is 2.0*10^4 (Eq 6, valid 1 us..0.25 s); the pipeline implements the IEC 62471/BS EN version 5e4/(alpha*t^0.25) (Eq 4.9) which is documented in validate_norm_vs_code [E]. Difference: at the same sub-second t the ICNIRP EL would be ~2.5x lower (more exclusive).
+  [OK ] D2  ratio check at t=0.001 s: 5e4/2e4 = 2.5  -- 2.81e+05 / 1.12e+05
+  [OK ] D2  ratio check at t=0.01 s: 5e4/2e4 = 2.5  -- 1.58e+05 / 6.32e+04
+  [OK ] D2  ratio check at t=0.1 s: 5e4/2e4 = 2.5  -- 8.89e+04 / 3.56e+04
+  [OK ] D2  ratio check at t=0.25 s: 5e4/2e4 = 2.5  -- 7.07e+04 / 2.83e+04
+  [INF] D3  The two formulations agree at the steady boundary: 2.0e4*0.25^-0.25 = 2.83e4/alpha ~= 2.8e4/alpha (Table 4 t>=0.25s) and 5e4*10^-0.25 = 2.81e4/alpha (code t=10 s evaluation). On the committed 6-case tilt-sweep output the az098 hits far exceed it and the az278 far-field hits fall below it (see section [I]).
+
+======================================================================
+[E] Blue-light photochemical hazard
+======================================================================
+  [OK ] E1  D_B^EL = 1e6 J/(m2 sr)  -- needle 'D_B^EL=1*10^6J/(m^2*sr)' found
+  [OK ] E2  L_B^EL = 100 W/(m2 sr)  -- needle 'L_B^EL=100W/(m^2*sr)' found
+  [OK ] E3  H_B^EL = 100 J/m2 (0.25..100 s)  -- needle 'H_B^EL=100J/m^2(0.25≤t<100s)' found
+  [OK ] E4  E_B^EL = 1 W/m2 (100..30000 s)  -- needle 'E_B^EL=1W/m^2(100≤t≤30,000s)' found
+  [OK ] E5  Table 5 acceptance 0.011  -- needle 't≤100s|0.011' found
+  [OK ] E6  Table 5 acceptance 0.0011*t^0.5  -- needle '100≤t≤10,000s|0.0011*t^0.5' found
+  [OK ] E7  Table 5 acceptance 0.110  -- needle 't≥10,000s|0.110' found
+  [OK ] E8  code blue_light_el(1e4 s) == 100 (radiance EL transition)  -- array(100.)
+  [OK ] E9  code blue_light_small_el(100 s) == 1 W/m2 (E_B^EL 1.0)  -- np.float64(1.0)
+  [OK ] E10 code BLUE_EXEMPT_E == ICNIRP 1 W/m2  -- 1.0
+  [OK ] E11 code BLUE_EXEMPT_RAD == ICNIRP 100 W/(m2 sr)  -- 100.0
+  [OK ] E12 fov_gamma(2500 s) = 0.011*sqrt(2500/100)  -- 0.055000
+
+======================================================================
+[F] Cornea/lens IR (Eqs 20/21) + skin (Eq 22)
+======================================================================
+  [OK ] F1  E_IR^EL = 18e3*t^-0.75 (t<=1000 s)  -- needle 'E_IR^EL=18*10^3*t^-0.75W/m^2fort≤1000s' found
+  [OK ] F2  E_IR^EL = 100 W/m2 (t>=1000 s)  -- needle 'E_IR^EL=100W/m^2fort≥1000s' found
+  [OK ] F3  integration range 780-3000 nm (with 780-1000 x 0.3)  -- needle 'E_IR=Σ_λ(780to1000)0.3*E_λ+Σ_λ(1000to3000)E_λ' found
+  [OK ] F4  skin H_skin^EL = 2.0e4*t^0.25 J/m2 (t<=10 s)  -- needle 'H_skin^EL=2.0*10^4*t^0.25J/m^2(t≤10sandtinseconds)' found
+  [OK ] F5  code IR_EXEMPT == ICNIRP 100 W/m2  -- 100.0
+  [INF] F6  skin (Eq 22) is REPORT-ONLY in the pipeline: kH is computed and the ih_eh_w_m2 column written, but no risk group is derived for skin (IEC 62471 also treats it as supplementary); ICNIRP's no-limit note for t > 10 s (behavioural avoidance) is mirrored in the report limitations.
+
+======================================================================
+[G] Weak visual stimulus (Eqs 8/9 + errata)
+======================================================================
+  [OK ] G1  Eq 8 WVS radiance 2.0e4*alpha^-1*t^-0.25  -- needle 'L_WVS^EL=2.0*10^4*α^-1*t^-0.25W/(m^2*sr)(for0.25s<t<100s)' found
+  [OK ] G2  Eq 9 corrected 6300/alpha (t >= 100 s)  -- needle 'L_WVS^EL=0.63*α^-1*10^4=6300/αW/(m^2*sr)' found
+  [INF] G3  ICNIRP uses 6300/alpha for weak-visual-stimulus t>=100 s; the IEC/BS EN Table 6.1 weak-stimulus L_IR EL is 6000/alpha (5%% difference). The pipeline does NOT implement a separate weak-stimulus clause (IEC position, validated in validate_norm_vs_code I2); on a solar glare beam the strong visual stimulus is unambiguous, so the 6000 vs 6300 choice is irrelevant here.
+
+======================================================================
+[H] R(lambda) weighting-function divergence
+======================================================================
+  [OK ] H1  ICNIRP Table 2 R(lambda) present  -- needle 'RetinalthermalhazardfunctionR(l)(wherelisinnm)' found
+  [OK ] H2  ICNIRP R(300) = 0.01 (cap 1.0, no hump)  -- got 0.01
+  [OK ] H2  ICNIRP R(380) = 0.01 (cap 1.0, no hump)  -- got 0.01
+  [OK ] H2  ICNIRP R(400) = 0.1 (cap 1.0, no hump)  -- got 0.1
+  [OK ] H2  ICNIRP R(435) = 1 (cap 1.0, no hump)  -- got 1
+  [OK ] H2  ICNIRP R(440) = 1 (cap 1.0, no hump)  -- got 1
+  [OK ] H2  ICNIRP R(500) = 1 (cap 1.0, no hump)  -- got 1
+  [OK ] H2  ICNIRP R(555) = 1 (cap 1.0, no hump)  -- got 1
+  [OK ] H3  IEC R(435) = 10 (hump)  -- got 10
+  [OK ] H3  IEC R(440) = 10 (hump)  -- got 10
+  [OK ] H3  IEC R(500) = 1 (hump)  -- got 1
+  [OK ] H4  peak diverge: IEC/IEC- vs ICNIRP-style R at 435 = 10.0 vs 1.0  -- IEC 10.000 vs ICNIRP 1.000
+  [OK ] H5  k_R under ICNIRP R() in (0.3, 0.8) and < IEC k_R 1.290  -- ICNIRP 0.5865 vs IEC 1.2904 (ratio 2.20)
+  [INF] H6  k_R = 0.5865 under ICNIRP 2013 Table 2 R() vs k_R = 1.2904 under the CIE/IEC Table 4.2 R() used by the pipeline. The difference is the blue-violet hump (peak 10.0 at 435-440 nm) that IEC 62471 adopts for the burn function but ICNIRP 2013 does not. Both are legitimate references; the pipeline deliberately follows IEC 62471 (the product-safety standard the report cites). Section [I] re-checks the verdict against the ICNIRP ELVs on the committed 6-case tilt sweep: az098 obs_ptt exceeds at every tilt, west1_route_11 exceeds only at tilt 10 (RG3), and az278 (RG2/RG1) falls below at all tilts -- consistent with both references.
+  [INF] H7  B(lambda) is shared by both documents (knot 385: ICNIRP 0.0125 vs IEC Table 4.2 0.013, <2%%); the blue-light clause is therefore not affected by the R(lambda) divergence.
+
+======================================================================
+[I] End-to-end ICNIRP ELV check on the CURRENT committed 6-case tilt sweep
+======================================================================
+  [OK ] I1  [az098_e903_t10 obs_ptt] ICNIRP-weighted L_R exceeds steady ELV 2.8e4/alpha as expected  -- L_R_ICNIRP=1.197e+06 vs ELV=5.506e+05 (2.17x)
+  [OK ] I2  [az098_e903_t10 obs_ptt] ICNIRP reweight == * (kR_icnirp/kR_iec) exactly (I1 side: exceeds)  -- factor 0.4545
+  [INF] I3  [az098_e903_t10 obs_ptt] safe-stare: t_max_ICNIRP=0.0117 s vs t_max_IEC=0.0194 s (transient regime (<0.25 s); ICNIRP more exclusive by ~2.5^4 = 1.7x)
+  [OK ] I1  [az098_e903_t10 west1_route_11] ICNIRP-weighted L_R exceeds steady ELV 2.8e4/alpha as expected  -- L_R_ICNIRP=6.500e+05 vs ELV=5.506e+05 (1.18x)
+  [OK ] I2  [az098_e903_t10 west1_route_11] ICNIRP reweight == * (kR_icnirp/kR_iec) exactly (I1 side: exceeds)  -- factor 0.4545
+  [INF] I3  [az098_e903_t10 west1_route_11] safe-stare: t_max_ICNIRP=0.134 s vs t_max_IEC=0.223 s (transient regime (<0.25 s); ICNIRP more exclusive by ~2.5^4 = 1.7x)
+  [OK ] I1  [az098_e903_t15 obs_ptt] ICNIRP-weighted L_R exceeds steady ELV 2.8e4/alpha as expected  -- L_R_ICNIRP=8.913e+05 vs ELV=5.506e+05 (1.62x)
+  [OK ] I2  [az098_e903_t15 obs_ptt] ICNIRP reweight == * (kR_icnirp/kR_iec) exactly (I1 side: exceeds)  -- factor 0.4545
+  [INF] I3  [az098_e903_t15 obs_ptt] safe-stare: t_max_ICNIRP=0.0379 s vs t_max_IEC=0.0632 s (transient regime (<0.25 s); ICNIRP more exclusive by ~2.5^4 = 1.7x)
+  [OK ] I1  [az098_e903_t15 west1_route_11] ICNIRP-weighted L_R below steady ELV 2.8e4/alpha as expected  -- L_R_ICNIRP=4.819e+05 vs ELV=5.506e+05 (0.88x)
+  [OK ] I2  [az098_e903_t15 west1_route_11] ICNIRP reweight == * (kR_icnirp/kR_iec) exactly (I1 side: below)  -- factor 0.4545
+  [INF] I3  [az098_e903_t15 west1_route_11] safe-stare: t_max_ICNIRP=0.444 s vs t_max_IEC=0.74 s (steady regime (>=0.25 s, steady ELV applies))
+  [OK ] I1  [az098_e903_t20 obs_ptt] ICNIRP-weighted L_R exceeds steady ELV 2.8e4/alpha as expected  -- L_R_ICNIRP=6.143e+05 vs ELV=5.506e+05 (1.12x)
+  [OK ] I2  [az098_e903_t20 obs_ptt] ICNIRP reweight == * (kR_icnirp/kR_iec) exactly (I1 side: exceeds)  -- factor 0.4545
+  [INF] I3  [az098_e903_t20 obs_ptt] safe-stare: t_max_ICNIRP=0.168 s vs t_max_IEC=0.28 s (transient regime (<0.25 s); ICNIRP more exclusive by ~2.5^4 = 1.7x)
+  [OK ] I1  [az098_e903_t20 west1_route_11] ICNIRP-weighted L_R below steady ELV 2.8e4/alpha as expected  -- L_R_ICNIRP=3.251e+05 vs ELV=5.506e+05 (0.59x)
+  [OK ] I2  [az098_e903_t20 west1_route_11] ICNIRP reweight == * (kR_icnirp/kR_iec) exactly (I1 side: below)  -- factor 0.4545
+  [INF] I3  [az098_e903_t20 west1_route_11] safe-stare: t_max_ICNIRP=2.14 s vs t_max_IEC=3.57 s (steady regime (>=0.25 s, steady ELV applies))
+  [OK ] I1  [az278_e903_t10 west1_route_1] ICNIRP-weighted L_R below steady ELV 2.8e4/alpha as expected  -- L_R_ICNIRP=8.735e+04 vs ELV=5.506e+05 (0.16x)
+  [OK ] I2  [az278_e903_t10 west1_route_1] ICNIRP reweight == * (kR_icnirp/kR_iec) exactly (I1 side: below)  -- factor 0.4545
+  [INF] I3  [az278_e903_t10 west1_route_1] safe-stare: t_max_ICNIRP=411 s vs t_max_IEC=685 s (steady regime (>=0.25 s, steady ELV applies))
+  [OK ] I1  [az278_e903_t10 west1_route_2] ICNIRP-weighted L_R below steady ELV 2.8e4/alpha as expected  -- L_R_ICNIRP=1.289e+05 vs ELV=5.506e+05 (0.23x)
+  [OK ] I2  [az278_e903_t10 west1_route_2] ICNIRP reweight == * (kR_icnirp/kR_iec) exactly (I1 side: below)  -- factor 0.4545
+  [INF] I3  [az278_e903_t10 west1_route_2] safe-stare: t_max_ICNIRP=86.6 s vs t_max_IEC=144 s (steady regime (>=0.25 s, steady ELV applies))
+  [OK ] I1  [az278_e903_t15 west1_route_1] ICNIRP-weighted L_R below steady ELV 2.8e4/alpha as expected  -- L_R_ICNIRP=6.809e+04 vs ELV=5.506e+05 (0.12x)
+  [OK ] I2  [az278_e903_t15 west1_route_1] ICNIRP reweight == * (kR_icnirp/kR_iec) exactly (I1 side: below)  -- factor 0.4545
+  [INF] I3  [az278_e903_t15 west1_route_1] safe-stare: t_max_ICNIRP=1.11e+03 s vs t_max_IEC=1.86e+03 s (steady regime (>=0.25 s, steady ELV applies))
+  [OK ] I5  evaluated all 9 committed-case receptor pairs  -- 9/9
+
+======================================================================
+[J] INFO: documented simplifications / conventions
+======================================================================
+  [INF] J1  alpha_min divergence ICNIRP 0.0015 rad vs IEC 0.0017 rad is benign on the current config: every hazard alpha sits at ~0.05 rad (sun-disc-limited far field), far above both flooring values, so the clamp never engages.
+  [INF] J2  200 mm closest-viewing distance (Sec 11) is not applied: all receptors are >= 10 m from the panel (site geometry), and the default IEC/SGHAT observer is a point at its georeferenced position, not at the 0.2 m near-point.
+  [INF] J3  ICNIRP integration ranges are printed inconsistently: in-body Eqs 4/10/11 print 380-1400 nm for both L_R and L_B; the errata page 87 line corrects Eq 10/11 to 300-700 nm for the blue-light hazard (B(λ)=0.01 below 380 makes the difference negligible); Eq 4 (thermal) legitimately stays 380-1400 nm because ICNIRP's R(lambda) tails cover 1400. The pipeline integrates the full 200-4000 nm spectrum once for k_X, so it is insensitive to this editorial inconsistency.
+  [INF] J4  ICNIRP is an ELV guideline (limits only), NOT a risk-group taxonomy; the RG1/RG2/RG3 classification is IEC 62471 Table 6.1's. The mapping used here -- RG3/IEC == exceeds the ICNIRP steady retina ELV (2.8e4/alpha) -- is our documented bridge between the two references and is exactly what section [I] asserts.
+  [INF] J5  dose vs average-power: ICNIRP permits checking either the radiance dose D_R or the average radiance L_R; the pipeline uses the radiance form (L_R) with the t_max inversion, which is the more readable safety statement for a continuous glare minute (Eq 4.9/6 inverse). The dose cross-check is redundant given the constant-radiance assumption.
+  [INF] J6  89-degree grazing clip, DNI floor and the sun-disc front-face guard are SGHAT/pipeline additions, orthogonal to the standard limits and already documented -- this script only validates the exposure-limit reference chain.
+
+Summary: 94 passed, 0 failed, 22 info
+
+======================================================================
+validate_icnirp.py: ICNIRP 2013 text vs iec62471.py
+======================================================================
+
+======================================================================
+[A] Reference identity (ICNIRP 2013)
+======================================================================
+  [OK ] A0  extracted file exists  -- C:\Users\Egat\Desktop\PRJ_solar_glare_hazard_analysis\references\_ICNIRP_2013.txt
+  [OK ] A1  title block  -- needle 'ICNIRPGUIDELINESONLIMITSOFEXPOSURETOINCOHERENTVISIBLEANDINFRAREDRADIATION' found
+  [OK ] A2  publisher/journal  -- needle 'InternationalCommissiononNon-IonizingRadiationProtection' found
+  [OK ] A3  published-in stamp (Health Physics 105(1):74-96; 2013)  -- needle 'PUBLISHEDIN:HEALTHPHYSICS105(1):74' found
+  [OK ] A3b journal citation line (extractor maps the dash to 'Y')  -- needle 'HealthPhys.105(1):74Y96;2013' found
+  [OK ] A4  errata page present (p2)  -- needle 'ErrataPleasenotethefollowingcorrections:' found
+  [OK ] A5  errata Eq 9 corrected to 6300/alpha (t >= 100 s)  -- needle 'Eq.9:L_WVS^EL=6300/αW/(m^2*sr)(fort≥100s)' found
+  [OK ] A6  errata Eq 10 integration 300-700 nm  -- needle 'Eq.10:L_B=Σ_λ(300to700)L_λ(λ)*B(λ)*Δλ' found
+  [OK ] A7  26 pages extracted  -- 26 markers
+  [OK ] A8  ICNIRP cites the lamp standard (CEI/IEC 2006)  -- needle 'CEI/IEC,Photobiologicalsafetyoflampsandlampsystems.IEC62471/CIES009/E&F;2006' found
+
+======================================================================
+[B] Limiting angles (Table 3 + Sec 4.2.2)
+======================================================================
+  [OK ] B1  point source = 1.5 mrad or less  -- needle 'Asourcethatsubtendsanangleof1.5mradorlessisreferredtoasa‘‘point’’source' found
+  [OK ] B2  alpha_min assigned 1.5*10^-3 rad  -- needle 'aminisassignedthevalue1.5*10^-3radians' found
+  [OK ] B3  Table 3 alpha_min cell = 1.5e-3 rad  -- needle '1.5*10^-3' found
+  [OK ] B4  Table 3 alpha_max (t<=625 us) = 0.005  -- needle 't≤625*10^-6|1.5*10^-3|0.005' found
+  [OK ] B5  Table 3 alpha_max (625us..0.25s) = 0.2*t^0.5  -- needle '625*10^-6≤t≤0.25|1.5*10^-3|0.2*t^0.5' found
+  [OK ] B6  Table 3 alpha_max (t>=0.25s) = 0.1  -- needle 't≥0.25|1.5*10^-3|0.1' found
+  [OK ] B7  arithmetic mean of the shortest and longest dimension  -- needle 'aisthearithmeticmeanoftheshortestandlongest' found
+  [OK ] B8  bounding BEFORE the mean  -- needle 'Beforecalculatingthearithmeticmean,theangularsubtenseineachdimensionshallbelimitedtoaminandamax' found
+  [OK ] B9  code alpha_min (IEC 0.0017) documented vs ICNIRP 0.0015  -- IEC 0.0017 vs ICNIRP 0.0015 rad
+  [OK ] B10 code alpha_max (IEC 0.1) == ICNIRP t>=0.25s alpha_max  -- 0.1
+  [OK ] B11 fov_gamma(50 s) == ICNIRP acceptance window  -- 0.011000 vs 0.011000
+  [OK ] B11 fov_gamma(100 s) == ICNIRP acceptance window  -- 0.011000 vs 0.011000
+  [OK ] B11 fov_gamma(400 s) == ICNIRP acceptance window  -- 0.022000 vs 0.022000
+  [OK ] B11 fov_gamma(10000 s) == ICNIRP acceptance window  -- 0.100000 vs 0.100000
+  [OK ] B11 fov_gamma(20000 s) == ICNIRP acceptance window  -- 0.100000 vs 0.100000
+  [INF] B12  ICNIRP Table 5 prints the last-cell bounding value as 0.110 rad (= 0.0011*t^0.5 at t = 10,000 s), while the BSD EN 62471:2008 implementation caps alpha_eff at 0.1 rad (ALPHA_MAX). The two agree to <10% and only set the FOV for the single-clause t at which glare is evaluated (aversion 0.25 s -> 0.011 rad), so the choice does not change any verdict here.
+
+======================================================================
+[C] Retinal thermal EL (Table 4 / Eqs 6, 7)
+======================================================================
+  [OK ] C1  Eq 6 basic radiance EL  -- needle 'L_R^EL=2.0*10^4*α^-1*t^-0.25W/(m^2*sr)' found
+  [OK ] C2  Eq 7 radiance dose EL  -- needle 'D_R^EL=2.0*10^4*α^-1*t^0.75J/(m^2*sr)' found
+  [OK ] C3  Table 4 basic row (1us..0.25s)  -- needle '1*10^-6≤t≤0.25|α_min≤α≤α_max|2.0*10^4*α^-1*t^-0.25|2.0*10^4*α^-1*t^0.75' found
+  [OK ] C4  Table 4 steady state (t>=0.25s): radiance 2.8e4/alpha  -- needle 't≥0.25|α_min≤α≤α_max|2.8*10^4*α^-1' found
+  [OK ] C5  Table 4 steady-state dose 0.71e4/alpha  -- needle '0.71*10^4*α^-1' found
+  [OK ] C6  note 2 alpha_min = 0.0015 rad, clamp alpha to it  -- needle 'α_min=0.0015rad.Ifα≤α_min,thenα=α_min' found
+  [OK ] C7  note 4 t clamped to 0.25 s for L_R^EL  -- needle 'Ift≥0.25s,thent=0.25sforcalculationoftheexposurelimit,L_R^EL' found
+  [OK ] C8  note 5 alpha_max ramps  -- needle 'thenα_max=0.2*t^0.5.Ift≥0.25s,thenα_max=0.1radian' found
+  [OK ] C9  ICNIRP steady L_R^EL(2.8e4/alpha) == code RG1 boundary  -- 28000.0
+  [OK ] C10 code thermal EL 5e4/(alpha t^0.25) at t=10 s == ICNIRP 2.8e4/alpha  -- 28117.0663 vs 28000
+  [OK ] C11 small-source radiance 1.3e7*t^-0.25  -- needle '1.3*10^7*t^-0.25' found
+  [OK ] C12 small-source steady 1.9e7  -- needle '1.9*10^7' found
+  [OK ] C13 large-source dose 4.0e6*t^0.75  -- needle '4.0*10^6*t^0.75' found
+  [OK ] C14 large-source radiance steady 28*10^4  -- needle '28*10^4' found
+
+======================================================================
+[D] Transient radiance constant: ICNIRP 2.0e4 vs IEC 5.0e4
+======================================================================
+  [INF] D1  ICNIRP 2013 basic retinal-thermal radiance EL constant is 2.0*10^4 (Eq 6, valid 1 us..0.25 s); the pipeline implements the IEC 62471/BS EN version 5e4/(alpha*t^0.25) (Eq 4.9) which is documented in validate_norm_vs_code [E]. Difference: at the same sub-second t the ICNIRP EL would be ~2.5x lower (more exclusive).
+  [OK ] D2  ratio check at t=0.001 s: 5e4/2e4 = 2.5  -- 2.81e+05 / 1.12e+05
+  [OK ] D2  ratio check at t=0.01 s: 5e4/2e4 = 2.5  -- 1.58e+05 / 6.32e+04
+  [OK ] D2  ratio check at t=0.1 s: 5e4/2e4 = 2.5  -- 8.89e+04 / 3.56e+04
+  [OK ] D2  ratio check at t=0.25 s: 5e4/2e4 = 2.5  -- 7.07e+04 / 2.83e+04
+  [INF] D3  The two formulations agree at the steady boundary: 2.0e4*0.25^-0.25 = 2.83e4/alpha ~= 2.8e4/alpha (Table 4 t>=0.25s) and 5e4*10^-0.25 = 2.81e4/alpha (code t=10 s evaluation). On the committed 6-case tilt-sweep output the az098 hits far exceed it and the az278 far-field hits fall below it (see section [I]).
+
+======================================================================
+[E] Blue-light photochemical hazard
+======================================================================
+  [OK ] E1  D_B^EL = 1e6 J/(m2 sr)  -- needle 'D_B^EL=1*10^6J/(m^2*sr)' found
+  [OK ] E2  L_B^EL = 100 W/(m2 sr)  -- needle 'L_B^EL=100W/(m^2*sr)' found
+  [OK ] E3  H_B^EL = 100 J/m2 (0.25..100 s)  -- needle 'H_B^EL=100J/m^2(0.25≤t<100s)' found
+  [OK ] E4  E_B^EL = 1 W/m2 (100..30000 s)  -- needle 'E_B^EL=1W/m^2(100≤t≤30,000s)' found
+  [OK ] E5  Table 5 acceptance 0.011  -- needle 't≤100s|0.011' found
+  [OK ] E6  Table 5 acceptance 0.0011*t^0.5  -- needle '100≤t≤10,000s|0.0011*t^0.5' found
+  [OK ] E7  Table 5 acceptance 0.110  -- needle 't≥10,000s|0.110' found
+  [OK ] E8  code blue_light_el(1e4 s) == 100 (radiance EL transition)  -- array(100.)
+  [OK ] E9  code blue_light_small_el(100 s) == 1 W/m2 (E_B^EL 1.0)  -- np.float64(1.0)
+  [OK ] E10 code BLUE_EXEMPT_E == ICNIRP 1 W/m2  -- 1.0
+  [OK ] E11 code BLUE_EXEMPT_RAD == ICNIRP 100 W/(m2 sr)  -- 100.0
+  [OK ] E12 fov_gamma(2500 s) = 0.011*sqrt(2500/100)  -- 0.055000
+
+======================================================================
+[F] Cornea/lens IR (Eqs 20/21) + skin (Eq 22)
+======================================================================
+  [OK ] F1  E_IR^EL = 18e3*t^-0.75 (t<=1000 s)  -- needle 'E_IR^EL=18*10^3*t^-0.75W/m^2fort≤1000s' found
+  [OK ] F2  E_IR^EL = 100 W/m2 (t>=1000 s)  -- needle 'E_IR^EL=100W/m^2fort≥1000s' found
+  [OK ] F3  integration range 780-3000 nm (with 780-1000 x 0.3)  -- needle 'E_IR=Σ_λ(780to1000)0.3*E_λ+Σ_λ(1000to3000)E_λ' found
+  [OK ] F4  skin H_skin^EL = 2.0e4*t^0.25 J/m2 (t<=10 s)  -- needle 'H_skin^EL=2.0*10^4*t^0.25J/m^2(t≤10sandtinseconds)' found
+  [OK ] F5  code IR_EXEMPT == ICNIRP 100 W/m2  -- 100.0
+  [INF] F6  skin (Eq 22) is REPORT-ONLY in the pipeline: kH is computed and the ih_eh_w_m2 column written, but no risk group is derived for skin (IEC 62471 also treats it as supplementary); ICNIRP's no-limit note for t > 10 s (behavioural avoidance) is mirrored in the report limitations.
+
+======================================================================
+[G] Weak visual stimulus (Eqs 8/9 + errata)
+======================================================================
+  [OK ] G1  Eq 8 WVS radiance 2.0e4*alpha^-1*t^-0.25  -- needle 'L_WVS^EL=2.0*10^4*α^-1*t^-0.25W/(m^2*sr)(for0.25s<t<100s)' found
+  [OK ] G2  Eq 9 corrected 6300/alpha (t >= 100 s)  -- needle 'L_WVS^EL=0.63*α^-1*10^4=6300/αW/(m^2*sr)' found
+  [INF] G3  ICNIRP uses 6300/alpha for weak-visual-stimulus t>=100 s; the IEC/BS EN Table 6.1 weak-stimulus L_IR EL is 6000/alpha (5%% difference). The pipeline does NOT implement a separate weak-stimulus clause (IEC position, validated in validate_norm_vs_code I2); on a solar glare beam the strong visual stimulus is unambiguous, so the 6000 vs 6300 choice is irrelevant here.
+
+======================================================================
+[H] R(lambda) weighting-function divergence
+======================================================================
+  [OK ] H1  ICNIRP Table 2 R(lambda) present  -- needle 'RetinalthermalhazardfunctionR(l)(wherelisinnm)' found
+  [OK ] H2  ICNIRP R(300) = 0.01 (cap 1.0, no hump)  -- got 0.01
+  [OK ] H2  ICNIRP R(380) = 0.01 (cap 1.0, no hump)  -- got 0.01
+  [OK ] H2  ICNIRP R(400) = 0.1 (cap 1.0, no hump)  -- got 0.1
+  [OK ] H2  ICNIRP R(435) = 1 (cap 1.0, no hump)  -- got 1
+  [OK ] H2  ICNIRP R(440) = 1 (cap 1.0, no hump)  -- got 1
+  [OK ] H2  ICNIRP R(500) = 1 (cap 1.0, no hump)  -- got 1
+  [OK ] H2  ICNIRP R(555) = 1 (cap 1.0, no hump)  -- got 1
+  [OK ] H3  IEC R(435) = 10 (hump)  -- got 10
+  [OK ] H3  IEC R(440) = 10 (hump)  -- got 10
+  [OK ] H3  IEC R(500) = 1 (hump)  -- got 1
+  [OK ] H4  peak diverge: IEC/IEC- vs ICNIRP-style R at 435 = 10.0 vs 1.0  -- IEC 10.000 vs ICNIRP 1.000
+  [OK ] H5  k_R under ICNIRP R() in (0.3, 0.8) and < IEC k_R 1.290  -- ICNIRP 0.5865 vs IEC 1.2904 (ratio 2.20)
+  [INF] H6  k_R = 0.5865 under ICNIRP 2013 Table 2 R() vs k_R = 1.2904 under the CIE/IEC Table 4.2 R() used by the pipeline. The difference is the blue-violet hump (peak 10.0 at 435-440 nm) that IEC 62471 adopts for the burn function but ICNIRP 2013 does not. Both are legitimate references; the pipeline deliberately follows IEC 62471 (the product-safety standard the report cites). Section [I] re-checks the verdict against the ICNIRP ELVs on the committed 6-case tilt sweep: az098 obs_ptt exceeds at every tilt, west1_route_11 exceeds only at tilt 10 (RG3), and az278 (RG2/RG1) falls below at all tilts -- consistent with both references.
+  [INF] H7  B(lambda) is shared by both documents (knot 385: ICNIRP 0.0125 vs IEC Table 4.2 0.013, <2%%); the blue-light clause is therefore not affected by the R(lambda) divergence.
+
+======================================================================
+[I] End-to-end ICNIRP ELV check on the CURRENT committed 6-case tilt sweep
+======================================================================
+  [OK ] I1  [az098_e903_t10 obs_ptt] ICNIRP-weighted L_R exceeds steady ELV 2.8e4/alpha as expected  -- L_R_ICNIRP=1.197e+06 vs ELV=5.506e+05 (2.17x)
+  [OK ] I2  [az098_e903_t10 obs_ptt] ICNIRP reweight == * (kR_icnirp/kR_iec) exactly (I1 side: exceeds)  -- factor 0.4545
+  [INF] I3  [az098_e903_t10 obs_ptt] safe-stare: t_max_ICNIRP=0.0117 s vs t_max_IEC=0.0194 s (transient regime (<0.25 s); ICNIRP more exclusive by ~2.5^4 = 1.7x)
+  [OK ] I1  [az098_e903_t10 west1_route_11] ICNIRP-weighted L_R exceeds steady ELV 2.8e4/alpha as expected  -- L_R_ICNIRP=6.500e+05 vs ELV=5.506e+05 (1.18x)
+  [OK ] I2  [az098_e903_t10 west1_route_11] ICNIRP reweight == * (kR_icnirp/kR_iec) exactly (I1 side: exceeds)  -- factor 0.4545
+  [INF] I3  [az098_e903_t10 west1_route_11] safe-stare: t_max_ICNIRP=0.134 s vs t_max_IEC=0.223 s (transient regime (<0.25 s); ICNIRP more exclusive by ~2.5^4 = 1.7x)
+  [OK ] I1  [az098_e903_t15 obs_ptt] ICNIRP-weighted L_R exceeds steady ELV 2.8e4/alpha as expected  -- L_R_ICNIRP=8.913e+05 vs ELV=5.506e+05 (1.62x)
+  [OK ] I2  [az098_e903_t15 obs_ptt] ICNIRP reweight == * (kR_icnirp/kR_iec) exactly (I1 side: exceeds)  -- factor 0.4545
+  [INF] I3  [az098_e903_t15 obs_ptt] safe-stare: t_max_ICNIRP=0.0379 s vs t_max_IEC=0.0632 s (transient regime (<0.25 s); ICNIRP more exclusive by ~2.5^4 = 1.7x)
+  [OK ] I1  [az098_e903_t15 west1_route_11] ICNIRP-weighted L_R below steady ELV 2.8e4/alpha as expected  -- L_R_ICNIRP=4.819e+05 vs ELV=5.506e+05 (0.88x)
+  [OK ] I2  [az098_e903_t15 west1_route_11] ICNIRP reweight == * (kR_icnirp/kR_iec) exactly (I1 side: below)  -- factor 0.4545
+  [INF] I3  [az098_e903_t15 west1_route_11] safe-stare: t_max_ICNIRP=0.444 s vs t_max_IEC=0.74 s (steady regime (>=0.25 s, steady ELV applies))
+  [OK ] I1  [az098_e903_t20 obs_ptt] ICNIRP-weighted L_R exceeds steady ELV 2.8e4/alpha as expected  -- L_R_ICNIRP=6.143e+05 vs ELV=5.506e+05 (1.12x)
+  [OK ] I2  [az098_e903_t20 obs_ptt] ICNIRP reweight == * (kR_icnirp/kR_iec) exactly (I1 side: exceeds)  -- factor 0.4545
+  [INF] I3  [az098_e903_t20 obs_ptt] safe-stare: t_max_ICNIRP=0.168 s vs t_max_IEC=0.28 s (transient regime (<0.25 s); ICNIRP more exclusive by ~2.5^4 = 1.7x)
+  [OK ] I1  [az098_e903_t20 west1_route_11] ICNIRP-weighted L_R below steady ELV 2.8e4/alpha as expected  -- L_R_ICNIRP=3.251e+05 vs ELV=5.506e+05 (0.59x)
+  [OK ] I2  [az098_e903_t20 west1_route_11] ICNIRP reweight == * (kR_icnirp/kR_iec) exactly (I1 side: below)  -- factor 0.4545
+  [INF] I3  [az098_e903_t20 west1_route_11] safe-stare: t_max_ICNIRP=2.14 s vs t_max_IEC=3.57 s (steady regime (>=0.25 s, steady ELV applies))
+  [OK ] I1  [az278_e903_t10 west1_route_1] ICNIRP-weighted L_R below steady ELV 2.8e4/alpha as expected  -- L_R_ICNIRP=8.735e+04 vs ELV=5.506e+05 (0.16x)
+  [OK ] I2  [az278_e903_t10 west1_route_1] ICNIRP reweight == * (kR_icnirp/kR_iec) exactly (I1 side: below)  -- factor 0.4545
+  [INF] I3  [az278_e903_t10 west1_route_1] safe-stare: t_max_ICNIRP=411 s vs t_max_IEC=685 s (steady regime (>=0.25 s, steady ELV applies))
+  [OK ] I1  [az278_e903_t10 west1_route_2] ICNIRP-weighted L_R below steady ELV 2.8e4/alpha as expected  -- L_R_ICNIRP=1.289e+05 vs ELV=5.506e+05 (0.23x)
+  [OK ] I2  [az278_e903_t10 west1_route_2] ICNIRP reweight == * (kR_icnirp/kR_iec) exactly (I1 side: below)  -- factor 0.4545
+  [INF] I3  [az278_e903_t10 west1_route_2] safe-stare: t_max_ICNIRP=86.6 s vs t_max_IEC=144 s (steady regime (>=0.25 s, steady ELV applies))
+  [OK ] I1  [az278_e903_t15 west1_route_1] ICNIRP-weighted L_R below steady ELV 2.8e4/alpha as expected  -- L_R_ICNIRP=6.809e+04 vs ELV=5.506e+05 (0.12x)
+  [OK ] I2  [az278_e903_t15 west1_route_1] ICNIRP reweight == * (kR_icnirp/kR_iec) exactly (I1 side: below)  -- factor 0.4545
+  [INF] I3  [az278_e903_t15 west1_route_1] safe-stare: t_max_ICNIRP=1.11e+03 s vs t_max_IEC=1.86e+03 s (steady regime (>=0.25 s, steady ELV applies))
+  [OK ] I5  evaluated all 9 committed-case receptor pairs  -- 9/9
+
+======================================================================
+[J] INFO: documented simplifications / conventions
+======================================================================
+  [INF] J1  alpha_min divergence ICNIRP 0.0015 rad vs IEC 0.0017 rad is benign on the current config: every hazard alpha sits at ~0.05 rad (sun-disc-limited far field), far above both flooring values, so the clamp never engages.
+  [INF] J2  200 mm closest-viewing distance (Sec 11) is not applied: all receptors are >= 10 m from the panel (site geometry), and the default IEC/SGHAT observer is a point at its georeferenced position, not at the 0.2 m near-point.
+  [INF] J3  ICNIRP integration ranges are printed inconsistently: in-body Eqs 4/10/11 print 380-1400 nm for both L_R and L_B; the errata page 87 line corrects Eq 10/11 to 300-700 nm for the blue-light hazard (B(λ)=0.01 below 380 makes the difference negligible); Eq 4 (thermal) legitimately stays 380-1400 nm because ICNIRP's R(lambda) tails cover 1400. The pipeline integrates the full 200-4000 nm spectrum once for k_X, so it is insensitive to this editorial inconsistency.
+  [INF] J4  ICNIRP is an ELV guideline (limits only), NOT a risk-group taxonomy; the RG1/RG2/RG3 classification is IEC 62471 Table 6.1's. The mapping used here -- RG3/IEC == exceeds the ICNIRP steady retina ELV (2.8e4/alpha) -- is our documented bridge between the two references and is exactly what section [I] asserts.
+  [INF] J5  dose vs average-power: ICNIRP permits checking either the radiance dose D_R or the average radiance L_R; the pipeline uses the radiance form (L_R) with the t_max inversion, which is the more readable safety statement for a continuous glare minute (Eq 4.9/6 inverse). The dose cross-check is redundant given the constant-radiance assumption.
+  [INF] J6  89-degree grazing clip, DNI floor and the sun-disc front-face guard are SGHAT/pipeline additions, orthogonal to the standard limits and already documented -- this script only validates the exposure-limit reference chain.
+
+Summary: 94 passed, 0 failed, 22 info
+
+======================================================================
+validate_icnirp.py: ICNIRP 2013 text vs iec62471.py
+======================================================================
+
+======================================================================
+[A] Reference identity (ICNIRP 2013)
+======================================================================
+  [OK ] A0  extracted file exists  -- C:\Users\Egat\Desktop\PRJ_solar_glare_hazard_analysis\references\_ICNIRP_2013.txt
+  [OK ] A1  title block  -- needle 'ICNIRPGUIDELINESONLIMITSOFEXPOSURETOINCOHERENTVISIBLEANDINFRAREDRADIATION' found
+  [OK ] A2  publisher/journal  -- needle 'InternationalCommissiononNon-IonizingRadiationProtection' found
+  [OK ] A3  published-in stamp (Health Physics 105(1):74-96; 2013)  -- needle 'PUBLISHEDIN:HEALTHPHYSICS105(1):74' found
+  [OK ] A3b journal citation line (extractor maps the dash to 'Y')  -- needle 'HealthPhys.105(1):74Y96;2013' found
+  [OK ] A4  errata page present (p2)  -- needle 'ErrataPleasenotethefollowingcorrections:' found
+
+======================================================================
+validate_icnirp.py: ICNIRP 2013 text vs iec62471.py
+======================================================================
+
+======================================================================
+[A] Reference identity (ICNIRP 2013)
+======================================================================
+  [OK ] A0  extracted file exists  -- C:\Users\Egat\Desktop\PRJ_solar_glare_hazard_analysis\references\_ICNIRP_2013.txt
+  [OK ] A1  title block  -- needle 'ICNIRPGUIDELINESONLIMITSOFEXPOSURETOINCOHERENTVISIBLEANDINFRAREDRADIATION' found
+  [OK ] A2  publisher/journal  -- needle 'InternationalCommissiononNon-IonizingRadiationProtection' found
+  [OK ] A3  published-in stamp (Health Physics 105(1):74-96; 2013)  -- needle 'PUBLISHEDIN:HEALTHPHYSICS105(1):74' found
+  [OK ] A3b journal citation line (extractor maps the dash to 'Y')  -- needle 'HealthPhys.105(1):74Y96;2013' found
+  [OK ] A4  errata page present (p2)  -- needle 'ErrataPleasenotethefollowingcorrections:' found
+  [OK ] A5  errata Eq 9 corrected to 6300/alpha (t >= 100 s)  -- needle 'Eq.9:L_WVS^EL=6300/αW/(m^2*sr)(fort≥100s)' found
+  [OK ] A6  errata Eq 10 integration 300-700 nm  -- needle 'Eq.10:L_B=Σ_λ(300to700)L_λ(λ)*B(λ)*Δλ' found
+  [OK ] A7  26 pages extracted  -- 26 markers
+  [OK ] A8  ICNIRP cites the lamp standard (CEI/IEC 2006)  -- needle 'CEI/IEC,Photobiologicalsafetyoflampsandlampsystems.IEC62471/CIES009/E&F;2006' found
+
+======================================================================
+[B] Limiting angles (Table 3 + Sec 4.2.2)
+======================================================================
+  [OK ] B1  point source = 1.5 mrad or less  -- needle 'Asourcethatsubtendsanangleof1.5mradorlessisreferredtoasa‘‘point’’source' found
+  [OK ] B2  alpha_min assigned 1.5*10^-3 rad  -- needle 'aminisassignedthevalue1.5*10^-3radians' found
+  [OK ] B3  Table 3 alpha_min cell = 1.5e-3 rad  -- needle '1.5*10^-3' found
+  [OK ] B4  Table 3 alpha_max (t<=625 us) = 0.005  -- needle 't≤625*10^-6|1.5*10^-3|0.005' found
+  [OK ] B5  Table 3 alpha_max (625us..0.25s) = 0.2*t^0.5  -- needle '625*10^-6≤t≤0.25|1.5*10^-3|0.2*t^0.5' found
+  [OK ] B6  Table 3 alpha_max (t>=0.25s) = 0.1  -- needle 't≥0.25|1.5*10^-3|0.1' found
+  [OK ] B7  arithmetic mean of the shortest and longest dimension  -- needle 'aisthearithmeticmeanoftheshortestandlongest' found
+  [OK ] B8  bounding BEFORE the mean  -- needle 'Beforecalculatingthearithmeticmean,theangularsubtenseineachdimensionshallbelimitedtoaminandamax' found
+  [OK ] B9  code alpha_min (IEC 0.0017) documented vs ICNIRP 0.0015  -- IEC 0.0017 vs ICNIRP 0.0015 rad
+  [OK ] B10 code alpha_max (IEC 0.1) == ICNIRP t>=0.25s alpha_max  -- 0.1
+  [OK ] B11 fov_gamma(50 s) == ICNIRP acceptance window  -- 0.011000 vs 0.011000
+  [OK ] B11 fov_gamma(100 s) == ICNIRP acceptance window  -- 0.011000 vs 0.011000
+  [OK ] B11 fov_gamma(400 s) == ICNIRP acceptance window  -- 0.022000 vs 0.022000
+  [OK ] B11 fov_gamma(10000 s) == ICNIRP acceptance window  -- 0.100000 vs 0.100000
+  [OK ] B11 fov_gamma(20000 s) == ICNIRP acceptance window  -- 0.100000 vs 0.100000
+  [INF] B12  ICNIRP Table 5 prints the last-cell bounding value as 0.110 rad (= 0.0011*t^0.5 at t = 10,000 s), while the BSD EN 62471:2008 implementation caps alpha_eff at 0.1 rad (ALPHA_MAX). The two agree to <10% and only set the FOV for the single-clause t at which glare is evaluated (aversion 0.25 s -> 0.011 rad), so the choice does not change any verdict here.
+
+======================================================================
+[C] Retinal thermal EL (Table 4 / Eqs 6, 7)
+======================================================================
+  [OK ] C1  Eq 6 basic radiance EL  -- needle 'L_R^EL=2.0*10^4*α^-1*t^-0.25W/(m^2*sr)' found
+  [OK ] C2  Eq 7 radiance dose EL  -- needle 'D_R^EL=2.0*10^4*α^-1*t^0.75J/(m^2*sr)' found
+  [OK ] C3  Table 4 basic row (1us..0.25s)  -- needle '1*10^-6≤t≤0.25|α_min≤α≤α_max|2.0*10^4*α^-1*t^-0.25|2.0*10^4*α^-1*t^0.75' found
+  [OK ] C4  Table 4 steady state (t>=0.25s): radiance 2.8e4/alpha  -- needle 't≥0.25|α_min≤α≤α_max|2.8*10^4*α^-1' found
+  [OK ] C5  Table 4 steady-state dose 0.71e4/alpha  -- needle '0.71*10^4*α^-1' found
+  [OK ] C6  note 2 alpha_min = 0.0015 rad, clamp alpha to it  -- needle 'α_min=0.0015rad.Ifα≤α_min,thenα=α_min' found
+  [OK ] C7  note 4 t clamped to 0.25 s for L_R^EL  -- needle 'Ift≥0.25s,thent=0.25sforcalculationoftheexposurelimit,L_R^EL' found
+  [OK ] C8  note 5 alpha_max ramps  -- needle 'thenα_max=0.2*t^0.5.Ift≥0.25s,thenα_max=0.1radian' found
+  [OK ] C9  ICNIRP steady L_R^EL(2.8e4/alpha) == code RG1 boundary  -- 28000.0
+  [OK ] C10 code thermal EL 5e4/(alpha t^0.25) at t=10 s == ICNIRP 2.8e4/alpha  -- 28117.0663 vs 28000
+  [OK ] C11 small-source radiance 1.3e7*t^-0.25  -- needle '1.3*10^7*t^-0.25' found
+  [OK ] C12 small-source steady 1.9e7  -- needle '1.9*10^7' found
+  [OK ] C13 large-source dose 4.0e6*t^0.75  -- needle '4.0*10^6*t^0.75' found
+  [OK ] C14 large-source radiance steady 28*10^4  -- needle '28*10^4' found
+
+======================================================================
+[D] Transient radiance constant: ICNIRP 2.0e4 vs IEC 5.0e4
+======================================================================
+  [INF] D1  ICNIRP 2013 basic retinal-thermal radiance EL constant is 2.0*10^4 (Eq 6, valid 1 us..0.25 s); the pipeline implements the IEC 62471/BS EN version 5e4/(alpha*t^0.25) (Eq 4.9) which is documented in validate_norm_vs_code [E]. Difference: at the same sub-second t the ICNIRP EL would be ~2.5x lower (more exclusive).
+  [OK ] D2  ratio check at t=0.001 s: 5e4/2e4 = 2.5  -- 2.81e+05 / 1.12e+05
+  [OK ] D2  ratio check at t=0.01 s: 5e4/2e4 = 2.5  -- 1.58e+05 / 6.32e+04
+  [OK ] D2  ratio check at t=0.1 s: 5e4/2e4 = 2.5  -- 8.89e+04 / 3.56e+04
+  [OK ] D2  ratio check at t=0.25 s: 5e4/2e4 = 2.5  -- 7.07e+04 / 2.83e+04
+  [INF] D3  The two formulations agree at the steady boundary: 2.0e4*0.25^-0.25 = 2.83e4/alpha ~= 2.8e4/alpha (Table 4 t>=0.25s) and 5e4*10^-0.25 = 2.81e4/alpha (code t=10 s evaluation). On the committed 6-case tilt-sweep output the az098 hits far exceed it and the az278 far-field hits fall below it (see section [I]).
+
+======================================================================
+[E] Blue-light photochemical hazard
+======================================================================
+  [OK ] E1  D_B^EL = 1e6 J/(m2 sr)  -- needle 'D_B^EL=1*10^6J/(m^2*sr)' found
+  [OK ] E2  L_B^EL = 100 W/(m2 sr)  -- needle 'L_B^EL=100W/(m^2*sr)' found
+  [OK ] E3  H_B^EL = 100 J/m2 (0.25..100 s)  -- needle 'H_B^EL=100J/m^2(0.25≤t<100s)' found
+  [OK ] E4  E_B^EL = 1 W/m2 (100..30000 s)  -- needle 'E_B^EL=1W/m^2(100≤t≤30,000s)' found
+  [OK ] E5  Table 5 acceptance 0.011  -- needle 't≤100s|0.011' found
+  [OK ] E6  Table 5 acceptance 0.0011*t^0.5  -- needle '100≤t≤10,000s|0.0011*t^0.5' found
+  [OK ] E7  Table 5 acceptance 0.110  -- needle 't≥10,000s|0.110' found
+  [OK ] E8  code blue_light_el(1e4 s) == 100 (radiance EL transition)  -- array(100.)
+  [OK ] E9  code blue_light_small_el(100 s) == 1 W/m2 (E_B^EL 1.0)  -- np.float64(1.0)
+  [OK ] E10 code BLUE_EXEMPT_E == ICNIRP 1 W/m2  -- 1.0
+  [OK ] E11 code BLUE_EXEMPT_RAD == ICNIRP 100 W/(m2 sr)  -- 100.0
+  [OK ] E12 fov_gamma(2500 s) = 0.011*sqrt(2500/100)  -- 0.055000
+
+======================================================================
+[F] Cornea/lens IR (Eqs 20/21) + skin (Eq 22)
+======================================================================
+  [OK ] F1  E_IR^EL = 18e3*t^-0.75 (t<=1000 s)  -- needle 'E_IR^EL=18*10^3*t^-0.75W/m^2fort≤1000s' found
+  [OK ] F2  E_IR^EL = 100 W/m2 (t>=1000 s)  -- needle 'E_IR^EL=100W/m^2fort≥1000s' found
+  [OK ] F3  integration range 780-3000 nm (with 780-1000 x 0.3)  -- needle 'E_IR=Σ_λ(780to1000)0.3*E_λ+Σ_λ(1000to3000)E_λ' found
+  [OK ] F4  skin H_skin^EL = 2.0e4*t^0.25 J/m2 (t<=10 s)  -- needle 'H_skin^EL=2.0*10^4*t^0.25J/m^2(t≤10sandtinseconds)' found
+  [OK ] F5  code IR_EXEMPT == ICNIRP 100 W/m2  -- 100.0
+  [INF] F6  skin (Eq 22) is REPORT-ONLY in the pipeline: kH is computed and the ih_eh_w_m2 column written, but no risk group is derived for skin (IEC 62471 also treats it as supplementary); ICNIRP's no-limit note for t > 10 s (behavioural avoidance) is mirrored in the report limitations.
+
+======================================================================
+[G] Weak visual stimulus (Eqs 8/9 + errata)
+======================================================================
+  [OK ] G1  Eq 8 WVS radiance 2.0e4*alpha^-1*t^-0.25  -- needle 'L_WVS^EL=2.0*10^4*α^-1*t^-0.25W/(m^2*sr)(for0.25s<t<100s)' found
+  [OK ] G2  Eq 9 corrected 6300/alpha (t >= 100 s)  -- needle 'L_WVS^EL=0.63*α^-1*10^4=6300/αW/(m^2*sr)' found
+  [INF] G3  ICNIRP uses 6300/alpha for weak-visual-stimulus t>=100 s; the IEC/BS EN Table 6.1 weak-stimulus L_IR EL is 6000/alpha (5%% difference). The pipeline does NOT implement a separate weak-stimulus clause (IEC position, validated in validate_norm_vs_code I2); on a solar glare beam the strong visual stimulus is unambiguous, so the 6000 vs 6300 choice is irrelevant here.
+
+======================================================================
+[H] R(lambda) weighting-function divergence
+======================================================================
+  [OK ] H1  ICNIRP Table 2 R(lambda) present  -- needle 'RetinalthermalhazardfunctionR(l)(wherelisinnm)' found
+  [OK ] H2  ICNIRP R(300) = 0.01 (cap 1.0, no hump)  -- got 0.01
+  [OK ] H2  ICNIRP R(380) = 0.01 (cap 1.0, no hump)  -- got 0.01
+  [OK ] H2  ICNIRP R(400) = 0.1 (cap 1.0, no hump)  -- got 0.1
+  [OK ] H2  ICNIRP R(435) = 1 (cap 1.0, no hump)  -- got 1
+  [OK ] H2  ICNIRP R(440) = 1 (cap 1.0, no hump)  -- got 1
+  [OK ] H2  ICNIRP R(500) = 1 (cap 1.0, no hump)  -- got 1
+  [OK ] H2  ICNIRP R(555) = 1 (cap 1.0, no hump)  -- got 1
+  [OK ] H3  IEC R(435) = 10 (hump)  -- got 10
+  [OK ] H3  IEC R(440) = 10 (hump)  -- got 10
+  [OK ] H3  IEC R(500) = 1 (hump)  -- got 1
+  [OK ] H4  peak diverge: IEC/IEC- vs ICNIRP-style R at 435 = 10.0 vs 1.0  -- IEC 10.000 vs ICNIRP 1.000
+  [OK ] H5  k_R under ICNIRP R() in (0.3, 0.8) and < IEC k_R 1.290  -- ICNIRP 0.5865 vs IEC 1.2904 (ratio 2.20)
+  [INF] H6  k_R = 0.5865 under ICNIRP 2013 Table 2 R() vs k_R = 1.2904 under the CIE/IEC Table 4.2 R() used by the pipeline. The difference is the blue-violet hump (peak 10.0 at 435-440 nm) that IEC 62471 adopts for the burn function but ICNIRP 2013 does not. Both are legitimate references; the pipeline deliberately follows IEC 62471 (the product-safety standard the report cites). Section [I] re-checks the verdict against the ICNIRP ELVs on the committed 6-case tilt sweep: az098 obs_ptt exceeds at every tilt, west1_route_11 exceeds only at tilt 10 (RG3), and az278 (RG2/RG1) falls below at all tilts -- consistent with both references.
+  [INF] H7  B(lambda) is shared by both documents (knot 385: ICNIRP 0.0125 vs IEC Table 4.2 0.013, <2%%); the blue-light clause is therefore not affected by the R(lambda) divergence.
+
+======================================================================
+[I] End-to-end ICNIRP ELV check on the CURRENT committed 6-case tilt sweep
+======================================================================
+  [OK ] I1  [az098_e903_t10 obs_ptt] ICNIRP-weighted L_R exceeds steady ELV 2.8e4/alpha as expected  -- L_R_ICNIRP=1.197e+06 vs ELV=5.506e+05 (2.17x)
+  [OK ] I2  [az098_e903_t10 obs_ptt] ICNIRP reweight == * (kR_icnirp/kR_iec) exactly (I1 side: exceeds)  -- factor 0.4545
+  [INF] I3  [az098_e903_t10 obs_ptt] safe-stare: t_max_ICNIRP=0.0117 s vs t_max_IEC=0.0194 s (transient regime (<0.25 s); ICNIRP more exclusive by ~2.5^4 = 1.7x)
+  [OK ] I1  [az098_e903_t10 west1_route_11] ICNIRP-weighted L_R exceeds steady ELV 2.8e4/alpha as expected  -- L_R_ICNIRP=6.500e+05 vs ELV=5.506e+05 (1.18x)
+  [OK ] I2  [az098_e903_t10 west1_route_11] ICNIRP reweight == * (kR_icnirp/kR_iec) exactly (I1 side: exceeds)  -- factor 0.4545
+  [INF] I3  [az098_e903_t10 west1_route_11] safe-stare: t_max_ICNIRP=0.134 s vs t_max_IEC=0.223 s (transient regime (<0.25 s); ICNIRP more exclusive by ~2.5^4 = 1.7x)
+  [OK ] I1  [az098_e903_t15 obs_ptt] ICNIRP-weighted L_R exceeds steady ELV 2.8e4/alpha as expected  -- L_R_ICNIRP=8.913e+05 vs ELV=5.506e+05 (1.62x)
+  [OK ] I2  [az098_e903_t15 obs_ptt] ICNIRP reweight == * (kR_icnirp/kR_iec) exactly (I1 side: exceeds)  -- factor 0.4545
+  [INF] I3  [az098_e903_t15 obs_ptt] safe-stare: t_max_ICNIRP=0.0379 s vs t_max_IEC=0.0632 s (transient regime (<0.25 s); ICNIRP more exclusive by ~2.5^4 = 1.7x)
+  [OK ] I1  [az098_e903_t15 west1_route_11] ICNIRP-weighted L_R below steady ELV 2.8e4/alpha as expected  -- L_R_ICNIRP=4.819e+05 vs ELV=5.506e+05 (0.88x)
+  [OK ] I2  [az098_e903_t15 west1_route_11] ICNIRP reweight == * (kR_icnirp/kR_iec) exactly (I1 side: below)  -- factor 0.4545
+  [INF] I3  [az098_e903_t15 west1_route_11] safe-stare: t_max_ICNIRP=0.444 s vs t_max_IEC=0.74 s (steady regime (>=0.25 s, steady ELV applies))
+  [OK ] I1  [az098_e903_t20 obs_ptt] ICNIRP-weighted L_R exceeds steady ELV 2.8e4/alpha as expected  -- L_R_ICNIRP=6.143e+05 vs ELV=5.506e+05 (1.12x)
+  [OK ] I2  [az098_e903_t20 obs_ptt] ICNIRP reweight == * (kR_icnirp/kR_iec) exactly (I1 side: exceeds)  -- factor 0.4545
+  [INF] I3  [az098_e903_t20 obs_ptt] safe-stare: t_max_ICNIRP=0.168 s vs t_max_IEC=0.28 s (transient regime (<0.25 s); ICNIRP more exclusive by ~2.5^4 = 1.7x)
+  [OK ] I1  [az098_e903_t20 west1_route_11] ICNIRP-weighted L_R below steady ELV 2.8e4/alpha as expected  -- L_R_ICNIRP=3.251e+05 vs ELV=5.506e+05 (0.59x)
+  [OK ] I2  [az098_e903_t20 west1_route_11] ICNIRP reweight == * (kR_icnirp/kR_iec) exactly (I1 side: below)  -- factor 0.4545
+  [INF] I3  [az098_e903_t20 west1_route_11] safe-stare: t_max_ICNIRP=2.14 s vs t_max_IEC=3.57 s (steady regime (>=0.25 s, steady ELV applies))
+  [OK ] I1  [az278_e903_t10 west1_route_1] ICNIRP-weighted L_R below steady ELV 2.8e4/alpha as expected  -- L_R_ICNIRP=8.735e+04 vs ELV=5.506e+05 (0.16x)
+  [OK ] I2  [az278_e903_t10 west1_route_1] ICNIRP reweight == * (kR_icnirp/kR_iec) exactly (I1 side: below)  -- factor 0.4545
+  [INF] I3  [az278_e903_t10 west1_route_1] safe-stare: t_max_ICNIRP=411 s vs t_max_IEC=685 s (steady regime (>=0.25 s, steady ELV applies))
+  [OK ] I1  [az278_e903_t10 west1_route_2] ICNIRP-weighted L_R below steady ELV 2.8e4/alpha as expected  -- L_R_ICNIRP=1.289e+05 vs ELV=5.506e+05 (0.23x)
+  [OK ] I2  [az278_e903_t10 west1_route_2] ICNIRP reweight == * (kR_icnirp/kR_iec) exactly (I1 side: below)  -- factor 0.4545
+  [INF] I3  [az278_e903_t10 west1_route_2] safe-stare: t_max_ICNIRP=86.6 s vs t_max_IEC=144 s (steady regime (>=0.25 s, steady ELV applies))
+  [OK ] I1  [az278_e903_t15 west1_route_1] ICNIRP-weighted L_R below steady ELV 2.8e4/alpha as expected  -- L_R_ICNIRP=6.809e+04 vs ELV=5.506e+05 (0.12x)
+  [OK ] I2  [az278_e903_t15 west1_route_1] ICNIRP reweight == * (kR_icnirp/kR_iec) exactly (I1 side: below)  -- factor 0.4545
+  [INF] I3  [az278_e903_t15 west1_route_1] safe-stare: t_max_ICNIRP=1.11e+03 s vs t_max_IEC=1.86e+03 s (steady regime (>=0.25 s, steady ELV applies))
+  [OK ] I5  evaluated all 9 committed-case receptor pairs  -- 9/9
+
+======================================================================
+[J] INFO: documented simplifications / conventions
+======================================================================
+  [INF] J1  alpha_min divergence ICNIRP 0.0015 rad vs IEC 0.0017 rad is benign on the current config: every hazard alpha sits at ~0.05 rad (sun-disc-limited far field), far above both flooring values, so the clamp never engages.
+  [INF] J2  200 mm closest-viewing distance (Sec 11) is not applied: all receptors are >= 10 m from the panel (site geometry), and the default IEC/SGHAT observer is a point at its georeferenced position, not at the 0.2 m near-point.
+  [INF] J3  ICNIRP integration ranges are printed inconsistently: in-body Eqs 4/10/11 print 380-1400 nm for both L_R and L_B; the errata page 87 line corrects Eq 10/11 to 300-700 nm for the blue-light hazard (B(λ)=0.01 below 380 makes the difference negligible); Eq 4 (thermal) legitimately stays 380-1400 nm because ICNIRP's R(lambda) tails cover 1400. The pipeline integrates the full 200-4000 nm spectrum once for k_X, so it is insensitive to this editorial inconsistency.
+  [INF] J4  ICNIRP is an ELV guideline (limits only), NOT a risk-group taxonomy; the RG1/RG2/RG3 classification is IEC 62471 Table 6.1's. The mapping used here -- RG3/IEC == exceeds the ICNIRP steady retina ELV (2.8e4/alpha) -- is our documented bridge between the two references and is exactly what section [I] asserts.
+  [INF] J5  dose vs average-power: ICNIRP permits checking either the radiance dose D_R or the average radiance L_R; the pipeline uses the radiance form (L_R) with the t_max inversion, which is the more readable safety statement for a continuous glare minute (Eq 4.9/6 inverse). The dose cross-check is redundant given the constant-radiance assumption.
+  [INF] J6  89-degree grazing clip, DNI floor and the sun-disc front-face guard are SGHAT/pipeline additions, orthogonal to the standard limits and already documented -- this script only validates the exposure-limit reference chain.
+
+Summary: 94 passed, 0 failed, 22 info
+
+======================================================================
+validate_icnirp.py: ICNIRP 2013 text vs iec62471.py
+======================================================================
+
+======================================================================
+[A] Reference identity (ICNIRP 2013)
+======================================================================
+  [OK ] A0  extracted file exists  -- C:\Users\Egat\Desktop\PRJ_solar_glare_hazard_analysis\references\_ICNIRP_2013.txt
+  [OK ] A1  title block  -- needle 'ICNIRPGUIDELINESONLIMITSOFEXPOSURETOINCOHERENTVISIBLEANDINFRAREDRADIATION' found
+  [OK ] A2  publisher/journal  -- needle 'InternationalCommissiononNon-IonizingRadiationProtection' found
+  [OK ] A3  published-in stamp (Health Physics 105(1):74-96; 2013)  -- needle 'PUBLISHEDIN:HEALTHPHYSICS105(1):74' found
+  [OK ] A3b journal citation line (extractor maps the dash to 'Y')  -- needle 'HealthPhys.105(1):74Y96;2013' found
+  [OK ] A4  errata page present (p2)  -- needle 'ErrataPleasenotethefollowingcorrections:' found
+  [OK ] A5  errata Eq 9 corrected to 6300/alpha (t >= 100 s)  -- needle 'Eq.9:L_WVS^EL=6300/αW/(m^2*sr)(fort≥100s)' found
+  [OK ] A6  errata Eq 10 integration 300-700 nm  -- needle 'Eq.10:L_B=Σ_λ(300to700)L_λ(λ)*B(λ)*Δλ' found
+  [OK ] A7  26 pages extracted  -- 26 markers
+  [OK ] A8  ICNIRP cites the lamp standard (CEI/IEC 2006)  -- needle 'CEI/IEC,Photobiologicalsafetyoflampsandlampsystems.IEC62471/CIES009/E&F;2006' found
+
+======================================================================
+[B] Limiting angles (Table 3 + Sec 4.2.2)
+======================================================================
+  [OK ] B1  point source = 1.5 mrad or less  -- needle 'Asourcethatsubtendsanangleof1.5mradorlessisreferredtoasa‘‘point’’source' found
+  [OK ] B2  alpha_min assigned 1.5*10^-3 rad  -- needle 'aminisassignedthevalue1.5*10^-3radians' found
+  [OK ] B3  Table 3 alpha_min cell = 1.5e-3 rad  -- needle '1.5*10^-3' found
+  [OK ] B4  Table 3 alpha_max (t<=625 us) = 0.005  -- needle 't≤625*10^-6|1.5*10^-3|0.005' found
+  [OK ] B5  Table 3 alpha_max (625us..0.25s) = 0.2*t^0.5  -- needle '625*10^-6≤t≤0.25|1.5*10^-3|0.2*t^0.5' found
+  [OK ] B6  Table 3 alpha_max (t>=0.25s) = 0.1  -- needle 't≥0.25|1.5*10^-3|0.1' found
+  [OK ] B7  arithmetic mean of the shortest and longest dimension  -- needle 'aisthearithmeticmeanoftheshortestandlongest' found
+  [OK ] B8  bounding BEFORE the mean  -- needle 'Beforecalculatingthearithmeticmean,theangularsubtenseineachdimensionshallbelimitedtoaminandamax' found
+  [OK ] B9  code alpha_min (IEC 0.0017) documented vs ICNIRP 0.0015  -- IEC 0.0017 vs ICNIRP 0.0015 rad
+  [OK ] B10 code alpha_max (IEC 0.1) == ICNIRP t>=0.25s alpha_max  -- 0.1
+  [OK ] B11 fov_gamma(50 s) == ICNIRP acceptance window  -- 0.011000 vs 0.011000
+  [OK ] B11 fov_gamma(100 s) == ICNIRP acceptance window  -- 0.011000 vs 0.011000
+  [OK ] B11 fov_gamma(400 s) == ICNIRP acceptance window  -- 0.022000 vs 0.022000
+  [OK ] B11 fov_gamma(10000 s) == ICNIRP acceptance window  -- 0.100000 vs 0.100000
+  [OK ] B11 fov_gamma(20000 s) == ICNIRP acceptance window  -- 0.100000 vs 0.100000
+  [INF] B12  ICNIRP Table 5 prints the last-cell bounding value as 0.110 rad (= 0.0011*t^0.5 at t = 10,000 s), while the BSD EN 62471:2008 implementation caps alpha_eff at 0.1 rad (ALPHA_MAX). The two agree to <10% and only set the FOV for the single-clause t at which glare is evaluated (aversion 0.25 s -> 0.011 rad), so the choice does not change any verdict here.
+
+======================================================================
+[C] Retinal thermal EL (Table 4 / Eqs 6, 7)
+======================================================================
+  [OK ] C1  Eq 6 basic radiance EL  -- needle 'L_R^EL=2.0*10^4*α^-1*t^-0.25W/(m^2*sr)' found
+  [OK ] C2  Eq 7 radiance dose EL  -- needle 'D_R^EL=2.0*10^4*α^-1*t^0.75J/(m^2*sr)' found
+  [OK ] C3  Table 4 basic row (1us..0.25s)  -- needle '1*10^-6≤t≤0.25|α_min≤α≤α_max|2.0*10^4*α^-1*t^-0.25|2.0*10^4*α^-1*t^0.75' found
+  [OK ] C4  Table 4 steady state (t>=0.25s): radiance 2.8e4/alpha  -- needle 't≥0.25|α_min≤α≤α_max|2.8*10^4*α^-1' found
+  [OK ] C5  Table 4 steady-state dose 0.71e4/alpha  -- needle '0.71*10^4*α^-1' found
+  [OK ] C6  note 2 alpha_min = 0.0015 rad, clamp alpha to it  -- needle 'α_min=0.0015rad.Ifα≤α_min,thenα=α_min' found
+  [OK ] C7  note 4 t clamped to 0.25 s for L_R^EL  -- needle 'Ift≥0.25s,thent=0.25sforcalculationoftheexposurelimit,L_R^EL' found
+  [OK ] C8  note 5 alpha_max ramps  -- needle 'thenα_max=0.2*t^0.5.Ift≥0.25s,thenα_max=0.1radian' found
+  [OK ] C9  ICNIRP steady L_R^EL(2.8e4/alpha) == code RG1 boundary  -- 28000.0
+  [OK ] C10 code thermal EL 5e4/(alpha t^0.25) at t=10 s == ICNIRP 2.8e4/alpha  -- 28117.0663 vs 28000
+  [OK ] C11 small-source radiance 1.3e7*t^-0.25  -- needle '1.3*10^7*t^-0.25' found
+  [OK ] C12 small-source steady 1.9e7  -- needle '1.9*10^7' found
+  [OK ] C13 large-source dose 4.0e6*t^0.75  -- needle '4.0*10^6*t^0.75' found
+  [OK ] C14 large-source radiance steady 28*10^4  -- needle '28*10^4' found
+
+======================================================================
+[D] Transient radiance constant: ICNIRP 2.0e4 vs IEC 5.0e4
+======================================================================
+  [INF] D1  ICNIRP 2013 basic retinal-thermal radiance EL constant is 2.0*10^4 (Eq 6, valid 1 us..0.25 s); the pipeline implements the IEC 62471/BS EN version 5e4/(alpha*t^0.25) (Eq 4.9) which is documented in validate_norm_vs_code [E]. Difference: at the same sub-second t the ICNIRP EL would be ~2.5x lower (more exclusive).
+  [OK ] D2  ratio check at t=0.001 s: 5e4/2e4 = 2.5  -- 2.81e+05 / 1.12e+05
+  [OK ] D2  ratio check at t=0.01 s: 5e4/2e4 = 2.5  -- 1.58e+05 / 6.32e+04
+  [OK ] D2  ratio check at t=0.1 s: 5e4/2e4 = 2.5  -- 8.89e+04 / 3.56e+04
+  [OK ] D2  ratio check at t=0.25 s: 5e4/2e4 = 2.5  -- 7.07e+04 / 2.83e+04
+  [INF] D3  The two formulations agree at the steady boundary: 2.0e4*0.25^-0.25 = 2.83e4/alpha ~= 2.8e4/alpha (Table 4 t>=0.25s) and 5e4*10^-0.25 = 2.81e4/alpha (code t=10 s evaluation). On the committed 6-case tilt-sweep output the az098 hits far exceed it and the az278 far-field hits fall below it (see section [I]).
+
+======================================================================
+[E] Blue-light photochemical hazard
+======================================================================
+  [OK ] E1  D_B^EL = 1e6 J/(m2 sr)  -- needle 'D_B^EL=1*10^6J/(m^2*sr)' found
+  [OK ] E2  L_B^EL = 100 W/(m2 sr)  -- needle 'L_B^EL=100W/(m^2*sr)' found
+  [OK ] E3  H_B^EL = 100 J/m2 (0.25..100 s)  -- needle 'H_B^EL=100J/m^2(0.25≤t<100s)' found
+  [OK ] E4  E_B^EL = 1 W/m2 (100..30000 s)  -- needle 'E_B^EL=1W/m^2(100≤t≤30,000s)' found
+  [OK ] E5  Table 5 acceptance 0.011  -- needle 't≤100s|0.011' found
+  [OK ] E6  Table 5 acceptance 0.0011*t^0.5  -- needle '100≤t≤10,000s|0.0011*t^0.5' found
+  [OK ] E7  Table 5 acceptance 0.110  -- needle 't≥10,000s|0.110' found
+  [OK ] E8  code blue_light_el(1e4 s) == 100 (radiance EL transition)  -- array(100.)
+  [OK ] E9  code blue_light_small_el(100 s) == 1 W/m2 (E_B^EL 1.0)  -- np.float64(1.0)
+  [OK ] E10 code BLUE_EXEMPT_E == ICNIRP 1 W/m2  -- 1.0
+  [OK ] E11 code BLUE_EXEMPT_RAD == ICNIRP 100 W/(m2 sr)  -- 100.0
+  [OK ] E12 fov_gamma(2500 s) = 0.011*sqrt(2500/100)  -- 0.055000
+
+======================================================================
+[F] Cornea/lens IR (Eqs 20/21) + skin (Eq 22)
+======================================================================
+  [OK ] F1  E_IR^EL = 18e3*t^-0.75 (t<=1000 s)  -- needle 'E_IR^EL=18*10^3*t^-0.75W/m^2fort≤1000s' found
+  [OK ] F2  E_IR^EL = 100 W/m2 (t>=1000 s)  -- needle 'E_IR^EL=100W/m^2fort≥1000s' found
+  [OK ] F3  integration range 780-3000 nm (with 780-1000 x 0.3)  -- needle 'E_IR=Σ_λ(780to1000)0.3*E_λ+Σ_λ(1000to3000)E_λ' found
+  [OK ] F4  skin H_skin^EL = 2.0e4*t^0.25 J/m2 (t<=10 s)  -- needle 'H_skin^EL=2.0*10^4*t^0.25J/m^2(t≤10sandtinseconds)' found
+  [OK ] F5  code IR_EXEMPT == ICNIRP 100 W/m2  -- 100.0
+  [INF] F6  skin (Eq 22) is REPORT-ONLY in the pipeline: kH is computed and the ih_eh_w_m2 column written, but no risk group is derived for skin (IEC 62471 also treats it as supplementary); ICNIRP's no-limit note for t > 10 s (behavioural avoidance) is mirrored in the report limitations.
+
+======================================================================
+[G] Weak visual stimulus (Eqs 8/9 + errata)
+======================================================================
+  [OK ] G1  Eq 8 WVS radiance 2.0e4*alpha^-1*t^-0.25  -- needle 'L_WVS^EL=2.0*10^4*α^-1*t^-0.25W/(m^2*sr)(for0.25s<t<100s)' found
+  [OK ] G2  Eq 9 corrected 6300/alpha (t >= 100 s)  -- needle 'L_WVS^EL=0.63*α^-1*10^4=6300/αW/(m^2*sr)' found
+  [INF] G3  ICNIRP uses 6300/alpha for weak-visual-stimulus t>=100 s; the IEC/BS EN Table 6.1 weak-stimulus L_IR EL is 6000/alpha (5%% difference). The pipeline does NOT implement a separate weak-stimulus clause (IEC position, validated in validate_norm_vs_code I2); on a solar glare beam the strong visual stimulus is unambiguous, so the 6000 vs 6300 choice is irrelevant here.
+
+======================================================================
+[H] R(lambda) weighting-function divergence
+======================================================================
+  [OK ] H1  ICNIRP Table 2 R(lambda) present  -- needle 'RetinalthermalhazardfunctionR(l)(wherelisinnm)' found
+  [OK ] H2  ICNIRP R(300) = 0.01 (cap 1.0, no hump)  -- got 0.01
+  [OK ] H2  ICNIRP R(380) = 0.01 (cap 1.0, no hump)  -- got 0.01
+  [OK ] H2  ICNIRP R(400) = 0.1 (cap 1.0, no hump)  -- got 0.1
+  [OK ] H2  ICNIRP R(435) = 1 (cap 1.0, no hump)  -- got 1
+  [OK ] H2  ICNIRP R(440) = 1 (cap 1.0, no hump)  -- got 1
+  [OK ] H2  ICNIRP R(500) = 1 (cap 1.0, no hump)  -- got 1
+  [OK ] H2  ICNIRP R(555) = 1 (cap 1.0, no hump)  -- got 1
+  [OK ] H3  IEC R(435) = 10 (hump)  -- got 10
+  [OK ] H3  IEC R(440) = 10 (hump)  -- got 10
+  [OK ] H3  IEC R(500) = 1 (hump)  -- got 1
+  [OK ] H4  peak diverge: IEC/IEC- vs ICNIRP-style R at 435 = 10.0 vs 1.0  -- IEC 10.000 vs ICNIRP 1.000
+  [OK ] H5  k_R under ICNIRP R() in (0.3, 0.8) and < IEC k_R 1.290  -- ICNIRP 0.5865 vs IEC 1.2904 (ratio 2.20)
+  [INF] H6  k_R = 0.5865 under ICNIRP 2013 Table 2 R() vs k_R = 1.2904 under the CIE/IEC Table 4.2 R() used by the pipeline. The difference is the blue-violet hump (peak 10.0 at 435-440 nm) that IEC 62471 adopts for the burn function but ICNIRP 2013 does not. Both are legitimate references; the pipeline deliberately follows IEC 62471 (the product-safety standard the report cites). Section [I] re-checks the verdict against the ICNIRP ELVs on the committed 6-case tilt sweep: az098 obs_ptt exceeds at every tilt, west1_route_11 exceeds only at tilt 10 (RG3), and az278 (RG2/RG1) falls below at all tilts -- consistent with both references.
+  [INF] H7  B(lambda) is shared by both documents (knot 385: ICNIRP 0.0125 vs IEC Table 4.2 0.013, <2%%); the blue-light clause is therefore not affected by the R(lambda) divergence.
+
+======================================================================
+[I] End-to-end ICNIRP ELV check on the CURRENT committed 6-case tilt sweep
+======================================================================
+  [OK ] I1  [az098_e903_t10 obs_ptt] ICNIRP-weighted L_R exceeds steady ELV 2.8e4/alpha as expected  -- L_R_ICNIRP=1.197e+06 vs ELV=5.506e+05 (2.17x)
+  [OK ] I2  [az098_e903_t10 obs_ptt] ICNIRP reweight == * (kR_icnirp/kR_iec) exactly (I1 side: exceeds)  -- factor 0.4545
+  [INF] I3  [az098_e903_t10 obs_ptt] safe-stare: t_max_ICNIRP=0.0117 s vs t_max_IEC=0.0194 s (transient regime (<0.25 s); ICNIRP more exclusive by ~2.5^4 = 1.7x)
+  [OK ] I1  [az098_e903_t10 west1_route_11] ICNIRP-weighted L_R exceeds steady ELV 2.8e4/alpha as expected  -- L_R_ICNIRP=6.500e+05 vs ELV=5.506e+05 (1.18x)
+  [OK ] I2  [az098_e903_t10 west1_route_11] ICNIRP reweight == * (kR_icnirp/kR_iec) exactly (I1 side: exceeds)  -- factor 0.4545
+  [INF] I3  [az098_e903_t10 west1_route_11] safe-stare: t_max_ICNIRP=0.134 s vs t_max_IEC=0.223 s (transient regime (<0.25 s); ICNIRP more exclusive by ~2.5^4 = 1.7x)
+  [OK ] I1  [az098_e903_t15 obs_ptt] ICNIRP-weighted L_R exceeds steady ELV 2.8e4/alpha as expected  -- L_R_ICNIRP=8.913e+05 vs ELV=5.506e+05 (1.62x)
+  [OK ] I2  [az098_e903_t15 obs_ptt] ICNIRP reweight == * (kR_icnirp/kR_iec) exactly (I1 side: exceeds)  -- factor 0.4545
+  [INF] I3  [az098_e903_t15 obs_ptt] safe-stare: t_max_ICNIRP=0.0379 s vs t_max_IEC=0.0632 s (transient regime (<0.25 s); ICNIRP more exclusive by ~2.5^4 = 1.7x)
+  [OK ] I1  [az098_e903_t15 west1_route_11] ICNIRP-weighted L_R below steady ELV 2.8e4/alpha as expected  -- L_R_ICNIRP=4.819e+05 vs ELV=5.506e+05 (0.88x)
+  [OK ] I2  [az098_e903_t15 west1_route_11] ICNIRP reweight == * (kR_icnirp/kR_iec) exactly (I1 side: below)  -- factor 0.4545
+  [INF] I3  [az098_e903_t15 west1_route_11] safe-stare: t_max_ICNIRP=0.444 s vs t_max_IEC=0.74 s (steady regime (>=0.25 s, steady ELV applies))
+  [OK ] I1  [az098_e903_t20 obs_ptt] ICNIRP-weighted L_R exceeds steady ELV 2.8e4/alpha as expected  -- L_R_ICNIRP=6.143e+05 vs ELV=5.506e+05 (1.12x)
+  [OK ] I2  [az098_e903_t20 obs_ptt] ICNIRP reweight == * (kR_icnirp/kR_iec) exactly (I1 side: exceeds)  -- factor 0.4545
+  [INF] I3  [az098_e903_t20 obs_ptt] safe-stare: t_max_ICNIRP=0.168 s vs t_max_IEC=0.28 s (transient regime (<0.25 s); ICNIRP more exclusive by ~2.5^4 = 1.7x)
+  [OK ] I1  [az098_e903_t20 west1_route_11] ICNIRP-weighted L_R below steady ELV 2.8e4/alpha as expected  -- L_R_ICNIRP=3.251e+05 vs ELV=5.506e+05 (0.59x)
+  [OK ] I2  [az098_e903_t20 west1_route_11] ICNIRP reweight == * (kR_icnirp/kR_iec) exactly (I1 side: below)  -- factor 0.4545
+  [INF] I3  [az098_e903_t20 west1_route_11] safe-stare: t_max_ICNIRP=2.14 s vs t_max_IEC=3.57 s (steady regime (>=0.25 s, steady ELV applies))
+  [OK ] I1  [az278_e903_t10 west1_route_1] ICNIRP-weighted L_R below steady ELV 2.8e4/alpha as expected  -- L_R_ICNIRP=8.735e+04 vs ELV=5.506e+05 (0.16x)
+  [OK ] I2  [az278_e903_t10 west1_route_1] ICNIRP reweight == * (kR_icnirp/kR_iec) exactly (I1 side: below)  -- factor 0.4545
+  [INF] I3  [az278_e903_t10 west1_route_1] safe-stare: t_max_ICNIRP=411 s vs t_max_IEC=685 s (steady regime (>=0.25 s, steady ELV applies))
+  [OK ] I1  [az278_e903_t10 west1_route_2] ICNIRP-weighted L_R below steady ELV 2.8e4/alpha as expected  -- L_R_ICNIRP=1.289e+05 vs ELV=5.506e+05 (0.23x)
+  [OK ] I2  [az278_e903_t10 west1_route_2] ICNIRP reweight == * (kR_icnirp/kR_iec) exactly (I1 side: below)  -- factor 0.4545
+  [INF] I3  [az278_e903_t10 west1_route_2] safe-stare: t_max_ICNIRP=86.6 s vs t_max_IEC=144 s (steady regime (>=0.25 s, steady ELV applies))
+  [OK ] I1  [az278_e903_t15 west1_route_1] ICNIRP-weighted L_R below steady ELV 2.8e4/alpha as expected  -- L_R_ICNIRP=6.809e+04 vs ELV=5.506e+05 (0.12x)
+  [OK ] I2  [az278_e903_t15 west1_route_1] ICNIRP reweight == * (kR_icnirp/kR_iec) exactly (I1 side: below)  -- factor 0.4545
+  [INF] I3  [az278_e903_t15 west1_route_1] safe-stare: t_max_ICNIRP=1.11e+03 s vs t_max_IEC=1.86e+03 s (steady regime (>=0.25 s, steady ELV applies))
+  [OK ] I5  evaluated all 9 committed-case receptor pairs  -- 9/9
+
+======================================================================
+[J] INFO: documented simplifications / conventions
+======================================================================
+  [INF] J1  alpha_min divergence ICNIRP 0.0015 rad vs IEC 0.0017 rad is benign on the current config: every hazard alpha sits at ~0.05 rad (sun-disc-limited far field), far above both flooring values, so the clamp never engages.
+  [INF] J2  200 mm closest-viewing distance (Sec 11) is not applied: all receptors are >= 10 m from the panel (site geometry), and the default IEC/SGHAT observer is a point at its georeferenced position, not at the 0.2 m near-point.
+  [INF] J3  ICNIRP integration ranges are printed inconsistently: in-body Eqs 4/10/11 print 380-1400 nm for both L_R and L_B; the errata page 87 line corrects Eq 10/11 to 300-700 nm for the blue-light hazard (B(λ)=0.01 below 380 makes the difference negligible); Eq 4 (thermal) legitimately stays 380-1400 nm because ICNIRP's R(lambda) tails cover 1400. The pipeline integrates the full 200-4000 nm spectrum once for k_X, so it is insensitive to this editorial inconsistency.
+  [INF] J4  ICNIRP is an ELV guideline (limits only), NOT a risk-group taxonomy; the RG1/RG2/RG3 classification is IEC 62471 Table 6.1's. The mapping used here -- RG3/IEC == exceeds the ICNIRP steady retina ELV (2.8e4/alpha) -- is our documented bridge between the two references and is exactly what section [I] asserts.
+  [INF] J5  dose vs average-power: ICNIRP permits checking either the radiance dose D_R or the average radiance L_R; the pipeline uses the radiance form (L_R) with the t_max inversion, which is the more readable safety statement for a continuous glare minute (Eq 4.9/6 inverse). The dose cross-check is redundant given the constant-radiance assumption.
+  [INF] J6  89-degree grazing clip, DNI floor and the sun-disc front-face guard are SGHAT/pipeline additions, orthogonal to the standard limits and already documented -- this script only validates the exposure-limit reference chain.
+
+Summary: 94 passed, 0 failed, 22 info

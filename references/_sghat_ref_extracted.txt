@@ -1,0 +1,562 @@
+ 
+ 
+ 
+1 | P a g e 
+ 
+Solar Glare Hazard Analysis Tool (SGHAT) 
+Technical Reference Manual 
+Clifford K. Ho, Cianan A. Sims, Julius Yellowhair, and Evan Bush 
+Sandia National Laboratories 
+(505) 844-2384, ckho@sandia.gov  
+SAND2014-18360 O 
+March 2015 
+ 
+Contents 
+1. 
+Requirements ........................................................................................................................... 2 
+2. 
+Introduction ............................................................................................................................. 2 
+3. 
+Assumptions and Limitations .................................................................................................. 2 
+4. 
+Determination of Glare Occurrence ........................................................................................ 3 
+4.1 Sun Position .................................................................................................................... 3 
+4.2 Reflected Sun Vector ...................................................................................................... 5 
+4.3 Scattering and Subtended Beam Angle .......................................................................... 5 
+4.4 Beam Projection onto PV Array Plane ........................................................................... 6 
+4.5 PV Single-Axis Tracking ............................................................................................... 7 
+4.6 PV Dual-Axis Tracking .................................................................................................. 8 
+5. 
+Determination of Ocular Impact .............................................................................................. 9 
+5.1 Ocular Hazard Plot ......................................................................................................... 9 
+5.2 Direct Normal Irradiance (DNI) ................................................................................... 10 
+5.3 Reflectance ................................................................................................................... 11 
+5.4 Slope Error ................................................................................................................... 12 
+5.5 Subtended Beam Angle ................................................................................................ 12 
+6. 
+Annual Energy Production .................................................................................................... 13 
+7. 
+Other Formulations ................................................................................................................ 13 
+7.1 Flight Path Calculations ............................................................................................... 13 
+8. 
+Acknowledgments ................................................................................................................. 15 
+9. 
+References ............................................................................................................................. 15 
+ 
+
+ 
+ 
+ 
+2 | P a g e 
+ 
+1. Requirements 
+ Use of this software requires the latest version of one of the following free web browsers: 
+Mozilla Firefox or Google Chrome.   
+ The Solar Glare Hazard Analysis Tool (SGHAT) can be accessed by registering at 
+www.sandia.gov/glare.   
+2. Introduction 
+With growing numbers of solar energy installations throughout the United States, glare from 
+photovoltaic (PV) arrays and concentrating solar systems has received increased attention as a 
+real hazard for pilots, air-traffic control personnel, motorists, and others. Sandia has developed a 
+web-based interactive tool that provides a quantified assessment of (1) when and where glare 
+will occur throughout the year for a prescribed solar installation, (2) potential effects on the 
+human eye at locations where glare occurs, and (3) an estimate of the maximum annual energy 
+production.  
+The Solar Glare Hazard Analysis Tool (SGHAT) employs an interactive Google map where the 
+user can quickly locate a site, draw an outline of the proposed PV array, and specify observer 
+locations or paths. Latitude, longitude, and elevation are automatically recorded through the 
+Google interface, providing necessary information for sun position and vector calculations.  
+Additional information regarding the orientation and tilt of the PV panels, reflectance, 
+environment, and ocular factors are entered by the user.   
+If glare is found, the tool calculates the retinal irradiance and subtended angle (size/distance) of 
+the glare source to predict potential ocular hazards ranging from temporary after-image to retinal 
+burn. The results are presented in a simple, easy-to-interpret plot that specifies when glare will 
+occur throughout the year, with color codes indicating the potential ocular hazard. The tool can 
+also predict relative energy production while evaluating alternative designs, layouts, and 
+locations to identify configurations that maximize energy production while mitigating the 
+impacts of glare. 
+This Technical Reference Manual describes the theory and models used in SGHAT. 
+3. Assumptions and Limitations 
+Below is a list of assumptions and limitations of the models and methods used in SGHAT: 
+ The software currently only applies to flat reflective surfaces.  For curved surfaces (e.g., 
+focused mirrors such as parabolic troughs or dishes used in concentrating solar power 
+systems), methods and models derived by Ho et al. (2011) [1] can be used and are 
+currently being evaluated for implementation into future versions SGHAT. 
+ When enabled, PV array single- or dual-axis tracking does not account for backtracking 
+or the effects of panel shading and blocking. 
+
+ 
+ 
+ 
+3 | P a g e 
+ 
+ SGHAT does not rigorously represent the detailed geometry of a system; detailed 
+features such as gaps between modules, variable height of the PV array, and support 
+structures may impact actual glare results.  However, we have validated our models 
+against several systems, including a PV array causing glare to the air-traffic control tower 
+at Manchester-Boston Regional Airport and several sites in Albuquerque, and the tool 
+accurately predicted the occurrence and intensity of glare at different times and days of 
+the year. 
+ SGHAT assumes that the PV array is aligned with a plane defined by the total heights of 
+the coordinates outlined in the Google map.  For more accuracy, the user should perform 
+runs using minimum and maximum values for the vertex heights to bound the height of 
+the plane containing the solar array.  Doing so will expand the range of observed solar 
+glare when compared to results using a single height value.   
+ SGHAT does not consider obstacles (either man-made or natural) between the 
+observation points and the prescribed solar installation that may obstruct observed glare, 
+such as trees, hills, buildings, etc. 
+ The variable direct normal irradiance (DNI) feature (if selected) scales the user-
+prescribed peak DNI using a typical clear-day irradiance profile.  This profile has a lower 
+DNI in the mornings and evenings and a maximum at solar noon.  The scaling uses a 
+clear-day irradiance profile based on a normalized time relative to sunrise, solar noon, 
+and sunset, which are prescribed by a sun-position algorithm [2] and the latitude and 
+longitude obtained from Google maps.  The actual DNI on any given day can be affected 
+by cloud cover, atmospheric attenuation, and other environmental factors. 
+ The ocular hazard predicted by the tool depends on a number of environmental, optical, 
+and human factors, which can be uncertain.  We provide input fields and typical ranges of 
+values for these factors so that the user can vary these parameters to see if they have an 
+impact on the results.  The speed of SGHAT allows expedited sensitivity and parametric 
+analyses. 
+4. Determination of Glare Occurrence 
+Determination of glare occurrence requires knowledge of the following: sun position, observer 
+location, and the tilt, orientation, location, extent, and optical properties of the modules in the 
+solar array.  Vector algebra is then used to determine if glare is visible from the prescribed 
+observation points. 
+4.1 Sun Position 
+The sun position algorithm[2] calculates the sun position in two forms: first as a unit vector 
+extending from the Cartesian origin toward the sun, and second as azimuthal and altitudinal 
+angles. The algorithm relies on the latitude, longitude and time zone offset from UTC in order to 
+determine the position of the sun at every time step throughout the year. 
+First, we calculate the solar time: 
+
+ 
+ 
+ 
+4 | P a g e 
+ 
+𝑡𝑠𝑜𝑙𝑎𝑟= 4(𝐿𝑠𝑡−𝐿𝑙𝑜𝑐) + 𝐸+ 𝑡𝑠𝑡𝑎𝑛𝑑𝑎𝑟𝑑 
+Where: 
+𝐿𝑠𝑡= 𝑡𝑧𝑜𝑓𝑓𝑠𝑒𝑡∗15 
+𝐸= 229.2(0.000075 + 0.001868 ∗cos 𝐵−0.032077 ∗sin 𝐵−0.014615 ∗cos 2𝐵
+−0.04089 ∗sin 2𝐵)         
+[NOTE: the printed manual has 0.0320077 (a typo); the correct Duffie & Beckman
+coefficient is 0.032077. Impact is negligible: -10.60 vs -10.60 min EoT on 21 Jan
+(pvlib SPA: -11.22 min).]         
+Lst is the local standard meridian, Lloc is the given longitude and E is the equation of time, in 
+minutes. 
+The solar time can then be used to calculate the Hour angle, 𝜔: 
+𝜔= ∆𝑡𝑛𝑜𝑜𝑛∗15 
+Where ∆𝑡𝑛𝑜𝑜𝑛is the difference between solar time and solar noon. 
+Once the declination,𝛿 is known, the solar zenith and azimuthal angle of the sun can be found: 
+𝛿= 23.45 ∗sin (360 ∗((284 + 𝑛)/365)
+𝜃𝑧= arccos(cos 𝜑∗cos 𝛿∗cos 𝜔+ sin 𝜑∗sin 𝛿) 
+𝛾𝑠= 𝑠𝑖𝑔𝑛(𝜔) *abs(arccos ((cos 𝜃𝑧sin 𝜙−sin 𝛿)/sin 𝜃𝑧cos 𝜙))
+Where: 
+ n is the day of the year (1 to 365) 
+ 𝜃𝑧 is the sun zenith angle (subtract from 90 to get the altitude angle, 𝜃𝑎) 
+ 𝜑 is the given latitude 
+ 𝛾𝑠 is the sun azimuthal angle 
+The sun altitude and azimuth can be converted to unit vector components as follows: 
+𝑠𝑖⃗⃗ = cos 𝜃𝑎∗sin 𝛾𝑠 
+𝑠𝑗⃗⃗ = cos 𝜃𝑎∗cos 𝛾𝑠 
+𝑠𝑘⃗⃗⃗ = sin 𝜃𝑎 
+ 
+
+ 
+ 
+ 
+5 | P a g e 
+ 
+ 
+4.2 Reflected Sun Vector 
+Once the sun position is known for each time interval a simple vector reflection equation [4] can 
+determine the reflected sun vector, based on the normal vector of the PV array panels: 
+𝑥1'−𝑥0 = 𝒗−2(𝒗∙𝒏̂) 𝒏̂ 
+Figure 1 illustrates this vector reflection graphically. 
+ 
+Figure 1 - Vector reflection over normal vector of plane. Source: 
+mathworld.wolfram.com/Reflection.html 
+ 
+ 
+4.3 Scattering and Subtended Beam Angle 
+The reflected sun vector defines the axis of a conical beam representing the actual beam of 
+sunlight. This sunbeam is translated to extend from the OP toward the PV array. The aperture of 
+this conical sun beam is equivalent to β, the subtended beam angle, which is the sum of the sun 
+shape and the scattering caused by slope error: 
+𝛽= 2 ∗(𝜃𝑠𝑢𝑛 𝑎𝑛𝑔𝑙𝑒/2+ 2 ∗3 ∗𝜃𝑠𝑙𝑜𝑝𝑒 𝑒𝑟𝑟𝑜𝑟) 
+ 
+
+ 
+ 
+ 
+6 | P a g e 
+ 
+4.4 Beam Projection onto PV Array Plane 
+The beam is projected onto the PV array in several steps: first, points lying on the edge of the 
+beam in a conical section orthogonal to the axis are calculated. This conical section is arbitrarily 
+defined to be 1 meter from the cone apex (the OP). 
+These 30 points are calculated by randomly generating two coordinates and solving for the third 
+using the following equation: 
+𝑣𝑎𝑥𝑖𝑠∙𝑣𝑟𝑎𝑑𝑖𝑢𝑠= 0 
+This equation states that the cone axis is orthogonal to the radius vectors of the conical section 
+upon which the 30 conical points lie. 
+Next, conical edge vectors are defined by subtracting the cone apex (the OP) from the cone 
+points. This collection of vectors extends from the OP toward the PV array plane. These vectors 
+define the conical sun beam. At their center, or the axis of the cone, is the reflected sun vector 
+calculated in 4.2. 
+These conical vectors are then intersected with the PV array plane. This cone-plane intersection 
+will be an elliptical conical section defined by 30 co-planar points. 
+These intersection points are calculated using line-plane intersection equations [5]: 
+𝑑=
+(𝒑𝟎−𝑰𝟎) ∙𝒏⃗⃗ 
+𝑰∙𝒏⃗⃗ 
+ 
+(𝑥, 𝑦, 𝑧) = 𝑑𝐈+ 𝑰𝟎 
+Where: 
+ 𝒏⃗⃗  is the PV array panel normal vector 
+ I is one of the vectors extending from the OP to the PV array plane, which define the 
+conical sun beam. 
+ I0 is a point on the vector (the OP) 
+ p0 is a point on the PV array plane 
+ d is the distance from the OP to the intersection point, and 
+ (x, y, z) define the intersection point for this vector. 
+The n intersection points found using the above equations define the elliptical conical section of 
+the sun beam cone as it intersects the PV array plane.  
+
+ 
+ 
+ 
+7 | P a g e 
+ 
+Glare is present and viewable from the OP if any of the PV array vertices lie within this co-
+planar ellipse. This is determined using an optimized points-in-polygon algorithm from 
+matplotlib [6]. 
+ 
+4.5 PV Single-Axis Tracking 
+Single-axis tracking allows for the PV panels to rotate over one dimension in order to track the 
+apparent movement of the sun over time. This rotation is modeled using the normal vector of the 
+PV array panels, 𝒏⃗⃗ . The components of 𝒏⃗⃗  are calculated using the following: 
+ 𝛽𝑡 – Tracking axis tilt where 0º is parallel with flat ground and 90º is perpendicular to the 
+ground, facing the horizon. 
+ 𝜇 – Panel offset from the tracking axis. 
+ 𝜌 – Tracking, or rotation, angle designating the rotation of the panel at a given time. 
+Clockwise and counter-clockwise over the tracking axis (see below). 
+ 𝛾 – Orientation of the tracking axis. Clockwise from due south (0º). 
+ 
+Figure 2 - PV panel with single-axis tracking. The panel normal is displayed as N. Source: 
+http://www.powerfromthesun.net/Book/chapter04/chapter04.html 
+ 
+The components of 𝒏⃗⃗  are first calculated in a Cartesian coordinate system of (b, r, u) where r 
+aligns with the tracking axis, b is perpendicular to it and extends to the horizon, and u is 
+perpendicular to r vertically (see Figure 2). Note that 𝛽𝑡, 𝜇, 𝛾 are all inputs provided by the user. 
+
+ 
+ 
+ 
+8 | P a g e 
+ 
+ 
+𝜌= tan−1 {
+cos(𝜃𝑎) sin(𝛾𝑠−𝛾)
+sin(𝜃𝑎−𝛽𝑡) + [1 −cos(𝛾𝑠−𝛾)] sin(𝛽𝑡) cos(𝜃𝑎)} 
+𝒏⃗⃗ 𝑏= sin 𝜌 
+𝒏⃗⃗ 𝑟= sin 𝜇 
+𝒏⃗⃗ 𝑢= cos 𝜌 
+ 
+These components are converted back to the standard Cartesian system: 
+𝒏⃗⃗ 𝑧= 𝒏⃗⃗ 𝑢cos 𝛽𝑡+ 𝒏⃗⃗ 𝑟sin 𝛽𝑡 
+𝒏⃗⃗ 𝑒= −𝒏⃗⃗ 𝑢sin(𝛾) sin(𝛽𝑡) + 𝒏⃗⃗ 𝑏cos(𝛾) + 𝒏⃗⃗ 𝑟sin(𝛾) cos(𝛽𝑡) 
+𝒏⃗⃗ 𝑛= −𝒏⃗⃗ 𝑢cos(𝛾) sin(𝛽𝑡) −𝒏⃗⃗ 𝑏sin(𝛾) + 𝒏⃗⃗ 𝑟cos(𝛾) cos(𝛽𝑡) 
+ 
+Vector components are calculated for the panels at each time step. 
+  
+4.6 PV Dual-Axis Tracking 
+Dual-axis tracking implies the PV panels face “toward” the sun at every time step. Again, the 
+panel normal varies every minute. Because the variance occurs in two dimensions, the sun vector 
+(extending from the origin toward the sun) can be used as the panel normal: 
+𝒏⃗⃗ = 𝒔⃗  
+ 
+ 
+
+ 
+ 
+ 
+9 | P a g e 
+ 
+5. Determination of Ocular Impact 
+Determination of the ocular impact requires knowledge of the direct normal irradiance, PV 
+module reflectance, size and orientation of the array, optical properties of the PV module, and 
+ocular parameters.  These values are used to determine the retinal irradiance and subtended 
+source angle used in the ocular hazard plot [1, 3]. 
+5.1 Ocular Hazard Plot 
+The ocular impact of viewed glare can be classified into three levels based on the retinal 
+irradiance and subtended source angle: low potential for after-image, potential for after-image, 
+and potential for permanent eye damage [1, 3]. The following log-log plot illustrates these three 
+areas of glare intensity:  
+ 
+Figure 3 - Glare hazard plot illustrating the ocular impact as a function of retinal irradiance 
+and subtended source angle [1, 3]. 
+ 
+The subtended source angle represents the size of the glare viewed by an observer, while the 
+retinal irradiance determines the amount of energy impacting the retina of the observer. Larger 
+source angles can result in glare of high intensity, even if the retinal irradiance is low. 
+The boundary between the “yellow” and “red” regions, signifying glare that transitions from 
+causing an after-image to causing permanent eye damage, can be quantified with the following 
+equations: 
+
+ 
+ 
+ 
+10 | P a g e 
+ 
+𝐸𝑟,𝑏𝑢𝑟𝑛=
+0.118
+𝜔   for   𝜔< 0.118 rad 
+𝐸𝑟,𝑏𝑢𝑟𝑛= 1  for  𝜔≥0.118 rad 
+The second boundary, between the low potential for after-image (green) and potential for after-
+image (yellow) areas, adheres to the following equation: 
+𝐸𝑟,𝑓𝑙𝑎𝑠ℎ= 3.59 × 10−5
+𝜔1.77
+ 
+ 
+5.2 Direct Normal Irradiance (DNI) 
+The variable direct normal irradiance (DNI) feature (if selected) scales the user-prescribed peak 
+DNI using a typical clear-day irradiance profile.  This profile has a lower DNI in the mornings 
+and evenings and a maximum at solar noon. The scaling uses a clear-day irradiance profile based 
+on a normalized time relative to sunrise, solar noon, and sunset, which are prescribed by a sun-
+position algorithm [2] and the latitude and longitude obtained from Google maps. 
+𝐷𝑁𝐼= cos(1 −𝑡𝑠) 
+Here 𝑡𝑠 represents the normalized time relative to solar noon. Normalization is based on the 
+amount of time between sunrise or sunset and solar noon.  
+The DNI scaling profile was determined by fitting empirical DNI data to the cosine function, as 
+illustrated in Figure 4. Note that DNI on any given day can be affected by cloud cover, 
+atmospheric attenuation, and other environmental factors. 
+ 
+
+ 
+ 
+ 
+11 | P a g e 
+ 
+ 
+Figure 4 - Fit functions modeling normalized DNI vs. hour. Cosine was chosen to profile 
+empirical data. 
+ 
+5.3 Reflectance 
+Panel reflectivity can be varied for each time step to account for the position of the sun relative 
+to the array. Smooth glass and light textured glass with and without Anti-Reflection coating, 
+along with deeply textured glass were analyzed to derive accurate functions for computing 
+reflectivity based on sun incidence angle [7]. 
+Table 1 contains the fit functions for panel reflectivity. 
+Table 1 - Reflectance fit functions for PV cover types. 
+PV Glass Cover Type 
+Fit Function Defined over 0    60 
+Fit Function Defined over  
+60 <  < 90 
+Smooth Glass without Anti-
+Reflection Coating 
+y = 1.1977E-5 x2 – 9.5728E-4 x + 4.410E-2 
+y = 6.2952E-5 e0.1019x 
+Smooth Glass with Anti-Reflection 
+Coating 
+y = 1.473E-5 x2 – 9.6416E-4 x + 3.2395E-2 
+y = 4.7464E-5 e0.1051x 
+Light Textured Glass without Anti-
+Reflection Coating 
+y = 1.5272E-5 x2 – 1.1304E-3 x + 4.305E-2 
+y = 7.3804E-5 e0.0994x 
+Light Textured Glass with Anti-
+Reflection Coating 
+y = 1.4188E-5 x2 – 1.0326E-3 x + 3.9016E-2 
+y = 7.0179E-5 e0.0994x 
+Deeply Textured Glass 
+y = 6.8750E-6 x2 – 6.5250E-4 x + 2.10E-2 
+y = 4.1793E-5 e0.0834x 
+0
+200
+400
+600
+800
+1000
+0:00
+4:48
+9:36
+14:24
+19:12
+0:00
+DNI (W/m^2) 
+Time of day 
+Actual summer DNI
+Predicted summer DNI
+Actual winter DNI
+Predicted Winter DNI
+
+ 
+ 
+ 
+12 | P a g e 
+ 
+ 
+5.4 Slope Error 
+The slope error can be automatically correlated with the selected surface type by checking 
+correlate slope error with module surface type. If unchecked, the slope error can be entered 
+manually. If checked, the following table is referenced for determining the appropriate slope 
+error and corresponding value of 𝛽, the subtended beam angle: 
+Table 2. Slope error and beam spread vs. surface type 
+PV Glass Cover Type 
+Average 
+RMS Slope 
+Error (mrad) 
+Average 
+Beam 
+Spread 
+(mrad) 
+Standard 
+deviation of 
+slope error 
+Standard 
+deviation of 
+beam error 
+Smooth Glass without 
+Anti-Reflection Coating 
+6.55 
+87.9 
+4.43 
+53.3 
+Smooth Glass with Anti-
+Reflection Coating 
+8.43 
+110 
+2.58 
+30.9 
+Light Textured Glass 
+without Anti-Reflection 
+Coating 
+9.70 
+126 
+2.78 
+33.3 
+Light Textured Glass with 
+Anti-Reflection Coating 
+9.16 
+119 
+3.17 
+38.0 
+Deeply Textured Glass 
+82.6 
+1000 
+N/A 
+N/A 
+ 
+5.5 Subtended Beam Angle 
+The glare analysis must account for the actual visible area of the PV array when viewed from the 
+observation point. For example, less viewable area will be apparent when viewing an array with 
+panel tilt of 0 degrees on a flat surface from the side than when viewing it from above in an 
+aircraft. 
+To account for this, the analysis replaces the solar beam angle computed in Section Error! 
+Reference source not found. with an array-limiting beam angle if the latter is a smaller value. 
+This represents the physical situation where the sun beam “overflows” the PV array from the 
+viewer’s perspective, and thus less glare is possible. 
+𝜃= 1
+𝑑
+√4 ∗𝐴∗|cos 𝜃𝑟𝑒𝑓−𝑝𝑣𝑎|
+𝜋
+ 
+where: 
+ A is area of PV array 
+ d is distance between observer and array 
+ θref-pva is angle between reflected sun vector and PV array normal 
+
+ 
+ 
+ 
+13 | P a g e 
+ 
+6. Annual Energy Production 
+SGHAT can also predict the annual energy produced by a PV array based on its capacity and 
+configuration. First the rated capacity is scaled at each time step based on the angle between the 
+panel normal and the position of the sun. E.g. when the sun vector is perpendicular to the panel 
+normal, the power produced will be the rated capacity. 
+𝑃= 𝑃𝑟𝑎𝑡𝑒𝑑∗cos 𝜃𝑖𝑛𝑐 
+Next, this power is multiplied by the scaled time increment to get the energy produced in that 
+time interval (kWh). 
+𝐸𝑡= 𝑃∗𝑡
+60 
+Finally, the energy produced over the year is summed to get the maximum annual energy 
+produced by the array, assuming clear sunny skies each day. 
+𝐸𝑚𝑎𝑥= ∑𝐸𝑡 
+ 
+7. Other Formulations 
+7.1 Flight Path Calculations 
+The flight path OP coordinates are computed based on the latitude and longitude of the selected 
+threshold, and the specified direction of the flight path. 
+First, the distance covered by one degree of longitude is calculated, based on the latitude. 
+𝑑= 𝑟𝑎𝑑𝑖𝑢𝑠𝑒𝑎𝑟𝑡ℎ∗cos(𝑙𝑎𝑡𝑡ℎ𝑟𝑒𝑠) 
+Next, the distance between each point in terms of latitude and longitude is computed based on 
+the direction and distance, in meters, of a degree of latitude or longitude. This is the Δlatitude 
+and Δlongitude between each OP. 
+∆𝑙𝑎𝑡= 402.3 ∗cos 𝜃
+111325
+ 
+∆𝑙𝑛𝑔= 402.3 ∗sin 𝜃
+𝑑
+ 
+Here d is the distance covered by one degree of longitude, 402.3 is ¼ mile in meters, and 𝜃 is the 
+flight path direction.  
+
+ 
+ 
+ 
+14 | P a g e 
+ 
+Finally, compute each OP position by augmenting the coordinates of the previous OP by Δlat 
+and Δlng. 
+The flight path heights of each OP are calculated based on the threshold height above ground, 
+glide slope and threshold elevation. The tangent of the glide slope, multiplied by the distance 
+from the threshold yields the height above the threshold of the given OP. Since each OP 
+elevation is queried automatically from Google, this height value is augmented by the elevation 
+difference between the OP and the threshold elevation. 
+ℎ𝑒𝑖𝑔ℎ𝑡= 𝑑𝑖𝑠𝑡𝑎𝑛𝑐𝑒∗tan(𝜑) + ℎ𝑒𝑖𝑔ℎ𝑡𝑡ℎ𝑟𝑒𝑠+ (𝑒𝑙𝑒𝑣𝑎𝑡𝑖𝑜𝑛𝑡ℎ𝑟𝑒𝑠−𝑒𝑙𝑒𝑣𝑎𝑡𝑖𝑜𝑛𝑂𝑃) 
+where 𝜑 is the glide slope. 
+ 
+ 
+ 
+
+ 
+ 
+ 
+15 | P a g e 
+ 
+8. Acknowledgments 
+Sandia National Laboratories is a multi-program laboratory managed and operated by Sandia 
+Corporation, a wholly owned subsidiary of Lockheed Martin Corporation, for the U.S. 
+Department of Energy’s National Nuclear Security Administration under contract DE-AC04-
+94AL85000. 
+9. References 
+[1] 
+Ho, C.K., C.M. Ghanbari, and R.B. Diver, 2011, Methodology to Assess Potential Glint 
+and Glare Hazards From Concentrating Solar Power Plants: Analytical Models and 
+Experimental Validation, Journal of Solar Energy Engineering-Transactions of the Asme, 
+133(3). 
+[2] 
+Duffie, J.A. and W.A. Beckman, 1991, Solar engineering of thermal processes, 2nd ed., 
+Wiley, New York, xxiii, 919 p. 
+[3] 
+Ho, C.K., Relieving a Glaring Problem, in Solar Today2013, American Solar Energy 
+Society: Boulder, CO. p. 28 - 31. 
+[4]  
+Weisstein, Eric W. "Reflection." From MathWorld - A Wolfram Web 
+Resource. http://mathworld.wolfram.com/Reflection.html 
+[5]  
+http://en.wikipedia.org/wiki/Line-plane_intersection 
+[6]  
+http://matplotlib.org/1.2.1/api/path_api.html#matplotlib.path.Path.contains_points 
+[7]  
+Yellowhair, J. Reflectance Measurements on the Photovoltaic Sample Panels, October 7, 
+2013. 
+[8]  
+Stine, W. B. and Geyer, M, 2001, Power From the Sun, 
+http://www.powerfromthesun.net/book.html 
+ 
+Additional references can be found at www.sandia.gov/glare.  
+ 

@@ -1,0 +1,8 @@
+numpy==2.2.6
+pandas==2.3.3
+pvlib==0.15.2
+matplotlib==3.10.9
+scipy==1.15.3
+folium==0.18.0
+PyYAML==6.0.2
+PyMuPDF==1.28.2

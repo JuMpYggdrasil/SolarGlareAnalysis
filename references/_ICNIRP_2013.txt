@@ -1,0 +1,2656 @@
+=== PAGE 1 ===
+ 
+ 
+ 
+INTERNATIONAL COMMISSION ON NON‐IONIZING RADIATION PROTECTION  
+ 
+ 
+ 
+ICNIRP PUBLICATION – 2013 
+ 
+ 
+ 
+ 
+ 
+ICNIRP GUIDELINES 
+ON LIMITS OF EXPOSURE TO INCOHERENT VISIBLE  
+AND INFRARED RADIATION 
+ 
+ 
+ 
+PUBLISHED IN: HEALTH PHYSICS 105(1):74‐96; 2013 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+=== PAGE 2 ===
+Errata 
+ 
+ 
+Please note the following corrections: 
+ 
+Eq. 9:  L_WVS^EL = 6300/α W/(m^2*sr)   (for t ≥ 100 s)
+Eq. 10: L_B = Σ_λ(300 to 700) L_λ(λ) * B(λ) * Δλ
+Page 87
+“For non‐constant radiance values, intermittent or pulsed exposure, the effective blue light
+radiance dose DB in J m^-2 sr^-1 is obtained by integration of LB over the exposure duration, t.”
+Eq. 11: D_B = L_B * t = Σ_λ(300 to 700) L_λ(λ) * t * B(λ) * Δλ
+Eq. 12: L_B ≤ L_B^EL  or  D_B ≤ D_B^EL
+Page 87
+“For t > 10,000 s, the radiance limit, L_B^EL, that limits the blue light weighted effective
+radiance LB (i.e. L_B ≤ L_B^EL to avoid adverse effects) is given in Eq. 14.”
+Eq. 18 (aphakic): D_Aphakic = Σ_λ(300 to 700) L_λ * A(λ) * Δλ ≤ 1.0 MJ m^-2 sr^-1
+(after the first “0.1” subscript fragment of the original stack)
+ 
+The reference “Marshall J. Radiation and the ageing eye. Barker Medley lecture. 1983.” 
+should be replaced with “Marshall J. Radiation and the ageing eye. Ophthalmol Physiol Opt; 
+1984.“ 
+ 
+
+=== PAGE 3 ===
+[page 3 of the source PDF is a raster fragment of the SUMMARY/
+retinal-thermal exposure-limit table (Table 4) with garbled font encoding.
+The clean transcription of that table is on PAGE 15 of this extract
+(see Table 4. Retinal thermal exposure limits).]
+
+=== PAGE 4 ===
+ICNIRP Guidelines
+ICNIRP GUIDELINES ON LIMITS OF EXPOSURE TO INCOHERENT
+VISIBLE AND INFRARED RADIATION
+International Commission on Non-Ionizing Radiation Protection*
+AbstractVGuidelines for exposure to visible and infrared radi-
+ation were ﬁrst proposed by ICNIRP in 1997. Related guidelines
+on limits of exposure to ultraviolet radiation (UVR) and laser
+radiation have been published. This document presents a revi-
+sion of the guidelines for broadband incoherent radiation.
+Health Phys. 105(1):74Y96; 2013
+INTRODUCTION
+SINCE IT is necessary to consider contributions of UVR
+to retinal hazard assessment for incoherent broadband ra-
+diation, the action spectra recommended in these guidelines
+for the retina extend to 300 nm. Thus, there is an overlap in
+terms of wavelength range of these guidelines with the
+guidelines for ultraviolet radiation that only consider skin,
+cornea and lens (ICNIRP 2004).
+Since the publication of the ICNIRP Guidelines on
+Limits of Exposure to Broad-Band Incoherent Optical
+Radiation (0.38 to 3 mm) in 1997 (ICNIRP 1997), further
+research on thermally induced injury of the retina has led
+to the need to revise the guidance given so far. In particu-
+lar, the exposure limit dependence upon source size is now
+a function of the exposure duration. Further, the retinal
+thermal hazard function has been revised. The speciﬁc ra-
+tionale for these changes is provided in Appendix A.
+PURPOSE AND SCOPE
+The purpose of these guidelines is to establish the
+maximum levels of exposure to incoherent optical radia-
+tion from artiﬁcial and natural sources with the exception
+of lasers. Exposure below these maximum levels is not
+expected to cause adverse effects.
+The guidelines assist the development of principles
+of protection to the eyes and the skin against optical ra-
+diation hazards. Separate guidelines are deﬁned for ex-
+posure to laser radiation (ICNIRP 1996; ICNIRP 2000).
+The guidelines are intended for use by the various experts
+and national and international bodies who are responsible
+for developing regulations, recommendations, or codes of
+practice to protect workers and the general public from the
+potentially adverse effects of optical radiation.
+The exposure limits given are for wavelengths from
+380 nm to 1 mm. However, the action spectrum for pho-
+tochemically induced photoretinopathy extends to 300 nm
+in the ultraviolet radiation (UVR) wavelength range and
+should be applied for the evaluation of broad-band sources
+which may also emit UVR. Separate guidelines apply for
+the exposure of the skin and the anterior parts of the eye to
+UVR (ICNIRP 2004).
+Injury thresholds are well deﬁned for the effects that
+are in the scope of these guidelines. Therefore, the guide-
+lines for optical radiation in general do not differentiate
+between exposure to professionals and exposure to the
+general public. The only exception concerns the action
+spectrum for photochemically induced photoretinopathy,
+where for children below 2 years of age the aphakic haz-
+ard function should be applied.
+The exposure limits apply to the full wavelength range
+of up to 1 mm even though the determination of the
+exposure level can be limited to the wavelength range
+below 3.000 nm. Non-laser sources do not emit enough
+power in the wavelength region above 3.000 nm to cause a
+health hazard other than the possibility of heat stress
+(ICNIRP 2006).
+There is paucity of threshold data for long term
+chronic exposure. Therefore, the guidelines are based on
+the dataset of threshold data for short delay (up to 48 h)
+onset of damage. However, current knowledge suggests
+that there are no effects of chronic exposure to infrared
+radiation (IRR) below the exposure limits provided.
+These guidelines do not apply to deliberate exposure
+for medical (diagnostic or treatment) purposes.
+74
+www.health-physics.com
+*ICNIRP c/o BfSVG. Ziegelberger, Ingolsta¨dter Landstr. 1, 85764
+Oberschleissheim, Germany.
+The author declares no conﬂicts of interest.
+For correspondence contact: G. Ziegelberger at the above address or
+email at info@icnirp.org.
+(Manuscript accepted 22 January 2013)
+0017-9078/13/0
+Copyright * 2013 Health Physics Society
+DOI: 10.1097/HP.0b013e318289a611
+Copyright © 2013 Health Physics Society. Unauthorized reproduction of this article is prohibited.
+
+=== PAGE 5 ===
+Detailed measurement procedures and calculation
+methods are beyond the scope of this document and
+are provided elsewhere (Sliney and Wolbarsht 1980;
+UNEP et al. 1982; McCluney 1984; CIE and ICNIRP 1998;
+Schulmeister 2001; Henderson and Schulmeister 2004).
+QUANTITIES, SYMBOLS AND UNITS
+Electromagnetic radiation in the wavelength range
+between 100 nm and 1 mm is widely termed ‘‘optical ra-
+diation.’’ A subdivision of this spectral band is deﬁned by
+the International Commission on Illumination (CIE 2011)
+and can be useful in discussions of the photobiological
+effects of optical radiation, although the predominant ef-
+fects have less sharply deﬁned spectral limits. The optical
+radiation waveband consists of ultraviolet, visible, and in-
+frared radiation. According to the CIE, ultraviolet radiation
+(UVR) ranges between 100Y400 nm (CIE 2011). A precise
+border between UVR and visible radiation cannot be de-
+ﬁned because visual sensation at wavelengths shorter than
+400 nm is noted for very bright sources. Similarly, a pre-
+cise border between visible and infrared radiation cannot
+be deﬁned because visual sensation at wavelengths greater
+than 780 nm is noted for very bright sources. The infra-
+red region is often subdivided into IR-A (780Y1.400 nm),
+IR-B (1.400Y3.000 nm), and IR-C (3.000 nmY1 mm).
+Exposure limits for optical radiation are expressed in
+radiometric quantities, depending on the tissue and dam-
+age mechanism (Table 1). A complete deﬁnition of sym-
+bols used is found in Appendix B.
+Exposure limits that relate to the skin, the anterior
+part of the eye or to potential retinal photochemical injury
+under the ‘‘small source’’ condition are expressed in the
+radiometric quantities of irradiance, E (W m^-2) and ra-
+diant exposure, H (J m^-2). The quantity of radiant expo-
+sure is also sometimes referred to as dose, and irradiance
+can be understood as dose-rate. Radiance, L (W m^-2 sr^-1),
+and radiance dose D (J m^-2 sr^-1) also referred to as time-
+integrated radiance, are used for exposure limits that relate
+to retinal injury from extended sources, i.e. sources that re-
+sult in an image on the retina. Radiance is convenient since
+it is directly related to the irradiance at the retina (Sliney
+and Wolbarsht 1980; Henderson and Schulmeister 2004)
+For completeness it is noted that in the CIE International
+Lighting Vocabulary (CIE 2011), the symbol for time in-
+tegrated radiance is Lt and the symbol D is reserved for
+the detectivity of a detector. Since the ICNIRP guide-
+lines make use of additional subscripts, a dedicated single
+letter symbol was deemed advantageous for the radiance
+dose, D.
+Depending on the type of interaction, the effectiveness
+to produce an adverse effect can be strongly wavelength
+dependent. This wavelength dependence is accounted for
+by an action spectrum that is used to spectrally weigh the
+respective exposure quantities. These weighted exposure
+quantities are then referred to as ‘‘effective’’ quantities, for
+instance, effective irradiance.
+SOURCES AND EXPOSURE CONDITIONS
+Optical radiation from artiﬁcial sources is used in a
+wide variety of industrial, consumer, scientiﬁc and medi-
+cal applications, and in most cases the light and infra-
+red energy emitted is not hazardous to the general public.
+However, people with certain medical conditions may be
+at risk from exposures that are otherwise innocuous. In
+certain unusual exposure conditions, potentially hazardous
+exposures are accessible. Examples include; arc welding,
+use of some arc lamps in research laboratories, very high
+intensity ﬂash lamps in photography, infrared lamps for
+surveillance and heating, a number of medical diagnos-
+tic applications, and even printing and photocopying. Ex-
+cessive light and IRR are typically ﬁltered or bafﬂed to
+reduce discomfort. Where sufﬁcient visible light is pres-
+ent, the natural and active aversion response of the eye to
+bright light will substantially reduce potentially hazardous
+exposure. Moreover, if the total irradiance is sufﬁcient,
+the thermal discomfort, sensed by the skin and cornea,
+usually triggers an aversion response and tends to limit
+exposure to a few seconds or less (ICNIRP 2006).
+Many intense optical sources also produce signiﬁ-
+cant amounts of UVR, which may be hazardous to the eye
+and skin. This hazard should be separately assessed, using
+UVR guidelines (ICNIRP 2004). It should be noted,
+however, that the UVR guidelines do not provide exposure
+limits for photoretinopathy. The risk for photochemically
+induced photoretinopathy may be evaluated by applying
+the blue-light photochemical exposure limits given in
+these guidelines.
+Lamps are used in many consumer and ofﬁce appli-
+ances, but because of the need for visual comfort, these
+sources rarely pose a real hazard. The properties of laser
+emissions generally differ signiﬁcantly from those of
+broad-band incoherent optical sources, and so the expo-
+sure limits for broad-band optical sources are necessarily
+expressed differently from those applicable to lasers. In
+addition, laser guidelines and product safety standards
+Table 1. Radiometric quantities.
+Quantity
+Symbol
+Unit
+Power
+F
+W
+Energy
+Q
+J
+Irradiance
+E
+W m^-2
+Radiant exposure
+H
+J m^-2
+Radiance
+L
+W m^-2 sr^-1
+Radiance dose/Time-integrated radiance
+D
+J m^-2 sr^-1
+75
+Limits of exposure to incoherent visible and infrared radiation c ICNIRP
+www.health-physics.com
+Copyright © 2013 Health Physics Society. Unauthorized reproduction of this article is prohibited.
+
+=== PAGE 6 ===
+(ICNIRP 1996, 2000; IEC 2007) incorporate assumptions
+of exposure that may not apply to conventional optical
+sources. Most lasers emit radiation over one or more ex-
+tremely narrow wavelength bands, and no detailed knowl-
+edge of the spectral output is required for purposes of
+hazard evaluation apart from the wavelength of the laser.
+By contrast, evaluation of the potential hazards of broad-
+band conventional light sources requires spectroradio-
+metric data to apply several different photobiological action
+spectra, as well as knowledge of the exposure geometry.
+The action spectrum expresses the spectral relative bio-
+logical efﬁciency of optical radiation delivered from out-
+side the eye, thus depending on the attenuation of optical
+radiation before the target tissue and the relative sensitiv-
+ity of the target tissue. The action spectra are speciﬁc to
+different ocular structures.
+BIOLOGICAL EFFECTS
+The eye and skin are the organs most susceptible
+to damage by optical radiation. The type of effect, injury
+thresholds, and damage mechanisms vary signiﬁcantly
+with wavelength (Fig. 1).
+The effects may overlap and must be evaluated in-
+dependently. Action spectra exist for each effect.
+Overview of types of damage
+At least nine separate types of damage to the
+eye and skin may be caused by visible and infrared
+optical radiation:
+Eye.
+1. Thermal damage of the cornea, approximately
+1.400 nmY1 mm;
+2. Thermal
+damage
+of
+the
+iris,
+approximately
+380 nmY1.400 nm;
+3. Near-infrared thermal damage of the crystalline lens,
+approximately 800Y3.000 nm;
+4. Thermal damage of the retina (380Y1.400 nm);
+5. ‘‘Blue-light’’ photochemical damage of the retina,
+principally 380Y550 nm; 300Y550 nm for the aphakic
+eye (Ham et al. 1976; Ham Jr 1989; Lund et al. 2006).
+This is also referred to as Type II photochemical reti-
+nal damage; and
+6. Photochemical retinal damage from chronic expo-
+sure to bright light, Type I photochemical retinal dam-
+age (Noell et al. 1966; Williams and Howell 1983;
+Mellerio 1994).
+Ocular damage threshold from optical radiation before
+adulthood is modiﬁed by a different spectral transmittance
+and a different sensitivity (So¨derberg 2011).
+Skin.
+1. Thermal damage of the skin, burns, approximately
+380 nmY1 mm;
+2. Damage to the skin by photosensitization. This is
+generally more typical of UVR wavelengths (less than
+380 nm), although such photosensitized reactions can
+extend to approximately 700 nm, possibly as a side-
+effect of certain medications (Fitzpatrick et al. 1974;
+Magnus 1976; Diffey 1982); and
+3. Photoallergic reactions in which an antigen, activated
+by exposure to optical radiation, preferentially UVR,
+causes an immune reaction (Darvay et al. 2001)
+Ultraviolet radiation poses the primary known envi-
+ronmental risk factor for skin cancer. Visible radiation
+does not contribute to skin cancer risk (IARC 1992; UNEP
+et al. 1994; ICNIRP 2004, 2007).
+Characteristics of photochemical
+interaction mechanisms
+The threshold radiant exposure is subject to the prin-
+ciple of reciprocity, the BunsenYRoscoe Law of Photobi-
+ology, stating that the effect depends only on the dose (the
+radiant exposure;, i.e., the product of irradiance and expo-
+sure duration). Thus, blue-light retinal injury (photochemi-
+cally induced photoretinopathy) can result from viewing
+either an extremely bright light for a short duration or a
+less bright light for a longer duration. The observation of
+reciprocity helps to distinguish these effects from ther-
+mal injuries (see below). For photochemical injury of the
+retina, the sensitivity peaks at approximately 440 nm for
+the eye with an intact crystalline lens, a phakic eye (Ham
+et al. 1976).
+Characteristics of thermal interaction mechanisms
+Thermal injury, unlike photochemical injury, does
+not show reciprocity between irradiance and exposure
+Fig. 1. Potential adverse biological effects and penetration depth of
+visible and infrared radiation (adapted from Sliney Wolbarsht 1980).
+76
+Health Physics
+July 2013, Volume 105, Number 1
+www.health-physics.com
+Copyright © 2013 Health Physics Society. Unauthorized reproduction of this article is prohibited.
+
+=== PAGE 7 ===
+duration. Thermal injury is strongly dependent upon heat
+conduction from the irradiated tissue. It requires an in-
+tense exposure to cause tissue coagulation. When exposure
+is less intense, surrounding tissue conducts heat away from
+the exposed site. Thresholds for acute thermal injury of
+both cornea and retina in experimental animals have been
+corroborated for the human eye by ﬂash burn accident
+data. Normally, a temperature of at least 45-C is neces-
+sary to produce a thermal burn. Higher temperatures are
+required for thermal injury to result from exposures of
+shorter duration, e.g., about 55-C for 10 s or 69-C for
+1 ms (Fig. 2) (Priebe and Welch 1978; Allen and
+Polhamus 1989; Schulmeister and Jean 2011).
+For small images and exposure durations longer than
+about 10 ms, the steady state temperature is reached during
+the exposure. Due to the exponential dependence of the
+degree of thermal injury on temperature, the cooling phase
+after the cessation of the pulse has no inﬂuence on the
+critical temperature (Schulmeister and Jean 2011). Con-
+sequently, the critical temperature is lower than for larger
+images, for which the peak temperature is reached at a later
+point of time.
+The irradiance required to achieve these temperatures
+depends upon the ambient tissue temperature and the ex-
+posure spot size. Because of the more efﬁcient cooling of
+small spots, injury of small spots requires higher irradi-
+ances than injury of large spots.
+Retinal injury
+The principal retinal hazard from viewing bright light
+sources is photochemically induced photoretinopathy,
+e.g. solar retinitis (Vos and van Norren 2001) with an
+accompanying scotoma from staring at the sun (‘‘eclipse
+blindness’’) or from staring into a welding arc without
+proper eye protection (Uniat et al. 1986; Choi et al. 2006).
+Laboratory studies demonstrated that photochemical in-
+jury from exposures of the order of È10 s to 1Y2 h duration
+is related to absorption of 380 nm to 520 nm short-
+wavelength light by the retinal pigment epithelium and
+the choroid (Ham et al. 1976). This is usually referred to
+as blue-light hazard (Sliney and Wolbarsht 1980) but
+also as Type II photochemically induced retinal damage
+(Mellerio 1994). Small temperature rises in the retina may
+be synergistic with the photochemical process.
+Animal studies demonstrated that continued expo-
+sures over several days to very bright light led to retinal
+injury (Noell et al. 1966; Mellerio 1994; Rozanowska and
+Sarna 2005; Organisciak and Vaughan 2010) also referred
+to as Type I retinal photochemically induced damage. This
+type of damage has been suggested to be linked to damage
+of the photoreceptors as a result of prolonged bleaching
+of rhodopsin.
+Shorter-wavelength visible radiation has been suggested
+to accelerate retinal aging (Marshall 1983; Young 1988).
+Only sources with a very high radiance such as a
+xenon-arc ﬂash lamp, a nuclear ﬂash, or a laser are capa-
+ble of producing thermal injury of the retina.
+The mechanisms involved in thermal retinal injury
+as a function of retinal image size in the wavelength re-
+gion 380Y1.400 nm are well understood and supported
+with experimental threshold data, retinal explant data and
+models of thermal retinal injury (Mainster et al. 1970;
+Birngruber et al. 1985; Freund et al. 1996; Lund et al. 2007;
+Schulmeister et al. 2008).
+Although there are no clear boundaries between in-
+jury mechanisms, certain mechanisms dominate depending
+on the spectral region and the exposure duration. Photo-
+chemical, rather than thermal, effects dominate in the wave-
+length region below approximately 600 nm for exposure
+times in excess of approximately 10 s. For short-duration,
+less than a few seconds, the damage is due to thermal
+injury. At infrared wavelengths, where photochemical ef-
+fects have not been detected, thermal effects still domi-
+nate for exposure times longer than 10 s. Radial heat ﬂow
+produces a strong dependence of retinal injury threshold
+on retinal image size. For small and medium retinal image
+sizes, eye movements affect the retinal photochemical
+injury thresholds by distributing the retinal radiant expo-
+sure over a larger area (Yarbus 1967; Naidoff and Sliney
+1974; Sliney 1988; Ness et al. 1999). See also further dis-
+cussion below (the effect of eye movements).
+Anterior segment injury
+In the anterior segment of the eye, opaciﬁcation of
+the cornea or the lens are the major effects of concern after
+exposure to IRR. However, damage of the cornea is only
+possible if intense radiation is focused onto the cornea. For
+Fig. 2. The calculated peak temperature (at the lesion radius) re-
+quired for retinal thermal injury in a 60 mm and 1.7 mm retinal
+image as a function of duration of light exposure (Schulmeister
+and Jean 2011).
+77
+Limits of exposure to incoherent visible and infrared radiation c ICNIRP
+www.health-physics.com
+Copyright © 2013 Health Physics Society. Unauthorized reproduction of this article is prohibited.
+
+=== PAGE 8 ===
+the lens, chronic exposure to high levels of IRR poten-
+tially causes cataract. For exposure to intense pulsed light
+sources at close proximity to the eye, thermally induced
+damage of the iris is a concern (Sutter and Landau 2003;
+Javey et al. 2010; Lee et al. 2011).
+Threshold exposures for lenticular changes caused by
+IR-A are of the order of 50 MJ m^-2 (Pitts and Cullen
+1981). Similar levels have been reported using an Nd:YAG
+laser operating at 1064 nm (Wolbarsht 1978, 1991). The
+temperature rise in the lens was estimated to be several
+degrees (Scott 1988a and b). Glass and steel workers ex-
+posed in hot environments to infrared irradiances of the
+order of 800Y4.000 W m^-2 daily for 10Y15 y have re-
+portedly developed lenticular opacities (Lydahl 1984).
+Circadian rhythm regulation
+Light has a profound impact upon circadian regula-
+tion of the human neural endocrine system (Brainard et al.
+2001; Berson et al. 2002; Turner and Mainster 2008). A
+non-visual photoreceptor in the human retina (photore-
+ceptive ganglion cell) mediates this response. The secre-
+tion of melatonin is suppressed by retinal exposure to short
+wavelength visible radiation. The implications for ad-
+verse health impacts from de-regulation of the circadian
+rhythm remain speculative and are therefore not consid-
+ered in the current guidelines.
+Visual disturbance
+Temporary visual disturbances such as disability
+glare, discomfort glare, after-images and ‘‘ﬂash blind-
+ness’’ may be caused by brief exposures to bright light
+sources at levels below the exposure limits (Chisum
+1973), and precautions should be taken against second-
+ary safety hazards resulting from temporary visual im-
+pairment (Reidenbach 2009).
+Skin injury
+Photosensitized injury of the skin by visible light is
+possible as a result of the presence of both endogenous
+and exogenous photosensitizers such as bilirubin and
+phenothiazine. Although this effect is far less likely to be
+caused by light than by UVR, it may occur with topi-
+cally applied substances as well as after ingestion of cer-
+tain photosensitizing compounds in food or medicines
+(Fitzpatrick et al. 1974; Magnus 1976; Diffey 1982). For
+example, the action spectrum for porphyria frequently
+has secondary peaks at about 400 nm and 500 nm
+(Diffey 1982).
+Thermal injury thresholds of the skin are highly de-
+pendent upon the size of the exposed area, perfusion,
+pigmentation and the initial skin temperature, which is
+usually 22Y25-C compared with 37-C for the retina. Very
+high irradiances are needed to produce thermal injury
+within the pain reaction time, G1 s (Hardy and Oppel
+1937; Moritz and Henriques 1947; Stolwijk 1980). Higher
+temperatures (Henriques 1948) are required for thermal
+injury to result from exposures of shorter duration (e.g.,
+about 47-C for 10 s or 57-C for 1 ms). In typical indus-
+trial situations, whole-body heat stress tends to limit the
+duration of exposure to optical radiation, keeping it below
+the threshold for thermal damage to the skin. Hence, only
+pulsed, or very brief, exposures to very high irradiances
+pose a thermal hazard to the skin. Chronic elevation of skin
+temperature (not only caused by optical radiation) is known
+to induce a ﬁxed reddening of the skin, erythema ab igne
+(ICNIRP 2006).
+Heat stress
+Long-term whole body exposure below the thresholds
+for thermal damage to the eye and skin can overload the
+body’s temperature regulating capacity and result in heat
+stress (ICNIRP 2006; ACGIH 2010).
+BIOPHYSICAL_BASIS FOR THE
+EXPOSURE LIMITS
+Adverse effects of radiation are theoretically possi-
+ble across the entire optical spectrum, but in the context
+of these guidelines there is particular concern about the
+visible and near-infrared regions, 380Y1.400 nm where
+radiation can cause retinal injury. The photobiological haz-
+ards on the skin and eye vary widely with wavelength.
+Exposure to broadband (non-laser) optical sources that emit
+light and infrared radiant energy must be evaluated by ap-
+plying several speciﬁc action spectra.
+In developing exposure limits for broad-band optical
+sources, action spectra were speciﬁed. The action spectra
+were used to spectrally weight the exposure to derive a
+‘‘biologically effective radiance or irradiance.’’ This pro-
+vides the most accurate hazard assessment. Exposure
+limits can then, independently of the source spectrum, be
+speciﬁed in terms of exposure duration and other relevant
+parameters, so that all sources are evaluated with the same
+risk criteria. For a given exposure, produced by a given
+source at the eye and the skin, several action spectra may
+need to be applied. Also, for the determination of the
+effective radiance relevant for the blue light hazard, due to
+averaging of the radiance over a certain solid angle, the
+effective radiance may be lower than the actual physical
+radiance. The effective exposure levels are subsequently
+compared with the corresponding exposure limits.
+This dosimetric concept reﬂects that for exposure to
+radiation from a given source, there may be more than one
+hazard, e.g., photochemically induced photoretinopathy
+and thermal damage to the lens.
+Retina
+Retinal image size and source size. In the wave-
+length range where the pre-retinal media of the eye are
+78
+Health Physics
+July 2013, Volume 105, Number 1
+www.health-physics.com
+Copyright © 2013 Health Physics Society. Unauthorized reproduction of this article is prohibited.
+
+=== PAGE 9 ===
+transparent (mainly 380 nm to 1.400 nm), optical radiation
+is imaged onto the retina as shown schematically in Fig. 3.
+The focal length of the optical system of the hu-
+man adult eye (cornea and lens) if immersed in air
+would for the case of focusing at inﬁnity equal 17 mm
+(Gullstrand 1909). The planar angular subtense of the
+source, a (Fig. 3), is the angle subtended by the actual
+source at the position of the eye. The planar angular sub-
+tense in units of radians is obtained by dividing the source
+extent by the distance. For the simpliﬁed assumption of
+the optical power of the eye immersed in air, the angle
+subtended by the source is equal to the angle subtended
+by the image (Sliney and Wolbarsht 1980). For retinal
+images resulting from sources of small planar angular
+subtense the retinal image dimension, dr (mm), is directly
+related to the source dimension, ds (mm), the effective
+focal length of the eye in air, f (i.e. 17 mm), and the
+viewing distance from the source, r (mm) (eqn 1) (Sliney
+and Wolbarsht 1980):
+Eq. 1:  d_r = d_s * f / r
+Note that optical elements such as lenses or diffusers op-
+tically transform the radiation emitted from the source.
+The angular subtense, a, characterizes the angular subtense
+of the apparent source (Henderson and Schulmeister 2004)
+that produces the smallest retinal image that can be
+achieved by accommodation. The angular subtense of a
+source should not be confused with the beam spread (di-
+vergence) of a source, such as a searchlight, although
+under certain conditions (for a well collimated beam and
+when the source is projected to inﬁnity by optics in front
+of the lamp) it is equivalent.
+From knowledge of the optical parameters of the
+human eye and the radiometric parameters of a light
+source, it is possible to calculate irradiances at the retina,
+as shown below (eqn 2). In physiological optics, it is nec-
+essary to distinguish between a ‘‘point source’’ and an
+‘‘extended source.’’ In these guidelines, a source is con-
+sidered a point source if the angular subtense is less than or
+equal to amin, where amin equals 1.5 mrad, which corre-
+sponds to a retinal spot size of 25 mm. As an extended
+source is viewed at ever-increasing distance, it begins to
+behave as a point source and eqn (1) becomes invalid for
+image dimensions less than approximately 25Y50 mm
+(Sliney and Wolbarsht 1980; Schulmeister 2013). For ease
+of application, the blue-light hazard exposure limits for
+extended sources and small (or ‘‘point’’) sources are
+expressed in different quantities. Radiance (W m^-2 sr^-1)
+and radiance dose (time integrated radiance, J m^-2 sr^-1)
+are used for exposure limits derived to protect the retina.
+Irradiance (W m^-2) and radiant exposure (J m^-2) are
+generally used for exposure limits derived to protect
+the skin, the cornea, and the lens, and may also be used
+to express limits for the retina where minimal image
+sizes apply.
+The angle of acceptance, gmeas , is the planar angle
+limited by the circular aperture in front of the detector over
+which the radiance is averaged. Adopting the angle of
+acceptance, the retinal exposure rate can be expressed as
+radiance or irradiance. Radiance can be converted to an
+equivalent irradiance by multiplying by the solid angle Ω
+corresponding to γmeas, i.e., by (π*γmeas^2)/4 (Henderson
+and Schulmeister 2004). The measurement conditions are
+discussed below.
+Calculating retinal exposure. Retinal irradiance Er
+(W m^-2) is related to source radiance, Ls (W m^-2 sr^-1),
+(‘‘brightness’’), the transmittance of the ocular media, t
+(rel.), the pupil diameter, dp (mm), and inversely related to
+the effective focal length of the eye, according to the
+Gullstrand eye (Gullstrand 1909) f = 17 mm (eqn 2) (Sliney
+and Wolbarsht 1980; Henderson and Schulmeister 2004).
+Eq. 2:  E_r = π*L_s*τ*d_p^2 / (4*f^2)  or  E_r = α*L_s*τ*d_p^2,   where α = 2.700 m^-2.
+Radiance is not directly related to corneal irradiance.
+For the visible spectrum, the transmittance in the
+ocular media for younger people and most animals is as
+high as 0.9 (Geeraets and Berry 1968). The retinal irra-
+diance is given by eqn (2), where dp is in m.
+In albino individuals, the iris is not very effective
+and some scattered light reaches the retina. Nevertheless,
+Fig. 3. Imaging of a broad band source on the retina showing the planar angular subtense, a, of the source.
+79
+Limits of exposure to incoherent visible and infrared radiation c ICNIRP
+www.health-physics.com
+Copyright © 2013 Health Physics Society. Unauthorized reproduction of this article is prohibited.
+
+=== PAGE 10 ===
+imaging of the light source still occurs. Therefore, eqn (2)
+is valid if the contribution of scattered light, which falls
+over the entire retina, is added.
+Injury to retinal tissues depends not only on the reti-
+nal irradiance but also very strongly on radial heat ﬂow
+and eye movements.
+The effect of retinal heat ﬂow. For retinal thermal
+injury, the thresholds vary with retinal image size. This is
+because of the impact of radial heat ﬂow on the tempera-
+ture in the center of the image on the retina during the
+exposure. For very small and very large spots, the impact
+of radial heat ﬂow on the exposed area during the expo-
+sure is negligible. Therefore, for very small and large
+retinal spot sizes, a constant radiance threshold applies.
+But mathematical models and experimentally determined
+thresholds for retinal thermal injury show that due to the
+radial heat ﬂow, threshold retinal irradiance varies approx-
+imately inversely as the image diameter for image diameters
+from approximately 25 mm (1 mrad) to approximately
+2.000 mm (0.1 rad) for exposure durations on the order
+of 1 s (Sliney and Wolbarsht 1980; Allen and Polhamus
+1989; Courant et al. 1989). Since this effect depends on
+heat ﬂow during the exposure, this effect is greater for
+long duration exposures and is nearly non-existent for
+short-duration exposures of the order of 1 ms (Freund
+et al. 1996; Framme et al. 2004; Schuele et al. 2005;
+Schulmeister et al. 2008).
+The effect of eye movements. Continuous eye
+movements are of major signiﬁcance in the derivation of
+the exposure guidelines, particularly for photochemically
+induced injury, and have smaller impact on thermally in-
+duced injury (Lund 2006). Eye movements effectively
+enlarge the irradiated retinal area and increase the angular
+distribution of the energy on the retina. The extent of eye
+movements depends upon the viewing duration. For brief
+exposures, involuntary eye movements dominate (Ness
+et al. 2000). For very long exposures of 1.000 s or more,
+task-determined eye movements dominate and the an-
+gular extent of the eye movements is at least 100 mrad
+(Yarbus 1967; Walker-Smith et al. 1977). Hence, the an-
+gle required for spatially averaging the radiance of a
+small source for comparison with the photochemical
+retinal limit is related to the angular extent of the eye
+movements. An averaging angle of 11 mrad is recom-
+mended for determination of the exposure level for pho-
+tochemical retinal effects and exposure durations less than
+100 s. An averaging angle of 11 mrad represents mini-
+mal eye movements that can be associated with staring
+(ﬁxating) a certain point. Continued ﬁxation of a point for
+longer durations than 10 s will usually occur only when
+concentration on a speciﬁc target is necessary, e.g., during
+welding. Thus, the averaging angle of 11 mrad is a con-
+servative value.
+For longer exposure durations, the extent of eye
+movements is not generally characterized and strongly
+depends on the task and behavior. As a very conservative
+value, an averaging angle of 110 mrad is speciﬁed for
+exposure durations of 10.000 s (the maximum integration
+duration for the blue light hazard). If the visual task and
+the behavior can be characterized, a safety analysis can
+account for more realistic eye movements and a larger
+averaging angle can be used. The average ﬁelds of view
+of 11 mrad and 110 mrad correspond to a retinal image of
+190 mm and 1.9 mm, respectively.
+Infrared exposure of the retina with low visual
+stimulus. A special exposure limit is required to protect
+the retina against thermal injury while viewing infrared
+LEDs or other specialized infrared illuminators in which
+visible light has been removed by ﬁlters. The lack of visible
+stimulus results in loss of the aversion response impli-
+cating that pupil constriction cannot be assumed.
+This exposure limit for low visual stimulus was
+therefore derived assuming a 7-mm pupil and extending
+the trend of the exposure limit for pulses beyond 0.25 s.
+The long-term exposure duration limit is based largely
+on studies of thermal injury in infrared spectral bands
+(Ham et al. 1973).
+Anterior structures of the eye
+For many sources, assessment of potential thermal
+hazard to the anterior segment of the eye is essential in
+addition to evaluating the retinal hazards. Contributions of
+IR-A (780Y1.400 nm) and IR-B (1.4Y3.0 mm) must be
+considered. Data on which to base exposure limits for
+chronic exposure of the anterior portion of the eye to
+IRR are limited. Sliney and Freasier (1973) stated that the
+average corneal exposure from IRR in sunlight is of the
+order of 10 W m^-2.
+In ultraviolet and short-wavelength light exposure,
+wavelength dependent photochemical action spectra are
+characteristic, implicating that the spectrum of the source
+must be considered in exposure limits. However, be-
+cause the effects of IRR are thought to be largely ther-
+mal, the biological response to chronic IRR exposure of
+the cornea and lens is not believed to have strong spectral
+dependence (Barthelmess and Borneff 1959; Sliney 1986).
+Radiant energy absorbed in the cornea, aqueous humour,
+and iris is dissipated through thermal conduction, and
+some heating will occur in the lens regardless of the opti-
+cal penetration depth. Penetration depth strongly varies
+between 1.2 and 3 mm. However, this should have no con-
+siderable effect on the ﬁnal temperature rise resulting from
+exposure to a continuous-wave source once thermal equi-
+librium is achieved.
+80
+Health Physics
+July 2013, Volume 105, Number 1
+www.health-physics.com
+Copyright © 2013 Health Physics Society. Unauthorized reproduction of this article is prohibited.
+
+=== PAGE 11 ===
+The ﬁnal temperature of the lens also depends on the
+ambient temperature (Sliney 1986; Okuno 1991). For each
+degree that ambient temperature falls below 37-C, an
+added irradiance of at least 6 W m^-2 would be required to
+maintain the temperature of the lens (Stolwijk and Hardy
+1977). Vos and van Norren (1994) argued that an irradi-
+ance of 1 kW m^-2 would not increase the temperature
+of the anterior segment of the eye by more than 1-C.
+However, 1 kW m^-2 on the face would be painfully warm
+and not tolerated in a warm environment.
+Synergistic effects
+The synergism between thermal and photochemical
+effects in the lens and retina has been studied in some
+experiments. Thermal enhancement of photochemical re-
+action has been experimentally demonstrated (Pitts and
+Cullen 1981; Allen and Polhamus 1989), although the
+effect is less than a factor of two; this has been taken into
+account in deriving the exposure limits by introducing a
+greater reduction factor (see below).
+Skin exposure
+A realistic risk of thermal injury to the skin exists only
+in environments where a very high irradiance can be de-
+livered from a pulsed source. ICNIRP provides guidance
+only for exposures lasting less than 10 s (based on em-
+pirical conservative assumptions).
+For lengthier exposures, heat stress guidelines must be
+consulted. Most guidelines for control of heat stress are
+designed to limit deep-body temperature to 38-C, and re-
+quire consideration of air ﬂow, ambient temperature, and
+humidity (ICNIRP 2006; ACGIH 2010).
+Aversion responses
+The eye is adapted to protect itself against exces-
+sive optical radiation from the natural environment, and
+humans have learned to use additional protective devices
+if adverse effects occur. Natural aversion response for
+exposure to bright light includes, pupillary constriction,
+eye movements, squinting and in some cases blinking.
+Gerathewohl and Strughold (1953) studied the blink
+reﬂex for full ﬁeld of view exposure to ﬂash lamps and
+determined that the shortest time from onset of the ﬂash
+to complete lid closure was 180 ms. However, a reﬂexive
+blink is highly variable from person to person (Reidenbach
+2005) and can be behaviorally suppressed. The potential
+hazard from longer exposure durations is mitigated by in-
+voluntary eye movements which distribute the light energy
+over a much greater area of the retina. In addition, behav-
+ioral reactions such as movement of the head (Fender 1964;
+Yarbus 1967) also reduce exposure to a given retinal area.
+For thermally induced injury, another factor is the weak
+dependence of the injury thresholds, given in irradiance,
+with longer exposure durations (Schulmeister and Jean
+2011). Reduction of the pupil size due to exposure to bright
+light dynamically reduces the retinal exposure for long-
+duration exposure (Fig. 4) (Stamper et al. 2002).
+The effect of eye movements on time-averaged re-
+tinal irradiance was illustrated by (Ness et al. 1999) and
+(Lund 2006).
+Elevated temperatures of the skin and cornea produce
+an avoidance response within a few seconds. Temperatures
+that induce pain sensation (Randolph and Stuck 1976) are
+below temperatures that lead to thermal injury (Henriques
+1947). Pain sensations usually induce an avoidance re-
+sponse within a few seconds that prevent a burn, with the
+exception of very high irradiances that rapidly heat the
+skin (Randolph and Stuck 1976). Under the inﬂuence of
+alcohol and some medications, pain sensation might be
+reduced and thus avoidance is not induced.
+RATIONALE
+The exposure limits were derived on the basis of
+current knowledge on damage thresholds and in accor-
+dance with the ICNIRP principles (ICNIRP 2002). The
+exposure limits are set to a level below the damage
+thresholds by applying a reduction factor. In view of un-
+certainties inherent in the damage thresholds, a reduc-
+tion factor of at least two has been applied in deriving
+the exposure limits. In addition, wavelength-, exposure
+duration-, and/or spot size-dependence of the exposure
+limits have been simpliﬁed with respect to known injury
+threshold. These simpliﬁcations have sometimes imposed
+higher reduction factors, occasionally as high as approx-
+imately two orders of magnitude.
+Fig. 4. Dynamics of the pupillary constriction and reopening
+(squares-left axis) after a 3-s exposure to a bright light and the re-
+duction of the retinal illuminance due to pupil diameter change
+(triangles-right axis). The initial pupil diameter was 5.5 mm. Adapted
+from Stamper et al. (2002)
+81
+Limits of exposure to incoherent visible and infrared radiation c ICNIRP
+www.health-physics.com
+Copyright © 2013 Health Physics Society. Unauthorized reproduction of this article is prohibited.
+
+=== PAGE 12 ===
+The exposure limits derived for the eye are the most
+restrictive due to higher sensitivity of the eye than of
+the skin. The consequences of overexposure of the eye
+are also generally more serious than those of overexpo-
+sure of the skin, and safety standards for optical sources,
+including lasers, have, therefore, emphasized protection
+of the eye (UNEP et al. 1982; Ducheˆne et al. 1991; Health
+Council of the Netherlands 1993; ICNIRP 1996, 1997,
+2000, 2010).
+The guidelines are based predominantly on injury
+after experimental exposure of animals. Further, informa-
+tion from human retinal injuries resulting from viewing the
+sun and welding arcs was considered. The exposure limits
+for the retina and pulsed exposure of the cornea were
+predominantly derived from experimental data obtained
+with laser sources.
+For experimental injury threshold determination, in-
+crementing individual exposures are each evaluated by
+ophthalmoscopy or other methods of examination and
+rated on a binary scale as lesion or no lesion. The proba-
+bility for damage as a function of dose is ﬁtted assuming
+a normal distribution (Finney 1971). The effective dose
+resulting in a 50% probability for damage, ED-50, is com-
+monly referred to as the threshold dose (Sliney et al. 2002).
+The exposure that corresponds to damage at thresh-
+old depends on the time interval between the exposure and
+the examination (the lesion takes some time to develop
+biologically into detectable change), the method of ex-
+amination (ophthalmologically visible lesion in vivo, light
+microscopic change), and the site of exposure (macula,
+paramacula). Generally, when ophthalmoscopic examina-
+tion is performed at 24 h after exposure, retinal lesions are
+observed that were not visible at 1 h after exposure, re-
+sulting in an ED-50 for the 24 h endpoint that is lower than
+the ED-50 determined for the 1 h endpoint. For this rea-
+son, recent retinal threshold data are reported for obser-
+vations at 24 h as well as at 1 h and for macular exposure.
+Typically, the 24 h ED-50 is a factor of 2 to 3 below the
+ED-50 determined at 1 h after exposure (Lund et al. 2007;
+Zuclich et al. 2008). The threshold for photochemically
+induced retinal injury was reported for a 1 h and 48 h in-
+terval after exposure, respectively (Lund et al. 2006). Light
+and electron microscopy examination of tissue has indi-
+cated cellular alterations at exposures in the proximity of
+the ED-50 derived by ophthalmic examination 24 h after
+the exposure (Lund et al. 2007; Zuclich et al. 2008). For
+determination of the threshold of the cornea and the lens,
+slitlamp microscopy is used to observe radiation induced
+opaciﬁcations. For the lens, the interval between exposure
+and observation is 24 h to 48 h (Pitts et al. 1977). For
+thermally induced corneal injury, the threshold lesion is
+usually observed at 1 h, whereas photochemical thresh-
+old effects are observed at 24 h to 48 h after exposure.
+For the skin, the criterion for threshold is based on
+radiation induced erythema determined by direct observation
+within 48 h after exposure. In some studies, direct obser-
+vation was supported by histopathology.
+The exposure limits and their functional dependence
+on speciﬁc exposure parameters (wavelength, pulse du-
+ration, retinal spot size, etc.) are based on threshold data
+determined by direct observation, i.e., ophthalmoscopy
+in case of retinal exposures. In setting the exposure limits,
+ICNIRP incorporated those considerations in the reduc-
+tion factors.
+The exposure limits for visible radiant energy also
+contain an underlying assumption that most outdoor en-
+vironmental exposures are indirect or off-axis, normally
+not hazardous to the eye except in environments produc-
+ing reﬂections from surfaces such as snow and sand.
+Exposure conditions that in animal experiments led to
+retinal photochemical damage Type I (Noell et al. 1966)
+were extreme and far exceed those experienced by humans
+with broadband sources. Therefore, no special exposure
+limits are recommended for avoidance of Type I damage.
+Environmental illumination inﬂuences human health
+and well being by altering circadian, neuroendocrine,
+neurobehavioral and melatonin responses. An action spec-
+trum for some of these responses has been described
+(Brainard et al. 2001) and potential therapeutic applica-
+tions are being evaluated for treatment of sleep disor-
+ders, depression or circadian rhythm disruption. However,
+side effects of these therapeutic levels of illumination
+have included photophobia, ocular discomfort, headache,
+and enhanced glare sensitivity. Just as optical radiation
+protection levels do not protect against visual distur-
+bances from glare, these guidelines do not preclude po-
+tential light-induced modulation of physiological rhythms
+since the effects are not necessarily adverse responses.
+Injury of the skin following photosensitization is
+highly dependent on the photosensitizer and must be treated
+according to toxicological criteria, which is out of the
+scope of these guidelines.
+The mechanical disruption of tissue and other ef-
+fects caused by ultra-short laser pulses does not occur
+with current non-laser sources and is, therefore, not con-
+sidered in the derivation of these guidelines.
+For all currently known arc and incandescent sources,
+the contribution made by the far infrared radiation,
+3 mmY1.000 mm, is normally of little or no practical con-
+cern (ICNIRP 2006). Only lasers pose potential hazards
+in this spectral region. For thermal radiators with tem-
+peratures high enough that an exposure can be hazard-
+ous, the radiation in the wavelength range below 3.000 nm
+is the critical part. Thus, far IRR can be largely ignored
+when a risk assessment for such sources is made. In ad-
+dition the exposure limits are set to a level that accounts
+82
+Health Physics
+July 2013, Volume 105, Number 1
+www.health-physics.com
+Copyright © 2013 Health Physics Society. Unauthorized reproduction of this article is prohibited.
+
+=== PAGE 13 ===
+for possible contributions from radiation in the wave-
+length band above 3.000 nm. Normally, considerations of
+heat stress will dominate the risk assessment for condi-
+tions where there is signiﬁcant IR-C.
+Including the IR-C component in the determination
+of the exposure would constitute a conservative risk anal-
+ysis when the total IRR exposure is compared to the ex-
+posure limits for protection of the anterior parts of the
+eye (cornea and lens) and for protection against thermal
+injury of the skin.
+A more detailed rationale for the changes of the ex-
+posure limits compared with previous guidelines (ICNIRP
+1997) is given in Appendix A.
+Correct application of the exposure limits requires
+knowledge of the spectral radiance, Ll, or spectral irra-
+diance, El, and, for determination of the retinal thermal
+exposure limit, the angular subtense of the source as per-
+ceived by the eye.
+For a white-light source, such detailed spectral data
+are generally required only if the luminance exceeds
+10^4 cd m^-2 (ICNIRP 1997). This rule of thumb results
+in an exclusion of many simple light sources, since these
+do not exceed the exposure limits for the retina.
+In the derivation of the limits to protect against re-
+tinal thermal injury, two different pupil diameters were
+assumed, 7 mm for the dark-adapted eye and approxi-
+mately 3 mm for bright light conditions. Two limits are
+deﬁned to protect against retinal thermal injury. There is
+one exposure limit for the general case of incoherent
+broad-band sources which emit visible radiation, based on
+the assumption of a 7-mm pupil for exposure durations up
+to approximately 0.5 s; and for longer exposures a 3-mm
+pupil due to pupillary constriction. If there is concern
+about longer exposures resulting from determined visual
+effort, the exposure limits for longer durations may ap-
+ply. There is a second exposure limit for infrared sources
+without a strong visual stimulus, assuming a 7-mm pupil.
+The exposure limit for photochemically induced retinal
+injury was derived with the assumption of a pupil diam-
+eter of approximately 3 mm.
+For exposure conditions where there is loss of the
+aversion response because of reduced visual sensitivity or
+surgical anesthesia, ICNIRP provides recommendations
+for adjustment of exposure limits (Sliney et al. 2005).
+The dependencies of the exposure limits on the rele-
+vant parameters for the variables were derived from ex-
+periments by ﬁtting threshold data to the variables. Often, a
+linear dependence was observed when plotting on a double
+logarithmic scale. For a proper treatment of the dimen-
+sions, the threshold and the variables need to be tran-
+sformed to relative values to make them dimensionless.
+As a result, a fully dimensionally correct way of specifying
+the dependence of the exposure limits on the relevant
+variables can be derived when the variables such as t or
+a are each divided by a reference factor that is equal to
+1 (the unit such as 1 s or 1 rad). An example is shown
+in eqn (3) for the retinal thermal limit:
+Eq. 3:  L_R ≤ 20,000*(α_ref/α)*(t/t_ref)^0.75  J/(m^2*sr);
+where α_ref = 1 rad and t_ref = 1 s.
+[sic: the printed equation labels this dose-of-radiance example
+with L_R even though the printed unit is J/(m^2*sr); it is the
+dimensionally-correct analogue of D_R^EL in eqn (7).]
+However, to decrease complexity in the formulas in
+the guidelines, the dimension-factors were omitted. There-
+fore, the formulas do not appear dimensionally correct and
+it is important that the numbers of the variables are in-
+serted into the formula in the correct order of magnitude,
+i.e., a in rad and not for instance mrad.
+Biological weighting functions are used to express
+the wavelength dependence of the effect to protect against
+retinal injury (Fig. 5, Table 2).
+Retinal thermal hazards (380Y1.400 nm)
+Protection of the human retina from thermal injury
+requires that the spectrally weighted effective radiance
+does not exceed the retinal thermal exposure limit. The
+effective retinal thermal radiance, LR (W m^-2 sr^-1), is the
+integration (or summation) of the product of the spectral
+radiance, Ll (W m^-2 sr^-1 nm^-1), and the retinal thermal
+hazard function R(l) (i.e., the retinal thermal biological
+weighting function) (Table 2) over the wavelength range
+ℓ (nm) from 380 to 1,400 nm (eqn 4):
+Eq. 4:  L_R = Σ_λ(380 to 1400)  L_λ * R(λ) * Δλ
+The retinal thermal hazard function R(λ) characterizes the
+spectral efﬁciency to cause threshold retinal injury and is
+given in Table 2. The effective radiance, LR, given by eqn
+(4) is then compared with the exposure limit in Table 4.
+Fig. 5. Action spectra for blue-light photoretinopathy with lens
+(phakic) B(l) and without lens (aphakic) A(l), and for thermally
+induced photoretinopathy R(l).
+83
+Limits of exposure to incoherent visible and infrared radiation c ICNIRP
+www.health-physics.com
+Copyright © 2013 Health Physics Society. Unauthorized reproduction of this article is prohibited.
+
+=== PAGE 14 ===
+Table 2. Retinal hazard spectral weighting functions (aphakic and blue light hazard functions are the same as in
+ICNIRP (1997).
+Wavelength (nm)
+Aphakica hazard function, A(l)
+Blue-lighta hazard function, B(l)
+Retinal thermal hazard function
+R(l) (where l is in nm)
+300
+6.00
+0.01
+V
+305
+6.00
+0.01
+V
+310
+6.00
+0.01
+V
+315
+6.00
+0.01
+V
+320
+6.00
+0.01
+V
+330
+6.00
+0.01
+V
+335
+6.00
+0.01
+V
+340
+5.88
+0.01
+V
+345
+5.71
+0.01
+V
+350
+5.46
+0.01
+V
+355
+5.22
+0.01
+V
+360
+4.62
+0.01
+V
+365
+4.29
+0.01
+V
+370
+3.75
+0.01
+V
+375
+3.56
+0.01
+V
+380
+3.19
+0.01
+0.01
+385
+2.31
+0.0125
+0.0125
+390
+1.88
+0.025
+0.025
+395
+1.58
+0.050
+0.05
+400
+1.43
+0.100
+0.1
+405
+1.30
+0.200
+0.2
+410
+1.25
+0.400
+0.4
+415
+1.20
+0.800
+0.8
+420
+1.15
+0.900
+0.9
+425
+1.11
+0.950
+0.95
+430
+1.07
+0.980
+0.98
+435
+1.03
+1.000
+1.0
+440
+1.000
+1.000
+1.0
+445
+0.970
+0.970
+1.0
+450
+0.940
+0.940
+1.0
+455
+0.900
+0.900
+1.0
+460
+0.800
+0.800
+1.0
+465
+0.700
+0.700
+1.0
+470
+0.620
+0.620
+1.0
+475
+0.550
+0.550
+1.0
+480
+0.450
+0.450
+1.0
+485
+0.400
+0.400
+1.0
+490
+0.220
+0.220
+1.0
+495
+0.160
+0.160
+1.0
+500
+0.100
+0.100
+1.0
+505
+0.079
+0.079
+1.0
+510
+0.063
+0.063
+1.0
+515
+0.050
+0.050
+1.0
+520
+0.040
+0.040
+1.0
+525
+0.032
+0.032
+1.0
+530
+0.025
+0.025
+1.0
+535
+0.020
+0.020
+1.0
+540
+0.016
+0.016
+1.0
+545
+0.013
+0.013
+1.0
+550
+0.010
+0.010
+1.0
+555
+0.008
+0.008
+1.0
+560
+0.006
+0.006
+1.0
+565
+0.005
+0.005
+1.0
+570
+0.004
+0.004
+1.0
+575
+0.003
+0.003
+1.0
+580
+0.002
+0.002
+1.0
+585
+0.002
+0.002
+1.0
+590
+0.001
+0.001
+1.0
+595
+0.001
+0.001
+1.0
+600Y700
+0.001
+0.001
+1.0
+700Y1.050
+V
+V
+10(700-l)/500
+1.050Y1.150
+V
+V
+0.2
+1.150Y1.200
+V
+V
+0.2I100.02 (1150-l)
+1.200Y1.400
+V
+V
+0.02
+aThe UVR extension of A(l) and B(l) at wavelengths below 380 nm are provided for the evaluation of optical spectra that may contain UVR.
+The aphakic hazard function, A(l), is normalized to correlate with the blue-light hazard function, B(l) for wavelengths above 440 nm.
+84
+Health Physics
+July 2013, Volume 105, Number 1
+www.health-physics.com
+Copyright © 2013 Health Physics Society. Unauthorized reproduction of this article is prohibited.
+
+=== PAGE 15 ===
+The
+retinal
+thermal
+effective
+radiance
+dose,
+DR(J m^-2 sr^-1), is obtained by integrating LR over the
+exposure time, t(s). If the radiance is constant over
+the exposure duration, t, the radiance dose is simply the
+product of the radiance LR and the exposure duration
+(DR =LR * t). The width of Dl for the determination of
+the effective retinal thermal radiance should be selected
+based on the wavelength dependence of the radiance. In
+regions where the biologically spectral efﬁciency, R(l),
+changes rapidly with wavelength, a higher spectral resolution
+is required. For a source with a radiance that is constant
+over the exposure duration, the effective radiance dose, DR,
+is given in eqn (5).
+Angular subtense of the source. The angle, a, sub-
+tended by the source at the position of the eye (Fig. 3)
+is often referred to as the ‘‘source size.’’ If the radiation
+emitting area of a source is circular with a diameter, ds,
+and is at a distance, r, from the eye (Fig. 3), then a is
+the ratio between the diameter of the source and the dis-
+tance to the source, ds/r. For a non-circular source, a is
+the arithmetic mean of the shortest and longest dimen-
+sion. Before calculating the arithmetic mean, the angular
+subtense in each dimension shall be limited to amin and
+amax, respectively. A source that subtends an angle of
+1.5 mrad or less is referred to as a ‘‘point’’ source. Such
+a source produces approximately the smallest retinal im-
+age size in a given dimension when ocular diffraction and
+aberrations are considered. In addition, the retinal thermal
+injury threshold does not change for sources sizes a e amin.
+Hence, amin is assigned the value 1.5 * 10^-3 radians (i.e.,
+amin = 1.5 * 10^-3 radians). Large sources are deﬁned as
+sources where a Q amax, where amax is the retinal image
+size where the retinal injury threshold expressed in reti-
+nal radiant exposure does not change with increasing size
+(Schulmeister et al. 2011).
+Intermediate sources are those where the source size
+is between amin and amax or amin G a e amax. For
+intermediate source sizes, the thermal retinal injury thresh-
+old is dependent upon the source size a (i.e., the reti-
+nal irradiance diameter) and the exposure (or ‘‘pulse’’)
+duration, t.
+Determination of radiance. When assessing spa-
+tially irregular sources or sources with ‘‘hot’’ spots, the
+radiance should be averaged over an acceptance angle of
+gth. This acceptance angle depends on the exposure (or
+Table 3. Limiting angles for the retinal thermal EL.
+Exposure duration t (s)   | α_min (rad) | α_max (rad)
+t ≤ 625*10^-6             | 1.5*10^-3   | 0.005
+625*10^-6 ≤ t ≤ 0.25      | 1.5*10^-3   | 0.2*t^0.5
+t ≥ 0.25                  | 1.5*10^-3   | 0.1
+(t is input in seconds to calculate the correct numeric value of α_max in rad.)
+
+Table 4. Retinal thermal exposure limits (EL).
+Exposure duration t (s) | Source size α (rad) | Radiance L_R^EL [W/(m^2*sr)] | Radiance dose D_R^EL [J/(m^2*sr)] | Ref note
+1*10^-6 ≤ t ≤ 0.25      | α_min ≤ α ≤ α_max  | 2.0*10^4*α^-1*t^-0.25          | 2.0*10^4*α^-1*t^0.75             | 1, 2, 3, 4, 5
+t ≤ 1*10^-6             | α_min ≤ α ≤ α_max  | V                               | 0.63*α^-1                        | 1, 2, 3
+t ≥ 0.25                | α_min ≤ α ≤ α_max  | 2.8*10^4*α^-1                   | 0.71*10^4*α^-1                   | 1, 2, 4
+Small sources:
+t ≤ 1*10^-6             | α ≤ α_min          | V                               | 420                               | 2, 3
+1*10^-6 ≤ t ≤ 0.25      | α ≤ α_min          | 1.3*10^7*t^-0.25                | 1.3*10^7*t^0.75                  | 1, 2, 3
+t ≥ 0.25                | α ≤ α_min          | 1.9*10^7                         | V                                 | 2, 4
+Large sources:
+t ≤ 1*10^-6             | α ≥ α_max          | V                               | 130                               | 3, 5
+1*10^-6 ≤ t ≤ 625*10^-6 | α ≥ α_max          | V                               | 4.0*10^6*t^0.75                  | 1, 5, 6
+625*10^-6 ≤ t ≤ 0.25    | α ≥ α_max          | V                               | 10*10^4*t^0.25                   | 1, 5, 6
+t ≥ 0.25                | α ≥ α_max          | 28*10^4                          | V                                 | 4, 5
+('V' = blank/not applicable.)
+Notes:
+1. To calculate exposure limits, L_R^EL and D_R^EL, t must be in seconds and α must be in radians;
+2. α_min = 0.0015 rad. If α ≤ α_min, then α = α_min for calculating the exposure limit;
+3. If t ≤ 10^-6 s, then t = 10^-6 s for calculation of the exposure limit in the radiance dose, D_R^EL;
+4. If t ≥ 0.25 s, then t = 0.25 s for calculation of the exposure limit, L_R^EL;
+5. For 1*10^-6 s ≤ t ≤ 625*10^-6 s, then α_max = 0.005 rad. If 625*10^-6 s ≤ t ≤ 0.25 s, then α_max = 0.2*t^0.5. If t ≥ 0.25 s, then α_max = 0.1 radian; and
+6. If 0.1 radian ≥ α_max, then α = α_max.
+85
+Limits of exposure to incoherent visible and infrared radiation c ICNIRP
+www.health-physics.com
+Copyright © 2013 Health Physics Society. Unauthorized reproduction of this article is prohibited.
+
+=== PAGE 16 ===
+pulse) duration, t. For a continuous wave (CW) source
+where the exposure duration is greater than 0.25 s (t Q
+0.25 s), gth = 11 * 10^-3 radians (11 mrad). For pulses
+where the exposure duration is less than 0.25 s (t G 0.25 s)
+and where there are radiance hot spots, the radiance
+should be determined with an angle of acceptance, gth,
+equal to 5 * 10^-3 radians (gth = 5 mrad). If the source
+size, a, is smaller than the angle of acceptance, gth, and
+the radiance is averaged over this angle of acceptance, the
+value of a used to determine the retinal thermal exposure
+limit must not be less than the angle of acceptance, gth.
+Basic retinal thermal limit. To protect against ther-
+mal injury to the retina, the effective radiance, LR, or ef-
+fective radiance dose, DR, (eqn 5) must not exceed the
+exposure limit (EL) in radiance, LEL
+R, or radiance dose,
+DEL
+R, respectively (eqns 6 and 7). The exposure limits,
+LEL
+R and DEL
+R, are empirical expressions that yield the
+respective exposure limit values in W m^-2 sr^-1 and
+J m^-2 sr^-1 only when a is input in radians and t in
+seconds (Table 3):
+Eq. 5:  L_R ≤ L_R^EL  or  D_R ≤ D_R^EL
+Eq. 6:  L_R^EL = 2.0*10^4*α^-1*t^-0.25  W/(m^2*sr)
+Eq. 7:  D_R^EL = 2.0*10^4*α^-1*t^0.75  J/(m^2*sr)
+Eqns (6) and (7) apply when the angular source size, a,
+is bounded by amin and amax and the exposure duration,
+t, by 1 ms and 0.25 s.
+When the source size a is less than amin, the EL is
+calculated for a source size equal to amin. Likewise, when
+the source size is greater than amax, the EL is calculated
+for a source size a equal to amax. For exposure duration
+less than 1 ms, the EL in radiance dose is calculated for
+an exposure (or pulse) duration equal to 1 ms and applies
+as a constant radiance dose. If the exposure duration is
+greater than 0.25 s, the EL in radiance is calculated for
+an exposure duration, t, equal to 0.25 s (eqn 6) and applies
+as a constant radiance given in Table 4.
+There may be special individual circumstances where
+the pupil remains dilated (tonic) and exposures extend
+beyond 0.25 s (e.g., some ophthalmic examination pro-
+cedures; Sliney et al. 2005). Under these unusual condi-
+tions the basic EL given in radiance in eqn (6) applies for
+exposure duration beyond 0.25 s (Table 4).
+Since a 7-mm pupil, i.e., a dark adapted pupil, is as-
+sumed for pulsed exposure and for continuous wave (CW)
+sources with exposure durations up to about 0.5 s, the
+retinal thermal exposure limit is conservative for a normal,
+reactive pupil. Under daylight luminance conditions, the
+diameter of a normal reactive pupil will be less than 7 mm
+in diameter. Hence, for daylight conditions where small
+pupil diameters are assured, the exposure limit can be in-
+creased accordingly.
+Large sources a 9 amax. Large sources are deﬁned
+as sources with an angular subtense greater than amax
+(Table 3). The exposure limits for large sources also pro-
+vide a conservative limit for smaller sources (a G amax)
+and are calculated from the basic limit (eqns 6 and 7) by
+setting a equal to amax (Table 3). These ELs are also
+tabulated in Table 4.
+For t e 1ms (pulse duration less than 1 ms), the expo-
+sure limit, DEL
+R, is a constant radiant dose given in Table 4.
+Intermediate and point sources. Intermediate sources
+are deﬁned as sources with an angular subtense, a, greater
+than amin and less than amax or amin e a G amax (Table 3).
+For intermediate sources, the retinal thermal injury ex-
+posure limit depends on both the exposure duration, t (in
+seconds), and the angular subtense of the source, a (in
+radians). Point sources are deﬁned as sources that sub-
+tend an angle less than or equal to amin or 1.5 * 10^-3 rad
+(1.5 mrad). When a e amin, the exposure limit is calculated
+by using a source angle a = 1.5 * 10^-3 rad for the de-
+termination of the exposure limit by using eqn (6) or (7)
+(Table 4).
+Retina: weak visual stimulus of a near infrared
+source. For an infrared heat lamp or any near-IR source
+that provides no strong visual stimulus, the weighted ra-
+diance, LR, should be limited as given in eqn (8) and eqn
+(9). For a near infrared exposure with a weak visual
+stimulus and an exposure duration longer than 0.25 s, the
+basic radiance and radiance dose given in eqn (8) and eqn
+(9) apply:
+Eq. 8:  L_WVS^EL = 2.0*10^4*α^-1*t^-0.25  W/(m^2*sr)   (for 0.25 s < t < 100 s);
+Eq. 9:  L_WVS^EL = 0.63*α^-1*10^4 = 6300/α  W/(m^2*sr)   (for t > 100 s).
+[Errata: Eq. 9 is corrected to 6300/α W/(m^2*sr) for t ≥ 100 s.]
+For comparison with the EL, and for the case that
+the source exhibits hot spots, the radiance should be
+averaged over gth = 11 mrad and the value of a for the
+determination of the exposure limit in this case should
+not be less than 11 mrad.
+Protection of the anterior segment of the eye. For
+sources in contact with or in immediate proximity to the
+eyes, injury to the anterior segment of the eye cannot be
+Table 5. Acceptance/averaging angle γ_ph(rad) for the blue-light EL.
+Exposure duration (seconds) | Acceptance averaging angle γ_ph (radians)
+t ≤ 100 s                  | 0.011
+100 ≤ t ≤ 10,000 s         | 0.0011*t^0.5
+t ≥ 10,000 s               | 0.110
+Note: t must be input in seconds to calculate γ_ph in radians.
+86
+Health Physics
+July 2013, Volume 105, Number 1
+www.health-physics.com
+Copyright © 2013 Health Physics Society. Unauthorized reproduction of this article is prohibited.
+
+=== PAGE 17 ===
+excluded for short pulses and large sources at exposure
+levels approaching the thermal retinal exposure limits.
+However, without additional research, a speciﬁc exposure
+limit cannot be stated. In the absence of speciﬁc guidance,
+the infrared exposure limits for the anterior portion of the
+eye will provide a conservative guideline when also ap-
+plied to the visible spectral range.
+Blue-light photochemical retinal hazard (300 - 700 nm)
+For protection of the retina against acute
+photochemically-induced photoretinopathy, the blue-light
+effective radiance or the blue-light effective radiance dose
+has to be limited. The effective blue-light radiance, LB
+(W/(m^2*sr)), given in eqn (10) is obtained by integrat-
+ing (or summating) the product of the spectral radiance of
+the source, L_λ (W/(m^2*sr*nm)) and the blue-light
+hazard weighting function B(λ) tabulated in Table 2:
+Eq. 10:  L_B = Σ_λ(380 to 1400)  L_λ * B(λ) * Δλ
+For non-constant radiance values, intermittent or pulsed
+exposure, the effective blue light radiance dose DB in
+J/(m^2*sr) is obtained by integration of LB over the ex-
+posure duration, t. If the radiance is constant over the
+duration of the exposure, t, the blue-light effective ra-
+diance dose, DB, is given in eqn (11):
+Eq. 11:  D_B = L_B * t = Σ_λ(380 to 1400)  L_λ * t * B(λ) * Δλ
+The effective blue-light weighted radiance or radiance
+dose must not exceed the respective exposure limit, L_B^EL or
+D_B^EL, as given in eqn (12):
+Eq. 12:  L_B ≤ L_B^EL  or  D_B ≤ D_B^EL
+For 0.25 s ≤ t ≤ 10,000 s (approx. 2.8 h), the effec-
+tive radiance dose, DB, is limited by the blue-light limit,
+D_B^EL in J/(m^2*sr), given in eqn (13):
+Eq. 13:  D_B^EL = 1*10^6 J/(m^2*sr)
+For t ≥ 10,000 s, the radiance limit, L_B^EL, that limits
+the blue light weighted effective radiance LB (i.e.,
+L_B ≤ L_B^EL to avoid adverse effects) is given in eqn (14):
+Eq. 14:  L_B^EL = 100 W/(m^2*sr)
+The radiance, LB, is spatially averaged over an angle
+gph. The averaging angle of acceptance, gph, varies as
+a function of exposure duration, t, as given in Table 5.
+The position of the ﬁeld stop (the aperture that deﬁnes
+the averaging angle of acceptance, or ﬁeld of view) in the
+imaging plane should be adjusted to assure determination
+of maximum exposure.
+If the visual task and the behavior can be character-
+ized, a safety analysis can account for more realistic eye
+movements. In that case, a larger averaging angle can be
+used, as long as the analysis is done so that any spot on
+the retina is not exposed to a radiant exposure level higher
+than is derived from the basic radiance dose limit given
+in eqn (11) (see also ‘‘Determination of exposure level’’).
+For sources where the angular subtense of the ap-
+parent source is less than gph, the radiance limit can be
+converted to an equivalent irradiance or radiant exposure
+limit for a given duration, t. The conversion is done by
+multiplying the radiance dose limit with the solid angle
+deﬁned by the plane angle, gph. This limit is compared with
+the effective radiant exposure or irradiance values deter-
+mined with an ‘‘open’’ ﬁeld of view (Schulmeister 2001).
+This is often easier to measure than averaged radiance. The
+potential hazard may be evaluated by mathematically
+weighting the spectral irradiance, El, against the blue-light
+hazard function to obtain the blue-light hazard weighted
+effective irradiance, EB. The effective radiant exposure,
+HB,, is obtained by integrating the effective irradiance, EB,,
+over the exposure duration. The exposure limits for the
+blue-light hazard expressed as the effective radiant expo-
+sure and effective irradiance at the cornea are applicable
+to sources that are smaller than the angle of acceptance,
+gph (Table 5).
+The blue-light effective radiant exposure, HB, or the
+blue-light effective irradiance, EB, are compared to the
+exposure limit in radiant exposure, H_B^EL (J/m^2), or irra-
+diance E_B^EL (W/m^2), in eqns 15, 16, and 17, respectively:
+Eq. 15:  E_B ≤ E_B^EL  or  H_B ≤ H_B^EL
+Eq. 16:  H_B^EL = 100 J/m^2     (0.25 ≤ t < 100 s)
+Eq. 17:  E_B^EL = 1 W/m^2      (100 ≤ t ≤ 30,000 s)
+In effect, because of eye movements involved in
+normal visual tasks, the maximal exposure duration that
+needs to be considered for small sources is 100 s. Hence,
+for exposure durations longer than 100 s, the small source
+limit expressed in irradiance is constant 1 W m^-2.
+Notice that when the irradiance measurement is per-
+formed with the angle of acceptance as speciﬁed in Table 5
+(which for the case of irradiance is not an averaging an-
+gle but a limiting angle of acceptance), the limits speciﬁed
+in eqns (16) and (17) can also be applied to sources larger
+than the speciﬁed angle of acceptance and are fully
+equivalent to the limits speciﬁed as radiance.
+Retinal photochemical hazard to the aphakic
+eye and the infant eye (300Y700 nm). At one time, pa-
+tients treated surgically for cataract did not receive
+intraocular lens (IOL) implants, although such patients are
+rare today. However, during the surgical removal of a
+cataract, and before the IOL has been implanted, a pa-
+tient is exposed to near-ultraviolet radiant energy of
+87
+Limits of exposure to incoherent visible and infrared radiation c ICNIRP
+www.health-physics.com
+Copyright © 2013 Health Physics Society. Unauthorized reproduction of this article is prohibited.
+
+=== PAGE 18 ===
+approximately 300Y400 nm from surgical operating lights
+(Michael and Wegener 2004). Very occasionally, an indi-
+vidual may be born without a crystalline lens. It is under
+these special conditions that the aphakic photochemical
+retinal hazard exists. This is a more serious type of blue-
+light retinal hazard. In case of aphakia, additional ocular
+UVR protection should be used under UVR exposure con-
+ditions. Moreover, UVR transmittance of the crystalline
+lens is much higher in infants under the age of 2 y (CIE
+2012) than in older children and adults. For this reason eye
+protection should be considered close to water or in snow.
+This potential retinal hazard is evaluated by spectrally
+weighting the radiance against the blue-light hazard func-
+tion, altered for wavelengths less than 440 nm for the
+aphakic eye; this altered action spectrum is given the
+symbol A(l). The approach is to apply A(l) instead of
+B(l) in Table 2 to eqn (18).
+For t e 10.000 s, the effective aphakic hazard radi-
+ance, LAphake, can be calculated from the spectral radi-
+ance, Ll, with the aphakic hazard function, A(l) (Fig. 5,
+Table 2) (eqn 18):
+Eq. 18:  D_Aphakic = Σ_λ(300 to 700)  L_λ * A(λ) * Δλ  ≤ 1.0*10^6 J/(m^2*sr)   (t ≤ 10,000 s)
+The lens in infants aged less than 2 y transmits more
+ultraviolet than the adult lens (WHO 1994) and more
+protection is needed for the developing retina (CIE 2012).
+Thus, the A(l) weighting function should be used for a
+conservative hazard assessment of light sources to which
+infants are exposed.
+Cornea and lens (780 nmY1 mm)
+To avoid thermal injury of the cornea and possible
+delayed effects on the lens of the eye (cataractogene-
+sis), infrared irradiance EIR in the wavelength range of
+780 nmY3 mm (eqn 19) should be limited by the exposure
+limits E_IR^EL given in eqns (20) and (21):
+Eq. 19:  E_IR = Σ_λ(780 to 1000) 0.3*E_λ + Σ_λ(1000 to 3000) E_λ
+For simplicity, measurements can be made using a
+thermal detector, neglecting the action spectrum deﬁned
+in eqn (19), which results in a conservative exposure
+value. The action spectrum is intended to be applied for
+non-thermal radiators such as infrared LEDs, where a
+spectroradiometer is regularly used to measure the spectral
+irradiance, E_λ.
+Eq. 20:  E_IR^EL = 18*10^3*t^-0.75  W/m^2   for t ≤ 1000 s
+Eq. 21:  E_IR^EL = 100 W/m^2   for t ≥ 1000 s
+In cold environments, the long-term exposure limits
+may be increased to 400 W m^-2 at 0-C and approximately
+300 W m^-2 at 10-C without the lenticular temperature
+exceeding 37-C. The relaxation of the limits is based on
+environmental heat exchange rates for the head (Stolwijk
+and Hardy 1977), the ﬁnal temperature of the lens being
+calculated from ambient temperature.
+Visible and infrared thermal injury to the skin
+To protect the skin from thermal injury, the radiant ex-
+posure, H, determined for wavelengths less than 3.000 nm
+and durations less than 10 s should be limited as given
+in eqn (22).
+Eq. 22:  H_skin^EL = 2.0*10^4*t^0.25  J/m^2   (t ≤ 10 s and t in seconds)
+No limit is provided for longer exposure durations,
+as normal avoidance behavior will impose limits on du-
+ration of exposure. Much longer exposure durations are
+dominated by concerns of heat stress, and the reader is
+referred to the appropriate guidelines (Barry et al. 1997;
+CEN 2004; ISO 2004a and b; ACGIH 2010).
+Thermal pain is induced by skin temperatures greater
+than È45-C, which are lower than the temperatures needed
+to produce a thermal burn, and this pain would limit the
+exposure so that a thermal injury is prevented by avoid-
+ance reactions.
+Repetitive exposure
+For exposure to repetitive pulses, intermittent expo-
+sure, or non-constant exposure levels, the following applies.
+As a basic principle, any exposure within the antici-
+pated maximum exposure duration, T, has to be below the
+corresponding exposure limit for that duration.
+For exposure to a series of pulses, this means that the
+radiant exposure or radiance dose of each pulse has to be
+below the exposure limit applicable for the respective
+pulse duration. From this basic principle, it also follows
+that the exposure dose, summed up over T, has to be below
+the exposure limit, expressed as radiant exposure or ra-
+diance dose, and calculated for T. This latter require-
+ment is mathematically equivalent to a comparison of
+the average irradiance or average radiance with the expo-
+sure limit calculated for T and expressed as irradiance
+or radiance. For irregular pulse patterns or non-constant
+exposure levels, any exposure for exposure durations
+(‘‘temporal analysis windows’’) between the pulse duration
+and T is to be considered, as exposure to a part of the pulse
+pattern can be more critical than exposure to a single pulse
+or the exposure averaged over T. For times Tmax where the
+exposure limit has reached a constant radiance or irradiance
+level (such as 10.000 s for photochemically induced reti-
+nopathy, 1.000 s for infrared exposure of the anterior parts
+of the eye, 0.25 s for thermally induced retinopathy), for
+the case that the anticipated exposure duration T is larger
+than Tmax, it is not necessary to consider the added radiant
+exposure or radiance dose (or averaging irradiance or ra-
+diance) over longer exposure durations. In other words, for
+88
+Health Physics
+July 2013, Volume 105, Number 1
+www.health-physics.com
+Copyright © 2013 Health Physics Society. Unauthorized reproduction of this article is prohibited.
+
+=== PAGE 19 ===
+exposure durations beyond Tmax (such as 1.000 s for the
+anterior parts of the eye), no further additivity of exposures
+needs to be considered, i.e. the 1.000 s exposure episodes
+can be treated as independent. In all cases of irregular
+exposure levels, the analysis time window of a given du-
+ration (which is to be varied up to Tmax or T, whichever is
+shorter) is to be positioned on the time axis over different
+positions. The most critical scenario, i.e., the highest ratio
+of exposure level over exposure limit, limits the exposure.
+For repeated exposure of the skin where Tmax equals
+10 s, it is not possible to give guidance on the necessary
+cooling time between exposures, since the injury thresh-
+old will depend on ambient temperature as well as on the
+area that is exposed. When the skin has sufﬁciently cooled
+after a given exposure that lasted up to 10 s, there is little
+biophysical additivity of repeated exposures and the ex-
+posures can be considered as in principle independent.
+Also, as long as there is no pain response (assuming nor-
+mal pain reaction), there is no risk for injury. For large areas
+exposed, heat stress is often the limiting factor.
+For the retinal thermal limit, there is an additional
+requirement for the case that the pulse repetition frequency
+exceeds 5 Hz and that the source is in the extended source
+regime where the angular subtense of the apparent source
+is larger than 5 mrad.
+The retinal thermal limit for single pulses in a train
+of n pulses within the exposure duration has to be reduced
+as follows:
+&
+When the angular subtense of the source is smaller or
+equal to amax, the single pulse exposure limit, EL, is
+reduced by n^-0.25 (for n G 40) and 0.4 (for n Q 40);
+&
+When the angular subtense of the apparent source
+is larger than amax but less than 100 mrad, the single
+pulse exposure limit, EL, is reduced by n^-0.25 (for
+n G 625) and 0.2 (for n Q 625); and
+&
+When the angular subtense of the apparent source is
+larger than 100 mrad, no reduction of the single pulse
+exposure limit, EL, is necessary.
+The maximum anticipated exposure duration must
+not exceed 100 s. These factors are simpliﬁed and over-
+restrictive for the case of small number of pulses and
+can, for a less restrictive analysis, be replaced by a mul-
+tiplication factor n^-0.25 that is limited to 1/2.5 for the case
+of a e amax and 1/5 for the case of a 9 amax, where n
+is the number of pulses within the maximum anticipated
+exposure duration but not longer than 100 s.
+APPLYING THE LIMITS
+Exposure distance
+For an analysis, the exposure of the eye and skin at
+the position of exposure is compared with the respective
+exposure limit.
+For analysis of the retinal exposure for small sources,
+such as a small diameter optical ﬁber, the closest distance
+at which the human eye can sharply focus is about
+100Y200 mm. A viewing distance of 100 mm requires
+extreme near-point accommodation and really applies
+only to small children and to very myopic individuals.
+Therefore, 100 mm viewing distance is generally only ap-
+plied for worst-case assessment of point-source divergent-
+beam lasers. For evaluation of both the retinal thermal
+hazard and the blue-light photochemical hazard, a closest
+viewing distance of 200 mm from the source can be as-
+sumed to represent the worst-case exposure.
+At shorter distances, the image of a light source
+would be out of focus and blurred. In most situations, such
+short viewing conditions are unrealistic. A 20-cm worst-
+case assessment distance is realistic for conventional
+lamp sources (including LEDs).
+For analysis of the exposure of the anterior sections
+of the eye, for special applications, such as contact ex-
+posure to xenon ﬂash lamps in the face, closer distances
+might have to be considered.
+Determination of pulse duration
+The
+pulse
+duration
+is
+deﬁned
+as
+full-width-
+half-maximum.
+Determination of exposure level
+For exposures to inhomogeneous irradiance proﬁles,
+ICNIRP recommends an averaging aperture with a diam-
+eter of 7 mm. For homogenous irradiance proﬁles, the
+measurement aperture can be larger.
+For comparison with skin exposure limits, the detec-
+tor should have a cosine response unless the source is
+sufﬁciently small.
+For comparison with retinal photochemical exposure
+limits speciﬁed as radiance or radiance dose, the expo-
+sure level (determined as radiance or radiance dose) has
+to be averaged over an appropriate angle of acceptance.
+The usage of the angle of acceptance provides a spa-
+tially averaged radiance that accounts for eye movements
+(Schulmeister 2001). A speciﬁc angle of acceptance (ﬁeld
+of view) can be accomplished either by using telescopic
+receiving optics on the instrument to limit the angle of
+acceptance to gph, or by placing, as close as possible to the
+light source, an opaque bafﬂe with an aperture that sub-
+tends an angle of gph as seen by the detector. For example,
+a circular aperture of 11 mm diameter placed over a lamp
+source will subtend an angle of 11 mrad at a distance of
+1 m. The angle of acceptance, gph, varies with the expo-
+sure duration and is deﬁned in Table 5.
+If for a speciﬁc exposure scenario, the eye move-
+ments are characterized as a function of time, the exposure
+scenario can be used for an analysis of the exposure limit.
+89
+Limits of exposure to incoherent visible and infrared radiation c ICNIRP
+www.health-physics.com
+Copyright © 2013 Health Physics Society. Unauthorized reproduction of this article is prohibited.
+
+=== PAGE 20 ===
+Then, the blue light effective radiant exposure, i.e., B(l)
+weighted, of any given point on the retina (assuming no
+transmission loss) should not exceed 24 kJ m^-2. This
+retinal radiant exposure is derived from the basic limit
+106 J m^-2 sr^-1, for a pupil diameter of 3 mm. The trans-
+mission loss was excluded so that the exposure level can
+be determined by measurement or calculation ‘‘outside’’
+of the eye. For instance, the effective radiant exposure can
+be measured with an imaging lens and a detector placed
+in the imaging plane. The limit applies to each image
+point and no averaging over an acceptance angle larger
+than 1.5 mrad should be performed since the eye move-
+ments are accounted for directly by the measurement.
+For comparison with the retinal thermal exposure
+limits, the acceptance angle can be important if the
+source has localized radiance hotspots. For pulsed sources
+with hot-spots, an angle of acceptance of 5 mrad should
+be used. When the source is smaller than 5 mrad and an
+averaging angle of acceptance of 5 mrad is used to de-
+termine the exposure level, then the source angle, a, for
+determination of the exposure limit shall not be less than
+5 mrad. For CW sources, the angle of acceptance does not
+have to be less than 11 mrad. If the source is less than
+11 mrad and the averaging angle of acceptance is 11 mrad,
+the source angle a is set to 11 mrad for the determina-
+tion of the exposure limit. If no hot spots are present in
+a source that is larger than 5 mrad for the case of pulsed
+sources and 11 mrad for the case of CW sources, the
+averaging angle of acceptance can be larger. The averag-
+ing angle of acceptance should, however, never be larger
+than the source. For the case of hot-spots, the measure-
+ment of un-averaged radiance is a conservative but some-
+times simpler approach.
+For comparison with limits to protect the anterior
+segment of the eye, radiation outside of an angle of ac-
+ceptance of 80- does not need to be collected due to
+protection by the eyelids.
+For all currently known arc and incandescent
+sources, the contribution made by the IR-C spectral region
+(3Y1.000 mm) is normally of no or little practical con-
+cern. The exposure limits for the skin and the anterior
+parts of the eye were deﬁned so that only the partial ir-
+radiance in the wavelength range below 3.000 nm needs
+to be compared with the respective exposure limits.
+The partial irradiance that is in the spectral range above
+3.000 nm can contribute to the actual physical exposure
+and this added exposure is accounted for by setting the
+exposure limit to a corresponding level. For instance, for
+a thermal radiator with a surface temperature of 1.000-C,
+about 50 % of the total irradiance is contained in the
+wavelength range above 3.000 nm, so that when the part
+below 3.000 nm is limited to 100 W m^-2, the permitted
+total irradiance equals about 200 W m^-2. This is well
+below levels that have induced cataract in an industrial
+setting (Lydahl 1984). A restrictive but simpliﬁed ex-
+posure assessment can be performed by using an unﬁl-
+tered thermal detector that is also sensitive to radiation
+with wavelengths above 3.000 nm. In that case, irradiances
+may be averaged over an aperture of 10Y50 mm for
+lengthy exposures.
+PROTECTIVE MEASURES
+Protective measures should be considered based
+on general risk management principles. These guidelines
+do not address speciﬁc protective measures.
+If the hazard cannot be mitigated by the selection
+of the source, the most effective hazard control is by en-
+gineering controls such as total enclosure of the light
+source and its emission. In circumstances where such
+containment is not possible, partial beam enclosure, admin-
+istrative controls, and restricted access to intense sources,
+eye and/or skin protectors may be necessary (Hietanen and
+Hoikkala 1990; Hietanen 1991).
+Safety standards for welding have been developed
+worldwide (Sliney and Wolbarsht 1980; UNEP et al. 1982;
+Sutter 1990; CEN 2004; ANSI 2009).
+PRODUCT SAFETY STANDARDS
+Lamp safety standards have been developed which
+make use of a risk group classiﬁcation scheme to permit
+speciﬁcation of control measures based upon risk posed by
+the light source (CEI/IEC 2006; IEC 2007; IESNA/ANSI
+2007). The emission limits in the product safety standards
+are generally derived from the ICNIRP or the ACGIH
+guidelines (ACGIH 2010). IEC and ISO also issue prod-
+uct safety standards for speciﬁc product groups which
+may contain limitations of the emission of optical radiation
+(IEC 2009; ISO 2010).
+AcknowledgmentsVDuring the preparation of this document, ICNIRP was
+composed of the following members: R. Matthes, Chairman (since 2012),
+Germany; M. Feychting, Vice-Chairperson (since 2012), Sweden; A. Ahlbom,
+Sweden (until 2008); E. Breitbart, Germany (until 2008); R. Croft, Australia;
+F.R. de Gruijl, Netherlands (until 2008); A. Green, Australia; M. Hietanen,
+Vice-Chairperson, Finland (until 2008); K. Jokela, Finland; J.C. Lin, United
+States of America; C. Marino, Italy; A.P. Peralta, The Philippines; R. Saunders,
+United Kingdom (until 2010); K. Schulmeister, Austria (until 2012);
+P. So¨derberg, Sweden; B.E. Stuck, United States of America; A.J. Swerdlow,
+United Kingdom (until 2012); Z. Sienkiewicz, United Kingdom; M. Taki,
+Japan (until 2008); E. van Rongen, Netherlands; P. Vecchia, Chairman (until
+2012), Italy; B. Veyret, France (until 2012), S. Watanabe, Japan.
+The Task Group, which prepared the draft guidelines was com-
+posed of the following members: P. So¨derberg, Chairman, Sweden; B. Stuck,
+(Chairman until 2008), USA; D. Sliney (until 2004); K. Schulmeister, Austria;
+B. Lund, USA; R. Thomas, USA. ICNIRP also gratefully acknowledges
+the useful comments received from D.J. Lund, USA, in the drafting phase and
+the Consulting Experts and all other reviewers for their contribution re-
+ceived via the open online consultation.
+90
+Health Physics
+July 2013, Volume 105, Number 1
+www.health-physics.com
+Copyright © 2013 Health Physics Society. Unauthorized reproduction of this article is prohibited.
+
+=== PAGE 21 ===
+Finally, the support received by ICNIRP during that period from the
+International Radiation Protection Association, the European Commission
+(Health and Safety at Work), and the German Federal Ministry for the Envi-
+ronment, Nature Conservation and Nuclear Safety is gratefully acknowledged.
+All ICNIRP members are requested to ﬁll in and update a dec-
+laration of personal interests. Those documents are available online at
+www.icnirp.org/cv.htm.
+REFERENCES
+ACGIH. Threshold Limit Values for chemical substances and
+physical agents and Biological Exposure Indices. Cincinnati:
+ACGIH; 2010.
+Allen RG, Polhamus GD. Ocular thermal injury from intense
+light. Laser applications in medicine and biology. 1989.
+ANSI. American national standard. Occupational and educa-
+tional personal eye and face protection devices. New York:
+American National Standards Institute; ANSI Z87.1; 2009.
+Barry JC, Branmann K, Dunner MCM. Catoptic properties of
+eye with misaligned surfaces studied by exact ray tracing.
+Invest Ophthalmol Vis Sci 38:1476Y1484; 1997.
+Barthelmess GA, Borneff J. U¨ ber die genetische Scha¨digung
+der Augenlinse durch Wa¨rmestrahlung. Arch Ophth 160:
+641Y652; 1959.
+Berson DM, Dunn FA, Takao M. Phototransduction by reti-
+nal ganglion cells that set the circadian clock. Science 295:
+1070Y1073; 2002.
+Birngruber R, Hillenkamp F, Gabel VP. Theoretical investigations
+of laser thermal retinal injury. Health Phys 48:781Y796; 1985.
+Brainard GG, Hanifin JP, Greeson JM, Byrne B, Glickman G,
+Gerner E, Rollag MD. Action spectrum for melatonin regu-
+lation in humans: Evidence for a novel circadian photore-
+ceptor. J Neurosc 21:6405Y6412; 2001.
+CEI/IEC, Photobiological safety of lamps and lamp systems.
+IEC 62471/CIE S 009/E&F; 2006.
+CEN. Personal eye-protectionVInfrared filtersVTransmittance
+requirements and recommended use. Brussels: CEN; EN
+171; 2004.
+Chisum G. Flashblindness recovery following exposure to constant
+energy adaptive ﬂashes. Aerospace Med 44:407Y413; 1973.
+Choi SW, Chun KI, Lee SJ, Rah SH. A case of photic reti-
+nal injury associated with exposure to plasma arc welding.
+Korean J Ophthalmol 20:250Y253; 2006.
+CIE. ILV: International lighting vocabulary. Vienna: CIE; 2011.
+CIE. A computerized approach to transmission and absorp-
+tion characteristics of the human eye. Vienna: CIE; CIE
+203Y2012; 2012.
+CIE, ICNIRP. Measurements of optical radiation hazards.
+Munich: CIE, ICNIRP; 1998.
+Courant D, Court L, Abadie B, Brouillet B. Retinal damage
+thresholds from single-pulse laser exposures in the visible
+spectrum. Health Phys 56:637Y642; 1989.
+Darvay A, White R, Rycroft RJG, Jones AB, Hawk JLM,
+McFadden JP. Photoallergic contact dermatitis is uncom-
+mon. Br J Dermatol 145:597Y601; 2001.
+Diffey BL. Ultraviolet radiation in medicine. Bristol: Adam
+Hilge; 1982.
+Ducheˆne A, Lakey J, Repacholi M. IRPA guidelines on pro-
+tection against non-ionizing radiation. New York: ; 1991.
+Fender DH. Control mechanisms of the eye. Sci Am 211:
+24Y33; 1964.
+Finney DJ. Probit analysis.Cambridge, UK:Cambridge University
+Press; 1971.
+Fitzpatrick TB, Pathak MA, Harber LC, Seiji M, Kukita A.
+Sunlight and man, normal and abnormal photobiological
+responses. Tokyo: University of Tokyo Press; 1974.
+Framme C, Schuele G, Roider J, Birngruber R, Brinkmann R.
+Inﬂuence of pulse duration and pulse number in selective
+RPE laser treatment. Lasers Surg Med 34:206Y215; 2004.
+Freund C, McCally R, Farrell R, Sliney DH. Theoretical in-
+vestigations of retinal temperature changes resulting from ex-
+posure to rectangular beams. Lasers in the life sciences. 1996.
+Gabel VP, Birngruber R, Hillenkamp F. Visible and near-
+infrared light absorption in pigment epithelium and choroid.
+Amsterdam: Elsevier; 1978.
+Geeraets WJ, Berry ER. Ocular spectral characteristics as related
+to hazards from lasers and other light sources. Am J Oph-
+thalmol 66:15Y20; 1968.
+Gerathewohl SJ, Strughold H. Motoric responses of the eyes
+when exposed to light ﬂashes of high intensities and short
+duration. J Aviat Med 24:200Y207; 1953.
+Goldmann H. Genesis of cataract. Arch Ophthalmol 9:314; 1933.
+Gullstrand A. Die Dioptrik des Auges. Helmholtz, Handbuch der
+physiologischen Optik, 3rd ed. 1; 1909.
+Ham Jr WT. The photopathology and nature of the blue-
+light and near-UV retinal lesion produced by lasers and
+other optical sources. Laser applications in medicine and
+biology. 1989.
+Ham WT, Mueller HA, Sliney D. Retinal sensitivity to dam-
+age from short wavelength light. Nature 160:153Y155; 1976.
+Ham WTJ, Mueller HA, Williams RC, Geeraets WJ. Ocular
+hazard from viewing the sun unprotected and through various
+windows and ﬁlters. Appl Opt Appl Opt 12:2122Y2129; 1973.
+Hardy JD, Oppel TW. The sensitivity of the body to heat and
+the spatial summation of the warmth sense organ responses.
+J Clin Invest 16:533Y540; 1937.
+Health Council of the Netherlands. Health-based exposure limits
+for electromagnetic radiation in the wavelength range from
+100 nanometer to 1 millimeter. The Hague. 1993.
+Henderson R, Schulmeister K. Laser safety. New York, London:
+Taylor & Francis Group; 2004.
+Henriques FC. Studies of thermal injury V. The predictability and
+the signiﬁcance of thermally induced rate processes leading
+to irreversible epidermal injury. Am J Path 43:489Y502; 1947.
+Hietanen M. Ocular exposure to solar ultraviolet and visible
+radiation at high latitudes. Scand J Work Environ Health
+17:398Y403; 1991.
+Hietanen M, Hoikkala M. Ultraviolet radiation and blue light
+from photoﬂoods in television studios and theaters. Health
+Phys 59:193Y198; 1990.
+IARC. Solar and ultraviolet radiation. Lyon: IARC; 1992.
+ICNIRP. Guidelines on limits of exposure to laser radiation of
+wavelengths between 180 nm and 1 000 mm. Health Phys 71:
+804Y819; 1996.
+ICNIRP. Guidelines on limits of exposure to broad-band in-
+coherent optical radiation (0.38Y3mm). Health Phys 73:
+539Y554; 1997.
+ICNIRP. Revision of laser radiation for wavelengths between
+400 nm and 1.4 mm. Health Phys 79:131Y186; 2000.
+ICNIRP. General approach to protection against non-ionizing
+radiation. Health Phys 82:540Y548; 2002.
+ICNIRP. Guidelines on limits of exposure to ultraviolet radia-
+tion of wavelengths between 180 nm ad 400 nm (incoherent
+optical radiation). Health Phys 87:171Y186; 2004.
+ICNIRP. Statement on far infrared radiation exposure. Health
+Phys 91:630Y645; 2006.
+ICNIRP. Protecting workers from ultraviolet radiation. ICNIRP/
+WHO/ILO. Oberschleissheim: ICNIRP; 2007.
+91
+Limits of exposure to incoherent visible and infrared radiation c ICNIRP
+www.health-physics.com
+Copyright © 2013 Health Physics Society. Unauthorized reproduction of this article is prohibited.
+
+=== PAGE 22 ===
+IEC. Equipment classification and requirements. Geneva: IEC;
+60825-1; 2007.
+IEC. Medical electrical equipmentVParticular requirements for
+the basic safety and essential performance of surgical lumi-
+naires and luminaires for diagnosis. Geneva: IEC; 60601-
+2-41; 2009.
+IESNA/ANSI. Photobiological safety for lampsVRisk group
+classification and labeling. New York: Illuminating Society
+of North America; RP27.3; 2007.
+ISO. Ergonomics of the thermal environmentVAnalytical de-
+termination and interpretation of heat stress using calcula-
+tion of the predicted heat strain. Geneva: ISO; 7933; 2004a.
+ISO. Ergonomics of the thermal environmentVRisk assessment
+strategy for the prevention of stress or discomfort in thermal
+working conditions. Geneva: ISO; 15265; 2004b.
+ISO. Ophthalmic instrumentsVEndoilluminatorsVFundamental
+requirements and test methods for optical radiation safety.
+Geneva: ISO; 15752; 2010.
+Javey G, Schwartz SG, Albini TA. Ocular complication of in-
+tense pulsed light therapy: Iris photoablation. Dermatol Surg
+36:1466Y1468; 2010.
+Lee WW, Murdock J, Albini TA, O’Brien T P, Levine ML.
+Ocular damage secondary to intense pulse light therapy to
+the face. Ophthal Plast Reconstr Surg 27:263Y265; 2011.
+Lund BJ. Laser retinal thermal damage threshold: impact of
+small-scale ocular motion. J Biomed Opt 11:064033; 2006.
+Lund DJ, Edsall P, Stuck B, Schulmeister K. Variation of
+laser-induced retinal injury thresholds with retinal irradi-
+ated area: 0.1-s duration, 514-nm exposures. J Biomed Opt
+12:024023; 2007.
+Lund DJ, Stuck BE, Edsall P. Retinal injury thresholds for
+blue wavelength lasers. Health Phys 90:477Y484; 2006.
+Lydahl E. Infrared radiation and cataract. Acta Ophthalmol
+(Copenh) Suppl 166; 1984. Thesis.
+Magnus IA. Dermatological photobiology. Oxford: Blackwell
+Scientiﬁc; 1976.
+Mainster MA, White TJ, Tips JH, Wilson PW. Retinal-
+temperature increases produced by intense light sources. J
+Opt Soc Am 60:264Y270; 1970.
+Marshall J. Radiation and the ageing eye. Barker Medley
+lecture. 1983.
+McCluney R. Introduction to radiometry and photometry.
+New York: Artech House; 1984.
+Mellerio J. Light effects on the retina. In: Principles and prac-
+tice of ophthalmology. 1994: 1326Y1345.
+Michael R, Wegener A. Estimation of safe exposure time from
+an ophthalmic operating microscope with regard to ultravio-
+let radiation and blue-light hazards to the eye. J Opt Soc Am
+21:1388Y1392; 2004.
+Moritz AR, Henriques FC. Studies of thermal injury II. The
+relative importance of time and surface temperature in the
+causation of cutaneous burns. Am J Path 23:695; 1947.
+Naidoff MA, Sliney DH. Retinal injury from a welding arc.
+Am J Ophthalmol 77:663Y668; 1974.
+Ness JW, Stuck B, Lund DJ, Lund BJ, Molchany JW, Sliney DH.
+Retinal image motion during deliberate ﬁxation: Implica-
+tions to laser safety for long duration viewing. Health Phys
+78:131Y142; 2000.
+Ness JW, Zwick H, Stuck B, Lund DJ, Sliney DH. Eye move-
+ments during ﬁxation: Implications to long term viewing of
+small optical sources. SPIE Proc 3591:344Y350; 1999.
+Noell WK, Walker VS, Kang BS, Berman S. Retinal damage
+by light in rats. Invest Opthalmol 5:450Y473; 1966.
+Okuno T. Thermal effect of infrar-red radiation on the eye: A
+study based on a model. Ann Occup Hyg 35:1Y12; 1991.
+Organisciak DT, Vaughan DK. Retinal light damage: Mechanisms
+and protection. Progr Ret Eye Res 29:113Y134; 2010.
+Pitts DG, Cullen AP. Determination of infrared radiation levels
+for acute ocular cataractogenesis. Albrecht Von Graefes Arch
+Klin Exp Ophthalmol 217:285Y297; 1981.
+Pitts DG, Cullen AP, Hacker PD. Ocular effects of ultraviolet
+radiation from 295 to 365 nm. Invest Ophthalmol Vis Sci 16:
+932Y939; 1977.
+Priebe LA, Welch AJ. Asymptotic rate process calculations
+of thermal injury to the retina following laser irradiation. F
+Biomech Eng 100:49Y54; 1978.
+Randolph DI, Stuck BE. Sensitivity of the rhesus monkey cornea
+and surrounding tissues to heat produced by CO2 laser ra-
+diation. In: Proceedings of the Tenth Army Science Confer-
+ence, Department of the ARMY. New York: West Point; 1976:
+284Y299.
+Reidenbach HD. Results from two research projects concern-
+ing the aversion responses. Proc SPIE 5688:429Y439; 2005.
+Reidenbach HD. Local susceptibility of the retina, formation and
+duration of after images in the case of Class 1 laser products
+and disability glare arising from high-brightness light emit-
+ting diodes. J Las Appl 21:46Y56; 2009.
+Rozanowska M, Sarna T. Light-induced damage to the retina:
+role of rhodopsin chromophore revisited. Photochem Photo-
+biol 81:1305Y1330; 2005.
+Schuele G, Rumohr M, Huettmann G, Brinkmann R. RPE dam-
+age thresholds and mechanisms for laser exposure in the
+microsecond-to-millisecond time regimen. Invest Ophthalmol
+Vis Sci 46:714Y719; 2005.
+Schulmeister K. Concepts in dosimetry related to laser safety
+and optical radiation hazard evaluation. In: Stuck BE, Belkin
+MB, eds. SPIE Proc of Laser and Noncoherent Light Ocular
+Effects. Epidemiology, Prevention, and Treatment III 4246:
+104Y116; 2001.
+Schulmeister K. Retinal thermal damage threshold studies for
+multiple pulses. Ophthalmic Technologies XVII SPIE 6426:
+26:1Y8; 2007.
+Schulmeister K, Husinsky J, Seiser B, Edthofer F, Fekete B,
+Farmer L, Lund DJ. Ex vivo and computer model study on
+retinal thermal laser-induced damage in the visible wave-
+length range. J Biomed Opt 13:054038; 2008.
+Schulmeister K, Jean M. Manifestation of the strong non-linearity
+of thermal injury, Paper #901. In: Proceedings International
+Laser Safety Conference 2011. 2011.
+Schulmeister K, Sliney DH, Mellerio J, Lund J, Stuck BE,
+Zuclich JA. Review of exposure limits and experimental data
+for corneal and lenticular damage from short pulsed UV and
+IR laser radiation. J Laser Appl 20:98Y105; 2008.
+Schulmeister K, Stuck B, Lund DJ, Sliney D. Review of thresholds
+and recommendations for revised exposure limits for laser
+and optical radiation for thermally induced retinal injury.
+Health Phys 100:210Y220; 2011.
+Schulmeister K. The radiance of the sun, a 1 mW laser pointer
+and phosphor emitter. In: Proceedings of the International
+Laser Safety Conference 2013. Paper #P107. Orlando, FL:
+Laser Institute of America; 2013: 371Y378.
+Scott JA. The computation of temperature rises in the human
+eye induced by infrared radiation. Phys Med Biol 33:
+243Y257; 1988a.
+Scott JA. A ﬁnite element model of heat transport in the hu-
+man eye. Phys Med Biol 33:227Y241; 1988b.
+Sliney DH. Physical factors in cataractogenesis: Ambient
+ultraviolet radiation and temperature. Invest. Ophthalmol
+Vis Sci 27:781Y790; 1986.
+92
+Health Physics
+July 2013, Volume 105, Number 1
+www.health-physics.com
+Copyright © 2013 Health Physics Society. Unauthorized reproduction of this article is prohibited.
+
+=== PAGE 23 ===
+Sliney DH, Wolbarsht ML. Safety with lasers and other optical
+sources. New York: Plenum Publishing Corp; 1980.
+Sliney DH. Interaction mechanisms of laser radiation with ocular
+tissues. First International Symposium on Laser Biological
+Effects and Exposure Limits: Lasers et Normes de Protection.
+1988: 64Y83.
+Sliney DH, Freasier BC. The evaluation of optical radiation
+hazards. Applied Opt 12:1Y24; 1973.
+Sliney DH, Aron-Rosa D, DeLori F, Fankhauser F, Landry R,
+Mainster M, Marshall J, Rassow B, Stuck B, Trokel S, Motz-
+West T, Wolffe M. Adjustment of guidelines for exposure
+of the eye to optical radiation from ocular instruments:
+statement from a task group of the International Commis-
+sion on Non-Ionizing Radiation Protection (ICNIRP). Appl
+Opt 44:2162Y2176; 2005.
+Sliney DH, Mellerio J, Gabel VP, Schulmeister K. What is the
+meaning of threshold in laser injury experiments? Implications
+for human exposure limits. Health Phys 82:335Y347; 2002.
+Stamper DA, Lund DJ, Molchany JW, Stuck BE. Human pupil
+and eyelid response to intense laser light: Implications for
+protection. Percept Mot Skills 95:775Y782; 2002.
+Stolwijk JAJ. Mathematical models of thermoregulation. Ann
+NY Acad Sci 335:98Y106; 1980.
+Stolwijk JAJ, Hardy JD. Control of body temperature. Handbook
+of physiology, Section 9:45Y69; 1977.
+Sutter E. Alles u¨ber AugenschutzVGrundlagen, Einsatz,
+Pru¨fverfahren, Bezugsquellen. Bremerhaven; 1990.
+Sutter FK, Landau K. Ocular complication of PhotoDerm
+VL therapy for facial port-wine stain. Dermatol Surg 29:
+111Y112; 2003.
+So¨derberg PG. Optical radiation and the eyes, with special em-
+phasis on children. Prog Biophys Mol Biol 2011.
+Turner PL, Mainster MA. Circadian photoreception: Ageing
+and the eye’s important role in systemic health. Br J Oph-
+thalmol 92:1439Y1444; 2008.
+UNEP, WHO, IRPA. Laser and optical radiation. Geneva: UNEP,
+WHO, IRPA; 1982.
+UNEP, WHO, IRPA. WHO Environmenal Health Criteria 160.
+Ultraviolet radiation. Geneva: WHO; 1994.
+Uniat L, Olk RJ, Hanish SJ. Welding arc maculopathy. Am J
+Ophthalmol 102:394Y395; 1986.
+Walker-Smith GJ, Gale AJ, Findley JM. Eye movement strategies
+involved in face perception. Perception 6:313Y326; 1977.
+WHO. 10 Human studies: The eye. Environmental Health Criteria
+160:181Y207; 1994.
+Williams TP, Howell WL. Action spectrum of retinal light
+damage in albino rats. IOVS 24:285Y287; 1983.
+Wolbarsht ML. Safe ocular levels for IR occupational expo-
+sure: Final Report. NIOSH; 1978.
+Wolbarsht ML. Cataract from infrared lasers: Evidence for
+photochemical mechanisms. Lasers Light Ophthalmol 4:
+91Y96; 1991.
+Vos JJ, van Norren D. Weighing the relative signiﬁcance of
+three heat dissipation mechanisms to produce cataract. La-
+sers Light Ophthalmol 6:107Y114; 1994.
+Vos JJ, van Norren D. Some afterthoughts about eclipse blind-
+ness. Ophthalmic Physiol Opt 21:427Y429; 2001.
+Yarbus AL. New York: Plenum Press; 1967.
+Young RW. Solar radiation and age-related macular degenera-
+tion. Surv Ophthalmol 32:252Y269; 1988.
+Zuclich JA, Edsall PE, Lund DJ, Stuck BE, Till S, Kennedy PK,
+McLin LN. New data on the variation of laser induced retinal-
+damage threshold with retinal image size. J Laser Appl
+20:83Y88; 2008.
+Zuclich JA, Lund DJ, Stuck B. Wavelength dependence of ocular
+damage thresholds in the near IR to far IR transition region.
+Proposed revisions to MPEs. Health Phys 92:15Y23; 2007.
+APPENDIX A
+RATIONALE FOR THE CHANGES SINCE
+THE PREVIOUS GUIDELINES
+Since the publication in 1997 of the ICNIRP
+Guidelines for Broadband Incoherent Optical Radiation
+(ICNIRP 1997), further research has taken place with
+regard to the temporal, spatial and wavelength depen-
+dence of retinal thermal injury.
+Spot size dependence
+Because of heat ﬂow during the exposure, there is a
+dependence of the retinal injury threshold on retinal image
+diameter (‘‘spot-size’’). This effect is greatest for longer
+duration exposures and is nearly non-existent for short-
+duration pulses of the order of 1 ms or less (Schuele et al.
+2005; Zuclich et al. 2007; Schulmeister et al. 2008). Two
+domains need to be distinguished in terms of the depen-
+dence of the exposure limits on the planar angular subtense
+of the source, a: For values smaller than a critical angle, the
+exposure limit expressed as radiance or radiance dose de-
+pends linearly on the inverse of the planar angular sub-
+tense of the source a (Sliney and Wolbarsht 1980; Ham
+1989). This dependence reﬂects the fact that larger retinal
+irradiance patterns exhibit reduced radial cooling as com-
+pared to smaller ones. For values of the planar angular
+subtense of the source larger than this critical angle, the
+exposure limit no longer depends on the planar angular
+subtense of the apparent source. When the diameter of the
+irradiated spot is large compared to the heat diffusion dis-
+tance during the pulse, the center of the irradiated spot in the
+retina is not affected by radial heat ﬂow during the pulse.
+It was known from physical principles and from
+short pulsed laser threshold studies (Zuclich et al. 2007)
+that for short pulses (where heat ﬂow is negligible during
+the pulse) there is no spot size dependence. However, as
+a conservative simpliﬁed approach, the inverse spot size
+dependence in the previous exposure limits was applied
+up to a critical angle of 100 mrad irrespective of the ex-
+posure duration even for pulses. Recent thermal model
+and ex-vivo studies (Schulmeister et al. 2008) provided for
+a more complete understanding of the variation of the
+spot size dependence of retinal thermal injury with pulse
+duration. This allows for the formulation of a time de-
+pendent critical angle to better reﬂect the retinal irradiance
+diameter dependence for pulsed sources (Schulmeister
+2007). The value of 100 mrad still applies for exposure to
+CW sources, i.e., for exposure durations larger than 0.25 s.
+With the more complete understanding of the tem-
+poral trend of the spot size dependence, it was possible to
+more accurately deﬁne the exposure limits.
+93
+Limits of exposure to incoherent visible and infrared radiation c ICNIRP
+www.health-physics.com
+Copyright © 2013 Health Physics Society. Unauthorized reproduction of this article is prohibited.
+
+=== PAGE 24 ===
+Pupillary reaction was not considered in the limits for
+exposures to pulsed sources. To consider the potential of
+ﬂash exposure in low ambient light levels, a pupil of
+7 mm in diameter was applied. However, for longer ex-
+posure durations the closure of the pupil reduces the retinal
+irradiance as shown in Fig. 4 (Stamper et al. 2002) and
+therefore reduces the risk of injury. For exposure dura-
+tions longer than 0.25 s, the closure of the pupil decreases
+the retinal illumination faster than the damage threshold,
+expressed as retinal irradiance, is reduced. Eye movements
+and blood ﬂow (Ness et al. 1999) also reduce the risk
+of thermal injury.
+Revision of the retinal thermal hazard function
+The study by (Lund et al. 2006) provided the basis to
+correct the retinal thermal hazard function R(l). When
+R(l) was ﬁrst derived more than two decades ago there was
+a controversy as to the possible synergistic effects between
+photochemical and thermal retinal damage mechanisms
+at wavelengths less than 500 nm (blue light). There were
+two controversial threshold data points for the wave-
+length of 441.6 nm (Ham et al. 1976; Ham 1989) for blue
+wavelengths and exposure durations of 1 s and 16 s. It was
+expected at that time that further research would soon be
+conducted to determine whether these thresholds were in
+fact correct or, as existing theory would predict, were
+apparently one order of magnitude too low. Lund et al.
+(2006) showed conclusively that the originally published
+thresholds were indeed one order-of-magnitude too low.
+This discrepancy was attributed to an error in the dose
+calculation performed at that time. The more recent study
+was far more comprehensive than the initial study that
+had given rise to the conservative adjustment of the R(l)
+function to provide values greater than 1.0. It had always
+been assumed that these values were likely to be a great
+over-statement of the risk and for that reason the R(l)
+function was not normalized at the maximum value where
+the R(l) values were at 10.0 (at 435 and 440 nm). After a
+review of the original work and the recent study, ICNIRP
+concluded that the R(l) function values above 1.0 were
+indeed unjustiﬁed. The adjustment to the values for R(l)
+included setting R(l) = 1.0 for wavelengths from 445 nm
+to 495 nm and multiplying all values of R(l) from 385 nm
+to 440 nm by 0.10. The revised values for the spectral
+weighting functions are provided in Table 2. No changes
+to the Aphakic or Blue-Light Hazard Functions (ICNIRP
+1997) were required.
+Action spectrum for cornea and lens
+The exposure limit to protect the cornea and lens for
+the case of exposure to radiation in the infrared wavelength
+range (eqns 20 and 21) was originally developed without
+considering wavelength dependencies since for thermal
+radiators and long exposure durations, these have little
+consequence. For infrared LEDs that emit in a relatively
+small wavelength band, the wavelength dependence of
+the absorption of optical radiation in the anterior parts of
+the eye is, however, relevant. Only a part of the optical
+radiation that is incident on the cornea in the wavelength
+range of 780 nm to about 1.000 nm is absorbed in the
+anterior parts of the eye as the cornea is transparent and
+the iris is also partially transmitting for infrared radiation.
+Whereas, for wavelengths greater than 1.400 nm, all of the
+radiation incident on the cornea is absorbed in the ocular
+media in front of the iris.
+As a simple action spectrum it is proposed to weigh
+the partial exposure applicable to the wavelength range
+between 780 nm and 1000 nm with a factor of 0.3, which
+in effect raises the permitted exposure of the eye for near
+IR LEDs by a factor of about three. This is justiﬁed, be-
+cause although the iris absorbs well in the visible wave-
+length range, the absorption coefﬁcient of melanin, as
+chromophore in the iris epithelium (and depending on the
+iris color also within the stroma of the iris), has a pro-
+nounced wavelength dependence (Gabel et al. 1978). In
+the wavelength range of 780 nm to 1.000 nm, roughly
+30 % of the radiation that is incident on the cornea is
+transmitted through the iris (where it will be scattered
+and will be ﬁnally absorbed by the retina). Indirect
+heating of the lens via radiation absorbed by the iris is
+considered to be a risk factor for the development of
+cataract (Goldmann 1933). However, for the wavelength
+range 780 nm to 1.000 nm, the energy absorbed in the
+cornea and the aqueous humor is less than for longer
+wavelengths where water starts to absorb.
+Another aspect to consider is that the exposure limit
+of 100 W m^-2 for exposure durations of 1.000 s and longer
+was set so that contributions to the exposure from the
+wavelength range beyond 3.000 nm (which is not included
+in the measurement of the exposure level) were considered
+in the exposure limit. For the case of IR LEDs, there is
+no irradiance above 3.000 nm that would add to the actual
+irradiance of the eye. For thermal radiators on the other
+hand, the proposed action spectrum adds only a small
+fraction of additionally permitted exposure level, i.e., less
+than 1% for surface temperatures of 1.000-C and 5 % for
+surface temperatures of 1.500-C.
+Comparison with exposure limits for laser radiation
+The biological effects induced by all types of optical
+radiation should be similar for any given exposure site,
+area, and duration of exposure in the same spectral region.
+For a given broadband source it is necessary to consider
+several possible types of injury (with different wave-
+length, pulse duration and spot size dependencies), while
+for laser radiation for a given single wavelength, exposure
+94
+Health Physics
+July 2013, Volume 105, Number 1
+www.health-physics.com
+Copyright © 2013 Health Physics Society. Unauthorized reproduction of this article is prohibited.
+
+=== PAGE 25 ===
+geometry and exposure duration, the most restrictive injury
+type is deﬁned.
+Because of the very high brightness (radiance) of
+lasers, many lasers are capable of producing thermal burns
+of the skin, the cornea, or the retina (depending on the
+wavelength); whereas it is very rare that a broad-band
+source poses such a risk.
+The degree of quantitative uncertainty in relating bio-
+logical thresholds (derived from broad-band and narrow-
+band sources to laser exposure) has frequently necessitated
+the use of additional reduction factors in deriving the ex-
+posure limits for lasers that are unnecessary for broad-band
+optical sources (ICNIRP 2000).
+To the extent possible, the exposure limits for broad-
+band radiation closely parallel those for lasers. In the UV
+wavelength range and for retinal hazards, the two sets of
+exposure limits are essentially equivalent. However, for the
+convenience of the application of the guidelines, the reti-
+nal limits are expressed in different units for the two sets
+of limits, since the default condition for laser radiation is
+a small source, while for non-laser sources, only extended
+sources can constitute a retinal hazard. For lasers, it is also
+necessary to deﬁne speciﬁc limits for ultra-short pulses.
+¡¡
+APPENDIX B
+Deﬁnition of symbols.
+Symbol
+Quantity
+Units
+Comment
+A(l)
+Aphakic hazard function
+B(l)
+Blue-light hazard function
+D
+Radiance dose or time integrated radiance
+J m^-2 sr^-1
+Time integrated radiance
+DR
+The effective retinal thermal radiance dose
+J m^-2 sr^-1
+Time integrated radiance dose spectrally
+weighted for retinal thermal damage
+DB
+The effective retinal blue-light radiance dose
+J m^-2 sr^-1
+Time integrated radiance dose spectrally
+weighted for retinal blue-light damage
+dp
+Pupil diameter
+m
+dr
+Retinal diameter
+m
+ds
+Diameter of a circular source
+m
+E
+Irradiance
+W m^-2
+Radiant ﬂux or power (in watts) per unit
+area incident on a surface
+EB
+Blue-light irradiance
+W m^-2
+Irradiance spectrally weighted for
+blue-light damage in the retina
+EIR
+Irradianced in the infrared (IR)
+W m^-2
+Irradiance in the infrared for wavelengths
+from 780 nm to 3000 nm
+Ev
+Illuminance
+lm m^-2
+Luminous ﬂux (in lumens) per unit
+area incident upon a surface
+Er
+Retinal irradiance
+W m^-2
+El
+Spectral irradiance
+W m^-2 nm^-1
+f
+Focal length
+m
+H
+Radiant exposure
+J m^-2
+Hv
+Light exposure
+lm s m^-2
+Photometric dose
+IRR
+Infrared radiation
+IR-A
+Infrared radiation type A
+IR-B
+Infrared radiation type B
+IR-C
+Infrared radiation type C
+L
+Radiance
+W m^-2 sr^-1
+LAphake
+Aphakic hazard radiance
+W m^-2 sr^-1
+Spectrally weighted quantity
+LIR
+Near infrared radiance
+W m^-2 sr^-1
+Lv
+Luminance
+lm m^-2 sr^-1 or cd m^-2
+LR
+Effective radiance weighted for thermal retinal injury
+W m^-2 sr^-1
+Radiance spectrally weighted for thermal
+injury of the retina
+LB
+Effective radiance weighted blue-light
+W m^-2 sr^-1
+Radiance spectrally weighted for
+blue-light damage in the retina
+Ll
+Spectral radiance
+W m^-2 sr^-1 nm^-1
+(Continued on next page)
+95
+Limits of exposure to incoherent visible and infrared radiation c ICNIRP
+www.health-physics.com
+Copyright © 2013 Health Physics Society. Unauthorized reproduction of this article is prohibited.
+
+=== PAGE 26 ===
+APPENDIX B (continued)
+Symbol
+Quantity
+Units
+Comment
+Q
+Energy
+J
+Radiant energy in joules
+R(l)
+Retinal thermal hazard function
+t
+Exposure duration
+s
+tmax
+Maximum exposure duration
+s
+UVR
+Ultraviolet radiation
+a
+Planar angular subtense (of a source)
+rad
+amin
+Minimal source planar angular subtense
+rad
+amax
+Maximal planar angular subtense
+rad
+g
+Planar angle of acceptance
+rad
+gmeas
+Planar measurement angle of acceptance
+rad
+gth
+Planar angle of acceptance for assessing thermal hazards
+rad
+gph
+Planar angle of acceptance for assessing photochemical
+hazards
+rad
+l
+Wavelength
+nm
+t
+Transmittance
+F
+Radiant ﬂux or Power
+W
+V
+Solid angle
+sr
+96
+Health Physics
+July 2013, Volume 105, Number 1
+www.health-physics.com
+Copyright © 2013 Health Physics Society. Unauthorized reproduction of this article is prohibited.

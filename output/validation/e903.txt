@@ -1,0 +1,953 @@
+
+# ---- validate_e903.py run 2026-09-21 13:21:49.438710 ----
+
+R(AOI) comparison table (solar-weighted reflectance; E903 model over ASTM G173 direct DNI, [320,2500] nm):
+  AOI_deg  SGHAT_smooth  SGHAT_smooth_arc  E903_smooth  E903_smooth_arc
+  0        0.0441        0.0324            0.0418       0.0135         
+  5        0.0396        0.0279            0.0418       0.0135         
+  10       0.0357        0.0242            0.0418       0.0135         
+  15       0.0324        0.0212            0.0419       0.0136         
+  20       0.0297        0.0190            0.0421       0.0138         
+  25       0.0277        0.0175            0.0425       0.0141         
+  30       0.0262        0.0167            0.0434       0.0148         
+  35       0.0253        0.0167            0.0449       0.0159         
+  40       0.0250        0.0174            0.0477       0.0178         
+  45       0.0253        0.0188            0.0522       0.0211         
+  50       0.0262        0.0210            0.0597       0.0266         
+  55       0.0277        0.0239            0.0719       0.0358         
+  60       0.0298        0.0276            0.0915       0.0513         
+  65       0.0474        0.0440            0.1230       0.0777         
+  70       0.0789        0.0744            0.1736       0.1228         
+  75       0.1313        0.1258            0.2557       0.2005         
+  80       0.2185        0.2128            0.3900       0.3355         
+  85       0.3636        0.3599            0.6143       0.5733         
+  90       0.0800        0.0800            0.9045       0.8931         
+
+Comparison figure: output/validation/e903_refl_compare.png
+
+         label       receptor           mode              G              Y              R      glare_min peak_retinal_wcm2
+  [skip] az098_e903: output/az098_e903/results/summary.csv not found (run run_analysis.py first)
+az098      obs_ptt    aoi(smooth_arc)              0            488              0            488          0.975
+az098_e903 obs_ptt    solar_weighted (no glare / no data)
+  [skip] az278_e903: output/az278_e903/results/summary.csv not found (run run_analysis.py first)
+az278      vehicle_1  aoi(smooth_arc)              0           3688              0           3688          1.144
+az278_e903 vehicle_1  solar_weighted (no glare / no data)
+  [skip] az278_e903: output/az278_e903/results/summary.csv not found (run run_analysis.py first)
+az278      vehicle_2  aoi(smooth_arc)              0           3688              0           3688          1.144
+az278_e903 vehicle_2  solar_weighted (no glare / no data)
+  [skip] az278_e903: output/az278_e903/results/summary.csv not found (run run_analysis.py first)
+az278      vehicle_3  aoi(smooth_arc)              0           3688              0           3688          1.144
+az278_e903 vehicle_3  solar_weighted (no glare / no data)
+=== RESULT: 14 passed, 0 failed (2026-09-21 13:21:50.189083) ===
+
+# ---- validate_e903.py run 2026-09-21 13:25:29.994836 ----
+
+R(AOI) comparison table (solar-weighted reflectance; E903 model over ASTM G173 direct DNI, [320,2500] nm):
+  AOI_deg  SGHAT_smooth  SGHAT_smooth_arc  E903_smooth  E903_smooth_arc
+  0        0.0441        0.0324            0.0418       0.0135         
+  5        0.0396        0.0279            0.0418       0.0135         
+  10       0.0357        0.0242            0.0418       0.0135         
+  15       0.0324        0.0212            0.0419       0.0136         
+  20       0.0297        0.0190            0.0421       0.0138         
+  25       0.0277        0.0175            0.0425       0.0141         
+  30       0.0262        0.0167            0.0434       0.0148         
+  35       0.0253        0.0167            0.0449       0.0159         
+  40       0.0250        0.0174            0.0477       0.0178         
+  45       0.0253        0.0188            0.0522       0.0211         
+  50       0.0262        0.0210            0.0597       0.0266         
+  55       0.0277        0.0239            0.0719       0.0358         
+  60       0.0298        0.0276            0.0915       0.0513         
+  65       0.0474        0.0440            0.1230       0.0777         
+  70       0.0789        0.0744            0.1736       0.1228         
+  75       0.1313        0.1258            0.2557       0.2005         
+  80       0.2185        0.2128            0.3900       0.3355         
+  85       0.3636        0.3599            0.6143       0.5733         
+  90       0.0800        0.0800            0.9045       0.8931         
+
+Comparison figure: output/validation/e903_refl_compare.png
+
+         label       receptor           mode              G              Y              R      glare_min peak_retinal_wcm2
+az098      obs_ptt    aoi(smooth_arc)              0            488              0            488          0.975
+az098_e903 obs_ptt    solar_weighted              0            488              0            488          1.537
+az278      vehicle_1  aoi(smooth_arc)              0           3688              0           3688          1.144
+az278_e903 vehicle_1  solar_weighted              0           3688              0           3688          1.806
+az278      vehicle_2  aoi(smooth_arc)              0           3688              0           3688          1.144
+az278_e903 vehicle_2  solar_weighted              0           3688              0           3688          1.806
+az278      vehicle_3  aoi(smooth_arc)              0           3688              0           3688          1.144
+az278_e903 vehicle_3  solar_weighted              0           3688              0           3688          1.806
+=== RESULT: 22 passed, 0 failed (2026-09-21 13:25:30.692622) ===
+
+# ---- validate_e903.py run 2026-09-21 22:21:49.193787 ----
+
+R(AOI) comparison table (solar-weighted reflectance; E903 model over ASTM G173 direct DNI, [320,2500] nm):
+  AOI_deg  SGHAT_smooth  SGHAT_smooth_arc  E903_smooth  E903_smooth_arc
+  0        0.0441        0.0324            0.0418       0.0135         
+  5        0.0396        0.0279            0.0418       0.0135         
+  10       0.0357        0.0242            0.0418       0.0135         
+  15       0.0324        0.0212            0.0419       0.0136         
+  20       0.0297        0.0190            0.0421       0.0138         
+  25       0.0277        0.0175            0.0425       0.0141         
+  30       0.0262        0.0167            0.0434       0.0148         
+  35       0.0253        0.0167            0.0449       0.0159         
+  40       0.0250        0.0174            0.0477       0.0178         
+  45       0.0253        0.0188            0.0522       0.0211         
+  50       0.0262        0.0210            0.0597       0.0266         
+  55       0.0277        0.0239            0.0719       0.0358         
+  60       0.0298        0.0276            0.0915       0.0513         
+  65       0.0474        0.0440            0.1230       0.0777         
+  70       0.0789        0.0744            0.1736       0.1228         
+  75       0.1313        0.1258            0.2557       0.2005         
+  80       0.2185        0.2128            0.3900       0.3355         
+  85       0.3636        0.3599            0.6143       0.5733         
+  90       0.0800        0.0800            0.9045       0.8931         
+
+Comparison figure: output/validation/e903_refl_compare.png
+
+         label       receptor           mode              G              Y              R      glare_min peak_retinal_wcm2
+az098      obs_ptt    aoi(smooth_arc)              0            488              0            488          0.975
+az098_e903 obs_ptt    solar_weighted              0            488              0            488          1.537
+az278      vehicle_1  aoi(smooth_arc)              0           3688              0           3688          1.144
+az278_e903 vehicle_1  solar_weighted              0           3688              0           3688          1.806
+az278      vehicle_2  aoi(smooth_arc)              0           3688              0           3688          1.144
+az278_e903 vehicle_2  solar_weighted              0           3688              0           3688          1.806
+az278      vehicle_3  aoi(smooth_arc)              0           3688              0           3688          1.144
+az278_e903 vehicle_3  solar_weighted              0           3688              0           3688          1.806
+=== RESULT: 22 passed, 0 failed (2026-09-21 22:21:49.910335) ===
+
+# ---- validate_e903.py run 2026-09-21 22:43:10.628219 ----
+
+R(AOI) comparison table (solar-weighted reflectance; E903 model over ASTM G173 direct DNI, [320,2500] nm):
+  AOI_deg  SGHAT_smooth  SGHAT_smooth_arc  E903_smooth  E903_smooth_arc
+  0        0.0441        0.0324            0.0418       0.0135         
+  5        0.0396        0.0279            0.0418       0.0135         
+  10       0.0357        0.0242            0.0418       0.0135         
+  15       0.0324        0.0212            0.0419       0.0136         
+  20       0.0297        0.0190            0.0421       0.0138         
+  25       0.0277        0.0175            0.0425       0.0141         
+  30       0.0262        0.0167            0.0434       0.0148         
+  35       0.0253        0.0167            0.0449       0.0159         
+  40       0.0250        0.0174            0.0477       0.0178         
+  45       0.0253        0.0188            0.0522       0.0211         
+  50       0.0262        0.0210            0.0597       0.0266         
+  55       0.0277        0.0239            0.0719       0.0358         
+  60       0.0298        0.0276            0.0915       0.0513         
+  65       0.0474        0.0440            0.1230       0.0777         
+  70       0.0789        0.0744            0.1736       0.1228         
+  75       0.1313        0.1258            0.2557       0.2005         
+  80       0.2185        0.2128            0.3900       0.3355         
+  85       0.3636        0.3599            0.6143       0.5733         
+  90       0.0800        0.0800            0.9045       0.8931         
+
+Comparison figure: output/validation/e903_refl_compare.png
+
+         label       receptor           mode              G              Y              R      glare_min peak_retinal_wcm2
+az098      obs_ptt    aoi(smooth_arc)              0            488              0            488          0.975
+az098_e903 obs_ptt    solar_weighted              0            488              0            488          1.537
+az278      vehicle_1  aoi(smooth_arc)              0           3688              0           3688          1.144
+az278_e903 vehicle_1  solar_weighted              0           3688              0           3688          1.806
+az278      vehicle_2  aoi(smooth_arc)              0           3688              0           3688          1.144
+az278_e903 vehicle_2  solar_weighted              0           3688              0           3688          1.806
+az278      vehicle_3  aoi(smooth_arc)              0           3688              0           3688          1.144
+az278_e903 vehicle_3  solar_weighted              0           3688              0           3688          1.806
+=== RESULT: 22 passed, 0 failed (2026-09-21 22:43:11.415750) ===
+
+# ---- validate_e903.py run 2026-09-21 23:28:47.870890 ----
+
+R(AOI) comparison table (solar-weighted reflectance; E903 model over ASTM G173 direct DNI, [320,2500] nm):
+  AOI_deg  SGHAT_smooth  SGHAT_smooth_arc  E903_smooth  E903_smooth_arc
+  0        0.0441        0.0324            0.0418       0.0135         
+  5        0.0396        0.0279            0.0418       0.0135         
+  10       0.0357        0.0242            0.0418       0.0135         
+  15       0.0324        0.0212            0.0419       0.0136         
+  20       0.0297        0.0190            0.0421       0.0138         
+  25       0.0277        0.0175            0.0425       0.0141         
+  30       0.0262        0.0167            0.0434       0.0148         
+  35       0.0253        0.0167            0.0449       0.0159         
+  40       0.0250        0.0174            0.0477       0.0178         
+  45       0.0253        0.0188            0.0522       0.0211         
+  50       0.0262        0.0210            0.0597       0.0266         
+  55       0.0277        0.0239            0.0719       0.0358         
+  60       0.0298        0.0276            0.0915       0.0513         
+  65       0.0474        0.0440            0.1230       0.0777         
+  70       0.0789        0.0744            0.1736       0.1228         
+  75       0.1313        0.1258            0.2557       0.2005         
+  80       0.2185        0.2128            0.3900       0.3355         
+  85       0.3636        0.3599            0.6143       0.5733         
+  90       0.0800        0.0800            0.9045       0.8931         
+
+Comparison figure: output/validation/e903_refl_compare.png
+
+         label       receptor           mode              G              Y              R      glare_min peak_retinal_wcm2
+az098      obs_ptt    aoi(smooth_arc)              0            488              0            488          0.975
+az098_e903 obs_ptt    solar_weighted              0            488              0            488          1.537
+az278      vehicle_1  aoi(smooth_arc)              0           3688              0           3688          1.144
+az278_e903 vehicle_1  solar_weighted              0           3688              0           3688          1.806
+az278      vehicle_2  aoi(smooth_arc)              0           3688              0           3688          1.144
+az278_e903 vehicle_2  solar_weighted              0           3688              0           3688          1.806
+az278      vehicle_3  aoi(smooth_arc)              0           3688              0           3688          1.144
+az278_e903 vehicle_3  solar_weighted              0           3688              0           3688          1.806
+=== RESULT: 22 passed, 0 failed (2026-09-21 23:28:49.187948) ===
+
+# ---- validate_e903.py run 2026-09-22 00:36:45.287597 ----
+
+R(AOI) comparison table (solar-weighted reflectance; E903 model over ASTM G173 direct DNI, [320,2500] nm):
+  AOI_deg  SGHAT_smooth  SGHAT_smooth_arc  E903_smooth  E903_smooth_arc
+  0        0.0441        0.0324            0.0418       0.0135         
+  5        0.0396        0.0279            0.0418       0.0135         
+  10       0.0357        0.0242            0.0418       0.0135         
+  15       0.0324        0.0212            0.0419       0.0136         
+  20       0.0297        0.0190            0.0421       0.0138         
+  25       0.0277        0.0175            0.0425       0.0141         
+  30       0.0262        0.0167            0.0434       0.0148         
+  35       0.0253        0.0167            0.0449       0.0159         
+  40       0.0250        0.0174            0.0477       0.0178         
+  45       0.0253        0.0188            0.0522       0.0211         
+  50       0.0262        0.0210            0.0597       0.0266         
+  55       0.0277        0.0239            0.0719       0.0358         
+  60       0.0298        0.0276            0.0915       0.0513         
+  65       0.0474        0.0440            0.1230       0.0777         
+  70       0.0789        0.0744            0.1736       0.1228         
+  75       0.1313        0.1258            0.2557       0.2005         
+  80       0.2185        0.2128            0.3900       0.3355         
+  85       0.3636        0.3599            0.6143       0.5733         
+  90       0.0800        0.0800            0.9045       0.8931         
+
+Comparison figure: output/validation/e903_refl_compare.png
+
+         label       receptor           mode              G              Y              R      glare_min peak_retinal_wcm2
+az098      obs_ptt    aoi(smooth_arc)              0            488              0            488          0.975
+az098_e903 obs_ptt    solar_weighted              0            488              0            488          1.537
+az098      west1_route_11 aoi(smooth_arc)              0            350              0            350          0.984
+az098_e903 west1_route_11 solar_weighted              0            350              0            350          1.552
+az278      west1_route_1 aoi(smooth_arc)              0            152              0            152         11.506
+az278_e903 west1_route_1 solar_weighted              0            152              0            152         18.155
+az278      west1_route_2 aoi(smooth_arc)              0            103              0            103          8.370
+az278_e903 west1_route_2 solar_weighted              0            103              0            103         13.207
+=== RESULT: 22 passed, 0 failed (2026-09-22 00:36:47.609722) ===
+
+# ---- validate_e903.py run 2026-09-22 22:10:01.117545 ----
+
+R(AOI) comparison table (solar-weighted reflectance; E903 model over ASTM G173 direct DNI, [320,2500] nm):
+  AOI_deg  SGHAT_smooth  SGHAT_smooth_arc  E903_smooth  E903_smooth_arc
+  0        0.0441        0.0324            0.0418       0.0135         
+  5        0.0396        0.0279            0.0418       0.0135         
+  10       0.0357        0.0242            0.0418       0.0135         
+  15       0.0324        0.0212            0.0419       0.0136         
+  20       0.0297        0.0190            0.0421       0.0138         
+  25       0.0277        0.0175            0.0425       0.0141         
+  30       0.0262        0.0167            0.0434       0.0148         
+  35       0.0253        0.0167            0.0449       0.0159         
+  40       0.0250        0.0174            0.0477       0.0178         
+  45       0.0253        0.0188            0.0522       0.0211         
+  50       0.0262        0.0210            0.0597       0.0266         
+  55       0.0277        0.0239            0.0719       0.0358         
+  60       0.0298        0.0276            0.0915       0.0513         
+  65       0.0474        0.0440            0.1230       0.0777         
+  70       0.0789        0.0744            0.1736       0.1228         
+  75       0.1313        0.1258            0.2557       0.2005         
+  80       0.2185        0.2128            0.3900       0.3355         
+  85       0.3636        0.3599            0.6143       0.5733         
+  90       0.0800        0.0800            0.9045       0.8931         
+
+Comparison figure: output/validation/e903_refl_compare.png
+
+         label       receptor           mode              G              Y              R      glare_min peak_retinal_wcm2
+az098      obs_ptt    aoi(smooth_arc)              0            488              0            488          0.975
+az098_e903_atm20 obs_ptt    solar_weighted+beer_lambert              0            488              0            488          1.110
+az098      west1_route_11 aoi(smooth_arc)              0            350              0            350          0.984
+az098_e903_atm20 west1_route_11 solar_weighted+beer_lambert              0            350              0            350          0.602
+az278      west1_route_1 aoi(smooth_arc)              0            152              0            152         11.506
+az278_e903_atm20 west1_route_1 solar_weighted+beer_lambert            152              0              0            152          0.848
+az278      west1_route_2 aoi(smooth_arc)              0            103              0            103          8.370
+az278_e903_atm20 west1_route_2 solar_weighted+beer_lambert              0            103              0            103          0.960
+=== RESULT: 36 passed, 2 failed (2026-09-22 22:10:01.945995) ===
+
+# ---- validate_e903.py run 2026-09-22 22:11:24.254215 ----
+
+R(AOI) comparison table (solar-weighted reflectance; E903 model over ASTM G173 direct DNI, [320,2500] nm):
+  AOI_deg  SGHAT_smooth  SGHAT_smooth_arc  E903_smooth  E903_smooth_arc
+  0        0.0441        0.0324            0.0418       0.0135         
+  5        0.0396        0.0279            0.0418       0.0135         
+  10       0.0357        0.0242            0.0418       0.0135         
+  15       0.0324        0.0212            0.0419       0.0136         
+  20       0.0297        0.0190            0.0421       0.0138         
+  25       0.0277        0.0175            0.0425       0.0141         
+  30       0.0262        0.0167            0.0434       0.0148         
+  35       0.0253        0.0167            0.0449       0.0159         
+  40       0.0250        0.0174            0.0477       0.0178         
+  45       0.0253        0.0188            0.0522       0.0211         
+  50       0.0262        0.0210            0.0597       0.0266         
+  55       0.0277        0.0239            0.0719       0.0358         
+  60       0.0298        0.0276            0.0915       0.0513         
+  65       0.0474        0.0440            0.1230       0.0777         
+  70       0.0789        0.0744            0.1736       0.1228         
+  75       0.1313        0.1258            0.2557       0.2005         
+  80       0.2185        0.2128            0.3900       0.3355         
+  85       0.3636        0.3599            0.6143       0.5733         
+  90       0.0800        0.0800            0.9045       0.8931         
+
+Comparison figure: output/validation/e903_refl_compare.png
+
+         label       receptor           mode              G              Y              R      glare_min peak_retinal_wcm2
+az098      obs_ptt    aoi(smooth_arc)              0            488              0            488          0.975
+az098_e903_atm20 obs_ptt    solar_weighted+beer_lambert              0            488              0            488          1.110
+az098      west1_route_11 aoi(smooth_arc)              0            350              0            350          0.984
+az098_e903_atm20 west1_route_11 solar_weighted+beer_lambert              0            350              0            350          0.602
+az278      west1_route_1 aoi(smooth_arc)              0            152              0            152         11.506
+az278_e903_atm20 west1_route_1 solar_weighted+beer_lambert            152              0              0            152          0.848
+az278      west1_route_2 aoi(smooth_arc)              0            103              0            103          8.370
+az278_e903_atm20 west1_route_2 solar_weighted+beer_lambert              0            103              0            103          0.960
+=== RESULT: 36 passed, 10 failed (2026-09-22 22:11:25.035585) ===
+
+# ---- validate_e903.py run 2026-09-22 22:11:59.222802 ----
+
+R(AOI) comparison table (solar-weighted reflectance; E903 model over ASTM G173 direct DNI, [320,2500] nm):
+  AOI_deg  SGHAT_smooth  SGHAT_smooth_arc  E903_smooth  E903_smooth_arc
+  0        0.0441        0.0324            0.0418       0.0135         
+  5        0.0396        0.0279            0.0418       0.0135         
+  10       0.0357        0.0242            0.0418       0.0135         
+  15       0.0324        0.0212            0.0419       0.0136         
+  20       0.0297        0.0190            0.0421       0.0138         
+  25       0.0277        0.0175            0.0425       0.0141         
+  30       0.0262        0.0167            0.0434       0.0148         
+  35       0.0253        0.0167            0.0449       0.0159         
+  40       0.0250        0.0174            0.0477       0.0178         
+  45       0.0253        0.0188            0.0522       0.0211         
+  50       0.0262        0.0210            0.0597       0.0266         
+  55       0.0277        0.0239            0.0719       0.0358         
+  60       0.0298        0.0276            0.0915       0.0513         
+  65       0.0474        0.0440            0.1230       0.0777         
+  70       0.0789        0.0744            0.1736       0.1228         
+  75       0.1313        0.1258            0.2557       0.2005         
+  80       0.2185        0.2128            0.3900       0.3355         
+  85       0.3636        0.3599            0.6143       0.5733         
+  90       0.0800        0.0800            0.9045       0.8931         
+
+Comparison figure: output/validation/e903_refl_compare.png
+
+         label       receptor           mode              G              Y              R      glare_min peak_retinal_wcm2
+az098      obs_ptt    aoi(smooth_arc)              0            488              0            488          0.975
+az098_e903_atm20 obs_ptt    solar_weighted+beer_lambert              0            488              0            488          1.110
+az098      west1_route_11 aoi(smooth_arc)              0            350              0            350          0.984
+az098_e903_atm20 west1_route_11 solar_weighted+beer_lambert              0            350              0            350          0.602
+az278      west1_route_1 aoi(smooth_arc)              0            152              0            152         11.506
+az278_e903_atm20 west1_route_1 solar_weighted+beer_lambert            152              0              0            152          0.848
+az278      west1_route_2 aoi(smooth_arc)              0            103              0            103          8.370
+az278_e903_atm20 west1_route_2 solar_weighted+beer_lambert              0            103              0            103          0.960
+=== RESULT: 44 passed, 2 failed (2026-09-22 22:12:00.045723) ===
+
+# ---- validate_e903.py run 2026-09-22 22:12:25.526713 ----
+
+R(AOI) comparison table (solar-weighted reflectance; E903 model over ASTM G173 direct DNI, [320,2500] nm):
+  AOI_deg  SGHAT_smooth  SGHAT_smooth_arc  E903_smooth  E903_smooth_arc
+  0        0.0441        0.0324            0.0418       0.0135         
+  5        0.0396        0.0279            0.0418       0.0135         
+  10       0.0357        0.0242            0.0418       0.0135         
+  15       0.0324        0.0212            0.0419       0.0136         
+  20       0.0297        0.0190            0.0421       0.0138         
+  25       0.0277        0.0175            0.0425       0.0141         
+  30       0.0262        0.0167            0.0434       0.0148         
+  35       0.0253        0.0167            0.0449       0.0159         
+  40       0.0250        0.0174            0.0477       0.0178         
+  45       0.0253        0.0188            0.0522       0.0211         
+  50       0.0262        0.0210            0.0597       0.0266         
+  55       0.0277        0.0239            0.0719       0.0358         
+  60       0.0298        0.0276            0.0915       0.0513         
+  65       0.0474        0.0440            0.1230       0.0777         
+  70       0.0789        0.0744            0.1736       0.1228         
+  75       0.1313        0.1258            0.2557       0.2005         
+  80       0.2185        0.2128            0.3900       0.3355         
+  85       0.3636        0.3599            0.6143       0.5733         
+  90       0.0800        0.0800            0.9045       0.8931         
+
+Comparison figure: output/validation/e903_refl_compare.png
+
+         label       receptor           mode              G              Y              R      glare_min peak_retinal_wcm2
+az098      obs_ptt    aoi(smooth_arc)              0            488              0            488          0.975
+az098_e903_atm20 obs_ptt    solar_weighted+beer_lambert              0            488              0            488          1.110
+az098      west1_route_11 aoi(smooth_arc)              0            350              0            350          0.984
+az098_e903_atm20 west1_route_11 solar_weighted+beer_lambert              0            350              0            350          0.602
+az278      west1_route_1 aoi(smooth_arc)              0            152              0            152         11.506
+az278_e903_atm20 west1_route_1 solar_weighted+beer_lambert            152              0              0            152          0.848
+az278      west1_route_2 aoi(smooth_arc)              0            103              0            103          8.370
+az278_e903_atm20 west1_route_2 solar_weighted+beer_lambert              0            103              0            103          0.960
+=== RESULT: 42 passed, 4 failed (2026-09-22 22:12:26.365633) ===
+
+# ---- validate_e903.py run 2026-09-22 22:13:05.765506 ----
+
+R(AOI) comparison table (solar-weighted reflectance; E903 model over ASTM G173 direct DNI, [320,2500] nm):
+  AOI_deg  SGHAT_smooth  SGHAT_smooth_arc  E903_smooth  E903_smooth_arc
+  0        0.0441        0.0324            0.0418       0.0135         
+  5        0.0396        0.0279            0.0418       0.0135         
+  10       0.0357        0.0242            0.0418       0.0135         
+  15       0.0324        0.0212            0.0419       0.0136         
+  20       0.0297        0.0190            0.0421       0.0138         
+  25       0.0277        0.0175            0.0425       0.0141         
+  30       0.0262        0.0167            0.0434       0.0148         
+  35       0.0253        0.0167            0.0449       0.0159         
+  40       0.0250        0.0174            0.0477       0.0178         
+  45       0.0253        0.0188            0.0522       0.0211         
+  50       0.0262        0.0210            0.0597       0.0266         
+  55       0.0277        0.0239            0.0719       0.0358         
+  60       0.0298        0.0276            0.0915       0.0513         
+  65       0.0474        0.0440            0.1230       0.0777         
+  70       0.0789        0.0744            0.1736       0.1228         
+  75       0.1313        0.1258            0.2557       0.2005         
+  80       0.2185        0.2128            0.3900       0.3355         
+  85       0.3636        0.3599            0.6143       0.5733         
+  90       0.0800        0.0800            0.9045       0.8931         
+
+Comparison figure: output/validation/e903_refl_compare.png
+
+         label       receptor           mode              G              Y              R      glare_min peak_retinal_wcm2
+az098      obs_ptt    aoi(smooth_arc)              0            488              0            488          0.975
+az098_e903_atm20 obs_ptt    solar_weighted+beer_lambert              0            488              0            488          1.110
+az098      west1_route_11 aoi(smooth_arc)              0            350              0            350          0.984
+az098_e903_atm20 west1_route_11 solar_weighted+beer_lambert              0            350              0            350          0.602
+az278      west1_route_1 aoi(smooth_arc)              0            152              0            152         11.506
+az278_e903_atm20 west1_route_1 solar_weighted+beer_lambert            152              0              0            152          0.848
+az278      west1_route_2 aoi(smooth_arc)              0            103              0            103          8.370
+az278_e903_atm20 west1_route_2 solar_weighted+beer_lambert              0            103              0            103          0.960
+=== RESULT: 46 passed, 0 failed (2026-09-22 22:13:06.585953) ===
+
+# ---- validate_e903.py run 2026-09-25 00:08:17.656704 ----
+
+R(AOI) comparison table (solar-weighted reflectance; E903 model over ASTM G173 direct DNI, [320,2500] nm):
+  AOI_deg  SGHAT_smooth  SGHAT_smooth_arc  E903_smooth  E903_smooth_arc
+  0        0.0441        0.0324            0.0418       0.0135         
+  5        0.0396        0.0279            0.0418       0.0135         
+  10       0.0357        0.0242            0.0418       0.0135         
+  15       0.0324        0.0212            0.0419       0.0136         
+  20       0.0297        0.0190            0.0421       0.0138         
+  25       0.0277        0.0175            0.0425       0.0141         
+  30       0.0262        0.0167            0.0434       0.0148         
+  35       0.0253        0.0167            0.0449       0.0159         
+  40       0.0250        0.0174            0.0477       0.0178         
+  45       0.0253        0.0188            0.0522       0.0211         
+  50       0.0262        0.0210            0.0597       0.0266         
+  55       0.0277        0.0239            0.0719       0.0358         
+  60       0.0298        0.0276            0.0915       0.0513         
+  65       0.0474        0.0440            0.1230       0.0777         
+  70       0.0789        0.0744            0.1736       0.1228         
+  75       0.1313        0.1258            0.2557       0.2005         
+  80       0.2185        0.2128            0.3900       0.3355         
+  85       0.3636        0.3599            0.6143       0.5733         
+  90       0.0800        0.0800            0.9045       0.8931         
+
+Comparison figure: output/validation/e903_refl_compare.png
+
+         label       receptor           mode              G              Y              R      glare_min peak_retinal_wcm2
+az098      obs_ptt    aoi(smooth_arc)              0            488              0            488          0.975
+az098_e903_atm20 obs_ptt    solar_weighted+beer_lambert              0            488              0            488          1.110
+az098      west1_route_11 aoi(smooth_arc)              0            350              0            350          0.984
+az098_e903_atm20 west1_route_11 solar_weighted+beer_lambert              0            350              0            350          0.602
+az278      west1_route_1 aoi(smooth_arc)              0            152              0            152         11.506
+az278_e903_atm20 west1_route_1 solar_weighted+beer_lambert            152              0              0            152          0.848
+az278      west1_route_2 aoi(smooth_arc)              0            103              0            103          8.370
+az278_e903_atm20 west1_route_2 solar_weighted+beer_lambert              0            103              0            103          0.960
+=== RESULT: 46 passed, 0 failed (2026-09-25 00:08:19.030774) ===
+
+# ---- validate_e903.py run 2026-09-25 00:09:33.088761 ----
+
+R(AOI) comparison table (solar-weighted reflectance; E903 model over ASTM G173 direct DNI, [320,2500] nm):
+  AOI_deg  SGHAT_smooth  SGHAT_smooth_arc  E903_smooth  E903_smooth_arc
+  0        0.0441        0.0324            0.0418       0.0135         
+  5        0.0396        0.0279            0.0418       0.0135         
+  10       0.0357        0.0242            0.0418       0.0135         
+  15       0.0324        0.0212            0.0419       0.0136         
+  20       0.0297        0.0190            0.0421       0.0138         
+  25       0.0277        0.0175            0.0425       0.0141         
+  30       0.0262        0.0167            0.0434       0.0148         
+  35       0.0253        0.0167            0.0449       0.0159         
+  40       0.0250        0.0174            0.0477       0.0178         
+  45       0.0253        0.0188            0.0522       0.0211         
+  50       0.0262        0.0210            0.0597       0.0266         
+  55       0.0277        0.0239            0.0719       0.0358         
+  60       0.0298        0.0276            0.0915       0.0513         
+  65       0.0474        0.0440            0.1230       0.0777         
+  70       0.0789        0.0744            0.1736       0.1228         
+  75       0.1313        0.1258            0.2557       0.2005         
+  80       0.2185        0.2128            0.3900       0.3355         
+  85       0.3636        0.3599            0.6143       0.5733         
+  90       0.0800        0.0800            0.9045       0.8931         
+
+Comparison figure: output/validation/e903_refl_compare.png
+
+         label       receptor           mode              G              Y              R      glare_min peak_retinal_wcm2
+az098      obs_ptt    aoi(smooth_arc)              0            488              0            488          0.975
+az098_e903_atm20 obs_ptt    solar_weighted+beer_lambert              0            488              0            488          1.110
+az098      west1_route_11 aoi(smooth_arc)              0            350              0            350          0.984
+az098_e903_atm20 west1_route_11 solar_weighted+beer_lambert              0            350              0            350          0.602
+az278      west1_route_1 aoi(smooth_arc)              0            152              0            152         11.506
+az278_e903_atm20 west1_route_1 solar_weighted+beer_lambert            152              0              0            152          0.848
+az278      west1_route_2 aoi(smooth_arc)              0            103              0            103          8.370
+az278_e903_atm20 west1_route_2 solar_weighted+beer_lambert              0            103              0            103          0.960
+=== RESULT: 46 passed, 0 failed (2026-09-25 00:09:34.121267) ===
+
+# ---- validate_e903.py run 2026-09-25 01:33:33.697707 ----
+
+R(AOI) comparison table (solar-weighted reflectance; E903 model over ASTM G173 direct DNI, [320,2500] nm):
+  AOI_deg  SGHAT_smooth  SGHAT_smooth_arc  E903_smooth  E903_smooth_arc
+  0        0.0441        0.0324            0.0418       0.0135         
+  5        0.0396        0.0279            0.0418       0.0135         
+  10       0.0357        0.0242            0.0418       0.0135         
+  15       0.0324        0.0212            0.0419       0.0136         
+  20       0.0297        0.0190            0.0421       0.0138         
+  25       0.0277        0.0175            0.0425       0.0141         
+  30       0.0262        0.0167            0.0434       0.0148         
+  35       0.0253        0.0167            0.0449       0.0159         
+  40       0.0250        0.0174            0.0477       0.0178         
+  45       0.0253        0.0188            0.0522       0.0211         
+  50       0.0262        0.0210            0.0597       0.0266         
+  55       0.0277        0.0239            0.0719       0.0358         
+  60       0.0298        0.0276            0.0915       0.0513         
+  65       0.0474        0.0440            0.1230       0.0777         
+  70       0.0789        0.0744            0.1736       0.1228         
+  75       0.1313        0.1258            0.2557       0.2005         
+  80       0.2185        0.2128            0.3900       0.3355         
+  85       0.3636        0.3599            0.6143       0.5733         
+  90       0.0800        0.0800            0.9045       0.8931         
+
+Comparison figure: output/validation/e903_refl_compare.png
+
+         label       receptor           mode              G              Y              R      glare_min peak_retinal_wcm2
+az098      obs_ptt    aoi(smooth_arc)              0            489              0            489          0.976
+az098_e903_atm20 obs_ptt    solar_weighted+beer_lambert              0            489              0            489          1.110
+az098      west1_route_11 aoi(smooth_arc)              0            351              0            351          0.984
+az098_e903_atm20 west1_route_11 solar_weighted+beer_lambert              0            351              0            351          0.603
+az278      west1_route_1 aoi(smooth_arc)              0            152              0            152         11.408
+az278_e903_atm20 west1_route_1 solar_weighted+beer_lambert            152              0              0            152          0.847
+az278      west1_route_2 aoi(smooth_arc)              0            104              0            104          8.327
+az278_e903_atm20 west1_route_2 solar_weighted+beer_lambert              0            104              0            104          0.960
+=== RESULT: 46 passed, 0 failed (2026-09-25 01:33:34.561878) ===
+
+# ---- validate_e903.py run 2026-09-25 19:35:42.038395 ----
+
+R(AOI) comparison table (solar-weighted reflectance; E903 model over IEC 60904-3:2019 Table 1 direct DNI, [320,2500] nm):
+  AOI_deg  SGHAT_smooth  SGHAT_smooth_arc  E903_smooth  E903_smooth_arc
+  0        0.0441        0.0324            0.0418       0.0135         
+  5        0.0396        0.0279            0.0418       0.0135         
+  10       0.0357        0.0242            0.0418       0.0135         
+  15       0.0324        0.0212            0.0419       0.0136         
+  20       0.0297        0.0190            0.0421       0.0138         
+  25       0.0277        0.0175            0.0425       0.0141         
+  30       0.0262        0.0167            0.0434       0.0147         
+  35       0.0253        0.0167            0.0449       0.0158         
+  40       0.0250        0.0174            0.0477       0.0177         
+  45       0.0253        0.0188            0.0522       0.0210         
+  50       0.0262        0.0210            0.0597       0.0264         
+  55       0.0277        0.0239            0.0719       0.0356         
+  60       0.0298        0.0276            0.0915       0.0511         
+  65       0.0474        0.0440            0.1230       0.0775         
+  70       0.0789        0.0744            0.1737       0.1225         
+  75       0.1313        0.1258            0.2557       0.2001         
+  80       0.2185        0.2128            0.3900       0.3351         
+  85       0.3636        0.3599            0.6143       0.5730         
+  90       0.0800        0.0800            0.9045       0.8931         
+
+Comparison figure: output/validation/e903_refl_compare.png
+
+         label       receptor           mode              G              Y              R      glare_min peak_retinal_wcm2
+az098      obs_ptt    aoi(smooth_arc)              0            489              0            489          0.976
+az098_e903_atm20 obs_ptt    solar_weighted+beer_lambert              0            489              0            489          1.110
+az098      west1_route_11 aoi(smooth_arc)              0            351              0            351          0.984
+az098_e903_atm20 west1_route_11 solar_weighted+beer_lambert              0            351              0            351          0.603
+az278      west1_route_1 aoi(smooth_arc)              0            152              0            152         11.408
+az278_e903_atm20 west1_route_1 solar_weighted+beer_lambert            152              0              0            152          0.847
+az278      west1_route_2 aoi(smooth_arc)              0            104              0            104          8.327
+az278_e903_atm20 west1_route_2 solar_weighted+beer_lambert              0            104              0            104          0.960
+=== RESULT: 46 passed, 0 failed (2026-09-25 19:35:43.009852) ===
+
+# ---- validate_e903.py run 2026-09-25 22:36:58.756539 ----
+
+R(AOI) comparison table (solar-weighted reflectance; E903 model over IEC 60904-3:2019 Table 1 direct DNI, [320,2500] nm):
+  AOI_deg  SGHAT_smooth  SGHAT_smooth_arc  E903_smooth  E903_smooth_arc
+  0        0.0441        0.0324            0.0418       0.0135         
+  5        0.0396        0.0279            0.0418       0.0135         
+  10       0.0357        0.0242            0.0418       0.0135         
+  15       0.0324        0.0212            0.0419       0.0136         
+  20       0.0297        0.0190            0.0421       0.0138         
+  25       0.0277        0.0175            0.0425       0.0141         
+  30       0.0262        0.0167            0.0434       0.0147         
+  35       0.0253        0.0167            0.0449       0.0158         
+  40       0.0250        0.0174            0.0477       0.0177         
+  45       0.0253        0.0188            0.0522       0.0210         
+  50       0.0262        0.0210            0.0597       0.0264         
+  55       0.0277        0.0239            0.0719       0.0356         
+  60       0.0298        0.0276            0.0915       0.0511         
+  65       0.0474        0.0440            0.1230       0.0775         
+  70       0.0789        0.0744            0.1737       0.1225         
+  75       0.1313        0.1258            0.2557       0.2001         
+  80       0.2185        0.2128            0.3900       0.3351         
+  85       0.3636        0.3599            0.6143       0.5730         
+  90       0.0800        0.0800            0.9045       0.8931         
+
+Comparison figure: output/validation/e903_refl_compare.png
+
+         label       receptor           mode              G              Y              R      glare_min peak_retinal_wcm2
+az098      obs_ptt    solar_weighted              0            489              0            489          0.976
+az098_e903_atm20 obs_ptt    solar_weighted+beer_lambert              0            489              0            489          1.109
+az098      west1_route_11 solar_weighted              0            351              0            351          0.984
+az098_e903_atm20 west1_route_11 solar_weighted+beer_lambert              0            351              0            351          0.602
+az278      west1_route_1 solar_weighted              0            152              0            152         11.408
+az278_e903_atm20 west1_route_1 solar_weighted+beer_lambert            152              0              0            152          0.846
+az278      west1_route_2 solar_weighted              0            104              0            104          8.327
+az278_e903_atm20 west1_route_2 solar_weighted+beer_lambert              0            104              0            104          0.959
+=== RESULT: 41 passed, 5 failed (2026-09-25 22:36:59.823076) ===
+
+# ---- validate_e903.py run 2026-09-25 22:46:52.386669 ----
+
+R(AOI) comparison table (solar-weighted reflectance; E903 model over IEC 60904-3:2019 Table 1 direct DNI, [320,2500] nm):
+  AOI_deg  SGHAT_smooth  SGHAT_smooth_arc  E903_smooth  E903_smooth_arc
+  0        0.0441        0.0324            0.0418       0.0135         
+  5        0.0396        0.0279            0.0418       0.0135         
+  10       0.0357        0.0242            0.0418       0.0135         
+  15       0.0324        0.0212            0.0419       0.0136         
+  20       0.0297        0.0190            0.0421       0.0138         
+  25       0.0277        0.0175            0.0425       0.0141         
+  30       0.0262        0.0167            0.0434       0.0147         
+  35       0.0253        0.0167            0.0449       0.0158         
+  40       0.0250        0.0174            0.0477       0.0177         
+  45       0.0253        0.0188            0.0522       0.0210         
+  50       0.0262        0.0210            0.0597       0.0264         
+  55       0.0277        0.0239            0.0719       0.0356         
+  60       0.0298        0.0276            0.0915       0.0511         
+  65       0.0474        0.0440            0.1230       0.0775         
+  70       0.0789        0.0744            0.1737       0.1225         
+  75       0.1313        0.1258            0.2557       0.2001         
+  80       0.2185        0.2128            0.3900       0.3351         
+  85       0.3636        0.3599            0.6143       0.5730         
+  90       0.0800        0.0800            0.9045       0.8931         
+
+Comparison figure: output/validation/e903_refl_compare.png
+
+         label       receptor           mode              G              Y              R      glare_min peak_retinal_wcm2
+az098      obs_ptt    solar_weighted              0            489              0            489          1.537
+az098_e903_atm20 obs_ptt    solar_weighted+beer_lambert              0            489              0            489          1.109
+az098      west1_route_11 solar_weighted              0            351              0            351          1.550
+az098_e903_atm20 west1_route_11 solar_weighted+beer_lambert              0            351              0            351          0.602
+az278      west1_route_1 solar_weighted              0            152              0            152         17.985
+az278_e903_atm20 west1_route_1 solar_weighted+beer_lambert            152              0              0            152          0.846
+az278      west1_route_2 solar_weighted              0            104              0            104         13.128
+az278_e903_atm20 west1_route_2 solar_weighted+beer_lambert              0            104              0            104          0.959
+=== RESULT: 46 passed, 0 failed (2026-09-25 22:46:53.369355) ===
+
+# ---- validate_e903.py run 2026-09-25 23:38:38.915267 ----
+
+R(AOI) comparison table (solar-weighted reflectance; E903 model over IEC 60904-3:2019 Table 1 direct DNI, [320,2500] nm):
+  AOI_deg  SGHAT_smooth  SGHAT_smooth_arc  E903_smooth  E903_smooth_arc
+  0        0.0441        0.0324            0.0418       0.0135         
+  5        0.0396        0.0279            0.0418       0.0135         
+  10       0.0357        0.0242            0.0418       0.0135         
+  15       0.0324        0.0212            0.0419       0.0136         
+  20       0.0297        0.0190            0.0421       0.0138         
+  25       0.0277        0.0175            0.0425       0.0141         
+  30       0.0262        0.0167            0.0434       0.0147         
+  35       0.0253        0.0167            0.0449       0.0158         
+  40       0.0250        0.0174            0.0477       0.0177         
+  45       0.0253        0.0188            0.0522       0.0210         
+  50       0.0262        0.0210            0.0597       0.0264         
+  55       0.0277        0.0239            0.0719       0.0356         
+  60       0.0298        0.0276            0.0915       0.0511         
+  65       0.0474        0.0440            0.1230       0.0775         
+  70       0.0789        0.0744            0.1737       0.1225         
+  75       0.1313        0.1258            0.2557       0.2001         
+  80       0.2185        0.2128            0.3900       0.3351         
+  85       0.3636        0.3599            0.6143       0.5730         
+  90       0.0800        0.0800            0.9045       0.8931         
+
+Comparison figure: output/validation/e903_refl_compare.png
+  mean atmospheric transmittance by receptor distance:
+    az098_e903_atm20/obs_ptt          tau(mean) = 0.7241
+    az098_e903_atm20/west1_route_11   tau(mean) = 0.3856
+    az278_e903_atm20/west1_route_2    tau(mean) = 0.0741
+    az278_e903_atm20/west1_route_1    tau(mean) = 0.0485
+=== RESULT: 39 passed, 4 failed (2026-09-25 23:38:39.835160) ===
+
+# ---- validate_e903.py run 2026-09-25 23:38:48.496772 ----
+
+R(AOI) comparison table (solar-weighted reflectance; E903 model over IEC 60904-3:2019 Table 1 direct DNI, [320,2500] nm):
+  AOI_deg  SGHAT_smooth  SGHAT_smooth_arc  E903_smooth  E903_smooth_arc
+  0        0.0441        0.0324            0.0418       0.0135         
+  5        0.0396        0.0279            0.0418       0.0135         
+  10       0.0357        0.0242            0.0418       0.0135         
+  15       0.0324        0.0212            0.0419       0.0136         
+  20       0.0297        0.0190            0.0421       0.0138         
+  25       0.0277        0.0175            0.0425       0.0141         
+  30       0.0262        0.0167            0.0434       0.0147         
+  35       0.0253        0.0167            0.0449       0.0158         
+  40       0.0250        0.0174            0.0477       0.0177         
+  45       0.0253        0.0188            0.0522       0.0210         
+  50       0.0262        0.0210            0.0597       0.0264         
+  55       0.0277        0.0239            0.0719       0.0356         
+  60       0.0298        0.0276            0.0915       0.0511         
+  65       0.0474        0.0440            0.1230       0.0775         
+  70       0.0789        0.0744            0.1737       0.1225         
+  75       0.1313        0.1258            0.2557       0.2001         
+  80       0.2185        0.2128            0.3900       0.3351         
+  85       0.3636        0.3599            0.6143       0.5730         
+  90       0.0800        0.0800            0.9045       0.8931         
+
+Comparison figure: output/validation/e903_refl_compare.png
+  mean atmospheric transmittance by receptor distance:
+    az098_e903_atm20/obs_ptt          tau(mean) = 0.7241
+    az098_e903_atm20/west1_route_11   tau(mean) = 0.3856
+    az278_e903_atm20/west1_route_2    tau(mean) = 0.0741
+    az278_e903_atm20/west1_route_1    tau(mean) = 0.0485
+=== RESULT: 43 passed, 0 failed (2026-09-25 23:38:49.394921) ===
+
+# ---- validate_e903.py run 2026-09-26 00:57:23.796900 ----
+
+R(AOI) comparison table (solar-weighted reflectance; E903 model over IEC 60904-3:2019 Table 1 direct DNI, [320,2500] nm):
+  AOI_deg  SGHAT_smooth  SGHAT_smooth_arc  E903_smooth  E903_smooth_arc
+  0        0.0441        0.0324            0.0418       0.0135         
+  5        0.0396        0.0279            0.0418       0.0135         
+  10       0.0357        0.0242            0.0418       0.0135         
+  15       0.0324        0.0212            0.0419       0.0136         
+  20       0.0297        0.0190            0.0421       0.0138         
+  25       0.0277        0.0175            0.0425       0.0141         
+  30       0.0262        0.0167            0.0434       0.0147         
+  35       0.0253        0.0167            0.0449       0.0158         
+  40       0.0250        0.0174            0.0477       0.0177         
+  45       0.0253        0.0188            0.0522       0.0210         
+  50       0.0262        0.0210            0.0597       0.0264         
+  55       0.0277        0.0239            0.0719       0.0356         
+  60       0.0298        0.0276            0.0915       0.0511         
+  65       0.0474        0.0440            0.1230       0.0775         
+  70       0.0789        0.0744            0.1737       0.1225         
+  75       0.1313        0.1258            0.2557       0.2001         
+  80       0.2185        0.2128            0.3900       0.3351         
+  85       0.3636        0.3599            0.6143       0.5730         
+  90       0.0800        0.0800            0.9045       0.8931         
+
+Comparison figure: output/validation/e903_refl_compare.png
+  mean atmospheric transmittance by receptor distance:
+    az098_e903_t10/obs_ptt          tau(mean) = 0.7241
+    az098_e903_t10/west1_route_11   tau(mean) = 0.3856
+    az278_e903_t10/west1_route_2    tau(mean) = 0.0741
+    az278_e903_t10/west1_route_1    tau(mean) = 0.0485
+=== RESULT: 78 passed, 0 failed (2026-09-26 00:57:24.769768) ===
+
+# ---- validate_e903.py run 2026-09-26 11:06:10.786851 ----
+
+R(AOI) comparison table (solar-weighted reflectance; E903 model over IEC 60904-3:2019 Table 1 direct DNI, [320,2500] nm):
+  AOI_deg  SGHAT_smooth  SGHAT_smooth_arc  E903_smooth  E903_smooth_arc
+  0        0.0441        0.0324            0.0418       0.0135         
+  5        0.0396        0.0279            0.0418       0.0135         
+  10       0.0357        0.0242            0.0418       0.0135         
+  15       0.0324        0.0212            0.0419       0.0136         
+  20       0.0297        0.0190            0.0421       0.0138         
+  25       0.0277        0.0175            0.0425       0.0141         
+  30       0.0262        0.0167            0.0434       0.0147         
+  35       0.0253        0.0167            0.0449       0.0158         
+  40       0.0250        0.0174            0.0477       0.0177         
+  45       0.0253        0.0188            0.0522       0.0210         
+  50       0.0262        0.0210            0.0597       0.0264         
+  55       0.0277        0.0239            0.0719       0.0356         
+  60       0.0298        0.0276            0.0915       0.0511         
+  65       0.0474        0.0440            0.1230       0.0775         
+  70       0.0789        0.0744            0.1737       0.1225         
+  75       0.1313        0.1258            0.2557       0.2001         
+  80       0.2185        0.2128            0.3900       0.3351         
+  85       0.3636        0.3599            0.6143       0.5730         
+  90       0.0800        0.0800            0.9045       0.8931         
+
+Comparison figure: output/validation/e903_refl_compare.png
+  mean atmospheric transmittance by receptor distance:
+    az098_e903_t10/obs_ptt          tau(mean) = 0.7241
+    az098_e903_t10/west1_route_11   tau(mean) = 0.3856
+    az278_e903_t10/west1_route_2    tau(mean) = 0.0741
+    az278_e903_t10/west1_route_1    tau(mean) = 0.0485
+=== RESULT: 78 passed, 0 failed (2026-09-26 11:06:11.816369) ===
+
+# ---- validate_e903.py run 2026-09-26 12:17:06.128572 ----
+
+R(AOI) comparison table (solar-weighted reflectance; E903 model over IEC 60904-3:2019 Table 1 direct DNI, [320,2500] nm):
+  AOI_deg  SGHAT_smooth  SGHAT_smooth_arc  E903_smooth  E903_smooth_arc
+  0        0.0441        0.0324            0.0418       0.0135         
+  5        0.0396        0.0279            0.0418       0.0135         
+  10       0.0357        0.0242            0.0418       0.0135         
+  15       0.0324        0.0212            0.0419       0.0136         
+  20       0.0297        0.0190            0.0421       0.0138         
+  25       0.0277        0.0175            0.0425       0.0141         
+  30       0.0262        0.0167            0.0434       0.0147         
+  35       0.0253        0.0167            0.0449       0.0158         
+  40       0.0250        0.0174            0.0477       0.0177         
+  45       0.0253        0.0188            0.0522       0.0210         
+  50       0.0262        0.0210            0.0597       0.0264         
+  55       0.0277        0.0239            0.0719       0.0356         
+  60       0.0298        0.0276            0.0915       0.0511         
+  65       0.0474        0.0440            0.1230       0.0775         
+  70       0.0789        0.0744            0.1737       0.1225         
+  75       0.1313        0.1258            0.2557       0.2001         
+  80       0.2185        0.2128            0.3900       0.3351         
+  85       0.3636        0.3599            0.6143       0.5730         
+  90       0.0800        0.0800            0.9045       0.8931         
+
+Comparison figure: output/validation/e903_refl_compare.png
+  mean atmospheric transmittance by receptor distance:
+    az098_e903_t10/obs_ptt          tau(mean) = 0.7241
+    az098_e903_t10/west1_route_11   tau(mean) = 0.3856
+    az278_e903_t10/west1_route_2    tau(mean) = 0.0741
+    az278_e903_t10/west1_route_1    tau(mean) = 0.0485
+=== RESULT: 78 passed, 0 failed (2026-09-26 12:17:07.093325) ===
+
+# ---- validate_e903.py run 2026-09-26 23:41:40.105194 ----
+
+R(AOI) comparison table (solar-weighted reflectance; E903 model over IEC 60904-3:2019 Table 1 direct DNI, [320,2500] nm):
+  AOI_deg  SGHAT_smooth  SGHAT_smooth_arc  E903_smooth  E903_smooth_arc
+  0        0.0441        0.0324            0.0418       0.0135         
+  5        0.0396        0.0279            0.0418       0.0135         
+  10       0.0357        0.0242            0.0418       0.0135         
+  15       0.0324        0.0212            0.0419       0.0136         
+  20       0.0297        0.0190            0.0421       0.0138         
+  25       0.0277        0.0175            0.0425       0.0141         
+  30       0.0262        0.0167            0.0434       0.0147         
+  35       0.0253        0.0167            0.0449       0.0158         
+  40       0.0250        0.0174            0.0477       0.0177         
+  45       0.0253        0.0188            0.0522       0.0210         
+  50       0.0262        0.0210            0.0597       0.0264         
+  55       0.0277        0.0239            0.0719       0.0356         
+  60       0.0298        0.0276            0.0915       0.0511         
+  65       0.0474        0.0440            0.1230       0.0775         
+  70       0.0789        0.0744            0.1737       0.1225         
+  75       0.1313        0.1258            0.2557       0.2001         
+  80       0.2185        0.2128            0.3900       0.3351         
+  85       0.3636        0.3599            0.6143       0.5730         
+  90       0.0800        0.0800            0.9045       0.8931         
+
+Comparison figure: output/validation/e903_refl_compare.png
+  mean atmospheric transmittance by receptor distance:
+    az098_e903_t10/obs_ptt          tau(mean) = 0.7241
+    az098_e903_t10/west1_route_11   tau(mean) = 0.3856
+    az278_e903_t10/west1_route_2    tau(mean) = 0.0741
+    az278_e903_t10/west1_route_1    tau(mean) = 0.0485
+=== RESULT: 78 passed, 0 failed (2026-09-26 23:41:41.082271) ===
+
+# ---- validate_e903.py run 2026-09-27 01:34:16.429740 ----
+
+R(AOI) comparison table (solar-weighted reflectance; E903 model over IEC 60904-3:2019 Table 1 direct DNI, [320,2500] nm):
+  AOI_deg  SGHAT_smooth  SGHAT_smooth_arc  E903_smooth  E903_smooth_arc
+  0        0.0441        0.0324            0.0418       0.0135         
+  5        0.0396        0.0279            0.0418       0.0135         
+  10       0.0357        0.0242            0.0418       0.0135         
+  15       0.0324        0.0212            0.0419       0.0136         
+  20       0.0297        0.0190            0.0421       0.0138         
+  25       0.0277        0.0175            0.0425       0.0141         
+  30       0.0262        0.0167            0.0434       0.0147         
+  35       0.0253        0.0167            0.0449       0.0158         
+  40       0.0250        0.0174            0.0477       0.0177         
+  45       0.0253        0.0188            0.0522       0.0210         
+  50       0.0262        0.0210            0.0597       0.0264         
+  55       0.0277        0.0239            0.0719       0.0356         
+  60       0.0298        0.0276            0.0915       0.0511         
+  65       0.0474        0.0440            0.1230       0.0775         
+  70       0.0789        0.0744            0.1737       0.1225         
+  75       0.1313        0.1258            0.2557       0.2001         
+  80       0.2185        0.2128            0.3900       0.3351         
+  85       0.3636        0.3599            0.6143       0.5730         
+  90       0.0800        0.0800            0.9045       0.8931         
+
+Comparison figure: output/validation/e903_refl_compare.png
+  mean atmospheric transmittance by receptor distance:
+    az098_e903_t10/obs_ptt          tau(mean) = 0.7241
+    az098_e903_t10/west1_route_11   tau(mean) = 0.3856
+    az278_e903_t10/west1_route_2    tau(mean) = 0.0741
+    az278_e903_t10/west1_route_1    tau(mean) = 0.0485
+=== RESULT: 78 passed, 0 failed (2026-09-27 01:34:17.443106) ===
+
+# ---- validate_e903.py run 2026-09-27 14:25:51.782608 ----
+
+R(AOI) comparison table (solar-weighted reflectance; E903 model over IEC 60904-3:2019 Table 1 direct DNI, [320,2500] nm):
+  AOI_deg  SGHAT_smooth  SGHAT_smooth_arc  E903_smooth  E903_smooth_arc
+  0        0.0441        0.0324            0.0418       0.0135         
+  5        0.0396        0.0279            0.0418       0.0135         
+  10       0.0357        0.0242            0.0418       0.0135         
+  15       0.0324        0.0212            0.0419       0.0136         
+  20       0.0297        0.0190            0.0421       0.0138         
+  25       0.0277        0.0175            0.0425       0.0141         
+  30       0.0262        0.0167            0.0434       0.0147         
+  35       0.0253        0.0167            0.0449       0.0158         
+  40       0.0250        0.0174            0.0477       0.0177         
+  45       0.0253        0.0188            0.0522       0.0210         
+  50       0.0262        0.0210            0.0597       0.0264         
+  55       0.0277        0.0239            0.0719       0.0356         
+  60       0.0298        0.0276            0.0915       0.0511         
+  65       0.0474        0.0440            0.1230       0.0775         
+  70       0.0789        0.0744            0.1737       0.1225         
+  75       0.1313        0.1258            0.2557       0.2001         
+  80       0.2185        0.2128            0.3900       0.3351         
+  85       0.3636        0.3599            0.6143       0.5730         
+  90       0.0800        0.0800            0.9045       0.8931         
+
+Comparison figure: output/validation/e903_refl_compare.png
+  mean atmospheric transmittance by receptor distance:
+    az098_e903_t10/obs_ptt          tau(mean) = 0.7241
+    az098_e903_t10/west1_route_11   tau(mean) = 0.3856
+    az278_e903_t10/west1_route_2    tau(mean) = 0.0741
+    az278_e903_t10/west1_route_1    tau(mean) = 0.0485
+=== RESULT: 78 passed, 0 failed (2026-09-27 14:25:52.784615) ===
+
+# ---- validate_e903.py run 2026-10-03 15:11:07.559888 ----
+
+R(AOI) comparison table (solar-weighted reflectance; E903 model over IEC 60904-3:2019 Table 1 direct DNI, [320,2500] nm):
+  AOI_deg  SGHAT_smooth  SGHAT_smooth_arc  E903_smooth  E903_smooth_arc
+  0        0.0441        0.0324            0.0418       0.0118         
+  5        0.0396        0.0279            0.0418       0.0118         
+  10       0.0357        0.0242            0.0418       0.0118         
+  15       0.0324        0.0212            0.0419       0.0119         
+  20       0.0297        0.0190            0.0421       0.0121         
+  25       0.0277        0.0175            0.0425       0.0124         
+  30       0.0262        0.0167            0.0434       0.0130         
+  35       0.0253        0.0167            0.0449       0.0139         
+  40       0.0250        0.0174            0.0477       0.0156         
+  45       0.0253        0.0188            0.0522       0.0184         
+  50       0.0262        0.0210            0.0597       0.0230         
+  55       0.0277        0.0239            0.0719       0.0307         
+  60       0.0298        0.0276            0.0915       0.0441         
+  65       0.0474        0.0440            0.1230       0.0673         
+  70       0.0789        0.0744            0.1737       0.1081         
+  75       0.1313        0.1258            0.2557       0.1806         
+  80       0.2185        0.2128            0.3900       0.3114         
+  85       0.3636        0.3599            0.6143       0.5509         
+  90       0.0800        0.0800            0.9045       0.8856         
+
+Comparison figure: output/validation/e903_refl_compare.png
+  mean atmospheric transmittance by receptor distance:
+    az098_e903_t10/obs_ptt          tau(mean) = 0.7233
+    az098_e903_t10/west1_route_11   tau(mean) = 0.3857
+    az278_e903_t10/west1_route_2    tau(mean) = 0.0741
+    az278_e903_t10/west1_route_1    tau(mean) = 0.0485
+=== RESULT: 78 passed, 0 failed (2026-10-03 15:11:08.574117) ===
+
+# ---- validate_e903.py run 2026-10-03 15:11:56.135300 ----
+
+R(AOI) comparison table (solar-weighted reflectance; E903 model over IEC 60904-3:2019 Table 1 direct DNI, [320,2500] nm):
+  AOI_deg  SGHAT_smooth  SGHAT_smooth_arc  E903_smooth  E903_smooth_arc
+  0        0.0441        0.0324            0.0418       0.0118         
+  5        0.0396        0.0279            0.0418       0.0118         
+  10       0.0357        0.0242            0.0418       0.0118         
+  15       0.0324        0.0212            0.0419       0.0119         
+  20       0.0297        0.0190            0.0421       0.0121         
+  25       0.0277        0.0175            0.0425       0.0124         
+  30       0.0262        0.0167            0.0434       0.0130         
+  35       0.0253        0.0167            0.0449       0.0139         
+  40       0.0250        0.0174            0.0477       0.0156         
+  45       0.0253        0.0188            0.0522       0.0184         
+  50       0.0262        0.0210            0.0597       0.0230         
+  55       0.0277        0.0239            0.0719       0.0307         
+  60       0.0298        0.0276            0.0915       0.0441         
+  65       0.0474        0.0440            0.1230       0.0673         
+  70       0.0789        0.0744            0.1737       0.1081         
+  75       0.1313        0.1258            0.2557       0.1806         
+  80       0.2185        0.2128            0.3900       0.3114         
+  85       0.3636        0.3599            0.6143       0.5509         
+  90       0.0800        0.0800            0.9045       0.8856         
+
+Comparison figure: output/validation/e903_refl_compare.png
+  mean atmospheric transmittance by receptor distance:
+    az098_e903_t10/obs_ptt          tau(mean) = 0.7233
+    az098_e903_t10/west1_route_11   tau(mean) = 0.3857
+    az278_e903_t10/west1_route_2    tau(mean) = 0.0741
+    az278_e903_t10/west1_route_1    tau(mean) = 0.0485
+=== RESULT: 78 passed, 0 failed (2026-10-03 15:11:57.128110) ===

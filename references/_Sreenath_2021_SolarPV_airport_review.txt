@@ -1,0 +1,1425 @@
+Solar Energy 216 (2021) 439–451
+Available online 5 February 2021
+0038-092X/© 2021 International Solar Energy Society. Published by Elsevier Ltd. All rights reserved.
+Review 
+Solar PV in the airport environment: A review of glare assessment 
+approaches & metrics 
+S. Sreenath a, K. Sudhakar b,c,d,*, A.F. Yusop b,d 
+a Renewable Energy and Energy Efficiency Research Cluster, Universiti Malaysia Pahang, Pahang 26600, Malaysia 
+b Faculty of Mechanical and Automotive Engineering Technology, Universiti Malaysia Pahang, Pahang 26600, Malaysia 
+c Energy Centre, Maulana Azad National Institute of Technology Bhopal, Madhya Pradesh 462003, India 
+d Automotive Engineering Centre, Universiti Malaysia Pahang, Pahang 26600, Malaysia   
+A R T I C L E I N F O  
+Keywords: 
+Airport 
+Glare 
+Hazard 
+Reflectivity 
+Solar PV 
+A B S T R A C T  
+Solar photovoltaic technologies are increasingly implemented in airport premises. In certain conditions of sun 
+path, the glare from solar photovoltaic modules may the reduce visibility of pilots and air traffic controllers. 
+Despite the threat to aviation safety with solar installations in airport, only a few countries have framed regu­
+lation on glare impact. The paper attempts to study the various factors affecting the occurrence of glare from 
+solar PV array in Airport. The main objective is to review the approaches and metrics for assessing the glare 
+impact from the solar photovoltaic array. In addition, the work summarises the glare guidelines existing in USA, 
+Canada and European nations. The main factors that influence the glare occurrence are suns position, tilt angle, 
+Surface texture, color and location of PV module. It was concluded that the existing glare assessment approaches 
+are of limited practical use in the worldwide scenario. Though there are several limitations with the existing 
+glare indices, the Ho et al metrics is reasonably a good indicator for glare assessment in airport solar PV in­
+stallations. Guidelines formulated by Federal Aviation Administration, (FAA), USA is good enough to be used as 
+guideline for glare impact assessment in other countries. It is envisaged that this work will assist the research 
+communities for the development of the globally acceptable glare assessment and metrics.   
+1. Introduction 
+Solar PV based energy generation is in the limelight in various lo­
+cations across the world (J¨ager-Waldau, 2020). Solar PV systems are 
+suitable in airport premises, mainly due to the vast & shade-free spaces 
+and huge energy requirement. Also, an on-site solar PV system helps to 
+reduce the energy bill and to mitigate carbon emissions of an airport 
+(Sreenath et al., 2019). Besides, these clean energy initiatives in the 
+airport are in line with environmental policies of the concerned legis­
+lative bodies. A handful of airports around the globe have installed solar 
+PV systems in their premises which is low when compared to the total 
+number of airports. Solar PV systems are commissioned in airports such 
+as Cochin airport (India), Chicago Rockford Airport (USA), Fresno 
+Yosemite Airport (USA), Indianapolis Airport (USA), Adelaide airport 
+(Australia), Kuala Lumpur Airport (Malaysia), Mumbai airport (India), 
+Moi airport (Kenya) etc. (Sreenath et al., 2020; Sreenath et al., 2021). 
+Solar reflections are seen in everyday life. It can be from glass fa­
+cades, solar PV modules, and even art installations (Danks et al., 2016). 
+The Federal Aviation Administration (FAA) reported that glare from 
+direct sunlight contributed to nearly a dozen aviation accidents on 
+average each year (Zhu, 2018). The front surface of Solar PV modules is 
+made from glass material. Sunlight reflected from the glass covering is 
+likely to cause glare (Protogeropoulos and Zachariou, 2010). The issue 
+of reflections from PV installations has been discussed in certain legis­
+lative documents concerning environmental matters. Practically, this 
+could become a major barrier for the development of solar PV systems, 
+especially in sensitive areas such as civil and military airports, urban 
+areas, etc. The potential for glare from the solar PV system is a concern 
+to the safe operation of an airport. The airport safety is at risk if the 
+visual performance of the pilot or air traffic controllers is reduced. The 
+solar PV glare may cause dazzling to pilots. Sometimes, it may confuse 
+the pilots with aeronautical lights. The issues of solar PV glare in airport 
+area is reported in news and websites (Federal Aviation Administration 
+(FAA), 2018). The glare from the solar canopy project in Manchester- 
+Boston Regional airport affected the visibility of officials in the air 
+traffic control tower. It is reported that solar PV panels of USD 3.5 
+* Corresponding author. 
+E-mail address: sudhakar@ump.edu.my (K. Sudhakar).  
+Contents lists available at ScienceDirect 
+Solar Energy 
+journal homepage: www.elsevier.com/locate/solener 
+https://doi.org/10.1016/j.solener.2021.01.023 
+Received 16 October 2020; Received in revised form 30 December 2020; Accepted 4 January 2021   
+
+Solar Energy 216 (2021) 439–451
+440
+million worth were covered with tarp temporarily to avoid the glare in 
+2012 (CNN, 2012). In 2014, the department of defense (US) was 
+instructed to conduct a glare assessment in the surrounding areas of the 
+proposed solar project sites (Ho et al., 2018). The airport manager 
+opposed solar PV installation in Doncaster Sheffield Robin Hood Airport 
+in the wake of chances for flight distraction or reduced sight of aircrews. 
+In addition, the local council aroused its concern on the impact of PV 
+array on public rights of way near to solar PV installation. Sreenath et al. 
+reported that glare occurrence has the highest risk to airport safety 
+among various risks from the solar PV system in the airport 
+(Sreenathet al., 2020a, 2020b, 2020c). Since the PV modules are 
+installed on the north side of the Meadows Field airport, the chance for 
+solar reflections affecting the pilot’s visibility is high. This solar project 
+kicked off only after on-site glare assessment tests and followed by a 
+review of FAA officials (Spaven Consulting, 2011). Hence glare assess­
+ment is a critical step in the design phase of airport-based solar PV 
+system. 
+The different approaches and metrics to assess glare differs with 
+different scenarios such as indoor lighting, daylighting or direct sun­
+light. Many literatures studied the glare aspects from indoor lighting and 
+daylighting environment (particularly glare from facades). In a review 
+carried out by (Danks et al., 2016), the existing regulations and metrics 
+regarding reflected sunlight from building facades is summarised and 
+discussed. However, this review is focussed on glare impact from 
+buildings in urban context only. The different approaches and metrics 
+used to assess the glare are scattered in literatures. In this regard, various 
+literatures published in the area of solar PV glare are read and processed. 
+(Chiabrando et al., 2009) provided an overview of territorial and land­
+scape impacts of solar PV array without a detailed discussion on regu­
+lation and metric related to impact of solar glare. In a research article of 
+(Ho et al., 2011), a summary of glare metrics is presented along with a 
+new metric which account for temporary after-image. The regulations 
+regarding glare vary with the judications of different countries, and 
+hence there exists a lack of clarity. In addition, the application of solar 
+PV in the airport is relatively new. To the author’s knowledge, none of 
+the literature reviewed on the different dimensions (approach, metric & 
+regulation) of solar PV glare especially in the airport environment. Solar 
+PV systems are expected to be deployed in many airports across the 
+globe. This review will help the airport officials, aviation authorities, the 
+Air Force, and other agencies at the time of solar PV installation in and 
+around their premises. These information’s unavailability will lead the 
+agencies to assume the worst about solar PV technologies, which badly 
+affect the growth of solar PV systems in the airport environment. The 
+main objectives are  
+• To review various factors influencing reflections from the solar PV 
+array  
+• To summarise the approaches and metrics related to glare assessment 
+in airport  
+• To compare solar glare guidelines existing in different countries 
+The rest of this article is structured into five sections. Section 2 
+provides an overview on solar PV reflections and its influencing factors. 
+In Section 3, the different approaches to assess the glare from solar PV is 
+presented. The various metrics used for glare assessment is analysed and 
+described in Section 4. The glare guidelines for airport based solar 
+photovoltaic in different countries is summarised in Section 5. The 
+conclusions and insights drawn from the present study is elaborated in 
+Section 6. 
+2. Theory on light reflection 
+When a ray of light transits from one medium to another with a 
+different refractive index (RI), an optical phenomenon called reflection 
+takes place (Raut et al., 2011). The fraction of incident light reflected at 
+the interface is measured by reflectance, R. According to Augustin-Jean 
+Fresnel, the remaining part is transmitted, which is measured by 
+transmittance, T. 
+2.1. Solar PV reflections 
+Solar PV modules are made to absorb maximum sunlight when sun 
+rays strike glass material on the PV module; it converses an air-glass 
+interface (Shukla et al., 2016). Most of the sunlight enters into the 
+glass medium since the material is transparent. Then the sun rays pass 
+through the ethylene vinyl acetate (EVA) layer, suffering negligible 
+reflection at the interface. Finally, the solar rays reach the PV cell, and 
+the photoelectric effect occurs (Fig. 1). Generally, the reflection from the 
+solar PV module is said to remain less than 5% (Khan et al., 2019). Even 
+1% illumination of direct sunlight on a surface is similar to the bright­
+ness from a 60 W lamp. (Labib & Baltazar, 2014) reported about the 
+scarcity of reflection data for solar PV modules from manufacturers. 
+Protogeropoulos and Zachariou estimated the reflectivity of the PV 
+module located at Athens, Greece, with the help of an accurate spec­
+trometer. They reported a PV module reflectance of 15% for incident 
+angles up to 45o (Protogeropoulos and Zachariou, 2010). The reflection 
+of sunlight can be correlated to the refractive index of air-glass (RIAG), 
+glass-eva (RIGE), and eva-photovoltaic cell (RIEP) interface. The reflected 
+light from the interface, pq between the adjacent layers p and q is given 
+by Rpq =⃒⃒Rpq⃒⃒× exp
+[
+−2
+(
+dp + dq
+) ]
+, where ⃒⃒Rpq⃒⃒= [np−nq]
+[np+nq] and d denotes 
+the phase thickness of each layer. 
+The amount of reflectivity from solar PV is highly influenced by the 
+incidence angle. Incidence angle is defined as the angle between the 
+incident solar radiation and normal to the surface of the PV plane. This 
+angle can vary from 0 degrees to 90 degrees. At small values of incidence 
+angle, the reflectance is low (<5%). Reflectance increases fastly after 60 
+degrees, which occurs mainly during sunrise and sunset. This means that 
+the usual notion of reflectance lower than 5% of sunlight is true when 
+the PV module faces the Sun (Anurag et al., 2017). For the fixed-tilt solar 
+PV system, high reflectance happens for a short time in a day throughout 
+the year. As the incidence angle rises, the reflectivity of the PV array 
+increases. Thus, it is expected that incident angles of more than 60 de­
+grees result in a high reflectivity level. At large angles of incidence, PV 
+modules show high reflectance compared to other surfaces. 
+The reflection from the solar PV module can be specular or diffused, 
+or both. Specular reflections occur when the reflected light bounces off 
+from the striking surface in one direction. However, when sunlight falls 
+on a specific surface, it scatters in different directions to cause diffused 
+reflections. As the surface becomes polished, it shines more. Generally, 
+flat and smooth surfaces such as mirrors produce specular reflections. 
+Since specular reflections are concentrated, it may cause flash blindness. 
+Slope error is a measure of the amount of sunlight scattered from the 
+surface of the PV module. Slope error changes with the texture of the PV 
+module surface. Smooth surfaces like mirror cause mainly specular re­
+flections and thus have slope error closer to zero. Rough surface causes 
+more diffused reflections and thus have higher slope errors (Sandia 
+National Laboratories, 2018). Based on observed glare from different PV 
+modules, a slope error of around ten mrad is considered as a reasonable 
+value in the glare assessment. Fig. 2 depicts the specular and diffused 
+reflections of light. 
+The reflectivity of the PV module is the amount of incident sunlight 
+that is not absorbed by it. It is also the reverse of absorbed solar radiation 
+fall on the PV array. The fraction of solar irradiance absorbed by the PV 
+cell is called the absorption factor. It can be found from reflection and 
+transmission experiments. A photovoltaic reflectometer can be used to 
+measure the reflectance spectrum of a solar cell, preferably within 
+6in*6in (Protogeropoulos and Zachariou, 2010). Though modern rem­
+edies can greatly reduce the amount of reflected light, flat surfaces al­
+ways have a potential for glare occurrence. In general, the reflection of 
+the glass in PV is about 2–4%. According to the previous research results, 
+most solar panels reflect significantly less light than flat water. The 
+S. Sreenath et al.                                                                                                                                                                                                                                
+
+Solar Energy 216 (2021) 439–451
+441
+reflectance of different objects varies. For example, fresh snow reflects 
+around 80% of the light striking its surface, whereas black asphalt re­
+flects less than 5%. The reflectivity of solar PV module is slightly higher 
+than black asphalt. At the same time, it is much lower than materials 
+such as wood, bare soil, grass, vegetation, bare aluminium, white con­
+crete, snow (Fig. 3). Still, aviation authorities perceive glare as an 
+important safety issue due to two main reasons. Firstly, the reflections 
+from solar PV modules increase exponentially at low angles of sun i.e. at 
+sunrise and sunset. Secondly, it is a reasonable to assume that most of 
+the solar reflections are specular in nature since the PV modules have a 
+flat and polished surface. The factors that influence solar reflections 
+from PV array are described in the next section. 
+There are conflicting terminologies related to daylight glare, which is 
+a barrier to a proper understanding of different aspects of glare, such as 
+the approaches and metrics. The authors have tried to summarise rele­
+vant terms used in this area for an easy understanding of the readers 
+(Table 1). 
+2.2. Factors that affect the solar glare 
+The factors that influence solar reflections can be broadly classified 
+as variable and non-variable (Fig. 4). The factors related to Sun’s posi­
+tion are categorized as non-variable factors, and those related to the 
+Solar PV array are grouped as variable factors. The sun’s movement is 
+not controllable by human efforts. The observer can be in a fixed posi­
+tion (such as officer in ATC) or follows a predefined path (such as pilot in 
+aircraft). 
+2.2.1. Non-variable factors 
+The position of the sun and solar intensity cannot be varied by 
+human intervention. The sun’s position is calculated using the angle of 
+elevation and solar azimuth. The elevation or altitude angle determines 
+the altitude angle of the reflection. According to the law of reflection, it 
+Fig. 1. Reflection of Sun’s ray in different layers of a solar PV module.  
+Fig. 2. Schematic representation of specular and diffused reflections.  
+Fig. 
+3. Percentage 
+of 
+sunlight 
+reflected 
+by 
+different 
+materials 
+at 
+typical condition. 
+S. Sreenath et al.                                                                                                                                                                                                                                
+
+Solar Energy 216 (2021) 439–451
+442
+is measured with respect to a line normal to the surface of the array. 
+Further, the azimuth angle determines the plane along which the re­
+flected light travels. This indicates the direction of incoming sunlight 
+and influences the intensity of light falling on the solar PV module. The 
+amount of sunlight reflected from the PV module mainly depends on the 
+intensity of sunlight falling on the PV array and PV surface reflectivity. 
+In addition, factors such as atmospheric conditions, time of year, and 
+cloud cover also influences the amount/ intensity of sunlight hitting 
+solar panel (Ho et al., 2015). The intensity of sunlight that falls on the 
+solar PV module site is a function of both times of day and year. The 
+position of the Sun is an important influencing factor in any glare hazard 
+analysis. The Sun is assumed as a point source, and it moves along a 
+predictable path during the day. The position of the Sun in the sky at the 
+PV plant location is a function of daytime throughout the year. It is 
+measured with respect to the reflecting surface and observer point 
+(Kumar et al., 2018). The maximum intensity of the sunlight can be 
+taken as 1000 W/m2 (at noon on a bright cloudless day) as the rule of 
+thumb (Fig. 5). Clouds of dust/haze or humidity in the atmosphere cause 
+sunlight to be diffused. Since this component of sunlight (known as 
+diffused irradiance) does not have any directionality, it has a negligible 
+influence on the occurrence of glare. Geographic location, time of the 
+year, and cloud covers also influences intensity (Ho et al., 2015). 
+2.2.2. Variable factors 
+Silicon is naturally reflective in nature, and surface reflection of bare 
+silicon is high (over 30%). Most of the commercially available solar PV 
+panels are made from silicon. The area of the module frame (aluminium) 
+is very thin, and therefore reflection from the aluminium is not 
+considered. The amount of reflected sunlight depends on glass material, 
+its type and orientation of the solar PV array. The colour of PV surface 
+and its physical composition affects the solar reflection. Light colored 
+surfaces reflect most of the incident light while the reflection from dark 
+colour is least. For example, the monocrystalline PV module (being 
+darker) reflects less sunlight than polycrystalline one (Sreenathet al., 
+2020a, 2020b, 2020c). The physical composition refers to the surface 
+texture of the glass material used in the PV system. The reflection from 
+deeply textured glass is lower than the normal PV module (Fig. 6). 
+The amount of solar reflection depends on the position of the PV 
+array relative to the Sun. The position of the PV array is defined by 
+orientation of the PV module and its tilt angle (Shiva Kumar and Sud­
+hakar, 2015). The tilt angle of PV array is related to incidence angle 
+which in turn affects reflectivity. These values depend on the system 
+design. A solar PV module may reflect 60% of the incident solar irra­
+diation when it is facing the Sun at low angles. This occurs mainly for 
+low tilt PV systems during sunset and sunrise. 
+Other factors may also influence the amount and intensity of 
+Table 1 
+List of common terminologies used in glare scenario.  
+Terminology 
+Definition 
+Another 
+name 
+Instances 
+Glare 
+Continuous source of bright 
+light 
+– 
+Reflection 
+from the 
+glass facades 
+of a building 
+Glint 
+Momentary flash of bright 
+light 
+– 
+Reflection 
+from the 
+glass of a 
+moving car 
+Disability 
+glare 
+A type of glare that affect 
+visibility 
+Physiological 
+glare, veiling 
+glare 
+– 
+Discomfort 
+glare 
+Psychological sensation that 
+causes distraction without 
+reduction in visibility. 
+Psychological 
+Glare 
+– 
+Dazzling 
+glare 
+A type of glare that occurs 
+when the intense light enters 
+eyes 
+– 
+– 
+Absolute 
+glare 
+A type of glare that occurs 
+at a luminance level of 
+100,000 cd/m2 
+– 
+– 
+Afterimages 
+An optical illusion in which the 
+image of an object is seen even 
+after the object is removed 
+– 
+Occurs when 
+a black dot in 
+white paper 
+is watched 
+for few 
+minutes 
+Flash 
+blindness 
+Temporary loss of vision for a 
+few seconds to a few minutes 
+– 
+Flash light 
+from camera 
+Observation 
+point 
+Location on which the impact 
+of glare is to be assessed 
+Receptor, 
+Immission 
+point 
+ATC staff, 
+pilots, 
+drivers 
+Retinal 
+irradiance 
+Ratio of power entering pupil 
+(eye) and retinal image area 
+– 
+– 
+Retinal burn 
+Permanent retinal damage and 
+loss of vision  
+Prolonged 
+exposure to 
+solar 
+radiation  
+Fig. 4. Classification of factors that influence sunlight reflections from the solar PV array.  
+S. Sreenath et al.                                                                                                                                                                                                                                
+
+Solar Energy 216 (2021) 439–451
+443
+reflections. Fixed tilt systems have constant tilt angle and are thus found 
+to cause reflectivity problems mostly in sunrise and sunset. Single and 
+two-axis trackers follow the movement of Sun and hence are more prone 
+to solar reflections if not properly designed. The presence of particulates 
+or humidity or cloud cover in the atmosphere scatters sunlight. This in 
+turn reduces the solar intensity, especially when viewed from longer 
+distance. Furthermore, factors such as pupil size, focal eye length, ocular 
+transmittance and light sensitivity influence the visual performance of 
+human eye in times of glare occurrence (Ho, 2013). Larger distances 
+yield smaller sub-tended angles of the glare source for a fixed size of the 
+glare source. The footprint/ area covered by the solar PV array also 
+influences glare from the chosen solar PV site. A 7 kW solar PV system 
+occupies relatively less area than 10 kW PV array at same terrain. Also, 
+the glare from the larger PV array is much intense than from the smaller 
+array especially at longer distances. The resizing of the PV array leads to 
+the exclusion of the glare causing portions. 
+3. Solar glare assessment: Approaches and softwares 
+Different approaches to assess the glare from light sources are re­
+ported in academic literatures. Glare metrics such as Unified Glare 
+Rating (UGR), Visual Comfort Probability (VCP), and CIE Glare Index 
+(CGI) are suitable exclusively for indoor lighting conditions and night 
+driving scenarios (Kent et al., 2019). Approaches and metrics that are 
+formulated for indoor / night lighting may not be necessarily applicable 
+in daylight conditions. Different approaches to assess solar glare in­
+tensity and impact are discussed in this section. These approaches are 
+classified on the basis of necessity for site visit by the glare consultant 
+(Fig. 7). 
+3.1. Site visit based approaches 
+3.1.1. Helicopter flyover approach 
+(Ho, 2011) assessed glare from a heliostat located in the National 
+Solar Thermal Test Facility in USA by means of helicopter flyover. Based 
+on this assessment, it is reported that an intense glare is observed from 
+the mirrors of the heliostat over 1700 m away. This helicopter approach 
+is suitable for analysing glare for existing solar PV installations. The 
+glare impact can be analysed for a proposed solar PV system also. The 
+solar PV module is placed in random locations within the selected site. 
+The tilt and orientation of PV module is varied from minimum to the 
+maximum value. For each configuration, the reflectivity on observers 
+such as air traffic controllers and pilots is noted from a helicopter. The 
+field test with solar PV modules at the proposed site is usually done in 
+coordination with authorized (airport) personnel. This approach is 
+inadequate because the field test is performed only at a certain time in a 
+year; however, the sun position changes in the sky throughout the entire 
+year. The drawback is that the occurrence of glare around the year 
+cannot be assessed in this approach. A test at a single time may miss 
+glare hazards during other parts of the year. 
+Fig. 5. Effect of daily movement of sun on reflections from PV array in airport scenario.  
+Fig. 6. Reflectance from different top coverings of solar PV modules with 
+variation of incidence angle. 
+S. Sreenath et al.                                                                                                                                                                                                                                
+
+Solar Energy 216 (2021) 439–451
+444
+3.2. Computer-based approaches 
+3.2.1. Computational fluid dynamics based approach 
+The CFD software is capable of temperature predictions using solar 
+radiation and reflective elements. The temperature on a surface can be 
+correlated with the intensity of reflections, and hence the impact of glare 
+is assessed (Danks and Good, 2016). To name a few, software tools such 
+as ANSYS, COMSOL Multiphysics, Autodesk CFD, OpenFOAM, Power­
+Flow etc. can be used for CFD simulation analysis (Technology Evalua­
+tion Centers, 2019). This approach is mainly suitable for analysis of 
+glare from simple geometries than complex ones. The factors such as 
+wind speed, material properties that influence surface temperature are 
+assumed to the best possible value. The relationship between material 
+and angle of incidence of incoming sun rays is not always incorporated 
+during the simulation. Also, the computational effort is huge, which 
+discourages the use of CFD in glare analysis. 
+3.2.2. Ho et al. approach 
+The input parameters are given by the user through interactive 
+google maps (selection of solar PV site and observer’s locations). Based 
+on these input values, glare computation is carried out on the basis of 
+look back algorithm (for optical beam spread) and envelope algorithm 
+(for improved glare prediction) (Sandia National Laboratories, 2018). In 
+this methodology, the impact of glare is categorised based on the values 
+of retinal irradiance and size of the glare source. The impact of a given 
+solar reflection is assessed on the basis of retinal irradiance rather than 
+the source’s luminance. The impact of glare is illustrated as colours 
+namely low potential to cause after-image (green colour), potential to 
+cause after-image (yellow colour) or in rare cases, retinal damage (red 
+colour) (Sreenathet al., 2020a, 2020b, 2020c). The Ho et al. approach is 
+employed in SGHAT tool and ForgeSolar softwares. This approach does 
+not account the factors such as inter-module distance, the relative height 
+between PV array and sensitive receptors, obstacles between the ob­
+servers and the PV array, variations in PV module’s optical properties, 
+and atmospheric conditions. This approach is limited to flat surfaces like 
+solar PV arrays. 
+3.2.3. Wollert and Rose approach 
+In this approach, the geometrical and photometrical data was esti­
+mated using values such as date and time of the year, Sun’s position, 
+location & orientation of solar PV system. The photometric values are 
+found using Christophe Schlick model (Rose and Wollert, 2015). The 
+rendering and simulation of the study area is carried out using computer 
+graphics. In this approach, the user can choose PV modules with 
+different material properties. Using this method, BRDF of the reflecting 
+surface is calculated approximately. BRDF represents the amount of 
+light that is scattered for each incidence angle (Zhu, 2018). It is defined 
+as the ratio between reflected radiance and incident irradiance at a 
+particular wavelength. If the value of BRDF of a surface and incidence 
+flux on that surface are known, the reflected irradiance can be calculated 
+using equation (9). 
+BRDF = Irreflect
+Irincident
+(1) 
+Wollert and Rose presented a detailed proof of concept for Rhein- 
+Main airport, Germany with the 3D scene, including source, media­
+tion, and impact of sunbeams (Wienold and Christoffersen, 2006). The 
+results are displayed in graphical and tabular form. The plots show the 
+annual variation of the time of each occurrence and illuminance of an 
+occurrence on a day. Each row of the table represents the impact on a 
+sensitive receptor from a single occurrence of solar reflection. It includes 
+the date & duration of occurrence, position of solar module & its dis­
+tance from the receptor, illuminance at that point. In addition, it pro­
+vides an option to see the illustration of affected areas and spaces, which 
+makes the results easily understandable and transparent. However, 
+quantification of the glare impact is not included in this developed 
+approach. 
+3.3. Hybrid approaches (Site visit & Computer) 
+3.3.1. Image synthesis-based approach 
+Using a calibrated, scientific-grade camera, the luminance distribu­
+tion within the field of view of the observer is captured. This picture is 
+evaluated using an algorithm that detects all possible glare sources 
+present in that image. (Wienold and Christoffersen, 2006) recorded the 
+Fig. 7. Classification of different approaches used for assessment of solar glare.  
+S. Sreenath et al.                                                                                                                                                                                                                                
+
+Solar Energy 216 (2021) 439–451
+445
+luminance distribution within the field of view of the subject using CCD 
+camera and analyzed glare using a new RADIANCE based evaluation 
+tool. This tool, named as Evalglare identifies potential glare sources 
+based on a threshold value and calculates glare metrics from the 
+captured image. Labib and Baltazar modeled high rise building using 
+Rhinoceros modeling program. They analyzed annual glare for each 
+Rhino view by calculating hourly DGP value for 365 days. Then, these 
+views were rendered to create 180 degrees fisheye HDR images for easy 
+assessment of bright spots (Labib & Baltazar, 2014). High dynamic range 
+(HDR) images of the observer’s view is needed for analysis. The image 
+can be a 180-degree angular fisheye or a normal perspective image (Suk 
+et al., 2016). The brightest light (direct sunlight) to darkest spots (deep 
+shadow) in the examined scene is illustrated in HDR rendered image. 
+The captured HDR glare images must be converted to a specific format 
+(such as Radiance format) using tools such as hdrscope (Wienold & 
+Christoffersen, 2006). This approach has limited use as it requires 
+photographs with high spatial and/or temporal fidelity. This method is 
+highly accurate in the estimation of light reflection from a wide range of 
+material surface properties. The computation process is slow due to the 
+highly detailed nature of the lighting calculation. 
+3.3.2. Reflection protractors 
+In this approach, the geometric relationship between the Sun, 
+reflective surface, and observer is analyzed using simple tools. It was 
+initiated by Little Fair in 1987 and improvised by Hassall and others. 
+These protractors are used in conjunction with sun path information and 
+photographs, hand sketches or computer renderings of the reflective 
+surface (Danks & Good, 2016). Once the time and duration of the Sun’s 
+position at which reflections occur are found out, the intensity of the 
+solar reflection is calculated using the Holladay formula [26]. Then the 
+value of intensity is compared with the adapted value for the human eye 
+to check for level of glare impact. This approach requires a diagram for 
+each viewpoint, which makes the process laborious. The analysis is 
+complicated for reflective surfaces that are curved and non-vertical in 
+nature. However, it is suitable for solar PV installations as the PV array is 
+flat. There is a chance for missed reflection due to the selective analysis 
+of specific points on the studied area. 
+Table 2 summaries the various approaches developed by researchers 
+to assess the glare occurrence and impact. The commercial softwares for 
+glare assessment are studied separately in Section 3.4. 
+3.4. Commercial softwares 
+The glare prediction is important for the safe deployment of solar PV 
+systems in airport areas. The software helps to determine days and times 
+of potential glare. The evaluation of glare impacts from PV installation is 
+carried out using modelling programs and algorithms. Glare assessment 
+softwares involve complicated algorithms as the glare occurrence is 
+assessed round the year in minute resolution, 
+Solar Glare Hazard Analysis Tool (SGHAT): was developed by Sandia 
+National Laboratories under Department of Energy, United States and it 
+is in line with FAA’s glare assessment guidelines (as per document 78 FR 
+63276) (Ho, 2013). This prediction tool estimates the impact of solar PV 
+glare on the sensitive receptors using Ho et al. approach. To the author’s 
+knowledge, it is the first software that is approved by an Aviation au­
+thority (FAA). It was found that SGHAT is currently available for in­
+ternal Sandia use only. This restriction is in wake of new cybersecurity 
+restrictions at Sandia National Laboratories. However, the source code 
+and algorithms of SGHAT tool are available for commercial use through 
+licensing from Sandia. The description of SGHAT tool in this study is 
+based on its version 3.0 which is the latest version as per the available 
+user manual. It uses interactive google maps for site selection and has 
+very fast annual simulations. It allows the user to choose from five 
+different types of PV module top layer material, namely smooth glass 
+without ARC, smooth glass with ARC & Light textured glass without 
+ARC, light textured glass with ARC and deeply textured glass during the 
+simulation. Since FAA approves the use of SGHAT software for glare 
+assessment of solar installations in US airports, it attributes to the trust 
+on the results obtained from this software. The user can input only one 
+set of view angles (downward and azimuthal) of the observer. subse­
+quently, the user has to repeat the simulation for another set of viewing 
+angles. At the time of writing, only one licence was issued by Sandia (to 
+Sims industries). 
+Forge solar: It is a glare assessment and optimisation software which 
+is based on the Solar Glare Hazard Analysis Tool (SGHAT) algorithms. It 
+is licensed from Sandia National Laboratories by Sims industries which 
+took place in Dec 2016 (Sandia National Laboratories, 2018). It is the 
+commercial licensed version of Solar Glare Hazard Analysis Tool 
+(SGHAT). It provides two estimation tools to the user, namely Glare 
+gauge and GlaReduce. Glare Gauge is capable of predicting the impact of 
+glare from solar PV arrays on selected receptors. GlaReduce can be used 
+to optimize solar PV design (tilt angle and orientation angle) for miti­
+gating the glare hazard. The glare assessment methodology of For­
+geSolar was improvised from SGHAT version. These changes include 
+various improvements to glare-check algorithm, sun-scatter factor in 
+path glare-check algorithm and glare impact calculations. In addition to 
+SGHAT features, the slope error is linked to the selected PV module 
+material by default and the maximum rotation angle (default) for single- 
+axis tracked solar PV systems is set at 60 degrees in ForgeSolar software. 
+A plot displaying approximate locations of predicted glare spot centres 
+(reflections) on PV array is also included. Instead of csv format, data files 
+are available in xls format. The output is available as graphical and xls 
+Table 2 
+Summary of different approaches in glare assessment of solar PV installations.  
+Name of approach 
+Is site visit 
+needed 
+Is computer 
+needed 
+Strength 
+Weakness 
+Application (Existing/ 
+Proposed) 
+Field test approach 
+Real time assessment 
+Absence of year-round assessment 
+Costly procedure 
+Existing solar PV 
+Reflection protractors 
+Suitable for flat reflective surfaces 
+Laborious process 
+Absence of year-round assessment 
+Existing solar PV 
+Image synthesis-based 
+approach 
+Materials with different surface 
+properties can be chosen 
+Slow computation 
+Needs high-quality photographs 
+Existing solar PV 
+CFD approach 
+Suitable for reflective surfaces with 
+simple geometry 
+Huge computational effort 
+Involves assumption of material and 
+environment properties 
+Existing & Proposed solar 
+PV 
+Ho. et al. approach 
+Approved by FAA 
+Uses colour coded glare impact 
+Does not fully consider the site conditions 
+Includes numerous assumptions and 
+approximations 
+Existing & Proposed solar 
+PV 
+Wollert and Rose 
+approach 
+3D computational model 
+Independent of any engineering 
+software 
+No applicable in all location 
+Cannot input the design of PV system 
+Considers only silicon based reflective 
+surfaces 
+Existing & Proposed solar 
+PV  
+S. Sreenath et al.                                                                                                                                                                                                                                
+
+Solar Energy 216 (2021) 439–451
+446
+format. It is observed that technical capability and user interface of 
+ForgeSolar is improved through regular bug fixes and updates. However, 
+the main limitations of ForgeSolar software is more or less same as 
+SGHAT. The software also assumes clear sunny days at all times with no 
+atmospheric attenuation. 
+Zehndorfer Engineering Consulting developed a proprietary software 
+that is capable to assess glare from solar PV installations and optimize 
+the solar PV design for mitigating glare hazard. The company assures 
+reliable glare calculation, conformity with regulations and support in 
+the permitting process. The topography of solar PV site is considered to 
+check if direct rays of sunlight are blocked by obstacles such as raised 
+terrain, houses or trees. The glare assessment is based on backward ray 
+tracing and forward ray tracing algorithm. All estimations are carried 
+out using complex coordinate systems and rotation matrices. This soft­
+ware simulation depicts the effect of direct and scattered sunlight on 
+glare occurrence separately. The software results include glare-time 
+diagram, cockpit view, sunlight reflection trail, glare frequency plot, 
+glare hazard plot and photometric chart. Some of these results are 
+illustrated as 3D animation (Zehndorfer Engineering Consulting, 2020). 
+In addition to Glare Hazard Plot, this software generates virtual cockpit- 
+view that provides the view of the reflecting area (sun-position and re­
+flections) from the cockpit of aircraft. This illustration helps in in-depth 
+understanding of the glare and impacts to the concerned authority 
+(client, the surveyor and the regulatory authority). The glare frequency 
+plot helps in choosing suitable mitigation measures such as shading, 
+obscuring or resizing PV array area. It gives the reflection trail (sun->
+reflector-> point of interest) from which the direction (angle) of a po­
+tential solar reflection can be assessed. It provides reflection photo­
+metric chart which aids in identifying points with sun reflections greater 
+than the luminance limits to cause for glare. 
+Fraunhofer ISE developed a web-interface based software to carry 
+out glare assessment. This software considers the landscape, obstruc­
+tions, dazzling period (daily and seasonal) and type of PV glass covering. 
+The hazard level of glare is determined on the basis of duration of 
+exposure on human. The glare limit value for this software is 30 min per 
+day and 30 h per year (Fraunhofer ISE, 2020). This software provides a 
+year-round reflection assessment which pinpoint to potential glare time 
+from solar PV array. The user needs to provide input for glare analysis in 
+list form which is tiresome and may cause typing errors. It was found 
+that the output graphs are not easily understandable by the users. It is 
+read that Fraunhofer ISE issued license to TÜV Rheinland. In TUV 
+Rheinland website, it is reported that it uses a state-of-art glare predic­
+tion tool that is capable of considering year-round solar reflection and 
+precisely predict the duration of potential glare. TUV Rheinland re­
+ported that its glare assessment results comply with airline and road 
+transport rules (Photovoltaic Glint and Glare Assessment, 2020). 
+The glare impact assessment of Fraunhofer ISE software is based on 
+samples of sunshine exposure (glare duration). While SGHAT, For­
+geSolar and Zehndorfer software considers the amount of light entering 
+eye (glare intensity) for the glare estimation. The accessibility to tech­
+nical manual and user manuals is needed to bring transparency in 
+computational models and derived conclusions. The glare assessment 
+softwares that are capable to visualise affected spaces and observers are 
+user friendly. None of these softwares assess disability and discomfort 
+glare separately which open rooms for improvement. If other factors 
+such as nearby trees & vegetation, weather conditions like cloudiness 
+are taken into consideration, the glare impact might be within the safety 
+limit. The glare assessment softwares which consider these factors have 
+an edge over the others. Sims Industries (ForgeSolar), TÜV Rheinland, 
+Zehndorfer Engineering offers consultancy services on glare assessment 
+and mitigation measures. Among these glare assessment softwares, only 
+forge solar is accessible by experts as well as public (with subscription 
+charges). In Table 3, different aspects glare assessment software is 
+summarised. 
+4. Solar glare impact metrics 
+Several researches are carried out to develop metrics and threshold 
+limits with respect to glare scenarios. The indices such as BRS glare 
+equation (BGI), CIE glare index (CGI) and Unified Glare Rating (URG) 
+are formulated based on real time experiments. These indices have 
+limited use in the context of solar PV glare as it is accurate for glare 
+assessment from artificial light sources or those light source with a solid 
+angle less than 0.1 sr. Hence these metrics are not suitable for glare 
+assessment from solar PV installations (also daylight condition) (Rose & 
+Wollert, 2015). The various metrics to assess the impact of solar glare 
+Table 3 
+Summary of features of commercial softwares that are available for glare assessment.  
+Name of Software 
+Owner/Licensee 
+Glare 
+simulation 
+Glare 
+optimisation 
+Strength 
+Weakness 
+Solar Glare Hazard 
+Analysis Tool (SGHAT) 
+Sandia National 
+Laboratories 
+• Easy to use  
+• Quick simulation  
+• Availability of user manuals  
+• Approved by FAA  
+• Underwent validation  
+• Available for licensing  
+• Suitable only for flat reflective surfaces  
+• Numerous assumptions on 
+environmental and human factors  
+• Access is reserved  
+• Less accuracy in DNI model  
+• Absence of shading and blinds inputs  
+• Absence of reflection-trail in results 
+Forge solar 
+Sims Industries 
+• Improved version of Ho et al. 
+approach  
+• Licensed version of SGHAT  
+• Include glare foot print map  
+• Regular updates and bug fixes 
+same as SGHAT 
+Unnamed 
+Zehndorfer Engineering 
+Consulting 
+• 3D animation of glare occurrence  
+• Sunlight reflection trail in results  
+• Accounts direct & scattered 
+sunlight  
+• Considers topography, horizon and 
+obstructions  
+• Comply with Austria and German 
+solar glare guidelines  
+• Lack of information on 
+technical limitation  
+• Not accessible for public use 
+Unnamed 
+Fraunhofer ISE 
+Not specified  
+• Considers landscape and 
+obstructions  
+• In line with transport (airline and 
+road) rules  
+• Provides year-round reflection 
+results  
+• Suitable for fixed tilt solar PV only  
+• Limited access  
+• Near shading/ blinds are not 
+considered  
+S. Sreenath et al.                                                                                                                                                                                                                                
+
+Solar Energy 216 (2021) 439–451
+447
+are the discussed in this section. Since the solar reflections from PV array 
+reach the eye of pilot and officer in ATC cabin through window, metrics 
+such as Daylight Glare Index (DGI), Daylight Glare Probability (DGP) are 
+also considered. These metrices are developed specially to assess 
+daylight glare (Yong et al., 2017). 
+4.1. Ho et al. metric 
+The potential damage to the eye can be assessed based on the value of 
+both retinal irradiance and size of glare source. The retinal irradiance, 
+which is measured as the power per unit area, can be calculated from the 
+total power entering the pupil and the retinal image area (Ho et al., 
+2011) 
+Aretina = π × d2
+r
+4
+(2)  
+Ppupil =
+Ec × π × d2
+p
+4
+(3)  
+Irretina = Ppupil
+Aretina
+×τc
+(4)  
+=
+(Ec × d2
+p)
+d2
+r
+×τc 
+The retinal irradiance of 8 W/cm2 is caused by viewing direct Sun. 
+The retinal irradiance is significantly higher than the irradiance at the 
+entrance of the eye. Ho et al. concluded that solar irradiance of 1–10 W/ 
+m2 is enough to cause flash blindness. They also reported that 0.01 to 
+0.1 W/cm2 is the minimum retinal irradiance value required to cause 
+flash blindness. A relation between the minimum retinal irradiance for 
+after-image and subtended angle is given in Eq. (7). 
+Erflash = 3.59 × 10−5
+ω1.77
+(5) 
+Dranks et al. suggested that the Ho et al. metric is the best practical 
+parameter among the existing metrics for glare assessment (Danks et al., 
+2016). On the basis of retinal irradiance and subtended source angle, the 
+glare impact is classified as permanent eye damage, the potential for 
+after-image and low potential for after image (Ho and Sims, 2012). The 
+visualisation of glare impact is carried out using Glare hazard plot, 
+which is a function of subtended source angle and retinal irradiance. 
+Each plot corresponds to glare from a PV array and receptor. A small 
+circle in the respective hazard zone on the chart corresponds to each 
+minute of glare. This plot consists of three regions, namely low potential 
+for after-image, the potential for after-image and retinal burn. The plot 
+area below the retinal burn line (red colour) represents the potential for 
+after-image (Ho & Khalsa, 2010). Permanent eye damage (also called 
+retinal burn) takes places when a high amount of solar insolation rea­
+ches the retina (Fig. 8). The reflections from solar PV array are not 
+focused enough to cause a retinal damage. 
+4.2. Brumleve metric 
+Based on retinal burn data of rabbits, Sliney and Freasier examined 
+the safe limit of retinal irradiance. Using this data, Brumleve formulated 
+a metric to assess safe retinal irradiance, Ers. It is assumed that images 
+are circular and typical blink response is 0.15 sec. (Ho et al., 2009). 
+Ers = 0.002
+dr
+∀dr < 2mm
+(6)  
+Ers = 1∀dr ≥2mm
+(7)  
+4.3. Daylight glare index (DGI) 
+It is a modified version of British Glare Index (BGI) which is capable 
+to predict glare from a large source such as window. Since Cornell 
+University (USA) was involved in this study along with Building 
+Research Station in England, DGI is also known as Cornell equation 
+(Wienold & Christoffersen, 2006). The equation of DGI includes major 
+factors that influences the assessment of a glare in daylight condition 
+such as source luminance, solid angle of the source, average luminance 
+of the background, position of the light source relative to the observer’s 
+field of view. 
+DGI = 10log10
+[
+0.478 ×
+∑
+n
+i=1
+(
+L1.6
+s,i × ω0.8
+s,i
+Lb + 0.07ω0.5 × Lwin × P1.6
+i
+) ]
+(8)  
+where ω is the solid angle subtending each source (denoted as s) from the 
+point of view of the observer which is modified with respect to field of 
+view and Guth position index (P) of each luminaire, (denoted as i), Lwin 
+is luminance of the window and Lb is the luminance of the background. 
+The glare sensation scale of DGI varies from imperceptible glare (for 
+DGI < 18) to intolerable (DGI > 31). If the DGI value fall between 18 and 
+24, it is classified as perceptible glare. It is also reported that DGI can be 
+used for daylight glare evaluation (Suk et al., 2016). To estimate DGI 
+index scores, image-based synthesis approach is used. It is reported that 
+DGI was observed to be higher than the actual perceived glare in many 
+real situations. In other words, DGI is not suitable for analysis in daylight 
+conditions with high potential of direct sunlight (or direct view of the 
+sun). In this regard, a modified DGI index (DGImod) was developed by 
+Nazzal (Bellia et al., 2008). This modified mathematical metric is more 
+suitable for the evaluation of discomfort glare from direct sunlight. It 
+was observed that the DGImod performs slightly better than the DGI. 
+However, it wasn’t a substantial improvement (Wienold et al., 2019). 
+4.4. Daylight glare probability (DGP) index 
+Is an image-based glare measurement metric used in computer-based 
+glare simulation and analysis techniques. The poor predictive ability of 
+existing daylight glare metrices led to development of this new index. 
+DGP considers the probability that a person is disturbed out of glare. It 
+does not consider glare magnitude as a glare measure. DGP is developed 
+by Wienold and Christoffersen based on experimental studies in various 
+daylight conditions (Labib & Baltazar, 2014). (Wienold et al., 2019) 
+reported that DGP is the most robust and best-performing metric in their 
+study based on experimental datasets of daylight-dominated workplaces 
+as it is the only metric that did not fail any of the tests. In their study, the 
+DGP showed a very strong correlation (squared correlation factor of 
+0.94) with the user’s response regarding glare perception. DGP is a 
+function of the vertical eye illuminance, glare source luminance, its solid 
+angle and its position index. In this index, total illuminance on the eye is 
+also considered in the estimation of luminance ratio. A DGP metric 
+Fig. 8. A sample glare hazard plot (Source: Ho and Sims, 2012).  
+S. Sreenath et al.                                                                                                                                                                                                                                
+
+Solar Energy 216 (2021) 439–451
+448
+between 0.35 and 0.40 is classified as perceptible degree of perceived 
+glare. (Labib & Baltazar, 2014) used DGP metric to assess glare proba­
+bility in high-rise office building from a building integrated solar PV 
+array. This metric is capable of identifying glare from extremely bright 
+sources such as the Sun. The combined effect of contrast and saturation 
+effects of solar reflection is considered in DGP index. At the same time, 
+Hirning et al. observed that saturation-effect-driven metrics like DGP are 
+not suitable for dim lighting environments. The accurateness of DGP can 
+be improved by clustering different sets of coefficients into the general 
+form of the equation according to the environmental conditions (Kon­
+stantzos & Tzempelikos, 2017). 
+4.5. ANSI 2000 metric 
+The Z136.1–2000 standard of American National Standards Institute 
+(ANSI) deals with the safety of the human eyes from laser exposure 
+(Laser Institute of America, 2007). It is also mentioned that the exposure 
+limit for Sun and laser sources fall in a similar range. So it is believed to 
+be sensible to use this metric for solar glare assessments. (Delori et al., 
+2007) presented a concise formulation of the exposure limits on light 
+entering the human eye. The maximum permissible power level, Pm for 
+eye exposure between 0.15 and 0.20 sec is given in Eq. (6). 
+Pm = 6.93 × 10−4 × CT × CE × P−1 × t−0.25
+(9)  
+Where CT is a function of wavelength, CE is the function of source angle, 
+P is a function of exposure time, and wavelength and t is the exposure 
+time in seconds. 
+The glare metric (equation/ calculation) involves several assump­
+tions that are over conservative when applied in a broader context. 
+Hence it is suggested to choose those metrics that is validated with the 
+measured data and shows satisfactory levels of agreement. In this re­
+gard, DGP and Ho et al. metrics are validated experimentally. However, 
+the accuracy of DGP is not satisfactory (Wienold et al., 2019). So, there is 
+need to develop a common glare metric which can be applied in all 
+possible glare scenarios (including artificial lighting and daylighting). 
+5. Regulatory framework on solar glare 
+Some countries have released guidelines or regulations related to 
+solar glare assessment. A qualitative study involving reading and pro­
+cessing of these documents is carried out to draw main contributions. 
+5.1. North and South America 
+United States of America (USA): In 2012, the Federal Aviation 
+Administration (FAA) formed a research group with the objective of 
+developing a standard for assessment of glare from solar energy systems 
+and find the benchmark at which the glint and glare cause problem to 
+the safe operation of aviation (Ho, 2011). The FAA reports that light 
+reflected from smooth, polished surfaces such as PV arrays is more 
+concentrated than light reflected off rough surfaces such as roads, trees 
+or choppy water. Therefore, the FAA insisted on glare assessment for the 
+PV installations in the vicinity of airports. In this regard, a document 
+named “Technical Guidance for the Evaluation of Selected Solar Tech­
+nologies on Airports” is released in 2010, followed by an update named 
+“Interim Policy, FAA Review of Federally Obligated Airports Solar Sys­
+tem Projects” in 2013 (Federal Aviation Administration (FAA), 2013). In 
+this document, FAA mandates No potential for glare in the existing (or 
+planned) Airport Traffic Control Tower and No potential for glare or low 
+potential for after-image along final approach path of aircraft. Also, FAA 
+states that glare that is beyond 50 degrees from the line-of-sight of pilot 
+can be excluded as it does not constitute a safety hazard. Also, a glare 
+assessment is required for all airports under the National Plan of Inte­
+grated Airport Systems (“termed as obligated airports”) to obtain no 
+hazard determination approval if the airport lies within 5 nautical miles 
+of a proposed solar project (Devita & Barrett, 2014). As of now, FAA 
+approved the use of the SGHAT to exhibit the conformity with the 
+benchmarks set for ocular impact as per its interim policy. 
+Canada: In a publication by Transport Canada (TP1247E), guide­
+lines useful for glare assessment is included in the section named 
+“Aviation Land Use in the Vicinity of Aerodromes” As per these guide­
+lines, glare analysis must consider the movement of the aircraft at 
+landing, take-offs and during manoeuvres. It suggests the solar PV 
+designer to vary orientation and tilt of solar PV modules in order to 
+mitigate the adverse impact from glare. (Transport Canada, 2014). 
+These are mainly applicable to airports and aerodromes located within 
+3 km of the solar PV project. If glare from a proposed project is found to 
+be a potential nuisance, the project can be executed by the installation of 
+shading devices or barriers. To the author’s knowledge, there are no 
+regulations exist at Municipal, Provincial and Federal level regarding 
+glare from solar PV systems in Canada. 
+5.2. European countries 
+United Kingdom (UK): On December 2010, the Civil Aviation Au­
+thority (UK) has issued interim guidance on solar PV systems in and 
+around the aerodrome. CAA recommends to submit a safety assurance 
+report (with risk assessment) on the potential impact of the proposed 
+solar PV system on aviation (Civil Aviaiton Authority UK, 2010). At the 
+same time, CAA has not come up with a glare assessment methodology 
+and safety metrics to assess the impact of glare on airport and aircraft 
+crews. CAA is examining the various studies carried out by the FAA and 
+other organisations on the effects of SPV on aviation (“Information 
+Alert,” 2010). It is also reported that the informal guidance issued by 
+CAA will be replaced by the formal policy in the course of time. In UK, 
+any proposed solar PV project within 5 km of an airport or 100 m of a 
+railroad must conduct a glare assessment before installation. Also, the 
+articles of Air Navigation Order (ANO) 2009 namely Article 137 
+(Endangering safety of an aircraft), Article 221 (Lights liable to 
+endanger), Article 222 (Lights which dazzle or distract) commented on 
+glare aspects that are important to solar PV developers in UK irre­
+spective of location. It states that glare with a detrimental impact on 
+aviation safety must be avoided and hence it is to be taken care of by 
+solar developers and Local Planning Authorities (LPA) (Civil Aviaiton 
+Authority UK, 2010). Department for communities and local govern­
+ment suggests mitigation of glare and dimming of lights wherever 
+possible in the wake of safety concern (Communities & Local Govern­
+ment, 2016). However, it is not specific to solar installations, 
+Germany: The light guidelines (Licht-Leitlinie) issued by the Min­
+istry of Environment defines criteria for reflective solar glare, including 
+solar PV arrays. This approach determines the probability of glare based 
+on the relative location of the receptor (also called as immission) to the 
+solar PV system. Only the receptors located within 100 m from the PV 
+system are considered to be relevant for a glare impact study. If the 
+receptors are situated in the northern side of the PV system (except in 
+certain cases) and south of the PV system (except wall mounted), then 
+glare impact is considered as less risky and hence the assessment is 
+excluded. So, these guidelines are mostly applied to the PV system and 
+receptors located on the east–west axis (Ministry for Environment 
+Health and Consumer Protection, 2014). An intolerable limit of glare is 
+reached when glare occurs for longer than 30 min a day or 30 h per year 
+in total. This guidelines involves assumptions on glare assessment such 
+as the Sun is point-shaped, the modules are perfectly specular, and sun 
+hour is astronomically maximum. However, a threshold value above 
+which glare occurs is not mentioned in this guideline. The guidelines 
+also recommend to consider opinion of the expert who conducts the 
+glare simulations in certain cases. 
+Austria: On 2016, the Austrian electrical engineering association 
+(OVE R11-3) released the guidelines on solar glare from photovoltaic 
+systems. This guideline is intended to analyse glare from the solar PV 
+system and defines the clear limit for glare hazard. These regulations 
+S. Sreenath et al.                                                                                                                                                                                                                                
+
+Solar Energy 216 (2021) 439–451
+449
+have similarity with Germany’s light guidelines. The impact of glare is 
+studied on the basis of glare duration. It warns glare occurring for more 
+than 30 min per day or 30 h per year (Zehndorfer Engineering Consul­
+ting, 2016). Also, special attention is given to relevant angles of light 
+rays in the calculation of glare. Only those times for which the line of 
+vision towards the Sun and the solar PV module differs with a minimum 
+of 10 degrees is considered. 
+France: As per the document released by Civil Aviation, visual 
+discomfort is characterized by a luminance limit. Along with that, the 
+angle between the source & the axis of the gaze is considered. If pilots 
+are in the field of vision of ± 30 degrees, a luminance above 20,000 cd/ 
+m2 is to be avoided. Similarly, a luminance higher than 10,000 cd/m2 is 
+dangerous in a field of vision of ± 1 degree. In this regard, the PV panel 
+manufacturer typically submit a letter stating their PV panels will not 
+reflect light with a luminance higher than 20,000 cd/m2 (Service tech­
+nique of civil aviation, 2013). 
+Switzerland: A guideline on solar glare assessment was established 
+with the help of the Swiss Trade Association in Switzerland. According 
+to this guideline, solar reflections are considered as a nuisance only if the 
+angle between the Sun and the reflection is 20 degree or the incidence 
+angle is larger than 20 degrees or when DNI is more than 120 W/m2 or 
+when power density of the reflection is greater than 30 W/m2 or when 
+the luminance of the reflection is greater than 50,000 cd/m2 (Stick­
+elberger & Moll, 2016). The solar reflections are termed as non-risky if 
+its duration is less than 30 min per day or the solar PV installation is 
+small, or the receptor is located far away from glare source. 
+5.3. Other countries 
+In Australia, there is no specific regulation to glare from solar PV 
+installations. But local authorities in some cities have set a solar 
+reflectance limit of 20 percent from glass-façades (Danks et al., 2016). In 
+Sydney, this reflectance limit is applied to all façade components. The 
+Civil Aviation Safety Authority reviews air safety regulations in 
+Australia, and there are suggestions to update its regulations for 
+addressing glare issues from solar PV installations (Thistleton, 2013). To 
+the author’s knowledge, the southeast Asian countries have not yet 
+released guidelines or regulations on glare from solar installations. 
+Similar to Australia, certain Southeast Asian cities such as; Singapore, 
+Shanghai, and Hong Kong, have established a reflectance limit of 20 
+percent from all facades (Danks et al., 2016). In European Airport Safety 
+Authority (EASA) regulations, it is suggested to conduct an operational 
+safety study on glare occurrence in decent, landing and taxing phases of 
+aircraft (Alberto, 2017). As of 2016, a planning and development 
+guidance does not exist for large scale PV systems in an Irish context. It is 
+recommended to carry out glint and glare assessment of all existing and 
+proposed solar PV systems to analyse the impact on the landscape. 
+Documents in countries such as South Africa, Sweden have discussed 
+about the glare in the context of the working environment only. In South 
+Africa, the building code has not mentioned about glare and its impact. 
+However, in the government notice released by the Ministry of 
+Manpower, it highlights strategies to mitigate glare so that workstations 
+are free from potential glare hazards. In the building code and the 
+Planning & Building Act (2010:900) of Sweden, it is mentioned that 
+glare affecting the health and safety must not be existing. At the same 
+time, it does not mention glare impact from solar PV array specifically. 
+Only a handful of countries have released documents regarding glare 
+occurrence and its impact assessment. To the author’s knowledge, the 
+glare assessment research carried out by FAA is the most detailed study 
+till now. Also, glare reports documents that are available online adopted 
+FAA’s glare guidelines. Hence it can be adopted by aviation stakeholders 
+in other countries which do not have its on regulations or guidelines. In 
+FAA approved SGHAT tool, the glare impact is categorised on colour 
+codes. German and Austria regulations assess the limiting value of glare 
+on the basis of duration. They haven’t reported a threshold limit above 
+which glare is risky. In guidelines of USA, UK & Germany, the radial 
+distance from airport after which glare analysis can be excluded is 
+mentioned. Table 4 summaries the important aspect of the regulations/ 
+guidelines on glare impact existing in different countries. 
+6. Conclusions 
+Solar PV installation in airports can be a threat to the safe operation 
+of aircraft. In this paper, the main factors that influences glare occur­
+rence is categorised as variable and non-variable factors. The variable 
+factors such as location of the PV site, dimensions of the PV array, 
+orientation of PV modules and coordinates of the observers can be 
+adjusted to reduce the glare impact. Based on the review carried out on 
+different aspects of glare occurrence from solar PV arrays, the following 
+conclusions are drawn.  
+• There is usual notion that PV module have low reflectance (less than 
+5%). This is true only when the PV module faces the Sun. The re­
+flections from solar PV surface increases exponentially above 60 
+degrees incidence angle, mainly at sunrise and sunset.  
+• Flash blindness due to reflected sunlight from PV modules leads to 
+after-image which reduce visibility of officers such as air traffic 
+controllers, pilots who are involved in high-risk activities. The 
+minimum irradiance value to cause flash blindness lies between 0.01 
+and 0.1 W/cm2.  
+• It is observed that different methodologies are in place to assess the 
+occurrence of glare from solar PV installations. It is concluded that 
+the main steps of a desirable glare assessment approach are 1) the 
+solar reflections that can reach the observer’s eye are identified. 2) 
+the intensities (& duration) of these reflections are computed 3) the 
+obtained value is compared with threshold limit to find whether it 
+crosses the safe value of glare.  
+• Some approaches focus on calculation of the intensity of the solar 
+reflection, while others evaluate glare duration, size of glare source. 
+Among the studied methodologies, Ho et al. approach is the detailed 
+and validated approach which is also accepted by FAA for glare 
+assessment in airport areas.  
+• Among the available metrics, it was concluded that the Ho et al. 
+metric is the suitable parameter for solar glare assessment in airport 
+solar PV installations. It is accepted by FAA for the no glare hazard 
+approval to its airport stakeholders. In addition, Daylight Glare 
+Probability (DGP) metric can also provide reliable value of solar 
+glare assessment in airports. 
+• There is only a few prediction softwares available (mostly pro­
+prietary) for assessment of solar PV glare. It was noticed that each of 
+this software caters to the requirements of specific jurisdictions 
+(ForgeSolar – USA, Fraunhofer ISE - German).  
+• Only handful of countries have solar glare guidance in place and it 
+varies with the jurisdiction of the respective country. It is understood 
+that most of these documents are loosely written with few excep­
+tions. Expect the FAA’s guidelines in USA, it is found that no other 
+country has detailed guideline on glare methodology and safety 
+standards for solar PV glare.  
+• It was observed that threshold glare limit varies with countries’ 
+jurisdiction especially in terms of glare duration and intensity. 
+Countries such as Germany, Austria and France have defined limit 
+(glare duration/ glare intensity) above which glare is considered as a 
+potential hazard. However, FAA does not provide threshold safe limit 
+of glare intensity and duration. Unlike guidelines of USA, the regu­
+lations and guidelines of other countries are not available in English 
+which might have hindered its adoption across the globe.  
+• The presented information will be beneficial to designers, airport 
+stakeholders, and regulators for the ease of implementation of solar 
+projects in airport environment.  
+• The growing interest of solar installation in airports necessitate the 
+development of acceptable guidelines on solar PV glare. Any new 
+glare guidelines in airport must include a detailed methodology of 
+S. Sreenath et al.                                                                                                                                                                                                                                
+
+Solar Energy 216 (2021) 439–451
+450
+glare assessment and permissible glare limit. A globally acceptable 
+standard will eliminate misperceptions among stakeholders and 
+subsequently lead to simpler approval of solar projects in airports. 
+• Some additional insights from the professionals and software de­
+velopers on glare prediction is very much needed for the analysis of 
+strength and weakness of glare software. So, the future recommen­
+dation of the work is to analyse the capability of the glare prediction 
+tool, other than SGHAT and Forge Solar.  
+• The existing glare prediction software’s can include provision to 
+assess glare from bifacial PV modules, option to optimise solar en­
+ergy generation with Zero glare and provide user-friendly reports 
+with recommendations. 
+Declaration of Competing Interest 
+The authors declare that they have no known competing financial 
+interests or personal relationships that could have appeared to influence 
+the work reported in this paper. 
+Acknowledgment 
+The authors are grateful to the Universiti Malaysia Pahang (UMP) for 
+the Doctoral Research Scheme (DRS) and PGRS 1903172. The opinions, 
+facts, insights and discussions in the document are solely of the authors. 
+It may not necessarily reflect the policy and standpoint of any organi­
+zation directly or indirectly. This study discusses glare related docu­
+ments of different jurisdictions and institutions. The readers please note 
+that this is an academic research work. Hence, all statements stated need 
+to be verified before basing any important decision on them. Authors do 
+not have a legal background and have full insight in any jurisdiction. So, 
+the authors will not be liable or responsible towards any losses experi­
+enced by any parties with the use of information presented in this work. 
+References 
+Alberto, D. (2017). Photovoltaic facilities at airports. AERTEC. https://aertecsolutions.co 
+m/en/2017/03/20/photovoltaic-facilities-at-airports/. 
+Anurag, A., Zhang, J., Gwamuri, J., 2017. General Design Procedures for Airport-Based 
+Solar Photovoltaic Systems. 1–19. https://doi.org/10.3390/en10081194. 
+Bellia, L., Cesarano, A., Iuliano, G., Spada, G., 2008. Daylight glare: a review of 
+discomfort indexes. Visual Quality and Energy Efficiency in Indoor Lighting: Today 
+for Tomorrow. http://www.fedoa.unina.it/1312/1/Bellia_paper.pdf. 
+Chiabrando, R., Fabrizio, E., Garnero, G., 2009. The territorial and landscape impacts of 
+photovoltaic systems: Definition of impacts and assessment of the glare risk. Renew. 
+Sustain. Energy Rev. 13 (9), 2441–2451. https://doi.org/10.1016/j. 
+rser.2009.06.008. 
+Civil Aviaiton Authority UK. (2010). Interim CAA Guidance - Solar Photovoltaic Systems. 
+CNN. (2012). PV array on a parking garage at the Manchester-Boston Regional Airport 
+Glare issue. https://edition.cnn.com/videos/bestoftv/2012/09/01/nh-dnt-airport 
+-solar-panels-safety-issues.cnn. 
+Communities & Local Government. (2016). Planning Practice Guidance. https://www.go 
+v.uk/government/collections/planning-practice-guidance. 
+Danks, R., & Good, J., 2016. Urban Scale Simulations of Solar Reflections in the Built 
+Environment: Methodology & Validation. In: Proceedings of the Symposium on 
+Simulation for Architecture & Urban Design, May, 19–26. 
+Danks, R., Good, J., Sinclair, R., 2016. Assessing refl ected sunlight from building 
+facades: A literature review and proposed criteria. Build. Environ. 103, 193–202. 
+https://doi.org/10.1016/j.buildenv.2016.04.017. 
+Delori, F., Webb, R., Sliney, D., 2007. Maximum permissible exposures for ocular safety 
+(ANSI 2000), with emphasis on ophthalmic devices. J. Opt. Soc. Am. 24 (5), 
+1250–1265. https://doi.org/10.1364/josaa.24.001250. 
+Devita, P., Barrett, S., 2014. Energy technologies’ compatibility with airports and 
+airspace: Guidance for aviation. Airport Manage. 8 (4), 318–326. 
+Federal Aviation Administration (FAA). (2013). Interim Policy, FAA Review of Solar 
+Energy System Projects on Federally Obligated Airports (Vol. 78, Issue 205). https 
+://www.federalregister.gov/documents/2013/10/23/2013-24729/interim-policy 
+-faa-review-of-solar-energy-system-projects-on-federally-obligated-airports. 
+Federal Aviation Administration (FAA). (2018). Technical guidance for evaluating 
+selected solar technologies at airports. https://www.faa.gov/airports/environme 
+ntal/policy_guidance/media/FAA-Airport-Solar-Guide-2018.pdf. 
+Fraunhofer ISE. (2020). Solar Glare Assessment. https://www.ise.fraunhofer.de/de/ge 
+schaeftsfelder/photovoltaik/photovoltaische-module-und-kraftwerke/photovol 
+taische-kraftwerke/blendgutachten.html. 
+Ho, C., Sims, C., 2012. Solar Glare Hazard Analysis Tool (SGHAT) User’s Manual v. 1.0, 
+Sandia National Laboratories. https://share.sandia.gov/phlux. 
+Ho, C., 2013. Relieving a Glaring Problem. Solar Today, Am. Sol. Energy Soc., 28–31. 
+Ho, C.K., Sims, C.A., Christian, J.M., 2015. Evaluation of Glare at the Ivanpah Solar 
+Electric Generating System. Energy Procedia 69, 1296–1305. https://doi.org/ 
+10.1016/j.egypro.2015.03.150. 
+Ho, Clifford K., 2011. Observations and Assessments of Glare from Heliostats and Trough 
+Collectors: Helicopter Flyover and Drive-By Sightings. SolarPACES 2011, 1–6. 
+Ho, Clifford K., Ghanbari, C.M., Diver, R.B., 2009. Hazard Analysis of Glint and Glare 
+From Concentrating Solar Power Plants. SolarPACES 2009, Berlin, Germany, Sandia 
+National Laboratories. 
+Ho, Clifford K., Ghanbari, C.M., Diver, R.B., 2011. Methodology to assess potential glint 
+and glare hazards from concentrating solar power plants: Analytical models and 
+experimental validation. J. Sol. Energy Eng., Trans. ASME 133 (3). https://doi.org/ 
+10.1115/1.4004349. 
+Ho, Clifford K., Khalsa, S.S., 2010. Hazard Analysis and Web-Based Tool for Evaluating 
+Glint and Glare from Solar Collector Systems. 
+Ho, Clifford, K., Sims, C., Yellowhair, J., Wendelin, T., 2018. Tools to Address Glare and 
+Avian Flux Hazards from Solar Energy Systems...United States. https://doi.org/ 
+10.2172/1476164. 
+Information alert. (2010). In Civil Aviation Authority UK (p. 2010). 
+J¨ager-Waldau, A., 2020. Snapshot of photovoltaics-February 2020. Energies 13 (4). 
+https://doi.org/10.3390/en13040930. 
+Kent, M.G., Fotios, S., Altomonte, S., 2019. Discomfort glare evaluation: The influence of 
+anchor bias in luminance adjustments. Lighting Res. Technol. 51 (1), 131–146. 
+https://doi.org/10.1177/1477153517734280. 
+Khan, S.B., Irfan, S., Zhuanghao, Z., Lee, S.L., 2019. Influence of refractive index on 
+antireflectance efficiency of thin films. Materials 12 (9). https://doi.org/10.3390/ 
+ma12091483. 
+Konstantzos, I., Tzempelikos, A., 2017. Daylight glare evaluation with the sun in the field 
+of view through window shades. Build. Environ. 113, 65–77. https://doi.org/ 
+10.1016/j.buildenv.2016.09.009. 
+Kumar, A., Sudhakar, K., Baredar, P., Mamat, R., 2018. Solar PV and BIPV system: 
+Barrier, challenges and policy recommendation in India. Renew. Sustain. Energy 
+Rev. 82 (3), 3314–3322. https://doi.org/10.1016/j.rser.2017.10.013. 
+Labib, R., Baltazar, J.C., 2014. Analysis and quantification of visual glare caused by 
+photovoltaic panels installations in urban canyons. 652–659. 
+Laser Institute of America. (2007). American National Standard for Safe Use of Lasers. In 
+Laser Institute of America: Vol. ANSI Z136. papers2://publication/uuid/D2E145A0- 
+6015-4317-895E-3644589A4A40. 
+Ministry for Environment Health and Consumer Protection. (2014). Light guideline. htt 
+p://www.mlul.brandenburg.de/media_fast/4055/licht_leitlinie.pdf. 
+Photovoltaic glint and glare assessment. (2020). TUVRheinland. www.tuv.com. 
+Protogeropoulos, C., Zachariou, A., 2010. PhotoVoltaic module laboratory reflectivity 
+measurements and comparison analysis with other reflecting surfaces. In: 25nd 
+European Photovoltaic Solar Energy Conference, pp. 355–358. 
+Raut, H.K., Ganesh, V.A., Nair, A.S., Ramakrishna, S., 2011. Anti-reflective coatings: A 
+critical, in-depth review. Energy Environ. Sci. 4 (10), 3779–3804. https://doi.org/ 
+10.1039/c1ee01297e. 
+Table 4 
+Summary of relevant information on glare related documents released in different countries.  
+Name of 
+Country 
+Concerned Authority 
+Is glare document 
+available 
+Is glare procedure 
+mentioned 
+Is glare safety limit 
+mentioned 
+Level of 
+completeness 
+USA 
+Federal Aviation Administration 
+High 
+Canada 
+Transport Canada 
+Low 
+UK 
+Civil Aviation Authority 
+Low 
+Germany 
+Ministry of Environment 
+High 
+Austria 
+Austrian electrical engineering 
+association 
+High 
+Switzerland 
+Swiss Trade Association 
+Medium 
+France 
+Service technique of civil aviation 
+Medium 
+Rest of the 
+world 
+Not Applicable 
+Not Applicable  
+S. Sreenath et al.                                                                                                                                                                                                                                
+
+Solar Energy 216 (2021) 439–451
+451
+Rose, T., Wollert, A., 2015. The dark side of photovoltaic - 3D simulation of glare 
+assessing risk and discomfort. Environ. Impact Assess. Rev. 52, 24–30. https://doi. 
+org/10.1016/j.eiar.2014.08.005. 
+Sandia National Laboratories. (2018). Solar Glare Hazard Analysis Tool (SGHAT). 
+Service technique of civil aviation, F. (2013). Visual diturbances linked to solar panels 
+located near aerodromes. 
+Shiva Kumar, B., Sudhakar, K., 2015. Performance evaluation of 10 MW grid connected 
+solar photovoltaic power plant in India. Energy Reports 1, 184–192. https://doi.org/ 
+10.1016/j.egyr.2015.10.001. 
+Shukla, A.K., Sudhakar, K., Baredar, P., 2016. Simulation and performance analysis of 
+110 kW p grid-connected photovoltaic system for residential building in India : A 
+comparative analysis of various PV technology. Energy Reports 2, 82–88. https:// 
+doi.org/10.1016/j.egyr.2016.04.001. 
+Spaven Consulting. (2011). Solar photovolaic energy facilities: Assessment of potential 
+impact for aviation. https://www.solarchoice.net.au/wp-content/uploads/Reflectivi 
+ty-of-Solar-Electric-PV-Modules.pdf.pdf. 
+Sreenath, S., Sudhakar, K., Ahmad Fitri, Y., 2019. Carbon mitigation potential of Airport 
+based Solar PV plants in the Indian Context. Int. J. Ambient Energy 1–20. https:// 
+doi.org/10.1080/01430750.2019.1696888. 
+Sreenath, S., Sudhakar, K., Ahmad Fitri, Y., 2020. Airport-based photovoltaic 
+applications. Progress in Photovoltaics: Research and Applications. https://doi.org/ 
+10.1002/pip.3265. 
+Sreenath, S., Sudhakar, K., Yusop, A.F., 2020b. Solar photovoltaics in airport: Risk 
+assessment and mitigation strategies. Environ. Impact Assess. Rev. 84 (May) https:// 
+doi.org/10.1016/j.eiar.2020.106418. 
+Sreenath, S., Sudhakar, K., Yusop, A.F., Cuce, E., Solomin, E., 2020. Analysis of solar PV 
+glare in airport environment: Potential solutions. Results in Engineering, 5 
+(November 2019), 100079. https://doi.org/10.1016/j.rineng.2019.100079. 
+Sreenath, S., Sudhakar, K., Yusop, A.F., 2021. 7E analysis of a conceptual utility-scale 
+land-based solar photovoltaic power plant. Energy 219, 119610. https://doi.org/ 
+10.1016/j.energy.2020.119610. 
+Stickelberger, D., Moll, C., 2016. Guide to solar systems according to Art. 18a of the 
+Spatial Planning Act. Swissolar (Swiss Association for Solar Energy). 
+Suk, J.Y., Schiler, M., Kensek, K., 2016. Investigating their accuracy and consistency in 
+daylight glare evaluation by using human subject study data. Discomfort Glare 
+Metrics World Congress October, 3–11. 
+Technology Evaluation Centers. 2019. Top Computational Fluid Dynamics (CFD) 
+Software. https://www3.technologyevaluation.com/sd/solutions/ansys-56881. 
+Thistleton, J., 2013. Airport warns over dangers of solar farm. The Canberra Times. 
+Transport Canada. 2014. AVIATION Land Use In The Vicinity of Aerodromes. https://tc. 
+canada.ca/sites/default/files/migrated/tp1247e.pdf. 
+Wienold, J., Iwata, T., Sarey Khanie, M., Erell, E., Kaftan, E., Rodriguez, R.G., Yamin 
+Garreton, J.A., Tzempelikos, T., Konstantzos, I., Christoffersen, J., Kuhn, T.E., 
+Pierson, C., & Andersen, M., 2019. Cross-validation and robustness of daylight glare 
+metrics. Lighting Res. Technol., 51, 7, 983–1013. https://doi.org/10.1177/ 
+1477153519826003. 
+Wienold, Jan, Christoffersen, J., 2006. Evaluation methods and development of a new 
+glare prediction model for daylight environments with the use of CCD cameras. 38, 
+743–757. https://doi.org/10.1016/j.enbuild.2006.03.017. 
+Yong, J., Schiler, M., Kensek, K., 2017. Investigation of existing discomfort glare indices 
+using human subject study data. Build. Environ. 113, 121–130. https://doi.org/ 
+10.1016/j.buildenv.2016.09.018. 
+Zehndorfer Engineering Consulting. (2016). New Guideline for Solar Glare Assessment in 
+Austria. 
+Zehndorfer Engineering Consulting. (2020). Solar Glare Assessment. https://www.zeh 
+ndorfer.at/en/solar-glare. 
+Zhu, Y. Bin. 2018. The Potential Hazard Analysis Method of Glare for Photovoltaic near 
+airports or within The Potential Hazard Analysis Method of Glare for Photovoltaic 
+near airports or within. https://doi.org/10.1088/1757-899X/392/6/062148. 
+S. Sreenath et al.                                                                                                                                                                                                                                

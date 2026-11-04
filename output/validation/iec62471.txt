@@ -1,0 +1,1736 @@
+
+--- IEC 62471 validation 2026-09-16 21:23:43 ---
+  [OK] [A] Omega_sun = 2*pi*(1-cos(beta/2)) ~ 6.7929e-5 sr
+  [OK] [A] exact Omega_sun within 0.1% of small-angle pi*beta^2/4
+  [OK] [A] K_EYE = (pi/4)(dp/f)^2 tau = 0.005434
+  [OK] [A] L = E_c*1e4/Omega_sun: DNI 1000 & rho=1 -> 1.472e7 W/m2/sr
+  [OK] [A] sun-disc retinal round-trip E_r = L*K_EYE/1e4 = 8.0 W/cm2
+  [OK] [B] AM1.5 direct integral ~630 W/m2 (pvlib reference atmosphere)
+  [OK] [B] 0 < kS < 1
+  [OK] [B] 0 < kUVA < 1
+  [OK] [B] 0 < kB < 1
+  [OK] [B] 0 < kR < 1
+  [OK] [B] 0 < kIR < 1
+  [OK] [B] 0 < kH < 1
+  [OK] [B] kR = R(lambda)-weighted AM1.5 / full spectrum ~ 0.476
+  [OK] [B] kB = B(lambda)-weighted AM1.5 / full spectrum ~ 0.084
+  [OK] [B] skin fraction kH ~ 0.97 (most of the solar band is 380-3000 nm)
+  [OK] [B] UVA fraction < IR fraction < skin fraction
+  [OK] [B] weights cached (id identical on 2nd call)
+  [OK] [C] PV-A 2x4883 m @2.5 km -> alpha=0.05085 (height clamped 0.1, w clamped 0.0017)
+  [OK] [C] @10 m -> alpha=0.1 (ALPHA_MAX cap)
+  [OK] [C] far field -> alpha=ALPHA_MIN=0.0017 (point-source floor)
+  [OK] [C] alpha never leaves [0.0017, 0.1]
+  [OK] [C] @973 m: h/d>5 caps at 0.1, w/d=0.00206 (unclamped) -> 0.05103
+  [OK] [D] gamma(0.25 s) = 0.011 rad
+  [OK] [D] gamma(100 s) = 0.011 rad
+  [OK] [D] gamma(1000 s) = 0.011*sqrt(10) = 0.034785
+  [OK] [D] gamma(1e4 s) = 0.1 rad
+  [OK] [D] dilution(a=0.05, t=0.25s)=1 (fills 0.011-rad cone)
+  [OK] [D] dilution(a=0.005, 0.25s) = (0.005/0.011)^2 = 0.2066
+  [OK] [D] dilution(a=0.002, 1e4s) = (0.002/0.1)^2 = 4e-4
+  [OK] [E] thermal EL tableau: Exempt/RG1=2.8e4/alpha=5.6e5, RG2=7.1e4/alpha=1.42e6
+  [OK] [E] blue radiance groups: [Exempt, RG1, RG2, RG3]
+  [OK] [E] blue small-source E_B: [Exempt, RG2, RG2, RG3] (EN Exempt==RG1=1.0)
+  [OK] [E] decision tree: small source (alpha<11 mrad) judged by E_B, risk_blue=RG2, expected RG2
+  [OK] [E] thermal radiance groups: [Exempt, RG2, RG3] (Exempt==RG1)
+  [OK] [E] formal eye group is the max of thermal+blue (RG3 here)
+  [OK] [F] tmax_thermal: L_R*alpha=5e4 -> t=1.0 s exactly
+  [OK] [F] tmax_thermal: L_R*alpha=1e5 -> t=0.0625 s (Eq 4.9 inversion)
+  [OK] [F] tmax_blue: L_B=1e6 -> t=1 s (Eq 4.6 inversion)
+  [OK] [F] tmax_blue: L_B=1e4 -> t=100 s
+  [FAIL] [G] summary exposes iec_* aggregate columns
+  [FAIL] [G] analysis ran (1.2s) and at least one pair reports glare rows
+  RESULT: 39 passed, 2 failed, elapsed 1.2s (wire run)
+
+--- IEC 62471 validation 2026-09-16 21:24:07 ---
+  [OK] [A] Omega_sun = 2*pi*(1-cos(beta/2)) ~ 6.7929e-5 sr
+  [OK] [A] exact Omega_sun within 0.1% of small-angle pi*beta^2/4
+  [OK] [A] K_EYE = (pi/4)(dp/f)^2 tau = 0.005434
+  [OK] [A] L = E_c*1e4/Omega_sun: DNI 1000 & rho=1 -> 1.472e7 W/m2/sr
+  [OK] [A] sun-disc retinal round-trip E_r = L*K_EYE/1e4 = 8.0 W/cm2
+  [OK] [B] AM1.5 direct integral ~630 W/m2 (pvlib reference atmosphere)
+  [OK] [B] 0 < kS < 1
+  [OK] [B] 0 < kUVA < 1
+  [OK] [B] 0 < kB < 1
+  [OK] [B] 0 < kR < 1
+  [OK] [B] 0 < kIR < 1
+  [OK] [B] 0 < kH < 1
+  [OK] [B] kR = R(lambda)-weighted AM1.5 / full spectrum ~ 0.476
+  [OK] [B] kB = B(lambda)-weighted AM1.5 / full spectrum ~ 0.084
+  [OK] [B] skin fraction kH ~ 0.97 (most of the solar band is 380-3000 nm)
+  [OK] [B] UVA fraction < IR fraction < skin fraction
+  [OK] [B] weights cached (id identical on 2nd call)
+  [OK] [C] PV-A 2x4883 m @2.5 km -> alpha=0.05085 (height clamped 0.1, w clamped 0.0017)
+  [OK] [C] @10 m -> alpha=0.1 (ALPHA_MAX cap)
+  [OK] [C] far field -> alpha=ALPHA_MIN=0.0017 (point-source floor)
+  [OK] [C] alpha never leaves [0.0017, 0.1]
+  [OK] [C] @973 m: h/d>5 caps at 0.1, w/d=0.00206 (unclamped) -> 0.05103
+  [OK] [D] gamma(0.25 s) = 0.011 rad
+  [OK] [D] gamma(100 s) = 0.011 rad
+  [OK] [D] gamma(1000 s) = 0.011*sqrt(10) = 0.034785
+  [OK] [D] gamma(1e4 s) = 0.1 rad
+  [OK] [D] dilution(a=0.05, t=0.25s)=1 (fills 0.011-rad cone)
+  [OK] [D] dilution(a=0.005, 0.25s) = (0.005/0.011)^2 = 0.2066
+  [OK] [D] dilution(a=0.002, 1e4s) = (0.002/0.1)^2 = 4e-4
+  [OK] [E] thermal EL tableau: Exempt/RG1=2.8e4/alpha=5.6e5, RG2=7.1e4/alpha=1.42e6
+  [OK] [E] blue radiance groups: [Exempt, RG1, RG2, RG3]
+  [OK] [E] blue small-source E_B: [Exempt, RG2, RG2, RG3] (EN Exempt==RG1=1.0)
+  [OK] [E] decision tree: small source (alpha<11 mrad) judged by E_B, risk_blue=RG2, expected RG2
+  [OK] [E] thermal radiance groups: [Exempt, RG2, RG3] (Exempt==RG1)
+  [OK] [E] formal eye group is the max of thermal+blue (RG3 here)
+  [OK] [F] tmax_thermal: L_R*alpha=5e4 -> t=1.0 s exactly
+  [OK] [F] tmax_thermal: L_R*alpha=1e5 -> t=0.0625 s (Eq 4.9 inversion)
+  [OK] [F] tmax_blue: L_B=1e6 -> t=1 s (Eq 4.6 inversion)
+  [OK] [F] tmax_blue: L_B=1e4 -> t=100 s
+  [OK] [G] summary exposes iec_* aggregate columns
+  [OK] [G] analysis ran (1.3s) and at least one pair reports glare rows
+  [OK] [G] IEC columns present on detail rows
+  [OK] [G] risk columns hold only Exempt/RG1/RG2/RG3
+  [OK] [G] L == E_c*1e4/Omega (exact identity to the pipeline)
+  [OK] [G] tmax_thermal = (5e4/(L_R*alpha))^4 round-trips the RG2 EL
+  [OK] [G] bijection kR*E_r == kR*L*K_EYE/1e4 (er_lr consistent, <2% for sun-disc)
+  [OK] [G] every glare minute has a rated eye risk (no NaN)
+  [OK] [G] summary fills iec_worst_risk / iec_min_tmax rows for hit pairs
+  [FAIL] [G] L <= rho*L_sun (beam brightness bounded by the sun)
+  RESULT: 48 passed, 1 failed, elapsed 1.3s (wire run)
+
+--- IEC 62471 validation 2026-09-16 21:24:23 ---
+  [OK] [A] Omega_sun = 2*pi*(1-cos(beta/2)) ~ 6.7929e-5 sr
+  [OK] [A] exact Omega_sun within 0.1% of small-angle pi*beta^2/4
+  [OK] [A] K_EYE = (pi/4)(dp/f)^2 tau = 0.005434
+  [OK] [A] L = E_c*1e4/Omega_sun: DNI 1000 & rho=1 -> 1.472e7 W/m2/sr
+  [OK] [A] sun-disc retinal round-trip E_r = L*K_EYE/1e4 = 8.0 W/cm2
+  [OK] [B] AM1.5 direct integral ~630 W/m2 (pvlib reference atmosphere)
+  [OK] [B] 0 < kS < 1
+  [OK] [B] 0 < kUVA < 1
+  [OK] [B] 0 < kB < 1
+  [OK] [B] 0 < kR < 1
+  [OK] [B] 0 < kIR < 1
+  [OK] [B] 0 < kH < 1
+  [OK] [B] kR = R(lambda)-weighted AM1.5 / full spectrum ~ 0.476
+  [OK] [B] kB = B(lambda)-weighted AM1.5 / full spectrum ~ 0.084
+  [OK] [B] skin fraction kH ~ 0.97 (most of the solar band is 380-3000 nm)
+  [OK] [B] UVA fraction < IR fraction < skin fraction
+  [OK] [B] weights cached (id identical on 2nd call)
+  [OK] [C] PV-A 2x4883 m @2.5 km -> alpha=0.05085 (height clamped 0.1, w clamped 0.0017)
+  [OK] [C] @10 m -> alpha=0.1 (ALPHA_MAX cap)
+  [OK] [C] far field -> alpha=ALPHA_MIN=0.0017 (point-source floor)
+  [OK] [C] alpha never leaves [0.0017, 0.1]
+  [OK] [C] @973 m: h/d>5 caps at 0.1, w/d=0.00206 (unclamped) -> 0.05103
+  [OK] [D] gamma(0.25 s) = 0.011 rad
+  [OK] [D] gamma(100 s) = 0.011 rad
+  [OK] [D] gamma(1000 s) = 0.011*sqrt(10) = 0.034785
+  [OK] [D] gamma(1e4 s) = 0.1 rad
+  [OK] [D] dilution(a=0.05, t=0.25s)=1 (fills 0.011-rad cone)
+  [OK] [D] dilution(a=0.005, 0.25s) = (0.005/0.011)^2 = 0.2066
+  [OK] [D] dilution(a=0.002, 1e4s) = (0.002/0.1)^2 = 4e-4
+  [OK] [E] thermal EL tableau: Exempt/RG1=2.8e4/alpha=5.6e5, RG2=7.1e4/alpha=1.42e6
+  [OK] [E] blue radiance groups: [Exempt, RG1, RG2, RG3]
+  [OK] [E] blue small-source E_B: [Exempt, RG2, RG2, RG3] (EN Exempt==RG1=1.0)
+  [OK] [E] decision tree: small source (alpha<11 mrad) judged by E_B, risk_blue=RG2, expected RG2
+  [OK] [E] thermal radiance groups: [Exempt, RG2, RG3] (Exempt==RG1)
+  [OK] [E] formal eye group is the max of thermal+blue (RG3 here)
+  [OK] [F] tmax_thermal: L_R*alpha=5e4 -> t=1.0 s exactly
+  [OK] [F] tmax_thermal: L_R*alpha=1e5 -> t=0.0625 s (Eq 4.9 inversion)
+  [OK] [F] tmax_blue: L_B=1e6 -> t=1 s (Eq 4.6 inversion)
+  [OK] [F] tmax_blue: L_B=1e4 -> t=100 s
+  [OK] [G] summary exposes iec_* aggregate columns
+  [OK] [G] analysis ran (1.3s) and at least one pair reports glare rows
+  [OK] [G] IEC columns present on detail rows
+  [OK] [G] risk columns hold only Exempt/RG1/RG2/RG3
+  [OK] [G] L == E_c*1e4/Omega (exact identity to the pipeline)
+  [OK] [G] tmax_thermal = (5e4/(L_R*alpha))^4 round-trips the RG2 EL
+  [OK] [G] bijection kR*E_r == kR*L*K_EYE/1e4 (er_lr consistent, <2% for sun-disc)
+  [OK] [G] every glare minute has a rated eye risk (no NaN)
+  [OK] [G] L <= rho*L_sun (beam brightness bounded by the sun)
+  [OK] [G] summary fills iec_worst_risk / iec_min_tmax rows for hit pairs
+  RESULT: 49 passed, 0 failed, elapsed 1.3s (wire run)
+
+--- IEC 62471 validation 2026-09-16 21:27:01 ---
+  [OK] [A] Omega_sun = 2*pi*(1-cos(beta/2)) ~ 6.7929e-5 sr
+  [OK] [A] exact Omega_sun within 0.1% of small-angle pi*beta^2/4
+  [OK] [A] K_EYE = (pi/4)(dp/f)^2 tau = 0.005434
+  [OK] [A] L = E_c*1e4/Omega_sun: DNI 1000 & rho=1 -> 1.472e7 W/m2/sr
+  [OK] [A] sun-disc retinal round-trip E_r = L*K_EYE/1e4 = 8.0 W/cm2
+  [OK] [B] AM1.5 direct integral ~630 W/m2 (pvlib reference atmosphere)
+  [OK] [B] 0 < kS < 1
+  [OK] [B] 0 < kUVA < 1
+  [OK] [B] 0 < kB < 1
+  [OK] [B] 0 < kR < 1
+  [OK] [B] 0 < kIR < 1
+  [OK] [B] 0 < kH < 1
+  [OK] [B] kR = R(lambda)-weighted AM1.5 / full spectrum ~ 0.476
+  [OK] [B] kB = B(lambda)-weighted AM1.5 / full spectrum ~ 0.084
+  [OK] [B] skin fraction kH ~ 0.97 (most of the solar band is 380-3000 nm)
+  [OK] [B] UVA fraction < IR fraction < skin fraction
+  [OK] [B] weights cached (id identical on 2nd call)
+  [OK] [C] PV-A 2x4883 m @2.5 km -> alpha=0.05085 (height clamped 0.1, w clamped 0.0017)
+  [OK] [C] @10 m -> alpha=0.1 (ALPHA_MAX cap)
+  [OK] [C] far field -> alpha=ALPHA_MIN=0.0017 (point-source floor)
+  [OK] [C] alpha never leaves [0.0017, 0.1]
+  [OK] [C] @973 m: h/d>5 caps at 0.1, w/d=0.00206 (unclamped) -> 0.05103
+  [OK] [D] gamma(0.25 s) = 0.011 rad
+  [OK] [D] gamma(100 s) = 0.011 rad
+  [OK] [D] gamma(1000 s) = 0.011*sqrt(10) = 0.034785
+  [OK] [D] gamma(1e4 s) = 0.1 rad
+  [OK] [D] dilution(a=0.05, t=0.25s)=1 (fills 0.011-rad cone)
+  [OK] [D] dilution(a=0.005, 0.25s) = (0.005/0.011)^2 = 0.2066
+  [OK] [D] dilution(a=0.002, 1e4s) = (0.002/0.1)^2 = 4e-4
+  [OK] [E] thermal EL tableau: Exempt/RG1=2.8e4/alpha=5.6e5, RG2=7.1e4/alpha=1.42e6
+  [OK] [E] blue radiance groups: [Exempt, RG1, RG2, RG3]
+  [OK] [E] blue small-source E_B: [Exempt, RG2, RG2, RG3] (EN Exempt==RG1=1.0)
+  [OK] [E] decision tree: small source (alpha<11 mrad) judged by E_B, risk_blue=RG2, expected RG2
+  [OK] [E] thermal radiance groups: [Exempt, RG2, RG3] (Exempt==RG1)
+  [OK] [E] formal eye group is the max of thermal+blue (RG3 here)
+  [OK] [F] tmax_thermal: L_R*alpha=5e4 -> t=1.0 s exactly
+  [OK] [F] tmax_thermal: L_R*alpha=1e5 -> t=0.0625 s (Eq 4.9 inversion)
+  [OK] [F] tmax_blue: L_B=1e6 -> t=1 s (Eq 4.6 inversion)
+  [OK] [F] tmax_blue: L_B=1e4 -> t=100 s
+  [OK] [G] summary exposes iec_* aggregate columns
+  [OK] [G] analysis ran (1.3s) and at least one pair reports glare rows
+  [OK] [G] IEC columns present on detail rows
+  [OK] [G] risk columns hold only Exempt/RG1/RG2/RG3
+  [OK] [G] L == E_c*1e4/Omega (exact identity to the pipeline)
+  [OK] [G] tmax_thermal = (5e4/(L_R*alpha))^4 round-trips the RG2 EL
+  [OK] [G] bijection kR*E_r == kR*L*K_EYE/1e4 (er_lr consistent, <2% for sun-disc)
+  [OK] [G] every glare minute has a rated eye risk (no NaN)
+  [OK] [G] L <= rho*L_sun (beam brightness bounded by the sun)
+  [OK] [G] summary fills iec_worst_risk / iec_min_tmax rows for hit pairs
+  [OK] [H] IEC 62471 zones figure rendered
+  [OK] [H] IEC 62471 tmax figure rendered
+  RESULT: 51 passed, 0 failed, elapsed 1.3s (wire run)
+
+--- IEC 62471 validation 2026-09-16 22:28:38 ---
+  [OK] [A] Omega_sun = 2*pi*(1-cos(beta/2)) ~ 6.7929e-5 sr
+  [OK] [A] exact Omega_sun within 0.1% of small-angle pi*beta^2/4
+  [OK] [A] K_EYE = (pi/4)(dp/f)^2 tau = 0.005434
+  [OK] [A] L = E_c*1e4/Omega_sun: DNI 1000 & rho=1 -> 1.472e7 W/m2/sr
+  [OK] [A] sun-disc retinal round-trip E_r = L*K_EYE/1e4 = 8.0 W/cm2
+  [OK] [B] AM1.5 direct integral ~630 W/m2 (pvlib reference atmosphere)
+  [OK] [B] 0 < kS < 1.0
+  [OK] [B] 0 < kUVA < 1.0
+  [OK] [B] 0 < kB < 1.0
+  [OK] [B] 0 < kR < 1.5
+  [OK] [B] 0 < kIR < 1.0
+  [OK] [B] 0 < kH < 1.0
+  [OK] [B] kR = R(lambda)-weighted AM1.5 / full spectrum ~ 1.267 (Table 4.2 R has the blue-violet 10x hump at 435-440 nm)
+  [OK] [B] kB = B(lambda)-weighted AM1.5 / full spectrum ~ 0.084
+  [OK] [B] skin fraction kH ~ 0.97 (most of the solar band is 380-3000 nm)
+  [OK] [B] UVA fraction < IR fraction < skin fraction
+  [OK] [B] weights cached (id identical on 2nd call)
+  [OK] [C] PV-A 2x4883 m @2.5 km -> alpha=0.05085 (height clamped 0.1, w clamped 0.0017)
+  [OK] [C] @10 m -> alpha=0.1 (ALPHA_MAX cap)
+  [OK] [C] far field -> alpha=ALPHA_MIN=0.0017 (point-source floor)
+  [OK] [C] alpha never leaves [0.0017, 0.1]
+  [OK] [C] @973 m: h/d>5 caps at 0.1, w/d=0.00206 (unclamped) -> 0.05103
+  [OK] [D] gamma(0.25 s) = 0.011 rad
+  [OK] [D] gamma(100 s) = 0.011 rad
+  [OK] [D] gamma(1000 s) = 0.011*sqrt(10) = 0.034785
+  [OK] [D] gamma(1e4 s) = 0.1 rad
+  [OK] [D] dilution(a=0.05, t=0.25s)=1 (fills 0.011-rad cone)
+  [OK] [D] dilution(a=0.005, 0.25s) = (0.005/0.011)^2 = 0.2066
+  [OK] [D] dilution(a=0.002, 1e4s) = (0.002/0.1)^2 = 4e-4
+  [OK] [E] thermal EL tableau: Exempt/RG1=2.8e4/alpha=5.6e5, RG2=7.1e4/alpha=1.42e6
+  [OK] [E] blue radiance groups: [Exempt, RG1, RG2, RG3]
+  [OK] [E] blue small-source E_B: [Exempt, RG2, RG2, RG3] (EN Exempt==RG1=1.0)
+  [OK] [E] decision tree: small source (alpha<11 mrad) judged by E_B, risk_blue=RG2, expected RG2
+  [OK] [E] thermal radiance groups: [Exempt, RG2, RG3] (Exempt==RG1)
+  [OK] [E] formal eye group is the max of thermal+blue (RG3 here)
+  [OK] [F] tmax_thermal: L_R*alpha=5e4 -> t=1.0 s exactly
+  [OK] [F] tmax_thermal: L_R*alpha=1e5 -> t=0.0625 s (Eq 4.9 inversion)
+  [OK] [F] tmax_blue: L_B=1e6 -> t=1 s (Eq 4.6 inversion)
+  [OK] [F] tmax_blue: L_B=1e4 -> t=100 s
+  [OK] [G] summary exposes iec_* aggregate columns
+  [OK] [G] analysis ran (1.3s) and at least one pair reports glare rows
+  [OK] [G] IEC columns present on detail rows
+  [OK] [G] risk columns hold only Exempt/RG1/RG2/RG3
+  [OK] [G] L == E_c*1e4/Omega (exact identity to the pipeline)
+  [OK] [G] tmax_thermal = (5e4/(L_R*alpha))^4 round-trips the RG2 EL
+  [OK] [G] bijection kR*E_r == kR*L*K_EYE/1e4 (er_lr consistent, <2% for sun-disc)
+  [OK] [G] every glare minute has a rated eye risk (no NaN)
+  [OK] [G] L <= rho*L_sun (beam brightness bounded by the sun)
+  [OK] [G] summary fills iec_worst_risk / iec_min_tmax rows for hit pairs
+  [OK] [H] IEC 62471 zones figure rendered
+  [OK] [H] IEC 62471 tmax figure rendered
+  [OK] [H] IEC 62471 weighting functions figure rendered
+  RESULT: 52 passed, 0 failed, elapsed 1.3s (wire run)
+
+--- IEC 62471 validation 2026-09-16 23:14:10 ---
+  [OK] [A] Omega_sun = 2*pi*(1-cos(beta/2)) ~ 6.7929e-5 sr
+  [OK] [A] exact Omega_sun within 0.1% of small-angle pi*beta^2/4
+  [OK] [A] K_EYE = (pi/4)(dp/f)^2 tau = 0.005434
+  [OK] [A] L = E_c*1e4/Omega_sun: DNI 1000 & rho=1 -> 1.472e7 W/m2/sr
+  [OK] [A] sun-disc retinal round-trip E_r = L*K_EYE/1e4 = 8.0 W/cm2
+  [OK] [B] AM1.5 direct integral ~630 W/m2 (pvlib reference atmosphere)
+  [OK] [B] 0 < kS < 1.0
+  [OK] [B] 0 < kUVA < 1.0
+  [OK] [B] 0 < kB < 1.0
+  [OK] [B] 0 < kR < 1.5
+  [OK] [B] 0 < kIR < 1.0
+  [OK] [B] 0 < kH < 1.0
+  [OK] [B] kR = R(lambda)-weighted AM1.5 / full spectrum ~ 1.267 (Table 4.2 R has the blue-violet 10x hump at 435-440 nm)
+  [OK] [B] kB = B(lambda)-weighted AM1.5 / full spectrum ~ 0.084
+  [OK] [B] skin fraction kH ~ 0.97 (most of the solar band is 380-3000 nm)
+  [OK] [B] UVA fraction < IR fraction < skin fraction
+  [OK] [B] weights cached (id identical on 2nd call)
+  [OK] [C] PV-A 2x4883 m @2.5 km -> alpha=0.05085 (height clamped 0.1, w clamped 0.0017)
+  [OK] [C] @10 m -> alpha=0.1 (ALPHA_MAX cap)
+  [OK] [C] far field -> alpha=ALPHA_MIN=0.0017 (point-source floor)
+  [OK] [C] alpha never leaves [0.0017, 0.1]
+  [OK] [C] @973 m: h/d>5 caps at 0.1, w/d=0.00206 (unclamped) -> 0.05103
+  [OK] [D] gamma(0.25 s) = 0.011 rad
+  [OK] [D] gamma(100 s) = 0.011 rad
+  [OK] [D] gamma(1000 s) = 0.011*sqrt(10) = 0.034785
+  [OK] [D] gamma(1e4 s) = 0.1 rad
+  [OK] [D] dilution(a=0.05, t=0.25s)=1 (fills 0.011-rad cone)
+  [OK] [D] dilution(a=0.005, 0.25s) = (0.005/0.011)^2 = 0.2066
+  [OK] [D] dilution(a=0.002, 1e4s) = (0.002/0.1)^2 = 4e-4
+  [OK] [E] thermal EL tableau: Exempt/RG1=2.8e4/alpha=5.6e5, RG2=7.1e4/alpha=1.42e6
+  [OK] [E] blue radiance groups: [Exempt, RG1, RG2, RG3]
+  [OK] [E] blue small-source E_B: [Exempt, RG2, RG2, RG3] (EN Exempt==RG1=1.0)
+  [OK] [E] decision tree: small source (alpha<11 mrad) judged by E_B, risk_blue=RG2, expected RG2
+  [OK] [E] thermal radiance groups: [Exempt, RG2, RG3] (Exempt==RG1)
+  [OK] [E] formal eye group is the max of thermal+blue (RG3 here)
+  [OK] [F] tmax_thermal: L_R*alpha=5e4 -> t=1.0 s exactly
+  [OK] [F] tmax_thermal: L_R*alpha=1e5 -> t=0.0625 s (Eq 4.9 inversion)
+  [OK] [F] tmax_blue: L_B=1e6 -> t=1 s (Eq 4.6 inversion)
+  [OK] [F] tmax_blue: L_B=1e4 -> t=100 s
+  [OK] [G] summary exposes iec_* aggregate columns
+  [OK] [G] analysis ran (1.3s) and at least one pair reports glare rows
+  [OK] [G] IEC columns present on detail rows
+  [OK] [G] risk columns hold only Exempt/RG1/RG2/RG3
+  [OK] [G] L == E_c*1e4/Omega (exact identity to the pipeline)
+  [OK] [G] tmax_thermal = (5e4/(L_R*alpha))^4 round-trips the RG2 EL
+  [OK] [G] bijection kR*E_r == kR*L*K_EYE/1e4 (er_lr consistent, <2% for sun-disc)
+  [OK] [G] every glare minute has a rated eye risk (no NaN)
+  [OK] [G] L <= rho*L_sun (beam brightness bounded by the sun)
+  [OK] [G] summary fills iec_worst_risk / iec_min_tmax rows for hit pairs
+  [OK] [H] IEC 62471 zones figure rendered
+  [OK] [H] IEC 62471 tmax figure rendered
+  [OK] [H] IEC 62471 weighting functions figure rendered
+  RESULT: 52 passed, 0 failed, elapsed 1.3s (wire run)
+
+--- IEC 62471 validation 2026-09-17 23:49:52 ---
+  [OK] [A] Omega_sun = 2*pi*(1-cos(beta/2)) ~ 6.7929e-5 sr
+  [OK] [A] exact Omega_sun within 0.1% of small-angle pi*beta^2/4
+  [OK] [A] K_EYE = (pi/4)(dp/f)^2 tau = 0.005434
+  [OK] [A] L = E_c*1e4/Omega_sun: DNI 1000 & rho=1 -> 1.472e7 W/m2/sr
+  [OK] [A] sun-disc retinal round-trip E_r = L*K_EYE/1e4 = 8.0 W/cm2
+  [OK] [B] AM1.5 direct integral ~630 W/m2 (pvlib reference atmosphere)
+  [OK] [B] 0 < kS < 1.0
+  [OK] [B] 0 < kUVA < 1.0
+  [OK] [B] 0 < kB < 1.0
+  [OK] [B] 0 < kR < 1.5
+  [OK] [B] 0 < kIR < 1.0
+  [OK] [B] 0 < kH < 1.0
+  [OK] [B] kR = R(lambda)-weighted AM1.5 / full spectrum ~ 1.267 (Table 4.2 R has the blue-violet 10x hump at 435-440 nm)
+  [OK] [B] kB = B(lambda)-weighted AM1.5 / full spectrum ~ 0.084
+  [OK] [B] skin fraction kH ~ 0.97 (most of the solar band is 380-3000 nm)
+  [OK] [B] UVA fraction < IR fraction < skin fraction
+  [OK] [B] weights cached (id identical on 2nd call)
+  [OK] [C] PV-A 2x4883 m @2.5 km -> alpha=0.05085 (height clamped 0.1, w clamped 0.0017)
+  [OK] [C] @10 m -> alpha=0.1 (ALPHA_MAX cap)
+  [OK] [C] far field -> alpha=ALPHA_MIN=0.0017 (point-source floor)
+  [OK] [C] alpha never leaves [0.0017, 0.1]
+  [OK] [C] @973 m: h/d>5 caps at 0.1, w/d=0.00206 (unclamped) -> 0.05103
+  [OK] [D] gamma(0.25 s) = 0.011 rad
+  [OK] [D] gamma(100 s) = 0.011 rad
+  [OK] [D] gamma(1000 s) = 0.011*sqrt(10) = 0.034785
+  [OK] [D] gamma(1e4 s) = 0.1 rad
+  [OK] [D] dilution(a=0.05, t=0.25s)=1 (fills 0.011-rad cone)
+  [OK] [D] dilution(a=0.005, 0.25s) = (0.005/0.011)^2 = 0.2066
+  [OK] [D] dilution(a=0.002, 1e4s) = (0.002/0.1)^2 = 4e-4
+  [OK] [E] thermal EL tableau: Exempt/RG1=2.8e4/alpha=5.6e5, RG2=7.1e4/alpha=1.42e6
+  [OK] [E] blue radiance groups: [Exempt, RG1, RG2, RG3]
+  [OK] [E] blue small-source E_B: [Exempt, RG2, RG2, RG3] (EN Exempt==RG1=1.0)
+  [OK] [E] decision tree: small source (alpha<11 mrad) judged by E_B, risk_blue=RG2, expected RG2
+  [OK] [E] thermal radiance groups: [Exempt, RG2, RG3] (Exempt==RG1)
+  [OK] [E] formal eye group is the max of thermal+blue (RG3 here)
+  [OK] [F] tmax_thermal: L_R*alpha=5e4 -> t=1.0 s exactly
+  [OK] [F] tmax_thermal: L_R*alpha=1e5 -> t=0.0625 s (Eq 4.9 inversion)
+  [OK] [F] tmax_blue: L_B=1e6 -> t=1 s (Eq 4.6 inversion)
+  [OK] [F] tmax_blue: L_B=1e4 -> t=100 s
+  [OK] [G] summary exposes iec_* aggregate columns
+  [OK] [G] analysis ran (1.6s) and at least one pair reports glare rows
+  [OK] [G] IEC columns present on detail rows
+  [OK] [G] risk columns hold only Exempt/RG1/RG2/RG3
+  [OK] [G] L == E_c*1e4/Omega (exact identity to the pipeline)
+  [OK] [G] tmax_thermal = (5e4/(L_R*alpha))^4 round-trips the RG2 EL
+  [OK] [G] bijection kR*E_r == kR*L*K_EYE/1e4 (er_lr consistent, <2% for sun-disc)
+  [OK] [G] every glare minute has a rated eye risk (no NaN)
+  [OK] [G] L <= rho*L_sun (beam brightness bounded by the sun)
+  [OK] [G] summary fills iec_worst_risk / iec_min_tmax rows for hit pairs
+  [OK] [H] IEC 62471 zones figure rendered
+  [OK] [H] IEC 62471 tmax figure rendered
+  [OK] [H] IEC 62471 weighting functions figure rendered
+  RESULT: 52 passed, 0 failed, elapsed 1.6s (wire run)
+
+--- IEC 62471 validation 2026-09-20 22:15:02 ---
+  [OK] [A] Omega_sun = 2*pi*(1-cos(beta/2)) ~ 6.7929e-5 sr
+  [OK] [A] exact Omega_sun within 0.1% of small-angle pi*beta^2/4
+  [OK] [A] K_EYE = (pi/4)(dp/f)^2 tau = 0.005434
+  [OK] [A] L = E_c*1e4/Omega_sun: DNI 1000 & rho=1 -> 1.472e7 W/m2/sr
+  [OK] [A] sun-disc retinal round-trip E_r = L*K_EYE/1e4 = 8.0 W/cm2
+  [OK] [B] AM1.5 direct integral ~630 W/m2 (pvlib reference atmosphere)
+  [OK] [B] 0 < kS < 1.0
+  [OK] [B] 0 < kUVA < 1.0
+  [OK] [B] 0 < kB < 1.0
+  [OK] [B] 0 < kR < 1.5
+  [OK] [B] 0 < kIR < 1.0
+  [OK] [B] 0 < kH < 1.0
+  [OK] [B] kR = R(lambda)-weighted AM1.5 / full spectrum ~ 1.267 (Table 4.2 R has the blue-violet 10x hump at 435-440 nm)
+  [OK] [B] kB = B(lambda)-weighted AM1.5 / full spectrum ~ 0.084
+  [OK] [B] skin fraction kH ~ 0.97 (most of the solar band is 380-3000 nm)
+  [OK] [B] UVA fraction < IR fraction < skin fraction
+  [OK] [B] weights cached (id identical on 2nd call)
+  [OK] [C] PV-A 2x4883 m @2.5 km -> alpha=0.05085 (height clamped 0.1, w clamped 0.0017)
+  [OK] [C] @10 m -> alpha=0.1 (ALPHA_MAX cap)
+  [OK] [C] far field -> alpha=ALPHA_MIN=0.0017 (point-source floor)
+  [OK] [C] alpha never leaves [0.0017, 0.1]
+  [OK] [C] @973 m: h/d>5 caps at 0.1, w/d=0.00206 (unclamped) -> 0.05103
+  [OK] [D] gamma(0.25 s) = 0.011 rad
+  [OK] [D] gamma(100 s) = 0.011 rad
+  [OK] [D] gamma(1000 s) = 0.011*sqrt(10) = 0.034785
+  [OK] [D] gamma(1e4 s) = 0.1 rad
+  [OK] [D] dilution(a=0.05, t=0.25s)=1 (fills 0.011-rad cone)
+  [OK] [D] dilution(a=0.005, 0.25s) = (0.005/0.011)^2 = 0.2066
+  [OK] [D] dilution(a=0.002, 1e4s) = (0.002/0.1)^2 = 4e-4
+  [OK] [E] thermal EL tableau: Exempt/RG1=2.8e4/alpha=5.6e5, RG2=7.1e4/alpha=1.42e6
+  [OK] [E] blue radiance groups: [Exempt, RG1, RG2, RG3]
+  [OK] [E] blue small-source E_B: [Exempt, RG2, RG2, RG3] (EN Exempt==RG1=1.0)
+  [OK] [E] decision tree: small source (alpha<11 mrad) judged by E_B, risk_blue=RG2, expected RG2
+  [OK] [E] thermal radiance groups: [Exempt, RG2, RG3] (Exempt==RG1)
+  [OK] [E] formal eye group is the max of thermal+blue (RG3 here)
+  [OK] [F] tmax_thermal: L_R*alpha=5e4 -> t=1.0 s exactly
+  [OK] [F] tmax_thermal: L_R*alpha=1e5 -> t=0.0625 s (Eq 4.9 inversion)
+  [OK] [F] tmax_blue: L_B=1e6 -> t=1 s (Eq 4.6 inversion)
+  [OK] [F] tmax_blue: L_B=1e4 -> t=100 s
+  [OK] [G] summary exposes iec_* aggregate columns
+  [OK] [G] analysis ran (1.8s) and at least one pair reports glare rows
+  [OK] [G] IEC columns present on detail rows
+  [OK] [G] risk columns hold only Exempt/RG1/RG2/RG3
+  [OK] [G] L == E_c*1e4/Omega (exact identity to the pipeline)
+  [OK] [G] tmax_thermal = (5e4/(L_R*alpha))^4 round-trips the RG2 EL
+  [OK] [G] bijection kR*E_r == kR*L*K_EYE/1e4 (er_lr consistent, <2% for sun-disc)
+  [OK] [G] every glare minute has a rated eye risk (no NaN)
+  [OK] [G] L <= rho*L_sun (beam brightness bounded by the sun)
+  [OK] [G] summary fills iec_worst_risk / iec_min_tmax rows for hit pairs
+  [OK] [H] IEC 62471 zones figure rendered
+  [OK] [H] IEC 62471 tmax figure rendered
+  [OK] [H] IEC 62471 weighting functions figure rendered
+  RESULT: 52 passed, 0 failed, elapsed 1.8s (wire run)
+
+--- IEC 62471 validation 2026-09-20 22:18:06 ---
+  [OK] [A] Omega_sun = 2*pi*(1-cos(beta/2)) ~ 6.7929e-5 sr
+  [OK] [A] exact Omega_sun within 0.1% of small-angle pi*beta^2/4
+  [OK] [A] K_EYE = (pi/4)(dp/f)^2 tau = 0.005434
+  [OK] [A] L = E_c*1e4/Omega_sun: DNI 1000 & rho=1 -> 1.472e7 W/m2/sr
+  [OK] [A] sun-disc retinal round-trip E_r = L*K_EYE/1e4 = 8.0 W/cm2
+  [OK] [B] AM1.5 direct integral ~630 W/m2 (pvlib reference atmosphere)
+  [OK] [B] 0 < kS < 1.0
+  [OK] [B] 0 < kUVA < 1.0
+  [OK] [B] 0 < kB < 1.0
+  [OK] [B] 0 < kR < 1.5
+  [OK] [B] 0 < kIR < 1.0
+  [OK] [B] 0 < kH < 1.0
+  [OK] [B] kR = R(lambda)-weighted AM1.5 / full spectrum ~ 1.267 (Table 4.2 R has the blue-violet 10x hump at 435-440 nm)
+  [OK] [B] kB = B(lambda)-weighted AM1.5 / full spectrum ~ 0.0835
+  [OK] [B] skin fraction kH ~ 0.97 (most of the solar band is 380-3000 nm)
+  [OK] [B] UVA fraction < IR fraction < skin fraction
+  [OK] [B] weights cached (id identical on 2nd call)
+  [OK] [C] PV-A 2x4883 m @2.5 km -> alpha=0.05085 (height clamped 0.1, w clamped 0.0017)
+  [OK] [C] @10 m -> alpha=0.1 (ALPHA_MAX cap)
+  [OK] [C] far field -> alpha=ALPHA_MIN=0.0017 (point-source floor)
+  [OK] [C] alpha never leaves [0.0017, 0.1]
+  [OK] [C] @973 m: h/d>5 caps at 0.1, w/d=0.00206 (unclamped) -> 0.05103
+  [OK] [D] gamma(0.25 s) = 0.011 rad
+  [OK] [D] gamma(100 s) = 0.011 rad
+  [OK] [D] gamma(1000 s) = 0.011*sqrt(10) = 0.034785
+  [OK] [D] gamma(1e4 s) = 0.1 rad
+  [OK] [D] dilution(a=0.05, t=0.25s)=1 (fills 0.011-rad cone)
+  [OK] [D] dilution(a=0.005, 0.25s) = (0.005/0.011)^2 = 0.2066
+  [OK] [D] dilution(a=0.002, 1e4s) = (0.002/0.1)^2 = 4e-4
+  [OK] [E] thermal EL tableau: Exempt/RG1=2.8e4/alpha=5.6e5, RG2=7.1e4/alpha=1.42e6
+  [OK] [E] blue radiance groups: [Exempt, RG1, RG2, RG3]
+  [OK] [E] blue small-source E_B: [Exempt, RG2, RG2, RG3] (EN Exempt==RG1=1.0)
+  [OK] [E] decision tree: small source (alpha<11 mrad) judged by E_B, risk_blue=RG2, expected RG2
+  [OK] [E] thermal radiance groups: [Exempt, RG2, RG3] (Exempt==RG1)
+  [OK] [E] formal eye group is the max of thermal+blue (RG3 here)
+  [OK] [F] tmax_thermal: L_R*alpha=5e4 -> t=1.0 s exactly
+  [OK] [F] tmax_thermal: L_R*alpha=1e5 -> t=0.0625 s (Eq 4.9 inversion)
+  [OK] [F] tmax_blue: L_B=1e6 -> t=1 s (Eq 4.6 inversion)
+  [OK] [F] tmax_blue: L_B=1e4 -> t=100 s
+  [OK] [G] summary exposes iec_* aggregate columns
+  [OK] [G] analysis ran (1.9s) and at least one pair reports glare rows
+  [OK] [G] IEC columns present on detail rows
+  [OK] [G] risk columns hold only Exempt/RG1/RG2/RG3
+  [OK] [G] L == E_c*1e4/Omega (exact identity to the pipeline)
+  [OK] [G] tmax_thermal = (5e4/(L_R*alpha))^4 round-trips the RG2 EL
+  [OK] [G] bijection kR*E_r == kR*L*K_EYE/1e4 (er_lr consistent, <2% for sun-disc)
+  [OK] [G] every glare minute has a rated eye risk (no NaN)
+  [OK] [G] L <= rho*L_sun (beam brightness bounded by the sun)
+  [OK] [G] summary fills iec_worst_risk / iec_min_tmax rows for hit pairs
+  [OK] [H] IEC 62471 zones figure rendered
+  [OK] [H] IEC 62471 tmax figure rendered
+  [OK] [H] IEC 62471 weighting functions figure rendered
+  RESULT: 52 passed, 0 failed, elapsed 1.9s (wire run)
+
+--- IEC 62471 validation 2026-09-20 22:25:12 ---
+  [OK] [A] Omega_sun = 2*pi*(1-cos(beta/2)) ~ 6.7929e-5 sr
+  [OK] [A] exact Omega_sun within 0.1% of small-angle pi*beta^2/4
+  [OK] [A] K_EYE = (pi/4)(dp/f)^2 tau = 0.005434
+  [OK] [A] L = E_c*1e4/Omega_sun: DNI 1000 & rho=1 -> 1.472e7 W/m2/sr
+  [OK] [A] sun-disc retinal round-trip E_r = L*K_EYE/1e4 = 8.0 W/cm2
+  [OK] [B] AM1.5 direct integral ~630 W/m2 (pvlib reference atmosphere)
+  [OK] [B] 0 < kS < 1.0
+  [OK] [B] 0 < kUVA < 1.0
+  [OK] [B] 0 < kB < 1.0
+  [OK] [B] 0 < kR < 1.5
+  [OK] [B] 0 < kIR < 1.0
+  [OK] [B] 0 < kH < 1.0
+  [OK] [B] kR = R(lambda)-weighted AM1.5 / full spectrum ~ 1.267 (Table 4.2 R has the blue-violet 10x hump at 435-440 nm)
+  [OK] [B] kB = B(lambda)-weighted AM1.5 / full spectrum ~ 0.0835
+  [OK] [B] skin fraction kH ~ 0.97 (most of the solar band is 380-3000 nm)
+  [OK] [B] UVA fraction < IR fraction < skin fraction
+  [OK] [B] weights cached (id identical on 2nd call)
+  [OK] [C] PV-A 2x4883 m @2.5 km -> alpha=0.05085 (height clamped 0.1, w clamped 0.0017)
+  [OK] [C] @10 m -> alpha=0.1 (ALPHA_MAX cap)
+  [OK] [C] far field -> alpha=ALPHA_MIN=0.0017 (point-source floor)
+  [OK] [C] alpha never leaves [0.0017, 0.1]
+  [OK] [C] @973 m: h/d>5 caps at 0.1, w/d=0.00206 (unclamped) -> 0.05103
+  [OK] [D] gamma(0.25 s) = 0.011 rad
+  [OK] [D] gamma(100 s) = 0.011 rad
+  [OK] [D] gamma(1000 s) = 0.011*sqrt(10) = 0.034785
+  [OK] [D] gamma(1e4 s) = 0.1 rad
+  [OK] [D] dilution(a=0.05, t=0.25s)=1 (fills 0.011-rad cone)
+  [OK] [D] dilution(a=0.005, 0.25s) = (0.005/0.011)^2 = 0.2066
+  [OK] [D] dilution(a=0.002, 1e4s) = (0.002/0.1)^2 = 4e-4
+  [OK] [E] thermal EL tableau: Exempt/RG1=2.8e4/alpha=5.6e5, RG2=7.1e4/alpha=1.42e6
+  [OK] [E] blue radiance groups: [Exempt, RG1, RG2, RG3]
+  [OK] [E] blue small-source E_B: [Exempt, RG2, RG2, RG3] (EN Exempt==RG1=1.0)
+  [OK] [E] decision tree: small source (alpha<11 mrad) judged by E_B, risk_blue=RG2, expected RG2
+  [OK] [E] thermal radiance groups: [Exempt, RG2, RG3] (Exempt==RG1)
+  [OK] [E] formal eye group is the max of thermal+blue (RG3 here)
+  [OK] [F] tmax_thermal: L_R*alpha=5e4 -> t=1.0 s exactly
+  [OK] [F] tmax_thermal: L_R*alpha=1e5 -> t=0.0625 s (Eq 4.9 inversion)
+  [OK] [F] tmax_blue: L_B=1e6 -> t=1 s (Eq 4.6 inversion)
+  [OK] [F] tmax_blue: L_B=1e4 -> t=100 s
+  [OK] [G] summary exposes iec_* aggregate columns
+  [OK] [G] analysis ran (1.3s) and at least one pair reports glare rows
+  [OK] [G] IEC columns present on detail rows
+  [OK] [G] risk columns hold only Exempt/RG1/RG2/RG3
+  [OK] [G] L == E_c*1e4/Omega (exact identity to the pipeline)
+  [OK] [G] tmax_thermal = (5e4/(L_R*alpha))^4 round-trips the RG2 EL
+  [OK] [G] bijection kR*E_r == kR*L*K_EYE/1e4 (er_lr consistent, <2% for sun-disc)
+  [OK] [G] every glare minute has a rated eye risk (no NaN)
+  [OK] [G] L <= rho*L_sun (beam brightness bounded by the sun)
+  [OK] [G] summary fills iec_worst_risk / iec_min_tmax rows for hit pairs
+  [OK] [H] IEC 62471 zones figure rendered
+  [OK] [H] IEC 62471 tmax figure rendered
+  [OK] [H] IEC 62471 weighting functions figure rendered
+  RESULT: 52 passed, 0 failed, elapsed 1.3s (wire run)
+
+--- IEC 62471 validation 2026-09-21 17:40:38 ---
+  [OK] [A] Omega_sun = 2*pi*(1-cos(beta/2)) ~ 6.7929e-5 sr
+  [OK] [A] exact Omega_sun within 0.1% of small-angle pi*beta^2/4
+  [OK] [A] K_EYE = (pi/4)(dp/f)^2 tau = 0.005434
+  [OK] [A] L = E_c*1e4/Omega_sun: DNI 1000 & rho=1 -> 1.472e7 W/m2/sr
+  [OK] [A] sun-disc retinal round-trip E_r = L*K_EYE/1e4 = 8.0 W/cm2
+  [OK] [B] AM1.5 direct integral ~630 W/m2 (pvlib reference atmosphere)
+  [OK] [B] 0 < kS < 1.0
+  [OK] [B] 0 < kUVA < 1.0
+  [OK] [B] 0 < kB < 1.0
+  [OK] [B] 0 < kR < 1.5
+  [OK] [B] 0 < kIR < 1.0
+  [OK] [B] 0 < kH < 1.0
+  [OK] [B] kR = R(lambda)-weighted AM1.5 / full spectrum ~ 1.267 (Table 4.2 R has the blue-violet 10x hump at 435-440 nm)
+  [OK] [B] kB = B(lambda)-weighted AM1.5 / full spectrum ~ 0.0835
+  [OK] [B] skin fraction kH ~ 0.97 (most of the solar band is 380-3000 nm)
+  [OK] [B] UVA fraction < IR fraction < skin fraction
+  [OK] [B] weights cached (id identical on 2nd call)
+  [OK] [C] PV-A 2x4883 m @2.5 km -> alpha=0.05085 (height clamped 0.1, w clamped 0.0017)
+  [OK] [C] @10 m -> alpha=0.1 (ALPHA_MAX cap)
+  [OK] [C] far field -> alpha=ALPHA_MIN=0.0017 (point-source floor)
+  [OK] [C] alpha never leaves [0.0017, 0.1]
+  [OK] [C] @973 m: h/d>5 caps at 0.1, w/d=0.00206 (unclamped) -> 0.05103
+  [OK] [D] gamma(0.25 s) = 0.011 rad
+  [OK] [D] gamma(100 s) = 0.011 rad
+  [OK] [D] gamma(1000 s) = 0.011*sqrt(10) = 0.034785
+  [OK] [D] gamma(1e4 s) = 0.1 rad
+  [OK] [D] dilution(a=0.05, t=0.25s)=1 (fills 0.011-rad cone)
+  [OK] [D] dilution(a=0.005, 0.25s) = (0.005/0.011)^2 = 0.2066
+  [OK] [D] dilution(a=0.002, 1e4s) = (0.002/0.1)^2 = 4e-4
+  [OK] [E] thermal EL tableau: Exempt/RG1=2.8e4/alpha=5.6e5, RG2=7.1e4/alpha=1.42e6
+  [OK] [E] blue radiance groups: [Exempt, RG1, RG2, RG3]
+  [OK] [E] blue small-source E_B: [Exempt, RG2, RG2, RG3] (EN Exempt==RG1=1.0)
+  [OK] [E] decision tree: small source (alpha<11 mrad) judged by E_B, risk_blue=RG2, expected RG2
+  [OK] [E] thermal radiance groups: [Exempt, RG2, RG3] (Exempt==RG1)
+  [OK] [E] formal eye group is the max of thermal+blue (RG3 here)
+  [OK] [F] tmax_thermal: L_R*alpha=5e4 -> t=1.0 s exactly
+  [OK] [F] tmax_thermal: L_R*alpha=1e5 -> t=0.0625 s (Eq 4.9 inversion)
+  [OK] [F] tmax_blue: L_B=1e6 -> t=1 s (Eq 4.6 inversion)
+  [OK] [F] tmax_blue: L_B=1e4 -> t=100 s
+  [OK] [G] summary exposes iec_* aggregate columns
+  [OK] [G] analysis ran (2.4s) and at least one pair reports glare rows
+  [OK] [G] IEC columns present on detail rows
+  [OK] [G] risk columns hold only Exempt/RG1/RG2/RG3
+  [OK] [G] L == E_c*1e4/Omega (exact identity to the pipeline)
+  [OK] [G] tmax_thermal = (5e4/(L_R*alpha))^4 round-trips the RG2 EL
+  [OK] [G] bijection kR*E_r == kR*L*K_EYE/1e4 (er_lr consistent, <2% for sun-disc)
+  [OK] [G] every glare minute has a rated eye risk (no NaN)
+  [OK] [G] L <= rho*L_sun (beam brightness bounded by the sun)
+  [OK] [G] summary fills iec_worst_risk / iec_min_tmax rows for hit pairs
+  [OK] [H] IEC 62471 zones figure rendered
+  [OK] [H] IEC 62471 tmax figure rendered
+  [OK] [H] IEC 62471 weighting functions figure rendered
+  RESULT: 52 passed, 0 failed, elapsed 2.4s (wire run)
+
+--- IEC 62471 validation 2026-09-21 22:43:07 ---
+  [OK] [A] Omega_sun = 2*pi*(1-cos(beta/2)) ~ 6.7929e-5 sr
+  [OK] [A] exact Omega_sun within 0.1% of small-angle pi*beta^2/4
+  [OK] [A] K_EYE = (pi/4)(dp/f)^2 tau = 0.005434
+  [OK] [A] L = E_c*1e4/Omega_sun: DNI 1000 & rho=1 -> 1.472e7 W/m2/sr
+  [OK] [A] sun-disc retinal round-trip E_r = L*K_EYE/1e4 = 8.0 W/cm2
+  [OK] [B] AM1.5 direct integral ~630 W/m2 (pvlib reference atmosphere)
+  [OK] [B] 0 < kS < 1.0
+  [OK] [B] 0 < kUVA < 1.0
+  [OK] [B] 0 < kB < 1.0
+  [OK] [B] 0 < kR < 1.5
+  [OK] [B] 0 < kIR < 1.0
+  [OK] [B] 0 < kH < 1.0
+  [OK] [B] kR = R(lambda)-weighted AM1.5 / full spectrum ~ 1.267 (Table 4.2 R has the blue-violet 10x hump at 435-440 nm)
+  [OK] [B] kB = B(lambda)-weighted AM1.5 / full spectrum ~ 0.0835
+  [OK] [B] skin fraction kH ~ 0.97 (most of the solar band is 380-3000 nm)
+  [OK] [B] UVA fraction < IR fraction < skin fraction
+  [OK] [B] weights cached (id identical on 2nd call)
+  [OK] [C] PV-A 2x4883 m @2.5 km -> alpha=0.05085 (height clamped 0.1, w clamped 0.0017)
+  [OK] [C] @10 m -> alpha=0.1 (ALPHA_MAX cap)
+  [OK] [C] far field -> alpha=ALPHA_MIN=0.0017 (point-source floor)
+  [OK] [C] alpha never leaves [0.0017, 0.1]
+  [OK] [C] @973 m: h/d>5 caps at 0.1, w/d=0.00206 (unclamped) -> 0.05103
+  [OK] [D] gamma(0.25 s) = 0.011 rad
+  [OK] [D] gamma(100 s) = 0.011 rad
+  [OK] [D] gamma(1000 s) = 0.011*sqrt(10) = 0.034785
+  [OK] [D] gamma(1e4 s) = 0.1 rad
+  [OK] [D] dilution(a=0.05, t=0.25s)=1 (fills 0.011-rad cone)
+  [OK] [D] dilution(a=0.005, 0.25s) = (0.005/0.011)^2 = 0.2066
+  [OK] [D] dilution(a=0.002, 1e4s) = (0.002/0.1)^2 = 4e-4
+  [OK] [E] thermal EL tableau: Exempt/RG1=2.8e4/alpha=5.6e5, RG2=7.1e4/alpha=1.42e6
+  [OK] [E] blue radiance groups: [Exempt, RG1, RG2, RG3]
+  [OK] [E] blue small-source E_B: [Exempt, RG2, RG2, RG3] (EN Exempt==RG1=1.0)
+  [OK] [E] decision tree: small source (alpha<11 mrad) judged by E_B, risk_blue=RG2, expected RG2
+  [OK] [E] thermal radiance groups: [Exempt, RG2, RG3] (Exempt==RG1)
+  [OK] [E] formal eye group is the max of thermal+blue (RG3 here)
+  [OK] [F] tmax_thermal: L_R*alpha=5e4 -> t=1.0 s exactly
+  [OK] [F] tmax_thermal: L_R*alpha=1e5 -> t=0.0625 s (Eq 4.9 inversion)
+  [OK] [F] tmax_blue: L_B=1e6 -> t=1 s (Eq 4.6 inversion)
+  [OK] [F] tmax_blue: L_B=1e4 -> t=100 s
+  [OK] [G] summary exposes iec_* aggregate columns
+  [OK] [G] analysis ran (1.9s) and at least one pair reports glare rows
+  [OK] [G] IEC columns present on detail rows
+  [OK] [G] risk columns hold only Exempt/RG1/RG2/RG3
+  [OK] [G] L == E_c*1e4/Omega (exact identity to the pipeline)
+  [OK] [G] tmax_thermal = (5e4/(L_R*alpha))^4 round-trips the RG2 EL
+  [OK] [G] bijection kR*E_r == kR*L*K_EYE/1e4 (er_lr consistent, <2% for sun-disc)
+  [OK] [G] every glare minute has a rated eye risk (no NaN)
+  [OK] [G] L <= rho*L_sun (beam brightness bounded by the sun)
+  [OK] [G] summary fills iec_worst_risk / iec_min_tmax rows for hit pairs
+  [OK] [H] IEC 62471 zones figure rendered
+  [OK] [H] IEC 62471 tmax figure rendered
+  [OK] [H] IEC 62471 weighting functions figure rendered
+  RESULT: 52 passed, 0 failed, elapsed 1.9s (wire run)
+
+--- IEC 62471 validation 2026-09-22 21:24:24 ---
+  [OK] [A] Omega_sun = 2*pi*(1-cos(beta/2)) ~ 6.7929e-5 sr
+  [OK] [A] exact Omega_sun within 0.1% of small-angle pi*beta^2/4
+  [OK] [A] K_EYE = (pi/4)(dp/f)^2 tau = 0.005434
+  [OK] [A] L = E_c*1e4/Omega_sun: DNI 1000 & rho=1 -> 1.472e7 W/m2/sr
+  [OK] [A] sun-disc retinal round-trip E_r = L*K_EYE/1e4 = 8.0 W/cm2
+  [OK] [B] AM1.5 direct integral ~630 W/m2 (pvlib reference atmosphere)
+  [OK] [B] 0 < kS < 1.0
+  [OK] [B] 0 < kUVA < 1.0
+  [OK] [B] 0 < kB < 1.0
+  [OK] [B] 0 < kR < 1.5
+  [OK] [B] 0 < kIR < 1.0
+  [OK] [B] 0 < kH < 1.0
+  [OK] [B] kR = R(lambda)-weighted AM1.5 / full spectrum ~ 1.267 (Table 4.2 R has the blue-violet 10x hump at 435-440 nm)
+  [OK] [B] kB = B(lambda)-weighted AM1.5 / full spectrum ~ 0.0835
+  [OK] [B] skin fraction kH ~ 0.97 (most of the solar band is 380-3000 nm)
+  [OK] [B] UVA fraction < IR fraction < skin fraction
+  [OK] [B] weights cached (id identical on 2nd call)
+  [OK] [C] PV-A 2x4883 m @2.5 km -> alpha=0.05085 (height clamped 0.1, w clamped 0.0017)
+  [OK] [C] @10 m -> alpha=0.1 (ALPHA_MAX cap)
+  [OK] [C] far field -> alpha=ALPHA_MIN=0.0017 (point-source floor)
+  [OK] [C] alpha never leaves [0.0017, 0.1]
+  [OK] [C] @973 m: h/d>5 caps at 0.1, w/d=0.00206 (unclamped) -> 0.05103
+  [OK] [D] gamma(0.25 s) = 0.011 rad
+  [OK] [D] gamma(100 s) = 0.011 rad
+  [OK] [D] gamma(1000 s) = 0.011*sqrt(10) = 0.034785
+  [OK] [D] gamma(1e4 s) = 0.1 rad
+  [OK] [D] dilution(a=0.05, t=0.25s)=1 (fills 0.011-rad cone)
+  [OK] [D] dilution(a=0.005, 0.25s) = (0.005/0.011)^2 = 0.2066
+  [OK] [D] dilution(a=0.002, 1e4s) = (0.002/0.1)^2 = 4e-4
+  [OK] [E] thermal EL tableau: Exempt/RG1=2.8e4/alpha=5.6e5, RG2=7.1e4/alpha=1.42e6
+  [OK] [E] blue radiance groups: [Exempt, RG1, RG2, RG3]
+  [OK] [E] blue small-source E_B: [Exempt, RG2, RG2, RG3] (EN Exempt==RG1=1.0)
+  [OK] [E] decision tree: small source (alpha<11 mrad) judged by E_B, risk_blue=RG2, expected RG2
+  [OK] [E] thermal radiance groups: [Exempt, RG2, RG3] (Exempt==RG1)
+  [OK] [E] formal eye group is the max of thermal+blue (RG3 here)
+  [OK] [F] tmax_thermal: L_R*alpha=5e4 -> t=1.0 s exactly
+  [OK] [F] tmax_thermal: L_R*alpha=1e5 -> t=0.0625 s (Eq 4.9 inversion)
+  [OK] [F] tmax_blue: L_B=1e6 -> t=1 s (Eq 4.6 inversion)
+  [OK] [F] tmax_blue: L_B=1e4 -> t=100 s
+  [OK] [G] summary exposes iec_* aggregate columns
+  [OK] [G] analysis ran (4.3s) and at least one pair reports glare rows
+  [OK] [G] IEC columns present on detail rows
+  [OK] [G] risk columns hold only Exempt/RG1/RG2/RG3
+  [OK] [G] L == E_c*1e4/Omega (exact identity to the pipeline)
+  [OK] [G] tmax_thermal = (5e4/(L_R*alpha))^4 round-trips the RG2 EL
+  [OK] [G] bijection kR*E_r == kR*L*K_EYE/1e4 (er_lr consistent, <2% for sun-disc)
+  [OK] [G] every glare minute has a rated eye risk (no NaN)
+  [OK] [G] L <= rho*L_sun (beam brightness bounded by the sun)
+  [OK] [G] summary fills iec_worst_risk / iec_min_tmax rows for hit pairs
+  [OK] [H] IEC 62471 zones figure rendered
+  [OK] [H] IEC 62471 tmax figure rendered
+  [OK] [H] IEC 62471 weighting functions figure rendered
+  RESULT: 52 passed, 0 failed, elapsed 4.3s (wire run)
+
+--- IEC 62471 validation 2026-09-22 22:27:30 ---
+  [OK] [A] Omega_sun = 2*pi*(1-cos(beta/2)) ~ 6.7929e-5 sr
+  [OK] [A] exact Omega_sun within 0.1% of small-angle pi*beta^2/4
+  [OK] [A] K_EYE = (pi/4)(dp/f)^2 tau = 0.005434
+  [OK] [A] L = E_c*1e4/Omega_sun: DNI 1000 & rho=1 -> 1.472e7 W/m2/sr
+  [OK] [A] sun-disc retinal round-trip E_r = L*K_EYE/1e4 = 8.0 W/cm2
+  [OK] [B] AM1.5 direct integral ~630 W/m2 (pvlib reference atmosphere)
+  [OK] [B] 0 < kS < 1.0
+  [OK] [B] 0 < kUVA < 1.0
+  [OK] [B] 0 < kB < 1.0
+  [OK] [B] 0 < kR < 1.5
+  [OK] [B] 0 < kIR < 1.0
+  [OK] [B] 0 < kH < 1.0
+  [OK] [B] kR = R(lambda)-weighted AM1.5 / full spectrum ~ 1.267 (Table 4.2 R has the blue-violet 10x hump at 435-440 nm)
+  [OK] [B] kB = B(lambda)-weighted AM1.5 / full spectrum ~ 0.0835
+  [OK] [B] skin fraction kH ~ 0.97 (most of the solar band is 380-3000 nm)
+  [OK] [B] UVA fraction < IR fraction < skin fraction
+  [OK] [B] weights cached (id identical on 2nd call)
+  [OK] [C] PV-A 2x4883 m @2.5 km -> alpha=0.05085 (height clamped 0.1, w clamped 0.0017)
+  [OK] [C] @10 m -> alpha=0.1 (ALPHA_MAX cap)
+  [OK] [C] far field -> alpha=ALPHA_MIN=0.0017 (point-source floor)
+  [OK] [C] alpha never leaves [0.0017, 0.1]
+  [OK] [C] @973 m: h/d>5 caps at 0.1, w/d=0.00206 (unclamped) -> 0.05103
+  [OK] [D] gamma(0.25 s) = 0.011 rad
+  [OK] [D] gamma(100 s) = 0.011 rad
+  [OK] [D] gamma(1000 s) = 0.011*sqrt(10) = 0.034785
+  [OK] [D] gamma(1e4 s) = 0.1 rad
+  [OK] [D] dilution(a=0.05, t=0.25s)=1 (fills 0.011-rad cone)
+  [OK] [D] dilution(a=0.005, 0.25s) = (0.005/0.011)^2 = 0.2066
+  [OK] [D] dilution(a=0.002, 1e4s) = (0.002/0.1)^2 = 4e-4
+  [OK] [E] thermal EL tableau: Exempt/RG1=2.8e4/alpha=5.6e5, RG2=7.1e4/alpha=1.42e6
+  [OK] [E] blue radiance groups: [Exempt, RG1, RG2, RG3]
+  [OK] [E] blue small-source E_B: [Exempt, RG2, RG2, RG3] (EN Exempt==RG1=1.0)
+  [OK] [E] decision tree: small source (alpha<11 mrad) judged by E_B, risk_blue=RG2, expected RG2
+  [OK] [E] thermal radiance groups: [Exempt, RG2, RG3] (Exempt==RG1)
+  [OK] [E] formal eye group is the max of thermal+blue (RG3 here)
+  [OK] [F] tmax_thermal: L_R*alpha=5e4 -> t=1.0 s exactly
+  [OK] [F] tmax_thermal: L_R*alpha=1e5 -> t=0.0625 s (Eq 4.9 inversion)
+  [OK] [F] tmax_blue: L_B=1e6 -> t=1 s (Eq 4.6 inversion)
+  [OK] [F] tmax_blue: L_B=1e4 -> t=100 s
+  [OK] [G] summary exposes iec_* aggregate columns
+  [OK] [G] analysis ran (3.3s) and at least one pair reports glare rows
+  [OK] [G] IEC columns present on detail rows
+  [OK] [G] risk columns hold only Exempt/RG1/RG2/RG3
+  [OK] [G] L == E_c*1e4/Omega (exact identity to the pipeline)
+  [OK] [G] tmax_thermal = (5e4/(L_R*alpha))^4 round-trips the RG2 EL
+  [OK] [G] bijection kR*E_r == kR*L*K_EYE/1e4 (er_lr consistent, <2% for sun-disc)
+  [OK] [G] every glare minute has a rated eye risk (no NaN)
+  [OK] [G] L <= rho*L_sun (beam brightness bounded by the sun)
+  [OK] [G] summary fills iec_worst_risk / iec_min_tmax rows for hit pairs
+  [OK] [H] IEC 62471 zones figure rendered
+  [OK] [H] IEC 62471 tmax figure rendered
+  [OK] [H] IEC 62471 weighting functions figure rendered
+  RESULT: 52 passed, 0 failed, elapsed 3.3s (wire run)
+
+--- IEC 62471 validation 2026-09-25 00:08:22 ---
+  [OK] [A] Omega_sun = 2*pi*(1-cos(beta/2)) ~ 6.7929e-5 sr
+  [OK] [A] exact Omega_sun within 0.1% of small-angle pi*beta^2/4
+  [OK] [A] K_EYE = (pi/4)(dp/f)^2 tau = 0.005434
+  [OK] [A] L = E_c*1e4/Omega_sun: DNI 1000 & rho=1 -> 1.472e7 W/m2/sr
+  [OK] [A] sun-disc retinal round-trip E_r = L*K_EYE/1e4 = 8.0 W/cm2
+  [OK] [B] AM1.5 direct integral ~630 W/m2 (pvlib reference atmosphere)
+  [OK] [B] 0 < kS < 1.0
+  [OK] [B] 0 < kUVA < 1.0
+  [OK] [B] 0 < kB < 1.0
+  [OK] [B] 0 < kR < 1.5
+  [OK] [B] 0 < kIR < 1.0
+  [OK] [B] 0 < kH < 1.0
+  [OK] [B] kR = R(lambda)-weighted AM1.5 / full spectrum ~ 1.267 (Table 4.2 R has the blue-violet 10x hump at 435-440 nm)
+  [OK] [B] kB = B(lambda)-weighted AM1.5 / full spectrum ~ 0.0835
+  [OK] [B] skin fraction kH ~ 0.97 (most of the solar band is 380-3000 nm)
+  [OK] [B] UVA fraction < IR fraction < skin fraction
+  [OK] [B] weights cached (id identical on 2nd call)
+  [OK] [C] PV-A 2x4883 m @2.5 km -> alpha=0.05085 (height clamped 0.1, w clamped 0.0017)
+  [OK] [C] @10 m -> alpha=0.1 (ALPHA_MAX cap)
+  [OK] [C] far field -> alpha=ALPHA_MIN=0.0017 (point-source floor)
+  [OK] [C] alpha never leaves [0.0017, 0.1]
+  [OK] [C] @973 m: h/d>5 caps at 0.1, w/d=0.00206 (unclamped) -> 0.05103
+  [OK] [D] gamma(0.25 s) = 0.011 rad
+  [OK] [D] gamma(100 s) = 0.011 rad
+  [OK] [D] gamma(1000 s) = 0.011*sqrt(10) = 0.034785
+  [OK] [D] gamma(1e4 s) = 0.1 rad
+  [OK] [D] dilution(a=0.05, t=0.25s)=1 (fills 0.011-rad cone)
+  [OK] [D] dilution(a=0.005, 0.25s) = (0.005/0.011)^2 = 0.2066
+  [OK] [D] dilution(a=0.002, 1e4s) = (0.002/0.1)^2 = 4e-4
+  [OK] [E] thermal EL tableau: Exempt/RG1=2.8e4/alpha=5.6e5, RG2=7.1e4/alpha=1.42e6
+  [OK] [E] blue radiance groups: [Exempt, RG1, RG2, RG3]
+  [OK] [E] blue small-source E_B: [Exempt, RG2, RG2, RG3] (EN Exempt==RG1=1.0)
+  [OK] [E] decision tree: small source (alpha<11 mrad) judged by E_B, risk_blue=RG2, expected RG2
+  [OK] [E] thermal radiance groups: [Exempt, RG2, RG3] (Exempt==RG1)
+  [OK] [E] formal eye group is the max of thermal+blue (RG3 here)
+  [OK] [F] tmax_thermal: L_R*alpha=5e4 -> t=1.0 s exactly
+  [OK] [F] tmax_thermal: L_R*alpha=1e5 -> t=0.0625 s (Eq 4.9 inversion)
+  [OK] [F] tmax_blue: L_B=1e6 -> t=1 s (Eq 4.6 inversion)
+  [OK] [F] tmax_blue: L_B=1e4 -> t=100 s
+  [OK] [G] summary exposes iec_* aggregate columns
+  [OK] [G] analysis ran (3.3s) and at least one pair reports glare rows
+  [OK] [G] IEC columns present on detail rows
+  [OK] [G] risk columns hold only Exempt/RG1/RG2/RG3
+  [OK] [G] L == E_c*1e4/Omega (exact identity to the pipeline)
+  [OK] [G] tmax_thermal = (5e4/(L_R*alpha))^4 round-trips the RG2 EL
+  [OK] [G] bijection kR*E_r == kR*L*K_EYE/1e4 (er_lr consistent, <2% for sun-disc)
+  [OK] [G] every glare minute has a rated eye risk (no NaN)
+  [OK] [G] L <= rho*L_sun (beam brightness bounded by the sun)
+  [OK] [G] summary fills iec_worst_risk / iec_min_tmax rows for hit pairs
+  [OK] [H] IEC 62471 zones figure rendered
+  [OK] [H] IEC 62471 tmax figure rendered
+  [OK] [H] IEC 62471 weighting functions figure rendered
+  RESULT: 52 passed, 0 failed, elapsed 3.3s (wire run)
+
+--- IEC 62471 validation 2026-09-25 00:09:32 ---
+  [OK] [A] Omega_sun = 2*pi*(1-cos(beta/2)) ~ 6.7929e-5 sr
+  [OK] [A] exact Omega_sun within 0.1% of small-angle pi*beta^2/4
+  [OK] [A] K_EYE = (pi/4)(dp/f)^2 tau = 0.005434
+  [OK] [A] L = E_c*1e4/Omega_sun: DNI 1000 & rho=1 -> 1.472e7 W/m2/sr
+  [OK] [A] sun-disc retinal round-trip E_r = L*K_EYE/1e4 = 8.0 W/cm2
+  [OK] [B] AM1.5 direct integral ~630 W/m2 (pvlib reference atmosphere)
+  [OK] [B] 0 < kS < 1.0
+  [OK] [B] 0 < kUVA < 1.0
+  [OK] [B] 0 < kB < 1.0
+  [OK] [B] 0 < kR < 1.5
+  [OK] [B] 0 < kIR < 1.0
+  [OK] [B] 0 < kH < 1.0
+  [OK] [B] kR = R(lambda)-weighted AM1.5 / full spectrum ~ 1.267 (Table 4.2 R has the blue-violet 10x hump at 435-440 nm)
+  [OK] [B] kB = B(lambda)-weighted AM1.5 / full spectrum ~ 0.0835
+  [OK] [B] skin fraction kH ~ 0.97 (most of the solar band is 380-3000 nm)
+  [OK] [B] UVA fraction < IR fraction < skin fraction
+  [OK] [B] weights cached (id identical on 2nd call)
+  [OK] [C] PV-A 2x4883 m @2.5 km -> alpha=0.05085 (height clamped 0.1, w clamped 0.0017)
+  [OK] [C] @10 m -> alpha=0.1 (ALPHA_MAX cap)
+  [OK] [C] far field -> alpha=ALPHA_MIN=0.0017 (point-source floor)
+  [OK] [C] alpha never leaves [0.0017, 0.1]
+  [OK] [C] @973 m: h/d>5 caps at 0.1, w/d=0.00206 (unclamped) -> 0.05103
+  [OK] [D] gamma(0.25 s) = 0.011 rad
+  [OK] [D] gamma(100 s) = 0.011 rad
+  [OK] [D] gamma(1000 s) = 0.011*sqrt(10) = 0.034785
+  [OK] [D] gamma(1e4 s) = 0.1 rad
+  [OK] [D] dilution(a=0.05, t=0.25s)=1 (fills 0.011-rad cone)
+  [OK] [D] dilution(a=0.005, 0.25s) = (0.005/0.011)^2 = 0.2066
+  [OK] [D] dilution(a=0.002, 1e4s) = (0.002/0.1)^2 = 4e-4
+  [OK] [E] thermal EL tableau: Exempt/RG1=2.8e4/alpha=5.6e5, RG2=7.1e4/alpha=1.42e6
+  [OK] [E] blue radiance groups: [Exempt, RG1, RG2, RG3]
+  [OK] [E] blue small-source E_B: [Exempt, RG2, RG2, RG3] (EN Exempt==RG1=1.0)
+  [OK] [E] decision tree: small source (alpha<11 mrad) judged by E_B, risk_blue=RG2, expected RG2
+  [OK] [E] thermal radiance groups: [Exempt, RG2, RG3] (Exempt==RG1)
+  [OK] [E] formal eye group is the max of thermal+blue (RG3 here)
+  [OK] [F] tmax_thermal: L_R*alpha=5e4 -> t=1.0 s exactly
+  [OK] [F] tmax_thermal: L_R*alpha=1e5 -> t=0.0625 s (Eq 4.9 inversion)
+  [OK] [F] tmax_blue: L_B=1e6 -> t=1 s (Eq 4.6 inversion)
+  [OK] [F] tmax_blue: L_B=1e4 -> t=100 s
+  [OK] [G] summary exposes iec_* aggregate columns
+  [OK] [G] analysis ran (3.6s) and at least one pair reports glare rows
+  [OK] [G] IEC columns present on detail rows
+  [OK] [G] risk columns hold only Exempt/RG1/RG2/RG3
+  [OK] [G] L == E_c*1e4/Omega (exact identity to the pipeline)
+  [OK] [G] tmax_thermal = (5e4/(L_R*alpha))^4 round-trips the RG2 EL
+  [OK] [G] bijection kR*E_r == kR*L*K_EYE/1e4 (er_lr consistent, <2% for sun-disc)
+  [OK] [G] every glare minute has a rated eye risk (no NaN)
+  [OK] [G] L <= rho*L_sun (beam brightness bounded by the sun)
+  [OK] [G] summary fills iec_worst_risk / iec_min_tmax rows for hit pairs
+  [OK] [H] IEC 62471 zones figure rendered
+  [OK] [H] IEC 62471 tmax figure rendered
+  [OK] [H] IEC 62471 weighting functions figure rendered
+  RESULT: 52 passed, 0 failed, elapsed 3.6s (wire run)
+
+--- IEC 62471 validation 2026-09-25 01:33:28 ---
+  [OK] [A] Omega_sun = 2*pi*(1-cos(beta/2)) ~ 6.7929e-5 sr
+  [OK] [A] exact Omega_sun within 0.1% of small-angle pi*beta^2/4
+  [OK] [A] K_EYE = (pi/4)(dp/f)^2 tau = 0.005434
+  [OK] [A] L = E_c*1e4/Omega_sun: DNI 1000 & rho=1 -> 1.472e7 W/m2/sr
+  [OK] [A] sun-disc retinal round-trip E_r = L*K_EYE/1e4 = 8.0 W/cm2
+  [OK] [B] AM1.5 direct integral ~630 W/m2 (pvlib reference atmosphere)
+  [OK] [B] 0 < kS < 1.0
+  [OK] [B] 0 < kUVA < 1.0
+  [OK] [B] 0 < kB < 1.0
+  [OK] [B] 0 < kR < 1.5
+  [OK] [B] 0 < kIR < 1.0
+  [OK] [B] 0 < kH < 1.0
+  [OK] [B] kR = R(lambda)-weighted AM1.5 / full spectrum ~ 1.267 (Table 4.2 R has the blue-violet 10x hump at 435-440 nm)
+  [OK] [B] kB = B(lambda)-weighted AM1.5 / full spectrum ~ 0.0835
+  [OK] [B] skin fraction kH ~ 0.97 (most of the solar band is 380-3000 nm)
+  [OK] [B] UVA fraction < IR fraction < skin fraction
+  [OK] [B] weights cached (id identical on 2nd call)
+  [OK] [C] PV-A 2x4890 m @2.5 km -> alpha=0.05085 (height clamped 0.1, w clamped 0.0017)
+  [OK] [C] @10 m -> alpha=0.1 (ALPHA_MAX cap)
+  [OK] [C] far field -> alpha=ALPHA_MIN=0.0017 (point-source floor)
+  [OK] [C] alpha never leaves [0.0017, 0.1]
+  [OK] [C] @973 m: h/d>5 caps at 0.1, w/d=0.00206 (unclamped) -> 0.05103
+  [OK] [D] gamma(0.25 s) = 0.011 rad
+  [OK] [D] gamma(100 s) = 0.011 rad
+  [OK] [D] gamma(1000 s) = 0.011*sqrt(10) = 0.034785
+  [OK] [D] gamma(1e4 s) = 0.1 rad
+  [OK] [D] dilution(a=0.05, t=0.25s)=1 (fills 0.011-rad cone)
+  [OK] [D] dilution(a=0.005, 0.25s) = (0.005/0.011)^2 = 0.2066
+  [OK] [D] dilution(a=0.002, 1e4s) = (0.002/0.1)^2 = 4e-4
+  [OK] [E] thermal EL tableau: Exempt/RG1=2.8e4/alpha=5.6e5, RG2=7.1e4/alpha=1.42e6
+  [OK] [E] blue radiance groups: [Exempt, RG1, RG2, RG3]
+  [OK] [E] blue small-source E_B: [Exempt, RG2, RG2, RG3] (EN Exempt==RG1=1.0)
+  [OK] [E] decision tree: small source (alpha<11 mrad) judged by E_B, risk_blue=RG2, expected RG2
+  [OK] [E] thermal radiance groups: [Exempt, RG2, RG3] (Exempt==RG1)
+  [OK] [E] formal eye group is the max of thermal+blue (RG3 here)
+  [OK] [F] tmax_thermal: L_R*alpha=5e4 -> t=1.0 s exactly
+  [OK] [F] tmax_thermal: L_R*alpha=1e5 -> t=0.0625 s (Eq 4.9 inversion)
+  [OK] [F] tmax_blue: L_B=1e6 -> t=1 s (Eq 4.6 inversion)
+  [OK] [F] tmax_blue: L_B=1e4 -> t=100 s
+  [OK] [G] summary exposes iec_* aggregate columns
+  [OK] [G] analysis ran (3.6s) and at least one pair reports glare rows
+  [OK] [G] IEC columns present on detail rows
+  [OK] [G] risk columns hold only Exempt/RG1/RG2/RG3
+  [OK] [G] L == E_c*1e4/Omega (exact identity to the pipeline)
+  [OK] [G] tmax_thermal = (5e4/(L_R*alpha))^4 round-trips the RG2 EL
+  [OK] [G] bijection kR*E_r == kR*L*K_EYE/1e4 (er_lr consistent, <2% for sun-disc)
+  [OK] [G] every glare minute has a rated eye risk (no NaN)
+  [OK] [G] L <= rho*L_sun (beam brightness bounded by the sun)
+  [OK] [G] summary fills iec_worst_risk / iec_min_tmax rows for hit pairs
+  [OK] [H] IEC 62471 zones figure rendered
+  [OK] [H] IEC 62471 tmax figure rendered
+  [OK] [H] IEC 62471 weighting functions figure rendered
+  RESULT: 52 passed, 0 failed, elapsed 3.6s (wire run)
+
+--- IEC 62471 validation 2026-09-25 14:54:30 ---
+  [OK] [A] Omega_sun = 2*pi*(1-cos(beta/2)) ~ 6.7929e-5 sr
+  [OK] [A] exact Omega_sun within 0.1% of small-angle pi*beta^2/4
+  [OK] [A] K_EYE = (pi/4)(dp/f)^2 tau = 0.005434
+  [OK] [A] L = E_c*1e4/Omega_sun: DNI 1000 & rho=1 -> 1.472e7 W/m2/sr
+  [OK] [A] sun-disc retinal round-trip E_r = L*K_EYE/1e4 = 8.0 W/cm2
+  [OK] [B] AM1.5 direct integral ~630 W/m2 (pvlib reference atmosphere)
+  [OK] [B] 0 < kS < 1.0
+  [OK] [B] 0 < kUVA < 1.0
+  [OK] [B] 0 < kB < 1.0
+  [OK] [B] 0 < kR < 1.5
+  [OK] [B] 0 < kIR < 1.0
+  [OK] [B] 0 < kH < 1.0
+  [OK] [B] kR = R(lambda)-weighted AM1.5 / full spectrum ~ 1.267 (Table 4.2 R has the blue-violet 10x hump at 435-440 nm)
+  [OK] [B] kB = B(lambda)-weighted AM1.5 / full spectrum ~ 0.0835
+  [OK] [B] skin fraction kH ~ 0.97 (most of the solar band is 380-3000 nm)
+  [OK] [B] UVA fraction < IR fraction < skin fraction
+  [OK] [B] weights cached (id identical on 2nd call)
+  [OK] [C] PV-A 2x4890 m @2.5 km -> alpha=0.05085 (height clamped 0.1, w clamped 0.0017)
+  [OK] [C] @10 m -> alpha=0.1 (ALPHA_MAX cap)
+  [OK] [C] far field -> alpha=ALPHA_MIN=0.0017 (point-source floor)
+  [OK] [C] alpha never leaves [0.0017, 0.1]
+  [OK] [C] @973 m: h/d>5 caps at 0.1, w/d=0.00206 (unclamped) -> 0.05103
+  [OK] [D] gamma(0.25 s) = 0.011 rad
+  [OK] [D] gamma(100 s) = 0.011 rad
+  [OK] [D] gamma(1000 s) = 0.011*sqrt(10) = 0.034785
+  [OK] [D] gamma(1e4 s) = 0.1 rad
+  [OK] [D] dilution(a=0.05, t=0.25s)=1 (fills 0.011-rad cone)
+  [OK] [D] dilution(a=0.005, 0.25s) = (0.005/0.011)^2 = 0.2066
+  [OK] [D] dilution(a=0.002, 1e4s) = (0.002/0.1)^2 = 4e-4
+  [OK] [E] thermal EL tableau: Exempt/RG1=2.8e4/alpha=5.6e5, RG2=7.1e4/alpha=1.42e6
+  [OK] [E] blue radiance groups: [Exempt, RG1, RG2, RG3]
+  [OK] [E] blue small-source E_B: [Exempt, RG2, RG2, RG3] (EN Exempt==RG1=1.0)
+  [OK] [E] decision tree: small source (alpha<11 mrad) judged by E_B, risk_blue=RG2, expected RG2
+  [OK] [E] thermal radiance groups: [Exempt, RG2, RG3] (Exempt==RG1)
+  [OK] [E] formal eye group is the max of thermal+blue (RG3 here)
+  [OK] [F] tmax_thermal: L_R*alpha=5e4 -> t=1.0 s exactly
+  [OK] [F] tmax_thermal: L_R*alpha=1e5 -> t=0.0625 s (Eq 4.9 inversion)
+  [OK] [F] tmax_blue: L_B=1e6 -> t=1 s (Eq 4.6 inversion)
+  [OK] [F] tmax_blue: L_B=1e4 -> t=100 s
+  [OK] [G] summary exposes iec_* aggregate columns
+  [OK] [G] analysis ran (3.8s) and at least one pair reports glare rows
+  [OK] [G] IEC columns present on detail rows
+  [OK] [G] risk columns hold only Exempt/RG1/RG2/RG3
+  [OK] [G] L == E_c*1e4/Omega (exact identity to the pipeline)
+  [OK] [G] tmax_thermal = (5e4/(L_R*alpha))^4 round-trips the RG2 EL
+  [OK] [G] bijection kR*E_r == kR*L*K_EYE/1e4 (er_lr consistent, <2% for sun-disc)
+  [OK] [G] every glare minute has a rated eye risk (no NaN)
+  [OK] [G] L <= rho*L_sun (beam brightness bounded by the sun)
+  [OK] [G] summary fills iec_worst_risk / iec_min_tmax rows for hit pairs
+  [OK] [H] IEC 62471 zones figure rendered
+  [OK] [H] IEC 62471 tmax figure rendered
+  [OK] [H] IEC 62471 weighting functions figure rendered
+  RESULT: 52 passed, 0 failed, elapsed 3.8s (wire run)
+
+--- IEC 62471 validation 2026-09-25 15:06:18 ---
+  [OK] [A] Omega_sun = 2*pi*(1-cos(beta/2)) ~ 6.7929e-5 sr
+  [OK] [A] exact Omega_sun within 0.1% of small-angle pi*beta^2/4
+  [OK] [A] K_EYE = (pi/4)(dp/f)^2 tau = 0.005434
+  [OK] [A] L = E_c*1e4/Omega_sun: DNI 1000 & rho=1 -> 1.472e7 W/m2/sr
+  [OK] [A] sun-disc retinal round-trip E_r = L*K_EYE/1e4 = 8.0 W/cm2
+  [OK] [B] AM1.5 direct integral ~630 W/m2 (pvlib reference atmosphere)
+  [OK] [B] 0 < kS < 1.0
+  [OK] [B] 0 < kUVA < 1.0
+  [OK] [B] 0 < kB < 1.0
+  [OK] [B] 0 < kR < 1.5
+  [OK] [B] 0 < kIR < 1.0
+  [OK] [B] 0 < kH < 1.0
+  [OK] [B] kR = R(lambda)-weighted AM1.5 / full spectrum ~ 1.267 (Table 4.2 R has the blue-violet 10x hump at 435-440 nm)
+  [OK] [B] kB = B(lambda)-weighted AM1.5 / full spectrum ~ 0.0835
+  [OK] [B] skin fraction kH ~ 0.97 (most of the solar band is 380-3000 nm)
+  [OK] [B] UVA fraction < IR fraction < skin fraction
+  [OK] [B] weights cached (id identical on 2nd call)
+  [OK] [C] PV-A 2x4890 m @2.5 km -> alpha=0.05085 (height clamped 0.1, w clamped 0.0017)
+  [OK] [C] @10 m -> alpha=0.1 (ALPHA_MAX cap)
+  [OK] [C] far field -> alpha=ALPHA_MIN=0.0017 (point-source floor)
+  [OK] [C] alpha never leaves [0.0017, 0.1]
+  [OK] [C] @973 m: h/d>5 caps at 0.1, w/d=0.00206 (unclamped) -> 0.05103
+  [OK] [D] gamma(0.25 s) = 0.011 rad
+  [OK] [D] gamma(100 s) = 0.011 rad
+  [OK] [D] gamma(1000 s) = 0.011*sqrt(10) = 0.034785
+  [OK] [D] gamma(1e4 s) = 0.1 rad
+  [OK] [D] dilution(a=0.05, t=0.25s)=1 (fills 0.011-rad cone)
+  [OK] [D] dilution(a=0.005, 0.25s) = (0.005/0.011)^2 = 0.2066
+  [OK] [D] dilution(a=0.002, 1e4s) = (0.002/0.1)^2 = 4e-4
+  [OK] [E] thermal EL tableau: Exempt/RG1=2.8e4/alpha=5.6e5, RG2=7.1e4/alpha=1.42e6
+  [OK] [E] blue radiance groups: [Exempt, RG1, RG2, RG3]
+  [OK] [E] blue small-source E_B: [Exempt, RG2, RG2, RG3] (EN Exempt==RG1=1.0)
+  [OK] [E] decision tree: small source (alpha<11 mrad) judged by E_B, risk_blue=RG2, expected RG2
+  [OK] [E] thermal radiance groups: [Exempt, RG2, RG3] (Exempt==RG1)
+  [OK] [E] formal eye group is the max of thermal+blue (RG3 here)
+  [OK] [F] tmax_thermal: L_R*alpha=5e4 -> t=1.0 s exactly
+  [OK] [F] tmax_thermal: L_R*alpha=1e5 -> t=0.0625 s (Eq 4.9 inversion)
+  [OK] [F] tmax_blue: L_B=1e6 -> t=1 s (Eq 4.6 inversion)
+  [OK] [F] tmax_blue: L_B=1e4 -> t=100 s
+  [OK] [G] summary exposes iec_* aggregate columns
+  [OK] [G] analysis ran (4.3s) and at least one pair reports glare rows
+  [OK] [G] IEC columns present on detail rows
+  [OK] [G] risk columns hold only Exempt/RG1/RG2/RG3
+  [OK] [G] L == E_c*1e4/Omega (exact identity to the pipeline)
+  [OK] [G] tmax_thermal = (5e4/(L_R*alpha))^4 round-trips the RG2 EL
+  [OK] [G] bijection kR*E_r == kR*L*K_EYE/1e4 (er_lr consistent, <2% for sun-disc)
+  [OK] [G] every glare minute has a rated eye risk (no NaN)
+  [OK] [G] L <= rho*L_sun (beam brightness bounded by the sun)
+  [OK] [G] summary fills iec_worst_risk / iec_min_tmax rows for hit pairs
+  [OK] [H] IEC 62471 zones figure rendered
+  [OK] [H] IEC 62471 tmax figure rendered
+  [OK] [H] IEC 62471 weighting functions figure rendered
+  RESULT: 52 passed, 0 failed, elapsed 4.3s (wire run)
+
+--- IEC 62471 validation 2026-09-25 15:37:52 ---
+  [OK] [A] Omega_sun = 2*pi*(1-cos(beta/2)) ~ 6.7929e-5 sr
+  [OK] [A] exact Omega_sun within 0.1% of small-angle pi*beta^2/4
+  [OK] [A] K_EYE = (pi/4)(dp/f)^2 tau = 0.005434
+  [OK] [A] L = E_c*1e4/Omega_sun: DNI 1000 & rho=1 -> 1.472e7 W/m2/sr
+  [OK] [A] sun-disc retinal round-trip E_r = L*K_EYE/1e4 = 8.0 W/cm2
+  [OK] [B] AM1.5 direct integral ~630 W/m2 (pvlib reference atmosphere)
+  [OK] [B] 0 < kS < 1.0
+  [OK] [B] 0 < kUVA < 1.0
+  [OK] [B] 0 < kB < 1.0
+  [OK] [B] 0 < kR < 1.5
+  [OK] [B] 0 < kIR < 1.0
+  [OK] [B] 0 < kH < 1.0
+  [OK] [B] kR = R(lambda)-weighted AM1.5 / full spectrum ~ 1.267 (Table 4.2 R has the blue-violet 10x hump at 435-440 nm)
+  [OK] [B] kB = B(lambda)-weighted AM1.5 / full spectrum ~ 0.0835
+  [OK] [B] skin fraction kH ~ 0.97 (most of the solar band is 380-3000 nm)
+  [OK] [B] UVA fraction < IR fraction < skin fraction
+  [OK] [B] weights cached (id identical on 2nd call)
+  [OK] [C] PV-A 2x4890 m @2.5 km -> alpha=0.05085 (height clamped 0.1, w clamped 0.0017)
+  [OK] [C] @10 m -> alpha=0.1 (ALPHA_MAX cap)
+  [OK] [C] far field -> alpha=ALPHA_MIN=0.0017 (point-source floor)
+  [OK] [C] alpha never leaves [0.0017, 0.1]
+  [OK] [C] @973 m: h/d>5 caps at 0.1, w/d=0.00206 (unclamped) -> 0.05103
+  [OK] [D] gamma(0.25 s) = 0.011 rad
+  [OK] [D] gamma(100 s) = 0.011 rad
+  [OK] [D] gamma(1000 s) = 0.011*sqrt(10) = 0.034785
+  [OK] [D] gamma(1e4 s) = 0.1 rad
+  [OK] [D] dilution(a=0.05, t=0.25s)=1 (fills 0.011-rad cone)
+  [OK] [D] dilution(a=0.005, 0.25s) = (0.005/0.011)^2 = 0.2066
+  [OK] [D] dilution(a=0.002, 1e4s) = (0.002/0.1)^2 = 4e-4
+  [OK] [E] thermal EL tableau: Exempt/RG1=2.8e4/alpha=5.6e5, RG2=7.1e4/alpha=1.42e6
+  [OK] [E] blue radiance groups: [Exempt, RG1, RG2, RG3]
+  [OK] [E] blue small-source E_B: [Exempt, RG2, RG2, RG3] (EN Exempt==RG1=1.0)
+  [OK] [E] decision tree: small source (alpha<11 mrad) judged by E_B, risk_blue=RG2, expected RG2
+  [OK] [E] thermal radiance groups: [Exempt, RG2, RG3] (Exempt==RG1)
+  [OK] [E] formal eye group is the max of thermal+blue (RG3 here)
+  [OK] [F] tmax_thermal: L_R*alpha=5e4 -> t=1.0 s exactly
+  [OK] [F] tmax_thermal: L_R*alpha=1e5 -> t=0.0625 s (Eq 4.9 inversion)
+  [OK] [F] tmax_blue: L_B=1e6 -> t=1 s (Eq 4.6 inversion)
+  [OK] [F] tmax_blue: L_B=1e4 -> t=100 s
+  [OK] [G] summary exposes iec_* aggregate columns
+  [OK] [G] analysis ran (4.0s) and at least one pair reports glare rows
+  [OK] [G] IEC columns present on detail rows
+  [OK] [G] risk columns hold only Exempt/RG1/RG2/RG3
+  [OK] [G] L == E_c*1e4/Omega (exact identity to the pipeline)
+  [OK] [G] tmax_thermal = (5e4/(L_R*alpha))^4 round-trips the RG2 EL
+  [OK] [G] bijection kR*E_r == kR*L*K_EYE/1e4 (er_lr consistent, <2% for sun-disc)
+  [OK] [G] every glare minute has a rated eye risk (no NaN)
+  [OK] [G] L <= rho*L_sun (beam brightness bounded by the sun)
+  [OK] [G] summary fills iec_worst_risk / iec_min_tmax rows for hit pairs
+  [OK] [H] IEC 62471 zones figure rendered
+  [OK] [H] IEC 62471 tmax figures rendered (thermal + blue)
+  [OK] [H] IEC 62471 weighting functions figure rendered
+  RESULT: 52 passed, 0 failed, elapsed 4.0s (wire run)
+
+--- IEC 62471 validation 2026-09-25 15:44:40 ---
+  [OK] [A] Omega_sun = 2*pi*(1-cos(beta/2)) ~ 6.7929e-5 sr
+  [OK] [A] exact Omega_sun within 0.1% of small-angle pi*beta^2/4
+  [OK] [A] K_EYE = (pi/4)(dp/f)^2 tau = 0.005434
+  [OK] [A] L = E_c*1e4/Omega_sun: DNI 1000 & rho=1 -> 1.472e7 W/m2/sr
+  [OK] [A] sun-disc retinal round-trip E_r = L*K_EYE/1e4 = 8.0 W/cm2
+  [OK] [B] AM1.5 direct integral ~630 W/m2 (pvlib reference atmosphere)
+  [OK] [B] 0 < kS < 1.0
+  [OK] [B] 0 < kUVA < 1.0
+  [OK] [B] 0 < kB < 1.0
+  [OK] [B] 0 < kR < 1.5
+  [OK] [B] 0 < kIR < 1.0
+  [OK] [B] 0 < kH < 1.0
+  [OK] [B] kR = R(lambda)-weighted AM1.5 / full spectrum ~ 1.267 (Table 4.2 R has the blue-violet 10x hump at 435-440 nm)
+  [OK] [B] kB = B(lambda)-weighted AM1.5 / full spectrum ~ 0.0835
+  [OK] [B] skin fraction kH ~ 0.97 (most of the solar band is 380-3000 nm)
+  [OK] [B] UVA fraction < IR fraction < skin fraction
+  [OK] [B] weights cached (id identical on 2nd call)
+  [OK] [C] PV-A 2x4890 m @2.5 km -> alpha=0.05085 (height clamped 0.1, w clamped 0.0017)
+  [OK] [C] @10 m -> alpha=0.1 (ALPHA_MAX cap)
+  [OK] [C] far field -> alpha=ALPHA_MIN=0.0017 (point-source floor)
+  [OK] [C] alpha never leaves [0.0017, 0.1]
+  [OK] [C] @973 m: h/d>5 caps at 0.1, w/d=0.00206 (unclamped) -> 0.05103
+  [OK] [D] gamma(0.25 s) = 0.011 rad
+  [OK] [D] gamma(100 s) = 0.011 rad
+  [OK] [D] gamma(1000 s) = 0.011*sqrt(10) = 0.034785
+  [OK] [D] gamma(1e4 s) = 0.1 rad
+  [OK] [D] dilution(a=0.05, t=0.25s)=1 (fills 0.011-rad cone)
+  [OK] [D] dilution(a=0.005, 0.25s) = (0.005/0.011)^2 = 0.2066
+  [OK] [D] dilution(a=0.002, 1e4s) = (0.002/0.1)^2 = 4e-4
+  [OK] [E] thermal EL tableau: Exempt/RG1=2.8e4/alpha=5.6e5, RG2=7.1e4/alpha=1.42e6
+  [OK] [E] blue radiance groups: [Exempt, RG1, RG2, RG3]
+  [OK] [E] blue small-source E_B: [Exempt, RG2, RG2, RG3] (EN Exempt==RG1=1.0)
+  [OK] [E] decision tree: small source (alpha<11 mrad) judged by E_B, risk_blue=RG2, expected RG2
+  [OK] [E] thermal radiance groups: [Exempt, RG2, RG3] (Exempt==RG1)
+  [OK] [E] formal eye group is the max of thermal+blue (RG3 here)
+  [OK] [F] tmax_thermal: L_R*alpha=5e4 -> t=1.0 s exactly
+  [OK] [F] tmax_thermal: L_R*alpha=1e5 -> t=0.0625 s (Eq 4.9 inversion)
+  [OK] [F] tmax_blue: L_B=1e6 -> t=1 s (Eq 4.6 inversion)
+  [OK] [F] tmax_blue: L_B=1e4 -> t=100 s
+  [OK] [G] summary exposes iec_* aggregate columns
+  [OK] [G] analysis ran (3.7s) and at least one pair reports glare rows
+  [OK] [G] IEC columns present on detail rows
+  [OK] [G] risk columns hold only Exempt/RG1/RG2/RG3
+  [OK] [G] L == E_c*1e4/Omega (exact identity to the pipeline)
+  [OK] [G] tmax_thermal = (5e4/(L_R*alpha))^4 round-trips the RG2 EL
+  [OK] [G] bijection kR*E_r == kR*L*K_EYE/1e4 (er_lr consistent, <2% for sun-disc)
+  [OK] [G] every glare minute has a rated eye risk (no NaN)
+  [OK] [G] L <= rho*L_sun (beam brightness bounded by the sun)
+  [OK] [G] summary fills iec_worst_risk / iec_min_tmax rows for hit pairs
+  [OK] [H] IEC 62471 zones figure rendered
+  [OK] [H] IEC 62471 tmax figures rendered (thermal + blue)
+  [OK] [H] IEC 62471 weighting functions figure rendered
+  RESULT: 52 passed, 0 failed, elapsed 3.7s (wire run)
+
+--- IEC 62471 validation 2026-09-25 19:35:12 ---
+  [OK] [A] Omega_sun = 2*pi*(1-cos(beta/2)) ~ 6.7929e-5 sr
+  [OK] [A] exact Omega_sun within 0.1% of small-angle pi*beta^2/4
+  [OK] [A] K_EYE = (pi/4)(dp/f)^2 tau = 0.005434
+  [OK] [A] L = E_c*1e4/Omega_sun: DNI 1000 & rho=1 -> 1.472e7 W/m2/sr
+  [OK] [A] sun-disc retinal round-trip E_r = L*K_EYE/1e4 = 8.0 W/cm2
+  [OK] [B] IEC direct integral ~897.5 W/m2 (Table 1, 280-4000 nm)
+  [OK] [B] IEC spectrum is 2002 points, 280.0-4000.0 nm
+  [OK] [B] 0 < kS < 1.0
+  [OK] [B] 0 < kUVA < 1.0
+  [OK] [B] 0 < kB < 1.0
+  [OK] [B] 0 < kR < 1.5
+  [OK] [B] 0 < kIR < 1.0
+  [OK] [B] 0 < kH < 1.0
+  [OK] [B] kR = R(lambda)-weighted IEC direct / full spectrum ~ 1.290 (Table 4.2 R has the blue-violet 10x hump at 435-440 nm)
+  [OK] [B] kB = B(lambda)-weighted IEC direct / full spectrum ~ 0.0859
+  [OK] [B] skin fraction kH ~ 0.969 (most of the solar band is 380-3000 nm)
+  [OK] [B] UVA fraction < IR fraction < skin fraction
+  [OK] [B] weights cached (id identical on 2nd call)
+  [OK] [B2] CSV row count == extract table (2002)
+  [OK] [B2] CSV == extract to 1e-9 (all 7 columns)
+  [OK] [B2] CSV direct column == _spectrum()
+  [OK] [C] PV-A 2x4890 m @2.5 km -> alpha=0.05085 (height clamped 0.1, w clamped 0.0017)
+  [OK] [C] @10 m -> alpha=0.1 (ALPHA_MAX cap)
+  [OK] [C] far field -> alpha=ALPHA_MIN=0.0017 (point-source floor)
+  [OK] [C] alpha never leaves [0.0017, 0.1]
+  [OK] [C] @973 m: h/d>5 caps at 0.1, w/d=0.00206 (unclamped) -> 0.05103
+  [OK] [D] gamma(0.25 s) = 0.011 rad
+  [OK] [D] gamma(100 s) = 0.011 rad
+  [OK] [D] gamma(1000 s) = 0.011*sqrt(10) = 0.034785
+  [OK] [D] gamma(1e4 s) = 0.1 rad
+  [OK] [D] dilution(a=0.05, t=0.25s)=1 (fills 0.011-rad cone)
+  [OK] [D] dilution(a=0.005, 0.25s) = (0.005/0.011)^2 = 0.2066
+  [OK] [D] dilution(a=0.002, 1e4s) = (0.002/0.1)^2 = 4e-4
+  [OK] [E] thermal EL tableau: Exempt/RG1=2.8e4/alpha=5.6e5, RG2=7.1e4/alpha=1.42e6
+  [OK] [E] blue radiance groups: [Exempt, RG1, RG2, RG3]
+  [OK] [E] blue small-source E_B: [Exempt, RG2, RG2, RG3] (EN Exempt==RG1=1.0)
+  [OK] [E] decision tree: small source (alpha<11 mrad) judged by E_B, risk_blue=RG2, expected RG2
+  [OK] [E] thermal radiance groups: [Exempt, RG2, RG3] (Exempt==RG1)
+  [OK] [E] formal eye group is the max of thermal+blue (RG3 here)
+  [OK] [F] tmax_thermal: L_R*alpha=5e4 -> t=1.0 s exactly
+  [OK] [F] tmax_thermal: L_R*alpha=1e5 -> t=0.0625 s (Eq 4.9 inversion)
+  [OK] [F] tmax_blue: L_B=1e6 -> t=1 s (Eq 4.6 inversion)
+  [OK] [F] tmax_blue: L_B=1e4 -> t=100 s
+  [OK] [G] summary exposes iec_* aggregate columns
+  [OK] [G] analysis ran (3.9s) and at least one pair reports glare rows
+  [OK] [G] IEC columns present on detail rows
+  [OK] [G] risk columns hold only Exempt/RG1/RG2/RG3
+  [OK] [G] L == E_c*1e4/Omega (exact identity to the pipeline)
+  [OK] [G] tmax_thermal = (5e4/(L_R*alpha))^4 round-trips the RG2 EL
+  [OK] [G] bijection kR*E_r == kR*L*K_EYE/1e4 (er_lr consistent, <2% for sun-disc)
+  [OK] [G] every glare minute has a rated eye risk (no NaN)
+  [OK] [G] L <= rho*L_sun (beam brightness bounded by the sun)
+  [OK] [G] summary fills iec_worst_risk / iec_min_tmax rows for hit pairs
+  [OK] [H] IEC 62471 zones figure rendered
+  [OK] [H] IEC 62471 tmax figures rendered (thermal + blue)
+  [OK] [H] IEC 62471 weighting functions figure rendered
+  RESULT: 56 passed, 0 failed, elapsed 3.9s (wire run)
+
+--- IEC 62471 validation 2026-09-25 20:10:30 ---
+  [OK] [A] Omega_sun = 2*pi*(1-cos(beta/2)) ~ 6.7929e-5 sr
+  [OK] [A] exact Omega_sun within 0.1% of small-angle pi*beta^2/4
+  [OK] [A] K_EYE = (pi/4)(dp/f)^2 tau = 0.005434
+  [OK] [A] L = E_c*1e4/Omega_sun: DNI 1000 & rho=1 -> 1.472e7 W/m2/sr
+  [OK] [A] sun-disc retinal round-trip E_r = L*K_EYE/1e4 = 8.0 W/cm2
+  [OK] [B] IEC direct integral ~897.5 W/m2 (Table 1, 280-4000 nm)
+  [OK] [B] IEC spectrum is 2002 points, 280.0-4000.0 nm
+  [OK] [B] 0 < kS < 1.0
+  [OK] [B] 0 < kUVA < 1.0
+  [OK] [B] 0 < kB < 1.0
+  [OK] [B] 0 < kR < 1.5
+  [OK] [B] 0 < kIR < 1.0
+  [OK] [B] 0 < kH < 1.0
+  [OK] [B] kR = R(lambda)-weighted IEC direct / full spectrum ~ 1.290 (Table 4.2 R has the blue-violet 10x hump at 435-440 nm)
+  [OK] [B] kB = B(lambda)-weighted IEC direct / full spectrum ~ 0.0859
+  [OK] [B] skin fraction kH ~ 0.969 (most of the solar band is 380-3000 nm)
+  [OK] [B] UVA fraction < IR fraction < skin fraction
+  [OK] [B] weights cached (id identical on 2nd call)
+  [OK] [B2] CSV row count == extract table (2002)
+  [OK] [B2] CSV == extract to 1e-9 (all 7 columns)
+  [OK] [B2] CSV direct column == _spectrum()
+  [OK] [C] PV-A 2x4890 m @2.5 km -> alpha=0.05085 (height clamped 0.1, w clamped 0.0017)
+  [OK] [C] @10 m -> alpha=0.1 (ALPHA_MAX cap)
+  [OK] [C] far field -> alpha=ALPHA_MIN=0.0017 (point-source floor)
+  [OK] [C] alpha never leaves [0.0017, 0.1]
+  [OK] [C] @973 m: h/d>5 caps at 0.1, w/d=0.00206 (unclamped) -> 0.05103
+  [OK] [D] gamma(0.25 s) = 0.011 rad
+  [OK] [D] gamma(100 s) = 0.011 rad
+  [OK] [D] gamma(1000 s) = 0.011*sqrt(10) = 0.034785
+  [OK] [D] gamma(1e4 s) = 0.1 rad
+  [OK] [D] dilution(a=0.05, t=0.25s)=1 (fills 0.011-rad cone)
+  [OK] [D] dilution(a=0.005, 0.25s) = (0.005/0.011)^2 = 0.2066
+  [OK] [D] dilution(a=0.002, 1e4s) = (0.002/0.1)^2 = 4e-4
+  [OK] [E] thermal EL tableau: Exempt/RG1=2.8e4/alpha=5.6e5, RG2=7.1e4/alpha=1.42e6
+  [OK] [E] blue radiance groups: [Exempt, RG1, RG2, RG3]
+  [OK] [E] blue small-source E_B: [Exempt, RG2, RG2, RG3] (EN Exempt==RG1=1.0)
+  [OK] [E] decision tree: small source (alpha<11 mrad) judged by E_B, risk_blue=RG2, expected RG2
+  [OK] [E] thermal radiance groups: [Exempt, RG2, RG3] (Exempt==RG1)
+  [OK] [E] formal eye group is the max of thermal+blue (RG3 here)
+  [OK] [F] tmax_thermal: L_R*alpha=5e4 -> t=1.0 s exactly
+  [OK] [F] tmax_thermal: L_R*alpha=1e5 -> t=0.0625 s (Eq 4.9 inversion)
+  [OK] [F] tmax_blue: L_B=1e6 -> t=1 s (Eq 4.6 inversion)
+  [OK] [F] tmax_blue: L_B=1e4 -> t=100 s
+  [OK] [G] summary exposes iec_* aggregate columns
+  [OK] [G] analysis ran (4.3s) and at least one pair reports glare rows
+  [OK] [G] IEC columns present on detail rows
+  [OK] [G] risk columns hold only Exempt/RG1/RG2/RG3
+  [OK] [G] L == E_c*1e4/Omega (exact identity to the pipeline)
+  [OK] [G] tmax_thermal = (5e4/(L_R*alpha))^4 round-trips the RG2 EL
+  [OK] [G] bijection kR*E_r == kR*L*K_EYE/1e4 (er_lr consistent, <2% for sun-disc)
+  [OK] [G] every glare minute has a rated eye risk (no NaN)
+  [OK] [G] L <= rho*L_sun (beam brightness bounded by the sun)
+  [OK] [G] summary fills iec_worst_risk / iec_min_tmax rows for hit pairs
+  [OK] [H] IEC 62471 zones figure rendered
+  [OK] [H] IEC 62471 tmax figures rendered (thermal + blue)
+  [OK] [H] IEC 62471 weighting functions figure rendered
+  [OK] [H] IEC 62471 spectrum-before/after-weighting figure rendered
+  RESULT: 57 passed, 0 failed, elapsed 4.3s (wire run)
+
+--- IEC 62471 validation 2026-09-25 23:03:42 ---
+  [OK] [A] Omega_sun = 2*pi*(1-cos(beta/2)) ~ 6.7929e-5 sr
+  [OK] [A] exact Omega_sun within 0.1% of small-angle pi*beta^2/4
+  [OK] [A] K_EYE = (pi/4)(dp/f)^2 tau = 0.005434
+  [OK] [A] L = E_c*1e4/Omega_sun: DNI 1000 & rho=1 -> 1.472e7 W/m2/sr
+  [OK] [A] sun-disc retinal round-trip E_r = L*K_EYE/1e4 = 8.0 W/cm2
+  [OK] [B] IEC direct integral ~897.5 W/m2 (Table 1, 280-4000 nm)
+  [OK] [B] IEC spectrum is 2002 points, 280.0-4000.0 nm
+  [OK] [B] 0 < kS < 1.0
+  [OK] [B] 0 < kUVA < 1.0
+  [OK] [B] 0 < kB < 1.0
+  [OK] [B] 0 < kR < 1.5
+  [OK] [B] 0 < kIR < 1.0
+  [OK] [B] 0 < kH < 1.0
+  [OK] [B] kR = R(lambda)-weighted IEC direct / full spectrum ~ 1.290 (Table 4.2 R has the blue-violet 10x hump at 435-440 nm)
+  [OK] [B] kB = B(lambda)-weighted IEC direct / full spectrum ~ 0.0859
+  [OK] [B] skin fraction kH ~ 0.969 (most of the solar band is 380-3000 nm)
+  [OK] [B] UVA fraction < IR fraction < skin fraction
+  [OK] [B] weights cached (id identical on 2nd call)
+  [OK] [B2] CSV row count == extract table (2002)
+  [OK] [B2] CSV == extract to 1e-9 (all 7 columns)
+  [OK] [B2] CSV direct column == _spectrum()
+  [OK] [C] PV-A 2x4890 m @2.5 km -> alpha=0.05085 (height clamped 0.1, w clamped 0.0017)
+  [OK] [C] @10 m -> alpha=0.1 (ALPHA_MAX cap)
+  [OK] [C] far field -> alpha=ALPHA_MIN=0.0017 (point-source floor)
+  [OK] [C] alpha never leaves [0.0017, 0.1]
+  [OK] [C] @973 m: h/d>5 caps at 0.1, w/d=0.00206 (unclamped) -> 0.05103
+  [OK] [D] gamma(0.25 s) = 0.011 rad
+  [OK] [D] gamma(100 s) = 0.011 rad
+  [OK] [D] gamma(1000 s) = 0.011*sqrt(10) = 0.034785
+  [OK] [D] gamma(1e4 s) = 0.1 rad
+  [OK] [D] dilution(a=0.05, t=0.25s)=1 (fills 0.011-rad cone)
+  [OK] [D] dilution(a=0.005, 0.25s) = (0.005/0.011)^2 = 0.2066
+  [OK] [D] dilution(a=0.002, 1e4s) = (0.002/0.1)^2 = 4e-4
+  [OK] [E] thermal EL tableau: Exempt/RG1=2.8e4/alpha=5.6e5, RG2=7.1e4/alpha=1.42e6
+  [OK] [E] blue radiance groups: [Exempt, RG1, RG2, RG3]
+  [OK] [E] blue small-source E_B: [Exempt, RG2, RG2, RG3] (EN Exempt==RG1=1.0)
+  [OK] [E] decision tree: small source (alpha<11 mrad) judged by E_B, risk_blue=RG2, expected RG2
+  [OK] [E] thermal radiance groups: [Exempt, RG2, RG3] (Exempt==RG1)
+  [OK] [E] formal eye group is the max of thermal+blue (RG3 here)
+  [OK] [F] tmax_thermal: L_R*alpha=5e4 -> t=1.0 s exactly
+  [OK] [F] tmax_thermal: L_R*alpha=1e5 -> t=0.0625 s (Eq 4.9 inversion)
+  [OK] [F] tmax_blue: L_B=1e6 -> t=1 s (Eq 4.6 inversion)
+  [OK] [F] tmax_blue: L_B=1e4 -> t=100 s
+  [OK] [G] summary exposes iec_* aggregate columns
+  [OK] [G] analysis ran (5.3s) and at least one pair reports glare rows
+  [OK] [G] IEC columns present on detail rows
+  [OK] [G] risk columns hold only Exempt/RG1/RG2/RG3
+  [OK] [G] L == E_c*1e4/Omega (exact identity to the pipeline)
+  [OK] [G] tmax_thermal = (5e4/(L_R*alpha))^4 round-trips the RG2 EL
+  [OK] [G] bijection kR*E_r == kR*L*K_EYE/1e4 (er_lr consistent, <2% for sun-disc)
+  [OK] [G] every glare minute has a rated eye risk (no NaN)
+  [OK] [G] L <= rho*L_sun (beam brightness bounded by the sun)
+  [OK] [G] summary fills iec_worst_risk / iec_min_tmax rows for hit pairs
+  [OK] [H] IEC 62471 zones figure rendered
+  [OK] [H] IEC 62471 tmax figures rendered (thermal + blue)
+  [OK] [H] IEC 62471 weighting functions figure rendered
+  [OK] [H] IEC 62471 spectrum-before/after-weighting figure rendered
+  RESULT: 57 passed, 0 failed, elapsed 5.3s (wire run)
+
+--- IEC 62471 validation 2026-09-25 23:47:08 ---
+  [OK] [A] Omega_sun = 2*pi*(1-cos(beta/2)) ~ 6.7929e-5 sr
+  [OK] [A] exact Omega_sun within 0.1% of small-angle pi*beta^2/4
+  [OK] [A] K_EYE = (pi/4)(dp/f)^2 tau = 0.005434
+  [OK] [A] L = E_c*1e4/Omega_sun: DNI 1000 & rho=1 -> 1.472e7 W/m2/sr
+  [OK] [A] sun-disc retinal round-trip E_r = L*K_EYE/1e4 = 8.0 W/cm2
+  [OK] [B] IEC direct integral ~897.5 W/m2 (Table 1, 280-4000 nm)
+  [OK] [B] IEC spectrum is 2002 points, 280.0-4000.0 nm
+  [OK] [B] 0 < kS < 1.0
+  [OK] [B] 0 < kUVA < 1.0
+  [OK] [B] 0 < kB < 1.0
+  [OK] [B] 0 < kR < 1.5
+  [OK] [B] 0 < kIR < 1.0
+  [OK] [B] 0 < kH < 1.0
+  [OK] [B] kR = R(lambda)-weighted IEC direct / full spectrum ~ 1.290 (Table 4.2 R has the blue-violet 10x hump at 435-440 nm)
+  [OK] [B] kB = B(lambda)-weighted IEC direct / full spectrum ~ 0.0859
+  [OK] [B] skin fraction kH ~ 0.969 (most of the solar band is 380-3000 nm)
+  [OK] [B] UVA fraction < IR fraction < skin fraction
+  [OK] [B] weights cached (id identical on 2nd call)
+  [OK] [B2] CSV row count == extract table (2002)
+  [OK] [B2] CSV == extract to 1e-9 (all 7 columns)
+  [OK] [B2] CSV direct column == _spectrum()
+  [OK] [C] PV-A 2x4890 m @2.5 km -> alpha=0.05085 (height clamped 0.1, w clamped 0.0017)
+  [OK] [C] @10 m -> alpha=0.1 (ALPHA_MAX cap)
+  [OK] [C] far field -> alpha=ALPHA_MIN=0.0017 (point-source floor)
+  [OK] [C] alpha never leaves [0.0017, 0.1]
+  [OK] [C] @973 m: h/d>5 caps at 0.1, w/d=0.00206 (unclamped) -> 0.05103
+  [OK] [D] gamma(0.25 s) = 0.011 rad
+  [OK] [D] gamma(100 s) = 0.011 rad
+  [OK] [D] gamma(1000 s) = 0.011*sqrt(10) = 0.034785
+  [OK] [D] gamma(1e4 s) = 0.1 rad
+  [OK] [D] dilution(a=0.05, t=0.25s)=1 (fills 0.011-rad cone)
+  [OK] [D] dilution(a=0.005, 0.25s) = (0.005/0.011)^2 = 0.2066
+  [OK] [D] dilution(a=0.002, 1e4s) = (0.002/0.1)^2 = 4e-4
+  [OK] [E] thermal EL tableau: Exempt/RG1=2.8e4/alpha=5.6e5, RG2=7.1e4/alpha=1.42e6
+  [OK] [E] blue radiance groups: [Exempt, RG1, RG2, RG3]
+  [OK] [E] blue small-source E_B: [Exempt, RG2, RG2, RG3] (EN Exempt==RG1=1.0)
+  [OK] [E] decision tree: small source (alpha<11 mrad) judged by E_B, risk_blue=RG2, expected RG2
+  [OK] [E] thermal radiance groups: [Exempt, RG2, RG3] (Exempt==RG1)
+  [OK] [E] formal eye group is the max of thermal+blue (RG3 here)
+  [OK] [F] tmax_thermal: L_R*alpha=5e4 -> t=1.0 s exactly
+  [OK] [F] tmax_thermal: L_R*alpha=1e5 -> t=0.0625 s (Eq 4.9 inversion)
+  [OK] [F] tmax_blue: L_B=1e6 -> t=1 s (Eq 4.6 inversion)
+  [OK] [F] tmax_blue: L_B=1e4 -> t=100 s
+  [OK] [G] summary exposes iec_* aggregate columns
+  [OK] [G] analysis ran (9.0s) and at least one pair reports glare rows
+  [OK] [G] IEC columns present on detail rows
+  [OK] [G] risk columns hold only Exempt/RG1/RG2/RG3
+  [OK] [G] L == E_c*1e4/Omega (exact identity to the pipeline)
+  [OK] [G] tmax_thermal = (5e4/(L_R*alpha))^4 round-trips the RG2 EL
+  [OK] [G] bijection kR*E_r == kR*L*K_EYE/1e4 (er_lr consistent, <2% for sun-disc)
+  [OK] [G] every glare minute has a rated eye risk (no NaN)
+  [OK] [G] L <= rho*L_sun (beam brightness bounded by the sun)
+  [OK] [G] summary fills iec_worst_risk / iec_min_tmax rows for hit pairs
+  [OK] [H] IEC 62471 zones figure rendered
+  [OK] [H] IEC 62471 tmax figures rendered (thermal + blue)
+  [OK] [H] IEC 62471 weighting functions figure rendered
+  [OK] [H] IEC 62471 spectrum-before/after-weighting figure rendered
+  RESULT: 57 passed, 0 failed, elapsed 9.0s (wire run)
+
+--- IEC 62471 validation 2026-09-26 11:06:23 ---
+  [OK] [A] Omega_sun = 2*pi*(1-cos(beta/2)) ~ 6.7929e-5 sr
+  [OK] [A] exact Omega_sun within 0.1% of small-angle pi*beta^2/4
+  [OK] [A] K_EYE = (pi/4)(dp/f)^2 tau = 0.005434
+  [OK] [A] L = E_c*1e4/Omega_sun: DNI 1000 & rho=1 -> 1.472e7 W/m2/sr
+  [OK] [A] sun-disc retinal round-trip E_r = L*K_EYE/1e4 = 8.0 W/cm2
+  [OK] [B] IEC direct integral ~897.5 W/m2 (Table 1, 280-4000 nm)
+  [OK] [B] IEC spectrum is 2002 points, 280.0-4000.0 nm
+  [OK] [B] 0 < kS < 1.0
+  [OK] [B] 0 < kUVA < 1.0
+  [OK] [B] 0 < kB < 1.0
+  [OK] [B] 0 < kR < 1.5
+  [OK] [B] 0 < kIR < 1.0
+  [OK] [B] 0 < kH < 1.0
+  [OK] [B] kR = R(lambda)-weighted IEC direct / full spectrum ~ 1.290 (Table 4.2 R has the blue-violet 10x hump at 435-440 nm)
+  [OK] [B] kB = B(lambda)-weighted IEC direct / full spectrum ~ 0.0859
+  [OK] [B] skin fraction kH ~ 0.969 (most of the solar band is 380-3000 nm)
+  [OK] [B] UVA fraction < IR fraction < skin fraction
+  [OK] [B] weights cached (id identical on 2nd call)
+  [OK] [B2] CSV row count == extract table (2002)
+  [OK] [B2] CSV == extract to 1e-9 (all 7 columns)
+  [OK] [B2] CSV direct column == _spectrum()
+  [OK] [C] PV-A 2x4890 m @2.5 km -> alpha=0.05085 (height clamped 0.1, w clamped 0.0017)
+  [OK] [C] @10 m -> alpha=0.1 (ALPHA_MAX cap)
+  [OK] [C] far field -> alpha=ALPHA_MIN=0.0017 (point-source floor)
+  [OK] [C] alpha never leaves [0.0017, 0.1]
+  [OK] [C] @973 m: h/d>5 caps at 0.1, w/d=0.00206 (unclamped) -> 0.05103
+  [OK] [D] gamma(0.25 s) = 0.011 rad
+  [OK] [D] gamma(100 s) = 0.011 rad
+  [OK] [D] gamma(1000 s) = 0.011*sqrt(10) = 0.034785
+  [OK] [D] gamma(1e4 s) = 0.1 rad
+  [OK] [D] dilution(a=0.05, t=0.25s)=1 (fills 0.011-rad cone)
+  [OK] [D] dilution(a=0.005, 0.25s) = (0.005/0.011)^2 = 0.2066
+  [OK] [D] dilution(a=0.002, 1e4s) = (0.002/0.1)^2 = 4e-4
+  [OK] [E] thermal EL tableau: Exempt/RG1=2.8e4/alpha=5.6e5, RG2=7.1e4/alpha=1.42e6
+  [OK] [E] blue radiance groups: [Exempt, RG1, RG2, RG3]
+  [OK] [E] blue small-source E_B: [Exempt, RG2, RG2, RG3] (EN Exempt==RG1=1.0)
+  [OK] [E] decision tree: small source (alpha<11 mrad) judged by E_B, risk_blue=RG2, expected RG2
+  [OK] [E] thermal radiance groups: [Exempt, RG2, RG3] (Exempt==RG1)
+  [OK] [E] formal eye group is the max of thermal+blue (RG3 here)
+  [OK] [F] tmax_thermal: L_R*alpha=5e4 -> t=1.0 s exactly
+  [OK] [F] tmax_thermal: L_R*alpha=1e5 -> t=0.0625 s (Eq 4.9 inversion)
+  [OK] [F] tmax_blue: L_B=1e6 -> t=1 s (Eq 4.6 inversion)
+  [OK] [F] tmax_blue: L_B=1e4 -> t=100 s
+  [OK] [G] summary exposes iec_* aggregate columns
+  [OK] [G] analysis ran (4.7s) and at least one pair reports glare rows
+  [OK] [G] IEC columns present on detail rows
+  [OK] [G] risk columns hold only Exempt/RG1/RG2/RG3
+  [OK] [G] L == E_c*1e4/Omega (exact identity to the pipeline)
+  [OK] [G] tmax_thermal = (5e4/(L_R*alpha))^4 round-trips the RG2 EL
+  [OK] [G] bijection kR*E_r == kR*L*K_EYE/1e4 (er_lr consistent, <2% for sun-disc)
+  [OK] [G] every glare minute has a rated eye risk (no NaN)
+  [OK] [G] L <= rho*L_sun (beam brightness bounded by the sun)
+  [OK] [G] summary fills iec_worst_risk / iec_min_tmax rows for hit pairs
+  [OK] [H] IEC 62471 zones figure rendered
+  [OK] [H] IEC 62471 tmax figures rendered (thermal + blue)
+  [OK] [H] IEC 62471 weighting functions figure rendered
+  [OK] [H] IEC 62471 spectrum-before/after-weighting figure rendered
+  RESULT: 57 passed, 0 failed, elapsed 4.7s (wire run)
+
+--- IEC 62471 validation 2026-09-26 12:17:05 ---
+  [OK] [A] Omega_sun = 2*pi*(1-cos(beta/2)) ~ 6.7929e-5 sr
+  [OK] [A] exact Omega_sun within 0.1% of small-angle pi*beta^2/4
+  [OK] [A] K_EYE = (pi/4)(dp/f)^2 tau = 0.005434
+  [OK] [A] L = E_c*1e4/Omega_sun: DNI 1000 & rho=1 -> 1.472e7 W/m2/sr
+  [OK] [A] sun-disc retinal round-trip E_r = L*K_EYE/1e4 = 8.0 W/cm2
+  [OK] [B] IEC direct integral ~897.5 W/m2 (Table 1, 280-4000 nm)
+  [OK] [B] IEC spectrum is 2002 points, 280.0-4000.0 nm
+  [OK] [B] 0 < kS < 1.0
+  [OK] [B] 0 < kUVA < 1.0
+  [OK] [B] 0 < kB < 1.0
+  [OK] [B] 0 < kR < 1.5
+  [OK] [B] 0 < kIR < 1.0
+  [OK] [B] 0 < kH < 1.0
+  [OK] [B] kR = R(lambda)-weighted IEC direct / full spectrum ~ 1.290 (Table 4.2 R has the blue-violet 10x hump at 435-440 nm)
+  [OK] [B] kB = B(lambda)-weighted IEC direct / full spectrum ~ 0.0859
+  [OK] [B] skin fraction kH ~ 0.969 (most of the solar band is 380-3000 nm)
+  [OK] [B] UVA fraction < IR fraction < skin fraction
+  [OK] [B] weights cached (id identical on 2nd call)
+  [OK] [B2] CSV row count == extract table (2002)
+  [OK] [B2] CSV == extract to 1e-9 (all 7 columns)
+  [OK] [B2] CSV direct column == _spectrum()
+  [OK] [C] PV-A 2x4890 m @2.5 km -> alpha=0.05085 (height clamped 0.1, w clamped 0.0017)
+  [OK] [C] @10 m -> alpha=0.1 (ALPHA_MAX cap)
+  [OK] [C] far field -> alpha=ALPHA_MIN=0.0017 (point-source floor)
+  [OK] [C] alpha never leaves [0.0017, 0.1]
+  [OK] [C] @973 m: h/d>5 caps at 0.1, w/d=0.00206 (unclamped) -> 0.05103
+  [OK] [D] gamma(0.25 s) = 0.011 rad
+  [OK] [D] gamma(100 s) = 0.011 rad
+  [OK] [D] gamma(1000 s) = 0.011*sqrt(10) = 0.034785
+  [OK] [D] gamma(1e4 s) = 0.1 rad
+  [OK] [D] dilution(a=0.05, t=0.25s)=1 (fills 0.011-rad cone)
+  [OK] [D] dilution(a=0.005, 0.25s) = (0.005/0.011)^2 = 0.2066
+  [OK] [D] dilution(a=0.002, 1e4s) = (0.002/0.1)^2 = 4e-4
+  [OK] [E] thermal EL tableau: Exempt/RG1=2.8e4/alpha=5.6e5, RG2=7.1e4/alpha=1.42e6
+  [OK] [E] blue radiance groups: [Exempt, RG1, RG2, RG3]
+  [OK] [E] blue small-source E_B: [Exempt, RG2, RG2, RG3] (EN Exempt==RG1=1.0)
+  [OK] [E] decision tree: small source (alpha<11 mrad) judged by E_B, risk_blue=RG2, expected RG2
+  [OK] [E] thermal radiance groups: [Exempt, RG2, RG3] (Exempt==RG1)
+  [OK] [E] formal eye group is the max of thermal+blue (RG3 here)
+  [OK] [F] tmax_thermal: L_R*alpha=5e4 -> t=1.0 s exactly
+  [OK] [F] tmax_thermal: L_R*alpha=1e5 -> t=0.0625 s (Eq 4.9 inversion)
+  [OK] [F] tmax_blue: L_B=1e6 -> t=1 s (Eq 4.6 inversion)
+  [OK] [F] tmax_blue: L_B=1e4 -> t=100 s
+  [OK] [G] summary exposes iec_* aggregate columns
+  [OK] [G] analysis ran (4.7s) and at least one pair reports glare rows
+  [OK] [G] IEC columns present on detail rows
+  [OK] [G] risk columns hold only Exempt/RG1/RG2/RG3
+  [OK] [G] L == E_c*1e4/Omega (exact identity to the pipeline)
+  [OK] [G] tmax_thermal = (5e4/(L_R*alpha))^4 round-trips the RG2 EL
+  [OK] [G] bijection kR*E_r == kR*L*K_EYE/1e4 (er_lr consistent, <2% for sun-disc)
+  [OK] [G] every glare minute has a rated eye risk (no NaN)
+  [OK] [G] L <= rho*L_sun (beam brightness bounded by the sun)
+  [OK] [G] summary fills iec_worst_risk / iec_min_tmax rows for hit pairs
+  [OK] [H] IEC 62471 zones figure rendered
+  [OK] [H] IEC 62471 tmax figures rendered (thermal + blue)
+  [OK] [H] IEC 62471 weighting functions figure rendered
+  [OK] [H] IEC 62471 spectrum-before/after-weighting figure rendered
+  RESULT: 57 passed, 0 failed, elapsed 4.7s (wire run)
+
+--- IEC 62471 validation 2026-09-26 23:42:09 ---
+  [OK] [A] Omega_sun = 2*pi*(1-cos(beta/2)) ~ 6.7929e-5 sr
+  [OK] [A] exact Omega_sun within 0.1% of small-angle pi*beta^2/4
+  [OK] [A] K_EYE = (pi/4)(dp/f)^2 tau = 0.005434
+  [OK] [A] L = E_c*1e4/Omega_sun: DNI 1000 & rho=1 -> 1.472e7 W/m2/sr
+  [OK] [A] sun-disc retinal round-trip E_r = L*K_EYE/1e4 = 8.0 W/cm2
+  [OK] [B] IEC direct integral ~897.5 W/m2 (Table 1, 280-4000 nm)
+  [OK] [B] IEC spectrum is 2002 points, 280.0-4000.0 nm
+  [OK] [B] 0 < kS < 1.0
+  [OK] [B] 0 < kUVA < 1.0
+  [OK] [B] 0 < kB < 1.0
+  [OK] [B] 0 < kR < 1.5
+  [OK] [B] 0 < kIR < 1.0
+  [OK] [B] 0 < kH < 1.0
+  [OK] [B] kR = R(lambda)-weighted IEC direct / full spectrum ~ 1.290 (Table 4.2 R has the blue-violet 10x hump at 435-440 nm)
+  [OK] [B] kB = B(lambda)-weighted IEC direct / full spectrum ~ 0.0859
+  [OK] [B] skin fraction kH ~ 0.969 (most of the solar band is 380-3000 nm)
+  [OK] [B] UVA fraction < IR fraction < skin fraction
+  [OK] [B] weights cached (id identical on 2nd call)
+  [OK] [B2] CSV row count == extract table (2002)
+  [OK] [B2] CSV == extract to 1e-9 (all 7 columns)
+  [OK] [B2] CSV direct column == _spectrum()
+  [OK] [C] PV-A 2x4890 m @2.5 km -> alpha=0.05085 (height clamped 0.1, w clamped 0.0017)
+  [OK] [C] @10 m -> alpha=0.1 (ALPHA_MAX cap)
+  [OK] [C] far field -> alpha=ALPHA_MIN=0.0017 (point-source floor)
+  [OK] [C] alpha never leaves [0.0017, 0.1]
+  [OK] [C] @973 m: h/d>5 caps at 0.1, w/d=0.00206 (unclamped) -> 0.05103
+  [OK] [D] gamma(0.25 s) = 0.011 rad
+  [OK] [D] gamma(100 s) = 0.011 rad
+  [OK] [D] gamma(1000 s) = 0.011*sqrt(10) = 0.034785
+  [OK] [D] gamma(1e4 s) = 0.1 rad
+  [OK] [D] dilution(a=0.05, t=0.25s)=1 (fills 0.011-rad cone)
+  [OK] [D] dilution(a=0.005, 0.25s) = (0.005/0.011)^2 = 0.2066
+  [OK] [D] dilution(a=0.002, 1e4s) = (0.002/0.1)^2 = 4e-4
+  [OK] [E] thermal EL tableau: Exempt/RG1=2.8e4/alpha=5.6e5, RG2=7.1e4/alpha=1.42e6
+  [OK] [E] blue radiance groups: [Exempt, RG1, RG2, RG3]
+  [OK] [E] blue small-source E_B: [Exempt, RG2, RG2, RG3] (EN Exempt==RG1=1.0)
+  [OK] [E] decision tree: small source (alpha<11 mrad) judged by E_B, risk_blue=RG2, expected RG2
+  [OK] [E] thermal radiance groups: [Exempt, RG2, RG3] (Exempt==RG1)
+  [OK] [E] formal eye group is the max of thermal+blue (RG3 here)
+  [OK] [F] tmax_thermal: L_R*alpha=5e4 -> t=1.0 s exactly
+  [OK] [F] tmax_thermal: L_R*alpha=1e5 -> t=0.0625 s (Eq 4.9 inversion)
+  [OK] [F] tmax_blue: L_B=1e6 -> t=1 s (Eq 4.6 inversion)
+  [OK] [F] tmax_blue: L_B=1e4 -> t=100 s
+  [OK] [G] summary exposes iec_* aggregate columns
+  [OK] [G] analysis ran (5.4s) and at least one pair reports glare rows
+  [OK] [G] IEC columns present on detail rows
+  [OK] [G] risk columns hold only Exempt/RG1/RG2/RG3
+  [OK] [G] L == E_c*1e4/Omega (exact identity to the pipeline)
+  [OK] [G] tmax_thermal = (5e4/(L_R*alpha))^4 round-trips the RG2 EL
+  [OK] [G] bijection kR*E_r == kR*L*K_EYE/1e4 (er_lr consistent, <2% for sun-disc)
+  [OK] [G] every glare minute has a rated eye risk (no NaN)
+  [OK] [G] L <= rho*L_sun (beam brightness bounded by the sun)
+  [OK] [G] summary fills iec_worst_risk / iec_min_tmax rows for hit pairs
+  [OK] [H] IEC 62471 zones figure rendered
+  [OK] [H] IEC 62471 tmax figures rendered (thermal + blue)
+  [OK] [H] IEC 62471 weighting functions figure rendered
+  [OK] [H] IEC 62471 spectrum-before/after-weighting figure rendered
+  RESULT: 57 passed, 0 failed, elapsed 5.4s (wire run)
+
+--- IEC 62471 validation 2026-09-27 14:24:41 ---
+  [OK] [A] Omega_sun = 2*pi*(1-cos(beta/2)) ~ 6.7929e-5 sr
+  [OK] [A] exact Omega_sun within 0.1% of small-angle pi*beta^2/4
+  [OK] [A] K_EYE = (pi/4)(dp/f)^2 tau = 0.005434
+  [OK] [A] L = E_c*1e4/Omega_sun: DNI 1000 & rho=1 -> 1.472e7 W/m2/sr
+  [OK] [A] sun-disc retinal round-trip E_r = L*K_EYE/1e4 = 8.0 W/cm2
+  [OK] [B] IEC direct integral ~897.5 W/m2 (Table 1, 280-4000 nm)
+  [OK] [B] IEC spectrum is 2002 points, 280.0-4000.0 nm
+  [OK] [B] 0 < kS < 1.0
+  [OK] [B] 0 < kUVA < 1.0
+  [OK] [B] 0 < kB < 1.0
+  [OK] [B] 0 < kR < 1.5
+  [OK] [B] 0 < kIR < 1.0
+  [OK] [B] 0 < kH < 1.0
+  [OK] [B] kR = R(lambda)-weighted IEC direct / full spectrum ~ 1.290 (Table 4.2 R has the blue-violet 10x hump at 435-440 nm)
+  [OK] [B] kB = B(lambda)-weighted IEC direct / full spectrum ~ 0.0859
+  [OK] [B] skin fraction kH ~ 0.969 (most of the solar band is 380-3000 nm)
+  [OK] [B] UVA fraction < IR fraction < skin fraction
+  [OK] [B] weights cached (id identical on 2nd call)
+  [OK] [B2] CSV row count == extract table (2002)
+  [OK] [B2] CSV == extract to 1e-9 (all 7 columns)
+  [OK] [B2] CSV direct column == _spectrum()
+  [OK] [C] PV-A 2x4890 m @2.5 km -> alpha=0.05085 (height clamped 0.1, w clamped 0.0017)
+  [OK] [C] @10 m -> alpha=0.1 (ALPHA_MAX cap)
+  [OK] [C] far field -> alpha=ALPHA_MIN=0.0017 (point-source floor)
+  [OK] [C] alpha never leaves [0.0017, 0.1]
+  [OK] [C] @973 m: h/d>5 caps at 0.1, w/d=0.00206 (unclamped) -> 0.05103
+  [OK] [D] gamma(0.25 s) = 0.011 rad
+  [OK] [D] gamma(100 s) = 0.011 rad
+  [OK] [D] gamma(1000 s) = 0.011*sqrt(10) = 0.034785
+  [OK] [D] gamma(1e4 s) = 0.1 rad
+  [OK] [D] dilution(a=0.05, t=0.25s)=1 (fills 0.011-rad cone)
+  [OK] [D] dilution(a=0.005, 0.25s) = (0.005/0.011)^2 = 0.2066
+  [OK] [D] dilution(a=0.002, 1e4s) = (0.002/0.1)^2 = 4e-4
+  [OK] [E] thermal EL tableau: Exempt/RG1=2.8e4/alpha=5.6e5, RG2=7.1e4/alpha=1.42e6
+  [OK] [E] blue radiance groups: [Exempt, RG1, RG2, RG3]
+  [OK] [E] blue small-source E_B: [Exempt, RG2, RG2, RG3] (EN Exempt==RG1=1.0)
+  [OK] [E] decision tree: small source (alpha<11 mrad) judged by E_B, risk_blue=RG2, expected RG2
+  [OK] [E] thermal radiance groups: [Exempt, RG2, RG3] (Exempt==RG1)
+  [OK] [E] formal eye group is the max of thermal+blue (RG3 here)
+  [OK] [F] tmax_thermal: L_R*alpha=5e4 -> t=1.0 s exactly
+  [OK] [F] tmax_thermal: L_R*alpha=1e5 -> t=0.0625 s (Eq 4.9 inversion)
+  [OK] [F] tmax_blue: L_B=1e6 -> t=1 s (Eq 4.6 inversion)
+  [OK] [F] tmax_blue: L_B=1e4 -> t=100 s
+  [OK] [G] summary exposes iec_* aggregate columns
+  [OK] [G] analysis ran (5.6s) and at least one pair reports glare rows
+  [OK] [G] IEC columns present on detail rows
+  [OK] [G] risk columns hold only Exempt/RG1/RG2/RG3
+  [OK] [G] L == E_c*1e4/Omega (exact identity to the pipeline)
+  [OK] [G] tmax_thermal = (5e4/(L_R*alpha))^4 round-trips the RG2 EL
+  [OK] [G] bijection kR*E_r == kR*L*K_EYE/1e4 (er_lr consistent, <2% for sun-disc)
+  [OK] [G] every glare minute has a rated eye risk (no NaN)
+  [OK] [G] L <= rho*L_sun (beam brightness bounded by the sun)
+  [OK] [G] summary fills iec_worst_risk / iec_min_tmax rows for hit pairs
+  [OK] [H] IEC 62471 zones figure rendered
+  [OK] [H] IEC 62471 tmax figures rendered (thermal + blue)
+  [OK] [H] IEC 62471 weighting functions figure rendered
+  [OK] [H] IEC 62471 spectrum-before/after-weighting figure rendered
+  RESULT: 57 passed, 0 failed, elapsed 5.6s (wire run)
+
+--- IEC 62471 validation 2026-09-27 14:25:32 ---
+  [OK] [A] Omega_sun = 2*pi*(1-cos(beta/2)) ~ 6.7929e-5 sr
+  [OK] [A] exact Omega_sun within 0.1% of small-angle pi*beta^2/4
+  [OK] [A] K_EYE = (pi/4)(dp/f)^2 tau = 0.005434
+  [OK] [A] L = E_c*1e4/Omega_sun: DNI 1000 & rho=1 -> 1.472e7 W/m2/sr
+  [OK] [A] sun-disc retinal round-trip E_r = L*K_EYE/1e4 = 8.0 W/cm2
+  [OK] [B] IEC direct integral ~897.5 W/m2 (Table 1, 280-4000 nm)
+  [OK] [B] IEC spectrum is 2002 points, 280.0-4000.0 nm
+  [OK] [B] 0 < kS < 1.0
+  [OK] [B] 0 < kUVA < 1.0
+  [OK] [B] 0 < kB < 1.0
+  [OK] [B] 0 < kR < 1.5
+  [OK] [B] 0 < kIR < 1.0
+  [OK] [B] 0 < kH < 1.0
+  [OK] [B] kR = R(lambda)-weighted IEC direct / full spectrum ~ 1.290 (Table 4.2 R has the blue-violet 10x hump at 435-440 nm)
+  [OK] [B] kB = B(lambda)-weighted IEC direct / full spectrum ~ 0.0859
+  [OK] [B] skin fraction kH ~ 0.969 (most of the solar band is 380-3000 nm)
+  [OK] [B] UVA fraction < IR fraction < skin fraction
+  [OK] [B] weights cached (id identical on 2nd call)
+  [OK] [B2] CSV row count == extract table (2002)
+  [OK] [B2] CSV == extract to 1e-9 (all 7 columns)
+  [OK] [B2] CSV direct column == _spectrum()
+  [OK] [C] PV-A 2x4890 m @2.5 km -> alpha=0.05085 (height clamped 0.1, w clamped 0.0017)
+  [OK] [C] @10 m -> alpha=0.1 (ALPHA_MAX cap)
+  [OK] [C] far field -> alpha=ALPHA_MIN=0.0017 (point-source floor)
+  [OK] [C] alpha never leaves [0.0017, 0.1]
+  [OK] [C] @973 m: h/d>5 caps at 0.1, w/d=0.00206 (unclamped) -> 0.05103
+  [OK] [D] gamma(0.25 s) = 0.011 rad
+  [OK] [D] gamma(100 s) = 0.011 rad
+  [OK] [D] gamma(1000 s) = 0.011*sqrt(10) = 0.034785
+  [OK] [D] gamma(1e4 s) = 0.1 rad
+  [OK] [D] dilution(a=0.05, t=0.25s)=1 (fills 0.011-rad cone)
+  [OK] [D] dilution(a=0.005, 0.25s) = (0.005/0.011)^2 = 0.2066
+  [OK] [D] dilution(a=0.002, 1e4s) = (0.002/0.1)^2 = 4e-4
+  [OK] [E] thermal EL tableau: Exempt/RG1=2.8e4/alpha=5.6e5, RG2=7.1e4/alpha=1.42e6
+  [OK] [E] blue radiance groups: [Exempt, RG1, RG2, RG3]
+  [OK] [E] blue small-source E_B: [Exempt, RG2, RG2, RG3] (EN Exempt==RG1=1.0)
+  [OK] [E] decision tree: small source (alpha<11 mrad) judged by E_B, risk_blue=RG2, expected RG2
+  [OK] [E] thermal radiance groups: [Exempt, RG2, RG3] (Exempt==RG1)
+  [OK] [E] formal eye group is the max of thermal+blue (RG3 here)
+  [OK] [F] tmax_thermal: L_R*alpha=5e4 -> t=1.0 s exactly
+  [OK] [F] tmax_thermal: L_R*alpha=1e5 -> t=0.0625 s (Eq 4.9 inversion)
+  [OK] [F] tmax_blue: L_B=1e6 -> t=1 s (Eq 4.6 inversion)
+  [OK] [F] tmax_blue: L_B=1e4 -> t=100 s
+  [OK] [G] summary exposes iec_* aggregate columns
+  [OK] [G] analysis ran (5.5s) and at least one pair reports glare rows
+  [OK] [G] IEC columns present on detail rows
+  [OK] [G] risk columns hold only Exempt/RG1/RG2/RG3
+  [OK] [G] L == E_c*1e4/Omega (exact identity to the pipeline)
+  [OK] [G] tmax_thermal = (5e4/(L_R*alpha))^4 round-trips the RG2 EL
+  [OK] [G] bijection kR*E_r == kR*L*K_EYE/1e4 (er_lr consistent, <2% for sun-disc)
+  [OK] [G] every glare minute has a rated eye risk (no NaN)
+  [OK] [G] L <= rho*L_sun (beam brightness bounded by the sun)
+  [OK] [G] summary fills iec_worst_risk / iec_min_tmax rows for hit pairs
+  [OK] [H] IEC 62471 zones figure rendered
+  [OK] [H] IEC 62471 tmax figures rendered (thermal + blue)
+  [OK] [H] IEC 62471 weighting functions figure rendered
+  [OK] [H] IEC 62471 spectrum-before/after-weighting figure rendered
+  RESULT: 57 passed, 0 failed, elapsed 5.5s (wire run)
+
+--- IEC 62471 validation 2026-09-27 14:25:49 ---
+  [OK] [A] Omega_sun = 2*pi*(1-cos(beta/2)) ~ 6.7929e-5 sr
+  [OK] [A] exact Omega_sun within 0.1% of small-angle pi*beta^2/4
+  [OK] [A] K_EYE = (pi/4)(dp/f)^2 tau = 0.005434
+  [OK] [A] L = E_c*1e4/Omega_sun: DNI 1000 & rho=1 -> 1.472e7 W/m2/sr
+  [OK] [A] sun-disc retinal round-trip E_r = L*K_EYE/1e4 = 8.0 W/cm2
+  [OK] [B] IEC direct integral ~897.5 W/m2 (Table 1, 280-4000 nm)
+  [OK] [B] IEC spectrum is 2002 points, 280.0-4000.0 nm
+  [OK] [B] 0 < kS < 1.0
+  [OK] [B] 0 < kUVA < 1.0
+  [OK] [B] 0 < kB < 1.0
+  [OK] [B] 0 < kR < 1.5
+  [OK] [B] 0 < kIR < 1.0
+  [OK] [B] 0 < kH < 1.0
+  [OK] [B] kR = R(lambda)-weighted IEC direct / full spectrum ~ 1.290 (Table 4.2 R has the blue-violet 10x hump at 435-440 nm)
+  [OK] [B] kB = B(lambda)-weighted IEC direct / full spectrum ~ 0.0859
+  [OK] [B] skin fraction kH ~ 0.969 (most of the solar band is 380-3000 nm)
+  [OK] [B] UVA fraction < IR fraction < skin fraction
+  [OK] [B] weights cached (id identical on 2nd call)
+  [OK] [B2] CSV row count == extract table (2002)
+  [OK] [B2] CSV == extract to 1e-9 (all 7 columns)
+  [OK] [B2] CSV direct column == _spectrum()
+  [OK] [C] PV-A 2x4890 m @2.5 km -> alpha=0.05085 (height clamped 0.1, w clamped 0.0017)
+  [OK] [C] @10 m -> alpha=0.1 (ALPHA_MAX cap)
+  [OK] [C] far field -> alpha=ALPHA_MIN=0.0017 (point-source floor)
+  [OK] [C] alpha never leaves [0.0017, 0.1]
+  [OK] [C] @973 m: h/d>5 caps at 0.1, w/d=0.00206 (unclamped) -> 0.05103
+  [OK] [D] gamma(0.25 s) = 0.011 rad
+  [OK] [D] gamma(100 s) = 0.011 rad
+  [OK] [D] gamma(1000 s) = 0.011*sqrt(10) = 0.034785
+  [OK] [D] gamma(1e4 s) = 0.1 rad
+  [OK] [D] dilution(a=0.05, t=0.25s)=1 (fills 0.011-rad cone)
+  [OK] [D] dilution(a=0.005, 0.25s) = (0.005/0.011)^2 = 0.2066
+  [OK] [D] dilution(a=0.002, 1e4s) = (0.002/0.1)^2 = 4e-4
+  [OK] [E] thermal EL tableau: Exempt/RG1=2.8e4/alpha=5.6e5, RG2=7.1e4/alpha=1.42e6
+  [OK] [E] blue radiance groups: [Exempt, RG1, RG2, RG3]
+  [OK] [E] blue small-source E_B: [Exempt, RG2, RG2, RG3] (EN Exempt==RG1=1.0)
+  [OK] [E] decision tree: small source (alpha<11 mrad) judged by E_B, risk_blue=RG2, expected RG2
+  [OK] [E] thermal radiance groups: [Exempt, RG2, RG3] (Exempt==RG1)
+  [OK] [E] formal eye group is the max of thermal+blue (RG3 here)
+  [OK] [F] tmax_thermal: L_R*alpha=5e4 -> t=1.0 s exactly
+  [OK] [F] tmax_thermal: L_R*alpha=1e5 -> t=0.0625 s (Eq 4.9 inversion)
+  [OK] [F] tmax_blue: L_B=1e6 -> t=1 s (Eq 4.6 inversion)
+  [OK] [F] tmax_blue: L_B=1e4 -> t=100 s
+  [OK] [G] summary exposes iec_* aggregate columns
+  [OK] [G] analysis ran (6.1s) and at least one pair reports glare rows
+  [OK] [G] IEC columns present on detail rows
+  [OK] [G] risk columns hold only Exempt/RG1/RG2/RG3
+  [OK] [G] L == E_c*1e4/Omega (exact identity to the pipeline)
+  [OK] [G] tmax_thermal = (5e4/(L_R*alpha))^4 round-trips the RG2 EL
+  [OK] [G] bijection kR*E_r == kR*L*K_EYE/1e4 (er_lr consistent, <2% for sun-disc)
+  [OK] [G] every glare minute has a rated eye risk (no NaN)
+  [OK] [G] L <= rho*L_sun (beam brightness bounded by the sun)
+  [OK] [G] summary fills iec_worst_risk / iec_min_tmax rows for hit pairs
+  [OK] [H] IEC 62471 zones figure rendered
+  [OK] [H] IEC 62471 tmax figures rendered (thermal + blue)
+  [OK] [H] IEC 62471 weighting functions figure rendered
+  [OK] [H] IEC 62471 spectrum-before/after-weighting figure rendered
+  RESULT: 57 passed, 0 failed, elapsed 6.1s (wire run)

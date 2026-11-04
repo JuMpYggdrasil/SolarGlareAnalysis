@@ -1,0 +1,8 @@
+======================================================================
+CASE  yellowhair15
+REF   Yellowhair & Ho 2015: PV module reflectance/glint (surface roughness, specular vs diffuse)
+======================================================================
+  [OK ] bare-glass reflectance @ 0 deg ~4%: got 0.0441, paper 0.04  -- err=4.100e-03, tol=1.0e-02
+  [OK ] reflectance rises rapidly at high incidence (60-90 deg branch)  -- R(0)=0.0441, R(80)=0.2185
+  [OK ] site config reflectivities within physical 4-6% band (<= 0.08 worst case allowed)  -- [0.08]
+  RESULT: 3 passed, 0 failed

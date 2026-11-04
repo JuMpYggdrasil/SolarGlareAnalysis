@@ -1,0 +1,790 @@
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+GLARE STUDY ANALYSIS 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+TPE IL KN415, LLC (SOLAR FARM) 
+ 
+12/08/2023 
+ 
+
+Introduction: 
+A glare study was performed by TPE Development, LLC (“TPE”) using ForgeSolar software to assess the 
+possible effects of reflectivity created by the proposed solar project located near Gilberts, Kane County, 
+IL (the “Project”). This report interprets and explains the inputs, assumptions, and results of the study.  
+ForgeSolar software incorporates GlareGauge, the leading solar glare analysis tool which meets Federal 
+Aviation Administration (“FAA”) standards and is used globally for glare analysis. It is based on the Solar 
+Glare Hazard Analysis Tool licensed from Sandia National Laboratories. The tool assesses the possible 
+effects of reflectivity, both glint and glare, from a proposed solar photovoltaic installation. The tool can 
+take topography into account; however, the tool is not able to take existing vegetation (trees, shrubs, 
+etc) or structures (fences, buildings, etc.) into account. If there is a tree line or fence obstructing visibility 
+of the array, the tool may incorrectly report glare for which the user must adjust based on site specific 
+vegetation or structures. 
+A model of the Project was input into the software along with several user defined observation points 
+or paths (“Receptors”). The software calculates the sun’s position relative to the Project for every minute 
+of the year. Results are charted displaying annual glare duration and potential ocular impact type and 
+duration for each Receptor.  
+Sun reflection is most noticeable when the sun is low on the horizon and sunlight reflects off the panels 
+at a very low angle along the horizon where it can be seen by an observer standing next to the solar 
+farm, driving along a road, or a neighboring dwelling. The assessment will capture all the possible 
+reflection coming from the solar farm.  
+Reflectivity Summary: 
+ 
+The term ‘reflectivity’ is used in this report to refer to both reflection types (i.e. glint and glare). The 
+definition of glint and glare can vary; however, the definitions used in this report is aligned with the FAA 
+and are detailed below:  
+• Glint: A momentary flash of bright light typically received by moving receptors or from moving 
+reflectors. Example: a momentary solar reflection from a moving car.  
+• Glare: A continuous source of bright light typically received by static Receptors or from large 
+reflective surfaces. Glare is generally associated with stationary objects, which, due to the slow 
+relative movement of the sun, reflect sunlight for a longer duration. 
+The primary difference between glint and glare is duration. The Forge Solar GlareGauge tool captures 
+both types of reflection on the surrounding roads and dwellings.  
+To limit reflection and maximize conversion to electricity, solar PV panels are constructed of dark silicon 
+wafers/cells with light-absorbing materials and the glass is covered with an anti-reflective coating (ARC) 
+as shown in Figure 1 below. These design features limit sunlight reflectance and maximize sunlight 
+absorption. 
+
+Figure 1: Deconstructed Solar Panel 
+ 
+To calculate diffuse and specular reflectance of solar modules, TUV Rheinland (NRTL) performed a test 
+using the ISO 9050 (External Light Reflectance) standards and the results are shown in Figure 2 below. 
+The reflectivity of a typical mono-crystalline photovoltaic solar panel is approximately 5.7%, which is well 
+below the other control samples included in the test. 
+Figure 2: Reflectivity of Solar Cells 
+ 
+
+ForgeSolar GlareGauge Analysis:  
+Inputs and Modeling Assumptions: 
+As input to the software, Route Receptors were created along roadways in vicinity of the site. Height 
+was measured at 5’ above ground to emulate passengers in cars. Further, Observation Receptors were 
+modeled at specific dwellings located around the perimeter of the solar array. Heights were modeled at 
+5’ above ground to emulate residents on the 1st floor of dwellings. 
+The model assumes the sun is shining 100% of the time it is above the horizon (during daylight hours). 
+That is, it does not account for cloudy or overcast conditions when the sun is not shining, therefore the 
+results presented would be the maximum expected glint and glare during any single year. The model 
+assumes a coordinated universal time, meaning a standard time for the appropriate time zone is used.   
+Existing topography is taken into account in the simulation based on LIDAR (“Light Detection and 
+Ranging”) data. Existing and planned vegetation are not considered in the simulation. The model 
+assumed zero vegetation that may screen the Project, so this must be considered when interpreting the 
+study results.  A direct line of sight between the Project and the designated Route Receptors and 
+Observation Receptors is required to produce any discernible glint/glare, so if there is existing or 
+proposed vegetation between the receptor and the project, any glint/glare would be eliminated.  
+Solar panels will be mounted on single axis trackers with a southern azimuth and the panels will track 
+the sun to capture as much sunlight as possible. Therefore, glare is typically not experienced during 
+normal operational hours since any reflection would be back toward the location of the sun. Potential 
+glare is most noticeable when the sun is low on the horizon, early in the morning or late in the afternoon, 
+when sunlight reflects off the panels in a horizontal position (stow mode) at the opposite low angle along 
+the horizon to the east or the west. To reduce glare in the east and west directions during these low sun 
+periods, a 5-degree tracker resting angle was implemented during these times which avoids the main 
+source of glare for solar projects. 
+Results:  
+Based on the project specific location, sun position throughout the year, and the above 
+inputs/assumptions, no potential for glint or glare was identified in the analysis at any of the Route 
+Receptors or neighboring Observation Receptors. While excluded from the analysis, existing and planned 
+vegetation will further shield the view of the project from nearby properties and roadways. 
+No additional mitigation measures are recommended since no glint or glare is anticipated based on the 
+ForgeSolar GlareGauge results.  
+If additional information is needed, contact Bob Malek, TPE Development, LLC at bmalek@tpoint-e.com. 
+
+FORGESOLAR GLARE ANALYSIS
+Summary of Results No glare predicted 
+PV Array
+Tilt
+Orient
+Annual Green Glare
+Annual Yellow Glare
+Energy
+°
+°
+min
+hr
+min
+hr
+kWh
+PV array 1
+SA
+tracking
+SA
+tracking
+0
+0.0
+0
+0.0
+-
+Total glare received by each receptor; may include duplicate times of glare from multiple reflective surfaces. 
+Receptor
+Annual Green Glare
+Annual Yellow Glare
+min
+hr
+min
+hr
+Route 1
+0
+0.0
+0
+0.0
+Route 2
+0
+0.0
+0
+0.0
+Route 3
+0
+0.0
+0
+0.0
+OP 1
+0
+0.0
+0
+0.0
+OP 2
+0
+0.0
+0
+0.0
+OP 3
+0
+0.0
+0
+0.0
+OP 4
+0
+0.0
+0
+0.0
+OP 5
+0
+0.0
+0
+0.0
+OP 6
+0
+0.0
+0
+0.0
+OP 7
+0
+0.0
+0
+0.0
+OP 8
+0
+0.0
+0
+0.0
+OP 9
+0
+0.0
+0
+0.0
+OP 10
+0
+0.0
+0
+0.0
+ 
+Project: ILKN415
+Site configuration: ILKN415 
+Created 16 Sep, 2023
+Updated 16 Sep, 2023
+Time-step 1 minute
+Timezone offset UTC-6
+Minimum sun altitude 0.0 deg
+DNI peaks at 1,000.0 W/m 
+Category 1 MW to 5 MW
+Site ID 100558.17532
+Ocular transmission coefficient 0.5
+Pupil diameter 0.002 m 
+Eye focal length 0.017 m 
+Sun subtended angle 9.3 mrad 
+PV analysis methodology V2
+2
+Page 1 of 8
+
+Component Data
+PV Arrays
+ 
+Name: PV array 1 
+Axis tracking: Single-axis rotation 
+Backtracking: Shade-slope 
+Tracking axis orientation: 180.0° 
+Max tracking angle: 60.0° 
+Resting angle: 5.0° 
+Ground Coverage Ratio: 0.33 
+Rated power: - 
+Panel material: Smooth glass with AR coating 
+Reflectivity: Vary with sun 
+Slope error: correlate with material 
+Vertex
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+Height above ground (ft)
+Total elevation (ft)
+1
+42.141661
+-88.364597
+902.00
+5.00
+907.00
+2
+42.141682
+-88.368891
+894.38
+5.00
+899.38
+3
+42.145878
+-88.368908
+899.23
+5.00
+904.23
+4
+42.145880
+-88.368268
+902.72
+5.00
+907.72
+5
+42.144976
+-88.368245
+901.93
+5.00
+906.93
+6
+42.144978
+-88.368070
+902.98
+5.00
+907.98
+7
+42.144702
+-88.368077
+902.40
+5.00
+907.40
+8
+42.144704
+-88.367644
+904.70
+5.00
+909.70
+9
+42.144428
+-88.367641
+903.58
+5.00
+908.58
+10
+42.144437
+-88.366536
+908.04
+5.00
+913.04
+11
+42.144712
+-88.366534
+908.30
+5.00
+913.30
+12
+42.144705
+-88.365638
+907.05
+5.00
+912.05
+13
+42.144429
+-88.365631
+907.28
+5.00
+912.28
+14
+42.144425
+-88.364937
+907.70
+5.00
+912.70
+15
+42.144072
+-88.364932
+907.03
+5.00
+912.03
+16
+42.144072
+-88.364587
+905.98
+5.00
+910.98
+Page 2 of 8
+
+Route Receptors
+ 
+Name: Route 1 
+Path type: Two-way 
+Observer view angle: 50.0° 
+Vertex
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+Height above ground (ft)
+Total elevation (ft)
+1
+42.148794
+-88.375967
+903.14
+5.00
+908.14
+2
+42.147828
+-88.372314
+903.40
+5.00
+908.40
+3
+42.147184
+-88.369943
+899.99
+5.00
+904.99
+4
+42.146873
+-88.369133
+903.16
+5.00
+908.16
+5
+42.146486
+-88.368385
+906.05
+5.00
+911.05
+6
+42.145676
+-88.367022
+908.06
+5.00
+913.06
+7
+42.145002
+-88.365681
+907.63
+5.00
+912.63
+8
+42.144443
+-88.364211
+905.00
+5.00
+910.00
+9
+42.142823
+-88.359658
+903.97
+5.00
+908.97
+10
+42.141907
+-88.357108
+904.29
+5.00
+909.29
+11
+42.141026
+-88.354445
+902.32
+5.00
+907.32
+Name: Route 2 
+Path type: Two-way 
+Observer view angle: 50.0° 
+Vertex
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+Height above ground (ft)
+Total elevation (ft)
+1
+42.147058
+-88.369412
+902.36
+5.00
+907.36
+2
+42.151625
+-88.369418
+906.02
+5.00
+911.02
+Page 3 of 8
+
+Discrete Observation Point Receptors
+Name
+ID
+Latitude (°)
+Longitude (°)
+Elevation (ft)
+Height (ft)
+OP 1
+1
+42.145257
+-88.367494
+907.93
+10.00
+OP 2
+2
+42.141807
+-88.357358
+900.61
+10.00
+OP 3
+3
+42.140428
+-88.357438
+901.31
+10.00
+OP 4
+4
+42.142756
+-88.357136
+905.32
+10.00
+OP 5
+5
+42.140466
+-88.373041
+890.48
+10.00
+OP 6
+6
+42.143355
+-88.373409
+897.54
+10.00
+OP 7
+7
+42.144384
+-88.373098
+900.70
+10.00
+OP 8
+8
+42.147422
+-88.372184
+897.86
+10.00
+OP 9
+9
+42.148617
+-88.369204
+906.44
+10.00
+OP 10
+10
+42.147033
+-88.363980
+908.68
+10.00
+ 
+Name: Route 3 
+Path type: Two-way 
+Observer view angle: 50.0° 
+Vertex
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+Height above ground (ft)
+Total elevation (ft)
+1
+42.148203
+-88.374114
+901.42
+5.00
+906.42
+2
+42.144233
+-88.374077
+895.99
+5.00
+900.99
+3
+42.137244
+-88.374096
+892.04
+5.00
+897.04
+4
+42.136394
+-88.374108
+891.13
+5.00
+896.13
+Page 4 of 8
+
+Glare Analysis Results
+Summary of Results No glare predicted 
+PV Array
+Tilt
+Orient
+Annual Green Glare
+Annual Yellow Glare
+Energy
+°
+°
+min
+hr
+min
+hr
+kWh
+PV array 1
+SA
+tracking
+SA
+tracking
+0
+0.0
+0
+0.0
+-
+Total glare received by each receptor; may include duplicate times of glare from multiple reflective surfaces. 
+Receptor
+Annual Green Glare
+Annual Yellow Glare
+min
+hr
+min
+hr
+Route 1
+0
+0.0
+0
+0.0
+Route 2
+0
+0.0
+0
+0.0
+Route 3
+0
+0.0
+0
+0.0
+OP 1
+0
+0.0
+0
+0.0
+OP 2
+0
+0.0
+0
+0.0
+OP 3
+0
+0.0
+0
+0.0
+OP 4
+0
+0.0
+0
+0.0
+OP 5
+0
+0.0
+0
+0.0
+OP 6
+0
+0.0
+0
+0.0
+OP 7
+0
+0.0
+0
+0.0
+OP 8
+0
+0.0
+0
+0.0
+OP 9
+0
+0.0
+0
+0.0
+OP 10
+0
+0.0
+0
+0.0
+ 
+Page 5 of 8
+
+PV: PV array 1 no glare found 
+Receptor results ordered by category of glare
+Receptor
+Annual Green Glare
+Annual Yellow Glare
+min
+hr
+min
+hr
+Route 1
+0
+0.0
+0
+0.0
+Route 2
+0
+0.0
+0
+0.0
+Route 3
+0
+0.0
+0
+0.0
+OP 1
+0
+0.0
+0
+0.0
+OP 2
+0
+0.0
+0
+0.0
+OP 3
+0
+0.0
+0
+0.0
+OP 4
+0
+0.0
+0
+0.0
+OP 5
+0
+0.0
+0
+0.0
+OP 6
+0
+0.0
+0
+0.0
+OP 7
+0
+0.0
+0
+0.0
+OP 8
+0
+0.0
+0
+0.0
+OP 9
+0
+0.0
+0
+0.0
+OP 10
+0
+0.0
+0
+0.0
+ 
+PV array 1 and Route: Route 1
+No glare found
+PV array 1 and Route: Route 2
+No glare found
+PV array 1 and Route: Route 3
+No glare found
+PV array 1 and OP 1
+No glare found
+PV array 1 and OP 2
+No glare found
+PV array 1 and OP 3
+No glare found
+PV array 1 and OP 4
+No glare found
+Page 6 of 8
+
+ 
+PV array 1 and OP 5
+No glare found
+PV array 1 and OP 6
+No glare found
+PV array 1 and OP 7
+No glare found
+PV array 1 and OP 8
+No glare found
+PV array 1 and OP 9
+No glare found
+PV array 1 and OP 10
+No glare found
+Page 7 of 8
+
+Assumptions
+Default glare analysis parameters and observer eye characteristics (for reference only): 
+• Analysis time interval: 1 minute
+• Ocular transmission coefficient: 0.5
+• Pupil diameter: 0.002 meters
+• Eye focal length: 0.017 meters
+• Sun subtended angle: 9.3 milliradians
+© Sims Industries d/b/a ForgeSolar, All Rights Reserved.
+ 
+"Green" glare is glare with low potential to cause an after-image (flash blindness) when observed prior to a typical blink response time. 
+"Yellow" glare is glare with potential to cause an after-image (flash blindness) when observed prior to a typical blink response time. 
+Times associated with glare are denoted in Standard time. For Daylight Savings, add one hour. 
+The algorithm does not rigorously represent the detailed geometry of a system; detailed features such as gaps between modules, variable
+height of the PV array, and support structures may impact actual glare results. However, we have validated our models against several
+systems, including a PV array causing glare to the air-traffic control tower at Manchester-Boston Regional Airport and several sites in
+Albuquerque, and the tool accurately predicted the occurrence and intensity of glare at different times and days of the year. 
+Several V1 calculations utilize the PV array centroid, rather than the actual glare spot location, due to algorithm limitations. This may affect
+results for large PV footprints. Additional analyses of array sub-sections can provide additional information on expected glare. This primarily
+affects V1 analyses of path receptors. 
+Random number computations are utilized by various steps of the annual hazard analysis algorithm. Predicted minutes of glare can vary
+between runs as a result. This limitation primarily affects analyses of Observation Point receptors, including ATCTs. Note that the SGHAT/
+ForgeSolar methodology has always relied on an analytical, qualitative approach to accurately determine the overall hazard (i.e. green vs.
+yellow) of expected glare on an annual basis. 
+The analysis does not automatically consider obstacles (either man-made or natural) between the observation points and the prescribed solar
+installation that may obstruct observed glare, such as trees, hills, buildings, etc. 
+The subtended source angle (glare spot size) is constrained by the PV array footprint size. Partitioning large arrays into smaller sections will
+reduce the maximum potential subtended angle, potentially impacting results if actual glare spots are larger than the sub-array size. Additional
+analyses of the combined area of adjacent sub-arrays can provide more information on potential glare hazards. (See previous point on related
+limitations.) 
+The variable direct normal irradiance (DNI) feature (if selected) scales the user-prescribed peak DNI using a typical clear-day irradiance profile.
+This profile has a lower DNI in the mornings and evenings and a maximum at solar noon. The scaling uses a clear-day irradiance profile based
+on a normalized time relative to sunrise, solar noon, and sunset, which are prescribed by a sun-position algorithm and the latitude and longitude
+obtained from Google maps. The actual DNI on any given day can be affected by cloud cover, atmospheric attenuation, and other
+environmental factors. 
+The ocular hazard predicted by the tool depends on a number of environmental, optical, and human factors, which can be uncertain. We
+provide input fields and typical ranges of values for these factors so that the user can vary these parameters to see if they have an impact on
+the results. The speed of SGHAT allows expedited sensitivity and parametric analyses. 
+The system output calculation is a DNI-based approximation that assumes clear, sunny skies year-round. It should not be used in place of more
+rigorous modeling methods.
+Hazard zone boundaries shown in the Glare Hazard plot are an approximation and visual aid based on aggregated research data. Actual ocular
+impact outcomes encompass a continuous, not discrete, spectrum. 
+Glare locations displayed on receptor plots are approximate. Actual glare-spot locations may differ.
+Refer to the Help page at www.forgesolar.com/help/ for assumptions and limitations not listed here. 
+Page 8 of 8

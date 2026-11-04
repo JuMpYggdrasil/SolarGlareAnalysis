@@ -1,0 +1,2180 @@
+ 
+GLINT AND GLARE ASSESSMENT 
+Petersons Solar Farm 
+September 2019 
+
+
+ 
+ 
+Glint and Glare Assessment of the Petersons Solar Farm 
+ 
+September 2019 
+i 
+About ITP Renewables 
+ITP Renewables (ITP) is part of the ITP Energised Group which, established in 1981, specialises 
+in renewable energy, energy efficiency and carbon markets consulting. The Group has offices 
+and projects throughout the world. 
+ITP was established in Australia in 2003 and has undertaken a wide range of projects, including 
+designing grid-connected renewable power systems; providing advice for government policy; 
+feasibility studies for large, off-grid power systems; developing micro-finance models for 
+community-owned power systems in developing countries; and modelling large-scale power 
+systems. 
+The staff at ITP have backgrounds in renewable energy and energy efficiency, research, 
+development and implementation, managing and reviewing government incentive programs, high 
+level policy analysis and research, engineering design and project management. 
+ 
+ 
+
+ 
+ 
+Glint and Glare Assessment of the Petersons Solar Farm 
+ 
+ii 
+September 2019 
+Document Control Record 
+ 
+Document prepared by: 
+ITP Renewables 
+Suite 1, Level 1, 
+19-23 Moore Street, Turner, ACT, 2612, Australia 
+PO Box 6127, O’Connor, ACT, 2602, Australia 
+Tel. 
++61 2 6257 3511 
+Fax. 
++61 2 6257 3611 
+E-mail: info@itpau.com.au 
+Website: http://www.itpau.com.au  
+ 
+Document Control 
+ 
+ 
+Document Title 
+Glint and Glare Assessment of the Petersons Solar Farm 
+ITP Project No. 
+Armidale 1B 
+Rev. 
+Date 
+Status 
+Author/s 
+Reviewer 
+1 
+9 September 2019 
+Draft 
+K Banks 
+L Fox 
+2 
+13 September  
+Final 
+K Banks 
+L Fox 
+ 
+ 
+ 
+ 
+ 
+ 
+A person or organisation choosing to use documents prepared by ITP Renewables accepts the following: 
+a) 
+Conclusions and figures presented in draft documents are subject to change. ITP Renewables accepts no responsibility for 
+their use outside of the original report. 
+b) 
+The document is only to be used for purposes explicitly agreed to by ITP Renewables. 
+c) 
+All responsibility and risks associated with the use of this report lie with the person or organisation who chooses to use it. 
+ 
+ 
+
+ 
+ 
+Glint and Glare Assessment of the Petersons Solar Farm 
+ 
+September 2019 
+iii 
+TABLE OF CONTENTS 
+1. 
+INTRODUCTION ................................................................................................................... 1 
+1.1. 
+Overview ......................................................................................................................... 1 
+1.2. 
+Glint and Glare ................................................................................................................ 1 
+2. 
+PROJECT DESCRIPTION ..................................................................................................... 2 
+3. 
+ANALYSIS............................................................................................................................. 4 
+3.1 
+Overview ......................................................................................................................... 4 
+3.2 
+Potential Receptors ......................................................................................................... 5 
+3.3 
+Assumptions ................................................................................................................... 6 
+3.4 
+Results ............................................................................................................................ 6 
+4. 
+SUMMARY ............................................................................................................................ 8 
+5. 
+REFERENCES ...................................................................................................................... 8 
+APPENDIX A.   FORGESOLAR GLARE ANALYSIS ................................................................... 9 
+ 
+TABLE OF FIGURES 
+Figure 1. Proposed solar farm site and surrounding area .............................................................. 3 
+Figure 2. Map showing potential visual receptors within 2 km of the site (residential/commercial 
+observation points and road/railway routes) .................................................................................. 5 
+ 
+LIST OF TABLES 
+Table 1. Site information ............................................................................................................... 1 
+Table 2. SGHAT specification inputs ............................................................................................. 4 
+Table 3. Glare potential at observation points ............................................................................... 6 
+ 
+ 
+ 
+
+ 
+ 
+Glint and Glare Assessment of the Petersons Solar Farm 
+ 
+iv 
+September 2019 
+LIST OF ABBREVIATIONS 
+AC 
+Alternating current 
+CASA 
+Civil Aviation Safety Authority 
+DC 
+Direct current 
+FAA 
+Federal Aviation Administration (United States) 
+Ha  
+Hectare 
+ITP 
+ITP Renewables 
+MW 
+Megawatt, unit of power (1 million Watts) 
+MWp 
+Megawatt-peak, unit of power at standard test conditions used to indicate PV 
+system capacity 
+NSW 
+New South Wales 
+OP 
+Observation point 
+PV 
+Photovoltaic  
+SGHAT 
+Solar Glare Hazard Analysis Tool 
+ 
+ 
+
+ 
+ 
+Glint and Glare Assessment of the Petersons Solar Farm 
+ 
+September 2019 
+1 
+1. 
+INTRODUCTION 
+1.1. Overview 
+ITP Development is proposing to develop a solar farm as described in Table 1. It will be located 
+approximately 4 km southeast of the town of Armidale, NSW (see Figure 1).  
+ 
+Table 1. Site information 
+Parameter 
+Description 
+Solar farm name 
+Petersons Solar Farm 
+Site reference 
+Armidale 1B 
+Lot/DP(s) 
+494/66672, 2/569410 
+Street address 
+347 Dangarsleigh Rd, Armidale, NSW 2350 
+Council 
+Armidale District Council 
+AC capacity 
+5 MW 
+DC capacity 
+6.05 MW 
+Project area 
+12.6 ha 
+Current land use 
+Grazing 
+ 
+This report provides a desktop glint and glare assessment to support the Development 
+Application for the project. It provides: 
+• 
+Identification of potential receptors of glint and glare from the proposed solar farm; 
+• 
+Assessment of the glint and glare hazard using the Solar Glare Hazard Analysis Tool 
+(SGHAT) GlareGauge analysis; and 
+• 
+Recommended mitigation measures to reduce potential glint and glare impacts. 
+ 
+1.2. Glint and Glare 
+Glint is defined as a momentary flash of bright light, while glare is a continuous source of 
+excessive brightness relative to ambient lighting (Federal Aviation Administration (FAA), 2018). 
+The GlareGauge analysis used to assess the glint and glare hazard (see Section 3) was run with 
+a simulation interval of one minute, as sunlight reflection from PV modules typically lasts for at 
+least one minute. Glint, which lasts for less than one minute, is unlikely to occur from the sun 
+based on how slowly the sun and modules move, so has not been considered further in this 
+assessment. 
+
+ 
+ 
+Glint and Glare Assessment of the Petersons Solar Farm 
+ 
+2 
+September 2019 
+Solar photovoltaic (PV) modules are designed to absorb as much light as possible to maximise 
+efficiency (generally around 98% of the light received). To limit reflection the modules are 
+constructed from dark, light absorbing material and the glass is treated with an anti-reflective 
+coating. As a result, the glare generated from PV modules is lower than from many other 
+surfaces, including cropping/grassland and concrete (an albedo of 20% is typically assumed for 
+PV modules, compared to 25-30% for grass and up to 25% for concrete; Ramírez & Muňoz, 
+2012). 
+However, the glass modules and metal frames still have the potential to generate glare. This 
+needs to be assessed to ensure that visual receptors such as road users, nearby buildings, air 
+traffic control towers and aircraft pilots are not impacted by the development of solar farms. 
+ 
+2. 
+PROJECT DESCRIPTION 
+ITP Development is proposing to construct a solar farm with a DC capacity of 6.05 MWp and AC 
+output of 5 MW, on an approximately 100.5 ha site that is currently used for grazing. 
+There are to be approximately 16,000 solar modules installed on around 200 mounting structures 
+running north to south. Each row of solar photovoltaic (PV) modules will rotate to track the sun 
+across the sky from east to west each day. The hub height of each tracker will be around 1.7 m 
+with the peak of the modules reaching a height of approximately 2.5 m when the array is fully 
+tilted to 60 degrees from horizontal. The general arrangement of the solar farm is shown on 
+drawing ARM1B-G-210, and the array tracker details on drawing ARM1B-E-341. 
+The solar farm will also comprise two 2.5 MW inverter stations. These inverters are to be located 
+within the array and are each mounted on a 20-foot skid. Each of these inverter stations 
+incorporate the high voltage switchgear and transformers. The arrangement of the inverter station 
+skid is shown in drawing ORA2B-E-430. 
+The mounting system is constructed on piles that are driven in to the ground. During construction 
+there is expected to be 50 personnel on site working from 7 am – 4 pm Monday to Friday. The 
+construction is expected to take approximately 3 months. Once operational the site will be 
+unmanned. Maintenance is expected to be carried out quarterly by a crew of 2 – 3 people. 
+Solar panels and related infrastructure will be decommissioned and removed upon cessation of 
+operations. This is likely to occur within two years of the end of the project. The site will be 
+returned to the pre-development land use. 
+ 
+ 
+
+ 
+ 
+September 2019 
+3 
+ 
+Figure 1. Proposed solar farm site and surrounding area  
+Armidale 
+Site area 
+Armidale Airport 
+
+ 
+ 
+Glint and Glare Assessment of the Petersons Solar Farm 
+ 
+4 
+September 2019 
+3. 
+ANALYSIS 
+3.1 Overview 
+In a fixed-tilt PV array the angle of incidence at which direct sunlight hits the PV modules varies 
+as the sun moves across the sky. It will be smallest around noon when the sun is overhead and 
+largest in the early morning and late afternoon when the sun is near the horizon. If the PV array is 
+mounted on a single-axis tracking system as proposed in this project, the variation in the angle of 
+incidence will be much smaller since the modules rotate to follow the sun. The main variation will 
+be seasonal, i.e. because the sun is higher in the sky during summer and lower during winter. A 
+PV array that is mounted on a tracking system therefore has less potential to cause glare. 
+The SGHAT was developed by Sandia National Laboratories to evaluate glare resulting from 
+solar farms at different viewpoints, based on the location, orientation and specifications of the PV 
+modules. This tool is required by the United States FAA for glare hazard analysis near airports 
+and is also recognised by the Australian Government Civil Aviation Safety Authority (CASA). 
+The GlareGauge analysis uses SGHAT to provide an indication of the type of glare that can be 
+expected at each potential receptor. Glare is indicated by three colours according to severity: 
+• 
+Green glare: Low potential for temporary after-image; 
+• 
+Yellow glare: Potential for temporary after-image; and 
+• 
+Red glare: Retinal burn, not expected for PV.  
+The parameters used in the SGHAT model for the project are detailed in Table 2. GlareGauge 
+default settings were adopted for the analysis time interval, direct normal irradiance, observer eye 
+characteristics and slope error. The heights of the observation points were assumed to be 1.5 m 
+for a road user (i.e. sitting in a car) and 1.65 m for a person (i.e. standing). 
+Table 2. SGHAT specification inputs 
+Parameters 
+Input 
+Time zone 
+UTC+10:00 
+Module tracking 
+Single axis 
+Module surface material 
+Smooth glass with ARC (anti-reflective coating) 
+Tracking axis tilt  
+0° 
+Tracking axis orientation 
+0° 
+Module offset angle (angle between 
+module and tracking axis) 
+0° 
+Maximum tracking angle 
+60° 
+Resting angle 
+60° 
+Height of modules above ground 
+1.7 m 
+ 
+
+ 
+ 
+Glint and Glare Assessment of the Petersons Solar Farm 
+ 
+September 2019 
+5 
+3.2 Potential Receptors 
+For this project, visual receptors within 2 km of the site were considered including residences, 
+commercial properties and road users. A 2-km radius from the site was considered appropriate 
+based on it being highly unlikely for glint and glare impacts at distances greater than this. As 
+shown in Figure 2, 67 residential/commercial observation points were identified as potential visual 
+receptors of the site. The potential for glare was also assessed along six different road routes.  
+While there were a greater number of residential/commercial properties considered, many were 
+discounted based on large stands of trees and other structures which will act as visual barriers 
+between the site and receptor. Some of those included in the analysis are also surrounded by 
+stands of trees which will obstruct view of the solar farm. 
+The Armidale Airport is located approximately 5.5 km northwest of the site. There are no air traffic 
+control towers at the airport thus it was not considered a potential visual receptor of the site. A 
+GlareGauge analysis was run on the flight paths to the runway, and there is not expected to be 
+any glare visible from aircraft approaching or taking off. 
+ 
+Figure 2. Map showing potential visual receptors within 2 km of the site (residential/commercial observation 
+points and road/railway routes) 
+ 
+ 
+Site 
+area 
+Lucas Ln 
+Dangarsleigh Rd 
+Long Swamp Rd 
+Railway 
+Roseneath Ln 
+Seaton St 
+
+ 
+ 
+Glint and Glare Assessment of the Petersons Solar Farm 
+ 
+6 
+September 2019 
+3.3 Assumptions 
+The visual impact of solar farm development depends on the scale and type of infrastructure, the 
+prominence and topography of the site relative to the surrounding environment, and any proposed 
+screening measures to reduce visibility of the site. Some potential viewpoints were discounted 
+because of significant existing features such as trees or buildings, however minor screening such 
+as roadside vegetation was not assessed in detail. The GlareGauge analysis results are therefore 
+considered conservative as the model assumes there is no screening. It is noted that the site is 
+almost entirely cleared with only a few trees within the property.  
+Atmospheric conditions such as cloud cover will also influence light reflection and the resulting 
+impact on visual receptors. Varying atmospheric conditions have not been accounted for in the 
+GlareGauge analysis. The GlareGauge analysis assumes clear sky conditions, with a peak direct 
+normal irradiance (DNI) of 1,000 W/m2 which varies throughout the day.  
+ 
+3.4 Results 
+The results of the GlareGauge analysis (attached in Appendix A) at each of the observation 
+points are summarised in Table 3. None of the residences/commercial properties or road users 
+are expected to experience any glare from the solar farm. Many residences will also not have 
+direct view of the solar farm due to visual obstruction from trees and other structures. 
+ 
+Table 3. Glare potential at observation points 
+ 
+Type of 
+receptor 
+Location relative 
+to solar farm 
+Green glare 
+(minutes) 
+Yellow glare 
+(minutes) 
+Glare potential 
+OP1 
+Residential  
+520 m north 
+0 
+0 
+No glare 
+OP2 
+Commercial  
+890 m north 
+0 
+0 
+No glare 
+OP3 
+Commercial  
+900 m north 
+0 
+0 
+No glare 
+OP4 
+Commercial  
+970 m north 
+0 
+0 
+No glare 
+OP5 
+Residential 
+1.6 km north 
+0 
+0 
+No glare 
+OP6 
+Residential 
+1.8 km northwest 
+0 
+0 
+No glare 
+OP7 
+Residential 
+1.5 km northwest 
+0 
+0 
+No glare 
+OP8 
+Residential 
+1.3 km northwest 
+0 
+0 
+No glare 
+OP9 
+Residential 
+880 m northwest 
+0 
+0 
+No glare 
+OP10 
+Residential 
+750 m northwest 
+0 
+0 
+No glare 
+OP11 
+Residential 
+510 m north 
+0 
+0 
+No glare 
+OP12 
+Residential 
+2 km northwest 
+0 
+0 
+No glare 
+
+ 
+ 
+Glint and Glare Assessment of the Petersons Solar Farm 
+ 
+September 2019 
+7 
+ 
+Type of 
+receptor 
+Location relative 
+to solar farm 
+Green glare 
+(minutes) 
+Yellow glare 
+(minutes) 
+Glare potential 
+OP13 
+Residential 
+1.4 km northwest 
+0 
+0 
+No glare 
+OP14 
+Residential 
+1.2 km northwest 
+0 
+0 
+No glare 
+OP15 
+Residential 
+1.6 km northwest 
+0 
+0 
+No glare 
+OP16 
+Residential 
+1.2 km west 
+0 
+0 
+No glare 
+OP17 
+Residential 
+1.2 km west 
+0 
+0 
+No glare 
+OP18 
+Residential 
+1.1 km west 
+0 
+0 
+No glare 
+OP19 
+Residential 
+1 km west 
+0 
+0 
+No glare 
+OP20 
+Residential 
+1.4 km west 
+0 
+0 
+No glare 
+OP21 
+Residential 
+1.7 km northwest 
+0 
+0 
+No glare 
+OP22 
+Residential 
+1.4 km west 
+0 
+0 
+No glare 
+OP23 
+Residential 
+1.5 km west 
+0 
+0 
+No glare 
+OP24 
+Residential 
+960 m west 
+0 
+0 
+No glare 
+OP25 
+Residential 
+830 m west 
+0 
+0 
+No glare 
+OP26 
+Residential 
+710 m southwest 
+0 
+0 
+No glare 
+OP27 
+Residential 
+1.1 km southwest 
+0 
+0 
+No glare 
+OP28 
+Residential 
+960 m southwest 
+0 
+0 
+No glare 
+OP29 
+Residential 
+1.2 km southwest 
+0 
+0 
+No glare 
+OP30 
+Residential 
+720 m south 
+0 
+0 
+No glare 
+OP31 
+Residential 
+850 m south 
+0 
+0 
+No glare 
+OP32 
+Residential 
+1 km south 
+0 
+0 
+No glare 
+OP33 
+Residential 
+900 m southeast  
+0 
+0 
+No glare 
+OP34 
+Residential/ 
+commercial  
+1.2 km east 
+0 
+0 
+No glare 
+OP35 
+Residential 
+1.5 km south 
+0 
+0 
+No glare 
+OP36 
+Residential 
+1.5 km south 
+0 
+0 
+No glare 
+OP37 
+Residential 
+1.5 km east 
+0 
+0 
+No glare 
+OP38 
+Residential 
+1.6 km east 
+0 
+0 
+No glare 
+OP39 
+Residential 
+1.5 km east 
+0 
+0 
+No glare 
+OP40 
+Residential 
+1.3 km east 
+0 
+0 
+No glare 
+OP41 
+Commercial  
+1.2 km northeast 
+0 
+0 
+No glare 
+Dangarsleigh Rd Road route 
+West   
+0 
+0 
+No glare 
+Long Swamp Rd 
+Road route 
+East   
+0 
+0 
+No glare 
+
+ 
+ 
+Glint and Glare Assessment of the Petersons Solar Farm 
+ 
+8 
+September 2019 
+ 
+Type of 
+receptor 
+Location relative 
+to solar farm 
+Green glare 
+(minutes) 
+Yellow glare 
+(minutes) 
+Glare potential 
+Railway  
+Train route 
+West  
+0 
+0 
+No glare 
+Roseneath Ln 
+Road route 
+North  
+0 
+0 
+No glare 
+Seaton St 
+Road route 
+Northeast 
+0 
+0 
+No glare 
+Lucas Ln 
+Road route 
+East  
+0 
+0 
+No glare 
+ 
+4. 
+SUMMARY 
+The results of the GlareGauge analysis indicated that the selected observation points are unlikely 
+to receive glare from to the proposed solar farm. Road users approaching the solar farm along 
+Dangarsleigh Rd, or using the railway line, Long Swamp Rd, Roseneath Ln, Seaton St or 
+Lucas Ln are also not expected to experience any glare.  
+ 
+5. 
+REFERENCES 
+Federal Aviation Administration (FAA). (2018). Solar Guide: Technical Guidance for Evaluating 
+Selected Solar Technologies on Airports. Retrieved from the FAA website: 
+https://www.faa.gov/airports/environmental/ 
+Ramírez, A. Z., & Muňoz, C. B. (2012). Albedo effect and energy efficiency of cities. Sustainable 
+Development – Energy, Engineering and Technologies – Manufacturing and Environment. 
+Retrieved from https://www.intechopen.com/books/sustainable-development-energy-
+engineering-and-technologies-manufacturing-and-environment/albedo-effect-and-energy-
+efficiency-of-cities 
+ 
+ 
+ 
+
+ 
+ 
+Glint and Glare Assessment of the Petersons Solar Farm 
+ 
+September 2019 
+9 
+APPENDIX A.   FORGESOLAR GLARE ANALYSIS 
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+
+FORGESOLAR GLARE ANALYSIS
+Project: Petersons Solar Farm
+Armidale 1B solar farm
+Site conﬁguration: All receptors 2
+Analysis conducted by ITP Engineering (engineering@itpau.com.au) at 03:56 on 09 Sep, 2019. 
+U.S. FAA 2013 Policy Adherence
+The following table summarizes the policy adherence of the glare analysis based on the 2013 U.S. Federal Aviation Administration
+Interim Policy 78 FR 63276. This policy requires the following criteria be met for solar energy systems on airport property:
+• No "yellow" glare (potential for after-image) for any ﬂight path from threshold to 2 miles
+• No glare of any kind for Air Traﬃc Control Tower(s) ("ATCT") at cab height.
+• Default analysis and observer characteristics (see list below)
+ForgeSolar does not represent or speak oﬃcially for the FAA and cannot approve or deny projects. Results are informational only.
+COMPONENT
+STATUS
+DESCRIPTION
+Analysis parameters
+PASS
+Analysis time interval and eye characteristics used are acceptable
+Flight path(s)
+N/A
+No ﬂight paths analyzed
+ATCT(s)
+N/A
+No ATCT receptors designated
+Default glare analysis parameters and observer eye characteristics (for reference only): 
+• Analysis time interval: 1 minute
+• Ocular transmission coeﬃcient: 0.5
+• Pupil diameter: 0.002 meters
+• Eye focal length: 0.017 meters
+• Sun subtended angle: 9.3 milliradians
+FAA Policy 78 FR 63276 can be read at https://www.federalregister.gov/d/2013-24729
+
+SITE CONFIGURATION
+Analysis Parameters
+DNI: peaks at 1,000.0 W/m^2 
+Time interval: 1 min
+Ocular transmission
+coeﬃcient: 0.5
+Pupil diameter: 0.002 m
+Eye focal length: 0.017 m
+Sun subtended angle: 9.3
+mrad 
+Site Conﬁg ID: 30950.5638 
+
+PV Array(s)
+Name: PV array 1 
+Axis tracking: Single-axis rotation 
+Tracking axis orientation: 0.0° 
+Tracking axis tilt: 0.0° 
+Tracking axis panel oﬀset: 0.0° 
+Max tracking angle: 60.0° 
+Resting angle: 60.0° 
+Rated power: - 
+Panel material: Smooth glass with AR coating 
+Reﬂectivity: Vary with sun 
+Slope error: correlate with material 
+Vertex
+Latitude (°)
+Longitude (°)
+Ground elevation (m)
+Height above ground (m)
+Total elevation (m)
+1
+-30.547178
+151.671344
+1013.94
+1.70
+1015.64
+2
+-30.548827
+151.682443
+1000.96
+1.70
+1002.66
+3
+-30.549751
+151.682411
+1006.27
+1.70
+1007.97
+4
+-30.549396
+151.680179
+1004.64
+1.70
+1006.34
+5
+-30.549996
+151.680147
+1007.88
+1.70
+1009.58
+6
+-30.549761
+151.678538
+1005.63
+1.70
+1007.33
+7
+-30.549179
+151.678565
+1004.03
+1.70
+1005.73
+8
+-30.548906
+151.676961
+1006.11
+1.70
+1007.81
+9
+-30.549460
+151.676928
+1007.28
+1.70
+1008.98
+10
+-30.549280
+151.675679
+1008.63
+1.70
+1010.33
+11
+-30.548795
+151.675695
+1007.84
+1.70
+1009.54
+12
+-30.548772
+151.675544
+1008.46
+1.70
+1010.16
+13
+-30.548587
+151.675555
+1008.40
+1.70
+1010.10
+14
+-30.548301
+151.673876
+1011.09
+1.70
+1012.79
+15
+-30.548472
+151.673865
+1011.35
+1.70
+1013.05
+16
+-30.548014
+151.671307
+1015.05
+1.70
+1016.75
+
+Discrete Observation Receptors
+Name
+ID
+Latitude (°)
+Longitude (°)
+Elevation (m)
+Height (m)
+OP 1
+1
+-30.544768
+151.679874
+1001.92
+1.65
+OP 2
+2
+-30.541462
+151.680999
+1013.83
+1.65
+OP 3
+3
+-30.540833
+151.679277
+1015.54
+1.65
+OP 4
+4
+-30.539900
+151.676562
+1027.86
+1.65
+OP 5
+5
+-30.534272
+151.673873
+1022.12
+1.65
+OP 6
+6
+-30.535418
+151.665952
+1007.62
+1.65
+OP 7
+7
+-30.537044
+151.667743
+1011.81
+1.65
+OP 8
+8
+-30.539915
+151.668852
+1027.73
+1.65
+OP 9
+9
+-30.543274
+151.669823
+1026.89
+1.65
+OP 10
+10
+-30.543556
+151.671556
+1022.58
+1.65
+OP 11
+11
+-30.544614
+151.674184
+1016.48
+1.65
+OP 12
+12
+-30.534699
+151.663538
+1011.10
+1.65
+OP 13
+13
+-30.540592
+151.665459
+1020.24
+1.65
+OP 14
+14
+-30.543091
+151.665657
+1023.52
+1.65
+OP 15
+15
+-30.541382
+151.662353
+1036.65
+1.65
+OP 16
+16
+-30.544466
+151.665064
+1027.04
+1.65
+OP 17
+17
+-30.545355
+151.665008
+1027.55
+1.65
+OP 18
+18
+-30.546607
+151.665392
+1026.53
+1.65
+OP 19
+19
+-30.546321
+151.666357
+1023.91
+1.65
+OP 20
+20
+-30.544611
+151.662758
+1040.92
+1.65
+OP 21
+21
+-30.542904
+151.660757
+1049.69
+1.65
+OP 22
+22
+-30.549058
+151.662532
+1049.34
+1.65
+OP 23
+23
+-30.550194
+151.661931
+1055.28
+1.65
+OP 24
+24
+-30.548880
+151.666716
+1024.65
+1.65
+OP 25
+25
+-30.549254
+151.668089
+1021.57
+1.65
+OP 26
+26
+-30.550162
+151.669535
+1021.32
+1.65
+OP 27
+27
+-30.552449
+151.666585
+1040.97
+1.65
+OP 28
+28
+-30.553075
+151.668017
+1041.88
+1.65
+OP 29
+29
+-30.554904
+151.665994
+1054.83
+1.65
+OP 30
+30
+-30.553107
+151.671203
+1027.31
+1.65
+OP 31
+31
+-30.554904
+151.671573
+1041.09
+1.65
+OP 32
+32
+-30.557491
+151.673113
+1032.05
+1.65
+OP 33
+33
+-30.555094
+151.682447
+1037.13
+1.65
+OP 34
+34
+-30.553532
+151.688631
+1013.88
+1.65
+OP 35
+35
+-30.562393
+151.676360
+1015.29
+1.65
+OP 36
+36
+-30.561667
+151.677572
+1013.32
+1.65
+OP 37
+37
+-30.554466
+151.691289
+997.41
+1.65
+OP 38
+38
+-30.552627
+151.692984
+996.30
+1.65
+OP 39
+39
+-30.549153
+151.692330
+996.28
+1.65
+OP 40
+40
+-30.547231
+151.690248
+1004.75
+1.65
+OP 41
+41
+-30.540785
+151.685480
+1028.25
+1.65
+
+Route Receptor(s)
+Name: Dangarsleigh Rd 
+Path type: Two-way 
+Observer view angle: 50.0° 
+Vertex
+Latitude (°)
+Longitude (°)
+Ground elevation (m)
+Height above ground (m)
+Total elevation (m)
+1
+-30.535648
+151.668813
+1016.64
+1.50
+1018.14
+2
+-30.543742
+151.665820
+1024.34
+1.50
+1025.84
+3
+-30.544038
+151.665755
+1025.16
+1.50
+1026.66
+4
+-30.545757
+151.665841
+1025.02
+1.50
+1026.52
+5
+-30.546112
+151.665911
+1025.02
+1.50
+1026.52
+6
+-30.546417
+151.666083
+1024.85
+1.50
+1026.35
+7
+-30.547775
+151.667499
+1022.25
+1.50
+1023.75
+8
+-30.549512
+151.669537
+1020.16
+1.50
+1021.66
+9
+-30.553642
+151.672895
+1027.27
+1.50
+1028.77
+10
+-30.554012
+151.673078
+1027.84
+1.50
+1029.34
+11
+-30.554714
+151.673292
+1029.36
+1.50
+1030.86
+12
+-30.556553
+151.673754
+1029.71
+1.50
+1031.21
+13
+-30.559186
+151.674580
+1024.59
+1.50
+1026.09
+14
+-30.567066
+151.677359
+1019.59
+1.50
+1021.09
+15
+-30.567537
+151.677563
+1019.71
+1.50
+1021.21
+16
+-30.569837
+151.678936
+1020.93
+1.50
+1022.43
+17
+-30.572886
+151.680835
+1031.68
+1.50
+1033.18
+18
+-30.573320
+151.681017
+1030.97
+1.50
+1032.47
+19
+-30.574077
+151.681253
+1032.78
+1.50
+1034.28
+20
+-30.577846
+151.681790
+1016.19
+1.50
+1017.69
+
+Name: Long Swamp Rd 
+Path type: Two-way 
+Observer view angle: 50.0° 
+Vertex
+Latitude (°)
+Longitude (°)
+Ground elevation (m)
+Height above ground (m)
+Total elevation (m)
+1
+-30.533536
+151.683378
+1021.52
+1.50
+1023.02
+2
+-30.537297
+151.685674
+1027.11
+1.50
+1028.61
+3
+-30.540475
+151.687691
+1028.90
+1.50
+1030.40
+4
+-30.540956
+151.688013
+1028.69
+1.50
+1030.19
+5
+-30.541464
+151.688217
+1028.72
+1.50
+1030.22
+6
+-30.541852
+151.688292
+1028.31
+1.50
+1029.81
+7
+-30.542176
+151.688314
+1027.84
+1.50
+1029.34
+8
+-30.544347
+151.688174
+1017.73
+1.50
+1019.23
+9
+-30.544689
+151.688185
+1015.34
+1.50
+1016.84
+10
+-30.545086
+151.688282
+1012.88
+1.50
+1014.38
+11
+-30.545465
+151.688507
+1010.36
+1.50
+1011.86
+12
+-30.545770
+151.688797
+1008.58
+1.50
+1010.08
+13
+-30.545964
+151.689054
+1007.86
+1.50
+1009.36
+14
+-30.546685
+151.690631
+1009.59
+1.50
+1011.09
+15
+-30.546943
+151.691017
+1009.09
+1.50
+1010.59
+16
+-30.551258
+151.694719
+987.77
+1.50
+989.27
+17
+-30.551471
+151.694955
+987.85
+1.50
+989.35
+18
+-30.554594
+151.699933
+983.28
+1.50
+984.78
+19
+-30.554880
+151.700233
+982.82
+1.50
+984.32
+20
+-30.555231
+151.700545
+982.67
+1.50
+984.17
+21
+-30.564156
+151.706338
+996.14
+1.50
+997.64
+22
+-30.564581
+151.706488
+997.84
+1.50
+999.34
+23
+-30.565218
+151.706649
+999.41
+1.50
+1000.91
+24
+-30.569033
+151.707701
+1012.30
+1.50
+1013.80
+25
+-30.571139
+151.708280
+1011.11
+1.50
+1012.61
+26
+-30.571795
+151.708548
+1011.58
+1.50
+1013.08
+
+Name: Lucas Ln 
+Path type: Two-way 
+Observer view angle: 50.0° 
+Vertex
+Latitude (°)
+Longitude (°)
+Ground elevation (m)
+Height above ground (m)
+Total elevation (m)
+1
+-30.549177
+151.692903
+995.75
+1.50
+997.25
+2
+-30.553335
+151.692109
+1000.01
+1.50
+1001.51
+3
+-30.553751
+151.691905
+999.44
+1.50
+1000.94
+4
+-30.553797
+151.691701
+1000.06
+1.50
+1001.56
+5
+-30.553169
+151.687775
+1016.72
+1.50
+1018.22
+
+Name: Railway 
+Path type: Two-way 
+Observer view angle: 50.0° 
+Vertex
+Latitude (°)
+Longitude (°)
+Ground elevation (m)
+Height above ground (m)
+Total elevation (m)
+1
+-30.535084
+151.664500
+1009.13
+1.50
+1010.63
+2
+-30.554201
+151.664693
+1048.01
+1.50
+1049.51
+3
+-30.554987
+151.664715
+1052.04
+1.50
+1053.54
+4
+-30.555726
+151.664640
+1053.48
+1.50
+1054.98
+5
+-30.556493
+151.664489
+1051.06
+1.50
+1052.56
+6
+-30.557250
+151.664307
+1048.94
+1.50
+1050.44
+7
+-30.558424
+151.663846
+1049.00
+1.50
+1050.50
+8
+-30.559431
+151.663309
+1046.21
+1.50
+1047.71
+9
+-30.560151
+151.662826
+1045.00
+1.50
+1046.50
+10
+-30.560826
+151.662322
+1045.74
+1.50
+1047.24
+11
+-30.561565
+151.661646
+1045.50
+1.50
+1047.00
+12
+-30.562147
+151.661003
+1043.86
+1.50
+1045.36
+13
+-30.562581
+151.660466
+1043.02
+1.50
+1044.52
+14
+-30.563034
+151.659833
+1041.32
+1.50
+1042.82
+15
+-30.563468
+151.659125
+1040.55
+1.50
+1042.05
+16
+-30.563893
+151.658310
+1039.97
+1.50
+1041.47
+17
+-30.564179
+151.657773
+1040.10
+1.50
+1041.60
+18
+-30.564456
+151.657033
+1041.44
+1.50
+1042.94
+19
+-30.564770
+151.656078
+1042.48
+1.50
+1043.98
+20
+-30.564946
+151.655456
+1042.86
+1.50
+1044.36
+21
+-30.565907
+151.651894
+1047.30
+1.50
+1048.80
+
+GLARE ANALYSIS RESULTS
+Summary of Glare
+PV Array Name
+Tilt
+Orient
+"Green" Glare
+"Yellow" Glare
+Energy
+(°)
+(°)
+min
+min
+kWh
+PV array 1
+SA
+tracking
+SA
+tracking
+0
+0
+-
+Name: Roseneath Ln 
+Path type: Two-way 
+Observer view angle: 50.0° 
+Vertex
+Latitude (°)
+Longitude (°)
+Ground elevation (m)
+Height above ground (m)
+Total elevation (m)
+1
+-30.542451
+151.666328
+1022.27
+1.50
+1023.77
+2
+-30.544410
+151.679771
+1003.28
+1.50
+1004.78
+3
+-30.544983
+151.679664
+1001.47
+1.50
+1002.97
+Name: Seaton St 
+Path type: Two-way 
+Observer view angle: 50.0° 
+Vertex
+Latitude (°)
+Longitude (°)
+Ground elevation (m)
+Height above ground (m)
+Total elevation (m)
+1
+-30.534254
+151.683794
+1021.04
+1.50
+1022.54
+2
+-30.535687
+151.681648
+1033.90
+1.50
+1035.40
+3
+-30.535973
+151.681520
+1033.32
+1.50
+1034.82
+4
+-30.541601
+151.680458
+1012.03
+1.50
+1013.53
+
+Total annual glare received by each receptor
+Receptor
+Annual Green Glare (min)
+Annual Yellow Glare (min)
+OP 1
+0
+0
+OP 2
+0
+0
+OP 3
+0
+0
+OP 4
+0
+0
+OP 5
+0
+0
+OP 6
+0
+0
+OP 7
+0
+0
+OP 8
+0
+0
+OP 9
+0
+0
+OP 10
+0
+0
+OP 11
+0
+0
+OP 12
+0
+0
+OP 13
+0
+0
+OP 14
+0
+0
+OP 15
+0
+0
+OP 16
+0
+0
+OP 17
+0
+0
+OP 18
+0
+0
+OP 19
+0
+0
+OP 20
+0
+0
+OP 21
+0
+0
+OP 22
+0
+0
+OP 23
+0
+0
+OP 24
+0
+0
+OP 25
+0
+0
+OP 26
+0
+0
+OP 27
+0
+0
+OP 28
+0
+0
+OP 29
+0
+0
+OP 30
+0
+0
+OP 31
+0
+0
+OP 32
+0
+0
+OP 33
+0
+0
+OP 34
+0
+0
+OP 35
+0
+0
+OP 36
+0
+0
+OP 37
+0
+0
+OP 38
+0
+0
+OP 39
+0
+0
+OP 40
+0
+0
+
+Receptor
+Annual Green Glare (min)
+Annual Yellow Glare (min)
+OP 41
+0
+0
+Dangarsleigh Rd
+0
+0
+Long Swamp Rd
+0
+0
+Lucas Ln
+0
+0
+Railway
+0
+0
+Roseneath Ln
+0
+0
+Seaton St
+0
+0
+Results for: PV array 1
+Receptor
+Green Glare (min)
+Yellow Glare (min)
+OP 1
+0
+0
+OP 2
+0
+0
+OP 3
+0
+0
+OP 4
+0
+0
+OP 5
+0
+0
+OP 6
+0
+0
+OP 7
+0
+0
+OP 8
+0
+0
+OP 9
+0
+0
+OP 10
+0
+0
+OP 11
+0
+0
+OP 12
+0
+0
+OP 13
+0
+0
+OP 14
+0
+0
+OP 15
+0
+0
+OP 16
+0
+0
+OP 17
+0
+0
+OP 18
+0
+0
+OP 19
+0
+0
+OP 20
+0
+0
+OP 21
+0
+0
+OP 22
+0
+0
+OP 23
+0
+0
+OP 24
+0
+0
+OP 25
+0
+0
+OP 26
+0
+0
+OP 27
+0
+0
+OP 28
+0
+0
+OP 29
+0
+0
+
+Receptor
+Green Glare (min)
+Yellow Glare (min)
+OP 30
+0
+0
+OP 31
+0
+0
+OP 32
+0
+0
+OP 33
+0
+0
+OP 34
+0
+0
+OP 35
+0
+0
+OP 36
+0
+0
+OP 37
+0
+0
+OP 38
+0
+0
+OP 39
+0
+0
+OP 40
+0
+0
+OP 41
+0
+0
+Dangarsleigh Rd
+0
+0
+Long Swamp Rd
+0
+0
+Lucas Ln
+0
+0
+Railway
+0
+0
+Roseneath Ln
+0
+0
+Seaton St
+0
+0
+Point Receptor: OP 1
+0 minutes of yellow glare 
+0 minutes of green glare 
+Point Receptor: OP 2
+0 minutes of yellow glare 
+0 minutes of green glare 
+Point Receptor: OP 3
+0 minutes of yellow glare 
+0 minutes of green glare 
+Point Receptor: OP 4
+0 minutes of yellow glare 
+0 minutes of green glare 
+Point Receptor: OP 5
+0 minutes of yellow glare 
+0 minutes of green glare 
+
+Point Receptor: OP 6
+0 minutes of yellow glare 
+0 minutes of green glare 
+Point Receptor: OP 7
+0 minutes of yellow glare 
+0 minutes of green glare 
+Point Receptor: OP 8
+0 minutes of yellow glare 
+0 minutes of green glare 
+Point Receptor: OP 9
+0 minutes of yellow glare 
+0 minutes of green glare 
+Point Receptor: OP 10
+0 minutes of yellow glare 
+0 minutes of green glare 
+Point Receptor: OP 11
+0 minutes of yellow glare 
+0 minutes of green glare 
+Point Receptor: OP 12
+0 minutes of yellow glare 
+0 minutes of green glare 
+Point Receptor: OP 13
+0 minutes of yellow glare 
+0 minutes of green glare 
+Point Receptor: OP 14
+0 minutes of yellow glare 
+0 minutes of green glare 
+Point Receptor: OP 15
+0 minutes of yellow glare 
+
+0 minutes of green glare 
+Point Receptor: OP 16
+0 minutes of yellow glare 
+0 minutes of green glare 
+Point Receptor: OP 17
+0 minutes of yellow glare 
+0 minutes of green glare 
+Point Receptor: OP 18
+0 minutes of yellow glare 
+0 minutes of green glare 
+Point Receptor: OP 19
+0 minutes of yellow glare 
+0 minutes of green glare 
+Point Receptor: OP 20
+0 minutes of yellow glare 
+0 minutes of green glare 
+Point Receptor: OP 21
+0 minutes of yellow glare 
+0 minutes of green glare 
+Point Receptor: OP 22
+0 minutes of yellow glare 
+0 minutes of green glare 
+Point Receptor: OP 23
+0 minutes of yellow glare 
+0 minutes of green glare 
+Point Receptor: OP 24
+0 minutes of yellow glare 
+0 minutes of green glare 
+
+Point Receptor: OP 25
+0 minutes of yellow glare 
+0 minutes of green glare 
+Point Receptor: OP 26
+0 minutes of yellow glare 
+0 minutes of green glare 
+Point Receptor: OP 27
+0 minutes of yellow glare 
+0 minutes of green glare 
+Point Receptor: OP 28
+0 minutes of yellow glare 
+0 minutes of green glare 
+Point Receptor: OP 29
+0 minutes of yellow glare 
+0 minutes of green glare 
+Point Receptor: OP 30
+0 minutes of yellow glare 
+0 minutes of green glare 
+Point Receptor: OP 31
+0 minutes of yellow glare 
+0 minutes of green glare 
+Point Receptor: OP 32
+0 minutes of yellow glare 
+0 minutes of green glare 
+Point Receptor: OP 33
+0 minutes of yellow glare 
+0 minutes of green glare 
+Point Receptor: OP 34
+0 minutes of yellow glare 
+
+0 minutes of green glare 
+Point Receptor: OP 35
+0 minutes of yellow glare 
+0 minutes of green glare 
+Point Receptor: OP 36
+0 minutes of yellow glare 
+0 minutes of green glare 
+Point Receptor: OP 37
+0 minutes of yellow glare 
+0 minutes of green glare 
+Point Receptor: OP 38
+0 minutes of yellow glare 
+0 minutes of green glare 
+Point Receptor: OP 39
+0 minutes of yellow glare 
+0 minutes of green glare 
+Point Receptor: OP 40
+0 minutes of yellow glare 
+0 minutes of green glare 
+Point Receptor: OP 41
+0 minutes of yellow glare 
+0 minutes of green glare 
+Route: Dangarsleigh Rd
+0 minutes of yellow glare 
+0 minutes of green glare 
+Route: Long Swamp Rd
+0 minutes of yellow glare 
+0 minutes of green glare 
+
+Route: Lucas Ln
+0 minutes of yellow glare 
+0 minutes of green glare 
+Route: Railway
+0 minutes of yellow glare 
+0 minutes of green glare 
+Route: Roseneath Ln
+0 minutes of yellow glare 
+0 minutes of green glare 
+Route: Seaton St
+0 minutes of yellow glare 
+0 minutes of green glare 
+Assumptions
+2016-2019 © Sims Industries d/b/a ForgeSolar, All Rights Reserved.
+"Green" glare is glare with low potential to cause an after-image (ﬂash blindness) when observed prior to a typical blink response time. 
+"Yellow" glare is glare with potential to cause an after-image (ﬂash blindness) when observed prior to a typical blink response time. 
+Times associated with glare are denoted in Standard time. For Daylight Savings, add one hour. 
+Glare analyses do not account for physical obstructions between reﬂectors and receptors. This includes buildings, tree cover and
+geographic obstructions. 
+Several calculations utilize the PV array centroid, rather than the actual glare spot location, due to algorithm limitations. This may aﬀect
+results for large PV footprints. Additional analyses of array sub-sections can provide additional information on expected glare. 
+The subtended source angle (glare spot size) is constrained by the PV array footprint size. Partitioning large arrays into smaller sections
+will reduce the maximum potential subtended angle, potentially impacting results if actual glare spots are larger than the sub-array size.
+Additional analyses of the combined area of adjacent sub-arrays can provide more information on potential glare hazards. (See previous
+point on related limitations.) 
+Glare locations displayed on receptor plots are approximate. Actual glare-spot locations may diﬀer.
+Glare vector plots are simpliﬁed representations of analysis data. Actual glare emanations and results may diﬀer.
+The glare hazard determination relies on several approximations including observer eye characteristics, angle of view, and typical blink
+response time. Actual results and glare occurrence may diﬀer. 
+Hazard zone boundaries shown in the Glare Hazard plot are an approximation and visual aid based on aggregated research data. Actual
+ocular impact outcomes encompass a continuous, not discrete, spectrum. 

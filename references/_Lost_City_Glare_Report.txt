@@ -1,0 +1,16785 @@
+ 
+ 
+ 
+Appendix F 
+GLARE ANALYSIS 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Lost City Renewables LLC 
+Muhlenberg County, Kentucky 
+ 
+ 
+
+ 
+ 
+ 
+Glare Analysis for Proposed Lost City Solar Project 
+Muhlenberg County, KY 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Prepared for: 
+Lost City Renewables LLC 
+ 
+Kim Rhodes 
+NEPA Specialist 
+Copperhead Environmental Consulting, Inc. 
+ 
+29 January 2025 
+
+ 
+i 
+Glare Analysis 
+ 
+ 
+TABLE OF CONTENTS 
+BACKGROUND ....................................................................................................................................... 1 
+Project Summary ........................................................................................................................................ 1 
+Solar Glare ................................................................................................................................................... 3 
+SOLAR GLARE ANALYSIS ................................................................................................................... 3 
+Design Parameters ..................................................................................................................................... 4 
+Observation Point and Route Receptor Parameters .............................................................................. 4 
+Obstruction Parameters............................................................................................................................. 4 
+SUMMARY OF RESULTS FOR NEARBY ROADWAY AND OBSERVATION LOCATIONS 5 
+Route Receptor 1: Free Lane ..................................................................................................................... 5 
+Route Receptor 2: Mason-Poyner Road .................................................................................................. 6 
+Route Receptor 3: SR 949 ........................................................................................................................... 6 
+Route Receptor 4: US 431 .......................................................................................................................... 8 
+Observation Points ................................................................................................................................... 10 
+AIRPORT SENSITIVE RECEPTORS AND PILOT ANALYSIS ................................................... 13 
+CONCLUSIONS ..................................................................................................................................... 14 
+REFERENCES .......................................................................................................................................... 15 
+LIST OF TABLES 
+Table 1. Lost City Renewables LLC, Proposed Project Design Parameters. ...................................... 4 
+Table 2. Modeled results for Free Lane showing yellow glare. ........................................................... 5 
+Table 3. Modeled results for Mason-Poyner Road showing yellow glare. ........................................ 6 
+Table 4. Modeled results for SR 949 showing yellow glare. ................................................................ 8 
+Table 5. Modeled results for US 431 showing yellow glare. .............................................................. 10 
+Table 6. Modeled results for Observation Points showing yellow glare. ........................................ 11 
+ 
+
+ 
+ii 
+Glare Analysis 
+ 
+ 
+LIST OF FIGURES 
+Figure 1. Looking west, southwest across the proposed solar facility property. .............................. 1 
+Figure 2. Poultry barns will remain in place and in use after the solar facility is developed. ........ 2 
+Figure 3. The images above are looking west southwest toward the proposed solar facility from 
+the potentially affected portion of SR 949. Image source: Google Maps, 2023. ................................. 7 
+Figure 4. The view looking southeast toward the solar facility from the potentially affected 
+portion of US 431 during two times of the year. Image source: Google Maps, 2014 and 2022. ...... 9 
+Figure 5. Location of OP 12 (yellow pin) shown surrounded by existing vegetation in relation to 
+the planned solar facility. Image source: Google Earth Pro, 2024. .................................................... 12 
+Figure 6. A view of the existing mature vegetation across US 431 from OP 26 (residence shown 
+on the right) that would remain in place. Image source: Google Maps, 2014 and 2022. ............... 13 
+ 
+Appendices 
+ 
+Appendix A: ForgeSolar Glare Analysis Results 
+Appendix B: Landscaping Plan 
+ 
+ 
+ 
+ 
+ 
+
+ 
+1 
+Glare Analysis 
+BACKGROUND 
+Project Summary 
+Lost City Renewables LLC, contracted Copperhead Environmental Consulting, Inc., 
+(Copperhead) to conduct a glare analysis for the proposed 250-megawatt (MW) Lost City Solar 
+project (Lost City or Project). The Project is located in southeastern Muhlenberg County 
+approximately 0.4 miles east of Penrod and 1.25 miles northeast of Dunmore. The Project Area 
+consists of approximately 1,413 acres and has reference coordinates of 37.103232°, -86.982529°. 
+The Project Area is located along KY 949, US 431, Mason-Poyner Road, and Forgy Mill Road. The 
+Project Area is currently used as agricultural land, including for corn, soybeans, hay, poultry, 
+cattle, sheep, and goats as well as forested areas. 
+According to the National Land Cover Database (NLCD), the Project Area currently consists 
+predominantly of agricultural lands/cultivated crops, pasture, and forest/wooded land. The area 
+surrounding the site appears to be a mix of hay/pasture and deciduous forest with smaller areas 
+of developed space along roadways (Figure 1).   
+ 
+Figure 1. Looking west, southwest across the proposed solar facility property. 
+
+ 
+2 
+Glare Analysis 
+A few structures (e.g., barns and a house) currently exist on the Project Site, which will be 
+removed prior to construction of the solar facility. The four large barns located on the northern 
+portion of the Project Site will remain in place and continue to be used for poultry farming (Figure 
+2). 
+ 
+Figure 2. Poultry barns will remain in place and in use after the solar facility is developed. 
+The Project would generate electricity using solar photovoltaic (PV) panels. It would include a 
+utility interconnection substation, a storage/maintenance container, inverter boxes, transformers, 
+and overhead and underground electrical conveyance lines. The power generated will be sold to 
+the Tennessee Valley Authority (TVA).  
+Although the results of the glare analysis algorithms indicate that glare could result from the 
+Project for a short time at a small number of nearby modeled receptor locations, modeled impacts 
+are limited, and actual impacts are expected to be even less (Appendix A). For example, the model 
+does not account for intervening terrain (slopes ranging from 2 percent to 43 percent), an 
+abandoned 6-foot raised rail line along US 431, or forested areas that may obstruct views of certain 
+panel areas, nor does it reflect reductions in impact associated with reductions in retinal 
+irradiance associated with distance. Glare will not occur where the panels cannot be seen, and 
+
+ 
+3 
+Glare Analysis 
+more distance indications of glare much less likely to cause an adverse effect. In addition, Lost 
+City has developed and will implement a vegetation plan that will further screen residences and 
+roadways from the PV panels (Appendix B). Details on the methodology and results of the glare 
+analysis are provided in other sections of this report.  
+Solar Glare 
+The glare analysis was conducted using the latest version of the ForgeSolar GlareGuage solar 
+glare tool, formerly known as the Solar Glare Hazard Analysis (SGHAT) developed by Sandia 
+National Laboratories to analyze potential glare caused by the sun reflecting off solar panels.  
+Glare is defined as a continuous source of bright light and is a common phenomenon in our 
+everyday lives. Both the sun and artificial light sources can cause glare either directly (such as 
+from a sunset when driving westbound) or indirectly (such as from the sun’s reflections from a 
+lake or mirror). Potential concerns associated with glare may include:  
+• 
+Safety impacts, such as the potential to disorient motorists when driving or pilots when 
+taking off or landing; or 
+• 
+Annoyance impacts, such as distraction, after-image in the viewer’s vision, or temporary 
+avoidance of a view due to the presence of reflected light.  
+The GlareGauge model results in three possible levels of glare:  
+1. Green: Low potential for after-image 
+2. Yellow: Potential for after-image 
+3. Red: Potential for permanent eye damage 
+No red glare was indicated from the modeling results (Appendix A). The extent of green and 
+yellow glare, where modeled, is discussed below.  
+SOLAR GLARE ANALYSIS 
+Using the GlareGauge software, Copperhead completed an analysis to identify the potential for 
+solar glare to result from the Project. The locations for which potential solar glare from the Project 
+was analyzed includes six road segments (all two-way roads) and 39 observation points (OPs) 
+representing specific nearby residences. Although no public airports are proximate to the Project 
+Area, with the closest airport being at least 18 miles away, three were included to ensure a 
+thorough analysis: Muhlenberg County Airport, Russellville-Logan Airport, and Bowling Green 
+Regional Airport.  
+Each of the evaluated road segments and OPs where yellow glare is indicated is discussed below. 
+Beginning with the GlareGauge results, each section considers additional factors that would 
+further reduce glare potential (such as intervening topography, vegetation, and distance) in order 
+
+ 
+4 
+Glare Analysis 
+to characterize glare potential in each location. The full GlareGauge analysis output is provided 
+in Appendix A.  
+Design Parameters 
+In deploying the model, we broke up the entire array footprint into 20 sections to allow for more 
+accurate modeling given the limitations of the GlareGauge tool. The project design parameters 
+for the array provided by Lost City Renewables are shown in Table 1. The height above ground 
+for all sections of the array is 15 feet. This is a conservative assumption as the arrays Lost City 
+currently plans to use should not exceed 10 feet. 
+Table 1. Lost City Renewables LLC, Proposed Project Design Parameters.  
+System 
+Tracking 
+Backtracking 
+Method 
+Tracking 
+Axis 
+Orientation 
+Maximum 
+Tracking 
+Angle 
+Resting 
+Angle  
+Ground 
+Coverage 
+Ratio (GPR) 
+Module 
+Surface 
+Material 
+Single 
+Shade-slope 
+180 
+60 
+0 
+.45 
+Smooth 
+glass with 
+anti-
+reflective 
+coating 
+(ARC) 
+ 
+Observation Point and Route Receptor Parameters 
+The analysis was performed for the observation points at each of the residences adjacent to the 
+proposed solar facility. No commercial properties were found in the area. The elevation at leach 
+point was set at 6 feet above the ground to assume typical eye level.  
+A total of 6 routes in the immediate vicinity of the proposed project site were modeled using an 
+elevation of 5 feet. The view angle along all routes was set at 50 degrees.  
+Obstruction Parameters 
+To try to make this analysis as accurate as possible, existing vegetation were modeled as 
+obstructions. Portions of the perimeter of the solar facility are heavily forested and only forested 
+areas within the security fence line will be altered. Additionally, obstructions were added where 
+tree and shrub plantings are planned (see Landscaping Plan in Appendix B). Where a double row 
+of tree and shrub plantings are planned, two obstruction lines were used. A height of 8-feet was 
+used for all obstructions as an average between new plantings and existing vegetation.  
+The options for adding and modeling obstructions in the GlareGauge tool are limited. For 
+example, only a single height for each line representing an obstruction can be entered. The 
+
+ 
+5 
+Glare Analysis 
+planned tree and shrub plantings range from 30-feet (single row) to 40-feet (double row). In some 
+areas outside of the project boundary, a significant amount of mature vegetation exists. However, 
+due to the limits on the number of obstructions permitted in the tool, these areas are not 
+accurately represented in height or width of the patches. While an effort was made to account for 
+these areas, the modeled results indicate some yellow glare at roadway and observation locations 
+(discussed in the following section) that would likely be further reduced if these factors could be 
+considered more accurately.  
+SUMMARY OF RESULTS FOR NEARBY ROADWAY AND 
+OBSERVATION LOCATIONS 
+Results for Route Receptors and Observation Points that, according to modeled results, may 
+experience yellow glare are summarized below. Alongside the GlareGauge results, additional 
+factors are considered that would further reduce glare potential (such as intervening topography, 
+vegetation, and distance) in order to characterize glare potential in each location. Where only 
+green glare was found from the model, those results are summarized in the full GlareGauge 
+output provided in Appendix A. 
+Route Receptor 1: Free Lane 
+The northern portion of Free Lane is predicted to experience some yellow glare during the early 
+morning hours throughout the winter months. However, a double row of tree and shrub 
+plantings is planned, which would be about 40-feet wide. This planned planting would be 
+relatively close to Free Lane, given the proximity of the roadway to the solar facility array. An 
+abundance of sunlight is not anticipated at the early hours predicted, and, this combined with the 
+other factors, such as limited traffic primarily related to the 6 residences located on Free Lane or 
+trucks related to grazing livestock or poultry barns, is likely to result in reduced actual glare 
+experienced at this location (see Landscaping Plan in Appendix B).  
+Table 2. Modeled results for Free Lane showing yellow glare.  
+Panel 
+Area 
+Approx. 
+Feet 
+from 
+Array 
+Yellow Glare 
+Comments 
+Time of 
+Year 
+(approx.) 
+Time of 
+Day 
+(approx.) 
+Modeled 
+Duration 
+(minutes) 
+Main 1a1 
+670 – 790  
+Oct – Feb 6:45 – 8:30 
+am 
+1,251 
+Double row of planned tree and shrub 
+plantings will screen potential visibility. 
+Sunlight will not be direct at this time of 
+day and proximity of roadway to 
+planned vegetation planting will reduce 
+effects from glare.  
+
+ 
+6 
+Glare Analysis 
+Route Receptor 2: Mason-Poyner Road 
+The portion of Mason-Poyner Road that the model results suggest will be affected is in close 
+proximity to the solar facility and is about 0.31 miles long (approximately 25% of the entire 
+roadway length). A double row of tree and shrub plantings is planned between the facility and 
+the roadway, for the entire length of the roadway. The portion of affected roadway is at a variable 
+but at times lower elevation in comparison to the location of the solar array. In addition, the 
+ForgeSolar model does not account for topography and its role in naturally blocking any glare 
+that would be produced. Because of the lower elevation and the view of the panels obscured by 
+existing mature vegetation and planned vegetation directly adjacent to the roadway, the actual 
+glare experienced while on the roadway will likely be reduced.  
+Table 3. Modeled results for Mason-Poyner Road showing yellow glare.  
+Panel 
+Area 
+Approx. 
+Feet from 
+Array 
+Yellow Glare 
+Comments 
+Time of 
+Year 
+(approx.) 
+Time of 
+Day 
+(approx.) 
+Modeled 
+Duration 
+(minutes) 
+Main 
+3b7 
+135 – 190 
+Sept – 
+March 
+6:30 am – 5 
+pm 
+17,255 
+The daily duration of modeled glare is 
+variable depending on time of year and 
+could occur throughout the day. A 
+double row of tree and shrub planting 
+(40-feet wide) is planned along the entire 
+length of Mason-Poyner Road to 
+alleviate the effects of any glare that 
+could be produced by this section of the 
+solar facility. Existing mature vegetation 
+that ranges approximately 45 to 100 feet 
+wide would remain, further providing a 
+buffer from any glare produced. 
+The topography of the solar facility is 
+variable, and any natural obstruction is 
+not accounted for in the ForgeSolar 
+model.  
+ 
+Route Receptor 3: SR 949 
+The model results suggest that two small sections of SR 949 could experience yellow glare at times 
+of the year. The ForgeSolar model does not account for existing vegetation and does not provide 
+an opportunity to model the planned vegetation appropriately (height only, no options for 
+width). In addition, the model does not account for existing topography that may naturally 
+obscure any glare produced.  Combined with the distance from the solar facility, these factors are 
+
+ 
+7 
+Glare Analysis 
+likely to result in reduced glare experienced at these locations. Figure 3 shows the view from SR 
+949 looking toward the solar facility site. The existing mature vegetation seen would remain and 
+an additional double row planting along the security fence would be installed and would be 
+approximately 40 feet wide. As seen in the images, the existing and planned vegetation combined 
+with distance from the facility would dramatically alleviate any effects from glare produced from 
+the array. 
+ 
+Figure 3. The images above are looking west southwest toward the proposed solar facility from 
+the potentially affected portion of SR 949. Image source: Google Maps, 2023.  
+ 
+ 
+
+ 
+8 
+Glare Analysis 
+Table 4. Modeled results for SR 949 showing yellow glare. 
+Panel 
+Area 
+Approx. 
+Feet from 
+Array 
+Yellow Glare 
+Comments 
+Time of 
+Year 
+(approx.) 
+Time of 
+Day 
+(approx.) 
+Modeled 
+Duration 
+(minutes) 
+East 2 
+1,040 – 
+1,304  
+Oct – Nov; 
+Jan – Feb  2:30 – 4pm 
+2,475 
+In addition to the distance from the 
+roadway, a double row planting is 
+planned for the perimeter of the array 
+causing the glare in the model, which 
+would be approximately 40-feet wide. 
+These factors are likely to reduce the 
+actual glare experienced at this location 
+on the roadway. 
+Main 
+1d 
+1,551 
+Oct, Feb 
+4:45 – 
+5:30pm  
+18 
+The amount of glare that the model 
+produces is limited to a handful of days 
+each month for a short period of time. 
+There is at least 610 feet of existing 
+mature vegetation from the security 
+fence line of the facility with additional 
+double row plantings planned for part of 
+the perimeter of the array section 
+causing the glare. These factors, in 
+addition to the distance from the array, 
+are likely to result in dramatically 
+reduced glare actually experienced at 
+this location of the roadway. 
+ 
+Route Receptor 4: US 431 
+According to the modeled results, a small northern portion of US 431 is expected to experience 
+yellow glare by two array sections of the solar facility. The arrays are both very far (over 1,500 
+feet) from the affected location and have a large amount of existing and mature vegetation in 
+between that would remain intact. As is shown in Figure 4, even in the colder months when 
+deciduous vegetation is dormant, this existing vegetation currently obscures any view of the 
+property where the solar facility will be located. An additional vegetation buffer is planned along 
+a portion of this fence line that would further reduce the potential to experience any glare 
+produced by the arrays.  
+
+ 
+9 
+Glare Analysis 
+ 
+Figure 4. The view looking southeast toward the solar facility from the potentially affected 
+portion of US 431 during two times of the year. Image source: Google Maps, 2014 and 2022.  
+ 
+ 
+
+ 
+10 
+Glare Analysis 
+Table 5. Modeled results for US 431 showing yellow glare.  
+Panel 
+Area 
+Approx. 
+Feet from 
+Array 
+Yellow Glare 
+Comments 
+Time of 
+Year 
+(approx.) 
+Time of 
+Day 
+(approx.) 
+Modeled 
+Duration 
+(minutes) 
+Main 
+3b4 
+1,865 – 
+1,931 
+Oct – Nov; 
+Jan – Feb 
+7 – 8:30 
+am 
+86 
+Glare produced by the model is 
+constrained to the early hours of the 
+morning and for a short duration. Not 
+only is the distance from this point of 
+the roadway very far from the solar 
+array, the majority of this space is 
+existing mature vegetation 
+approximately 1,642 feet wide. The 
+distance and vegetation combined 
+would likely reduce actual glare 
+experienced at this location.  
+Main 
+3b7 
+2,203 - 
+2,342  
+Nov – Jan 
+8 – 9:30 
+am 
+262 
+Glare produced by the model is 
+constrained to the early morning hours 
+and for a short duration. The portion of 
+the roadway affected is very far from the 
+array causing the glare. While a single 
+30-foot wide row of tree and shrub 
+planting is planned, there is an 
+additional 1,598 foot wide section of 
+existing mature vegetation that is not 
+accounted for in the model. These 
+factors would likely reduce actual glare 
+experienced at this location 
+ 
+Observation Points  
+The Observation Points (OPs) described below are all residences adjacent to the solar facility that 
+are indicated as potentially experiencing yellow glare. Four of the OPs (#3, 4, 5, and 6) and located 
+west of Free Lane at the northern end of the facility. OP #12 is also at the northern end of the 
+facility, but on the eastern side next to SR 949. Finally, OP #26 is closer to the center of the facility, 
+on the west side of US 431.  
+OPs not described in Table 6 are indicated by the model as either experiencing no or green glare 
+only. Of the 39 OPs, 17 are indicated as potentially experiencing green glare only and 16 are not 
+indicated as experiencing any glare. Because green glare is considered low potential for after-
+
+ 
+11 
+Glare Analysis 
+image, the remainder of this section of the report focuses on modeled results indicating yellow 
+glare.   
+Table 6. Modeled results for Observation Points showing yellow glare.  
+OP # 
+Panel 
+Area 
+Approx. 
+Feet from 
+Array 
+Yellow Glare 
+Comments 
+Time of 
+Year 
+(approx.) 
+Time of 
+Day 
+(approx.) 
+Modeled 
+Duration 
+(minutes) 
+12 
+East 2 
+1,204 
+Jan – Mar  
+4:30 – 5 
+pm 
+70 
+Property is surrounded by existing mature 
+vegetation that provides a buffer ranging 
+from 460 to 300ft wide, shown in Figure 5. 
+The pink outline in Figure 5 represents the 
+approximate location of fence for the 
+facility. Existing vegetation and topography 
+is not captured by the ForgeSolar model. An 
+additional double row planting is planned 
+along the perimeter of the solar facility. 
+Distance from the facility and existing and 
+additional planned vegetation would likely 
+further reduce any glare experienced at this 
+location.  
+3 
+Main 
+1a1 
+546 
+Feb, Oct 
+7 – 8 am; 
+6:45 – 7 am 
+70 
+A double row planting is planned along the 
+perimeter of the solar facility, which will 
+further reduce actual glare experienced at 
+this location. 
+4 
+Main 
+1a1 
+568 
+Oct; Dec – 
+Feb 
+6:45 – 8 am 
+256 
+A double row planting is planned along the 
+perimeter of the solar facility, which will 
+further reduce actual glare experienced at 
+this location. 
+5 
+Main 
+1a1 
+737 
+Dec – Feb 7:25 – 8:30 
+am 
+215 
+A double row planting is planned along the 
+perimeter of the solar facility, which will 
+further reduce actual glare experienced at 
+this location. 
+6 
+Main 
+1a1 
+913 
+Dec – Feb 7:30 – 8:30 
+am 
+208 
+Distance from the facility and the planned 
+double row planting along the perimeter of 
+the facility would likely further reduce 
+actual glare experienced at this location. 
+26 
+West 
+Top 
+380 
+May – July 4:50 – 5:30 
+am 
+306 
+Glare is predicted to occur in the early 
+morning hours before and just as the sun 
+
+ 
+12 
+Glare Analysis 
+begins to rise. The existing mature 
+vegetation across US 431 from the residence 
+is approximately 100 feet wide and upslope 
+from the roadway. Even in winter months 
+this existing vegetation is robust and would 
+provide an adequate buffer (Top, Figure 6). 
+Additionally, a double row planting is 
+planned along the perimeter of the facility 
+that would soften the effects of any glare 
+that may be produced during this time. 
+However, because of the timing and amount 
+of available sunlight, little actual effect is 
+expected. 
+ 
+ 
+Figure 5. Location of OP 12 (yellow pin) shown surrounded by existing vegetation in relation to 
+the planned solar facility. Image source: Google Earth Pro, 2024.  
+
+ 
+13 
+Glare Analysis 
+ 
+Figure 6. A view of the existing mature vegetation across US 431 from OP 26 (residence shown 
+on the right) that would remain in place. Image source: Google Maps, 2014 and 2022.   
+AIRPORT SENSITIVE RECEPTORS AND PILOT ANALYSIS 
+In 2013, the FAA published an Interim Policy for Solar Projects at Airports. This Policy was 
+finalized and went into effect on May 11, 2021 (86 FR 25801). In developing the final rule, the FAA 
+concluded that the glint and glare from solar energy systems to pilots on final approach is similar 
+to glint and glare pilots routinely experience from waterbodies, glass-façade buildings, parking 
+lots, and similar features. The FAA continued to receive reports of glint and glare effects from on-
+airport solar arrays on air traffic control tower cab (ATCT) personnel and determined that agency 
+
+ 
+14 
+Glare Analysis 
+policy should focus on the impact of these systems to federally-obligated towered airports, 
+specifically the ATCT cab (14 CFR Part 77).  
+Although the final rule does not apply to off-airport solar facilities, we used ForgeSolar’s 
+GlareGauge tool to analyze three nearby airports: Bowling Green Regional Airport, Muhlenberg 
+County Airport, and Russellville-Logan Airport. None of these airports have ACTCs. The tool 
+produced no modeled yellow or red glare from the array on the final approach to any of the 
+airport runways. The ForgeSolar model suggests that there could be approximately 151 minutes 
+of green glare experienced during two months of the year at the very ends of one of the flight 
+paths mapped for the Bowling Green Regional Airport. As stated previously, this amount and 
+type of glare is comparable to glint and glare pilots routinely experience and therefore does not 
+pose any immediate concern. The ForgeSolar model results can be found in Appendix A.  
+CONCLUSIONS 
+ForgeSolar’s GlareGauge tool, which incorporates the SGHAT model, was used to assess 39 
+observation points (OPs) and five roadway segments to identify the Project’s potential to cause 
+glare. The model indicated that the potential exists for yellow glare to result from the Project from 
+six sections of the array (out of a total of 20 total sections). Green glare only is predicted to occur 
+at 17 OPs and on one roadway segment. Yellow glare is predicted to occur at six OPs and on four 
+roadway segments. No red glare was predicted and green or yellow glare that has been predicted 
+is expected to occur over the course of a handful of months for relatively short periods of time 
+throughout the year. As addressed in this report, a more detailed review indicates that little 
+potential exists for glare to materially affect the Project surroundings. The model is intended to 
+reflect extremely conservative results, including the following:  
+• 
+The model does not account for intervening topography that would block views of certain 
+panel areas from a given modeled location. As discussed above for each of the segments 
+and OPs, many of the locations where glare was predicted will not be visible or may be 
+partially visible; in some instances, the partial visibility would shield viewers from the 
+portion of the panels modeled as producing glare. If the panels cannot be seen from a 
+given location, no glare effect would be experienced.  
+• 
+The model also does not account for significant existing vegetation that would block views 
+of certain panel areas from a given modeled location. As discussed above for each of the 
+segments and OPs, a substantial amount of existing vegetation that will be retained will 
+block visibility of certain panel areas. In addition to the existing vegetation, the Project 
+plans to incorporate a robust landscaping plan that will add vegetation where it may not 
+currently exist and to augment other areas (see Landscaping Plan in Appendix B). 
+Depending on the location, a 30- or 40-foot wide row of a combination of trees and shrubs 
+will be planted that will mature to heights ranging from 4- to 80-feet. While the 
+landscaping is not intended to outright block views of the panels and would rather screen 
+
+ 
+15 
+Glare Analysis 
+and soften views of the panels, vegetation can be further enhanced should experienced 
+glare become an issue from a given location.  
+• 
+Distance is also not a factor used in the model when calculating retinal irradiance. Several 
+of the places where glare is predicted are quite distant from the viewing segment or OP. 
+As distance increases from a potential location with glare effect, reflected light will diffuse 
+and tend to become less concentrated and have a decreased characteristic of glare.  
+Given the adjustments to the modeled results based on tangible factors that would block 
+visibility, and other factors noted above that are likely to reduce the potential for impact still 
+further, glare is not expected to adversely influence traffic on nearby modeled roads or modeled 
+OP locations. In the unlikely event that glare were to pose a concern from a given location, 
+mitigation measures that could include enhanced landscaping would be considered.  
+REFERENCES 
+Federal Aviation Administration (2021). Final Policy, Review of Solar Energy System Projects on 
+Federally Obligated Airports. Document Number 2021-09862. Available at: 
+https://www.federalregister.gov/documents/2021/05/11/2021-09862/federal-
+aviation-administration-policy-review-of-solar-energy-system-projects-on-federally-
+obligated 
+Federal Aviation Administration (2013). Interim Policy, FAA Review of Solar Energy System 
+Projects on Federally Obligated Airports. Federal Register: 63276-63279 Available at: 
+https://www.federalregister.gov/documents/2013/10/23/2013-24729/interim-policy-
+faa-review-of-solar-energy-system-projects-on-federally-obligated-airports 
+ForgeSolar (2024). GlareGauge, Release 2024B. 
+Ho, C. K., 2011, "Observations and Assessments of Glare from Heliostats and Trough Collectors: 
+Helicopter Flyover and Drive-By Sightings", in proceedings of SolarPACES 2011, 
+Granada, Spain, Sept. 20-23. Available at: 
+https://www.forgesolar.com/static/docs/Glare_SolarPACES2011_ID23538_Ho_header
+.pdf  
+ 
+ 
+ 
+ 
+
+ 
+16 
+Glare Analysis 
+ 
+ 
+ 
+Appendix A 
+ForgeSolar Glare Analysis 
+ 
+ 
+
+FORGESOLAR GLARE ANALYSIS
+ 
+Project: Lost City Solar
+Proposed 247 MW solar farm in Muhlenberg County, KY
+Site configuration: Lost City Final Layout 
+Client: Sunrise Renewables
+Created 16 Dec, 2024
+Updated 16 Dec, 2024
+Time-step 1 minute
+Timezone offset UTC-6
+Minimum sun altitude 0.0 deg
+DNI peaks at 1,000.0 W/m 
+Category 100 MW to 1 GW
+Site ID 136952.22824
+Ocular transmission coefficient 0.5
+Pupil diameter 0.002 m 
+Eye focal length 0.017 m 
+Sun subtended angle 9.3 mrad 
+PV analysis methodology V2
+2
+Page 1 of 265
+
+Summary of Results Glare with potential for temporary after-image predicted 
+PV Array
+Tilt
+Orient
+Annual Green Glare
+Annual Yellow Glare
+Energy
+°
+°
+min
+hr
+min
+hr
+kWh
+East 1
+SA
+tracking
+SA
+tracking
+0
+0.0
+0
+0.0
+-
+East 2
+SA
+tracking
+SA
+tracking
+4,762
+79.4
+2,545
+42.4
+-
+Main 1a1
+SA
+tracking
+SA
+tracking
+1,749
+29.1
+2,000
+33.3
+-
+Main 1a2
+SA
+tracking
+SA
+tracking
+16
+0.3
+0
+0.0
+-
+Main 1c
+SA
+tracking
+SA
+tracking
+151
+2.5
+0
+0.0
+-
+Main 1d
+SA
+tracking
+SA
+tracking
+885
+14.8
+18
+0.3
+-
+Main 2a
+SA
+tracking
+SA
+tracking
+2,861
+47.7
+0
+0.0
+-
+Main 2c1
+SA
+tracking
+SA
+tracking
+52
+0.9
+0
+0.0
+-
+Main 2c2
+SA
+tracking
+SA
+tracking
+0
+0.0
+0
+0.0
+-
+Main 3a
+SA
+tracking
+SA
+tracking
+54
+0.9
+0
+0.0
+-
+Main 3b1
+SA
+tracking
+SA
+tracking
+2,085
+34.8
+0
+0.0
+-
+Main 3b2
+SA
+tracking
+SA
+tracking
+0
+0.0
+0
+0.0
+-
+Main 3b3
+SA
+tracking
+SA
+tracking
+0
+0.0
+0
+0.0
+-
+Main 3b4
+SA
+tracking
+SA
+tracking
+11,060
+184.3
+86
+1.4
+-
+Main 3b5
+SA
+tracking
+SA
+tracking
+3,077
+51.3
+0
+0.0
+-
+Main 3b6
+SA
+tracking
+SA
+tracking
+0
+0.0
+0
+0.0
+-
+Main 3b7
+SA
+tracking
+SA
+tracking
+40,135
+668.9
+17,482
+291.4
+-
+South 
+SA
+tracking
+SA
+tracking
+0
+0.0
+0
+0.0
+-
+West Bottom
+SA
+tracking
+SA
+tracking
+0
+0.0
+0
+0.0
+-
+West top
+SA
+tracking
+SA
+tracking
+352
+5.9
+306
+5.1
+-
+Total glare received by each receptor; may include duplicate times of glare from multiple reflective surfaces. 
+Forgy Mill Rd
+52
+0.9
+0
+0.0
+Free Ln
+4,450
+74.2
+1,251
+20.9
+ 
+Page 2 of 265
+
+Receptor
+Annual Green Glare
+Annual Yellow Glare
+min
+hr
+min
+hr
+Mason-Poyner Rd
+15,874
+264.6
+17,255
+287.6
+Pendley Mill Rd
+0
+0.0
+0
+0.0
+SR-949
+5,097
+85.0
+2,493
+41.5
+US-431
+4,723
+78.7
+313
+5.2
+Bowling Green
+Regional 1
+0
+0.0
+0
+0.0
+Bowling Green
+Regional 2
+151
+2.5
+0
+0.0
+Bowling Green
+Regional 3
+0
+0.0
+0
+0.0
+Bowling Green
+Regional 4
+0
+0.0
+0
+0.0
+Muhlenberg County
+Airport 1
+0
+0.0
+0
+0.0
+Muhlenberg County
+Airport 2
+0
+0.0
+0
+0.0
+Russellville-Logan
+Airport 1
+0
+0.0
+0
+0.0
+Russellville-Logan
+Airport 2
+0
+0.0
+0
+0.0
+OP 1
+719
+12.0
+0
+0.0
+OP 2
+2,414
+40.2
+0
+0.0
+OP 3
+4,151
+69.2
+70
+1.2
+OP 4
+4,950
+82.5
+256
+4.3
+OP 5
+3,320
+55.3
+215
+3.6
+OP 6
+2,770
+46.2
+208
+3.5
+OP 7
+1,377
+22.9
+0
+0.0
+OP 8
+973
+16.2
+0
+0.0
+OP 9
+1,306
+21.8
+0
+0.0
+OP 10
+1,077
+17.9
+0
+0.0
+OP 11
+141
+2.4
+0
+0.0
+OP 12
+1,092
+18.2
+70
+1.2
+OP 13
+0
+0.0
+0
+0.0
+OP 14
+0
+0.0
+0
+0.0
+OP 15
+0
+0.0
+0
+0.0
+OP 16
+0
+0.0
+0
+0.0
+OP 17
+0
+0.0
+0
+0.0
+OP 18
+0
+0.0
+0
+0.0
+OP 19
+852
+14.2
+0
+0.0
+OP 20
+0
+0.0
+0
+0.0
+OP 21
+0
+0.0
+0
+0.0
+OP 22
+0
+0.0
+0
+0.0
+OP 23
+0
+0.0
+0
+0.0
+OP 24
+0
+0.0
+0
+0.0
+ 
+Page 3 of 265
+
+Receptor
+Annual Green Glare
+Annual Yellow Glare
+min
+hr
+min
+hr
+OP 25
+338
+5.6
+0
+0.0
+OP 26
+458
+7.6
+306
+5.1
+OP 27
+0
+0.0
+0
+0.0
+OP 28
+244
+4.1
+0
+0.0
+OP 29
+0
+0.0
+0
+0.0
+OP 30
+0
+0.0
+0
+0.0
+OP 31
+0
+0.0
+0
+0.0
+OP 32
+0
+0.0
+0
+0.0
+OP 33
+213
+3.5
+0
+0.0
+OP 34
+875
+14.6
+0
+0.0
+OP 35
+1,387
+23.1
+0
+0.0
+OP 36
+1,664
+27.7
+0
+0.0
+OP 37
+2,251
+37.5
+0
+0.0
+OP 38
+2,439
+40.6
+0
+0.0
+OP 39
+1,881
+31.4
+0
+0.0
+ 
+Page 4 of 265
+
+Component Data
+PV Arrays
+ 
+Name: East 1 
+Axis tracking: Single-axis rotation 
+Backtracking: Shade-slope 
+Tracking axis orientation: 180.0° 
+Max tracking angle: 60.0° 
+Resting angle: 0.0° 
+Ground Coverage Ratio: 0.45 
+Rated power: - 
+Panel material: Smooth glass with AR coating 
+Reflectivity: Vary with sun 
+Slope error: correlate with material 
+Vertex
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+Height above ground (ft)
+Total elevation (ft)
+1
+37.111941
+-86.974751
+443.99
+15.00
+458.99
+2
+37.112236
+-86.974778
+445.97
+15.00
+460.97
+3
+37.112947
+-86.974145
+425.58
+15.00
+440.58
+4
+37.112964
+-86.973640
+428.92
+15.00
+443.92
+5
+37.113524
+-86.973560
+425.26
+15.00
+440.26
+6
+37.113554
+-86.972793
+437.41
+15.00
+452.41
+7
+37.113216
+-86.972696
+436.33
+15.00
+451.33
+8
+37.112904
+-86.972482
+426.34
+15.00
+441.34
+9
+37.112378
+-86.972444
+416.46
+15.00
+431.46
+10
+37.112284
+-86.973517
+429.27
+15.00
+444.27
+11
+37.111971
+-86.973731
+427.92
+15.00
+442.92
+Page 5 of 265
+
+ 
+Name: East 2 
+Axis tracking: Single-axis rotation 
+Backtracking: Shade-slope 
+Tracking axis orientation: 180.0° 
+Max tracking angle: 60.0° 
+Resting angle: 0.0° 
+Ground Coverage Ratio: 0.45 
+Rated power: - 
+Panel material: Smooth glass with AR coating 
+Reflectivity: Vary with sun 
+Slope error: correlate with material 
+Page 6 of 265
+
+ 
+Vertex
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+Height above ground (ft)
+Total elevation (ft)
+1
+37.111881
+-86.973238
+423.60
+15.00
+438.60
+2
+37.111903
+-86.972047
+412.33
+15.00
+427.33
+3
+37.111715
+-86.972031
+412.63
+15.00
+427.63
+4
+37.111616
+-86.971913
+412.50
+15.00
+427.50
+5
+37.111488
+-86.971870
+412.94
+15.00
+427.94
+6
+37.111368
+-86.971784
+413.64
+15.00
+428.64
+7
+37.111193
+-86.971629
+414.93
+15.00
+429.93
+8
+37.110992
+-86.971484
+415.28
+15.00
+430.28
+9
+37.110662
+-86.971473
+416.15
+15.00
+431.15
+10
+37.110641
+-86.972337
+440.85
+15.00
+455.85
+11
+37.110991
+-86.972349
+436.27
+15.00
+451.27
+12
+37.110991
+-86.972349
+436.27
+15.00
+451.27
+13
+37.110991
+-86.972349
+436.27
+15.00
+451.27
+14
+37.110991
+-86.972349
+436.27
+15.00
+451.27
+15
+37.110991
+-86.972349
+436.27
+15.00
+451.27
+16
+37.110991
+-86.972349
+436.27
+15.00
+451.27
+17
+37.110991
+-86.972349
+436.27
+15.00
+451.27
+18
+37.110991
+-86.972349
+436.27
+15.00
+451.27
+19
+37.110991
+-86.972349
+436.27
+15.00
+451.27
+20
+37.110991
+-86.972349
+436.27
+15.00
+451.27
+21
+37.110991
+-86.972349
+436.27
+15.00
+451.27
+22
+37.110991
+-86.972349
+436.27
+15.00
+451.27
+23
+37.110991
+-86.972349
+436.27
+15.00
+451.27
+24
+37.110991
+-86.972349
+436.27
+15.00
+451.27
+25
+37.110991
+-86.972349
+436.27
+15.00
+451.27
+26
+37.110991
+-86.972349
+436.27
+15.00
+451.27
+27
+37.110991
+-86.972349
+436.27
+15.00
+451.27
+28
+37.110991
+-86.972349
+436.27
+15.00
+451.27
+29
+37.110991
+-86.972349
+436.27
+15.00
+451.27
+30
+37.110989
+-86.972522
+441.38
+15.00
+456.38
+31
+37.110989
+-86.972522
+441.38
+15.00
+456.38
+32
+37.110989
+-86.972522
+441.38
+15.00
+456.38
+33
+37.110989
+-86.972522
+441.38
+15.00
+456.38
+34
+37.110989
+-86.972522
+441.38
+15.00
+456.38
+35
+37.110989
+-86.972522
+441.38
+15.00
+456.38
+36
+37.110989
+-86.972522
+441.38
+15.00
+456.38
+37
+37.110989
+-86.972522
+441.38
+15.00
+456.38
+38
+37.110989
+-86.972522
+441.38
+15.00
+456.38
+39
+37.110989
+-86.972522
+441.38
+15.00
+456.38
+40
+37.110989
+-86.972522
+441.38
+15.00
+456.38
+41
+37.110989
+-86.972522
+441.38
+15.00
+456.38
+42
+37.110989
+-86.972522
+441.38
+15.00
+456.38
+43
+37.110989
+-86.972522
+441.38
+15.00
+456.38
+44
+37.110989
+-86.972522
+441.38
+15.00
+456.38
+45
+37.110989
+-86.972522
+441.38
+15.00
+456.38
+46
+37.110989
+-86.972522
+441.38
+15.00
+456.38
+47
+37.110989
+-86.972522
+441.38
+15.00
+456.38
+48
+37.110989
+-86.972522
+441.38
+15.00
+456.38
+49
+37.111227
+-86.972524
+433.91
+15.00
+448.91
+50
+37.111223
+-86.972938
+449.99
+15.00
+464.99
+51
+37.110940
+-86.972916
+453.77
+15.00
+468.77
+52
+37.110996
+-86.973377
+448.97
+15.00
+463.97
+53
+37.111248
+-86.973694
+436.35
+15.00
+451.35
+54
+37.111492
+-86.973715
+431.92
+15.00
+446.92
+55
+37.111501
+-86.973222
+438.86
+15.00
+453.86
+Page 7 of 265
+
+ 
+Page 8 of 265
+
+ 
+Name: Main 1a1 
+Axis tracking: Single-axis rotation 
+Backtracking: Shade-slope 
+Tracking axis orientation: 180.0° 
+Max tracking angle: 60.0° 
+Resting angle: 0.0° 
+Ground Coverage Ratio: 0.45 
+Rated power: - 
+Panel material: Smooth glass with AR coating 
+Reflectivity: Vary with sun 
+Slope error: correlate with material 
+Page 9 of 265
+
+ 
+Vertex
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+Height above ground (ft)
+Total elevation (ft)
+1
+37.112149
+-86.986912
+462.61
+15.00
+477.61
+2
+37.112218
+-86.984412
+460.23
+15.00
+475.23
+3
+37.112821
+-86.984406
+452.63
+15.00
+467.63
+4
+37.112812
+-86.984170
+448.08
+15.00
+463.08
+5
+37.112574
+-86.984180
+452.45
+15.00
+467.45
+6
+37.112573
+-86.983940
+450.94
+15.00
+465.94
+7
+37.112229
+-86.983934
+454.33
+15.00
+469.33
+8
+37.112231
+-86.983736
+453.92
+15.00
+468.92
+9
+37.111931
+-86.983731
+456.82
+15.00
+471.82
+10
+37.111931
+-86.983806
+457.49
+15.00
+472.49
+11
+37.111606
+-86.983800
+463.67
+15.00
+478.67
+12
+37.111604
+-86.984047
+463.95
+15.00
+478.95
+13
+37.110913
+-86.984036
+472.11
+15.00
+487.11
+14
+37.110921
+-86.983494
+471.29
+15.00
+486.29
+15
+37.111269
+-86.983512
+464.91
+15.00
+479.91
+16
+37.111270
+-86.983403
+465.09
+15.00
+480.09
+17
+37.111610
+-86.983409
+461.43
+15.00
+476.43
+18
+37.111610
+-86.983317
+461.53
+15.00
+476.53
+19
+37.111272
+-86.983312
+465.73
+15.00
+480.73
+20
+37.111281
+-86.983103
+466.37
+15.00
+481.37
+21
+37.110947
+-86.983087
+470.87
+15.00
+485.87
+22
+37.110956
+-86.982601
+484.40
+15.00
+499.40
+23
+37.110553
+-86.982596
+493.80
+15.00
+508.80
+24
+37.110571
+-86.980775
+545.85
+15.00
+560.85
+25
+37.109257
+-86.980716
+591.82
+15.00
+606.82
+26
+37.109257
+-86.980909
+578.57
+15.00
+593.57
+27
+37.108949
+-86.980909
+570.14
+15.00
+585.14
+28
+37.108975
+-86.983419
+494.43
+15.00
+509.43
+29
+37.109261
+-86.983430
+491.16
+15.00
+506.16
+30
+37.109266
+-86.983210
+492.23
+15.00
+507.23
+31
+37.109702
+-86.983226
+494.15
+15.00
+509.15
+32
+37.109702
+-86.983398
+489.48
+15.00
+504.48
+33
+37.109912
+-86.983414
+485.56
+15.00
+500.56
+34
+37.109903
+-86.983629
+483.05
+15.00
+498.05
+35
+37.110536
+-86.983645
+477.41
+15.00
+492.41
+36
+37.110532
+-86.983913
+478.33
+15.00
+493.33
+37
+37.109548
+-86.983870
+488.07
+15.00
+503.07
+38
+37.109535
+-86.985184
+487.07
+15.00
+502.07
+39
+37.109860
+-86.985190
+491.08
+15.00
+506.08
+40
+37.109865
+-86.985919
+475.78
+15.00
+490.78
+41
+37.110181
+-86.985914
+482.63
+15.00
+497.63
+42
+37.110190
+-86.986305
+473.89
+15.00
+488.89
+43
+37.110545
+-86.986300
+480.27
+15.00
+495.27
+44
+37.110549
+-86.986434
+478.19
+15.00
+493.19
+45
+37.110934
+-86.986434
+479.01
+15.00
+494.01
+46
+37.110934
+-86.986595
+475.20
+15.00
+490.20
+Page 10 of 265
+
+ 
+Name: Main 1a2 
+Axis tracking: Single-axis rotation 
+Backtracking: Shade-slope 
+Tracking axis orientation: 180.0° 
+Max tracking angle: 60.0° 
+Resting angle: 0.0° 
+Ground Coverage Ratio: 0.45 
+Rated power: - 
+Panel material: Smooth glass with AR coating 
+Reflectivity: Vary with sun 
+Slope error: correlate with material 
+Page 11 of 265
+
+ 
+Vertex
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+Height above ground (ft)
+Total elevation (ft)
+1
+37.108890
+-86.983429
+495.42
+15.00
+510.42
+2
+37.108878
+-86.980559
+582.30
+15.00
+597.30
+3
+37.110991
+-86.980623
+514.88
+15.00
+529.88
+4
+37.110987
+-86.982007
+487.47
+15.00
+502.47
+5
+37.111299
+-86.982018
+481.54
+15.00
+496.54
+6
+37.111295
+-86.982377
+473.79
+15.00
+488.79
+7
+37.111628
+-86.982377
+471.83
+15.00
+486.83
+8
+37.111628
+-86.982758
+467.49
+15.00
+482.49
+9
+37.111928
+-86.982769
+463.99
+15.00
+478.99
+10
+37.111928
+-86.983499
+456.89
+15.00
+471.89
+11
+37.112869
+-86.983515
+452.44
+15.00
+467.44
+12
+37.112865
+-86.982887
+453.94
+15.00
+468.94
+13
+37.112266
+-86.982758
+460.98
+15.00
+475.98
+14
+37.112257
+-86.982195
+463.82
+15.00
+478.82
+15
+37.112903
+-86.982211
+456.38
+15.00
+471.38
+16
+37.112907
+-86.981492
+461.59
+15.00
+476.59
+17
+37.112557
+-86.981481
+464.90
+15.00
+479.90
+18
+37.112574
+-86.980752
+460.92
+15.00
+475.92
+19
+37.111654
+-86.980725
+478.78
+15.00
+493.78
+20
+37.111658
+-86.980274
+493.94
+15.00
+508.94
+21
+37.112304
+-86.980189
+471.17
+15.00
+486.17
+22
+37.112313
+-86.979523
+478.51
+15.00
+493.51
+23
+37.111333
+-86.978998
+510.04
+15.00
+525.04
+24
+37.111008
+-86.978992
+541.74
+15.00
+556.74
+25
+37.109943
+-86.978375
+552.75
+15.00
+567.75
+26
+37.108873
+-86.978386
+520.35
+15.00
+535.35
+27
+37.108882
+-86.976836
+484.88
+15.00
+499.88
+28
+37.109404
+-86.976847
+498.13
+15.00
+513.13
+29
+37.110927
+-86.975774
+461.91
+15.00
+476.91
+30
+37.110935
+-86.975361
+454.78
+15.00
+469.78
+31
+37.110554
+-86.975339
+467.05
+15.00
+482.05
+32
+37.110572
+-86.974647
+451.88
+15.00
+466.88
+33
+37.110020
+-86.974309
+446.28
+15.00
+461.28
+34
+37.110071
+-86.972641
+429.24
+15.00
+444.24
+35
+37.109541
+-86.972582
+419.26
+15.00
+434.26
+36
+37.109297
+-86.972711
+420.52
+15.00
+435.52
+37
+37.109254
+-86.973655
+438.90
+15.00
+453.90
+38
+37.108090
+-86.973585
+423.75
+15.00
+438.75
+39
+37.108048
+-86.974658
+434.54
+15.00
+449.54
+40
+37.108835
+-86.975634
+451.44
+15.00
+466.44
+41
+37.108809
+-86.975999
+460.02
+15.00
+475.02
+42
+37.107953
+-86.975956
+447.84
+15.00
+462.84
+43
+37.107876
+-86.977662
+468.09
+15.00
+483.09
+44
+37.107235
+-86.977662
+462.96
+15.00
+477.96
+45
+37.107303
+-86.975066
+434.20
+15.00
+449.20
+46
+37.106542
+-86.975001
+431.38
+15.00
+446.38
+47
+37.106268
+-86.975624
+433.96
+15.00
+448.96
+48
+37.106593
+-86.976139
+439.03
+15.00
+454.03
+49
+37.106867
+-86.976171
+442.88
+15.00
+457.88
+50
+37.106833
+-86.981503
+505.26
+15.00
+520.26
+51
+37.107953
+-86.981503
+535.57
+15.00
+550.57
+Page 12 of 265
+
+ 
+Name: Main 1c 
+Axis tracking: Single-axis rotation 
+Backtracking: Shade-slope 
+Tracking axis orientation: 180.0° 
+Max tracking angle: 60.0° 
+Resting angle: 0.0° 
+Ground Coverage Ratio: 0.45 
+Rated power: - 
+Panel material: Smooth glass with AR coating 
+Reflectivity: Vary with sun 
+Slope error: correlate with material 
+Vertex
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+Height above ground (ft)
+Total elevation (ft)
+1
+37.106747
+-86.981616
+503.52
+15.00
+518.52
+2
+37.106772
+-86.979218
+475.97
+15.00
+490.97
+3
+37.106400
+-86.979202
+469.54
+15.00
+484.54
+4
+37.106409
+-86.979063
+468.17
+15.00
+483.17
+5
+37.105827
+-86.979063
+467.25
+15.00
+482.25
+6
+37.105844
+-86.978403
+470.92
+15.00
+485.92
+7
+37.106263
+-86.978398
+462.39
+15.00
+477.39
+8
+37.106302
+-86.976321
+440.63
+15.00
+455.63
+9
+37.105574
+-86.976193
+441.52
+15.00
+456.52
+10
+37.105570
+-86.976574
+449.30
+15.00
+464.30
+11
+37.105241
+-86.976579
+440.53
+15.00
+455.53
+12
+37.105232
+-86.977325
+446.74
+15.00
+461.74
+13
+37.104898
+-86.977314
+445.15
+15.00
+460.15
+14
+37.104843
+-86.978778
+451.61
+15.00
+466.61
+15
+37.104479
+-86.978773
+451.08
+15.00
+466.08
+16
+37.104441
+-86.979706
+458.25
+15.00
+473.25
+17
+37.104830
+-86.979712
+461.43
+15.00
+476.43
+18
+37.104834
+-86.980173
+465.99
+15.00
+480.99
+19
+37.104210
+-86.980152
+459.47
+15.00
+474.47
+20
+37.104205
+-86.980586
+461.07
+15.00
+476.07
+21
+37.103837
+-86.980581
+459.76
+15.00
+474.76
+22
+37.103833
+-86.980828
+461.07
+15.00
+476.07
+23
+37.104205
+-86.980828
+464.31
+15.00
+479.31
+24
+37.104197
+-86.981144
+470.14
+15.00
+485.14
+25
+37.103833
+-86.981139
+463.94
+15.00
+478.94
+26
+37.103820
+-86.981461
+466.71
+15.00
+481.71
+27
+37.104197
+-86.981466
+476.19
+15.00
+491.19
+28
+37.104197
+-86.981831
+474.97
+15.00
+489.97
+29
+37.104453
+-86.981836
+482.43
+15.00
+497.43
+30
+37.104451
+-86.982018
+479.41
+15.00
+494.41
+31
+37.104873
+-86.982010
+486.36
+15.00
+501.36
+32
+37.104873
+-86.982531
+490.88
+15.00
+505.88
+33
+37.105200
+-86.982531
+495.00
+15.00
+510.00
+34
+37.105200
+-86.982263
+489.93
+15.00
+504.93
+35
+37.105506
+-86.982268
+497.43
+15.00
+512.43
+36
+37.105512
+-86.981651
+498.66
+15.00
+513.66
+Page 13 of 265
+
+ 
+Name: Main 1d 
+Axis tracking: Single-axis rotation 
+Backtracking: Shade-slope 
+Tracking axis orientation: 180.0° 
+Max tracking angle: 60.0° 
+Resting angle: 0.0° 
+Ground Coverage Ratio: 0.45 
+Rated power: - 
+Panel material: Smooth glass with AR coating 
+Reflectivity: Vary with sun 
+Slope error: correlate with material 
+Page 14 of 265
+
+ 
+Vertex
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+Height above ground (ft)
+Total elevation (ft)
+1
+37.101870
+-86.982309
+480.24
+15.00
+495.24
+2
+37.101878
+-86.981671
+489.74
+15.00
+504.74
+3
+37.102499
+-86.981081
+483.56
+15.00
+498.56
+4
+37.102798
+-86.981043
+476.97
+15.00
+491.97
+5
+37.102811
+-86.980453
+481.02
+15.00
+496.02
+6
+37.103200
+-86.980464
+467.93
+15.00
+482.93
+7
+37.103196
+-86.979761
+479.72
+15.00
+494.72
+8
+37.103504
+-86.979751
+469.34
+15.00
+484.34
+9
+37.103513
+-86.978796
+475.51
+15.00
+490.51
+10
+37.103821
+-86.978780
+462.25
+15.00
+477.25
+11
+37.103868
+-86.976317
+461.87
+15.00
+476.87
+12
+37.104450
+-86.975733
+451.64
+15.00
+466.64
+13
+37.103594
+-86.975100
+463.93
+15.00
+478.93
+14
+37.103491
+-86.974225
+465.29
+15.00
+480.29
+15
+37.103153
+-86.974225
+472.42
+15.00
+487.42
+16
+37.103149
+-86.973496
+474.86
+15.00
+489.86
+17
+37.103543
+-86.973496
+460.49
+15.00
+475.49
+18
+37.103564
+-86.973131
+457.10
+15.00
+472.10
+19
+37.103915
+-86.973120
+437.73
+15.00
+452.73
+20
+37.103919
+-86.972578
+442.63
+15.00
+457.63
+21
+37.103534
+-86.972552
+455.65
+15.00
+470.65
+22
+37.103560
+-86.971677
+476.02
+15.00
+491.02
+23
+37.103226
+-86.971650
+473.13
+15.00
+488.13
+24
+37.103230
+-86.971259
+484.08
+15.00
+499.08
+25
+37.104984
+-86.970615
+459.26
+15.00
+474.26
+26
+37.107025
+-86.969837
+464.96
+15.00
+479.96
+27
+37.107988
+-86.969489
+455.26
+15.00
+470.26
+28
+37.108647
+-86.969499
+449.46
+15.00
+464.46
+29
+37.108942
+-86.969617
+448.24
+15.00
+463.24
+30
+37.108933
+-86.970706
+477.67
+15.00
+492.67
+31
+37.109370
+-86.970722
+452.46
+15.00
+467.46
+32
+37.109340
+-86.971677
+422.72
+15.00
+437.72
+33
+37.109661
+-86.971715
+417.20
+15.00
+432.20
+34
+37.109652
+-86.972203
+418.70
+15.00
+433.70
+35
+37.109173
+-86.972482
+418.23
+15.00
+433.23
+36
+37.108681
+-86.972493
+419.22
+15.00
+434.22
+37
+37.108672
+-86.972788
+420.76
+15.00
+435.76
+38
+37.108339
+-86.972911
+421.29
+15.00
+436.29
+39
+37.108056
+-86.972884
+421.50
+15.00
+436.50
+40
+37.108026
+-86.973169
+422.39
+15.00
+437.39
+41
+37.107667
+-86.973142
+423.81
+15.00
+438.81
+42
+37.107658
+-86.973415
+424.66
+15.00
+439.66
+43
+37.107308
+-86.973388
+425.36
+15.00
+440.36
+44
+37.107290
+-86.973662
+425.32
+15.00
+440.32
+45
+37.106982
+-86.973630
+427.04
+15.00
+442.04
+46
+37.106978
+-86.974091
+427.96
+15.00
+442.96
+47
+37.106623
+-86.974070
+428.74
+15.00
+443.74
+48
+37.106610
+-86.974494
+429.75
+15.00
+444.75
+49
+37.106349
+-86.974494
+430.54
+15.00
+445.54
+50
+37.106341
+-86.974874
+431.22
+15.00
+446.22
+51
+37.105964
+-86.974858
+433.88
+15.00
+448.88
+52
+37.105947
+-86.975298
+433.45
+15.00
+448.45
+53
+37.105549
+-86.975277
+434.58
+15.00
+449.58
+54
+37.105524
+-86.975851
+437.25
+15.00
+452.25
+55
+37.105207
+-86.975829
+438.05
+15.00
+453.05
+56
+37.105203
+-86.976291
+440.06
+15.00
+455.06
+57
+37.104873
+-86.976285
+444.46
+15.00
+459.46
+58
+37.104860
+-86.976779
+443.47
+15.00
+458.47
+59
+37.104514
+-86.976763
+450.05
+15.00
+465.05
+Page 15 of 265
+
+ 
+Name: Main 2a 
+Axis tracking: Single-axis rotation 
+Backtracking: Shade-slope 
+Tracking axis orientation: 180.0° 
+Max tracking angle: 60.0° 
+Resting angle: 0.0° 
+Ground Coverage Ratio: 0.45 
+Rated power: - 
+Panel material: Smooth glass with AR coating 
+Reflectivity: Vary with sun 
+Slope error: correlate with material 
+Vertex
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+Height above ground (ft)
+Total elevation (ft)
+1
+37.085640
+-86.971820
+522.69
+15.00
+537.69
+2
+37.085653
+-86.971413
+505.82
+15.00
+520.82
+3
+37.086021
+-86.971442
+501.48
+15.00
+516.48
+4
+37.086042
+-86.971168
+508.03
+15.00
+523.03
+5
+37.086342
+-86.971201
+505.73
+15.00
+520.73
+6
+37.086607
+-86.971120
+508.57
+15.00
+523.57
+7
+37.086616
+-86.970739
+517.94
+15.00
+532.94
+8
+37.086971
+-86.970755
+512.88
+15.00
+527.88
+9
+37.086984
+-86.970530
+517.34
+15.00
+532.34
+10
+37.087373
+-86.970546
+509.02
+15.00
+524.02
+11
+37.087386
+-86.970246
+514.56
+15.00
+529.56
+12
+37.087651
+-86.970262
+512.43
+15.00
+527.43
+13
+37.087647
+-86.970181
+512.69
+15.00
+527.69
+14
+37.087395
+-86.970165
+518.03
+15.00
+533.03
+15
+37.087403
+-86.969892
+523.39
+15.00
+538.39
+16
+37.087664
+-86.969908
+515.38
+15.00
+530.38
+17
+37.087669
+-86.969763
+517.05
+15.00
+532.05
+18
+37.087399
+-86.969591
+524.92
+15.00
+539.92
+19
+37.086453
+-86.969565
+547.42
+15.00
+562.42
+20
+37.086462
+-86.968926
+554.43
+15.00
+569.43
+21
+37.085422
+-86.968213
+537.78
+15.00
+552.78
+22
+37.085422
+-86.969149
+563.50
+15.00
+578.50
+23
+37.085422
+-86.969149
+563.50
+15.00
+578.50
+24
+37.085672
+-86.969153
+560.03
+15.00
+575.03
+25
+37.085672
+-86.969153
+560.03
+15.00
+575.03
+26
+37.085653
+-86.970503
+543.24
+15.00
+558.24
+27
+37.085285
+-86.970503
+547.01
+15.00
+562.01
+28
+37.085255
+-86.972156
+541.62
+15.00
+556.62
+29
+37.085632
+-86.972161
+531.44
+15.00
+546.44
+Page 16 of 265
+
+ 
+Name: Main 2c1 
+Axis tracking: Single-axis rotation 
+Backtracking: Shade-slope 
+Tracking axis orientation: 180.0° 
+Max tracking angle: 60.0° 
+Resting angle: 0.0° 
+Ground Coverage Ratio: 0.45 
+Rated power: - 
+Panel material: Smooth glass with AR coating 
+Reflectivity: Vary with sun 
+Slope error: correlate with material 
+Page 17 of 265
+
+ 
+Vertex
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+Height above ground (ft)
+Total elevation (ft)
+1
+37.098667
+-86.980432
+654.26
+15.00
+669.26
+2
+37.094985
+-86.980392
+696.91
+15.00
+711.91
+3
+37.094996
+-86.978302
+664.31
+15.00
+679.31
+4
+37.094654
+-86.978286
+666.41
+15.00
+681.41
+5
+37.094602
+-86.978214
+668.23
+15.00
+683.23
+6
+37.094258
+-86.978192
+681.46
+15.00
+696.46
+7
+37.093740
+-86.978042
+690.73
+15.00
+705.73
+8
+37.093306
+-86.978037
+691.46
+15.00
+706.46
+9
+37.092961
+-86.977742
+687.83
+15.00
+702.83
+10
+37.092812
+-86.977640
+684.60
+15.00
+699.60
+11
+37.092651
+-86.977828
+683.99
+15.00
+698.99
+12
+37.092217
+-86.977830
+678.55
+15.00
+693.55
+13
+37.091613
+-86.977691
+669.71
+15.00
+684.71
+14
+37.091307
+-86.977154
+657.79
+15.00
+672.79
+15
+37.090901
+-86.976234
+635.51
+15.00
+650.51
+16
+37.090683
+-86.975768
+629.83
+15.00
+644.83
+17
+37.090231
+-86.974888
+597.55
+15.00
+612.55
+18
+37.090206
+-86.974201
+570.79
+15.00
+585.79
+19
+37.089893
+-86.974190
+557.77
+15.00
+572.77
+20
+37.089900
+-86.973997
+555.20
+15.00
+570.20
+21
+37.089309
+-86.973992
+551.00
+15.00
+566.00
+22
+37.089307
+-86.974164
+553.04
+15.00
+568.04
+23
+37.088605
+-86.974368
+556.81
+15.00
+571.81
+24
+37.086936
+-86.974992
+541.42
+15.00
+556.42
+25
+37.086639
+-86.974984
+534.08
+15.00
+549.08
+26
+37.085965
+-86.974722
+520.01
+15.00
+535.01
+27
+37.085676
+-86.974429
+517.41
+15.00
+532.41
+28
+37.085261
+-86.973901
+511.89
+15.00
+526.89
+29
+37.084638
+-86.973794
+508.02
+15.00
+523.02
+30
+37.083981
+-86.973557
+493.50
+15.00
+508.50
+31
+37.083986
+-86.973321
+495.60
+15.00
+510.60
+32
+37.084617
+-86.973206
+514.37
+15.00
+529.37
+33
+37.084919
+-86.972675
+529.13
+15.00
+544.13
+34
+37.085520
+-86.972672
+521.68
+15.00
+536.68
+35
+37.085522
+-86.973335
+513.68
+15.00
+528.68
+36
+37.086617
+-86.974107
+531.59
+15.00
+546.59
+37
+37.086926
+-86.973493
+538.70
+15.00
+553.70
+38
+37.086294
+-86.973059
+517.37
+15.00
+532.37
+39
+37.085830
+-86.972278
+518.52
+15.00
+533.52
+40
+37.086438
+-86.971608
+511.08
+15.00
+526.08
+41
+37.087005
+-86.971393
+511.93
+15.00
+526.93
+42
+37.087236
+-86.970991
+511.61
+15.00
+526.61
+43
+37.087908
+-86.970532
+513.54
+15.00
+528.54
+44
+37.088881
+-86.971345
+522.68
+15.00
+537.68
+45
+37.089547
+-86.972535
+533.06
+15.00
+548.06
+46
+37.089547
+-86.972535
+533.06
+15.00
+548.06
+47
+37.089547
+-86.972535
+533.06
+15.00
+548.06
+48
+37.090547
+-86.972319
+551.12
+15.00
+566.12
+49
+37.091750
+-86.973591
+586.26
+15.00
+601.26
+50
+37.092345
+-86.974342
+600.55
+15.00
+615.55
+51
+37.092999
+-86.973290
+547.20
+15.00
+562.20
+52
+37.093329
+-86.971842
+556.43
+15.00
+571.43
+53
+37.094621
+-86.971810
+548.23
+15.00
+563.23
+54
+37.096546
+-86.969675
+566.58
+15.00
+581.58
+55
+37.098771
+-86.970034
+497.02
+15.00
+512.02
+Page 18 of 265
+
+ 
+Name: Main 2c2 
+Axis tracking: Single-axis rotation 
+Backtracking: Shade-slope 
+Tracking axis orientation: 180.0° 
+Max tracking angle: 60.0° 
+Resting angle: 0.0° 
+Ground Coverage Ratio: 0.45 
+Rated power: - 
+Panel material: Smooth glass with AR coating 
+Reflectivity: Vary with sun 
+Slope error: correlate with material 
+Vertex
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+Height above ground (ft)
+Total elevation (ft)
+1
+37.098753
+-86.980438
+653.91
+15.00
+668.91
+2
+37.102390
+-86.980513
+498.33
+15.00
+513.33
+3
+37.102386
+-86.980089
+500.65
+15.00
+515.65
+4
+37.102735
+-86.980084
+484.72
+15.00
+499.72
+5
+37.102730
+-86.979338
+503.14
+15.00
+518.14
+6
+37.103143
+-86.979322
+482.17
+15.00
+497.17
+7
+37.103147
+-86.977318
+508.22
+15.00
+523.22
+8
+37.103479
+-86.977313
+486.22
+15.00
+501.22
+9
+37.103466
+-86.976103
+483.51
+15.00
+498.51
+10
+37.103154
+-86.976109
+500.04
+15.00
+515.04
+11
+37.103145
+-86.975009
+482.06
+15.00
+497.06
+12
+37.102775
+-86.975014
+496.49
+15.00
+511.49
+13
+37.102773
+-86.974464
+481.19
+15.00
+496.19
+14
+37.102454
+-86.974470
+506.14
+15.00
+521.14
+15
+37.102439
+-86.973598
+510.86
+15.00
+525.86
+16
+37.102803
+-86.973587
+492.68
+15.00
+507.68
+17
+37.102803
+-86.973180
+487.31
+15.00
+502.31
+18
+37.102448
+-86.973185
+498.72
+15.00
+513.72
+19
+37.102452
+-86.972885
+491.13
+15.00
+506.13
+20
+37.102187
+-86.972893
+499.93
+15.00
+514.93
+21
+37.102185
+-86.972552
+492.64
+15.00
+507.64
+22
+37.101849
+-86.972554
+502.98
+15.00
+517.98
+23
+37.101843
+-86.972183
+493.65
+15.00
+508.65
+24
+37.101541
+-86.972205
+504.09
+15.00
+519.09
+25
+37.101535
+-86.971939
+496.05
+15.00
+511.05
+26
+37.101207
+-86.971961
+504.91
+15.00
+519.91
+27
+37.101203
+-86.971698
+493.62
+15.00
+508.62
+28
+37.100769
+-86.971711
+492.77
+15.00
+507.77
+29
+37.100769
+-86.971491
+485.72
+15.00
+500.72
+30
+37.100146
+-86.971499
+497.07
+15.00
+512.07
+31
+37.099797
+-86.971572
+514.11
+15.00
+529.11
+32
+37.099806
+-86.970528
+500.21
+15.00
+515.21
+33
+37.098899
+-86.970467
+503.59
+15.00
+518.59
+Page 19 of 265
+
+ 
+Name: Main 3a 
+Axis tracking: Single-axis rotation 
+Backtracking: Shade-slope 
+Tracking axis orientation: 180.0° 
+Max tracking angle: 60.0° 
+Resting angle: 0.0° 
+Ground Coverage Ratio: 0.45 
+Rated power: - 
+Panel material: Smooth glass with AR coating 
+Reflectivity: Vary with sun 
+Slope error: correlate with material 
+Vertex
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+Height above ground (ft)
+Total elevation (ft)
+1
+37.108489
+-86.985371
+477.66
+15.00
+492.66
+2
+37.107830
+-86.985368
+486.06
+15.00
+501.06
+3
+37.107828
+-86.985223
+490.37
+15.00
+505.37
+4
+37.107485
+-86.985226
+496.90
+15.00
+511.90
+5
+37.107496
+-86.985591
+495.10
+15.00
+510.10
+6
+37.107160
+-86.985601
+500.69
+15.00
+515.69
+7
+37.107156
+-86.985432
+505.33
+15.00
+520.33
+8
+37.106876
+-86.985449
+519.06
+15.00
+534.06
+9
+37.106874
+-86.985306
+520.69
+15.00
+535.69
+10
+37.107152
+-86.985293
+505.64
+15.00
+520.64
+11
+37.107152
+-86.984829
+508.47
+15.00
+523.47
+12
+37.106863
+-86.984834
+505.47
+15.00
+520.47
+13
+37.106852
+-86.983493
+507.25
+15.00
+522.25
+14
+37.107205
+-86.983483
+499.27
+15.00
+514.27
+15
+37.107207
+-86.983330
+498.99
+15.00
+513.99
+16
+37.107517
+-86.983324
+494.25
+15.00
+509.25
+17
+37.107520
+-86.984244
+502.83
+15.00
+517.83
+18
+37.107840
+-86.984244
+487.44
+15.00
+502.44
+19
+37.107851
+-86.984767
+493.55
+15.00
+508.55
+20
+37.108159
+-86.984762
+482.50
+15.00
+497.50
+21
+37.108159
+-86.985057
+484.44
+15.00
+499.44
+22
+37.108484
+-86.985065
+477.65
+15.00
+492.65
+Page 20 of 265
+
+ 
+Name: Main 3b1 
+Axis tracking: Single-axis rotation 
+Backtracking: Shade-slope 
+Tracking axis orientation: 180.0° 
+Max tracking angle: 60.0° 
+Resting angle: 0.0° 
+Ground Coverage Ratio: 0.45 
+Rated power: - 
+Panel material: Smooth glass with AR coating 
+Reflectivity: Vary with sun 
+Slope error: correlate with material 
+Vertex
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+Height above ground (ft)
+Total elevation (ft)
+1
+37.108809
+-86.986607
+471.01
+15.00
+486.01
+2
+37.108807
+-86.985933
+472.42
+15.00
+487.42
+3
+37.107849
+-86.985911
+487.96
+15.00
+502.96
+4
+37.107847
+-86.985957
+488.95
+15.00
+503.95
+5
+37.107168
+-86.985937
+502.04
+15.00
+517.04
+6
+37.107165
+-86.985986
+503.39
+15.00
+518.39
+7
+37.106856
+-86.985974
+517.95
+15.00
+532.95
+8
+37.106861
+-86.986556
+522.40
+15.00
+537.40
+9
+37.107437
+-86.986548
+501.39
+15.00
+516.39
+10
+37.107439
+-86.986621
+501.01
+15.00
+516.01
+11
+37.107822
+-86.986615
+493.49
+15.00
+508.49
+12
+37.107824
+-86.986699
+493.37
+15.00
+508.37
+13
+37.108474
+-86.986685
+475.00
+15.00
+490.00
+14
+37.108474
+-86.986597
+475.64
+15.00
+490.64
+Page 21 of 265
+
+ 
+Name: Main 3b2 
+Axis tracking: Single-axis rotation 
+Backtracking: Shade-slope 
+Tracking axis orientation: 180.0° 
+Max tracking angle: 60.0° 
+Resting angle: 0.0° 
+Ground Coverage Ratio: 0.45 
+Rated power: - 
+Panel material: Smooth glass with AR coating 
+Reflectivity: Vary with sun 
+Slope error: correlate with material 
+Page 22 of 265
+
+ 
+Vertex
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+Height above ground (ft)
+Total elevation (ft)
+1
+37.106446
+-86.988618
+522.56
+15.00
+537.56
+2
+37.106438
+-86.986678
+541.25
+15.00
+556.25
+3
+37.106757
+-86.986668
+527.08
+15.00
+542.08
+4
+37.106750
+-86.986204
+526.20
+15.00
+541.20
+5
+37.106446
+-86.986204
+543.78
+15.00
+558.78
+6
+37.106434
+-86.985316
+550.19
+15.00
+565.19
+7
+37.106737
+-86.985308
+529.45
+15.00
+544.45
+8
+37.106735
+-86.983248
+505.51
+15.00
+520.51
+9
+37.104716
+-86.983213
+509.35
+15.00
+524.35
+10
+37.104724
+-86.982773
+493.81
+15.00
+508.81
+11
+37.104410
+-86.982768
+495.91
+15.00
+510.91
+12
+37.104410
+-86.982663
+493.65
+15.00
+508.65
+13
+37.104123
+-86.982650
+492.66
+15.00
+507.66
+14
+37.104121
+-86.982204
+480.10
+15.00
+495.10
+15
+37.104746
+-86.982202
+486.14
+15.00
+501.14
+16
+37.104744
+-86.982033
+484.68
+15.00
+499.68
+17
+37.103732
+-86.982041
+477.07
+15.00
+492.07
+18
+37.103736
+-86.981671
+470.65
+15.00
+485.65
+19
+37.103441
+-86.981655
+468.50
+15.00
+483.50
+20
+37.103432
+-86.981979
+475.40
+15.00
+490.40
+21
+37.103124
+-86.981976
+472.41
+15.00
+487.41
+22
+37.103112
+-86.982859
+493.29
+15.00
+508.29
+23
+37.102780
+-86.982851
+487.46
+15.00
+502.46
+24
+37.102767
+-86.984356
+545.08
+15.00
+560.08
+25
+37.103114
+-86.984372
+555.32
+15.00
+570.32
+26
+37.103126
+-86.983870
+529.38
+15.00
+544.38
+27
+37.103441
+-86.983867
+518.80
+15.00
+533.80
+28
+37.103441
+-86.983371
+504.99
+15.00
+519.99
+29
+37.104106
+-86.983363
+505.72
+15.00
+520.72
+30
+37.104100
+-86.983862
+515.71
+15.00
+530.71
+31
+37.103815
+-86.983867
+513.27
+15.00
+528.27
+32
+37.103809
+-86.984543
+568.58
+15.00
+583.58
+33
+37.103116
+-86.984557
+564.42
+15.00
+579.42
+34
+37.103116
+-86.984954
+586.43
+15.00
+601.43
+35
+37.102763
+-86.984962
+567.13
+15.00
+582.13
+36
+37.102744
+-86.988647
+624.06
+15.00
+639.06
+37
+37.103082
+-86.988642
+598.07
+15.00
+613.07
+38
+37.103084
+-86.988341
+588.40
+15.00
+603.40
+39
+37.103723
+-86.988315
+564.33
+15.00
+579.33
+40
+37.103728
+-86.988406
+564.46
+15.00
+579.46
+41
+37.105443
+-86.988438
+520.49
+15.00
+535.49
+42
+37.105452
+-86.986477
+570.85
+15.00
+585.85
+43
+37.105813
+-86.986483
+560.91
+15.00
+575.91
+44
+37.105813
+-86.988392
+518.18
+15.00
+533.18
+45
+37.106149
+-86.988390
+529.83
+15.00
+544.83
+46
+37.106153
+-86.988615
+517.55
+15.00
+532.55
+Page 23 of 265
+
+ 
+Name: Main 3b3 
+Axis tracking: Single-axis rotation 
+Backtracking: Shade-slope 
+Tracking axis orientation: 180.0° 
+Max tracking angle: 60.0° 
+Resting angle: 0.0° 
+Ground Coverage Ratio: 0.45 
+Rated power: - 
+Panel material: Smooth glass with AR coating 
+Reflectivity: Vary with sun 
+Slope error: correlate with material 
+Vertex
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+Height above ground (ft)
+Total elevation (ft)
+1
+37.106665
+-86.993892
+535.79
+15.00
+550.79
+2
+37.106650
+-86.992235
+552.05
+15.00
+567.05
+3
+37.107116
+-86.992221
+543.18
+15.00
+558.18
+4
+37.107115
+-86.991034
+491.10
+15.00
+506.10
+5
+37.106827
+-86.991036
+501.07
+15.00
+516.07
+6
+37.106827
+-86.991260
+510.56
+15.00
+525.56
+7
+37.106369
+-86.991265
+511.79
+15.00
+526.79
+8
+37.106368
+-86.991319
+514.43
+15.00
+529.43
+9
+37.105711
+-86.991316
+512.91
+15.00
+527.91
+10
+37.105708
+-86.991371
+514.66
+15.00
+529.66
+11
+37.105409
+-86.991370
+513.03
+15.00
+528.03
+12
+37.105408
+-86.991610
+526.57
+15.00
+541.57
+13
+37.105057
+-86.991615
+532.96
+15.00
+547.96
+14
+37.105055
+-86.991667
+533.67
+15.00
+548.67
+15
+37.104766
+-86.991673
+542.33
+15.00
+557.33
+16
+37.104748
+-86.994254
+562.89
+15.00
+577.89
+17
+37.105041
+-86.994244
+561.14
+15.00
+576.14
+18
+37.105043
+-86.994139
+561.15
+15.00
+576.15
+19
+37.105675
+-86.994127
+569.18
+15.00
+584.18
+20
+37.105674
+-86.993959
+569.58
+15.00
+584.58
+21
+37.106345
+-86.993947
+551.31
+15.00
+566.31
+22
+37.106344
+-86.993895
+550.95
+15.00
+565.95
+Page 24 of 265
+
+ 
+Name: Main 3b4 
+Axis tracking: Single-axis rotation 
+Backtracking: Shade-slope 
+Tracking axis orientation: 180.0° 
+Max tracking angle: 60.0° 
+Resting angle: 0.0° 
+Ground Coverage Ratio: 0.45 
+Rated power: - 
+Panel material: Smooth glass with AR coating 
+Reflectivity: Vary with sun 
+Slope error: correlate with material 
+Vertex
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+Height above ground (ft)
+Total elevation (ft)
+1
+37.104624
+-86.994297
+563.46
+15.00
+578.46
+2
+37.104631
+-86.992931
+549.09
+15.00
+564.09
+3
+37.104309
+-86.992921
+566.39
+15.00
+581.39
+4
+37.104316
+-86.992667
+577.02
+15.00
+592.02
+5
+37.104635
+-86.992662
+552.34
+15.00
+567.34
+6
+37.104640
+-86.992151
+555.41
+15.00
+570.41
+7
+37.104328
+-86.992140
+566.79
+15.00
+581.79
+8
+37.104337
+-86.991356
+544.52
+15.00
+559.52
+9
+37.104006
+-86.991349
+554.28
+15.00
+569.28
+10
+37.103982
+-86.992921
+573.04
+15.00
+588.04
+11
+37.102719
+-86.992909
+629.75
+15.00
+644.75
+12
+37.102691
+-86.995012
+613.54
+15.00
+628.54
+13
+37.103009
+-86.995013
+604.32
+15.00
+619.32
+14
+37.103014
+-86.994518
+632.41
+15.00
+647.41
+15
+37.103322
+-86.994521
+607.89
+15.00
+622.89
+16
+37.103321
+-86.994451
+607.13
+15.00
+622.13
+17
+37.103971
+-86.994435
+576.51
+15.00
+591.51
+18
+37.103973
+-86.994346
+576.64
+15.00
+591.64
+19
+37.104293
+-86.994351
+569.73
+15.00
+584.73
+20
+37.104293
+-86.994296
+570.61
+15.00
+585.61
+Page 25 of 265
+
+ 
+Name: Main 3b5 
+Axis tracking: Single-axis rotation 
+Backtracking: Shade-slope 
+Tracking axis orientation: 180.0° 
+Max tracking angle: 60.0° 
+Resting angle: 0.0° 
+Ground Coverage Ratio: 0.45 
+Rated power: - 
+Panel material: Smooth glass with AR coating 
+Reflectivity: Vary with sun 
+Slope error: correlate with material 
+Vertex
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+Height above ground (ft)
+Total elevation (ft)
+1
+37.106703
+-86.990834
+495.29
+15.00
+510.29
+2
+37.106694
+-86.989804
+491.77
+15.00
+506.77
+3
+37.106384
+-86.989801
+491.73
+15.00
+506.73
+4
+37.106386
+-86.989182
+489.19
+15.00
+504.19
+5
+37.106070
+-86.989176
+489.98
+15.00
+504.98
+6
+37.106072
+-86.989066
+490.09
+15.00
+505.09
+7
+37.105738
+-86.989066
+495.85
+15.00
+510.85
+8
+37.105738
+-86.988991
+493.47
+15.00
+508.47
+9
+37.105111
+-86.988994
+520.40
+15.00
+535.40
+10
+37.105111
+-86.988871
+523.39
+15.00
+538.39
+11
+37.104677
+-86.988871
+532.77
+15.00
+547.77
+12
+37.104675
+-86.988616
+533.96
+15.00
+548.96
+13
+37.104348
+-86.988608
+547.27
+15.00
+562.27
+14
+37.104345
+-86.988734
+547.67
+15.00
+562.67
+15
+37.104046
+-86.988726
+566.22
+15.00
+581.22
+16
+37.104048
+-86.988640
+561.83
+15.00
+576.83
+17
+37.103719
+-86.988645
+576.37
+15.00
+591.37
+18
+37.103719
+-86.988728
+583.18
+15.00
+598.18
+19
+37.103372
+-86.988720
+595.87
+15.00
+610.87
+20
+37.103364
+-86.988905
+607.73
+15.00
+622.73
+21
+37.103055
+-86.988895
+598.09
+15.00
+613.09
+22
+37.103051
+-86.989021
+606.83
+15.00
+621.83
+23
+37.102735
+-86.989023
+615.66
+15.00
+630.66
+24
+37.102720
+-86.990936
+622.39
+15.00
+637.39
+25
+37.103034
+-86.990936
+610.17
+15.00
+625.17
+26
+37.103034
+-86.991330
+608.91
+15.00
+623.91
+27
+37.102713
+-86.991336
+615.04
+15.00
+630.04
+28
+37.102720
+-86.992816
+628.46
+15.00
+643.46
+29
+37.103340
+-86.992821
+602.59
+15.00
+617.59
+30
+37.103338
+-86.992588
+599.27
+15.00
+614.27
+31
+37.103665
+-86.992593
+585.08
+15.00
+600.08
+32
+37.103682
+-86.991185
+580.02
+15.00
+595.02
+33
+37.104656
+-86.991199
+541.67
+15.00
+556.67
+34
+37.104660
+-86.990963
+547.76
+15.00
+562.76
+35
+37.105727
+-86.990968
+506.98
+15.00
+521.98
+36
+37.105727
+-86.990906
+506.42
+15.00
+521.42
+37
+37.106388
+-86.990922
+496.49
+15.00
+511.49
+38
+37.106390
+-86.990829
+496.19
+15.00
+511.19
+Page 26 of 265
+
+ 
+Name: Main 3b6 
+Axis tracking: Single-axis rotation 
+Backtracking: Shade-slope 
+Tracking axis orientation: 180.0° 
+Max tracking angle: 60.0° 
+Resting angle: 0.0° 
+Ground Coverage Ratio: 0.45 
+Rated power: - 
+Panel material: Smooth glass with AR coating 
+Reflectivity: Vary with sun 
+Slope error: correlate with material 
+Page 27 of 265
+
+ 
+Vertex
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+Height above ground (ft)
+Total elevation (ft)
+1
+37.102570
+-86.995066
+604.56
+15.00
+619.56
+2
+37.102626
+-86.989010
+620.20
+15.00
+635.20
+3
+37.102309
+-86.989007
+640.62
+15.00
+655.62
+4
+37.102313
+-86.988785
+646.36
+15.00
+661.36
+5
+37.102632
+-86.988785
+625.08
+15.00
+640.08
+6
+37.102666
+-86.985542
+612.62
+15.00
+627.62
+7
+37.102356
+-86.985539
+609.70
+15.00
+624.70
+8
+37.102358
+-86.985150
+587.12
+15.00
+602.12
+9
+37.102677
+-86.985150
+584.73
+15.00
+599.73
+10
+37.102700
+-86.982986
+494.62
+15.00
+509.62
+11
+37.102369
+-86.982972
+493.06
+15.00
+508.06
+12
+37.102362
+-86.983157
+500.97
+15.00
+515.97
+13
+37.102048
+-86.983144
+496.08
+15.00
+511.08
+14
+37.102035
+-86.983581
+517.75
+15.00
+532.75
+15
+37.101723
+-86.983571
+514.16
+15.00
+529.16
+16
+37.101710
+-86.984061
+518.56
+15.00
+533.56
+17
+37.101374
+-86.984051
+515.11
+15.00
+530.11
+18
+37.101366
+-86.984651
+514.14
+15.00
+529.14
+19
+37.101090
+-86.984649
+503.53
+15.00
+518.53
+20
+37.101061
+-86.986022
+602.48
+15.00
+617.48
+21
+37.100716
+-86.986021
+598.69
+15.00
+613.69
+22
+37.100712
+-86.986494
+627.83
+15.00
+642.83
+23
+37.100299
+-86.986481
+612.38
+15.00
+627.38
+24
+37.100292
+-86.987206
+647.03
+15.00
+662.03
+25
+37.099988
+-86.987196
+637.22
+15.00
+652.22
+26
+37.099986
+-86.987134
+632.28
+15.00
+647.28
+27
+37.099646
+-86.987128
+647.85
+15.00
+662.85
+28
+37.099643
+-86.986705
+641.94
+15.00
+656.94
+29
+37.098672
+-86.986678
+677.60
+15.00
+692.60
+30
+37.098605
+-86.994539
+556.69
+15.00
+571.69
+31
+37.098912
+-86.994540
+531.02
+15.00
+546.02
+32
+37.098913
+-86.994590
+529.39
+15.00
+544.39
+33
+37.099233
+-86.994591
+523.16
+15.00
+538.16
+34
+37.099236
+-86.994717
+520.87
+15.00
+535.87
+35
+37.099564
+-86.994711
+518.11
+15.00
+533.11
+36
+37.099565
+-86.994771
+517.87
+15.00
+532.87
+37
+37.100211
+-86.994766
+526.82
+15.00
+541.82
+38
+37.100213
+-86.994557
+530.80
+15.00
+545.80
+39
+37.100536
+-86.994559
+534.72
+15.00
+549.72
+40
+37.100538
+-86.994471
+537.60
+15.00
+552.60
+41
+37.100936
+-86.994479
+549.38
+15.00
+564.38
+42
+37.100936
+-86.994723
+545.80
+15.00
+560.80
+43
+37.101272
+-86.994728
+579.08
+15.00
+594.08
+44
+37.101285
+-86.995058
+550.09
+15.00
+565.09
+Page 28 of 265
+
+ 
+Name: Main 3b7 
+Axis tracking: Single-axis rotation 
+Backtracking: Shade-slope 
+Tracking axis orientation: 180.0° 
+Max tracking angle: 60.0° 
+Resting angle: 0.0° 
+Ground Coverage Ratio: 0.45 
+Rated power: - 
+Panel material: Smooth glass with AR coating 
+Reflectivity: Vary with sun 
+Slope error: correlate with material 
+Page 29 of 265
+
+ 
+Vertex
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+Height above ground (ft)
+Total elevation (ft)
+1
+37.098494
+-86.994264
+575.29
+15.00
+590.29
+2
+37.098542
+-86.989069
+662.47
+15.00
+677.47
+3
+37.098244
+-86.989045
+680.03
+15.00
+695.03
+4
+37.098255
+-86.988326
+660.65
+15.00
+675.65
+5
+37.098554
+-86.988336
+658.94
+15.00
+673.94
+6
+37.098576
+-86.986596
+675.25
+15.00
+690.25
+7
+37.099641
+-86.986604
+641.35
+15.00
+656.35
+8
+37.099643
+-86.986459
+641.35
+15.00
+656.35
+9
+37.099979
+-86.986462
+622.88
+15.00
+637.88
+10
+37.099977
+-86.985947
+620.81
+15.00
+635.81
+11
+37.100306
+-86.985957
+596.35
+15.00
+611.35
+12
+37.100306
+-86.985356
+601.32
+15.00
+616.32
+13
+37.100632
+-86.985365
+579.94
+15.00
+594.94
+14
+37.100649
+-86.983018
+542.55
+15.00
+557.55
+15
+37.100326
+-86.983007
+547.39
+15.00
+562.39
+16
+37.100321
+-86.983069
+550.80
+15.00
+565.80
+17
+37.099998
+-86.983055
+552.98
+15.00
+567.98
+18
+37.099996
+-86.983122
+556.42
+15.00
+571.42
+19
+37.099376
+-86.983098
+556.12
+15.00
+571.12
+20
+37.099382
+-86.982596
+552.04
+15.00
+567.04
+21
+37.099673
+-86.982599
+553.19
+15.00
+568.19
+22
+37.099673
+-86.982446
+562.85
+15.00
+577.85
+23
+37.100018
+-86.982452
+549.31
+15.00
+564.31
+24
+37.100020
+-86.982363
+558.76
+15.00
+573.76
+25
+37.100375
+-86.982368
+545.76
+15.00
+560.76
+26
+37.100360
+-86.982041
+560.50
+15.00
+575.50
+27
+37.100672
+-86.982001
+538.94
+15.00
+553.94
+28
+37.100760
+-86.982189
+531.24
+15.00
+546.24
+29
+37.101102
+-86.982194
+521.81
+15.00
+536.81
+30
+37.101094
+-86.981371
+514.73
+15.00
+529.73
+31
+37.101427
+-86.981392
+503.90
+15.00
+518.90
+32
+37.101423
+-86.981097
+508.38
+15.00
+523.38
+33
+37.101765
+-86.981092
+502.01
+15.00
+517.01
+34
+37.101765
+-86.981231
+499.37
+15.00
+514.37
+35
+37.102026
+-86.981237
+487.46
+15.00
+502.46
+36
+37.102035
+-86.980963
+502.31
+15.00
+517.31
+37
+37.102373
+-86.980947
+490.23
+15.00
+505.23
+38
+37.102382
+-86.980614
+497.06
+15.00
+512.06
+39
+37.094988
+-86.980494
+688.30
+15.00
+703.30
+40
+37.094932
+-86.984624
+651.03
+15.00
+666.03
+41
+37.094622
+-86.984624
+659.34
+15.00
+674.34
+42
+37.094614
+-86.986518
+678.57
+15.00
+693.57
+43
+37.095243
+-86.986529
+660.12
+15.00
+675.12
+44
+37.095240
+-86.986781
+656.06
+15.00
+671.06
+45
+37.094915
+-86.986840
+669.62
+15.00
+684.62
+46
+37.094611
+-86.987019
+679.18
+15.00
+694.18
+47
+37.094609
+-86.987270
+682.01
+15.00
+697.01
+48
+37.094158
+-86.987285
+680.63
+15.00
+695.63
+49
+37.094149
+-86.987588
+683.30
+15.00
+698.30
+50
+37.093826
+-86.987577
+682.79
+15.00
+697.79
+51
+37.093822
+-86.987636
+683.21
+15.00
+698.21
+52
+37.093169
+-86.987620
+666.34
+15.00
+681.34
+53
+37.093161
+-86.988280
+673.28
+15.00
+688.28
+54
+37.092883
+-86.988272
+661.20
+15.00
+676.20
+55
+37.092879
+-86.988454
+660.98
+15.00
+675.98
+56
+37.093159
+-86.988460
+673.82
+15.00
+688.82
+57
+37.093157
+-86.989066
+650.67
+15.00
+665.67
+58
+37.092868
+-86.989063
+651.02
+15.00
+666.02
+59
+37.092866
+-86.989798
+645.10
+15.00
+660.10
+Page 30 of 265
+
+ 
+Page 31 of 265
+
+ 
+Name: South 
+Axis tracking: Single-axis rotation 
+Backtracking: Shade-slope 
+Tracking axis orientation: 180.0° 
+Max tracking angle: 60.0° 
+Resting angle: 0.0° 
+Ground Coverage Ratio: 0.45 
+Rated power: - 
+Panel material: Smooth glass with AR coating 
+Reflectivity: Vary with sun 
+Slope error: correlate with material 
+Vertex
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+Height above ground (ft)
+Total elevation (ft)
+1
+37.085612
+-86.970225
+551.30
+15.00
+566.30
+2
+37.085625
+-86.969595
+559.51
+15.00
+574.51
+3
+37.085340
+-86.969584
+561.50
+15.00
+576.50
+4
+37.085345
+-86.969227
+564.69
+15.00
+579.69
+5
+37.085049
+-86.969219
+568.23
+15.00
+583.23
+6
+37.085052
+-86.968886
+562.80
+15.00
+577.80
+7
+37.084645
+-86.968873
+569.56
+15.00
+584.56
+8
+37.084645
+-86.969495
+568.04
+15.00
+583.04
+9
+37.084048
+-86.969477
+571.06
+15.00
+586.06
+10
+37.084033
+-86.970236
+554.40
+15.00
+569.40
+11
+37.083691
+-86.970230
+553.13
+15.00
+568.13
+12
+37.083682
+-86.970761
+546.63
+15.00
+561.63
+13
+37.083342
+-86.970764
+544.74
+15.00
+559.74
+14
+37.083331
+-86.971284
+537.38
+15.00
+552.38
+15
+37.083680
+-86.971284
+538.01
+15.00
+553.01
+16
+37.083682
+-86.972062
+518.10
+15.00
+533.10
+17
+37.083338
+-86.972051
+511.94
+15.00
+526.94
+18
+37.083348
+-86.973149
+490.52
+15.00
+505.52
+19
+37.083627
+-86.973165
+488.64
+15.00
+503.64
+20
+37.083616
+-86.972848
+494.33
+15.00
+509.33
+21
+37.083962
+-86.972851
+500.72
+15.00
+515.72
+22
+37.083962
+-86.972768
+503.03
+15.00
+518.03
+23
+37.084268
+-86.972765
+517.73
+15.00
+532.73
+24
+37.084273
+-86.972526
+525.92
+15.00
+540.92
+25
+37.084654
+-86.972529
+530.14
+15.00
+545.14
+26
+37.084656
+-86.972373
+535.55
+15.00
+550.55
+27
+37.084966
+-86.972376
+535.92
+15.00
+550.92
+28
+37.084968
+-86.972070
+540.85
+15.00
+555.85
+29
+37.084646
+-86.972072
+540.15
+15.00
+555.15
+30
+37.084656
+-86.971148
+556.48
+15.00
+571.48
+31
+37.084335
+-86.971134
+551.05
+15.00
+566.05
+32
+37.084339
+-86.970956
+552.76
+15.00
+567.76
+33
+37.084010
+-86.970944
+550.06
+15.00
+565.06
+34
+37.084018
+-86.970566
+547.68
+15.00
+562.68
+35
+37.084348
+-86.970579
+555.46
+15.00
+570.46
+36
+37.084352
+-86.970297
+557.28
+15.00
+572.28
+37
+37.084649
+-86.970305
+556.55
+15.00
+571.55
+38
+37.084662
+-86.970005
+559.24
+15.00
+574.24
+39
+37.084975
+-86.970016
+552.34
+15.00
+567.34
+40
+37.085184
+-86.970217
+550.73
+15.00
+565.73
+Page 32 of 265
+
+ 
+Name: West Bottom 
+Axis tracking: Single-axis rotation 
+Backtracking: Shade-slope 
+Tracking axis orientation: 180.0° 
+Max tracking angle: 60.0° 
+Resting angle: 0.0° 
+Ground Coverage Ratio: 0.45 
+Rated power: - 
+Panel material: Smooth glass with AR coating 
+Reflectivity: Vary with sun 
+Slope error: correlate with material 
+Vertex
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+Height above ground (ft)
+Total elevation (ft)
+1
+37.097996
+-86.997289
+494.24
+15.00
+509.24
+2
+37.098005
+-86.996181
+505.63
+15.00
+520.63
+3
+37.097709
+-86.996105
+511.67
+15.00
+526.67
+4
+37.097372
+-86.996096
+519.36
+15.00
+534.36
+5
+37.097370
+-86.995500
+523.05
+15.00
+538.05
+6
+37.097712
+-86.995492
+523.60
+15.00
+538.60
+7
+37.097713
+-86.995179
+526.55
+15.00
+541.55
+8
+37.097047
+-86.995021
+533.57
+15.00
+548.57
+9
+37.096738
+-86.994895
+529.10
+15.00
+544.10
+10
+37.096315
+-86.994893
+514.29
+15.00
+529.29
+11
+37.096313
+-86.994745
+514.92
+15.00
+529.92
+12
+37.095460
+-86.994741
+501.88
+15.00
+516.88
+13
+37.093166
+-86.993948
+536.54
+15.00
+551.54
+14
+37.092832
+-86.993948
+533.29
+15.00
+548.29
+15
+37.092838
+-86.994345
+525.48
+15.00
+540.48
+16
+37.094133
+-86.995027
+512.51
+15.00
+527.51
+17
+37.095081
+-86.995791
+503.41
+15.00
+518.41
+18
+37.095421
+-86.995799
+496.68
+15.00
+511.68
+19
+37.095421
+-86.995716
+497.55
+15.00
+512.55
+20
+37.096396
+-86.995716
+513.60
+15.00
+528.60
+21
+37.096394
+-86.996735
+508.79
+15.00
+523.79
+22
+37.097673
+-86.997298
+503.15
+15.00
+518.15
+Page 33 of 265
+
+ 
+Name: West top 
+Axis tracking: Single-axis rotation 
+Backtracking: Shade-slope 
+Tracking axis orientation: 180.0° 
+Max tracking angle: 60.0° 
+Resting angle: 0.0° 
+Ground Coverage Ratio: 0.45 
+Rated power: - 
+Panel material: Smooth glass with AR coating 
+Reflectivity: Vary with sun 
+Slope error: correlate with material 
+Vertex
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+Height above ground (ft)
+Total elevation (ft)
+1
+37.100422
+-86.997928
+512.53
+15.00
+527.53
+2
+37.100392
+-86.996260
+524.98
+15.00
+539.98
+3
+37.100071
+-86.996260
+521.81
+15.00
+536.81
+4
+37.100067
+-86.995847
+520.23
+15.00
+535.23
+5
+37.099724
+-86.995863
+514.28
+15.00
+529.28
+6
+37.099716
+-86.996517
+518.89
+15.00
+533.89
+7
+37.099433
+-86.996528
+504.63
+15.00
+519.63
+8
+37.099429
+-86.997225
+509.33
+15.00
+524.33
+9
+37.099087
+-86.997236
+492.59
+15.00
+507.59
+10
+37.099087
+-86.997445
+493.68
+15.00
+508.68
+11
+37.098783
+-86.997456
+485.48
+15.00
+500.48
+12
+37.098783
+-86.997644
+483.09
+15.00
+498.09
+13
+37.099095
+-86.997628
+491.79
+15.00
+506.79
+14
+37.100024
+-86.997939
+514.93
+15.00
+529.93
+Page 34 of 265
+
+Route Receptors
+ 
+Name: Forgy Mill Rd 
+Path type: Two-way 
+Observer view angle: 50.0° 
+Vertex
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+Height above ground (ft)
+Total elevation (ft)
+1
+37.079370
+-86.987004
+557.34
+5.00
+562.34
+2
+37.079798
+-86.984954
+532.84
+5.00
+537.84
+3
+37.080012
+-86.983538
+531.80
+5.00
+536.80
+4
+37.080226
+-86.982701
+535.24
+5.00
+540.24
+5
+37.081749
+-86.978678
+497.08
+5.00
+502.08
+6
+37.082263
+-86.977798
+488.50
+5.00
+493.50
+7
+37.082408
+-86.977358
+491.35
+5.00
+496.35
+8
+37.082459
+-86.977027
+508.67
+5.00
+513.67
+9
+37.082467
+-86.975911
+533.52
+5.00
+538.52
+10
+37.082518
+-86.975578
+534.34
+5.00
+539.34
+11
+37.082724
+-86.975031
+526.64
+5.00
+531.64
+12
+37.082981
+-86.974548
+508.77
+5.00
+513.77
+13
+37.082972
+-86.974141
+495.30
+5.00
+500.30
+14
+37.082279
+-86.972499
+491.30
+5.00
+496.30
+15
+37.082176
+-86.972025
+500.98
+5.00
+505.98
+16
+37.082202
+-86.971446
+519.33
+5.00
+524.33
+17
+37.082390
+-86.970866
+530.40
+5.00
+535.40
+18
+37.083682
+-86.968849
+570.72
+5.00
+575.72
+19
+37.085009
+-86.967278
+531.32
+5.00
+536.32
+20
+37.086301
+-86.966109
+512.46
+5.00
+517.46
+21
+37.086755
+-86.965590
+522.83
+5.00
+527.83
+22
+37.087457
+-86.963959
+498.75
+5.00
+503.75
+23
+37.088124
+-86.962521
+543.86
+5.00
+548.86
+24
+37.088655
+-86.961985
+549.83
+5.00
+554.83
+25
+37.090058
+-86.961343
+549.63
+5.00
+554.63
+26
+37.090520
+-86.961064
+545.76
+5.00
+550.76
+27
+37.091170
+-86.960355
+529.28
+5.00
+534.28
+28
+37.092043
+-86.958896
+543.80
+5.00
+548.80
+29
+37.092830
+-86.956987
+556.89
+5.00
+561.89
+Page 35 of 265
+
+ 
+Name: Free Ln 
+Path type: Two-way 
+Observer view angle: 50.0° 
+Vertex
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+Height above ground (ft)
+Total elevation (ft)
+1
+37.114983
+-86.989032
+412.74
+5.00
+417.74
+2
+37.114547
+-86.989022
+413.71
+5.00
+418.71
+3
+37.113794
+-86.988952
+431.60
+5.00
+436.60
+4
+37.113366
+-86.988931
+446.28
+5.00
+451.28
+5
+37.110209
+-86.988024
+477.02
+5.00
+482.02
+Page 36 of 265
+
+ 
+Name: Mason-Poyner Rd 
+Path type: Two-way 
+Observer view angle: 50.0° 
+Vertex
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+Height above ground (ft)
+Total elevation (ft)
+1
+37.091323
+-86.995998
+505.66
+5.00
+510.66
+2
+37.091786
+-86.994121
+517.30
+5.00
+522.30
+3
+37.091922
+-86.992790
+540.15
+5.00
+545.15
+4
+37.091777
+-86.992426
+559.79
+5.00
+564.79
+5
+37.091589
+-86.992072
+567.51
+5.00
+572.51
+6
+37.091495
+-86.991782
+565.82
+5.00
+570.82
+7
+37.091460
+-86.991385
+564.89
+5.00
+569.89
+8
+37.091589
+-86.991042
+567.44
+5.00
+572.44
+9
+37.092350
+-86.989175
+632.00
+5.00
+637.00
+10
+37.092462
+-86.988907
+638.24
+5.00
+643.24
+11
+37.092453
+-86.988724
+639.65
+5.00
+644.65
+12
+37.092436
+-86.988434
+639.56
+5.00
+644.56
+13
+37.092487
+-86.988263
+641.32
+5.00
+646.32
+14
+37.092676
+-86.987952
+643.89
+5.00
+648.89
+15
+37.092804
+-86.987469
+646.00
+5.00
+651.00
+16
+37.092898
+-86.987329
+650.35
+5.00
+655.35
+17
+37.093805
+-86.987179
+679.46
+5.00
+684.46
+18
+37.093976
+-86.986965
+680.17
+5.00
+685.17
+19
+37.094053
+-86.986707
+681.66
+5.00
+686.66
+20
+37.094310
+-86.982641
+688.31
+5.00
+693.31
+Name: Pendley Mill Rd 
+Path type: Two-way 
+Observer view angle: 50.0° 
+Vertex
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+Height above ground (ft)
+Total elevation (ft)
+1
+37.091452
+-86.991363
+563.75
+5.00
+568.75
+2
+37.088234
+-86.989432
+548.12
+5.00
+553.12
+3
+37.087870
+-86.989282
+561.20
+5.00
+566.20
+4
+37.087571
+-86.989164
+566.47
+5.00
+571.47
+Page 37 of 265
+
+ 
+Name: SR-949 
+Path type: Two-way 
+Observer view angle: 50.0° 
+Vertex
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+Height above ground (ft)
+Total elevation (ft)
+1
+37.115047
+-86.990302
+411.51
+5.00
+416.51
+2
+37.115009
+-86.989325
+413.01
+5.00
+418.01
+3
+37.114966
+-86.988515
+416.24
+5.00
+421.24
+4
+37.114692
+-86.984000
+483.86
+5.00
+488.86
+5
+37.115120
+-86.980379
+479.87
+5.00
+484.87
+6
+37.115150
+-86.979357
+482.67
+0.00
+482.67
+7
+37.115103
+-86.978260
+469.62
+5.00
+474.62
+8
+37.114151
+-86.967968
+431.05
+5.00
+436.05
+9
+37.113732
+-86.967110
+437.36
+5.00
+442.36
+10
+37.111799
+-86.965962
+440.61
+5.00
+445.61
+11
+37.109643
+-86.964712
+456.02
+5.00
+461.02
+12
+37.109108
+-86.964122
+447.02
+5.00
+452.02
+13
+37.108150
+-86.962502
+444.75
+0.00
+444.75
+14
+37.107594
+-86.961671
+448.78
+5.00
+453.78
+15
+37.107037
+-86.960989
+468.10
+5.00
+473.10
+16
+37.106721
+-86.960702
+482.65
+0.00
+482.65
+17
+37.106490
+-86.960544
+492.95
+5.00
+497.95
+18
+37.106029
+-86.960159
+503.67
+5.00
+508.67
+Page 38 of 265
+
+ 
+Name: US-431 
+Path type: Two-way 
+Observer view angle: 50.0° 
+Vertex
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+Height above ground (ft)
+Total elevation (ft)
+1
+37.108188
+-87.000659
+456.43
+5.00
+461.43
+2
+37.107697
+-87.000509
+459.40
+5.00
+464.40
+3
+37.107261
+-87.000412
+461.36
+5.00
+466.36
+4
+37.106615
+-87.000337
+473.51
+5.00
+478.51
+5
+37.105614
+-87.000166
+478.22
+5.00
+483.22
+6
+37.104442
+-87.000005
+481.14
+5.00
+486.14
+7
+37.103047
+-86.999715
+475.53
+5.00
+480.53
+8
+37.100694
+-86.999114
+487.98
+5.00
+492.98
+9
+37.097262
+-86.998073
+498.06
+5.00
+503.06
+10
+37.094721
+-86.996915
+490.82
+5.00
+495.82
+11
+37.094395
+-86.996850
+488.72
+5.00
+493.72
+12
+37.093250
+-86.996689
+493.41
+5.00
+498.41
+13
+37.091599
+-86.996228
+507.82
+5.00
+512.82
+14
+37.091256
+-86.996099
+508.38
+5.00
+513.38
+15
+37.090666
+-86.995853
+510.89
+5.00
+515.89
+16
+37.090265
+-86.995618
+509.51
+5.00
+514.51
+17
+37.088416
+-86.994223
+536.87
+5.00
+541.87
+18
+37.087766
+-86.993815
+546.66
+5.00
+551.66
+19
+37.086131
+-86.993257
+538.86
+5.00
+543.86
+20
+37.083255
+-86.992485
+554.43
+5.00
+559.43
+21
+37.082426
+-86.992432
+571.22
+5.00
+576.22
+22
+37.081724
+-86.992700
+567.14
+5.00
+572.14
+23
+37.081022
+-86.993258
+557.35
+5.00
+562.35
+24
+37.078925
+-86.995888
+553.25
+5.00
+558.25
+Page 39 of 265
+
+Flight Path Receptors
+ 
+Name: Bowling Green Regional 1 
+Description: 
+Threshold height: 50 ft 
+Direction: 30.0° 
+Glide slope: 3.0° 
+Pilot view restricted? Yes 
+Vertical view: 30.0° 
+Azimuthal view: 50.0° 
+Point
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+Height above ground (ft)
+Total elevation (ft)
+Threshold
+36.958920
+-86.424886
+539.93
+50.00
+589.93
+Two-mile
+36.933881
+-86.442998
+548.55
+594.82
+1143.36
+Name: Bowling Green Regional 2 
+Description: 
+Threshold height: 50 ft 
+Direction: 300.0° 
+Glide slope: 3.0° 
+Pilot view restricted? Yes 
+Vertical view: 30.0° 
+Azimuthal view: 50.0° 
+Point
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+Height above ground (ft)
+Total elevation (ft)
+Threshold
+36.959113
+-86.415081
+525.34
+50.00
+575.34
+Two-mile
+36.944657
+-86.383709
+571.86
+556.90
+1128.77
+Page 40 of 265
+
+ 
+Name: Bowling Green Regional 3 
+Description: 
+Threshold height: 50 ft 
+Direction: 210.0° 
+Glide slope: 3.0° 
+Pilot view restricted? Yes 
+Vertical view: 30.0° 
+Azimuthal view: 50.0° 
+Point
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+Height above ground (ft)
+Total elevation (ft)
+Threshold
+36.973940
+-86.414129
+516.70
+50.00
+566.70
+Two-mile
+36.998979
+-86.396012
+432.17
+687.96
+1120.13
+Name: Bowling Green Regional 4 
+Description: 
+Threshold height: 50 ft 
+Direction: 120.0° 
+Glide slope: 3.0° 
+Pilot view restricted? Yes 
+Vertical view: 30.0° 
+Azimuthal view: 50.0° 
+Point
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+Height above ground (ft)
+Total elevation (ft)
+Threshold
+36.964024
+-86.425708
+526.85
+50.00
+576.85
+Two-mile
+36.978480
+-86.457083
+501.00
+629.27
+1130.28
+Name: Muhlenberg County Airport 1 
+Description: 
+Threshold height: 50 ft 
+Direction: 60.0° 
+Glide slope: 3.0° 
+Pilot view restricted? Yes 
+Vertical view: 30.0° 
+Azimuthal view: 50.0° 
+Point
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+Height above ground (ft)
+Total elevation (ft)
+Threshold
+37.222551
+-87.163250
+416.63
+50.00
+466.63
+Two-mile
+37.208095
+-87.194731
+487.40
+532.66
+1020.05
+Page 41 of 265
+
+ 
+Name: Muhlenberg County Airport 2 
+Description: 
+Threshold height: 50 ft 
+Direction: 235.0° 
+Glide slope: 3.0° 
+Pilot view restricted? Yes 
+Vertical view: 30.0° 
+Azimuthal view: 50.0° 
+Point
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+Height above ground (ft)
+Total elevation (ft)
+Threshold
+37.229312
+-87.150750
+423.08
+50.00
+473.08
+Two-mile
+37.245896
+-87.120969
+507.47
+519.03
+1026.50
+Name: Russellville-Logan Airport 1 
+Description: 
+Threshold height: 50 ft 
+Direction: 63.0° 
+Glide slope: 3.0° 
+Pilot view restricted? Yes 
+Vertical view: 30.0° 
+Azimuthal view: 50.0° 
+Point
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+Height above ground (ft)
+Total elevation (ft)
+Threshold
+36.796952
+-86.817505
+691.23
+50.00
+741.23
+Two-mile
+36.783826
+-86.849714
+602.54
+692.12
+1294.66
+Name: Russellville-Logan Airport 2 
+Description: 
+Threshold height: 50 ft 
+Direction: 243.5° 
+Glide slope: 3.0° 
+Pilot view restricted? Yes 
+Vertical view: 30.0° 
+Azimuthal view: 50.0° 
+Point
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+Height above ground (ft)
+Total elevation (ft)
+Threshold
+36.802236
+-86.804338
+651.82
+50.00
+701.82
+Two-mile
+36.815136
+-86.771985
+642.27
+612.98
+1255.25
+Page 42 of 265
+
+Discrete Observation Point Receptors
+Name
+ID
+Latitude (°)
+Longitude (°)
+Elevation (ft)
+Height (ft)
+OP 1
+1
+37.107447
+-86.987901
+504.79
+6.00
+OP 2
+2
+37.110356
+-86.988545
+470.35
+6.00
+OP 3
+3
+37.111392
+-86.988681
+471.65
+6.00
+OP 4
+4
+37.112094
+-86.988842
+467.91
+6.00
+OP 5
+5
+37.113206
+-86.989153
+447.12
+6.00
+OP 6
+6
+37.113805
+-86.990011
+436.14
+6.00
+OP 7
+7
+37.114555
+-86.985351
+463.45
+6.00
+OP 8
+8
+37.114653
+-86.981012
+483.58
+6.00
+OP 9
+9
+37.114820
+-86.980695
+489.12
+6.00
+OP 10
+10
+37.114602
+-86.979107
+476.01
+6.00
+OP 11
+11
+37.113845
+-86.975476
+442.91
+6.00
+OP 12
+12
+37.112681
+-86.967729
+458.54
+6.00
+OP 13
+13
+37.087489
+-86.967100
+558.23
+6.00
+OP 14
+14
+37.084892
+-86.967143
+532.03
+6.00
+OP 15
+15
+37.082717
+-86.969660
+541.34
+6.00
+OP 16
+16
+37.082328
+-86.970529
+536.06
+6.00
+OP 17
+17
+37.085001
+-86.977696
+549.70
+6.00
+OP 18
+18
+37.083178
+-86.976344
+546.07
+6.00
+OP 19
+19
+37.093942
+-86.982539
+691.61
+6.00
+OP 20
+20
+37.091503
+-86.990644
+573.39
+6.00
+OP 21
+21
+37.090823
+-86.991202
+551.63
+6.00
+OP 22
+22
+37.089633
+-86.989936
+557.96
+6.00
+OP 23
+23
+37.089300
+-86.989829
+555.74
+6.00
+OP 24
+24
+37.087545
+-86.988729
+580.01
+6.00
+OP 25
+25
+37.097710
+-86.998584
+494.24
+6.00
+OP 26
+26
+37.098848
+-86.999034
+490.62
+6.00
+OP 27
+27
+37.100444
+-86.999512
+494.02
+6.00
+OP 28
+28
+37.098120
+-86.998632
+489.29
+6.00
+OP 29
+29
+37.100915
+-86.998901
+492.52
+6.00
+OP 30
+30
+37.102042
+-86.998945
+484.58
+6.00
+OP 31
+31
+37.102557
+-86.999108
+493.84
+6.00
+OP 32
+32
+37.103559
+-86.999417
+491.06
+6.00
+OP 33
+33
+37.104213
+-86.999614
+483.45
+6.00
+OP 34
+34
+37.114190
+-86.986030
+451.53
+6.00
+OP 35
+35
+37.115394
+-86.981388
+490.42
+6.00
+OP 36
+36
+37.115317
+-86.981871
+487.80
+6.00
+OP 37
+37
+37.115214
+-86.982273
+499.43
+6.00
+OP 38
+38
+37.115219
+-86.985009
+488.88
+6.00
+OP 39
+39
+37.115131
+-86.986080
+465.81
+6.00
+ 
+Page 43 of 265
+
+Obstruction Components
+ 
+Name: Double OB1 
+Top height: 8.0 ft 
+Vertex
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+1
+37.107550
+-86.989042
+504.46
+2
+37.106755
+-86.988892
+507.27
+3
+37.106840
+-86.986757
+523.54
+4
+37.113155
+-86.988109
+428.27
+5
+37.113522
+-86.983045
+455.63
+6
+37.112342
+-86.979150
+474.09
+Name: Double OB3 
+Top height: 8.0 ft 
+Vertex
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+1
+37.111704
+-86.975620
+455.49
+2
+37.113853
+-86.974101
+417.21
+3
+37.113902
+-86.972554
+419.23
+4
+37.110365
+-86.970738
+414.41
+5
+37.109826
+-86.971349
+424.62
+Page 44 of 265
+
+ 
+Name: Double OB4 
+Top height: 8.0 ft 
+Vertex
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+1
+37.100879
+-86.998531
+494.44
+2
+37.094452
+-86.996353
+500.79
+3
+37.091662
+-86.995848
+501.84
+4
+37.092244
+-86.992801
+574.16
+5
+37.091774
+-86.991471
+601.54
+6
+37.092689
+-86.989186
+645.89
+7
+37.093092
+-86.987598
+663.28
+8
+37.094136
+-86.987297
+680.12
+9
+37.094829
+-86.978650
+676.32
+10
+37.091354
+-86.977749
+668.30
+Name: Obstruction 1 
+Top height: 8.0 ft 
+Vertex
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+1
+37.107542
+-86.989171
+505.29
+2
+37.106566
+-86.988989
+502.84
+3
+37.106575
+-86.986843
+534.68
+4
+37.113326
+-86.988334
+430.50
+5
+37.113694
+-86.983024
+458.30
+6
+37.112444
+-86.979022
+460.87
+7
+37.109544
+-86.977981
+528.67
+8
+37.109304
+-86.977112
+506.40
+9
+37.113745
+-86.974001
+413.90
+10
+37.113779
+-86.972681
+430.37
+Page 45 of 265
+
+ 
+Name: Obstruction 10 
+Top height: 8.0 ft 
+Vertex
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+1
+37.086434
+-86.975507
+518.10
+2
+37.082908
+-86.973501
+487.35
+Name: Obstruction 3 
+Top height: 8.0 ft 
+Vertex
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+1
+37.113749
+-86.972654
+430.98
+2
+37.110412
+-86.970927
+416.46
+3
+37.109805
+-86.971603
+421.31
+4
+37.108735
+-86.968835
+423.57
+5
+37.102891
+-86.970632
+488.47
+6
+37.102908
+-86.972391
+468.21
+7
+37.098827
+-86.969484
+515.35
+8
+37.096379
+-86.968947
+590.48
+9
+37.094437
+-86.971104
+538.24
+10
+37.093247
+-86.971200
+577.68
+Page 46 of 265
+
+ 
+Name: Obstruction 4 
+Top height: 8.0 ft 
+Vertex
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+1
+37.100915
+-86.998709
+493.33
+2
+37.094548
+-86.996596
+496.23
+3
+37.091501
+-86.995984
+502.47
+4
+37.092092
+-86.992819
+564.00
+5
+37.091621
+-86.991456
+590.81
+6
+37.092580
+-86.989064
+644.77
+7
+37.092982
+-86.987508
+658.33
+8
+37.094077
+-86.987219
+680.14
+9
+37.094719
+-86.978839
+685.83
+10
+37.091399
+-86.977960
+672.65
+Name: Obstruction 6 
+Top height: 8.0 ft 
+Vertex
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+1
+37.100936
+-86.998708
+493.28
+2
+37.100396
+-86.994738
+528.54
+3
+37.103075
+-86.997292
+526.99
+4
+37.103289
+-86.995425
+557.03
+5
+37.107558
+-86.994309
+500.79
+6
+37.107567
+-86.989170
+503.79
+Page 47 of 265
+
+ 
+Name: Obstruction 7 
+Top height: 8.0 ft 
+Vertex
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+1
+37.091334
+-86.977958
+672.02
+2
+37.089734
+-86.974386
+571.61
+3
+37.086490
+-86.975383
+522.43
+4
+37.082904
+-86.973313
+486.14
+5
+37.082570
+-86.972379
+497.60
+6
+37.083049
+-86.971360
+535.96
+7
+37.082741
+-86.970781
+538.90
+8
+37.085797
+-86.966833
+518.42
+9
+37.092318
+-86.973796
+586.10
+10
+37.093217
+-86.971242
+577.76
+Name: Obstruction 9 
+Top height: 8.0 ft 
+Vertex
+Latitude (°)
+Longitude (°)
+Ground elevation (ft)
+1
+37.088510
+-86.969542
+520.57
+2
+37.085784
+-86.966677
+519.15
+3
+37.084072
+-86.968860
+575.52
+Page 48 of 265
+
+Glare Analysis Results
+Summary of Results Glare with potential for temporary after-image predicted 
+PV Array
+Tilt
+Orient
+Annual Green Glare
+Annual Yellow Glare
+Energy
+°
+°
+min
+hr
+min
+hr
+kWh
+East 1
+SA
+tracking
+SA
+tracking
+0
+0.0
+0
+0.0
+-
+East 2
+SA
+tracking
+SA
+tracking
+4,762
+79.4
+2,545
+42.4
+-
+Main 1a1
+SA
+tracking
+SA
+tracking
+1,749
+29.1
+2,000
+33.3
+-
+Main 1a2
+SA
+tracking
+SA
+tracking
+16
+0.3
+0
+0.0
+-
+Main 1c
+SA
+tracking
+SA
+tracking
+151
+2.5
+0
+0.0
+-
+Main 1d
+SA
+tracking
+SA
+tracking
+885
+14.8
+18
+0.3
+-
+Main 2a
+SA
+tracking
+SA
+tracking
+2,861
+47.7
+0
+0.0
+-
+Main 2c1
+SA
+tracking
+SA
+tracking
+52
+0.9
+0
+0.0
+-
+Main 2c2
+SA
+tracking
+SA
+tracking
+0
+0.0
+0
+0.0
+-
+Main 3a
+SA
+tracking
+SA
+tracking
+54
+0.9
+0
+0.0
+-
+Main 3b1
+SA
+tracking
+SA
+tracking
+2,085
+34.8
+0
+0.0
+-
+Main 3b2
+SA
+tracking
+SA
+tracking
+0
+0.0
+0
+0.0
+-
+Main 3b3
+SA
+tracking
+SA
+tracking
+0
+0.0
+0
+0.0
+-
+Main 3b4
+SA
+tracking
+SA
+tracking
+11,060
+184.3
+86
+1.4
+-
+Main 3b5
+SA
+tracking
+SA
+tracking
+3,077
+51.3
+0
+0.0
+-
+Main 3b6
+SA
+tracking
+SA
+tracking
+0
+0.0
+0
+0.0
+-
+Main 3b7
+SA
+tracking
+SA
+tracking
+40,135
+668.9
+17,482
+291.4
+-
+South 
+SA
+tracking
+SA
+tracking
+0
+0.0
+0
+0.0
+-
+West Bottom
+SA
+tracking
+SA
+tracking
+0
+0.0
+0
+0.0
+-
+West top
+SA
+tracking
+SA
+tracking
+352
+5.9
+306
+5.1
+-
+Total glare received by each receptor; may include duplicate times of glare from multiple reflective surfaces. 
+ 
+Page 49 of 265
+
+Receptor
+Annual Green Glare
+Annual Yellow Glare
+min
+hr
+min
+hr
+Forgy Mill Rd
+52
+0.9
+0
+0.0
+Free Ln
+4,450
+74.2
+1,251
+20.9
+Mason-Poyner Rd
+15,874
+264.6
+17,255
+287.6
+Pendley Mill Rd
+0
+0.0
+0
+0.0
+SR-949
+5,097
+85.0
+2,493
+41.5
+US-431
+4,723
+78.7
+313
+5.2
+Bowling Green
+Regional 1
+0
+0.0
+0
+0.0
+Bowling Green
+Regional 2
+151
+2.5
+0
+0.0
+Bowling Green
+Regional 3
+0
+0.0
+0
+0.0
+Bowling Green
+Regional 4
+0
+0.0
+0
+0.0
+Muhlenberg County
+Airport 1
+0
+0.0
+0
+0.0
+Muhlenberg County
+Airport 2
+0
+0.0
+0
+0.0
+Russellville-Logan
+Airport 1
+0
+0.0
+0
+0.0
+Russellville-Logan
+Airport 2
+0
+0.0
+0
+0.0
+OP 1
+719
+12.0
+0
+0.0
+OP 2
+2,414
+40.2
+0
+0.0
+OP 3
+4,151
+69.2
+70
+1.2
+OP 4
+4,950
+82.5
+256
+4.3
+OP 5
+3,320
+55.3
+215
+3.6
+OP 6
+2,770
+46.2
+208
+3.5
+OP 7
+1,377
+22.9
+0
+0.0
+OP 8
+973
+16.2
+0
+0.0
+OP 9
+1,306
+21.8
+0
+0.0
+OP 10
+1,077
+17.9
+0
+0.0
+OP 11
+141
+2.4
+0
+0.0
+OP 12
+1,092
+18.2
+70
+1.2
+OP 13
+0
+0.0
+0
+0.0
+OP 14
+0
+0.0
+0
+0.0
+OP 15
+0
+0.0
+0
+0.0
+OP 16
+0
+0.0
+0
+0.0
+OP 17
+0
+0.0
+0
+0.0
+OP 18
+0
+0.0
+0
+0.0
+OP 19
+852
+14.2
+0
+0.0
+OP 20
+0
+0.0
+0
+0.0
+OP 21
+0
+0.0
+0
+0.0
+OP 22
+0
+0.0
+0
+0.0
+ 
+Page 50 of 265
+
+Receptor
+Annual Green Glare
+Annual Yellow Glare
+min
+hr
+min
+hr
+OP 23
+0
+0.0
+0
+0.0
+OP 24
+0
+0.0
+0
+0.0
+OP 25
+338
+5.6
+0
+0.0
+OP 26
+458
+7.6
+306
+5.1
+OP 27
+0
+0.0
+0
+0.0
+OP 28
+244
+4.1
+0
+0.0
+OP 29
+0
+0.0
+0
+0.0
+OP 30
+0
+0.0
+0
+0.0
+OP 31
+0
+0.0
+0
+0.0
+OP 32
+0
+0.0
+0
+0.0
+OP 33
+213
+3.5
+0
+0.0
+OP 34
+875
+14.6
+0
+0.0
+OP 35
+1,387
+23.1
+0
+0.0
+OP 36
+1,664
+27.7
+0
+0.0
+OP 37
+2,251
+37.5
+0
+0.0
+OP 38
+2,439
+40.6
+0
+0.0
+OP 39
+1,881
+31.4
+0
+0.0
+ 
+Page 51 of 265
+
+PV: East 1 no glare found 
+Receptor results ordered by category of glare
+Receptor
+Annual Green Glare
+Annual Yellow Glare
+min
+hr
+min
+hr
+Forgy Mill Rd
+0
+0.0
+0
+0.0
+Free Ln
+0
+0.0
+0
+0.0
+Mason-Poyner Rd
+0
+0.0
+0
+0.0
+Pendley Mill Rd
+0
+0.0
+0
+0.0
+SR-949
+0
+0.0
+0
+0.0
+US-431
+0
+0.0
+0
+0.0
+Bowling Green Regional 1
+0
+0.0
+0
+0.0
+Bowling Green Regional 2
+0
+0.0
+0
+0.0
+Bowling Green Regional 3
+0
+0.0
+0
+0.0
+Bowling Green Regional 4
+0
+0.0
+0
+0.0
+Muhlenberg County Airport 1
+0
+0.0
+0
+0.0
+Muhlenberg County Airport 2
+0
+0.0
+0
+0.0
+Russellville-Logan Airport 1
+0
+0.0
+0
+0.0
+Russellville-Logan Airport 2
+0
+0.0
+0
+0.0
+OP 1
+0
+0.0
+0
+0.0
+OP 2
+0
+0.0
+0
+0.0
+OP 3
+0
+0.0
+0
+0.0
+OP 4
+0
+0.0
+0
+0.0
+OP 5
+0
+0.0
+0
+0.0
+OP 6
+0
+0.0
+0
+0.0
+OP 7
+0
+0.0
+0
+0.0
+OP 8
+0
+0.0
+0
+0.0
+OP 9
+0
+0.0
+0
+0.0
+OP 10
+0
+0.0
+0
+0.0
+OP 11
+0
+0.0
+0
+0.0
+OP 12
+0
+0.0
+0
+0.0
+OP 13
+0
+0.0
+0
+0.0
+OP 14
+0
+0.0
+0
+0.0
+OP 15
+0
+0.0
+0
+0.0
+OP 16
+0
+0.0
+0
+0.0
+OP 17
+0
+0.0
+0
+0.0
+OP 18
+0
+0.0
+0
+0.0
+OP 19
+0
+0.0
+0
+0.0
+OP 20
+0
+0.0
+0
+0.0
+OP 21
+0
+0.0
+0
+0.0
+OP 22
+0
+0.0
+0
+0.0
+OP 23
+0
+0.0
+0
+0.0
+ 
+Page 52 of 265
+
+Receptor
+Annual Green Glare
+Annual Yellow Glare
+min
+hr
+min
+hr
+OP 24
+0
+0.0
+0
+0.0
+OP 25
+0
+0.0
+0
+0.0
+OP 26
+0
+0.0
+0
+0.0
+OP 27
+0
+0.0
+0
+0.0
+OP 28
+0
+0.0
+0
+0.0
+OP 29
+0
+0.0
+0
+0.0
+OP 30
+0
+0.0
+0
+0.0
+OP 31
+0
+0.0
+0
+0.0
+OP 32
+0
+0.0
+0
+0.0
+OP 33
+0
+0.0
+0
+0.0
+OP 34
+0
+0.0
+0
+0.0
+OP 35
+0
+0.0
+0
+0.0
+OP 36
+0
+0.0
+0
+0.0
+OP 37
+0
+0.0
+0
+0.0
+OP 38
+0
+0.0
+0
+0.0
+OP 39
+0
+0.0
+0
+0.0
+ 
+East 1 and Route: Forgy Mill Rd
+No glare found
+East 1 and Route: Free Ln
+No glare found
+East 1 and Route: Mason-Poyner Rd
+No glare found
+East 1 and Route: Pendley Mill Rd
+No glare found
+East 1 and Route: SR-949
+No glare found
+East 1 and Route: US-431
+No glare found
+East 1 and FP: Bowling Green Regional 1
+No glare found
+East 1 and FP: Bowling Green Regional 2
+No glare found
+Page 53 of 265
+
+ 
+East 1 and FP: Bowling Green Regional 3
+No glare found
+East 1 and FP: Bowling Green Regional 4
+No glare found
+East 1 and FP: Muhlenberg County Airport 1
+No glare found
+East 1 and FP: Muhlenberg County Airport 2
+No glare found
+East 1 and FP: Russellville-Logan Airport 1
+No glare found
+East 1 and FP: Russellville-Logan Airport 2
+No glare found
+East 1 and OP 1
+No glare found
+East 1 and OP 2
+No glare found
+East 1 and OP 3
+No glare found
+East 1 and OP 4
+No glare found
+East 1 and OP 5
+No glare found
+East 1 and OP 6
+No glare found
+East 1 and OP 7
+No glare found
+East 1 and OP 8
+No glare found
+Page 54 of 265
+
+ 
+East 1 and OP 9
+No glare found
+East 1 and OP 10
+No glare found
+East 1 and OP 11
+No glare found
+East 1 and OP 12
+No glare found
+East 1 and OP 13
+No glare found
+East 1 and OP 14
+No glare found
+East 1 and OP 15
+No glare found
+East 1 and OP 16
+No glare found
+East 1 and OP 17
+No glare found
+East 1 and OP 18
+No glare found
+East 1 and OP 19
+No glare found
+East 1 and OP 20
+No glare found
+East 1 and OP 21
+No glare found
+East 1 and OP 22
+No glare found
+Page 55 of 265
+
+ 
+East 1 and OP 23
+No glare found
+East 1 and OP 24
+No glare found
+East 1 and OP 25
+No glare found
+East 1 and OP 26
+No glare found
+East 1 and OP 27
+No glare found
+East 1 and OP 28
+No glare found
+East 1 and OP 29
+No glare found
+East 1 and OP 30
+No glare found
+East 1 and OP 31
+No glare found
+East 1 and OP 32
+No glare found
+East 1 and OP 33
+No glare found
+East 1 and OP 34
+No glare found
+East 1 and OP 35
+No glare found
+East 1 and OP 36
+No glare found
+Page 56 of 265
+
+ 
+East 1 and OP 37
+No glare found
+East 1 and OP 38
+No glare found
+East 1 and OP 39
+No glare found
+Page 57 of 265
+
+PV: East 2 potential temporary after-image 
+Receptor results ordered by category of glare
+Receptor
+Annual Green Glare
+Annual Yellow Glare
+min
+hr
+min
+hr
+SR-949
+2,629
+43.8
+2,475
+41.2
+Forgy Mill Rd
+0
+0.0
+0
+0.0
+Free Ln
+0
+0.0
+0
+0.0
+Mason-Poyner Rd
+0
+0.0
+0
+0.0
+Pendley Mill Rd
+0
+0.0
+0
+0.0
+US-431
+0
+0.0
+0
+0.0
+Bowling Green Regional 1
+0
+0.0
+0
+0.0
+Bowling Green Regional 2
+0
+0.0
+0
+0.0
+Bowling Green Regional 3
+0
+0.0
+0
+0.0
+Bowling Green Regional 4
+0
+0.0
+0
+0.0
+Muhlenberg County Airport 1
+0
+0.0
+0
+0.0
+Muhlenberg County Airport 2
+0
+0.0
+0
+0.0
+Russellville-Logan Airport 1
+0
+0.0
+0
+0.0
+Russellville-Logan Airport 2
+0
+0.0
+0
+0.0
+OP 12
+1,016
+16.9
+70
+1.2
+OP 8
+51
+0.8
+0
+0.0
+OP 9
+140
+2.3
+0
+0.0
+OP 10
+318
+5.3
+0
+0.0
+OP 11
+77
+1.3
+0
+0.0
+OP 35
+96
+1.6
+0
+0.0
+OP 36
+219
+3.6
+0
+0.0
+OP 37
+216
+3.6
+0
+0.0
+OP 1
+0
+0.0
+0
+0.0
+OP 2
+0
+0.0
+0
+0.0
+OP 3
+0
+0.0
+0
+0.0
+OP 4
+0
+0.0
+0
+0.0
+OP 5
+0
+0.0
+0
+0.0
+OP 6
+0
+0.0
+0
+0.0
+OP 7
+0
+0.0
+0
+0.0
+OP 13
+0
+0.0
+0
+0.0
+OP 14
+0
+0.0
+0
+0.0
+OP 15
+0
+0.0
+0
+0.0
+OP 16
+0
+0.0
+0
+0.0
+OP 17
+0
+0.0
+0
+0.0
+OP 18
+0
+0.0
+0
+0.0
+OP 19
+0
+0.0
+0
+0.0
+OP 20
+0
+0.0
+0
+0.0
+OP 21
+0
+0.0
+0
+0.0
+OP 22
+0
+0.0
+0
+0.0
+ 
+Page 58 of 265
+
+Receptor
+Annual Green Glare
+Annual Yellow Glare
+min
+hr
+min
+hr
+OP 23
+0
+0.0
+0
+0.0
+OP 24
+0
+0.0
+0
+0.0
+OP 25
+0
+0.0
+0
+0.0
+OP 26
+0
+0.0
+0
+0.0
+OP 27
+0
+0.0
+0
+0.0
+OP 28
+0
+0.0
+0
+0.0
+OP 29
+0
+0.0
+0
+0.0
+OP 30
+0
+0.0
+0
+0.0
+OP 31
+0
+0.0
+0
+0.0
+OP 32
+0
+0.0
+0
+0.0
+OP 33
+0
+0.0
+0
+0.0
+OP 34
+0
+0.0
+0
+0.0
+OP 38
+0
+0.0
+0
+0.0
+OP 39
+0
+0.0
+0
+0.0
+ 
+Page 59 of 265
+
+ 
+East 2 and Route: SR-949
+Yellow glare: 2,475 min.
+Green glare: 2,629 min.
+East 2 and Route: Forgy Mill Rd
+No glare found
+Page 60 of 265
+
+ 
+East 2 and Route: Free Ln
+No glare found
+East 2 and Route: Mason-Poyner Rd
+No glare found
+East 2 and Route: Pendley Mill Rd
+No glare found
+East 2 and Route: US-431
+No glare found
+East 2 and FP: Bowling Green Regional 1
+No glare found
+East 2 and FP: Bowling Green Regional 2
+No glare found
+East 2 and FP: Bowling Green Regional 3
+No glare found
+East 2 and FP: Bowling Green Regional 4
+No glare found
+East 2 and FP: Muhlenberg County Airport 1
+No glare found
+East 2 and FP: Muhlenberg County Airport 2
+No glare found
+East 2 and FP: Russellville-Logan Airport 1
+No glare found
+East 2 and FP: Russellville-Logan Airport 2
+No glare found
+Page 61 of 265
+
+ 
+East 2 and OP 12
+Yellow glare: 70 min.
+Green glare: 1,016 min.
+Page 62 of 265
+
+ 
+East 2 and OP 8
+Yellow glare: none
+Green glare: 51 min.
+Page 63 of 265
+
+ 
+East 2 and OP 9
+Yellow glare: none
+Green glare: 140 min.
+Page 64 of 265
+
+ 
+East 2 and OP 10
+Yellow glare: none
+Green glare: 318 min.
+Page 65 of 265
+
+ 
+East 2 and OP 11
+Yellow glare: none
+Green glare: 77 min.
+Page 66 of 265
+
+ 
+East 2 and OP 35
+Yellow glare: none
+Green glare: 96 min.
+Page 67 of 265
+
+ 
+East 2 and OP 36
+Yellow glare: none
+Green glare: 219 min.
+Page 68 of 265
+
+ 
+East 2 and OP 37
+Yellow glare: none
+Green glare: 216 min.
+East 2 and OP 1
+No glare found
+East 2 and OP 2
+No glare found
+East 2 and OP 3
+No glare found
+East 2 and OP 4
+No glare found
+East 2 and OP 5
+No glare found
+Page 69 of 265
+
+ 
+East 2 and OP 6
+No glare found
+East 2 and OP 7
+No glare found
+East 2 and OP 13
+No glare found
+East 2 and OP 14
+No glare found
+East 2 and OP 15
+No glare found
+East 2 and OP 16
+No glare found
+East 2 and OP 17
+No glare found
+East 2 and OP 18
+No glare found
+East 2 and OP 19
+No glare found
+East 2 and OP 20
+No glare found
+East 2 and OP 21
+No glare found
+East 2 and OP 22
+No glare found
+East 2 and OP 23
+No glare found
+East 2 and OP 24
+No glare found
+Page 70 of 265
+
+ 
+East 2 and OP 25
+No glare found
+East 2 and OP 26
+No glare found
+East 2 and OP 27
+No glare found
+East 2 and OP 28
+No glare found
+East 2 and OP 29
+No glare found
+East 2 and OP 30
+No glare found
+East 2 and OP 31
+No glare found
+East 2 and OP 32
+No glare found
+East 2 and OP 33
+No glare found
+East 2 and OP 34
+No glare found
+East 2 and OP 38
+No glare found
+East 2 and OP 39
+No glare found
+Page 71 of 265
+
+PV: Main 1a1 potential temporary after-image 
+Receptor results ordered by category of glare
+Receptor
+Annual Green Glare
+Annual Yellow Glare
+min
+hr
+min
+hr
+Free Ln
+467
+7.8
+1,251
+20.9
+SR-949
+183
+3.0
+0
+0.0
+Forgy Mill Rd
+0
+0.0
+0
+0.0
+Mason-Poyner Rd
+0
+0.0
+0
+0.0
+Pendley Mill Rd
+0
+0.0
+0
+0.0
+US-431
+0
+0.0
+0
+0.0
+Bowling Green Regional 1
+0
+0.0
+0
+0.0
+Bowling Green Regional 2
+0
+0.0
+0
+0.0
+Bowling Green Regional 3
+0
+0.0
+0
+0.0
+Bowling Green Regional 4
+0
+0.0
+0
+0.0
+Muhlenberg County Airport 1
+0
+0.0
+0
+0.0
+Muhlenberg County Airport 2
+0
+0.0
+0
+0.0
+Russellville-Logan Airport 1
+0
+0.0
+0
+0.0
+Russellville-Logan Airport 2
+0
+0.0
+0
+0.0
+OP 3
+146
+2.4
+70
+1.2
+OP 4
+334
+5.6
+256
+4.3
+OP 5
+294
+4.9
+215
+3.6
+OP 6
+325
+5.4
+208
+3.5
+OP 1
+0
+0.0
+0
+0.0
+OP 2
+0
+0.0
+0
+0.0
+OP 7
+0
+0.0
+0
+0.0
+OP 8
+0
+0.0
+0
+0.0
+OP 9
+0
+0.0
+0
+0.0
+OP 10
+0
+0.0
+0
+0.0
+OP 11
+0
+0.0
+0
+0.0
+OP 12
+0
+0.0
+0
+0.0
+OP 13
+0
+0.0
+0
+0.0
+OP 14
+0
+0.0
+0
+0.0
+OP 15
+0
+0.0
+0
+0.0
+OP 16
+0
+0.0
+0
+0.0
+OP 17
+0
+0.0
+0
+0.0
+OP 18
+0
+0.0
+0
+0.0
+OP 19
+0
+0.0
+0
+0.0
+OP 20
+0
+0.0
+0
+0.0
+OP 21
+0
+0.0
+0
+0.0
+OP 22
+0
+0.0
+0
+0.0
+OP 23
+0
+0.0
+0
+0.0
+OP 24
+0
+0.0
+0
+0.0
+OP 25
+0
+0.0
+0
+0.0
+ 
+Page 72 of 265
+
+Receptor
+Annual Green Glare
+Annual Yellow Glare
+min
+hr
+min
+hr
+OP 26
+0
+0.0
+0
+0.0
+OP 27
+0
+0.0
+0
+0.0
+OP 28
+0
+0.0
+0
+0.0
+OP 29
+0
+0.0
+0
+0.0
+OP 30
+0
+0.0
+0
+0.0
+OP 31
+0
+0.0
+0
+0.0
+OP 32
+0
+0.0
+0
+0.0
+OP 33
+0
+0.0
+0
+0.0
+OP 34
+0
+0.0
+0
+0.0
+OP 35
+0
+0.0
+0
+0.0
+OP 36
+0
+0.0
+0
+0.0
+OP 37
+0
+0.0
+0
+0.0
+OP 38
+0
+0.0
+0
+0.0
+OP 39
+0
+0.0
+0
+0.0
+ 
+Page 73 of 265
+
+ 
+Main 1a1 and Route: Free Ln
+Yellow glare: 1,251 min.
+Green glare: 467 min.
+Page 74 of 265
+
+ 
+Main 1a1 and Route: SR-949
+Yellow glare: none
+Green glare: 183 min.
+Main 1a1 and Route: Forgy Mill Rd
+No glare found
+Page 75 of 265
+
+ 
+Main 1a1 and Route: Mason-Poyner Rd
+No glare found
+Main 1a1 and Route: Pendley Mill Rd
+No glare found
+Main 1a1 and Route: US-431
+No glare found
+Main 1a1 and FP: Bowling Green Regional 1
+No glare found
+Main 1a1 and FP: Bowling Green Regional 2
+No glare found
+Main 1a1 and FP: Bowling Green Regional 3
+No glare found
+Main 1a1 and FP: Bowling Green Regional 4
+No glare found
+Main 1a1 and FP: Muhlenberg County Airport 1
+No glare found
+Main 1a1 and FP: Muhlenberg County Airport 2
+No glare found
+Main 1a1 and FP: Russellville-Logan Airport 1
+No glare found
+Main 1a1 and FP: Russellville-Logan Airport 2
+No glare found
+Page 76 of 265
+
+ 
+Main 1a1 and OP 3
+Yellow glare: 70 min.
+Green glare: 146 min.
+Page 77 of 265
+
+ 
+Main 1a1 and OP 4
+Yellow glare: 256 min.
+Green glare: 334 min.
+Page 78 of 265
+
+ 
+Main 1a1 and OP 5
+Yellow glare: 215 min.
+Green glare: 294 min.
+Page 79 of 265
+
+ 
+Main 1a1 and OP 6
+Yellow glare: 208 min.
+Green glare: 325 min.
+Main 1a1 and OP 1
+No glare found
+Main 1a1 and OP 2
+No glare found
+Main 1a1 and OP 7
+No glare found
+Main 1a1 and OP 8
+No glare found
+Main 1a1 and OP 9
+No glare found
+Page 80 of 265
+
+ 
+Main 1a1 and OP 10
+No glare found
+Main 1a1 and OP 11
+No glare found
+Main 1a1 and OP 12
+No glare found
+Main 1a1 and OP 13
+No glare found
+Main 1a1 and OP 14
+No glare found
+Main 1a1 and OP 15
+No glare found
+Main 1a1 and OP 16
+No glare found
+Main 1a1 and OP 17
+No glare found
+Main 1a1 and OP 18
+No glare found
+Main 1a1 and OP 19
+No glare found
+Main 1a1 and OP 20
+No glare found
+Main 1a1 and OP 21
+No glare found
+Main 1a1 and OP 22
+No glare found
+Main 1a1 and OP 23
+No glare found
+Page 81 of 265
+
+ 
+Main 1a1 and OP 24
+No glare found
+Main 1a1 and OP 25
+No glare found
+Main 1a1 and OP 26
+No glare found
+Main 1a1 and OP 27
+No glare found
+Main 1a1 and OP 28
+No glare found
+Main 1a1 and OP 29
+No glare found
+Main 1a1 and OP 30
+No glare found
+Main 1a1 and OP 31
+No glare found
+Main 1a1 and OP 32
+No glare found
+Main 1a1 and OP 33
+No glare found
+Main 1a1 and OP 34
+No glare found
+Main 1a1 and OP 35
+No glare found
+Main 1a1 and OP 36
+No glare found
+Main 1a1 and OP 37
+No glare found
+Page 82 of 265
+
+ 
+Main 1a1 and OP 38
+No glare found
+Main 1a1 and OP 39
+No glare found
+Page 83 of 265
+
+PV: Main 1a2 low potential for temporary after-image 
+Receptor results ordered by category of glare
+Receptor
+Annual Green Glare
+Annual Yellow Glare
+min
+hr
+min
+hr
+Forgy Mill Rd
+0
+0.0
+0
+0.0
+Free Ln
+0
+0.0
+0
+0.0
+Mason-Poyner Rd
+0
+0.0
+0
+0.0
+Pendley Mill Rd
+0
+0.0
+0
+0.0
+SR-949
+0
+0.0
+0
+0.0
+US-431
+0
+0.0
+0
+0.0
+Bowling Green Regional 1
+0
+0.0
+0
+0.0
+Bowling Green Regional 2
+0
+0.0
+0
+0.0
+Bowling Green Regional 3
+0
+0.0
+0
+0.0
+Bowling Green Regional 4
+0
+0.0
+0
+0.0
+Muhlenberg County Airport 1
+0
+0.0
+0
+0.0
+Muhlenberg County Airport 2
+0
+0.0
+0
+0.0
+Russellville-Logan Airport 1
+0
+0.0
+0
+0.0
+Russellville-Logan Airport 2
+0
+0.0
+0
+0.0
+OP 9
+16
+0.3
+0
+0.0
+OP 1
+0
+0.0
+0
+0.0
+OP 2
+0
+0.0
+0
+0.0
+OP 3
+0
+0.0
+0
+0.0
+OP 4
+0
+0.0
+0
+0.0
+OP 5
+0
+0.0
+0
+0.0
+OP 6
+0
+0.0
+0
+0.0
+OP 7
+0
+0.0
+0
+0.0
+OP 8
+0
+0.0
+0
+0.0
+OP 10
+0
+0.0
+0
+0.0
+OP 11
+0
+0.0
+0
+0.0
+OP 12
+0
+0.0
+0
+0.0
+OP 13
+0
+0.0
+0
+0.0
+OP 14
+0
+0.0
+0
+0.0
+OP 15
+0
+0.0
+0
+0.0
+OP 16
+0
+0.0
+0
+0.0
+OP 17
+0
+0.0
+0
+0.0
+OP 18
+0
+0.0
+0
+0.0
+OP 19
+0
+0.0
+0
+0.0
+OP 20
+0
+0.0
+0
+0.0
+OP 21
+0
+0.0
+0
+0.0
+OP 22
+0
+0.0
+0
+0.0
+OP 23
+0
+0.0
+0
+0.0
+OP 24
+0
+0.0
+0
+0.0
+OP 25
+0
+0.0
+0
+0.0
+ 
+Page 84 of 265
+
+Receptor
+Annual Green Glare
+Annual Yellow Glare
+min
+hr
+min
+hr
+OP 26
+0
+0.0
+0
+0.0
+OP 27
+0
+0.0
+0
+0.0
+OP 28
+0
+0.0
+0
+0.0
+OP 29
+0
+0.0
+0
+0.0
+OP 30
+0
+0.0
+0
+0.0
+OP 31
+0
+0.0
+0
+0.0
+OP 32
+0
+0.0
+0
+0.0
+OP 33
+0
+0.0
+0
+0.0
+OP 34
+0
+0.0
+0
+0.0
+OP 35
+0
+0.0
+0
+0.0
+OP 36
+0
+0.0
+0
+0.0
+OP 37
+0
+0.0
+0
+0.0
+OP 38
+0
+0.0
+0
+0.0
+OP 39
+0
+0.0
+0
+0.0
+ 
+Main 1a2 and Route: Forgy Mill Rd
+No glare found
+Main 1a2 and Route: Free Ln
+No glare found
+Main 1a2 and Route: Mason-Poyner Rd
+No glare found
+Main 1a2 and Route: Pendley Mill Rd
+No glare found
+Main 1a2 and Route: SR-949
+No glare found
+Main 1a2 and Route: US-431
+No glare found
+Main 1a2 and FP: Bowling Green Regional 1
+No glare found
+Main 1a2 and FP: Bowling Green Regional 2
+No glare found
+Main 1a2 and FP: Bowling Green Regional 3
+No glare found
+Page 85 of 265
+
+ 
+Main 1a2 and FP: Bowling Green Regional 4
+No glare found
+Main 1a2 and FP: Muhlenberg County Airport 1
+No glare found
+Main 1a2 and FP: Muhlenberg County Airport 2
+No glare found
+Main 1a2 and FP: Russellville-Logan Airport 1
+No glare found
+Main 1a2 and FP: Russellville-Logan Airport 2
+No glare found
+Main 1a2 and OP 9
+Yellow glare: none
+Green glare: 16 min.
+Page 86 of 265
+
+ 
+Main 1a2 and OP 1
+No glare found
+Main 1a2 and OP 2
+No glare found
+Main 1a2 and OP 3
+No glare found
+Main 1a2 and OP 4
+No glare found
+Main 1a2 and OP 5
+No glare found
+Main 1a2 and OP 6
+No glare found
+Main 1a2 and OP 7
+No glare found
+Main 1a2 and OP 8
+No glare found
+Main 1a2 and OP 10
+No glare found
+Main 1a2 and OP 11
+No glare found
+Main 1a2 and OP 12
+No glare found
+Main 1a2 and OP 13
+No glare found
+Main 1a2 and OP 14
+No glare found
+Main 1a2 and OP 15
+No glare found
+Page 87 of 265
+
+ 
+Main 1a2 and OP 16
+No glare found
+Main 1a2 and OP 17
+No glare found
+Main 1a2 and OP 18
+No glare found
+Main 1a2 and OP 19
+No glare found
+Main 1a2 and OP 20
+No glare found
+Main 1a2 and OP 21
+No glare found
+Main 1a2 and OP 22
+No glare found
+Main 1a2 and OP 23
+No glare found
+Main 1a2 and OP 24
+No glare found
+Main 1a2 and OP 25
+No glare found
+Main 1a2 and OP 26
+No glare found
+Main 1a2 and OP 27
+No glare found
+Main 1a2 and OP 28
+No glare found
+Main 1a2 and OP 29
+No glare found
+Page 88 of 265
+
+ 
+Main 1a2 and OP 30
+No glare found
+Main 1a2 and OP 31
+No glare found
+Main 1a2 and OP 32
+No glare found
+Main 1a2 and OP 33
+No glare found
+Main 1a2 and OP 34
+No glare found
+Main 1a2 and OP 35
+No glare found
+Main 1a2 and OP 36
+No glare found
+Main 1a2 and OP 37
+No glare found
+Main 1a2 and OP 38
+No glare found
+Main 1a2 and OP 39
+No glare found
+Page 89 of 265
+
+PV: Main 1c low potential for temporary after-image 
+Receptor results ordered by category of glare
+Receptor
+Annual Green Glare
+Annual Yellow Glare
+min
+hr
+min
+hr
+Forgy Mill Rd
+0
+0.0
+0
+0.0
+Free Ln
+0
+0.0
+0
+0.0
+Mason-Poyner Rd
+0
+0.0
+0
+0.0
+Pendley Mill Rd
+0
+0.0
+0
+0.0
+SR-949
+0
+0.0
+0
+0.0
+US-431
+0
+0.0
+0
+0.0
+Bowling Green Regional 2
+151
+2.5
+0
+0.0
+Bowling Green Regional 1
+0
+0.0
+0
+0.0
+Bowling Green Regional 3
+0
+0.0
+0
+0.0
+Bowling Green Regional 4
+0
+0.0
+0
+0.0
+Muhlenberg County Airport 1
+0
+0.0
+0
+0.0
+Muhlenberg County Airport 2
+0
+0.0
+0
+0.0
+Russellville-Logan Airport 1
+0
+0.0
+0
+0.0
+Russellville-Logan Airport 2
+0
+0.0
+0
+0.0
+OP 1
+0
+0.0
+0
+0.0
+OP 2
+0
+0.0
+0
+0.0
+OP 3
+0
+0.0
+0
+0.0
+OP 4
+0
+0.0
+0
+0.0
+OP 5
+0
+0.0
+0
+0.0
+OP 6
+0
+0.0
+0
+0.0
+OP 7
+0
+0.0
+0
+0.0
+OP 8
+0
+0.0
+0
+0.0
+OP 9
+0
+0.0
+0
+0.0
+OP 10
+0
+0.0
+0
+0.0
+OP 11
+0
+0.0
+0
+0.0
+OP 12
+0
+0.0
+0
+0.0
+OP 13
+0
+0.0
+0
+0.0
+OP 14
+0
+0.0
+0
+0.0
+OP 15
+0
+0.0
+0
+0.0
+OP 16
+0
+0.0
+0
+0.0
+OP 17
+0
+0.0
+0
+0.0
+OP 18
+0
+0.0
+0
+0.0
+OP 19
+0
+0.0
+0
+0.0
+OP 20
+0
+0.0
+0
+0.0
+OP 21
+0
+0.0
+0
+0.0
+OP 22
+0
+0.0
+0
+0.0
+OP 23
+0
+0.0
+0
+0.0
+OP 24
+0
+0.0
+0
+0.0
+OP 25
+0
+0.0
+0
+0.0
+ 
+Page 90 of 265
+
+Receptor
+Annual Green Glare
+Annual Yellow Glare
+min
+hr
+min
+hr
+OP 26
+0
+0.0
+0
+0.0
+OP 27
+0
+0.0
+0
+0.0
+OP 28
+0
+0.0
+0
+0.0
+OP 29
+0
+0.0
+0
+0.0
+OP 30
+0
+0.0
+0
+0.0
+OP 31
+0
+0.0
+0
+0.0
+OP 32
+0
+0.0
+0
+0.0
+OP 33
+0
+0.0
+0
+0.0
+OP 34
+0
+0.0
+0
+0.0
+OP 35
+0
+0.0
+0
+0.0
+OP 36
+0
+0.0
+0
+0.0
+OP 37
+0
+0.0
+0
+0.0
+OP 38
+0
+0.0
+0
+0.0
+OP 39
+0
+0.0
+0
+0.0
+ 
+Main 1c and Route: Forgy Mill Rd
+No glare found
+Main 1c and Route: Free Ln
+No glare found
+Main 1c and Route: Mason-Poyner Rd
+No glare found
+Main 1c and Route: Pendley Mill Rd
+No glare found
+Main 1c and Route: SR-949
+No glare found
+Main 1c and Route: US-431
+No glare found
+Page 91 of 265
+
+ 
+Main 1c and FP: Bowling Green Regional 2
+Yellow glare: none
+Green glare: 151 min.
+Main 1c and FP: Bowling Green Regional 1
+No glare found
+Page 92 of 265
+
+ 
+Main 1c and FP: Bowling Green Regional 3
+No glare found
+Main 1c and FP: Bowling Green Regional 4
+No glare found
+Main 1c and FP: Muhlenberg County Airport 1
+No glare found
+Main 1c and FP: Muhlenberg County Airport 2
+No glare found
+Main 1c and FP: Russellville-Logan Airport 1
+No glare found
+Main 1c and FP: Russellville-Logan Airport 2
+No glare found
+Main 1c and OP 1
+No glare found
+Main 1c and OP 2
+No glare found
+Main 1c and OP 3
+No glare found
+Main 1c and OP 4
+No glare found
+Main 1c and OP 5
+No glare found
+Main 1c and OP 6
+No glare found
+Main 1c and OP 7
+No glare found
+Main 1c and OP 8
+No glare found
+Page 93 of 265
+
+ 
+Main 1c and OP 9
+No glare found
+Main 1c and OP 10
+No glare found
+Main 1c and OP 11
+No glare found
+Main 1c and OP 12
+No glare found
+Main 1c and OP 13
+No glare found
+Main 1c and OP 14
+No glare found
+Main 1c and OP 15
+No glare found
+Main 1c and OP 16
+No glare found
+Main 1c and OP 17
+No glare found
+Main 1c and OP 18
+No glare found
+Main 1c and OP 19
+No glare found
+Main 1c and OP 20
+No glare found
+Main 1c and OP 21
+No glare found
+Main 1c and OP 22
+No glare found
+Page 94 of 265
+
+ 
+Main 1c and OP 23
+No glare found
+Main 1c and OP 24
+No glare found
+Main 1c and OP 25
+No glare found
+Main 1c and OP 26
+No glare found
+Main 1c and OP 27
+No glare found
+Main 1c and OP 28
+No glare found
+Main 1c and OP 29
+No glare found
+Main 1c and OP 30
+No glare found
+Main 1c and OP 31
+No glare found
+Main 1c and OP 32
+No glare found
+Main 1c and OP 33
+No glare found
+Main 1c and OP 34
+No glare found
+Main 1c and OP 35
+No glare found
+Main 1c and OP 36
+No glare found
+Page 95 of 265
+
+ 
+Main 1c and OP 37
+No glare found
+Main 1c and OP 38
+No glare found
+Main 1c and OP 39
+No glare found
+Page 96 of 265
+
+PV: Main 1d potential temporary after-image 
+Receptor results ordered by category of glare
+Receptor
+Annual Green Glare
+Annual Yellow Glare
+min
+hr
+min
+hr
+SR-949
+230
+3.8
+18
+0.3
+Free Ln
+171
+2.9
+0
+0.0
+Forgy Mill Rd
+0
+0.0
+0
+0.0
+Mason-Poyner Rd
+0
+0.0
+0
+0.0
+Pendley Mill Rd
+0
+0.0
+0
+0.0
+US-431
+0
+0.0
+0
+0.0
+Bowling Green Regional 1
+0
+0.0
+0
+0.0
+Bowling Green Regional 2
+0
+0.0
+0
+0.0
+Bowling Green Regional 3
+0
+0.0
+0
+0.0
+Bowling Green Regional 4
+0
+0.0
+0
+0.0
+Muhlenberg County Airport 1
+0
+0.0
+0
+0.0
+Muhlenberg County Airport 2
+0
+0.0
+0
+0.0
+Russellville-Logan Airport 1
+0
+0.0
+0
+0.0
+Russellville-Logan Airport 2
+0
+0.0
+0
+0.0
+OP 3
+37
+0.6
+0
+0.0
+OP 4
+61
+1.0
+0
+0.0
+OP 5
+34
+0.6
+0
+0.0
+OP 6
+20
+0.3
+0
+0.0
+OP 7
+23
+0.4
+0
+0.0
+OP 9
+60
+1.0
+0
+0.0
+OP 10
+68
+1.1
+0
+0.0
+OP 12
+56
+0.9
+0
+0.0
+OP 35
+50
+0.8
+0
+0.0
+OP 36
+21
+0.3
+0
+0.0
+OP 37
+33
+0.6
+0
+0.0
+OP 39
+21
+0.3
+0
+0.0
+OP 1
+0
+0.0
+0
+0.0
+OP 2
+0
+0.0
+0
+0.0
+OP 8
+0
+0.0
+0
+0.0
+OP 11
+0
+0.0
+0
+0.0
+OP 13
+0
+0.0
+0
+0.0
+OP 14
+0
+0.0
+0
+0.0
+OP 15
+0
+0.0
+0
+0.0
+OP 16
+0
+0.0
+0
+0.0
+OP 17
+0
+0.0
+0
+0.0
+OP 18
+0
+0.0
+0
+0.0
+OP 19
+0
+0.0
+0
+0.0
+OP 20
+0
+0.0
+0
+0.0
+OP 21
+0
+0.0
+0
+0.0
+ 
+Page 97 of 265
+
+Receptor
+Annual Green Glare
+Annual Yellow Glare
+min
+hr
+min
+hr
+OP 22
+0
+0.0
+0
+0.0
+OP 23
+0
+0.0
+0
+0.0
+OP 24
+0
+0.0
+0
+0.0
+OP 25
+0
+0.0
+0
+0.0
+OP 26
+0
+0.0
+0
+0.0
+OP 27
+0
+0.0
+0
+0.0
+OP 28
+0
+0.0
+0
+0.0
+OP 29
+0
+0.0
+0
+0.0
+OP 30
+0
+0.0
+0
+0.0
+OP 31
+0
+0.0
+0
+0.0
+OP 32
+0
+0.0
+0
+0.0
+OP 33
+0
+0.0
+0
+0.0
+OP 34
+0
+0.0
+0
+0.0
+OP 38
+0
+0.0
+0
+0.0
+ 
+Page 98 of 265
+
+ 
+Main 1d and Route: SR-949
+Yellow glare: 18 min.
+Green glare: 230 min.
+Page 99 of 265
+
+ 
+Main 1d and Route: Free Ln
+Yellow glare: none
+Green glare: 171 min.
+Main 1d and Route: Forgy Mill Rd
+No glare found
+Page 100 of 265
+
+ 
+Main 1d and Route: Mason-Poyner Rd
+No glare found
+Main 1d and Route: Pendley Mill Rd
+No glare found
+Main 1d and Route: US-431
+No glare found
+Main 1d and FP: Bowling Green Regional 1
+No glare found
+Main 1d and FP: Bowling Green Regional 2
+No glare found
+Main 1d and FP: Bowling Green Regional 3
+No glare found
+Main 1d and FP: Bowling Green Regional 4
+No glare found
+Main 1d and FP: Muhlenberg County Airport 1
+No glare found
+Main 1d and FP: Muhlenberg County Airport 2
+No glare found
+Main 1d and FP: Russellville-Logan Airport 1
+No glare found
+Main 1d and FP: Russellville-Logan Airport 2
+No glare found
+Page 101 of 265
+
+ 
+Main 1d and OP 3
+Yellow glare: none
+Green glare: 37 min.
+Page 102 of 265
+
+ 
+Main 1d and OP 4
+Yellow glare: none
+Green glare: 61 min.
+Page 103 of 265
+
+ 
+Main 1d and OP 5
+Yellow glare: none
+Green glare: 34 min.
+Page 104 of 265
+
+ 
+Main 1d and OP 6
+Yellow glare: none
+Green glare: 20 min.
+Page 105 of 265
+
+ 
+Main 1d and OP 7
+Yellow glare: none
+Green glare: 23 min.
+Page 106 of 265
+
+ 
+Main 1d and OP 9
+Yellow glare: none
+Green glare: 60 min.
+Page 107 of 265
+
+ 
+Main 1d and OP 10
+Yellow glare: none
+Green glare: 68 min.
+Page 108 of 265
+
+ 
+Main 1d and OP 12
+Yellow glare: none
+Green glare: 56 min.
+Page 109 of 265
+
+ 
+Main 1d and OP 35
+Yellow glare: none
+Green glare: 50 min.
+Page 110 of 265
+
+ 
+Main 1d and OP 36
+Yellow glare: none
+Green glare: 21 min.
+Page 111 of 265
+
+ 
+Main 1d and OP 37
+Yellow glare: none
+Green glare: 33 min.
+Page 112 of 265
+
+ 
+Main 1d and OP 39
+Yellow glare: none
+Green glare: 21 min.
+Main 1d and OP 1
+No glare found
+Main 1d and OP 2
+No glare found
+Main 1d and OP 8
+No glare found
+Main 1d and OP 11
+No glare found
+Main 1d and OP 13
+No glare found
+Page 113 of 265
+
+ 
+Main 1d and OP 14
+No glare found
+Main 1d and OP 15
+No glare found
+Main 1d and OP 16
+No glare found
+Main 1d and OP 17
+No glare found
+Main 1d and OP 18
+No glare found
+Main 1d and OP 19
+No glare found
+Main 1d and OP 20
+No glare found
+Main 1d and OP 21
+No glare found
+Main 1d and OP 22
+No glare found
+Main 1d and OP 23
+No glare found
+Main 1d and OP 24
+No glare found
+Main 1d and OP 25
+No glare found
+Main 1d and OP 26
+No glare found
+Main 1d and OP 27
+No glare found
+Page 114 of 265
+
+ 
+Main 1d and OP 28
+No glare found
+Main 1d and OP 29
+No glare found
+Main 1d and OP 30
+No glare found
+Main 1d and OP 31
+No glare found
+Main 1d and OP 32
+No glare found
+Main 1d and OP 33
+No glare found
+Main 1d and OP 34
+No glare found
+Main 1d and OP 38
+No glare found
+Page 115 of 265
+
+PV: Main 2a low potential for temporary after-image 
+Receptor results ordered by category of glare
+Receptor
+Annual Green Glare
+Annual Yellow Glare
+min
+hr
+min
+hr
+Mason-Poyner Rd
+2,009
+33.5
+0
+0.0
+Forgy Mill Rd
+0
+0.0
+0
+0.0
+Free Ln
+0
+0.0
+0
+0.0
+Pendley Mill Rd
+0
+0.0
+0
+0.0
+SR-949
+0
+0.0
+0
+0.0
+US-431
+0
+0.0
+0
+0.0
+Bowling Green Regional 1
+0
+0.0
+0
+0.0
+Bowling Green Regional 2
+0
+0.0
+0
+0.0
+Bowling Green Regional 3
+0
+0.0
+0
+0.0
+Bowling Green Regional 4
+0
+0.0
+0
+0.0
+Muhlenberg County Airport 1
+0
+0.0
+0
+0.0
+Muhlenberg County Airport 2
+0
+0.0
+0
+0.0
+Russellville-Logan Airport 1
+0
+0.0
+0
+0.0
+Russellville-Logan Airport 2
+0
+0.0
+0
+0.0
+OP 19
+852
+14.2
+0
+0.0
+OP 1
+0
+0.0
+0
+0.0
+OP 2
+0
+0.0
+0
+0.0
+OP 3
+0
+0.0
+0
+0.0
+OP 4
+0
+0.0
+0
+0.0
+OP 5
+0
+0.0
+0
+0.0
+OP 6
+0
+0.0
+0
+0.0
+OP 7
+0
+0.0
+0
+0.0
+OP 8
+0
+0.0
+0
+0.0
+OP 9
+0
+0.0
+0
+0.0
+OP 10
+0
+0.0
+0
+0.0
+OP 11
+0
+0.0
+0
+0.0
+OP 12
+0
+0.0
+0
+0.0
+OP 13
+0
+0.0
+0
+0.0
+OP 14
+0
+0.0
+0
+0.0
+OP 15
+0
+0.0
+0
+0.0
+OP 16
+0
+0.0
+0
+0.0
+OP 17
+0
+0.0
+0
+0.0
+OP 18
+0
+0.0
+0
+0.0
+OP 20
+0
+0.0
+0
+0.0
+OP 21
+0
+0.0
+0
+0.0
+OP 22
+0
+0.0
+0
+0.0
+OP 23
+0
+0.0
+0
+0.0
+OP 24
+0
+0.0
+0
+0.0
+OP 25
+0
+0.0
+0
+0.0
+ 
+Page 116 of 265
+
+Receptor
+Annual Green Glare
+Annual Yellow Glare
+min
+hr
+min
+hr
+OP 26
+0
+0.0
+0
+0.0
+OP 27
+0
+0.0
+0
+0.0
+OP 28
+0
+0.0
+0
+0.0
+OP 29
+0
+0.0
+0
+0.0
+OP 30
+0
+0.0
+0
+0.0
+OP 31
+0
+0.0
+0
+0.0
+OP 32
+0
+0.0
+0
+0.0
+OP 33
+0
+0.0
+0
+0.0
+OP 34
+0
+0.0
+0
+0.0
+OP 35
+0
+0.0
+0
+0.0
+OP 36
+0
+0.0
+0
+0.0
+OP 37
+0
+0.0
+0
+0.0
+OP 38
+0
+0.0
+0
+0.0
+OP 39
+0
+0.0
+0
+0.0
+ 
+Page 117 of 265
+
+ 
+Main 2a and Route: Mason-Poyner Rd
+Yellow glare: none
+Green glare: 2,009 min.
+Main 2a and Route: Forgy Mill Rd
+No glare found
+Page 118 of 265
+
+ 
+Main 2a and Route: Free Ln
+No glare found
+Main 2a and Route: Pendley Mill Rd
+No glare found
+Main 2a and Route: SR-949
+No glare found
+Main 2a and Route: US-431
+No glare found
+Main 2a and FP: Bowling Green Regional 1
+No glare found
+Main 2a and FP: Bowling Green Regional 2
+No glare found
+Main 2a and FP: Bowling Green Regional 3
+No glare found
+Main 2a and FP: Bowling Green Regional 4
+No glare found
+Main 2a and FP: Muhlenberg County Airport 1
+No glare found
+Main 2a and FP: Muhlenberg County Airport 2
+No glare found
+Main 2a and FP: Russellville-Logan Airport 1
+No glare found
+Main 2a and FP: Russellville-Logan Airport 2
+No glare found
+Page 119 of 265
+
+ 
+Main 2a and OP 19
+Yellow glare: none
+Green glare: 852 min.
+Main 2a and OP 1
+No glare found
+Main 2a and OP 2
+No glare found
+Main 2a and OP 3
+No glare found
+Main 2a and OP 4
+No glare found
+Main 2a and OP 5
+No glare found
+Page 120 of 265
+
+ 
+Main 2a and OP 6
+No glare found
+Main 2a and OP 7
+No glare found
+Main 2a and OP 8
+No glare found
+Main 2a and OP 9
+No glare found
+Main 2a and OP 10
+No glare found
+Main 2a and OP 11
+No glare found
+Main 2a and OP 12
+No glare found
+Main 2a and OP 13
+No glare found
+Main 2a and OP 14
+No glare found
+Main 2a and OP 15
+No glare found
+Main 2a and OP 16
+No glare found
+Main 2a and OP 17
+No glare found
+Main 2a and OP 18
+No glare found
+Main 2a and OP 20
+No glare found
+Page 121 of 265
+
+ 
+Main 2a and OP 21
+No glare found
+Main 2a and OP 22
+No glare found
+Main 2a and OP 23
+No glare found
+Main 2a and OP 24
+No glare found
+Main 2a and OP 25
+No glare found
+Main 2a and OP 26
+No glare found
+Main 2a and OP 27
+No glare found
+Main 2a and OP 28
+No glare found
+Main 2a and OP 29
+No glare found
+Main 2a and OP 30
+No glare found
+Main 2a and OP 31
+No glare found
+Main 2a and OP 32
+No glare found
+Main 2a and OP 33
+No glare found
+Main 2a and OP 34
+No glare found
+Page 122 of 265
+
+ 
+Main 2a and OP 35
+No glare found
+Main 2a and OP 36
+No glare found
+Main 2a and OP 37
+No glare found
+Main 2a and OP 38
+No glare found
+Main 2a and OP 39
+No glare found
+Page 123 of 265
+
+PV: Main 2c1 low potential for temporary after-image 
+Receptor results ordered by category of glare
+Receptor
+Annual Green Glare
+Annual Yellow Glare
+min
+hr
+min
+hr
+Forgy Mill Rd
+52
+0.9
+0
+0.0
+Free Ln
+0
+0.0
+0
+0.0
+Mason-Poyner Rd
+0
+0.0
+0
+0.0
+Pendley Mill Rd
+0
+0.0
+0
+0.0
+SR-949
+0
+0.0
+0
+0.0
+US-431
+0
+0.0
+0
+0.0
+Bowling Green Regional 1
+0
+0.0
+0
+0.0
+Bowling Green Regional 2
+0
+0.0
+0
+0.0
+Bowling Green Regional 3
+0
+0.0
+0
+0.0
+Bowling Green Regional 4
+0
+0.0
+0
+0.0
+Muhlenberg County Airport 1
+0
+0.0
+0
+0.0
+Muhlenberg County Airport 2
+0
+0.0
+0
+0.0
+Russellville-Logan Airport 1
+0
+0.0
+0
+0.0
+Russellville-Logan Airport 2
+0
+0.0
+0
+0.0
+OP 1
+0
+0.0
+0
+0.0
+OP 2
+0
+0.0
+0
+0.0
+OP 3
+0
+0.0
+0
+0.0
+OP 4
+0
+0.0
+0
+0.0
+OP 5
+0
+0.0
+0
+0.0
+OP 6
+0
+0.0
+0
+0.0
+OP 7
+0
+0.0
+0
+0.0
+OP 8
+0
+0.0
+0
+0.0
+OP 9
+0
+0.0
+0
+0.0
+OP 10
+0
+0.0
+0
+0.0
+OP 11
+0
+0.0
+0
+0.0
+OP 12
+0
+0.0
+0
+0.0
+OP 13
+0
+0.0
+0
+0.0
+OP 14
+0
+0.0
+0
+0.0
+OP 15
+0
+0.0
+0
+0.0
+OP 16
+0
+0.0
+0
+0.0
+OP 17
+0
+0.0
+0
+0.0
+OP 18
+0
+0.0
+0
+0.0
+OP 19
+0
+0.0
+0
+0.0
+OP 20
+0
+0.0
+0
+0.0
+OP 21
+0
+0.0
+0
+0.0
+OP 22
+0
+0.0
+0
+0.0
+OP 23
+0
+0.0
+0
+0.0
+OP 24
+0
+0.0
+0
+0.0
+OP 25
+0
+0.0
+0
+0.0
+ 
+Page 124 of 265
+
+Receptor
+Annual Green Glare
+Annual Yellow Glare
+min
+hr
+min
+hr
+OP 26
+0
+0.0
+0
+0.0
+OP 27
+0
+0.0
+0
+0.0
+OP 28
+0
+0.0
+0
+0.0
+OP 29
+0
+0.0
+0
+0.0
+OP 30
+0
+0.0
+0
+0.0
+OP 31
+0
+0.0
+0
+0.0
+OP 32
+0
+0.0
+0
+0.0
+OP 33
+0
+0.0
+0
+0.0
+OP 34
+0
+0.0
+0
+0.0
+OP 35
+0
+0.0
+0
+0.0
+OP 36
+0
+0.0
+0
+0.0
+OP 37
+0
+0.0
+0
+0.0
+OP 38
+0
+0.0
+0
+0.0
+OP 39
+0
+0.0
+0
+0.0
+ 
+Page 125 of 265
+
+ 
+Main 2c1 and Route: Forgy Mill Rd
+Yellow glare: none
+Green glare: 52 min.
+Main 2c1 and Route: Free Ln
+No glare found
+Page 126 of 265
+
+ 
+Main 2c1 and Route: Mason-Poyner Rd
+No glare found
+Main 2c1 and Route: Pendley Mill Rd
+No glare found
+Main 2c1 and Route: SR-949
+No glare found
+Main 2c1 and Route: US-431
+No glare found
+Main 2c1 and FP: Bowling Green Regional 1
+No glare found
+Main 2c1 and FP: Bowling Green Regional 2
+No glare found
+Main 2c1 and FP: Bowling Green Regional 3
+No glare found
+Main 2c1 and FP: Bowling Green Regional 4
+No glare found
+Main 2c1 and FP: Muhlenberg County Airport 1
+No glare found
+Main 2c1 and FP: Muhlenberg County Airport 2
+No glare found
+Main 2c1 and FP: Russellville-Logan Airport 1
+No glare found
+Main 2c1 and FP: Russellville-Logan Airport 2
+No glare found
+Main 2c1 and OP 1
+No glare found
+Main 2c1 and OP 2
+No glare found
+Page 127 of 265
+
+ 
+Main 2c1 and OP 3
+No glare found
+Main 2c1 and OP 4
+No glare found
+Main 2c1 and OP 5
+No glare found
+Main 2c1 and OP 6
+No glare found
+Main 2c1 and OP 7
+No glare found
+Main 2c1 and OP 8
+No glare found
+Main 2c1 and OP 9
+No glare found
+Main 2c1 and OP 10
+No glare found
+Main 2c1 and OP 11
+No glare found
+Main 2c1 and OP 12
+No glare found
+Main 2c1 and OP 13
+No glare found
+Main 2c1 and OP 14
+No glare found
+Main 2c1 and OP 15
+No glare found
+Main 2c1 and OP 16
+No glare found
+Page 128 of 265
+
+ 
+Main 2c1 and OP 17
+No glare found
+Main 2c1 and OP 18
+No glare found
+Main 2c1 and OP 19
+No glare found
+Main 2c1 and OP 20
+No glare found
+Main 2c1 and OP 21
+No glare found
+Main 2c1 and OP 22
+No glare found
+Main 2c1 and OP 23
+No glare found
+Main 2c1 and OP 24
+No glare found
+Main 2c1 and OP 25
+No glare found
+Main 2c1 and OP 26
+No glare found
+Main 2c1 and OP 27
+No glare found
+Main 2c1 and OP 28
+No glare found
+Main 2c1 and OP 29
+No glare found
+Main 2c1 and OP 30
+No glare found
+Page 129 of 265
+
+ 
+Main 2c1 and OP 31
+No glare found
+Main 2c1 and OP 32
+No glare found
+Main 2c1 and OP 33
+No glare found
+Main 2c1 and OP 34
+No glare found
+Main 2c1 and OP 35
+No glare found
+Main 2c1 and OP 36
+No glare found
+Main 2c1 and OP 37
+No glare found
+Main 2c1 and OP 38
+No glare found
+Main 2c1 and OP 39
+No glare found
+Page 130 of 265
+
+PV: Main 2c2 no glare found 
+Receptor results ordered by category of glare
+Receptor
+Annual Green Glare
+Annual Yellow Glare
+min
+hr
+min
+hr
+Forgy Mill Rd
+0
+0.0
+0
+0.0
+Free Ln
+0
+0.0
+0
+0.0
+Mason-Poyner Rd
+0
+0.0
+0
+0.0
+Pendley Mill Rd
+0
+0.0
+0
+0.0
+SR-949
+0
+0.0
+0
+0.0
+US-431
+0
+0.0
+0
+0.0
+Bowling Green Regional 1
+0
+0.0
+0
+0.0
+Bowling Green Regional 2
+0
+0.0
+0
+0.0
+Bowling Green Regional 3
+0
+0.0
+0
+0.0
+Bowling Green Regional 4
+0
+0.0
+0
+0.0
+Muhlenberg County Airport 1
+0
+0.0
+0
+0.0
+Muhlenberg County Airport 2
+0
+0.0
+0
+0.0
+Russellville-Logan Airport 1
+0
+0.0
+0
+0.0
+Russellville-Logan Airport 2
+0
+0.0
+0
+0.0
+OP 1
+0
+0.0
+0
+0.0
+OP 2
+0
+0.0
+0
+0.0
+OP 3
+0
+0.0
+0
+0.0
+OP 4
+0
+0.0
+0
+0.0
+OP 5
+0
+0.0
+0
+0.0
+OP 6
+0
+0.0
+0
+0.0
+OP 7
+0
+0.0
+0
+0.0
+OP 8
+0
+0.0
+0
+0.0
+OP 9
+0
+0.0
+0
+0.0
+OP 10
+0
+0.0
+0
+0.0
+OP 11
+0
+0.0
+0
+0.0
+OP 12
+0
+0.0
+0
+0.0
+OP 13
+0
+0.0
+0
+0.0
+OP 14
+0
+0.0
+0
+0.0
+OP 15
+0
+0.0
+0
+0.0
+OP 16
+0
+0.0
+0
+0.0
+OP 17
+0
+0.0
+0
+0.0
+OP 18
+0
+0.0
+0
+0.0
+OP 19
+0
+0.0
+0
+0.0
+OP 20
+0
+0.0
+0
+0.0
+OP 21
+0
+0.0
+0
+0.0
+OP 22
+0
+0.0
+0
+0.0
+OP 23
+0
+0.0
+0
+0.0
+OP 24
+0
+0.0
+0
+0.0
+OP 25
+0
+0.0
+0
+0.0
+ 
+Page 131 of 265
+
+Receptor
+Annual Green Glare
+Annual Yellow Glare
+min
+hr
+min
+hr
+OP 26
+0
+0.0
+0
+0.0
+OP 27
+0
+0.0
+0
+0.0
+OP 28
+0
+0.0
+0
+0.0
+OP 29
+0
+0.0
+0
+0.0
+OP 30
+0
+0.0
+0
+0.0
+OP 31
+0
+0.0
+0
+0.0
+OP 32
+0
+0.0
+0
+0.0
+OP 33
+0
+0.0
+0
+0.0
+OP 34
+0
+0.0
+0
+0.0
+OP 35
+0
+0.0
+0
+0.0
+OP 36
+0
+0.0
+0
+0.0
+OP 37
+0
+0.0
+0
+0.0
+OP 38
+0
+0.0
+0
+0.0
+OP 39
+0
+0.0
+0
+0.0
+ 
+Main 2c2 and Route: Forgy Mill Rd
+No glare found
+Main 2c2 and Route: Free Ln
+No glare found
+Main 2c2 and Route: Mason-Poyner Rd
+No glare found
+Main 2c2 and Route: Pendley Mill Rd
+No glare found
+Main 2c2 and Route: SR-949
+No glare found
+Main 2c2 and Route: US-431
+No glare found
+Main 2c2 and FP: Bowling Green Regional 1
+No glare found
+Main 2c2 and FP: Bowling Green Regional 2
+No glare found
+Main 2c2 and FP: Bowling Green Regional 3
+No glare found
+Page 132 of 265
+
+ 
+Main 2c2 and FP: Bowling Green Regional 4
+No glare found
+Main 2c2 and FP: Muhlenberg County Airport 1
+No glare found
+Main 2c2 and FP: Muhlenberg County Airport 2
+No glare found
+Main 2c2 and FP: Russellville-Logan Airport 1
+No glare found
+Main 2c2 and FP: Russellville-Logan Airport 2
+No glare found
+Main 2c2 and OP 1
+No glare found
+Main 2c2 and OP 2
+No glare found
+Main 2c2 and OP 3
+No glare found
+Main 2c2 and OP 4
+No glare found
+Main 2c2 and OP 5
+No glare found
+Main 2c2 and OP 6
+No glare found
+Main 2c2 and OP 7
+No glare found
+Main 2c2 and OP 8
+No glare found
+Main 2c2 and OP 9
+No glare found
+Page 133 of 265
+
+ 
+Main 2c2 and OP 10
+No glare found
+Main 2c2 and OP 11
+No glare found
+Main 2c2 and OP 12
+No glare found
+Main 2c2 and OP 13
+No glare found
+Main 2c2 and OP 14
+No glare found
+Main 2c2 and OP 15
+No glare found
+Main 2c2 and OP 16
+No glare found
+Main 2c2 and OP 17
+No glare found
+Main 2c2 and OP 18
+No glare found
+Main 2c2 and OP 19
+No glare found
+Main 2c2 and OP 20
+No glare found
+Main 2c2 and OP 21
+No glare found
+Main 2c2 and OP 22
+No glare found
+Main 2c2 and OP 23
+No glare found
+Page 134 of 265
+
+ 
+Main 2c2 and OP 24
+No glare found
+Main 2c2 and OP 25
+No glare found
+Main 2c2 and OP 26
+No glare found
+Main 2c2 and OP 27
+No glare found
+Main 2c2 and OP 28
+No glare found
+Main 2c2 and OP 29
+No glare found
+Main 2c2 and OP 30
+No glare found
+Main 2c2 and OP 31
+No glare found
+Main 2c2 and OP 32
+No glare found
+Main 2c2 and OP 33
+No glare found
+Main 2c2 and OP 34
+No glare found
+Main 2c2 and OP 35
+No glare found
+Main 2c2 and OP 36
+No glare found
+Main 2c2 and OP 37
+No glare found
+Page 135 of 265
+
+ 
+Main 2c2 and OP 38
+No glare found
+Main 2c2 and OP 39
+No glare found
+Page 136 of 265
+
+PV: Main 3a low potential for temporary after-image 
+Receptor results ordered by category of glare
+Receptor
+Annual Green Glare
+Annual Yellow Glare
+min
+hr
+min
+hr
+SR-949
+38
+0.6
+0
+0.0
+Forgy Mill Rd
+0
+0.0
+0
+0.0
+Free Ln
+0
+0.0
+0
+0.0
+Mason-Poyner Rd
+0
+0.0
+0
+0.0
+Pendley Mill Rd
+0
+0.0
+0
+0.0
+US-431
+0
+0.0
+0
+0.0
+Bowling Green Regional 1
+0
+0.0
+0
+0.0
+Bowling Green Regional 2
+0
+0.0
+0
+0.0
+Bowling Green Regional 3
+0
+0.0
+0
+0.0
+Bowling Green Regional 4
+0
+0.0
+0
+0.0
+Muhlenberg County Airport 1
+0
+0.0
+0
+0.0
+Muhlenberg County Airport 2
+0
+0.0
+0
+0.0
+Russellville-Logan Airport 1
+0
+0.0
+0
+0.0
+Russellville-Logan Airport 2
+0
+0.0
+0
+0.0
+OP 3
+16
+0.3
+0
+0.0
+OP 1
+0
+0.0
+0
+0.0
+OP 2
+0
+0.0
+0
+0.0
+OP 4
+0
+0.0
+0
+0.0
+OP 5
+0
+0.0
+0
+0.0
+OP 6
+0
+0.0
+0
+0.0
+OP 7
+0
+0.0
+0
+0.0
+OP 8
+0
+0.0
+0
+0.0
+OP 9
+0
+0.0
+0
+0.0
+OP 10
+0
+0.0
+0
+0.0
+OP 11
+0
+0.0
+0
+0.0
+OP 12
+0
+0.0
+0
+0.0
+OP 13
+0
+0.0
+0
+0.0
+OP 14
+0
+0.0
+0
+0.0
+OP 15
+0
+0.0
+0
+0.0
+OP 16
+0
+0.0
+0
+0.0
+OP 17
+0
+0.0
+0
+0.0
+OP 18
+0
+0.0
+0
+0.0
+OP 19
+0
+0.0
+0
+0.0
+OP 20
+0
+0.0
+0
+0.0
+OP 21
+0
+0.0
+0
+0.0
+OP 22
+0
+0.0
+0
+0.0
+OP 23
+0
+0.0
+0
+0.0
+OP 24
+0
+0.0
+0
+0.0
+OP 25
+0
+0.0
+0
+0.0
+ 
+Page 137 of 265
+
+Receptor
+Annual Green Glare
+Annual Yellow Glare
+min
+hr
+min
+hr
+OP 26
+0
+0.0
+0
+0.0
+OP 27
+0
+0.0
+0
+0.0
+OP 28
+0
+0.0
+0
+0.0
+OP 29
+0
+0.0
+0
+0.0
+OP 30
+0
+0.0
+0
+0.0
+OP 31
+0
+0.0
+0
+0.0
+OP 32
+0
+0.0
+0
+0.0
+OP 33
+0
+0.0
+0
+0.0
+OP 34
+0
+0.0
+0
+0.0
+OP 35
+0
+0.0
+0
+0.0
+OP 36
+0
+0.0
+0
+0.0
+OP 37
+0
+0.0
+0
+0.0
+OP 38
+0
+0.0
+0
+0.0
+OP 39
+0
+0.0
+0
+0.0
+ 
+Page 138 of 265
+
+ 
+Main 3a and Route: SR-949
+Yellow glare: none
+Green glare: 38 min.
+Main 3a and Route: Forgy Mill Rd
+No glare found
+Page 139 of 265
+
+ 
+Main 3a and Route: Free Ln
+No glare found
+Main 3a and Route: Mason-Poyner Rd
+No glare found
+Main 3a and Route: Pendley Mill Rd
+No glare found
+Main 3a and Route: US-431
+No glare found
+Main 3a and FP: Bowling Green Regional 1
+No glare found
+Main 3a and FP: Bowling Green Regional 2
+No glare found
+Main 3a and FP: Bowling Green Regional 3
+No glare found
+Main 3a and FP: Bowling Green Regional 4
+No glare found
+Main 3a and FP: Muhlenberg County Airport 1
+No glare found
+Main 3a and FP: Muhlenberg County Airport 2
+No glare found
+Main 3a and FP: Russellville-Logan Airport 1
+No glare found
+Main 3a and FP: Russellville-Logan Airport 2
+No glare found
+Page 140 of 265
+
+ 
+Main 3a and OP 3
+Yellow glare: none
+Green glare: 16 min.
+Main 3a and OP 1
+No glare found
+Main 3a and OP 2
+No glare found
+Main 3a and OP 4
+No glare found
+Main 3a and OP 5
+No glare found
+Main 3a and OP 6
+No glare found
+Page 141 of 265
+
+ 
+Main 3a and OP 7
+No glare found
+Main 3a and OP 8
+No glare found
+Main 3a and OP 9
+No glare found
+Main 3a and OP 10
+No glare found
+Main 3a and OP 11
+No glare found
+Main 3a and OP 12
+No glare found
+Main 3a and OP 13
+No glare found
+Main 3a and OP 14
+No glare found
+Main 3a and OP 15
+No glare found
+Main 3a and OP 16
+No glare found
+Main 3a and OP 17
+No glare found
+Main 3a and OP 18
+No glare found
+Main 3a and OP 19
+No glare found
+Main 3a and OP 20
+No glare found
+Page 142 of 265
+
+ 
+Main 3a and OP 21
+No glare found
+Main 3a and OP 22
+No glare found
+Main 3a and OP 23
+No glare found
+Main 3a and OP 24
+No glare found
+Main 3a and OP 25
+No glare found
+Main 3a and OP 26
+No glare found
+Main 3a and OP 27
+No glare found
+Main 3a and OP 28
+No glare found
+Main 3a and OP 29
+No glare found
+Main 3a and OP 30
+No glare found
+Main 3a and OP 31
+No glare found
+Main 3a and OP 32
+No glare found
+Main 3a and OP 33
+No glare found
+Main 3a and OP 34
+No glare found
+Page 143 of 265
+
+ 
+Main 3a and OP 35
+No glare found
+Main 3a and OP 36
+No glare found
+Main 3a and OP 37
+No glare found
+Main 3a and OP 38
+No glare found
+Main 3a and OP 39
+No glare found
+Page 144 of 265
+
+PV: Main 3b1 low potential for temporary after-image 
+Receptor results ordered by category of glare
+Receptor
+Annual Green Glare
+Annual Yellow Glare
+min
+hr
+min
+hr
+Free Ln
+84
+1.4
+0
+0.0
+SR-949
+371
+6.2
+0
+0.0
+Forgy Mill Rd
+0
+0.0
+0
+0.0
+Mason-Poyner Rd
+0
+0.0
+0
+0.0
+Pendley Mill Rd
+0
+0.0
+0
+0.0
+US-431
+0
+0.0
+0
+0.0
+Bowling Green Regional 1
+0
+0.0
+0
+0.0
+Bowling Green Regional 2
+0
+0.0
+0
+0.0
+Bowling Green Regional 3
+0
+0.0
+0
+0.0
+Bowling Green Regional 4
+0
+0.0
+0
+0.0
+Muhlenberg County Airport 1
+0
+0.0
+0
+0.0
+Muhlenberg County Airport 2
+0
+0.0
+0
+0.0
+Russellville-Logan Airport 1
+0
+0.0
+0
+0.0
+Russellville-Logan Airport 2
+0
+0.0
+0
+0.0
+OP 4
+47
+0.8
+0
+0.0
+OP 8
+44
+0.7
+0
+0.0
+OP 9
+63
+1.1
+0
+0.0
+OP 10
+60
+1.0
+0
+0.0
+OP 35
+213
+3.5
+0
+0.0
+OP 36
+386
+6.4
+0
+0.0
+OP 37
+743
+12.4
+0
+0.0
+OP 38
+74
+1.2
+0
+0.0
+OP 1
+0
+0.0
+0
+0.0
+OP 2
+0
+0.0
+0
+0.0
+OP 3
+0
+0.0
+0
+0.0
+OP 5
+0
+0.0
+0
+0.0
+OP 6
+0
+0.0
+0
+0.0
+OP 7
+0
+0.0
+0
+0.0
+OP 11
+0
+0.0
+0
+0.0
+OP 12
+0
+0.0
+0
+0.0
+OP 13
+0
+0.0
+0
+0.0
+OP 14
+0
+0.0
+0
+0.0
+OP 15
+0
+0.0
+0
+0.0
+OP 16
+0
+0.0
+0
+0.0
+OP 17
+0
+0.0
+0
+0.0
+OP 18
+0
+0.0
+0
+0.0
+OP 19
+0
+0.0
+0
+0.0
+OP 20
+0
+0.0
+0
+0.0
+OP 21
+0
+0.0
+0
+0.0
+ 
+Page 145 of 265
+
+Receptor
+Annual Green Glare
+Annual Yellow Glare
+min
+hr
+min
+hr
+OP 22
+0
+0.0
+0
+0.0
+OP 23
+0
+0.0
+0
+0.0
+OP 24
+0
+0.0
+0
+0.0
+OP 25
+0
+0.0
+0
+0.0
+OP 26
+0
+0.0
+0
+0.0
+OP 27
+0
+0.0
+0
+0.0
+OP 28
+0
+0.0
+0
+0.0
+OP 29
+0
+0.0
+0
+0.0
+OP 30
+0
+0.0
+0
+0.0
+OP 31
+0
+0.0
+0
+0.0
+OP 32
+0
+0.0
+0
+0.0
+OP 33
+0
+0.0
+0
+0.0
+OP 34
+0
+0.0
+0
+0.0
+OP 39
+0
+0.0
+0
+0.0
+ 
+Page 146 of 265
+
+ 
+Main 3b1 and Route: Free Ln
+Yellow glare: none
+Green glare: 84 min.
+Page 147 of 265
+
+ 
+Main 3b1 and Route: SR-949
+Yellow glare: none
+Green glare: 371 min.
+Main 3b1 and Route: Forgy Mill Rd
+No glare found
+Page 148 of 265
+
+ 
+Main 3b1 and Route: Mason-Poyner Rd
+No glare found
+Main 3b1 and Route: Pendley Mill Rd
+No glare found
+Main 3b1 and Route: US-431
+No glare found
+Main 3b1 and FP: Bowling Green Regional 1
+No glare found
+Main 3b1 and FP: Bowling Green Regional 2
+No glare found
+Main 3b1 and FP: Bowling Green Regional 3
+No glare found
+Main 3b1 and FP: Bowling Green Regional 4
+No glare found
+Main 3b1 and FP: Muhlenberg County Airport 1
+No glare found
+Main 3b1 and FP: Muhlenberg County Airport 2
+No glare found
+Main 3b1 and FP: Russellville-Logan Airport 1
+No glare found
+Main 3b1 and FP: Russellville-Logan Airport 2
+No glare found
+Page 149 of 265
+
+ 
+Main 3b1 and OP 4
+Yellow glare: none
+Green glare: 47 min.
+Page 150 of 265
+
+ 
+Main 3b1 and OP 8
+Yellow glare: none
+Green glare: 44 min.
+Page 151 of 265
+
+ 
+Main 3b1 and OP 9
+Yellow glare: none
+Green glare: 63 min.
+Page 152 of 265
+
+ 
+Main 3b1 and OP 10
+Yellow glare: none
+Green glare: 60 min.
+Page 153 of 265
+
+ 
+Main 3b1 and OP 35
+Yellow glare: none
+Green glare: 213 min.
+Page 154 of 265
+
+ 
+Main 3b1 and OP 36
+Yellow glare: none
+Green glare: 386 min.
+Page 155 of 265
+
+ 
+Main 3b1 and OP 37
+Yellow glare: none
+Green glare: 743 min.
+Page 156 of 265
+
+ 
+Main 3b1 and OP 38
+Yellow glare: none
+Green glare: 74 min.
+Main 3b1 and OP 1
+No glare found
+Main 3b1 and OP 2
+No glare found
+Main 3b1 and OP 3
+No glare found
+Main 3b1 and OP 5
+No glare found
+Main 3b1 and OP 6
+No glare found
+Page 157 of 265
+
+ 
+Main 3b1 and OP 7
+No glare found
+Main 3b1 and OP 11
+No glare found
+Main 3b1 and OP 12
+No glare found
+Main 3b1 and OP 13
+No glare found
+Main 3b1 and OP 14
+No glare found
+Main 3b1 and OP 15
+No glare found
+Main 3b1 and OP 16
+No glare found
+Main 3b1 and OP 17
+No glare found
+Main 3b1 and OP 18
+No glare found
+Main 3b1 and OP 19
+No glare found
+Main 3b1 and OP 20
+No glare found
+Main 3b1 and OP 21
+No glare found
+Main 3b1 and OP 22
+No glare found
+Main 3b1 and OP 23
+No glare found
+Page 158 of 265
+
+ 
+Main 3b1 and OP 24
+No glare found
+Main 3b1 and OP 25
+No glare found
+Main 3b1 and OP 26
+No glare found
+Main 3b1 and OP 27
+No glare found
+Main 3b1 and OP 28
+No glare found
+Main 3b1 and OP 29
+No glare found
+Main 3b1 and OP 30
+No glare found
+Main 3b1 and OP 31
+No glare found
+Main 3b1 and OP 32
+No glare found
+Main 3b1 and OP 33
+No glare found
+Main 3b1 and OP 34
+No glare found
+Main 3b1 and OP 39
+No glare found
+Page 159 of 265
+
+PV: Main 3b2 no glare found 
+Receptor results ordered by category of glare
+Receptor
+Annual Green Glare
+Annual Yellow Glare
+min
+hr
+min
+hr
+Forgy Mill Rd
+0
+0.0
+0
+0.0
+Free Ln
+0
+0.0
+0
+0.0
+Mason-Poyner Rd
+0
+0.0
+0
+0.0
+Pendley Mill Rd
+0
+0.0
+0
+0.0
+SR-949
+0
+0.0
+0
+0.0
+US-431
+0
+0.0
+0
+0.0
+Bowling Green Regional 1
+0
+0.0
+0
+0.0
+Bowling Green Regional 2
+0
+0.0
+0
+0.0
+Bowling Green Regional 3
+0
+0.0
+0
+0.0
+Bowling Green Regional 4
+0
+0.0
+0
+0.0
+Muhlenberg County Airport 1
+0
+0.0
+0
+0.0
+Muhlenberg County Airport 2
+0
+0.0
+0
+0.0
+Russellville-Logan Airport 1
+0
+0.0
+0
+0.0
+Russellville-Logan Airport 2
+0
+0.0
+0
+0.0
+OP 1
+0
+0.0
+0
+0.0
+OP 2
+0
+0.0
+0
+0.0
+OP 3
+0
+0.0
+0
+0.0
+OP 4
+0
+0.0
+0
+0.0
+OP 5
+0
+0.0
+0
+0.0
+OP 6
+0
+0.0
+0
+0.0
+OP 7
+0
+0.0
+0
+0.0
+OP 8
+0
+0.0
+0
+0.0
+OP 9
+0
+0.0
+0
+0.0
+OP 10
+0
+0.0
+0
+0.0
+OP 11
+0
+0.0
+0
+0.0
+OP 12
+0
+0.0
+0
+0.0
+OP 13
+0
+0.0
+0
+0.0
+OP 14
+0
+0.0
+0
+0.0
+OP 15
+0
+0.0
+0
+0.0
+OP 16
+0
+0.0
+0
+0.0
+OP 17
+0
+0.0
+0
+0.0
+OP 18
+0
+0.0
+0
+0.0
+OP 19
+0
+0.0
+0
+0.0
+OP 20
+0
+0.0
+0
+0.0
+OP 21
+0
+0.0
+0
+0.0
+OP 22
+0
+0.0
+0
+0.0
+OP 23
+0
+0.0
+0
+0.0
+OP 24
+0
+0.0
+0
+0.0
+OP 25
+0
+0.0
+0
+0.0
+ 
+Page 160 of 265
+
+Receptor
+Annual Green Glare
+Annual Yellow Glare
+min
+hr
+min
+hr
+OP 26
+0
+0.0
+0
+0.0
+OP 27
+0
+0.0
+0
+0.0
+OP 28
+0
+0.0
+0
+0.0
+OP 29
+0
+0.0
+0
+0.0
+OP 30
+0
+0.0
+0
+0.0
+OP 31
+0
+0.0
+0
+0.0
+OP 32
+0
+0.0
+0
+0.0
+OP 33
+0
+0.0
+0
+0.0
+OP 34
+0
+0.0
+0
+0.0
+OP 35
+0
+0.0
+0
+0.0
+OP 36
+0
+0.0
+0
+0.0
+OP 37
+0
+0.0
+0
+0.0
+OP 38
+0
+0.0
+0
+0.0
+OP 39
+0
+0.0
+0
+0.0
+ 
+Main 3b2 and Route: Forgy Mill Rd
+No glare found
+Main 3b2 and Route: Free Ln
+No glare found
+Main 3b2 and Route: Mason-Poyner Rd
+No glare found
+Main 3b2 and Route: Pendley Mill Rd
+No glare found
+Main 3b2 and Route: SR-949
+No glare found
+Main 3b2 and Route: US-431
+No glare found
+Main 3b2 and FP: Bowling Green Regional 1
+No glare found
+Main 3b2 and FP: Bowling Green Regional 2
+No glare found
+Main 3b2 and FP: Bowling Green Regional 3
+No glare found
+Page 161 of 265
+
+ 
+Main 3b2 and FP: Bowling Green Regional 4
+No glare found
+Main 3b2 and FP: Muhlenberg County Airport 1
+No glare found
+Main 3b2 and FP: Muhlenberg County Airport 2
+No glare found
+Main 3b2 and FP: Russellville-Logan Airport 1
+No glare found
+Main 3b2 and FP: Russellville-Logan Airport 2
+No glare found
+Main 3b2 and OP 1
+No glare found
+Main 3b2 and OP 2
+No glare found
+Main 3b2 and OP 3
+No glare found
+Main 3b2 and OP 4
+No glare found
+Main 3b2 and OP 5
+No glare found
+Main 3b2 and OP 6
+No glare found
+Main 3b2 and OP 7
+No glare found
+Main 3b2 and OP 8
+No glare found
+Main 3b2 and OP 9
+No glare found
+Page 162 of 265
+
+ 
+Main 3b2 and OP 10
+No glare found
+Main 3b2 and OP 11
+No glare found
+Main 3b2 and OP 12
+No glare found
+Main 3b2 and OP 13
+No glare found
+Main 3b2 and OP 14
+No glare found
+Main 3b2 and OP 15
+No glare found
+Main 3b2 and OP 16
+No glare found
+Main 3b2 and OP 17
+No glare found
+Main 3b2 and OP 18
+No glare found
+Main 3b2 and OP 19
+No glare found
+Main 3b2 and OP 20
+No glare found
+Main 3b2 and OP 21
+No glare found
+Main 3b2 and OP 22
+No glare found
+Main 3b2 and OP 23
+No glare found
+Page 163 of 265
+
+ 
+Main 3b2 and OP 24
+No glare found
+Main 3b2 and OP 25
+No glare found
+Main 3b2 and OP 26
+No glare found
+Main 3b2 and OP 27
+No glare found
+Main 3b2 and OP 28
+No glare found
+Main 3b2 and OP 29
+No glare found
+Main 3b2 and OP 30
+No glare found
+Main 3b2 and OP 31
+No glare found
+Main 3b2 and OP 32
+No glare found
+Main 3b2 and OP 33
+No glare found
+Main 3b2 and OP 34
+No glare found
+Main 3b2 and OP 35
+No glare found
+Main 3b2 and OP 36
+No glare found
+Main 3b2 and OP 37
+No glare found
+Page 164 of 265
+
+ 
+Main 3b2 and OP 38
+No glare found
+Main 3b2 and OP 39
+No glare found
+Page 165 of 265
+
+PV: Main 3b3 no glare found 
+Receptor results ordered by category of glare
+Receptor
+Annual Green Glare
+Annual Yellow Glare
+min
+hr
+min
+hr
+Forgy Mill Rd
+0
+0.0
+0
+0.0
+Free Ln
+0
+0.0
+0
+0.0
+Mason-Poyner Rd
+0
+0.0
+0
+0.0
+Pendley Mill Rd
+0
+0.0
+0
+0.0
+SR-949
+0
+0.0
+0
+0.0
+US-431
+0
+0.0
+0
+0.0
+Bowling Green Regional 1
+0
+0.0
+0
+0.0
+Bowling Green Regional 2
+0
+0.0
+0
+0.0
+Bowling Green Regional 3
+0
+0.0
+0
+0.0
+Bowling Green Regional 4
+0
+0.0
+0
+0.0
+Muhlenberg County Airport 1
+0
+0.0
+0
+0.0
+Muhlenberg County Airport 2
+0
+0.0
+0
+0.0
+Russellville-Logan Airport 1
+0
+0.0
+0
+0.0
+Russellville-Logan Airport 2
+0
+0.0
+0
+0.0
+OP 1
+0
+0.0
+0
+0.0
+OP 2
+0
+0.0
+0
+0.0
+OP 3
+0
+0.0
+0
+0.0
+OP 4
+0
+0.0
+0
+0.0
+OP 5
+0
+0.0
+0
+0.0
+OP 6
+0
+0.0
+0
+0.0
+OP 7
+0
+0.0
+0
+0.0
+OP 8
+0
+0.0
+0
+0.0
+OP 9
+0
+0.0
+0
+0.0
+OP 10
+0
+0.0
+0
+0.0
+OP 11
+0
+0.0
+0
+0.0
+OP 12
+0
+0.0
+0
+0.0
+OP 13
+0
+0.0
+0
+0.0
+OP 14
+0
+0.0
+0
+0.0
+OP 15
+0
+0.0
+0
+0.0
+OP 16
+0
+0.0
+0
+0.0
+OP 17
+0
+0.0
+0
+0.0
+OP 18
+0
+0.0
+0
+0.0
+OP 19
+0
+0.0
+0
+0.0
+OP 20
+0
+0.0
+0
+0.0
+OP 21
+0
+0.0
+0
+0.0
+OP 22
+0
+0.0
+0
+0.0
+OP 23
+0
+0.0
+0
+0.0
+OP 24
+0
+0.0
+0
+0.0
+OP 25
+0
+0.0
+0
+0.0
+ 
+Page 166 of 265
+
+Receptor
+Annual Green Glare
+Annual Yellow Glare
+min
+hr
+min
+hr
+OP 26
+0
+0.0
+0
+0.0
+OP 27
+0
+0.0
+0
+0.0
+OP 28
+0
+0.0
+0
+0.0
+OP 29
+0
+0.0
+0
+0.0
+OP 30
+0
+0.0
+0
+0.0
+OP 31
+0
+0.0
+0
+0.0
+OP 32
+0
+0.0
+0
+0.0
+OP 33
+0
+0.0
+0
+0.0
+OP 34
+0
+0.0
+0
+0.0
+OP 35
+0
+0.0
+0
+0.0
+OP 36
+0
+0.0
+0
+0.0
+OP 37
+0
+0.0
+0
+0.0
+OP 38
+0
+0.0
+0
+0.0
+OP 39
+0
+0.0
+0
+0.0
+ 
+Main 3b3 and Route: Forgy Mill Rd
+No glare found
+Main 3b3 and Route: Free Ln
+No glare found
+Main 3b3 and Route: Mason-Poyner Rd
+No glare found
+Main 3b3 and Route: Pendley Mill Rd
+No glare found
+Main 3b3 and Route: SR-949
+No glare found
+Main 3b3 and Route: US-431
+No glare found
+Main 3b3 and FP: Bowling Green Regional 1
+No glare found
+Main 3b3 and FP: Bowling Green Regional 2
+No glare found
+Main 3b3 and FP: Bowling Green Regional 3
+No glare found
+Page 167 of 265
+
+ 
+Main 3b3 and FP: Bowling Green Regional 4
+No glare found
+Main 3b3 and FP: Muhlenberg County Airport 1
+No glare found
+Main 3b3 and FP: Muhlenberg County Airport 2
+No glare found
+Main 3b3 and FP: Russellville-Logan Airport 1
+No glare found
+Main 3b3 and FP: Russellville-Logan Airport 2
+No glare found
+Main 3b3 and OP 1
+No glare found
+Main 3b3 and OP 2
+No glare found
+Main 3b3 and OP 3
+No glare found
+Main 3b3 and OP 4
+No glare found
+Main 3b3 and OP 5
+No glare found
+Main 3b3 and OP 6
+No glare found
+Main 3b3 and OP 7
+No glare found
+Main 3b3 and OP 8
+No glare found
+Main 3b3 and OP 9
+No glare found
+Page 168 of 265
+
+ 
+Main 3b3 and OP 10
+No glare found
+Main 3b3 and OP 11
+No glare found
+Main 3b3 and OP 12
+No glare found
+Main 3b3 and OP 13
+No glare found
+Main 3b3 and OP 14
+No glare found
+Main 3b3 and OP 15
+No glare found
+Main 3b3 and OP 16
+No glare found
+Main 3b3 and OP 17
+No glare found
+Main 3b3 and OP 18
+No glare found
+Main 3b3 and OP 19
+No glare found
+Main 3b3 and OP 20
+No glare found
+Main 3b3 and OP 21
+No glare found
+Main 3b3 and OP 22
+No glare found
+Main 3b3 and OP 23
+No glare found
+Page 169 of 265
+
+ 
+Main 3b3 and OP 24
+No glare found
+Main 3b3 and OP 25
+No glare found
+Main 3b3 and OP 26
+No glare found
+Main 3b3 and OP 27
+No glare found
+Main 3b3 and OP 28
+No glare found
+Main 3b3 and OP 29
+No glare found
+Main 3b3 and OP 30
+No glare found
+Main 3b3 and OP 31
+No glare found
+Main 3b3 and OP 32
+No glare found
+Main 3b3 and OP 33
+No glare found
+Main 3b3 and OP 34
+No glare found
+Main 3b3 and OP 35
+No glare found
+Main 3b3 and OP 36
+No glare found
+Main 3b3 and OP 37
+No glare found
+Page 170 of 265
+
+ 
+Main 3b3 and OP 38
+No glare found
+Main 3b3 and OP 39
+No glare found
+Page 171 of 265
+
+PV: Main 3b4 potential temporary after-image 
+Receptor results ordered by category of glare
+Receptor
+Annual Green Glare
+Annual Yellow Glare
+min
+hr
+min
+hr
+US-431
+2,135
+35.6
+86
+1.4
+Free Ln
+1,151
+19.2
+0
+0.0
+SR-949
+536
+8.9
+0
+0.0
+Forgy Mill Rd
+0
+0.0
+0
+0.0
+Mason-Poyner Rd
+0
+0.0
+0
+0.0
+Pendley Mill Rd
+0
+0.0
+0
+0.0
+Bowling Green Regional 1
+0
+0.0
+0
+0.0
+Bowling Green Regional 2
+0
+0.0
+0
+0.0
+Bowling Green Regional 3
+0
+0.0
+0
+0.0
+Bowling Green Regional 4
+0
+0.0
+0
+0.0
+Muhlenberg County Airport 1
+0
+0.0
+0
+0.0
+Muhlenberg County Airport 2
+0
+0.0
+0
+0.0
+Russellville-Logan Airport 1
+0
+0.0
+0
+0.0
+Russellville-Logan Airport 2
+0
+0.0
+0
+0.0
+OP 1
+115
+1.9
+0
+0.0
+OP 2
+586
+9.8
+0
+0.0
+OP 3
+972
+16.2
+0
+0.0
+OP 4
+1,205
+20.1
+0
+0.0
+OP 5
+949
+15.8
+0
+0.0
+OP 6
+848
+14.1
+0
+0.0
+OP 7
+360
+6.0
+0
+0.0
+OP 8
+83
+1.4
+0
+0.0
+OP 9
+90
+1.5
+0
+0.0
+OP 10
+59
+1.0
+0
+0.0
+OP 12
+20
+0.3
+0
+0.0
+OP 33
+213
+3.5
+0
+0.0
+OP 34
+308
+5.1
+0
+0.0
+OP 35
+70
+1.2
+0
+0.0
+OP 36
+86
+1.4
+0
+0.0
+OP 37
+101
+1.7
+0
+0.0
+OP 38
+582
+9.7
+0
+0.0
+OP 39
+591
+9.8
+0
+0.0
+OP 11
+0
+0.0
+0
+0.0
+OP 13
+0
+0.0
+0
+0.0
+OP 14
+0
+0.0
+0
+0.0
+OP 15
+0
+0.0
+0
+0.0
+OP 16
+0
+0.0
+0
+0.0
+OP 17
+0
+0.0
+0
+0.0
+OP 18
+0
+0.0
+0
+0.0
+ 
+Page 172 of 265
+
+Receptor
+Annual Green Glare
+Annual Yellow Glare
+min
+hr
+min
+hr
+OP 19
+0
+0.0
+0
+0.0
+OP 20
+0
+0.0
+0
+0.0
+OP 21
+0
+0.0
+0
+0.0
+OP 22
+0
+0.0
+0
+0.0
+OP 23
+0
+0.0
+0
+0.0
+OP 24
+0
+0.0
+0
+0.0
+OP 25
+0
+0.0
+0
+0.0
+OP 26
+0
+0.0
+0
+0.0
+OP 27
+0
+0.0
+0
+0.0
+OP 28
+0
+0.0
+0
+0.0
+OP 29
+0
+0.0
+0
+0.0
+OP 30
+0
+0.0
+0
+0.0
+OP 31
+0
+0.0
+0
+0.0
+OP 32
+0
+0.0
+0
+0.0
+ 
+Page 173 of 265
+
+ 
+Main 3b4 and Route: US-431
+Yellow glare: 86 min.
+Green glare: 2,135 min.
+Page 174 of 265
+
+ 
+Main 3b4 and Route: Free Ln
+Yellow glare: none
+Green glare: 1,151 min.
+Page 175 of 265
+
+ 
+Main 3b4 and Route: SR-949
+Yellow glare: none
+Green glare: 536 min.
+Main 3b4 and Route: Forgy Mill Rd
+No glare found
+Page 176 of 265
+
+ 
+Main 3b4 and Route: Mason-Poyner Rd
+No glare found
+Main 3b4 and Route: Pendley Mill Rd
+No glare found
+Main 3b4 and FP: Bowling Green Regional 1
+No glare found
+Main 3b4 and FP: Bowling Green Regional 2
+No glare found
+Main 3b4 and FP: Bowling Green Regional 3
+No glare found
+Main 3b4 and FP: Bowling Green Regional 4
+No glare found
+Main 3b4 and FP: Muhlenberg County Airport 1
+No glare found
+Main 3b4 and FP: Muhlenberg County Airport 2
+No glare found
+Main 3b4 and FP: Russellville-Logan Airport 1
+No glare found
+Main 3b4 and FP: Russellville-Logan Airport 2
+No glare found
+Page 177 of 265
+
+ 
+Main 3b4 and OP 1
+Yellow glare: none
+Green glare: 115 min.
+Page 178 of 265
+
+ 
+Main 3b4 and OP 2
+Yellow glare: none
+Green glare: 586 min.
+Page 179 of 265
+
+ 
+Main 3b4 and OP 3
+Yellow glare: none
+Green glare: 972 min.
+Page 180 of 265
+
+ 
+Main 3b4 and OP 4
+Yellow glare: none
+Green glare: 1,205 min.
+Page 181 of 265
+
+ 
+Main 3b4 and OP 5
+Yellow glare: none
+Green glare: 949 min.
+Page 182 of 265
+
+ 
+Main 3b4 and OP 6
+Yellow glare: none
+Green glare: 848 min.
+Page 183 of 265
+
+ 
+Main 3b4 and OP 7
+Yellow glare: none
+Green glare: 360 min.
+Page 184 of 265
+
+ 
+Main 3b4 and OP 8
+Yellow glare: none
+Green glare: 83 min.
+Page 185 of 265
+
+ 
+Main 3b4 and OP 9
+Yellow glare: none
+Green glare: 90 min.
+Page 186 of 265
+
+ 
+Main 3b4 and OP 10
+Yellow glare: none
+Green glare: 59 min.
+Page 187 of 265
+
+ 
+Main 3b4 and OP 12
+Yellow glare: none
+Green glare: 20 min.
+Page 188 of 265
+
+ 
+Main 3b4 and OP 33
+Yellow glare: none
+Green glare: 213 min.
+Page 189 of 265
+
+ 
+Main 3b4 and OP 34
+Yellow glare: none
+Green glare: 308 min.
+Page 190 of 265
+
+ 
+Main 3b4 and OP 35
+Yellow glare: none
+Green glare: 70 min.
+Page 191 of 265
+
+ 
+Main 3b4 and OP 36
+Yellow glare: none
+Green glare: 86 min.
+Page 192 of 265
+
+ 
+Main 3b4 and OP 37
+Yellow glare: none
+Green glare: 101 min.
+Page 193 of 265
+
+ 
+Main 3b4 and OP 38
+Yellow glare: none
+Green glare: 582 min.
+Page 194 of 265
+
+ 
+Main 3b4 and OP 39
+Yellow glare: none
+Green glare: 591 min.
+Main 3b4 and OP 11
+No glare found
+Main 3b4 and OP 13
+No glare found
+Main 3b4 and OP 14
+No glare found
+Main 3b4 and OP 15
+No glare found
+Main 3b4 and OP 16
+No glare found
+Page 195 of 265
+
+ 
+Main 3b4 and OP 17
+No glare found
+Main 3b4 and OP 18
+No glare found
+Main 3b4 and OP 19
+No glare found
+Main 3b4 and OP 20
+No glare found
+Main 3b4 and OP 21
+No glare found
+Main 3b4 and OP 22
+No glare found
+Main 3b4 and OP 23
+No glare found
+Main 3b4 and OP 24
+No glare found
+Main 3b4 and OP 25
+No glare found
+Main 3b4 and OP 26
+No glare found
+Main 3b4 and OP 27
+No glare found
+Main 3b4 and OP 28
+No glare found
+Main 3b4 and OP 29
+No glare found
+Main 3b4 and OP 30
+No glare found
+Page 196 of 265
+
+ 
+Main 3b4 and OP 31
+No glare found
+Main 3b4 and OP 32
+No glare found
+Page 197 of 265
+
+PV: Main 3b5 low potential for temporary after-image 
+Receptor results ordered by category of glare
+Receptor
+Annual Green Glare
+Annual Yellow Glare
+min
+hr
+min
+hr
+SR-949
+1,110
+18.5
+0
+0.0
+US-431
+313
+5.2
+0
+0.0
+Forgy Mill Rd
+0
+0.0
+0
+0.0
+Free Ln
+0
+0.0
+0
+0.0
+Mason-Poyner Rd
+0
+0.0
+0
+0.0
+Pendley Mill Rd
+0
+0.0
+0
+0.0
+Bowling Green Regional 1
+0
+0.0
+0
+0.0
+Bowling Green Regional 2
+0
+0.0
+0
+0.0
+Bowling Green Regional 3
+0
+0.0
+0
+0.0
+Bowling Green Regional 4
+0
+0.0
+0
+0.0
+Muhlenberg County Airport 1
+0
+0.0
+0
+0.0
+Muhlenberg County Airport 2
+0
+0.0
+0
+0.0
+Russellville-Logan Airport 1
+0
+0.0
+0
+0.0
+Russellville-Logan Airport 2
+0
+0.0
+0
+0.0
+OP 1
+604
+10.1
+0
+0.0
+OP 7
+107
+1.8
+0
+0.0
+OP 8
+102
+1.7
+0
+0.0
+OP 9
+113
+1.9
+0
+0.0
+OP 10
+134
+2.2
+0
+0.0
+OP 35
+44
+0.7
+0
+0.0
+OP 36
+23
+0.4
+0
+0.0
+OP 38
+368
+6.1
+0
+0.0
+OP 39
+159
+2.6
+0
+0.0
+OP 2
+0
+0.0
+0
+0.0
+OP 3
+0
+0.0
+0
+0.0
+OP 4
+0
+0.0
+0
+0.0
+OP 5
+0
+0.0
+0
+0.0
+OP 6
+0
+0.0
+0
+0.0
+OP 11
+0
+0.0
+0
+0.0
+OP 12
+0
+0.0
+0
+0.0
+OP 13
+0
+0.0
+0
+0.0
+OP 14
+0
+0.0
+0
+0.0
+OP 15
+0
+0.0
+0
+0.0
+OP 16
+0
+0.0
+0
+0.0
+OP 17
+0
+0.0
+0
+0.0
+OP 18
+0
+0.0
+0
+0.0
+OP 19
+0
+0.0
+0
+0.0
+OP 20
+0
+0.0
+0
+0.0
+OP 21
+0
+0.0
+0
+0.0
+ 
+Page 198 of 265
+
+Receptor
+Annual Green Glare
+Annual Yellow Glare
+min
+hr
+min
+hr
+OP 22
+0
+0.0
+0
+0.0
+OP 23
+0
+0.0
+0
+0.0
+OP 24
+0
+0.0
+0
+0.0
+OP 25
+0
+0.0
+0
+0.0
+OP 26
+0
+0.0
+0
+0.0
+OP 27
+0
+0.0
+0
+0.0
+OP 28
+0
+0.0
+0
+0.0
+OP 29
+0
+0.0
+0
+0.0
+OP 30
+0
+0.0
+0
+0.0
+OP 31
+0
+0.0
+0
+0.0
+OP 32
+0
+0.0
+0
+0.0
+OP 33
+0
+0.0
+0
+0.0
+OP 34
+0
+0.0
+0
+0.0
+OP 37
+0
+0.0
+0
+0.0
+ 
+Page 199 of 265
+
+ 
+Main 3b5 and Route: SR-949
+Yellow glare: none
+Green glare: 1,110 min.
+Page 200 of 265
+
+ 
+Main 3b5 and Route: US-431
+Yellow glare: none
+Green glare: 313 min.
+Main 3b5 and Route: Forgy Mill Rd
+No glare found
+Page 201 of 265
+
+ 
+Main 3b5 and Route: Free Ln
+No glare found
+Main 3b5 and Route: Mason-Poyner Rd
+No glare found
+Main 3b5 and Route: Pendley Mill Rd
+No glare found
+Main 3b5 and FP: Bowling Green Regional 1
+No glare found
+Main 3b5 and FP: Bowling Green Regional 2
+No glare found
+Main 3b5 and FP: Bowling Green Regional 3
+No glare found
+Main 3b5 and FP: Bowling Green Regional 4
+No glare found
+Main 3b5 and FP: Muhlenberg County Airport 1
+No glare found
+Main 3b5 and FP: Muhlenberg County Airport 2
+No glare found
+Main 3b5 and FP: Russellville-Logan Airport 1
+No glare found
+Main 3b5 and FP: Russellville-Logan Airport 2
+No glare found
+Page 202 of 265
+
+ 
+Main 3b5 and OP 1
+Yellow glare: none
+Green glare: 604 min.
+Page 203 of 265
+
+ 
+Main 3b5 and OP 7
+Yellow glare: none
+Green glare: 107 min.
+Page 204 of 265
+
+ 
+Main 3b5 and OP 8
+Yellow glare: none
+Green glare: 102 min.
+Page 205 of 265
+
+ 
+Main 3b5 and OP 9
+Yellow glare: none
+Green glare: 113 min.
+Page 206 of 265
+
+ 
+Main 3b5 and OP 10
+Yellow glare: none
+Green glare: 134 min.
+Page 207 of 265
+
+ 
+Main 3b5 and OP 35
+Yellow glare: none
+Green glare: 44 min.
+Page 208 of 265
+
+ 
+Main 3b5 and OP 36
+Yellow glare: none
+Green glare: 23 min.
+Page 209 of 265
+
+ 
+Main 3b5 and OP 38
+Yellow glare: none
+Green glare: 368 min.
+Page 210 of 265
+
+ 
+Main 3b5 and OP 39
+Yellow glare: none
+Green glare: 159 min.
+Main 3b5 and OP 2
+No glare found
+Main 3b5 and OP 3
+No glare found
+Main 3b5 and OP 4
+No glare found
+Main 3b5 and OP 5
+No glare found
+Main 3b5 and OP 6
+No glare found
+Page 211 of 265
+
+ 
+Main 3b5 and OP 11
+No glare found
+Main 3b5 and OP 12
+No glare found
+Main 3b5 and OP 13
+No glare found
+Main 3b5 and OP 14
+No glare found
+Main 3b5 and OP 15
+No glare found
+Main 3b5 and OP 16
+No glare found
+Main 3b5 and OP 17
+No glare found
+Main 3b5 and OP 18
+No glare found
+Main 3b5 and OP 19
+No glare found
+Main 3b5 and OP 20
+No glare found
+Main 3b5 and OP 21
+No glare found
+Main 3b5 and OP 22
+No glare found
+Main 3b5 and OP 23
+No glare found
+Main 3b5 and OP 24
+No glare found
+Page 212 of 265
+
+ 
+Main 3b5 and OP 25
+No glare found
+Main 3b5 and OP 26
+No glare found
+Main 3b5 and OP 27
+No glare found
+Main 3b5 and OP 28
+No glare found
+Main 3b5 and OP 29
+No glare found
+Main 3b5 and OP 30
+No glare found
+Main 3b5 and OP 31
+No glare found
+Main 3b5 and OP 32
+No glare found
+Main 3b5 and OP 33
+No glare found
+Main 3b5 and OP 34
+No glare found
+Main 3b5 and OP 37
+No glare found
+Page 213 of 265
+
+PV: Main 3b6 no glare found 
+Receptor results ordered by category of glare
+Receptor
+Annual Green Glare
+Annual Yellow Glare
+min
+hr
+min
+hr
+Forgy Mill Rd
+0
+0.0
+0
+0.0
+Free Ln
+0
+0.0
+0
+0.0
+Mason-Poyner Rd
+0
+0.0
+0
+0.0
+Pendley Mill Rd
+0
+0.0
+0
+0.0
+SR-949
+0
+0.0
+0
+0.0
+US-431
+0
+0.0
+0
+0.0
+Bowling Green Regional 1
+0
+0.0
+0
+0.0
+Bowling Green Regional 2
+0
+0.0
+0
+0.0
+Bowling Green Regional 3
+0
+0.0
+0
+0.0
+Bowling Green Regional 4
+0
+0.0
+0
+0.0
+Muhlenberg County Airport 1
+0
+0.0
+0
+0.0
+Muhlenberg County Airport 2
+0
+0.0
+0
+0.0
+Russellville-Logan Airport 1
+0
+0.0
+0
+0.0
+Russellville-Logan Airport 2
+0
+0.0
+0
+0.0
+OP 1
+0
+0.0
+0
+0.0
+OP 2
+0
+0.0
+0
+0.0
+OP 3
+0
+0.0
+0
+0.0
+OP 4
+0
+0.0
+0
+0.0
+OP 5
+0
+0.0
+0
+0.0
+OP 6
+0
+0.0
+0
+0.0
+OP 7
+0
+0.0
+0
+0.0
+OP 8
+0
+0.0
+0
+0.0
+OP 9
+0
+0.0
+0
+0.0
+OP 10
+0
+0.0
+0
+0.0
+OP 11
+0
+0.0
+0
+0.0
+OP 12
+0
+0.0
+0
+0.0
+OP 13
+0
+0.0
+0
+0.0
+OP 14
+0
+0.0
+0
+0.0
+OP 15
+0
+0.0
+0
+0.0
+OP 16
+0
+0.0
+0
+0.0
+OP 17
+0
+0.0
+0
+0.0
+OP 18
+0
+0.0
+0
+0.0
+OP 19
+0
+0.0
+0
+0.0
+OP 20
+0
+0.0
+0
+0.0
+OP 21
+0
+0.0
+0
+0.0
+OP 22
+0
+0.0
+0
+0.0
+OP 23
+0
+0.0
+0
+0.0
+OP 24
+0
+0.0
+0
+0.0
+OP 25
+0
+0.0
+0
+0.0
+ 
+Page 214 of 265
+
+Receptor
+Annual Green Glare
+Annual Yellow Glare
+min
+hr
+min
+hr
+OP 26
+0
+0.0
+0
+0.0
+OP 27
+0
+0.0
+0
+0.0
+OP 28
+0
+0.0
+0
+0.0
+OP 29
+0
+0.0
+0
+0.0
+OP 30
+0
+0.0
+0
+0.0
+OP 31
+0
+0.0
+0
+0.0
+OP 32
+0
+0.0
+0
+0.0
+OP 33
+0
+0.0
+0
+0.0
+OP 34
+0
+0.0
+0
+0.0
+OP 35
+0
+0.0
+0
+0.0
+OP 36
+0
+0.0
+0
+0.0
+OP 37
+0
+0.0
+0
+0.0
+OP 38
+0
+0.0
+0
+0.0
+OP 39
+0
+0.0
+0
+0.0
+ 
+Main 3b6 and Route: Forgy Mill Rd
+No glare found
+Main 3b6 and Route: Free Ln
+No glare found
+Main 3b6 and Route: Mason-Poyner Rd
+No glare found
+Main 3b6 and Route: Pendley Mill Rd
+No glare found
+Main 3b6 and Route: SR-949
+No glare found
+Main 3b6 and Route: US-431
+No glare found
+Main 3b6 and FP: Bowling Green Regional 1
+No glare found
+Main 3b6 and FP: Bowling Green Regional 2
+No glare found
+Main 3b6 and FP: Bowling Green Regional 3
+No glare found
+Page 215 of 265
+
+ 
+Main 3b6 and FP: Bowling Green Regional 4
+No glare found
+Main 3b6 and FP: Muhlenberg County Airport 1
+No glare found
+Main 3b6 and FP: Muhlenberg County Airport 2
+No glare found
+Main 3b6 and FP: Russellville-Logan Airport 1
+No glare found
+Main 3b6 and FP: Russellville-Logan Airport 2
+No glare found
+Main 3b6 and OP 1
+No glare found
+Main 3b6 and OP 2
+No glare found
+Main 3b6 and OP 3
+No glare found
+Main 3b6 and OP 4
+No glare found
+Main 3b6 and OP 5
+No glare found
+Main 3b6 and OP 6
+No glare found
+Main 3b6 and OP 7
+No glare found
+Main 3b6 and OP 8
+No glare found
+Main 3b6 and OP 9
+No glare found
+Page 216 of 265
+
+ 
+Main 3b6 and OP 10
+No glare found
+Main 3b6 and OP 11
+No glare found
+Main 3b6 and OP 12
+No glare found
+Main 3b6 and OP 13
+No glare found
+Main 3b6 and OP 14
+No glare found
+Main 3b6 and OP 15
+No glare found
+Main 3b6 and OP 16
+No glare found
+Main 3b6 and OP 17
+No glare found
+Main 3b6 and OP 18
+No glare found
+Main 3b6 and OP 19
+No glare found
+Main 3b6 and OP 20
+No glare found
+Main 3b6 and OP 21
+No glare found
+Main 3b6 and OP 22
+No glare found
+Main 3b6 and OP 23
+No glare found
+Page 217 of 265
+
+ 
+Main 3b6 and OP 24
+No glare found
+Main 3b6 and OP 25
+No glare found
+Main 3b6 and OP 26
+No glare found
+Main 3b6 and OP 27
+No glare found
+Main 3b6 and OP 28
+No glare found
+Main 3b6 and OP 29
+No glare found
+Main 3b6 and OP 30
+No glare found
+Main 3b6 and OP 31
+No glare found
+Main 3b6 and OP 32
+No glare found
+Main 3b6 and OP 33
+No glare found
+Main 3b6 and OP 34
+No glare found
+Main 3b6 and OP 35
+No glare found
+Main 3b6 and OP 36
+No glare found
+Main 3b6 and OP 37
+No glare found
+Page 218 of 265
+
+ 
+Main 3b6 and OP 38
+No glare found
+Main 3b6 and OP 39
+No glare found
+Page 219 of 265
+
+PV: Main 3b7 potential temporary after-image 
+Receptor results ordered by category of glare
+Receptor
+Annual Green Glare
+Annual Yellow Glare
+min
+hr
+min
+hr
+Mason-Poyner Rd
+13,865
+231.1
+17,255
+287.6
+US-431
+2,275
+37.9
+227
+3.8
+Free Ln
+2,577
+43.0
+0
+0.0
+Forgy Mill Rd
+0
+0.0
+0
+0.0
+Pendley Mill Rd
+0
+0.0
+0
+0.0
+SR-949
+0
+0.0
+0
+0.0
+Bowling Green Regional 1
+0
+0.0
+0
+0.0
+Bowling Green Regional 2
+0
+0.0
+0
+0.0
+Bowling Green Regional 3
+0
+0.0
+0
+0.0
+Bowling Green Regional 4
+0
+0.0
+0
+0.0
+Muhlenberg County Airport 1
+0
+0.0
+0
+0.0
+Muhlenberg County Airport 2
+0
+0.0
+0
+0.0
+Russellville-Logan Airport 1
+0
+0.0
+0
+0.0
+Russellville-Logan Airport 2
+0
+0.0
+0
+0.0
+OP 2
+1,828
+30.5
+0
+0.0
+OP 3
+2,980
+49.7
+0
+0.0
+OP 4
+3,303
+55.0
+0
+0.0
+OP 5
+2,043
+34.0
+0
+0.0
+OP 6
+1,577
+26.3
+0
+0.0
+OP 7
+887
+14.8
+0
+0.0
+OP 8
+693
+11.6
+0
+0.0
+OP 9
+824
+13.7
+0
+0.0
+OP 10
+438
+7.3
+0
+0.0
+OP 11
+64
+1.1
+0
+0.0
+OP 25
+338
+5.6
+0
+0.0
+OP 26
+106
+1.8
+0
+0.0
+OP 28
+244
+4.1
+0
+0.0
+OP 34
+567
+9.4
+0
+0.0
+OP 35
+914
+15.2
+0
+0.0
+OP 36
+929
+15.5
+0
+0.0
+OP 37
+1,158
+19.3
+0
+0.0
+OP 38
+1,415
+23.6
+0
+0.0
+OP 39
+1,110
+18.5
+0
+0.0
+OP 1
+0
+0.0
+0
+0.0
+OP 12
+0
+0.0
+0
+0.0
+OP 13
+0
+0.0
+0
+0.0
+OP 14
+0
+0.0
+0
+0.0
+OP 15
+0
+0.0
+0
+0.0
+OP 16
+0
+0.0
+0
+0.0
+ 
+Page 220 of 265
+
+Receptor
+Annual Green Glare
+Annual Yellow Glare
+min
+hr
+min
+hr
+OP 17
+0
+0.0
+0
+0.0
+OP 18
+0
+0.0
+0
+0.0
+OP 19
+0
+0.0
+0
+0.0
+OP 20
+0
+0.0
+0
+0.0
+OP 21
+0
+0.0
+0
+0.0
+OP 22
+0
+0.0
+0
+0.0
+OP 23
+0
+0.0
+0
+0.0
+OP 24
+0
+0.0
+0
+0.0
+OP 27
+0
+0.0
+0
+0.0
+OP 29
+0
+0.0
+0
+0.0
+OP 30
+0
+0.0
+0
+0.0
+OP 31
+0
+0.0
+0
+0.0
+OP 32
+0
+0.0
+0
+0.0
+OP 33
+0
+0.0
+0
+0.0
+ 
+Page 221 of 265
+
+ 
+Main 3b7 and Route: Mason-Poyner Rd
+Yellow glare: 17,255 min.
+Green glare: 13,865 min.
+Page 222 of 265
+
+ 
+Main 3b7 and Route: US-431
+Yellow glare: 227 min.
+Green glare: 2,275 min.
+Page 223 of 265
+
+ 
+Main 3b7 and Route: Free Ln
+Yellow glare: none
+Green glare: 2,577 min.
+Main 3b7 and Route: Forgy Mill Rd
+No glare found
+Page 224 of 265
+
+ 
+Main 3b7 and Route: Pendley Mill Rd
+No glare found
+Main 3b7 and Route: SR-949
+No glare found
+Main 3b7 and FP: Bowling Green Regional 1
+No glare found
+Main 3b7 and FP: Bowling Green Regional 2
+No glare found
+Main 3b7 and FP: Bowling Green Regional 3
+No glare found
+Main 3b7 and FP: Bowling Green Regional 4
+No glare found
+Main 3b7 and FP: Muhlenberg County Airport 1
+No glare found
+Main 3b7 and FP: Muhlenberg County Airport 2
+No glare found
+Main 3b7 and FP: Russellville-Logan Airport 1
+No glare found
+Main 3b7 and FP: Russellville-Logan Airport 2
+No glare found
+Page 225 of 265
+
+ 
+Main 3b7 and OP 2
+Yellow glare: none
+Green glare: 1,828 min.
+Page 226 of 265
+
+ 
+Main 3b7 and OP 3
+Yellow glare: none
+Green glare: 2,980 min.
+Page 227 of 265
+
+ 
+Main 3b7 and OP 4
+Yellow glare: none
+Green glare: 3,303 min.
+Page 228 of 265
+
+ 
+Main 3b7 and OP 5
+Yellow glare: none
+Green glare: 2,043 min.
+Page 229 of 265
+
+ 
+Main 3b7 and OP 6
+Yellow glare: none
+Green glare: 1,577 min.
+Page 230 of 265
+
+ 
+Main 3b7 and OP 7
+Yellow glare: none
+Green glare: 887 min.
+Page 231 of 265
+
+ 
+Main 3b7 and OP 8
+Yellow glare: none
+Green glare: 693 min.
+Page 232 of 265
+
+ 
+Main 3b7 and OP 9
+Yellow glare: none
+Green glare: 824 min.
+Page 233 of 265
+
+ 
+Main 3b7 and OP 10
+Yellow glare: none
+Green glare: 438 min.
+Page 234 of 265
+
+ 
+Main 3b7 and OP 11
+Yellow glare: none
+Green glare: 64 min.
+Page 235 of 265
+
+ 
+Main 3b7 and OP 25
+Yellow glare: none
+Green glare: 338 min.
+Page 236 of 265
+
+ 
+Main 3b7 and OP 26
+Yellow glare: none
+Green glare: 106 min.
+Page 237 of 265
+
+ 
+Main 3b7 and OP 28
+Yellow glare: none
+Green glare: 244 min.
+Page 238 of 265
+
+ 
+Main 3b7 and OP 34
+Yellow glare: none
+Green glare: 567 min.
+Page 239 of 265
+
+ 
+Main 3b7 and OP 35
+Yellow glare: none
+Green glare: 914 min.
+Page 240 of 265
+
+ 
+Main 3b7 and OP 36
+Yellow glare: none
+Green glare: 929 min.
+Page 241 of 265
+
+ 
+Main 3b7 and OP 37
+Yellow glare: none
+Green glare: 1,158 min.
+Page 242 of 265
+
+ 
+Main 3b7 and OP 38
+Yellow glare: none
+Green glare: 1,415 min.
+Page 243 of 265
+
+ 
+Main 3b7 and OP 39
+Yellow glare: none
+Green glare: 1,110 min.
+Main 3b7 and OP 1
+No glare found
+Main 3b7 and OP 12
+No glare found
+Main 3b7 and OP 13
+No glare found
+Main 3b7 and OP 14
+No glare found
+Main 3b7 and OP 15
+No glare found
+Page 244 of 265
+
+ 
+Main 3b7 and OP 16
+No glare found
+Main 3b7 and OP 17
+No glare found
+Main 3b7 and OP 18
+No glare found
+Main 3b7 and OP 19
+No glare found
+Main 3b7 and OP 20
+No glare found
+Main 3b7 and OP 21
+No glare found
+Main 3b7 and OP 22
+No glare found
+Main 3b7 and OP 23
+No glare found
+Main 3b7 and OP 24
+No glare found
+Main 3b7 and OP 27
+No glare found
+Main 3b7 and OP 29
+No glare found
+Main 3b7 and OP 30
+No glare found
+Main 3b7 and OP 31
+No glare found
+Main 3b7 and OP 32
+No glare found
+Page 245 of 265
+
+ 
+Main 3b7 and OP 33
+No glare found
+Page 246 of 265
+
+PV: South no glare found 
+Receptor results ordered by category of glare
+Receptor
+Annual Green Glare
+Annual Yellow Glare
+min
+hr
+min
+hr
+Forgy Mill Rd
+0
+0.0
+0
+0.0
+Free Ln
+0
+0.0
+0
+0.0
+Mason-Poyner Rd
+0
+0.0
+0
+0.0
+Pendley Mill Rd
+0
+0.0
+0
+0.0
+SR-949
+0
+0.0
+0
+0.0
+US-431
+0
+0.0
+0
+0.0
+Bowling Green Regional 1
+0
+0.0
+0
+0.0
+Bowling Green Regional 2
+0
+0.0
+0
+0.0
+Bowling Green Regional 3
+0
+0.0
+0
+0.0
+Bowling Green Regional 4
+0
+0.0
+0
+0.0
+Muhlenberg County Airport 1
+0
+0.0
+0
+0.0
+Muhlenberg County Airport 2
+0
+0.0
+0
+0.0
+Russellville-Logan Airport 1
+0
+0.0
+0
+0.0
+Russellville-Logan Airport 2
+0
+0.0
+0
+0.0
+OP 1
+0
+0.0
+0
+0.0
+OP 2
+0
+0.0
+0
+0.0
+OP 3
+0
+0.0
+0
+0.0
+OP 4
+0
+0.0
+0
+0.0
+OP 5
+0
+0.0
+0
+0.0
+OP 6
+0
+0.0
+0
+0.0
+OP 7
+0
+0.0
+0
+0.0
+OP 8
+0
+0.0
+0
+0.0
+OP 9
+0
+0.0
+0
+0.0
+OP 10
+0
+0.0
+0
+0.0
+OP 11
+0
+0.0
+0
+0.0
+OP 12
+0
+0.0
+0
+0.0
+OP 13
+0
+0.0
+0
+0.0
+OP 14
+0
+0.0
+0
+0.0
+OP 15
+0
+0.0
+0
+0.0
+OP 16
+0
+0.0
+0
+0.0
+OP 17
+0
+0.0
+0
+0.0
+OP 18
+0
+0.0
+0
+0.0
+OP 19
+0
+0.0
+0
+0.0
+OP 20
+0
+0.0
+0
+0.0
+OP 21
+0
+0.0
+0
+0.0
+OP 22
+0
+0.0
+0
+0.0
+OP 23
+0
+0.0
+0
+0.0
+OP 24
+0
+0.0
+0
+0.0
+OP 25
+0
+0.0
+0
+0.0
+ 
+Page 247 of 265
+
+Receptor
+Annual Green Glare
+Annual Yellow Glare
+min
+hr
+min
+hr
+OP 26
+0
+0.0
+0
+0.0
+OP 27
+0
+0.0
+0
+0.0
+OP 28
+0
+0.0
+0
+0.0
+OP 29
+0
+0.0
+0
+0.0
+OP 30
+0
+0.0
+0
+0.0
+OP 31
+0
+0.0
+0
+0.0
+OP 32
+0
+0.0
+0
+0.0
+OP 33
+0
+0.0
+0
+0.0
+OP 34
+0
+0.0
+0
+0.0
+OP 35
+0
+0.0
+0
+0.0
+OP 36
+0
+0.0
+0
+0.0
+OP 37
+0
+0.0
+0
+0.0
+OP 38
+0
+0.0
+0
+0.0
+OP 39
+0
+0.0
+0
+0.0
+ 
+South and Route: Forgy Mill Rd
+No glare found
+South and Route: Free Ln
+No glare found
+South and Route: Mason-Poyner Rd
+No glare found
+South and Route: Pendley Mill Rd
+No glare found
+South and Route: SR-949
+No glare found
+South and Route: US-431
+No glare found
+South and FP: Bowling Green Regional 1
+No glare found
+South and FP: Bowling Green Regional 2
+No glare found
+South and FP: Bowling Green Regional 3
+No glare found
+Page 248 of 265
+
+ 
+South and FP: Bowling Green Regional 4
+No glare found
+South and FP: Muhlenberg County Airport 1
+No glare found
+South and FP: Muhlenberg County Airport 2
+No glare found
+South and FP: Russellville-Logan Airport 1
+No glare found
+South and FP: Russellville-Logan Airport 2
+No glare found
+South and OP 1
+No glare found
+South and OP 2
+No glare found
+South and OP 3
+No glare found
+South and OP 4
+No glare found
+South and OP 5
+No glare found
+South and OP 6
+No glare found
+South and OP 7
+No glare found
+South and OP 8
+No glare found
+South and OP 9
+No glare found
+Page 249 of 265
+
+ 
+South and OP 10
+No glare found
+South and OP 11
+No glare found
+South and OP 12
+No glare found
+South and OP 13
+No glare found
+South and OP 14
+No glare found
+South and OP 15
+No glare found
+South and OP 16
+No glare found
+South and OP 17
+No glare found
+South and OP 18
+No glare found
+South and OP 19
+No glare found
+South and OP 20
+No glare found
+South and OP 21
+No glare found
+South and OP 22
+No glare found
+South and OP 23
+No glare found
+Page 250 of 265
+
+ 
+South and OP 24
+No glare found
+South and OP 25
+No glare found
+South and OP 26
+No glare found
+South and OP 27
+No glare found
+South and OP 28
+No glare found
+South and OP 29
+No glare found
+South and OP 30
+No glare found
+South and OP 31
+No glare found
+South and OP 32
+No glare found
+South and OP 33
+No glare found
+South and OP 34
+No glare found
+South and OP 35
+No glare found
+South and OP 36
+No glare found
+South and OP 37
+No glare found
+Page 251 of 265
+
+ 
+South and OP 38
+No glare found
+South and OP 39
+No glare found
+Page 252 of 265
+
+PV: West Bottom no glare found 
+Receptor results ordered by category of glare
+Receptor
+Annual Green Glare
+Annual Yellow Glare
+min
+hr
+min
+hr
+Forgy Mill Rd
+0
+0.0
+0
+0.0
+Free Ln
+0
+0.0
+0
+0.0
+Mason-Poyner Rd
+0
+0.0
+0
+0.0
+Pendley Mill Rd
+0
+0.0
+0
+0.0
+SR-949
+0
+0.0
+0
+0.0
+US-431
+0
+0.0
+0
+0.0
+Bowling Green Regional 1
+0
+0.0
+0
+0.0
+Bowling Green Regional 2
+0
+0.0
+0
+0.0
+Bowling Green Regional 3
+0
+0.0
+0
+0.0
+Bowling Green Regional 4
+0
+0.0
+0
+0.0
+Muhlenberg County Airport 1
+0
+0.0
+0
+0.0
+Muhlenberg County Airport 2
+0
+0.0
+0
+0.0
+Russellville-Logan Airport 1
+0
+0.0
+0
+0.0
+Russellville-Logan Airport 2
+0
+0.0
+0
+0.0
+OP 1
+0
+0.0
+0
+0.0
+OP 2
+0
+0.0
+0
+0.0
+OP 3
+0
+0.0
+0
+0.0
+OP 4
+0
+0.0
+0
+0.0
+OP 5
+0
+0.0
+0
+0.0
+OP 6
+0
+0.0
+0
+0.0
+OP 7
+0
+0.0
+0
+0.0
+OP 8
+0
+0.0
+0
+0.0
+OP 9
+0
+0.0
+0
+0.0
+OP 10
+0
+0.0
+0
+0.0
+OP 11
+0
+0.0
+0
+0.0
+OP 12
+0
+0.0
+0
+0.0
+OP 13
+0
+0.0
+0
+0.0
+OP 14
+0
+0.0
+0
+0.0
+OP 15
+0
+0.0
+0
+0.0
+OP 16
+0
+0.0
+0
+0.0
+OP 17
+0
+0.0
+0
+0.0
+OP 18
+0
+0.0
+0
+0.0
+OP 19
+0
+0.0
+0
+0.0
+OP 20
+0
+0.0
+0
+0.0
+OP 21
+0
+0.0
+0
+0.0
+OP 22
+0
+0.0
+0
+0.0
+OP 23
+0
+0.0
+0
+0.0
+OP 24
+0
+0.0
+0
+0.0
+OP 25
+0
+0.0
+0
+0.0
+ 
+Page 253 of 265
+
+Receptor
+Annual Green Glare
+Annual Yellow Glare
+min
+hr
+min
+hr
+OP 26
+0
+0.0
+0
+0.0
+OP 27
+0
+0.0
+0
+0.0
+OP 28
+0
+0.0
+0
+0.0
+OP 29
+0
+0.0
+0
+0.0
+OP 30
+0
+0.0
+0
+0.0
+OP 31
+0
+0.0
+0
+0.0
+OP 32
+0
+0.0
+0
+0.0
+OP 33
+0
+0.0
+0
+0.0
+OP 34
+0
+0.0
+0
+0.0
+OP 35
+0
+0.0
+0
+0.0
+OP 36
+0
+0.0
+0
+0.0
+OP 37
+0
+0.0
+0
+0.0
+OP 38
+0
+0.0
+0
+0.0
+OP 39
+0
+0.0
+0
+0.0
+ 
+West Bottom and Route: Forgy Mill Rd
+No glare found
+West Bottom and Route: Free Ln
+No glare found
+West Bottom and Route: Mason-Poyner Rd
+No glare found
+West Bottom and Route: Pendley Mill Rd
+No glare found
+West Bottom and Route: SR-949
+No glare found
+West Bottom and Route: US-431
+No glare found
+West Bottom and FP: Bowling Green Regional 1
+No glare found
+West Bottom and FP: Bowling Green Regional 2
+No glare found
+West Bottom and FP: Bowling Green Regional 3
+No glare found
+Page 254 of 265
+
+ 
+West Bottom and FP: Bowling Green Regional 4
+No glare found
+West Bottom and FP: Muhlenberg County Airport 1
+No glare found
+West Bottom and FP: Muhlenberg County Airport 2
+No glare found
+West Bottom and FP: Russellville-Logan Airport 1
+No glare found
+West Bottom and FP: Russellville-Logan Airport 2
+No glare found
+West Bottom and OP 1
+No glare found
+West Bottom and OP 2
+No glare found
+West Bottom and OP 3
+No glare found
+West Bottom and OP 4
+No glare found
+West Bottom and OP 5
+No glare found
+West Bottom and OP 6
+No glare found
+West Bottom and OP 7
+No glare found
+West Bottom and OP 8
+No glare found
+West Bottom and OP 9
+No glare found
+Page 255 of 265
+
+ 
+West Bottom and OP 10
+No glare found
+West Bottom and OP 11
+No glare found
+West Bottom and OP 12
+No glare found
+West Bottom and OP 13
+No glare found
+West Bottom and OP 14
+No glare found
+West Bottom and OP 15
+No glare found
+West Bottom and OP 16
+No glare found
+West Bottom and OP 17
+No glare found
+West Bottom and OP 18
+No glare found
+West Bottom and OP 19
+No glare found
+West Bottom and OP 20
+No glare found
+West Bottom and OP 21
+No glare found
+West Bottom and OP 22
+No glare found
+West Bottom and OP 23
+No glare found
+Page 256 of 265
+
+ 
+West Bottom and OP 24
+No glare found
+West Bottom and OP 25
+No glare found
+West Bottom and OP 26
+No glare found
+West Bottom and OP 27
+No glare found
+West Bottom and OP 28
+No glare found
+West Bottom and OP 29
+No glare found
+West Bottom and OP 30
+No glare found
+West Bottom and OP 31
+No glare found
+West Bottom and OP 32
+No glare found
+West Bottom and OP 33
+No glare found
+West Bottom and OP 34
+No glare found
+West Bottom and OP 35
+No glare found
+West Bottom and OP 36
+No glare found
+West Bottom and OP 37
+No glare found
+Page 257 of 265
+
+ 
+West Bottom and OP 38
+No glare found
+West Bottom and OP 39
+No glare found
+Page 258 of 265
+
+PV: West top potential temporary after-image 
+Receptor results ordered by category of glare
+Receptor
+Annual Green Glare
+Annual Yellow Glare
+min
+hr
+min
+hr
+Forgy Mill Rd
+0
+0.0
+0
+0.0
+Free Ln
+0
+0.0
+0
+0.0
+Mason-Poyner Rd
+0
+0.0
+0
+0.0
+Pendley Mill Rd
+0
+0.0
+0
+0.0
+SR-949
+0
+0.0
+0
+0.0
+US-431
+0
+0.0
+0
+0.0
+Bowling Green Regional 1
+0
+0.0
+0
+0.0
+Bowling Green Regional 2
+0
+0.0
+0
+0.0
+Bowling Green Regional 3
+0
+0.0
+0
+0.0
+Bowling Green Regional 4
+0
+0.0
+0
+0.0
+Muhlenberg County Airport 1
+0
+0.0
+0
+0.0
+Muhlenberg County Airport 2
+0
+0.0
+0
+0.0
+Russellville-Logan Airport 1
+0
+0.0
+0
+0.0
+Russellville-Logan Airport 2
+0
+0.0
+0
+0.0
+OP 26
+352
+5.9
+306
+5.1
+OP 1
+0
+0.0
+0
+0.0
+OP 2
+0
+0.0
+0
+0.0
+OP 3
+0
+0.0
+0
+0.0
+OP 4
+0
+0.0
+0
+0.0
+OP 5
+0
+0.0
+0
+0.0
+OP 6
+0
+0.0
+0
+0.0
+OP 7
+0
+0.0
+0
+0.0
+OP 8
+0
+0.0
+0
+0.0
+OP 9
+0
+0.0
+0
+0.0
+OP 10
+0
+0.0
+0
+0.0
+OP 11
+0
+0.0
+0
+0.0
+OP 12
+0
+0.0
+0
+0.0
+OP 13
+0
+0.0
+0
+0.0
+OP 14
+0
+0.0
+0
+0.0
+OP 15
+0
+0.0
+0
+0.0
+OP 16
+0
+0.0
+0
+0.0
+OP 17
+0
+0.0
+0
+0.0
+OP 18
+0
+0.0
+0
+0.0
+OP 19
+0
+0.0
+0
+0.0
+OP 20
+0
+0.0
+0
+0.0
+OP 21
+0
+0.0
+0
+0.0
+OP 22
+0
+0.0
+0
+0.0
+OP 23
+0
+0.0
+0
+0.0
+OP 24
+0
+0.0
+0
+0.0
+ 
+Page 259 of 265
+
+Receptor
+Annual Green Glare
+Annual Yellow Glare
+min
+hr
+min
+hr
+OP 25
+0
+0.0
+0
+0.0
+OP 27
+0
+0.0
+0
+0.0
+OP 28
+0
+0.0
+0
+0.0
+OP 29
+0
+0.0
+0
+0.0
+OP 30
+0
+0.0
+0
+0.0
+OP 31
+0
+0.0
+0
+0.0
+OP 32
+0
+0.0
+0
+0.0
+OP 33
+0
+0.0
+0
+0.0
+OP 34
+0
+0.0
+0
+0.0
+OP 35
+0
+0.0
+0
+0.0
+OP 36
+0
+0.0
+0
+0.0
+OP 37
+0
+0.0
+0
+0.0
+OP 38
+0
+0.0
+0
+0.0
+OP 39
+0
+0.0
+0
+0.0
+ 
+West top and Route: Forgy Mill Rd
+No glare found
+West top and Route: Free Ln
+No glare found
+West top and Route: Mason-Poyner Rd
+No glare found
+West top and Route: Pendley Mill Rd
+No glare found
+West top and Route: SR-949
+No glare found
+West top and Route: US-431
+No glare found
+West top and FP: Bowling Green Regional 1
+No glare found
+West top and FP: Bowling Green Regional 2
+No glare found
+West top and FP: Bowling Green Regional 3
+No glare found
+Page 260 of 265
+
+ 
+West top and FP: Bowling Green Regional 4
+No glare found
+West top and FP: Muhlenberg County Airport 1
+No glare found
+West top and FP: Muhlenberg County Airport 2
+No glare found
+West top and FP: Russellville-Logan Airport 1
+No glare found
+West top and FP: Russellville-Logan Airport 2
+No glare found
+West top and OP 26
+Yellow glare: 306 min.
+Green glare: 352 min.
+Page 261 of 265
+
+ 
+West top and OP 1
+No glare found
+West top and OP 2
+No glare found
+West top and OP 3
+No glare found
+West top and OP 4
+No glare found
+West top and OP 5
+No glare found
+West top and OP 6
+No glare found
+West top and OP 7
+No glare found
+West top and OP 8
+No glare found
+West top and OP 9
+No glare found
+West top and OP 10
+No glare found
+West top and OP 11
+No glare found
+West top and OP 12
+No glare found
+West top and OP 13
+No glare found
+West top and OP 14
+No glare found
+Page 262 of 265
+
+ 
+West top and OP 15
+No glare found
+West top and OP 16
+No glare found
+West top and OP 17
+No glare found
+West top and OP 18
+No glare found
+West top and OP 19
+No glare found
+West top and OP 20
+No glare found
+West top and OP 21
+No glare found
+West top and OP 22
+No glare found
+West top and OP 23
+No glare found
+West top and OP 24
+No glare found
+West top and OP 25
+No glare found
+West top and OP 27
+No glare found
+West top and OP 28
+No glare found
+West top and OP 29
+No glare found
+Page 263 of 265
+
+ 
+West top and OP 30
+No glare found
+West top and OP 31
+No glare found
+West top and OP 32
+No glare found
+West top and OP 33
+No glare found
+West top and OP 34
+No glare found
+West top and OP 35
+No glare found
+West top and OP 36
+No glare found
+West top and OP 37
+No glare found
+West top and OP 38
+No glare found
+West top and OP 39
+No glare found
+Page 264 of 265
+
+Assumptions
+Default glare analysis parameters and observer eye characteristics (for reference only): 
+• Analysis time interval: 1 minute
+• Ocular transmission coefficient: 0.5
+• Pupil diameter: 0.002 meters
+• Eye focal length: 0.017 meters
+• Sun subtended angle: 9.3 milliradians
+© Sims Industries d/b/a ForgeSolar, All Rights Reserved.
+ 
+"Green" glare is glare with low potential to cause an after-image (flash blindness) when observed prior to a typical blink response time. 
+"Yellow" glare is glare with potential to cause an after-image (flash blindness) when observed prior to a typical blink response time. 
+Times associated with glare are denoted in Standard time. For Daylight Savings, add one hour. 
+The algorithm does not rigorously represent the detailed geometry of a system; detailed features such as gaps between modules, variable
+height of the PV array, and support structures may impact actual glare results. However, we have validated our models against several
+systems, including a PV array causing glare to the air-traffic control tower at Manchester-Boston Regional Airport and several sites in
+Albuquerque, and the tool accurately predicted the occurrence and intensity of glare at different times and days of the year. 
+Several V1 calculations utilize the PV array centroid, rather than the actual glare spot location, due to algorithm limitations. This may affect
+results for large PV footprints. Additional analyses of array sub-sections can provide additional information on expected glare. This primarily
+affects V1 analyses of path receptors. 
+Random number computations are utilized by various steps of the annual hazard analysis algorithm. Predicted minutes of glare can vary
+between runs as a result. This limitation primarily affects analyses of Observation Point receptors, including ATCTs. Note that the SGHAT/
+ForgeSolar methodology has always relied on an analytical, qualitative approach to accurately determine the overall hazard (i.e. green vs.
+yellow) of expected glare on an annual basis. 
+The analysis does not automatically consider obstacles (either man-made or natural) between the observation points and the prescribed solar
+installation that may obstruct observed glare, such as trees, hills, buildings, etc. 
+The subtended source angle (glare spot size) is constrained by the PV array footprint size. Partitioning large arrays into smaller sections will
+reduce the maximum potential subtended angle, potentially impacting results if actual glare spots are larger than the sub-array size. Additional
+analyses of the combined area of adjacent sub-arrays can provide more information on potential glare hazards. (See previous point on related
+limitations.) 
+The variable direct normal irradiance (DNI) feature (if selected) scales the user-prescribed peak DNI using a typical clear-day irradiance profile.
+This profile has a lower DNI in the mornings and evenings and a maximum at solar noon. The scaling uses a clear-day irradiance profile based
+on a normalized time relative to sunrise, solar noon, and sunset, which are prescribed by a sun-position algorithm and the latitude and longitude
+obtained from Google maps. The actual DNI on any given day can be affected by cloud cover, atmospheric attenuation, and other
+environmental factors. 
+The ocular hazard predicted by the tool depends on a number of environmental, optical, and human factors, which can be uncertain. We
+provide input fields and typical ranges of values for these factors so that the user can vary these parameters to see if they have an impact on
+the results. The speed of SGHAT allows expedited sensitivity and parametric analyses. 
+The system output calculation is a DNI-based approximation that assumes clear, sunny skies year-round. It should not be used in place of more
+rigorous modeling methods.
+Hazard zone boundaries shown in the Glare Hazard plot are an approximation and visual aid based on aggregated research data. Actual ocular
+impact outcomes encompass a continuous, not discrete, spectrum. 
+Glare locations displayed on receptor plots are approximate. Actual glare-spot locations may differ.
+Refer to the Help page at www.forgesolar.com/help/ for assumptions and limitations not listed here. 
+Page 265 of 265
+
+ 
+17 
+Glare Analysis 
+ 
+ 
+ 
+Appendix B 
+Landscaping Plan 
+
+INV-1
+INV-2
+INV-3
+INV-4
+INV-6
+INV-7
+INV-8
+INV-9
+INV-10
+INV-11
+INV-12
+INV-13
+INV-14
+INV-15
+INV-16
+INV-17
+INV-18
+INV-19
+INV-20
+INV-21
+INV-22
+INV-23
+INV-24
+INV-25
+INV-26
+INV-27
+INV-28
+INV-29
+INV-30
+INV-31
+INV-32
+INV-33
+INV-34
+INV-35
+INV-36
+INV-37
+INV-38
+INV-39
+INV-40
+INV-41
+INV-42
+INV-43
+INV-44
+INV-45
+INV-46
+INV-47
+INV-48
+INV-49
+INV-50
+INV-51
+INV-52
+INV-53
+INV-54
+INV-55
+INV-56
+INV-57
+INV-58
+INV-59
+INV-60
+INV-61
+INV-62
+INV-63
+INV-5
+V:\1938\resource\LA\Projects (Saved Locally)\2057322000 LOST CITY SOLAR\CAD\2057322000 Lost City Solar.dwg
+2025/01/06 3:38 PM
+ By: Burand, Rachel
+LEGEND - LANDSCAPE PLAN
+DESCRIPTION
+STANDARD PLANTING
+DOUBLE PLANTING
+NO ADDITIONAL PLANTING
+LEGEND - GENERAL
+DESCRIPTION
+FENCE
+PHOTOVOLTAIC PANEL
+INVERTER
+DNO
+N
+CLIENT/PROJECT:
+SHT
+OF
+REV:
+DWG NO:
+APPROVED:
+DRAWN:
+DESIGNED:
+SCALE:
+CHECKED:
+CHECKED:
+DESCRIPTION
+DRAWING REVISIONS
+REV.
+DATE
+PROJECT NO:
+APPRVD
+CHKD
+DRAWN
+COA #
+Copyright Reserved
+SEAL
+TITLE:
+FILE NAME:
+Stantec Consulting Services Inc.
+IND. REVIEW
+LOST CITY RENEWABLES LLC
+LOST CITY
+MUHLENBURG COUNTY, DUNMOR KENTUCKY
+LOST CITY
+4
+2057322000-LC-C-700
+B
+A
+B
+PRELIMINARY
+NOT FOR
+CONSTRUCTION
+12/20/2024
+1
+1"=800'
+OVERALL LANDSCAPE PLAN
+
+
+
+CLIENT/PROJECT:
+SHT
+OF
+REV:
+DWG NO:
+APPROVED:
+DRAWN:
+DESIGNED:
+SCALE:
+CHECKED:
+CHECKED:
+DESCRIPTION
+DRAWING REVISIONS
+REV.
+DATE
+PROJECT NO:
+APPRVD
+CHKD
+DRAWN
+COA #
+Copyright Reserved
+SEAL
+TITLE:
+FILE NAME:
+Stantec Consulting Services Inc.
+IND. REVIEW
+LOST CITY RENEWABLES LLC
+LOST CITY
+MUHLENBURG COUNTY, DUNMOR KENTUCKY
+LOST CITY
+4
+2057322000-LC-C-700
+B
+A
+B
+PRELIMINARY
+NOT FOR
+CONSTRUCTION
+12/20/2024
+V:\1938\resource\LA\Projects (Saved Locally)\2057322000 LOST CITY SOLAR\CAD\2057322000 Lost City Solar.dwg
+2025/01/06 3:43 PM
+ By: Burand, Rachel
+EVERGREEN TREE PLANTING
+DETAIL:
+N.T.S.
+1.  DO NOT CUT MAIN LEADER.
+NOTES:
+SHREDDED HARDWOOD MULCH (MINIMUM 4"
+EARTH SAUCER AROUND TREE
+REMOVE BURLAP FROM TOP 1/3 OF ROOT BALL
+2" X 2" HARDWOOD STAKE
+GALVANIZED WIRE GUY
+RUBBER HOSE
+DEPTH), PULLED AWAY FROM BASE OF TREE
+BACKFILL WITH MATERIAL
+REMOVED DURING PLANTING
+PIT EXCAVATION  AND TAMP
+TO PREVENT SETTLEMENT
+ROOT BALL SHOULD
+BE SET ON
+UNDISTURBED SOIL
+SIDES AND BOTTOMS OF
+PLANTING PIT SHOULD BE
+ROUGHED AND SCARIFIED
+TWICE BALL DIAMETER
+VEGETATIVE SCREENING NOTES:
+SHRUB AND TREE INSTALLATION
+1. THE CONTRACTOR SHALL BE RESPONSIBLE FOR LAYOUT OF ALL WORK COVERED UNDER THESE PLANS.
+2. ALL PLANT MATERIAL, UNLESS OTHERWISE SPECIFIED, SHALL BE UNIFORMLY BRANCHED AND HAVE A VIGOROUS ROOT SYSTEM. PLANT MATERIAL SHALL BE HEALTHY, VIGOROUS, AND FREE FROM DEFECTS, DECAY, DISEASES, INSECT PEST EGGS, AND ALL FORMS OF INFESTATION. ALL PLANT MATERIAL SHALL
+BE FRESH, FREE FROM TRANSPLANT SHOCK OR VISIBLE WILT. PLANTS DEEMED UNHEALTHY SHALL BE REJECTED.
+3. ALL PLANT MATERIAL SHALL MEET THE MINIMUM SPECIFICATIONS AND STANDARDS DESCRIBED IN THE CURRENT ISSUE OF “THE AMERICAN STANDARD FOR NURSERY STOCK,” PUBLISHED BY THE AMERICAN ASSOCIATION OF NURSERYMEN, 1250 I STREET, N.W., SUITE 500, WASHINGTON, D.C. 20005.
+4. ALL CONTAINER STOCK SHALL HAVE BEEN PROPAGATED IN A CONTAINER LONG ENOUGH FOR THE ROOT SYSTEM TO HAVE DEVELOPED SUFFICIENTLY TO HOLD ITS SOIL. CONTAINER STOCK WITH POORLY DEVELOPED ROOT SYSTEMS SHALL NOT BE ACCEPTED.
+5. PLANTS SHALL BE PREPARED FOR SHIPMENT IN A MANNER THAT SHALL NOT CAUSE DAMAGE TO THE BARK, BUDS, BRANCHES, STEMS, OR OVERALL SHAPE OF THE STOCK. CONTAINER GROWN PLANTS SHALL BE TRANSPORTED IN THE CONTAINERS IN WHICH THEY HAVE BEEN GROWN.
+6. PLANTS NOT INSTALLED ON THE DAY OF ARRIVAL AT THE SITE SHALL BE STORED AND PROTECTED BY THE CONTRACTOR. OUTSIDE STORAGE AREAS SHALL BE SHADED AND PROTECTED FROM THE WIND AND SUN. PLANTS STORED ON SITE SHALL BE PROTECTED FROM ANY DRYING AT ALL TIMES BY COVERING
+THE BALLS OR ROOTS WITH MOIST SAWDUST, WET BURLAP, WOOD CHIPS, SHREDDED BARK, PEAT MOSS, OR OTHER SIMILAR MULCHING MATERIAL, OR OTHER METHODS APPROVED BY OWNER.
+7. PLANT SUBSTITUTIONS MAY BE MADE BASED ON AVAILABILITY BUT MUST BE OF SIMILAR SIZE AND LANDSCAPE (SCREENING) VALUE. ALL SUBSTITUTIONS MUST BE APPROVED BY THE OWNER OR OWNER'S REPRESENTATIVE.
+8. THE CONTRACTOR SHALL VERIFY ALL DIMENSIONS IN THE FIELD.
+9. NO PLANTING SHALL OCCUR WHEN THE SOIL IS FROZEN.
+PLANTING SEQUENCE
+· DIG THE PLANTING HOLE A MINIMUM OF 2x WIDTH OF ROOTBALL FOR AT LEAST THE FIRST 12 INCHES OF DEPTH.  BELOW 12 INCHES, DIG HOLE WIDE ENOUGH TO PERMIT ADJUSTING. DO NOT DIG THE HOLE DEEPER THAN ROOT BALL DEPTH.
+· HOLES FOR INDIVIDUAL PLANTINGS SHALL BE EXCAVATED TO PRODUCE VERTICAL SIDES AND FLAT BOTTOMS. ALL PLANTING HOLES SHALL HAVE ROUGHED, SCARIFIED SIDES AND BOTTOMS.
+· LIFT AND SET THE TREE BY ROOT BALL ONLY. DO NOT LIFT USING THE TREE TRUNK AND DO NOT USE TREE TRUNK AS A LEVER.
+· SET THE TOP OF THE ROOT BALL LEVEL WITH THE SOIL SURFACE OR SLIGHTLY HIGHER.
+· BACKFILL WITH EXISTING SOIL THAT HAS BEEN WELL-TILLED OR BROKEN UP.
+· PRUNING SHALL BE LIMITED TO DEAD, DISEASED, OR BROKEN LIMBS ONLY AND SHALL BE IN ACCORDANCE WITH ANSI A300 SPECIFICATIONS.
+· REMOVE ANY TRUNK WRAP REMAINING AT TIME OF PLANTING. NO WRAPS SHALL BE PLACED ON TRUNK.
+· THE CONTRACTOR SHALL RESTORE AREAS DISTURBED BY THE INSTALLATION OF SHRUBS AND TREES.
+PROJECT ACCEPTANCE, MAINTENANCE, AND WARRANTY
+1. PLANTED AREAS WILL BE INSPECTED AT COMPLETION OF INSTALLATION AND ACCEPTED (INITIAL ACCEPTANCE) WITH SPECIFIED MATERIALS AND INSTALLATION REQUIREMENTS. FOLLOWING INITIAL ACCEPTANCE OF THE COMPLETE INSTALLATION OF ALL PLANT MATERIAL, THE WARRANTY PERIOD WILL BEGIN.
+2. CONTRACTOR SHALL MAINTAIN INSTALLED SHRUBS AND TREES WITHIN THE PROJECT LIMITS UNTIL FINAL ACCEPTANCE OF THE PROJECT BY THE ENGINEER. FINAL ACCEPTANCE SHALL BE AT THE END OF THE WARRANTY PERIOD. MAINTENANCE SHALL INCLUDE PRUNING, CULTIVATING, WEEDING, WATERING,
+AND METHODS NECESSARY TO MAINTAIN PLANTS FREE OF INSECT, DISEASE, OR OTHER HERBIVORY DAMAGE UNTIL ACCEPTANCE. MAINTENANCE PERIOD SHALL BE ASSUMED TO CONTINUE THROUGH THE DURATION OF THE WARRANTY PERIOD.
+3. WARRANT PLANT MATERIAL TO REMAIN ALIVE AND BE IN HEALTHY, VIGOROUS CONDITION FOR A PERIOD OF ONE (1) YEAR AFTER INITIAL ACCEPTANCE. IF PLANTING TAKES PLACE OVER MULTIPLE PLANTING WINDOWS, THIS WARRANTY WILL REMAIN IN AFFECT ON ALL PLANT MATERIAL BASED ON THE
+WARRANTY PERIOD OF THE MOST RECENTLY INSTALLED PLANT MATERIAL.
+4. REMOVE AND IMMEDIATELY REPLACE ALL PLANTS, AS DETERMINED BY THE OWNER'S REPRESENTATIVE, TO BE UNSATISFACTORY DURING THE INITIAL PLANTING INSTALLATION.
+5. REPLACE AT ONCE, IN ACCORDANCE WITH THE DRAWINGS AND SPECIFICATIONS, ALL PLANTS THAT ARE DEAD OR, AS DETERMINED BY THE OWNER'S REPRESENTATIVE, OR ARE IN SEVERELY UNHEALTHY CONDITION WITHIN THE WARRANTY PERIOD. REPLACEMENTS TO BE INSTALLED AT THE CONTRACTOR'S
+EXPENSE AT NEXT BEST PLANTING SEASON.
+6. TREE STAKING SHOULD BE REMOVED AFTER ONE COMPLETE GROWING SEASON. IF STAKING IS REQUIRED ON REPLACED WARRANTED MATERIAL AT THE TIME OF WARRANTY PLANTING, THESE STAKES SHALL BE REMOVED AFTER ONE COMPLETE GROWING SEASON FOLLOWING INSTALLATION.
+7. CONTRACTOR IS RESPONSIBLE FOR PROVIDING HERBIVORY PROTECTION DURING THE MAINTENANCE AND WARRANTY PERIOD. REPLACEMENT OF PLANTS DUE TO DAMAGE FROM HERBIVORY WILL BE AT THE CONTRACTOR'S EXPENSE.
+8. UPON FINAL ACCEPTANCE, THE OWNER WILL ASSUME PLANT MAINTENANCE.
+PROJECT MEASUREMENT AND PAYMENT
+1. THE QUANTITY OF PLANTING TO BE PAID FOR WILL BE THE ACTUAL INDIVIDUAL PLANTS INSTALLED AND MAINTAINED.
+2. ALL WORK COVERED BY THIS ITEM WILL BE PAID FOR AT THE CONTRACT RATE PER PLANT. SUCH PRICE WILL BE PARTIAL PAYMENT (90%) FOR THE WORK INCLUDING MATERIALS, LABOR, WARRANTY, AND ANY OTHER ITEMS. INCIDENTAL TO THE WORK AFTER INITIAL ACCEPTANCE. FINAL PAYMENT (REMAINING
+10%) WILL BE PAID FOLLOWING FINAL ACCEPTANCE AFTER COMPLETION OF THE WARRANTY PERIOD.
+4
+N/A
+LANDSCAPE DETAILS

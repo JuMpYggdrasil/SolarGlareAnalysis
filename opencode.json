@@ -1,0 +1,13 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "permission": {
+    "edit": {
+      "*": "allow",
+      "references/_PD_IEC_TR_62471_2_2009_lock.txt": "deny"
+    },
+    "bash": {
+      "*": "allow",
+      "*_PD_IEC_TR_62471_2_2009_lock.txt*": "ask"
+    }
+  }
+}
