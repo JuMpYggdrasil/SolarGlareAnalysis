@@ -26,28 +26,33 @@ study. It combines SGHAT-style Green/Yellow/Red thresholds with IEC 62471 (BS EN
 ## Commands (run from repo root)
 
 ```powershell
-# Full pipeline (4 stages, ~27 min)
+# Full pipeline (3 stages, ~12 min for 1 case, ~28 min for 6)
 .venv\Scripts\python.exe scripts\stages\run_all.py
 
 # Individual stages
-.venv\Scripts\python.exe scripts\stages\step1_analysis.py [--case LABEL] [--no-verify]  # ~11 min
-.venv\Scripts\python.exe scripts\stages\step2_validate.py [--quick] [--only NAME,...] [--fail-fast] [--force]  # ~15 min
+.venv\Scripts\python.exe scripts\stages\step1_analysis.py [--case LABEL] [--no-verify]  # ~2 min (1 case), ~11 min (6 cases)
+.venv\Scripts\python.exe scripts\stages\step2_validate.py [--quick] [--only NAME,...] [--fail-fast] [--force]  # ~10 min
 .venv\Scripts\python.exe scripts\stages\step3_timeline.py [--case LABEL] [--no-validate]  # ~20 s
-.venv\Scripts\python.exe scripts\stages\step4_report.py   # ~5 s
 
 # Direct analysis / single case
 .venv\Scripts\python.exe scripts\run_analysis.py [--case LABEL] [--brief]
 .venv\Scripts\python.exe scripts\sanity_checks.py
 .venv\Scripts\python.exe scripts\run_contour.py [--case LABEL] [--all] [--grid-only] [--no-html] [--hour-range START END]
 .venv\Scripts\python.exe scripts\build_run_timeline.py [--case LABEL] [--check]
-.venv\Scripts\python.exe scripts\build_report_html.py
 ```
 
-Timeout guidance: 6-case analysis ~27 min → use 1 hr; single case ~11 min → 20
-min; contour full-year ~56 min → 2 hr; validator suite up to 15 min → 30 min.
+`run_all.py` runs only analysis → validate → timeline; **contour is never part of
+the pipeline** — call `scripts/run_contour.py` explicitly when you want it.
 
-### Validator details that are load-bearing
+Timeout guidance: current 1-case full pipeline ~12 min → 30 min; 6-case sweep
+~27 min → 1 hr; single-case analysis ~2 min → 5 min; contour full-year ~56 min →
+2 hr; validator suite up to 15 min → 30 min.
 
+### Stage / validator details that are load-bearing
+
+- `step1_analysis.py` has **no `--brief` flag**. It adds `--brief` to
+  `run_analysis.py` internally, so `run_all.py` must pass an empty argv to stage
+  1. Passing `--brief` to the stage is an argparse error (`rc=2`).
 - Stage 2 order is fast-to-slow: `sanity_checks`, `validate_sghat`,
   `validate_norm_vs_code`, `validate_iec62471`, `validate_icnirp`,
   `validate_e903`, `validate_cases`, `validate_charts`, `validate_kuantan`,
@@ -56,11 +61,15 @@ min; contour full-year ~56 min → 2 hr; validator suite up to 15 min → 30 min
   its checks were last validated with).
 - `validate_kuantan.py` / `validate_dupplin.py` must be run **without**
   `--hit-test`; their committed logs use the default `circular`.
+  `validate_kuantan.py` expects **5 passed / 0 failed**.
 - `validate_dupplin.py` is WARN-only, never FAIL. 4 passed / 3 failed is the
   documented model limitation, not a regression.
 - `validate_timeline.py` belongs after stage 3 (it reads
   `output/run_timeline.html`). It reports `[SKIP]`, never a pass, when `node` is
-  not on PATH.
+  not on PATH. With `node` present but fewer than 2 active `site.cases`, several
+  `[B]` checks fail with `"needs at least N cases"` — that is config-dependent,
+  not a regression; the current 1-case config fails stage 3 validation while the
+  timeline build still passes.
 - `validate_pv_stack.py` and `validate_arc_index.py` exist but are manual-only;
   they are not in stage 2.
 
@@ -93,6 +102,9 @@ separate, very large ground-grid config that `run_contour.py` uses.
 - Stage 1 checks results against `scripts/stages/_stage_lib.py::COMMITTED`
   (9 case/receptor rows) plus per-case G/Y/R totals. The six-case sweep-total
   check only fires when all six labels are active.
+- Stage 3 timeline validation is sized for a multi-case sweep. With the current
+  single active case, `validate_timeline.py` fails many `[B]` checks (needs 2–5
+  cases); the build step itself still passes.
 
 ## Architecture
 
@@ -135,9 +147,6 @@ SGHAT hazard + optional IEC 62471 → `summary` / `details` → CSVs and figures
 - **`validate_charts.py` baseline uses `site.yaml`'s array azimuth (`0.0`)**, not
   `site.cases`, so its internal baseline legitimately yields 0 glare. That is a
   plumbing check, not a result.
-- **`output/report.md` is hand-maintained Thai prose.** Rebuild order is
-  `run_analysis.py` → update `report.md` → `build_report_html.py`. Stage 4 builds
-  the HTML but never edits `report.md`.
 - **`run_analysis.py` does not clean stale per-pair CSVs** in the non-case
   `output/results/`. When `site.cases` is set, each case gets a fresh
   `output/<label>/`, so cases cannot cross-contaminate.
@@ -150,7 +159,6 @@ SGHAT hazard + optional IEC 62471 → `summary` / `details` → CSVs and figures
   `glare_events.csv`, per-pair `glare_hours_*.csv`, `iec62471_summary.csv`,
   `run_profile.csv`, `run_spans.csv`.
 - Cross-case: `output/run_profile_all_cases.csv`.
-- Reports: `output/report.md` (source) and self-contained `output/report.html`.
 - Interactive run timeline: `output/run_timeline.html`.
 - Validation logs: `output/validation/*.txt`; stage audit:
   `output/validation/stage_runs.txt`.
@@ -160,8 +168,7 @@ SGHAT hazard + optional IEC 62471 → `summary` / `details` → CSVs and figures
 
 ## Where to find details
 
-- Exact current numbers and the six-case write-up: `output/report.md`,
-  `output/<label>/results/summary.csv`.
+- Exact current numbers: `output/<label>/results/summary.csv`.
 - Validator/stage contracts: docstrings in `scripts/stages/*.py` and the
   validator scripts themselves.
 - Physics/reference provenance and long historical notes:

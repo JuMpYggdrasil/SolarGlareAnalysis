@@ -760,3 +760,108 @@ Reconstruction assumptions:
   [OK ] glare confined to spring-summer months (>=95% in Mar-Oct)  -- our span months 2-10, Mar-Oct fraction=95.2% (paper: Mar-mid Oct)
   [OK ] flight path shows no glare  -- ours=0 min (paper=0)
 === RESULT: 5 passed, 0 failed (elapsed 255s) ===
+
+# ---- validate_kuantan.py run 2026-11-05 23:10:16.403613 ----
+
+Paper reference (Sreenath et al. 2020, R in Eng 5:100079, ForgeSolar/SGHAT):
+  ATCT Green=833 min, Yellow=5945 min, total=6778 min
+  Flight path = 0 min
+  Glare window 06:30-08:30 local, March to mid-October
+Reconstruction assumptions:
+  site 3.7667N 103.2E alt 18 m (Asia/Kuala_Lumpur, 2019)
+  PV fixed tilt 10 deg, smooth glass w/ ARC, reflectivity 0.08,
+  groups=1, slope error 8.43 mrad (SGHAT v6 Table 2 ARC correlate),
+  DNI constant 1000 W/m2 (SGHAT rule of thumb), min_dni=0
+  ATCT 40 m AGL at scanned offsets east/west of the array
+  (morning glare => tower WEST of array); flight path 800 m
+  south at 5 m AGL
+
+== [1] Per-minute scan (azimuth, tilt, offset, size) ==
+# ---- validate_kuantan.py run 2026-11-05 23:12:29.136564 ----
+
+Paper reference (Sreenath et al. 2020, R in Eng 5:100079, ForgeSolar/SGHAT):
+  ATCT Green=833 min, Yellow=5945 min, total=6778 min
+  Flight path = 0 min
+  Glare window 06:30-08:30 local, March to mid-October
+Reconstruction assumptions:
+  site 3.7667N 103.2E alt 18 m (Asia/Kuala_Lumpur, 2019)
+  PV fixed tilt 10 deg, smooth glass w/ ARC, reflectivity 0.08,
+  groups=1, slope error 8.43 mrad (SGHAT v6 Table 2 ARC correlate),
+  DNI constant 1000 W/m2 (SGHAT rule of thumb), min_dni=0
+  ATCT 40 m AGL at scanned offsets east/west of the array
+  (morning glare => tower WEST of array); flight path 800 m
+  south at 5 m AGL
+
+== [1] Per-minute scan (azimuth, tilt, offset, size) ==
+  az=180 tilt=10 off= -300 size=400x5: ATCT=1444 FP=0 morning_frac=1.00 months=3-10
+  az=180 tilt=10 off= -300 size=400x10: ATCT=1860 FP=0 morning_frac=1.00 months=3-10
+  az=180 tilt=10 off= -300 size=400x20: ATCT=2588 FP=0 morning_frac=1.00 months=2-10
+  az=180 tilt=10 off= -300 size=200x20: ATCT=1860 FP=0 morning_frac=1.00 months=3-10
+  az=180 tilt=10 off= -300 size=800x20: ATCT=3959 FP=0 morning_frac=1.00 months=2-10
+  az=180 tilt=10 off= -500 size=400x5: ATCT=684 FP=0 morning_frac=1.00 months=3-10
+  az=180 tilt=10 off= -500 size=400x10: ATCT=818 FP=0 morning_frac=1.00 months=3-10
+  az=180 tilt=10 off= -500 size=400x20: ATCT=1042 FP=0 morning_frac=1.00 months=3-10
+  az=180 tilt=10 off= -500 size=200x20: ATCT=818 FP=0 morning_frac=1.00 months=3-10
+  az=180 tilt=10 off= -500 size=800x20: ATCT=1431 FP=0 morning_frac=1.00 months=3-10
+  az=180 tilt=10 off=-1000 size=400x5: ATCT=246 FP=0 morning_frac=1.00 months=3-10
+  az=180 tilt=10 off=-1000 size=400x10: ATCT=280 FP=0 morning_frac=1.00 months=3-10
+  az=180 tilt=10 off=-1000 size=400x20: ATCT=334 FP=0 morning_frac=1.00 months=3-10
+  az=180 tilt=10 off=-1000 size=200x20: ATCT=280 FP=0 morning_frac=1.00 months=3-10
+  az=180 tilt=10 off=-1000 size=800x20: ATCT=420 FP=0 morning_frac=1.00 months=3-10
+  az=180 tilt=20 off= -300 size=400x5: ATCT=1418 FP=0 morning_frac=1.00 months=2-10
+  az=180 tilt=20 off= -300 size=400x10: ATCT=1819 FP=0 morning_frac=1.00 months=2-10
+  az=180 tilt=20 off= -300 size=400x20: ATCT=2545 FP=0 morning_frac=1.00 months=2-10
+  az=180 tilt=20 off= -300 size=200x20: ATCT=1819 FP=0 morning_frac=1.00 months=2-10
+  az=180 tilt=20 off= -300 size=800x20: ATCT=3907 FP=0 morning_frac=1.00 months=2-10
+  az=180 tilt=20 off= -500 size=400x5: ATCT=666 FP=0 morning_frac=1.00 months=3-10
+  az=180 tilt=20 off= -500 size=400x10: ATCT=797 FP=0 morning_frac=1.00 months=3-10
+  az=180 tilt=20 off= -500 size=400x20: ATCT=1013 FP=0 morning_frac=1.00 months=3-10
+  az=180 tilt=20 off= -500 size=200x20: ATCT=797 FP=0 morning_frac=1.00 months=3-10
+  az=180 tilt=20 off= -500 size=800x20: ATCT=1387 FP=0 morning_frac=1.00 months=2-10
+  az=180 tilt=20 off=-1000 size=400x5: ATCT=234 FP=0 morning_frac=1.00 months=3-10
+  az=180 tilt=20 off=-1000 size=400x10: ATCT=267 FP=0 morning_frac=1.00 months=3-10
+  az=180 tilt=20 off=-1000 size=400x20: ATCT=320 FP=0 morning_frac=1.00 months=3-10
+  az=180 tilt=20 off=-1000 size=200x20: ATCT=267 FP=0 morning_frac=1.00 months=3-10
+  az=180 tilt=20 off=-1000 size=800x20: ATCT=407 FP=0 morning_frac=1.00 months=3-10
+  az=270 tilt=10 off= -300 size=400x5: ATCT=2132 FP=0 morning_frac=0.64 months=3-10
+  az=270 tilt=10 off= -300 size=400x10: ATCT=3018 FP=0 morning_frac=0.59 months=3-10
+  az=270 tilt=10 off= -300 size=400x20: ATCT=4553 FP=0 morning_frac=0.54 months=3-10
+  az=270 tilt=10 off= -300 size=200x20: ATCT=3018 FP=0 morning_frac=0.59 months=3-10
+  az=270 tilt=10 off= -300 size=800x20: ATCT=7347 FP=0 morning_frac=0.47 months=2-10
+  az=270 tilt=10 off= -500 size=400x5: ATCT=1355 FP=0 morning_frac=0.92 months=3-10
+  az=270 tilt=10 off= -500 size=400x10: ATCT=1740 FP=0 morning_frac=0.90 months=3-10
+  az=270 tilt=10 off= -500 size=400x20: ATCT=2342 FP=0 morning_frac=0.85 months=3-10
+  az=270 tilt=10 off= -500 size=200x20: ATCT=1740 FP=0 morning_frac=0.90 months=3-10
+  az=270 tilt=10 off= -500 size=800x20: ATCT=3390 FP=0 morning_frac=0.78 months=3-10
+  az=270 tilt=10 off=-1000 size=400x5: ATCT=943 FP=0 morning_frac=1.00 months=3-9
+  az=270 tilt=10 off=-1000 size=400x10: ATCT=1085 FP=0 morning_frac=1.00 months=3-9
+  az=270 tilt=10 off=-1000 size=400x20: ATCT=1295 FP=0 morning_frac=1.00 months=3-10
+  az=270 tilt=10 off=-1000 size=200x20: ATCT=1085 FP=0 morning_frac=1.00 months=3-9
+  az=270 tilt=10 off=-1000 size=800x20: ATCT=1638 FP=0 morning_frac=0.98 months=3-10
+  az=270 tilt=20 off= -300 size=400x5: ATCT=2652 FP=0 morning_frac=0.00 months=3-10
+  az=270 tilt=20 off= -300 size=400x10: ATCT=3895 FP=0 morning_frac=0.00 months=3-10
+  az=270 tilt=20 off= -300 size=400x20: ATCT=6076 FP=0 morning_frac=0.00 months=3-10
+  az=270 tilt=20 off= -300 size=200x20: ATCT=3895 FP=0 morning_frac=0.00 months=3-10
+  az=270 tilt=20 off= -300 size=800x20: ATCT=10127 FP=0 morning_frac=0.00 months=2-10
+  az=270 tilt=20 off= -500 size=400x5: ATCT=1633 FP=0 morning_frac=0.00 months=3-9
+  az=270 tilt=20 off= -500 size=400x10: ATCT=2167 FP=0 morning_frac=0.00 months=3-10
+  az=270 tilt=20 off= -500 size=400x20: ATCT=3058 FP=0 morning_frac=0.00 months=3-10
+  az=270 tilt=20 off= -500 size=200x20: ATCT=2167 FP=0 morning_frac=0.00 months=3-10
+  az=270 tilt=20 off= -500 size=800x20: ATCT=4616 FP=0 morning_frac=0.00 months=3-10
+  az=270 tilt=20 off=-1000 size=400x5: ATCT=1066 FP=0 morning_frac=0.00 months=3-9
+  az=270 tilt=20 off=-1000 size=400x10: ATCT=1265 FP=0 morning_frac=0.00 months=3-9
+  az=270 tilt=20 off=-1000 size=400x20: ATCT=1592 FP=0 morning_frac=0.00 months=3-9
+  az=270 tilt=20 off=-1000 size=200x20: ATCT=1265 FP=0 morning_frac=0.00 months=3-9
+  az=270 tilt=20 off=-1000 size=800x20: ATCT=2097 FP=0 morning_frac=0.00 months=3-10
+  best candidate: az=180 tilt=10 off=-300 size=800x20 ATCT=3959 min
+
+== [2] Benchmark result (per-minute, best candidate) ==
+  per-minute in 4s; ATCT G=0 Y=3959 R=0 total=3959; FP total=0
+
+== [3] Behavioural checks vs paper ==
+  [OK ] ATCT glare magnitude within order of magnitude (0.3x..3x of 6,778 min)  -- ours=3959 min, paper=6778 min (ratio=0.58)
+  [OK ] ATCT glare is Yellow-heavy with some Green (no Red) like the paper  -- ours G=0 Y=3959 R=0; paper G=833 Y=5945 R=0
+  [OK ] glare concentrated in the morning window (>=70% in 06:00-09:00)  -- morning fraction=1.00 (paper: 06:30-08:30)
+  [OK ] glare confined to spring-summer months (>=95% in Mar-Oct)  -- our span months 2-10, Mar-Oct fraction=95.2% (paper: Mar-mid Oct)
+  [OK ] flight path shows no glare  -- ours=0 min (paper=0)
+=== RESULT: 5 passed, 0 failed (elapsed 208s) ===

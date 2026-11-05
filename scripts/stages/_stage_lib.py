@@ -1,4 +1,4 @@
-"""Shared plumbing for the four workflow stages (scripts/stages/step1..4, run_all).
+"""Shared plumbing for the three workflow stages (scripts/stages/step1..3, run_all).
 
 The stages are THIN DRIVERS.  None of them contains any physics: they launch the
 existing scripts as subprocesses and read back what those scripts wrote.  That is

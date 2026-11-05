@@ -2275,3 +2275,52 @@
   [OK ] hourly slope_err=10 mrad: G=0 Y=0 R=0 total=0 (baseline total=0, Y=0)  -- hourly in 4s
   [OK ] hourly DNI=const 1000: G=0 Y=0 R=0 total=0 (baseline total=0, Y=0)  -- hourly in 4s
 === RESULT: 21 passed, 0 failed (elapsed 116s) ===
+
+# ---- validate_charts.py run 2026-11-05 23:03:47.893419 (full) ----
+
+======================================================================
+[0] Baseline per-minute analysis
+======================================================================
+  [OK ] baseline per-minute run completes  -- 525600 timesteps
+
+======================================================================
+[A] Ocular chart (08) - zone consistency & arithmetic
+======================================================================
+  [OK ] all glare minutes inside their hazard zone (G<flash<=Y<burn<=R)  -- 0 violations of 0
+  [OK ] E_c = DNI/1e4*rho and E_r = E_c*dp2/(f2*x2)*tau round-trip (rel.err<1e-9)  -- 0 of 0 rows off
+  [OK ] known-answer: sun disc (x=9.3 mrad, DNI=1000, rho=1) -> E_r ~ 8 W/cm2  -- E_r = 8.001 W/cm2
+  [OK ] known-answer: sun classified Yellow
+
+======================================================================
+[B] Annual hours (07) - summary audit
+======================================================================
+  [OK ] G+Y+R == minutes_with_glare for every summary row
+  [OK ] long-table hazard counts equal summary G/Y/R per (array,receptor)
+  [OK ] no duplicate (time, array, receptor) rows in long table  -- 0 duplicates
+  [OK ] per-pair detail deduped to one row per glare minute  -- 0 duplicate rows
+  [OK ] summary annual_peak_retinal == max over per-minute detail  -- 0 mismatches
+  [OK ] fig 07 hours = minutes/60 (total Y = 0.0 h/yr)  -- total glare = 0 min = 0.0 h/yr
+
+======================================================================
+[C] Independent cone-plane hit test vs pipeline (hit_test_mode=polygon)
+======================================================================
+  [OK ] parallel group merge (n_workers=16) == serial (n_workers=1) on az278_e903_t15/west1_route_1 (groups=19, hit-test=polygon, atten=beer_lambert, iec=True)  -- codes_equal=True, detail_equal=True, cols=31, rows=77, glare=77
+  [SKIP] hit-test == exact sampled geometry (obs_ptt, near field)  -- committed case 'az098_e903_t10' not found in site.cases (have ['az278_e903_t15'])
+  [SKIP] hit-test == exact sampled geometry (west1_route_1, far field)  -- committed case 'az278_e903_t10' not found in site.cases (have ['az278_e903_t15'])
+
+======================================================================
+[D] Sensitivity - annual G/Y/R totals (minutes) [hit-test=polygon]
+======================================================================
+  [OK ] sensitivity baseline reference loaded  -- per-minute baseline total=0, Y=0
+  [OK ] freq=hourly: G=0 Y=0 R=0 total=0 (baseline total=0, Y=0)  -- hourly in 4s
+  [OK ] hourly groups=1: G=0 Y=0 R=0 total=0 (baseline total=0, Y=0)  -- hourly in 0s
+  [OK ] hourly groups=4: G=0 Y=0 R=0 total=0 (baseline total=0, Y=0)  -- hourly in 1s
+  [OK ] hourly groups=16: G=0 Y=0 R=0 total=0 (baseline total=0, Y=0)  -- hourly in 3s
+  [OK ] hourly min_dni=0: G=0 Y=0 R=0 total=0 (baseline total=0, Y=0)  -- hourly in 4s
+  [OK ] hourly min_dni=30: G=0 Y=0 R=0 total=0 (baseline total=0, Y=0)  -- hourly in 4s
+  [OK ] hourly slope_err=10 mrad: G=0 Y=0 R=0 total=0 (baseline total=0, Y=0)  -- hourly in 4s
+  [OK ] hourly DNI=const 1000: G=0 Y=0 R=0 total=0 (baseline total=0, Y=0)  -- hourly in 4s
+  [OK ] per-minute min_dni=0: G=0 Y=0 R=0 total=0 (baseline total=0, Y=0)  -- per-minute in 89s
+  [OK ] per-minute DNI=const 1000: G=0 Y=0 R=0 total=0 (baseline total=0, Y=0)  -- per-minute in 83s
+  [OK ] per-minute slope_err=10 mrad: G=0 Y=0 R=0 total=0 (baseline total=0, Y=0)  -- per-minute in 89s
+=== RESULT: 24 passed, 0 failed (elapsed 387s) ===

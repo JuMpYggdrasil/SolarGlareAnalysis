@@ -180,7 +180,7 @@ def main():
                 for (w, h) in ((400, 5), (400, 10), (400, 20), (200, 20), (800, 20)):
                     cfg = build_cfg(az, tilt, off, w, h, freq="min")
                     t0 = time.time()
-                    _, long_df, summary, *_ = run_analysis(cfg)
+                    _, _, _, long_df, summary, *_ = run_analysis(cfg)
                     res = summarize_run(long_df, summary)
                     atct = res.get("ATCT", {})
                     fp = res.get("FlightPath", {})

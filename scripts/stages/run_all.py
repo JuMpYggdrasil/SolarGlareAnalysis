@@ -1,4 +1,4 @@
-"""Run the four workflow stages in order: 1 analysis -> 2 validate -> 3 timeline -> 4 report.
+"""Run the three workflow stages in order: 1 analysis -> 2 validate -> 3 timeline.
 
     .venv\\Scripts\\python.exe scripts\\stages\\run_all.py
     .venv\\Scripts\\python.exe scripts\\stages\\run_all.py --dry-run
@@ -7,8 +7,8 @@
     .venv\\Scripts\\python.exe scripts\\stages\\run_all.py --stage1-args "--case az098_e903_t10"
 
 Each stage is a separate script and can always be run on its own; this is only a
-driver that runs them back to back, so "analysis, then validate, then timeline,
-then report" is one command instead of four.  It adds no behaviour of its own -
+driver that runs them back to back, so "analysis, then validate, then timeline"
+is one command instead of three.  It adds no behaviour of its own -
 each stage is launched exactly as it would be if typed by hand, and the stage's
 own exit code is the stage's own verdict.
 
@@ -19,19 +19,17 @@ the order matters:
       into a timeline;
     2 reads those results (e903 [D], icnirp [I]);
     3 reads the per-case run_spans.csv / run_profile.csv from step 1 and produces
-      the HTML that validate_timeline.py then checks;
-    4 reads report.md plus the figures from step 1.
+      the HTML that validate_timeline.py then checks.
 
-With --keep-going the chain continues past a failing stage, which is what you
-want when validating a sweep whose analysis result you still want to inspect in
-the report.  Without it the chain stops at the first failure, because stage 2
-talking about numbers that stage 1 just changed is not useful.
+With --keep-going the chain continues past a failing stage.  Without it the
+chain stops at the first failure, because stage 2 talking about numbers that
+stage 1 just changed is not useful.
 
 --dry-run prints the plan, checks each stage's prerequisites and writes
-nothing and runs nothing, so the plan can be checked without spending 27
+nothing and runs nothing, so the plan can be checked without spending 12
 minutes.
 
-Total: ~27 min (1 ≈ 11 min, 2 ≈ 15 min, 3 and 4 seconds).
+Total: ~12 min for 1 case (1 ≈ 2 min, 2 ≈ 10 min, 3 ≈ 20 s); ~28 min for 6 cases.
 """
 
 import argparse
@@ -43,10 +41,9 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import _stage_lib as L  # noqa: E402
 
 STAGES = [
-    (1, "step1_analysis.py", "analysis", ["--brief"]),
+    (1, "step1_analysis.py", "analysis", []),
     (2, "step2_validate.py", "validate all ten validators", []),
     (3, "step3_timeline.py", "build + validate run_timeline.html", []),
-    (4, "step4_report.py", "build report.html from report.md", []),
 ]
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -86,20 +83,16 @@ def prereq(number):
         if missing:
             return False, f"missing {len(missing)} profiling file(s)"
         return True, f"run_spans.csv + run_profile.csv for {len(cases)} case(s)"
-    if number == 4:
-        if not os.path.exists(os.path.join(L.OUT, "report.md")):
-            return False, "output/report.md not found"
-        return True, "output/report.md present"
     return True, ""
 
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--from", dest="first", type=int, choices=(1, 2, 3, 4),
+    ap.add_argument("--from", dest="first", type=int, choices=(1, 2, 3),
                     default=1, help="first stage to run (default 1)")
-    ap.add_argument("--to", dest="last", type=int, choices=(1, 2, 3, 4),
-                    default=4, help="last stage to run (default 4)")
+    ap.add_argument("--to", dest="last", type=int, choices=(1, 2, 3),
+                    default=3, help="last stage to run (default 3)")
     ap.add_argument("--dry-run", action="store_true",
                     help="print the plan and the prerequisite state, run nothing")
     ap.add_argument("--keep-going", action="store_true",
@@ -127,7 +120,7 @@ def main():
               f"{'OK  ' if ok else 'MISS'} {msg}")
     print("-" * 100)
 
-    est = {1: "~11 min", 2: "~15 min", 3: "~20 s", 4: "~5 s"}
+    est = {1: "~2 min (1 case)", 2: "~10 min", 3: "~20 s"}
     total = " ".join(f"{n}:{est[n]}" for n, *_ in plan)
     print(f"estimated: {total}")
 
@@ -177,8 +170,7 @@ def main():
           f"{counts[L.WARN]} warn, {counts[L.SKIP]} skip   "
           f"chain wall time {dt / 60:.1f} min")
     rc = L.exit_code(results)
-    print("artefacts: output/<label>/  output/run_timeline.html  "
-          "output/report.html")
+    print("artefacts: output/<label>/  output/run_timeline.html")
     L.log_stage_run("run_all", rc, dt,
                     f"stages {args.first}-{args.last}: "
                     f"{counts[L.PASS]} pass {counts[L.FAIL]} fail "

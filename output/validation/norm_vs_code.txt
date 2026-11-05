@@ -2845,3 +2845,155 @@ validate_norm_vs_code.py: normalized text vs iec62471.py
   [INF] I3  k_R=1.29039, k_B=0.08585 are COMPUTED (IEC 60904-3:2019 Table 1 direct x Table 4.2, full-spectrum normalisation), not transcribed from the standard text; inputs live in the text, the numbers in validate_iec62471.py (AGENTS.md pins k_R=1.290, k_B=0.0859).
 
 Summary: 100 passed, 0 failed, 6 info
+
+======================================================================
+validate_norm_vs_code.py: normalized text vs iec62471.py
+======================================================================
+
+======================================================================
+[A] Angular definitions (Sec 4.2.2)
+======================================================================
+  [OK ] A1  alpha_min = 0.0017 radian  -- needle '0.0017radian' found
+  [OK ] A2  alpha_max = 0.1 radian (all retinal hazards)  -- needle 'α_max,is0.1radianforallretinalhazards' found
+  [OK ] A3  small-source threshold alpha < 0.011 radian  -- needle 'α<0.011radian' found
+  [OK ] A4  clamp dims to alpha_min/alpha_max BEFORE arithmetic mean  -- needle 'priortothedeterminationofthearithmeticmean' found
+  [OK ] A5  arithmetic mean of max+min dimensions  -- needle 'arithmeticmeanofthemaximumandminimumangulardimensions' found
+  [OK ] A6  worked example Z = (20+3)/2 = 11.5 mm  -- needle 'Z=(20+3)/2=11.5mm' found
+  [OK ] A7  alpha_eff ramp 0.25-10 s: alpha_min*sqrt(t/0.25)  -- needle 'α_min*sqrt(t/0.25)' found
+  [OK ] A8  alpha_eff = 0.011 rad for t < 100 s (blue)  -- needle '0.011radianfortimeslessthan100s' found
+  [OK ] A9  alpha_eff = 0.011*sqrt(t/100) for 100 s < t < 10000 s  -- needle '0.011*sqrt(t/100)' found
+  [OK ] A10 alpha_eff = 0.1 rad for t > 10000 s (alpha_max)  -- needle 'α_effissetto0.1radian' found
+  [OK ] A11 thermal EL FOV cone 0.0017..0.1 radian (Eq 4.9 note 1)  -- needle 'notlessthan0.0017radian,andnotmorethan0.1radian,includedangle' found
+  [OK ] A12 'less than 0.011 radian' -> small-source branch (clause 4.3.4)  -- needle 'lightsourcesubtendingananglelessthan0.011radian' found
+  [OK ] A13 code ALPHA_SMALL == 0.011 rad (text small-source threshold)  -- 0.011
+  [OK ] A14 code ALPHA_MIN == 0.0017 / ALPHA_MAX == 0.1 (text values)  -- 0.0017/0.1
+
+======================================================================
+[B] Table 4.2 B(lambda) / R(lambda) vs iec62471 tables
+======================================================================
+  [OK ] B1  Table 4.2 region delimited
+  [OK ] B2  all 40 wavelength rows parsed (300-495 nm, no 500 knot)  -- 40 rows: 300..495
+  [OK ] B3  B(lambda) + R(lambda) text rows == code lookup (knot-by-knot)  -- 0 mismatches
+  [OK ] B4  code _B_WEIGHT/_R_WEIGHT == text knots (inverse check)  -- B:0 R:0
+  [OK ] B5  B 500-600: code 0.01 == text formula 0.01
+  [OK ] B5  B 600-700: code 0.001 == text formula 0.001
+  [OK ] B5  R 500-700: code 1.0 == text formula 1.0
+  [OK ] B5  R 700-1050: code 0.6309573444801932 == text formula 0.6309573444801932
+  [OK ] B5  R 1050-1150: code 0.2 == text formula 0.2
+  [OK ] B5  R 1150-1200: code 0.0632455532033676 == text formula 0.0632455532033676
+  [OK ] B5  R 1200-1400: code 0.02 == text formula 0.02
+  [OK ] B6  text band B(550 nm) = 10^((450-lambda)/50)  -- needle '10^((450-λ)/50)' found
+  [OK ] B7  text band R(700-1050) = 10^((700-lambda)/500)  -- needle '10^((700-λ)/500)' found
+  [OK ] B8  text band R(1150-1200) = 0.2*10^(0.02*(1150-lambda))  -- needle '0.2*10^(0.02*(1150-λ))' found
+  [INF] B9  iec62471.py _B_WEIGHT carries a boundary knot at 500 nm that is NOT printed in this edition's Table 4.2 (verified on the actual PDF page layout: the table jumps from row 495 straight to the '500-600' band row). The band formula gives B(500) = 10^((450-500)/50) = 0.1, so the code knot is aligned to the printed curve value (0.1), keeping interpolation continuous with the 500 < lambda <= 600 branch.
+  [OK ] B10  code B(500) boundary knot == band formula value 0.1  -- B(500)=0.100000
+
+======================================================================
+[C] Table 4.1 S_UV(lambda) (reference-only transcription guard)
+======================================================================
+  [OK ] C1  Table 4.1 region delimited
+  [OK ] C2  27+27 wavelength/value rows de-interleaved  -- left=27 right=27
+  [OK ] C3  left column (200-310 nm) matches IEC Table 4.1  -- peak at 270 nm = 1.0
+  [OK ] C4  right column (313-400 nm) matches IEC Table 4.1  -- tail at 400 nm = 3e-05
+  [OK ] C5  footnote: values obtained by logarithmic interpolation
+  [OK ] C6  footnote: emission lines of a mercury discharge spectrum
+  [INF] C7  code _uv_weight() uses the Figure 4.1 BOX approximation (S_UV=1 for 200-315 nm, 10^(0.02*(315-lambda)) after), NOT these Table 4.1 discrete values. kS is supplementary-only and the actinic clause is acknowledged out-of-scope for the sun. See (C7).
+
+======================================================================
+[D] Table 5.4 irradiance ELs (skin/cornea)
+======================================================================
+  [OK ] D1  actinic UV: constant irradiance 30/t  -- needle '30/t' found
+  [OK ] D2  actinic UV: whole-body < 30000 s  -- needle '<30000' found
+  [OK ] D3  eye UV-A: 10000/t (<=1000 s) then 10 W/m^2  -- needle '10000/t' found
+  [OK ] D4  eye UV-A floor 10 W/m^2  -- needle '10' found
+  [OK ] D5  blue small source: 100/t (<=100 s) then 1.0 W/m^2  -- needle '100/t' found
+  [OK ] D6  blue small source floor 1.0 W/m^2  -- needle '1.0' found
+  [OK ] D7  eye IR: 18000/t^0.75 (<=1000 s) then 100 W/m^2  -- needle '18000/t^0.75' found
+  [OK ] D8  eye IR floor 100 W/m^2  -- needle '100' found
+  [OK ] D9  skin thermal: 20000/t^0.75 (<=10 s) then 100 W/m^2  -- needle '20000/t^0.75' found
+  [OK ] D10 limiting aperture 1.4 (80 deg)  -- needle '1.4(80)' found
+  [OK ] D11 skin thermal field 2*pi sr  -- needle '2πsr' found
+
+======================================================================
+[E] Equations 4.1-4.11 (constants as written)
+======================================================================
+  [OK ] E1  (4.1) actinic: <= 30 J/m^2  -- needle '30J/m^2' found
+  [OK ] E2  (4.2) t_max = 30/E_s  -- needle 't_max=30/E_s' found
+  [OK ] E3  (4.3a) UV-A: <= 10000 J/m^2 (t<1000 s)  -- needle '10000J/m^2' found
+  [OK ] E4  (4.3b) UV-A: E_UVA <= 10 W/m^2 (t>=1000 s)  -- needle 'E_UVA≤10W/m^2' found
+  [OK ] E5  (4.4) t_max <= 10000/E_UVA  -- needle 't_max≤10000/E_UVA' found
+  [OK ] E6  (4.6) t_max = 10^6/L_B (t<=10^4 s)  -- needle 't_max=10^6/L_B' found
+  [OK ] E7  (4.7a) blue small: <= 100 J/m^2 (t<=100 s)  -- needle '100J/m^2' found
+  [OK ] E8  (4.7b) blue small: <= 1 W/m^2 (t>100 s)  -- needle '≤1W/m^2' found
+  [OK ] E9  (4.8) t_max = 100/E_B  -- needle 't_max=100/E_B' found
+  [OK ] E10 (4.9) thermal EL: 50000/(alpha*t^0.25) W/(m^2*sr)  -- needle '50000/(α*t^0.25)W/(m^2*sr)' found
+  [OK ] E11 (4.9) validity window 10 us <= t <= 10 s  -- needle '10µs≤t≤10s' found
+  [OK ] E12 (4.10) weak-stimulus: 6000/alpha W/(m^2*sr)  -- needle '6000/αW/(m^2*sr)' found
+  [OK ] E13 (4.10) weak stimulus < 10 cd/m^2  -- needle 'lessthan10cd/m^2' found
+  [OK ] E14 3mm-pupil scale-up 33000/alpha (clause 4.2.1)  -- needle '33000/α' found
+  [OK ] E15 (4.11) eye IR: 18000/(t^0.75) W/m^2 (t<1000 s)  -- needle '18000/(t^0.75)W/m^2' found
+
+======================================================================
+[F] Table 6.1 risk-group emission limits
+======================================================================
+  [OK ] F0  Table 6.1 region delimited
+  [OK ] F1  all numeric emission-limit values present  -- missing=[]
+  [OK ] F2  retinal thermal exempt = 28000/alpha (Exempt == RG1)  -- needle '28000/α' found
+  [OK ] F3  retinal thermal RG2 = 71000/alpha  -- needle '71000/α' found
+  [OK ] F4  weak-stimulus L_IR = 6000/alpha (x3 ranges)  -- needle '6000/α' found
+  [OK ] F5  small-source footnote: alpha < 0.011 radian, FOV 0.1 rad at 10000 s  -- needle 'α<0.011radian' found
+  [OK ] F6  weak-stimulus footnote: non-GLS source  -- needle 'evaluationofnon-GLSsource' found
+  [OK ] F7  units W/m^2 and W/(m^2*sr) present  -- needle 'W/(m^2*sr)' found
+  [OK ] F8  code UV limits == Table 6.1 (0.001/0.003/0.03)  -- (0.001, 0.003, 0.03)
+  [OK ] F9  code UVA limits == Table 6.1 (10/33/100)  -- (10.0, 33.0, 100.0)
+  [OK ] F10 code blue radiance limits == Table 6.1 (100/1e4/4e6)  -- (100.0, 10000.0, 4000000.0)
+  [OK ] F11 code blue small-source limits == Table 6.1 (1.0/1.0/400)  -- (1.0, 1.0, 400.0)
+  [OK ] F12 code IR eye limits == Table 6.1 (100/570/3200)  -- (100.0, 570.0, 3200.0)
+  [OK ] F13 code thermal constants 28000/28000/71000 == Table 6.1  -- 28000.0/71000.0
+
+======================================================================
+[G] Table 5.5 radiance ELs (retina)
+======================================================================
+  [OK ] G1  blue L_B: 10^6/t (0.25-10 s, 10-100 s, 100-10000 s)  -- needle '10^6/t' found
+  [OK ] G2  blue L_B: 100 W/(m^2*sr) (t>=10000 s)  -- needle '100' found
+  [OK ] G3  retinal thermal: 50000/(alpha*t^0.25) (t<0.25 s, 0.25-10 s)  -- needle '50000/(α*t^0.25)' found
+  [OK ] G4  thermal FOV: t<0.25 s uses 0.0017 rad cone  -- needle '0.0017' found
+  [OK ] G5  thermal FOV ramp: 0.011*sqrt(t/10)  -- needle '0.011*sqrt(t/10)' found
+  [OK ] G6  blue FOV ramp (t>10000 s? 100-10000 s): 0.0011*sqrt(t)  -- needle '0.0011*sqrt(t)' found
+  [OK ] G7  weak-stimulus: 6000/alpha (t>10 s)  -- needle '6000/α' found
+  [OK ] G8  blue FOV floor 0.011 rad (10-100 s)  -- needle '0.011' found
+  [OK ] G9  blue FOV cap 0.1 rad (t>=10000 s)  -- needle '0.1' found
+
+======================================================================
+[H] code numbers re-derived from the text formulas
+======================================================================
+  [OK ] H1  exempt 2.8e4/alpha == Eq 4.9 at t=10 s (within 1%%)  -- 2.8e4 vs 28117
+  [OK ] H2  RG2 7.1e4/alpha == Eq 4.9 at t=0.25 s (within 1%%)  -- 7.1e4 vs 70711
+  [OK ] H3  fov_gamma(t) == 0.011 / 0.011 / 0.011*sqrt(t/100) / 0.1  -- ['1.100000e-02', '1.100000e-02', '3.478505e-02', '7.778175e-02', '1.000000e-01']
+  [OK ] H4  blue_light_el(10) = 1e6/10 = 1e5
+  [OK ] H5  blue_light_el(5e4) = 100 (t>1e4 s)
+  [OK ] H6  blue_light_small_el(50) = 100/50 = 2
+  [OK ] H7  retinal_thermal_el: 5e4/(alpha*t^0.25) at alpha=0.1,t=0.25
+  [OK ] H8  ALPHA_SMALL == blue FOV 0.011 (t<=100 s)
+
+======================================================================
+[J] PD IEC/TR 62471-2:2009 cross-check (guidance only)
+======================================================================
+  [OK ] J1  TR extract present (references/_PD_IEC_TR_62471_2_2009_lock.txt)  -- C:\Users\Egat\Documents\GitHub\SolarGlareAnalysis\references\_PD_IEC_TR_62471_2_2009_lock.txt
+  [OK ] J2  TR is PD IEC/TR 62471-2:2009  -- needle 'PD IEC/TR 62471-2:2009' found
+  [OK ] J3  TR is manufacturer guidance (hazard distance), not a limit table  -- needle 'Determination of hazard distances' found
+  [OK ] J4  TR keeps alpha acceptance 1.7 mrad minimum  -- needle '1.7 mrad' found
+  [OK ] J5  TR keeps blue Exempt 100 mrad acceptance  -- needle '100 mrad' found
+  [OK ] J6  TR keeps blue Exempt radiance EL 100 W/(m^2*sr)  -- needle '100 W/(m^2*sr)' found
+  [OK ] J7  TR does NOT state a 0.01 W/m^2 blue-light limit  -- no unit-bearing 0.01 W/m2
+  [OK ] J8  only log-axis ticks carry the bare 0.01 (unit-less)  -- bare-tick lines 2 (>=2 expected)
+  [INF] J9  PD IEC/TR 62471-2:2009 is manufacturer guidance built on IEC 62471:2006's limit table; it redefines no exposure limit, so it does not affect the code's Table 6.1 values (blue small-source Exempt = 1.0 W/m2 per BS EN 62471:2008). Annex B hazard distances are not implemented in the pipeline (the analysis classifies each receptor at its fixed position).
+
+======================================================================
+[I] INFO: documented simplifications (not pass/fail)
+======================================================================
+  [INF] I1  FOV gamma collapsed to 0.011 rad for ALL t <= 100 s; the text only ramps alpha_min*sqrt(t/0.25) over 0.25-10 s. Provably benign on the current config (alpha ~ 0.05 rad > gamma, so dilution saturates at 1); would matter only for alpha < 0.011 rad sources.
+  [INF] I2  weak-visual-stimulus L_IR 6000/alpha (non-GLS, Table 6.1/Eq 4.10) is not implemented as a separate clause - the code uses the R(lambda) thermal radiance for the FORMAL eye group only. Consistent with the footnote '** Involves evaluation of non-GLS source'.
+  [INF] I3  k_R=1.29039, k_B=0.08585 are COMPUTED (IEC 60904-3:2019 Table 1 direct x Table 4.2, full-spectrum normalisation), not transcribed from the standard text; inputs live in the text, the numbers in validate_iec62471.py (AGENTS.md pins k_R=1.290, k_B=0.0859).
+
+Summary: 100 passed, 0 failed, 6 info

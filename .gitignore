@@ -26,17 +26,12 @@ desktop.ini
 # OpenCode
 .opencode/node_modules/
 
-# Generated analysis output (keep the hand-maintained report source and
-# validator reference logs; everything else is reproducible)
-output/*
-!output/report.md
-!output/validation/
+# Generated analysis output (everything here is reproducible)
+output/
 output/validation/lost_city_*
 
 # Large / copyrighted reference material (keep extracted .txt notes)
-references/**/*.pdf
-references/**/*.zip
-references/**/*.7z
+references/
 
 # Local backups and ad-hoc artifacts
 backup_report/
