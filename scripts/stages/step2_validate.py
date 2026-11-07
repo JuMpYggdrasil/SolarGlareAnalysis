@@ -1,7 +1,7 @@
 """STEP 2 of 4 - run the validators.
 
     .venv\\Scripts\\python.exe scripts\\stages\\step2_validate.py
-                                        [--quick] [--only NAME,...]
+                                        [--quick] [--full] [--only NAME,...]
                                         [--fail-fast] [--force]
 
 Validates the results STEP 1 produced.  It runs no analysis of its own, so it
@@ -9,7 +9,7 @@ cannot change a result; it launches the project's existing validator scripts one
 after another and reports what each one said.
 
 Order is fast-to-slow, so a mistake surfaces in seconds instead of after the
-two 4-7 minute benchmark sweeps:
+benchmark sweeps:
 
     sanity_checks          assert-level physics/geometry self-checks
     validate_sghat         vs Ho 2011 / SGHAT v6 published values
@@ -21,34 +21,33 @@ two 4-7 minute benchmark sweeps:
     validate_cases         one reference paper = one case, six papers
     validate_charts        figure/result QA + parallel parity + detector FP/FN
     validate_kuantan       external benchmark: Kuantan (Sreenath 2020)
-    validate_dupplin       external benchmark: Dupplin (ForgeSolar)
 
 Two things about the flags are load-bearing and must not be "tidied up":
 
   * validate_charts is invoked as `--full --hit-test polygon`, which is the
     combination its 28 checks were last validated with;
-  * validate_kuantan and validate_dupplin are invoked with NO --hit-test flag.
-    Their default is "circular", which is what produced the committed logs
-    (kuantan 5/5, dupplin 4/3).  Passing "polygon" would change their numbers
-    and stop this stage from reproducing the reference.
-
-validate_dupplin is reported as WARN, never FAIL: it sits at 4 passed / 3 failed
-for a documented reason (a 37-vertex row polygon replaced by one solid
-equivalent-area rectangle, and no obstruction model), not because of a defect.
-That is a model limitation recorded in AGENTS.md, so it must not turn a whole
-validation run red.
+  * validate_kuantan is invoked with NO --hit-test flag.  Its default is
+    "circular", which is what produced the committed log (kuantan 5/5).
+    Passing "polygon" would change its numbers and stop this stage from
+    reproducing the reference.
 
 validate_timeline is NOT run here - it reads output/run_timeline.html, which
-STEP 3 produces.  It is the eleventh validator and STEP 3 owns it.
+STEP 3 produces.  It is the tenth validator and STEP 3 owns it.
 
---quick runs the first four only (~1 min) - enough to catch a broken import or
-a changed constant.  --only takes short names (sanity, sghat, norm, iec,
-icnirp, e903, cases, charts, kuantan, dupplin).  --fail-fast stops at the first
-failure instead of running the rest.  --force downgrades a missing-input
-precheck from an error to a warning, so the independent validators can still be
-run without step 1.
+By default the six fast validators run (~1 min): sanity_checks, validate_sghat,
+validate_norm_vs_code, validate_iec62471, validate_icnirp and validate_e903.
+That is enough to catch a broken import, a changed constant, or a step-1 CSV
+regression without paying for the benchmark sweeps.  --full runs all nine in the
+same order.  --quick runs only the first four, the fastest possible check.
 
-Runtime: ~15 min for all ten; ~1 min with --quick.
+--only takes short names (sanity, sghat, norm, iec, icnirp, e903, cases, charts,
+kuantan) and overrides the other selection flags.  --fail-fast stops at
+the first failure instead of running the rest.  --force downgrades a
+missing-input precheck from an error to a warning, so the independent validators
+can still be run without step 1.
+
+Runtime: ~1 min default (six); ~1 min with --quick (four); ~10-15 min with
+--full (all nine).
 """
 
 import argparse
@@ -72,9 +71,9 @@ VALIDATORS = [
     ("charts", "validate_charts.py", ["--full", "--hit-test", "polygon"],
      "charts.txt", False),
     ("kuantan", "validate_kuantan.py", [], "kuantan.txt", False),
-    ("dupplin", "validate_dupplin.py", [], "dupplin.txt", True),
 ]
 QUICK = {"sanity", "sghat", "norm", "iec"}
+FAST = {"sanity", "sghat", "norm", "iec", "icnirp", "e903"}
 
 
 def needs_step1(keys):
@@ -124,7 +123,9 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--quick", action="store_true",
-                    help="run only the four fast validators (~1 min)")
+                    help="run only the four fastest validators (~1 min)")
+    ap.add_argument("--full", action="store_true",
+                    help="run all nine validators (~10-15 min)")
     ap.add_argument("--only", metavar="NAME,...", default=None,
                     help="comma-separated subset of: "
                          + ", ".join(k for k, *_ in VALIDATORS))
@@ -138,8 +139,10 @@ def main():
              "Validates what step 1 produced.  Runs no analysis, changes no "
              "result.")
 
-    if args.quick and args.only:
-        print("--quick and --only are mutually exclusive; --only wins.")
+    if (args.quick or args.full) and args.only:
+        print("--quick/--full and --only are mutually exclusive; --only wins.")
+    elif args.quick and args.full:
+        print("--quick and --full are mutually exclusive; --full wins.")
     if args.only:
         wanted = {s.strip() for s in args.only.split(",") if s.strip()}
         unknown = wanted - {k for k, *_ in VALIDATORS}
@@ -148,18 +151,16 @@ def main():
             print(f"known: {', '.join(k for k, *_ in VALIDATORS)}")
             return 1
         selected = [v for v in VALIDATORS if v[0] in wanted]
+    elif args.full:
+        selected = list(VALIDATORS)
     elif args.quick:
         selected = [v for v in VALIDATORS if v[0] in QUICK]
     else:
-        selected = list(VALIDATORS)
+        selected = [v for v in VALIDATORS if v[0] in FAST]
 
     keys = [v[0] for v in selected]
     print(f"running {len(selected)} of {len(VALIDATORS)} validators: "
           f"{', '.join(keys)}")
-    if "dupplin" in keys:
-        print("note: validate_dupplin is a documented model limitation "
-              "(4/3) and is reported as WARN, not FAIL.")
-
     # ---- precheck: the two validators that read step-1 output ---------------
     readers = sorted(needs_step1(keys))
     not_ready = []

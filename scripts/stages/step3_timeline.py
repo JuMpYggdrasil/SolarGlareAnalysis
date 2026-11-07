@@ -7,7 +7,7 @@ Turns the profiling data step 1 wrote into output/run_timeline.html, the
 interactive "post-game summary" of a run (x axis = wall time, one bar per
 instrumented stage call, one row per worker lane).
 
-This is also where the eleventh validator runs.  validate_timeline.py belongs to
+This is also where the tenth validator runs.  validate_timeline.py belongs to
 this step rather than to step 2 because it reads the HTML this step produces, and
 running it before the HTML exists would report a failure that says nothing about
 the model.

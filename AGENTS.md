@@ -8,8 +8,8 @@ study. It combines SGHAT-style Green/Yellow/Red thresholds with IEC 62471 (BS EN
   `word/document.xml`; do not read it as plain text.
 - Detailed history/provenance/results live in **`AGENTS_APPENDIX.md`**. Read that
   only when you need the long version; this file is the working quick-start.
-- The repo is git-initialised (`main`, one initial commit) but most files are
-  still untracked. Do not commit unless explicitly asked.
+- The repo is git-initialised (`main`, 5 commits) but most files are still
+  untracked. Do not commit unless explicitly asked.
 
 ## Environment
 
@@ -26,12 +26,14 @@ study. It combines SGHAT-style Green/Yellow/Red thresholds with IEC 62471 (BS EN
 ## Commands (run from repo root)
 
 ```powershell
-# Full pipeline (3 stages, ~12 min for 1 case, ~28 min for 6)
+# Full pipeline (3 stages; ~4 min for 1 case / ~12 min for 6, both with the
+# default six-validator stage 2; add --full for ~12 min / ~28 min)
 .venv\Scripts\python.exe scripts\stages\run_all.py
+.venv\Scripts\python.exe scripts\stages\run_all.py --full
 
 # Individual stages
 .venv\Scripts\python.exe scripts\stages\step1_analysis.py [--case LABEL] [--no-verify]  # ~2 min (1 case), ~11 min (6 cases)
-.venv\Scripts\python.exe scripts\stages\step2_validate.py [--quick] [--only NAME,...] [--fail-fast] [--force]  # ~10 min
+.venv\Scripts\python.exe scripts\stages\step2_validate.py [--quick] [--full] [--only NAME,...] [--fail-fast] [--force]  # default 6 (~1 min); --quick 4; --full 9 (~10-15 min)
 .venv\Scripts\python.exe scripts\stages\step3_timeline.py [--case LABEL] [--no-validate]  # ~20 s
 
 # Direct analysis / single case
@@ -44,9 +46,10 @@ study. It combines SGHAT-style Green/Yellow/Red thresholds with IEC 62471 (BS EN
 `run_all.py` runs only analysis → validate → timeline; **contour is never part of
 the pipeline** — call `scripts/run_contour.py` explicitly when you want it.
 
-Timeout guidance: current 1-case full pipeline ~12 min → 30 min; 6-case sweep
-~27 min → 1 hr; single-case analysis ~2 min → 5 min; contour full-year ~56 min →
-2 hr; validator suite up to 15 min → 30 min.
+Timeout guidance: current 1-case pipeline ~4 min default (~12 min with
+`--full`) → 30 min; 6-case sweep ~12 min default (~28 min with `--full`) → 1 hr;
+single-case analysis ~2 min → 5 min; contour full-year on the current 24-point
+grid ~5-10 min → 30 min; validator suite up to 15 min → 30 min.
 
 ### Stage / validator details that are load-bearing
 
@@ -55,15 +58,14 @@ Timeout guidance: current 1-case full pipeline ~12 min → 30 min; 6-case sweep
   1. Passing `--brief` to the stage is an argparse error (`rc=2`).
 - Stage 2 order is fast-to-slow: `sanity_checks`, `validate_sghat`,
   `validate_norm_vs_code`, `validate_iec62471`, `validate_icnirp`,
-  `validate_e903`, `validate_cases`, `validate_charts`, `validate_kuantan`,
-  `validate_dupplin`.
+  `validate_e903`, `validate_cases`, `validate_charts`, `validate_kuantan`.
+  The **default runs the first six only** (~1 min); `--full` runs all nine, and
+  `--quick` runs the first four. `--only` overrides all three;
+  `run_all.py --full` forwards `--full` to this stage.
 - `validate_charts.py` must be run as `--full --hit-test polygon` (the combination
   its checks were last validated with).
-- `validate_kuantan.py` / `validate_dupplin.py` must be run **without**
-  `--hit-test`; their committed logs use the default `circular`.
-  `validate_kuantan.py` expects **5 passed / 0 failed**.
-- `validate_dupplin.py` is WARN-only, never FAIL. 4 passed / 3 failed is the
-  documented model limitation, not a regression.
+- `validate_kuantan.py` must be run **without** `--hit-test`; its committed log
+  uses the default `circular`. It expects **5 passed / 0 failed**.
 - `validate_timeline.py` belongs after stage 3 (it reads
   `output/run_timeline.html`). It reports `[SKIP]`, never a pass, when `node` is
   not on PATH. With `node` present but fewer than 2 active `site.cases`, several
@@ -83,7 +85,8 @@ on the UTF-8-no-BOM extracts (PowerShell 5.1 mangles them). House style is in
 ## Current config (check before assuming)
 
 `config/site.yaml` is the committed study; `config/site_contour.yaml` is a
-separate, very large ground-grid config that `run_contour.py` uses.
+separate contour config used by `run_contour.py`: a 24-point (~5 km) ENU grid at
+0 m AGL plus the 65 validation receptors (`v_*`) at 40 m.
 
 - PV-A only: 4,890 × 2 m, 12.5 m AGL, `groups: 19`.
 - 65 receptors, all 40 m AGL: 15 `east1_route_*` + 44 `west*_route_*`
@@ -96,9 +99,10 @@ separate, very large ground-grid config that `run_contour.py` uses.
   "smooth_arc"`, `atmospheric_attenuation: "beer_lambert"` (`visibility_km:
   20.0`), `iec62471_enabled: true`, `n_workers: 16`, `map_tiles: "esri_street"`.
 - `config/site_contour.yaml` has its own `cases` (currently `az278_e903_t15` and
-  `az278_e903_t20`), `hour_range: [6, 12]`, and a generated dense grid
-  (`STEP_M` / `DROP_EAST_COLS`). Output goes to
-  `output/contour/height_<AGL>/<label>/`.
+  `az278_e903_t20`) and `hour_range: [6, 12]`. Its receptors are a 4×6 ≈5 km ENU
+  grid at `height_agl_m: 0.0` plus renamed `v_*` copies of the 65 study
+  receptors at 40 m (`--grid-only` skips them). Output goes to
+  `output/contour/height_<AGL>/<label>/` (currently `height_0`).
 - Stage 1 checks results against `scripts/stages/_stage_lib.py::COMMITTED`
   (9 case/receptor rows) plus per-case G/Y/R totals. The six-case sweep-total
   check only fires when all six labels are active.

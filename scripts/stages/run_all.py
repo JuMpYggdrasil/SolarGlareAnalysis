@@ -2,6 +2,7 @@
 
     .venv\\Scripts\\python.exe scripts\\stages\\run_all.py
     .venv\\Scripts\\python.exe scripts\\stages\\run_all.py --dry-run
+    .venv\\Scripts\\python.exe scripts\\stages\\run_all.py --full
     .venv\\Scripts\\python.exe scripts\\stages\\run_all.py --from 3
     .venv\\Scripts\\python.exe scripts\\stages\\run_all.py --to 2 --keep-going
     .venv\\Scripts\\python.exe scripts\\stages\\run_all.py --stage1-args "--case az098_e903_t10"
@@ -26,10 +27,15 @@ chain stops at the first failure, because stage 2 talking about numbers that
 stage 1 just changed is not useful.
 
 --dry-run prints the plan, checks each stage's prerequisites and writes
-nothing and runs nothing, so the plan can be checked without spending 12
-minutes.
+nothing and runs nothing, so the plan can be checked without spending the run
+time.
 
-Total: ~12 min for 1 case (1 ≈ 2 min, 2 ≈ 10 min, 3 ≈ 20 s); ~28 min for 6 cases.
+Stage 2 defaults to its six fast validators.  --full forwards --full to stage 2
+so all nine run, including the benchmark sweeps.
+
+Total: ~4 min for 1 case with the default six validators (1 ≈ 2 min,
+2 ≈ 1 min, 3 ≈ 20 s); --full makes stage 2 ~10-15 min instead.  A six-case
+sweep is proportionally longer.
 """
 
 import argparse
@@ -42,7 +48,7 @@ import _stage_lib as L  # noqa: E402
 
 STAGES = [
     (1, "step1_analysis.py", "analysis", []),
-    (2, "step2_validate.py", "validate all ten validators", []),
+    (2, "step2_validate.py", "validate (6 fast; --full = 9)", []),
     (3, "step3_timeline.py", "build + validate run_timeline.html", []),
 ]
 
@@ -97,6 +103,8 @@ def main():
                     help="print the plan and the prerequisite state, run nothing")
     ap.add_argument("--keep-going", action="store_true",
                     help="continue past a failing stage")
+    ap.add_argument("--full", action="store_true",
+                    help="pass --full to stage 2 (all nine validators)")
     ap.add_argument("--stage1-args", metavar="ARGS", default=None,
                     help='extra argv for stage 1, e.g. "--case az098_e903_t10"')
     args = ap.parse_args()
@@ -120,7 +128,9 @@ def main():
               f"{'OK  ' if ok else 'MISS'} {msg}")
     print("-" * 100)
 
-    est = {1: "~2 min (1 case)", 2: "~10 min", 3: "~20 s"}
+    est = {1: "~2 min (1 case)",
+           2: "~10-15 min (--full)" if args.full else "~1 min (6 fast)",
+           3: "~20 s"}
     total = " ".join(f"{n}:{est[n]}" for n, *_ in plan)
     print(f"estimated: {total}")
 
@@ -154,6 +164,8 @@ def main():
         extra = []
         if number == 1 and args.stage1_args:
             extra = args.stage1_args.split()
+        elif number == 2 and args.full:
+            extra = ["--full"]
         r = L.run_step(f"stage{number}", script, argv + extra)
         if not r.note:
             r.note = what

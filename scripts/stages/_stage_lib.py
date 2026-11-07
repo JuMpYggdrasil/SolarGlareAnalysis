@@ -12,7 +12,7 @@ deliberate, and it is the reason a stage run cannot change a result:
     read and write is relative to the root);
   * each script is a SEPARATE PROCESS, so the module-level state of one
     validator can never leak into the next one.  This matters here: several
-    validators (validate_charts, validate_kuantan, validate_dupplin) parse
+    validators (validate_charts, validate_kuantan) parse
     sys.argv at IMPORT time, so importing them in-process would silently apply
     this run's flags to them.
 
