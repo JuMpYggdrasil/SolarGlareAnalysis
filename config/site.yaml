@@ -26,7 +26,7 @@
     # - { label: "az278_e903_t10", azimuth_deg: 278.0, tilt_deg: 10.0, env: { reflectivity_mode: "solar_weighted", atmospheric_attenuation: "beer_lambert" } }
     # - { label: "az278_e903_t12", azimuth_deg: 278.0, tilt_deg: 12.5, env: { reflectivity_mode: "solar_weighted", atmospheric_attenuation: "beer_lambert" } }
     - { label: "az278_e903_t15", azimuth_deg: 278.0, tilt_deg: 15.0, env: { reflectivity_mode: "solar_weighted", atmospheric_attenuation: "beer_lambert" } }
-    # - { label: "az278_e903_t20", azimuth_deg: 278.0, tilt_deg: 20.0, env: { reflectivity_mode: "solar_weighted", atmospheric_attenuation: "beer_lambert" } }
+    - { label: "az278_e903_t20", azimuth_deg: 278.0, tilt_deg: 20.0, env: { reflectivity_mode: "solar_weighted", atmospheric_attenuation: "beer_lambert" } }
 
 environment:
   # Optional scattering of the reflected beam. 0.0 = mirror-perfect specular.
