@@ -21,8 +21,8 @@
     # Beer-Lambert attenuation is now the sole committed mode and tilt is the
     # design variable. tilt 10 = the former az*_e903_atm20 reference, renamed.
     # - { label: "az098_e903_t10", azimuth_deg: 98.0,  tilt_deg: 10.0, env: { reflectivity_mode: "solar_weighted", atmospheric_attenuation: "beer_lambert" } }
-    # - { label: "az098_e903_t15", azimuth_deg: 98.0,  tilt_deg: 15.0, env: { reflectivity_mode: "solar_weighted", atmospheric_attenuation: "beer_lambert" } }
-    # - { label: "az098_e903_t20", azimuth_deg: 98.0,  tilt_deg: 20.0, env: { reflectivity_mode: "solar_weighted", atmospheric_attenuation: "beer_lambert" } }
+    - { label: "az098_e903_t15", azimuth_deg: 98.0,  tilt_deg: 15.0, env: { reflectivity_mode: "solar_weighted", atmospheric_attenuation: "beer_lambert" } }
+    - { label: "az098_e903_t20", azimuth_deg: 98.0,  tilt_deg: 20.0, env: { reflectivity_mode: "solar_weighted", atmospheric_attenuation: "beer_lambert" } }
     # - { label: "az278_e903_t10", azimuth_deg: 278.0, tilt_deg: 10.0, env: { reflectivity_mode: "solar_weighted", atmospheric_attenuation: "beer_lambert" } }
     # - { label: "az278_e903_t12", azimuth_deg: 278.0, tilt_deg: 12.5, env: { reflectivity_mode: "solar_weighted", atmospheric_attenuation: "beer_lambert" } }
     - { label: "az278_e903_t15", azimuth_deg: 278.0, tilt_deg: 15.0, env: { reflectivity_mode: "solar_weighted", atmospheric_attenuation: "beer_lambert" } }
@@ -210,14 +210,14 @@ receptors:
     lon: 101.215421613491003
     height_agl_m: 40.0
   # จุดสังเกต ตำแหน่งเดียว
-  - name: "obs_asia"
-    lat: 12.63026854533972
-    lon: 101.11516395167186
-    height_agl_m: 40.0
-  - name: "obs_ptt"
-    lat: 12.636414042014284
-    lon: 101.12612835679393
-    height_agl_m: 40.0
+  # - name: "obs_asia"
+  #   lat: 12.63026854533972
+  #   lon: 101.11516395167186
+  #   height_agl_m: 40.0
+  # - name: "obs_ptt"
+  #   lat: 12.636414042014284
+  #   lon: 101.12612835679393
+  #   height_agl_m: 40.0
   # จุดท่าเทียบเรือ (terminal) ปลายทั้งสองของแนว PV
   - name: "terminal_1"
     lat: 12.631213230387248
